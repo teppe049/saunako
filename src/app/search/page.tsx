@@ -116,7 +116,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         </div>
 
         {/* Right Panel - Map */}
-        <div className="flex-1 bg-bg">
+        <div className="flex-1 bg-surface shadow-[-1px_0_3px_rgba(0,0,0,0.03)]">
           <FacilityMap facilities={facilities} />
         </div>
       </div>
