@@ -68,43 +68,45 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
   };
 
   return (
-    <div className="border-b border-border pb-4 mb-0">
+    <div>
       {/* Result Count */}
-      <p className="text-text-primary mb-4">
+      <p className="text-sm md:text-base font-semibold md:font-normal text-text-primary mb-2 md:mb-3">
         {prefectureLabel ? `${prefectureLabel}で` : ''}
         {filteredCount}件のプライベートサウナが見つかりました
       </p>
 
-      {/* Active Filter Tags */}
+      {/* Active Filter Tags + Clear All */}
       {activeFilters.length > 0 && (
-        <div className="flex flex-wrap items-center gap-3 mb-4">
+        <div className="flex items-center gap-2 mb-2 md:mb-3 overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap">
           {activeFilters.map((key) => (
             <button
               key={key}
               onClick={() => removeFilter(key)}
-              className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary text-white rounded-full md:rounded-[20px] text-[13px] font-medium hover:bg-primary/90 transition-colors flex-shrink-0"
             >
               <span>{filterLabels[key]}</span>
-              <span className="text-white/80">×</span>
+              <svg className="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           ))}
           <button
             onClick={clearAllFilters}
-            className="text-sm text-text-tertiary hover:text-text-secondary transition-colors"
+            className="text-[13px] text-text-tertiary hover:text-text-secondary transition-colors ml-1 flex-shrink-0"
           >
             すべてクリア
           </button>
         </div>
       )}
 
-      {/* Filter Buttons */}
-      <div className="flex flex-wrap items-center gap-3 mb-4">
-        <span className="text-sm text-text-tertiary mr-1">絞り込み:</span>
+      {/* Filter Buttons - horizontal scroll on mobile */}
+      <div className="flex items-center gap-2 mb-2 md:mb-3 overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap">
+        <span className="text-[13px] text-text-tertiary mr-1 flex-shrink-0">絞り込み:</span>
         {(Object.keys(filters) as FilterKey[]).map((key) => (
           <button
             key={key}
             onClick={() => toggleFilter(key)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+            className={`px-3 py-1 rounded-full md:rounded-[20px] text-[13px] font-medium transition-colors border flex-shrink-0 ${
               filters[key]
                 ? 'bg-primary text-white border-primary'
                 : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
@@ -115,17 +117,26 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
         ))}
       </div>
 
-      {/* Sort Dropdown */}
+      {/* Sort Dropdown + Count */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <select className="px-3 py-1.5 border border-border rounded-md text-sm text-text-secondary bg-white">
+        <div className="relative inline-flex items-center">
+          <select className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer">
             <option value="recommend">おすすめ順</option>
             <option value="price-asc">価格が安い順</option>
             <option value="price-desc">価格が高い順</option>
             <option value="distance">駅から近い順</option>
           </select>
+          {/* Chevron-down icon */}
+          <svg
+            className="pointer-events-none absolute right-2 w-3.5 h-3.5 text-text-tertiary"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
-        <span className="text-sm text-text-tertiary">
+        <span className="text-[13px] text-text-tertiary">
           {filteredCount}/{totalCount}件
         </span>
       </div>

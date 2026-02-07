@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import { getFacilityBySlug, getAllSlugs, getFacilitiesByPrefecture } from '@/lib/facilities';
-import FacilityCard from '@/components/FacilityCard';
+import { getFacilityBySlug, getAllSlugs } from '@/lib/facilities';
 import FacilityDetailMap from '@/components/FacilityDetailMap';
 
 interface PageProps {
@@ -33,294 +31,374 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const nearbyFacilities = getFacilitiesByPrefecture(facility.prefecture)
-    .filter((f) => f.id !== facility.id)
-    .slice(0, 3);
-
   // 仮の予約時間枠
   const timeSlots = ['10:00', '12:00', '14:00', '16:00', '18:00', '20:00'];
 
   return (
     <div className="min-h-screen bg-bg">
-      <Header />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header with back button */}
-        <div className="flex items-center justify-between mb-6">
-          <Link href={`/area/${facility.prefecture}`} className="flex items-center gap-2 text-text-secondary hover:text-text-primary">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            戻る
-          </Link>
-          <div className="flex items-center gap-2">
-            <span className="text-primary">●</span>
-            <span className="font-bold">サウナ子</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Left Content - 3 columns */}
-          <div className="lg:col-span-3">
-            {/* Main Image */}
-            <div className="relative h-72 sm:h-96 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
-              <span className="text-text-tertiary">No Image</span>
-            </div>
-
-            {/* Thumbnail row */}
-            <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary"
-                >
-                  <span className="text-text-tertiary text-xs">{i}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Facility Info */}
-            <div className="mb-6">
-              <h1 className="text-2xl font-bold text-text-primary mb-2">{facility.name}</h1>
-              <p className="text-text-secondary mb-3">
-                {facility.nearestStation}駅から徒歩{facility.walkMinutes}分
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {facility.features.waterBath && <span className="tag tag-primary">水風呂あり</span>}
-                {facility.features.selfLoyly && <span className="tag tag-primary">ロウリュサービス</span>}
-                {facility.features.outdoorAir && <span className="tag tag-primary">外気浴</span>}
-                {facility.features.coupleOk && <span className="tag tag-available">男女OK</span>}
-              </div>
-            </div>
-
-            {/* Divider */}
-            <hr className="border-border my-6" />
-
-            {/* Equipment Section */}
-            <section className="mb-8">
-              <h2 className="text-lg font-bold text-text-primary mb-4">設備・サービス</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🔥</span>
-                  <div>
-                    <p className="text-text-primary font-medium">フィンランド式サウナ</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">💧</span>
-                  <div>
-                    <p className="text-text-primary font-medium">水風呂</p>
-                    {facility.features.waterBathTemp && (
-                      <p className="text-sm text-text-secondary">{facility.features.waterBathTemp}℃</p>
-                    )}
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🌿</span>
-                  <div>
-                    <p className="text-text-primary font-medium">
-                      {facility.features.outdoorAir ? '外気浴スペース' : '休憩スペース'}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">💨</span>
-                  <div>
-                    <p className="text-text-primary font-medium">
-                      {facility.features.selfLoyly ? 'ロウリュサービス' : 'ロウリュなし'}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🚿</span>
-                  <div>
-                    <p className="text-text-primary font-medium">シャワー室</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🪑</span>
-                  <div>
-                    <p className="text-text-primary font-medium">リクライニングチェア</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Divider */}
-            <hr className="border-border my-6" />
-
-            {/* Facility Description */}
-            <section className="mb-8">
-              <h2 className="text-lg font-bold text-text-primary mb-4">施設紹介</h2>
-              <p className="text-text-secondary leading-relaxed">
-                {facility.name}は、{facility.prefectureLabel}{facility.city}に位置する
-                プライベートサウナ施設です。{facility.nearestStation}駅から徒歩{facility.walkMinutes}分と
-                アクセスも良好。最大{facility.capacity}名まで利用可能で、
-                {facility.features.coupleOk ? 'カップルや友人同士での利用にもおすすめです。' : 'ゆったりとしたプライベート空間でサウナを楽しめます。'}
-              </p>
-            </section>
-
-            {/* Divider */}
-            <hr className="border-border my-6" />
-
-            {/* Notes */}
-            <section className="mb-8">
-              <h2 className="text-lg font-bold text-text-primary mb-4">ご利用にあたっての注意事項</h2>
-              <ul className="space-y-2 text-text-secondary">
-                <li>・完全予約制（当日予約可）</li>
-                <li>・キャンセル：ご利用の前日18時まで無料</li>
-                <li>・飲食物の持ち込み可能</li>
-                <li>・最大収容人数：{facility.capacity}名</li>
-                <li>・キャンセル料発生時期まで無料</li>
-              </ul>
-            </section>
-
-            {/* Divider */}
-            <hr className="border-border my-6" />
-
-            {/* Saunako Recommendation */}
-            <section className="mb-8">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-primary text-xl">●</span>
-                <h2 className="text-lg font-bold text-text-primary">サウナ子のおすすめポイント</h2>
-              </div>
-              <div className="saunako-comment">
-                {facility.saunakoCommentLong ? (
-                  <p className="text-text-secondary">{facility.saunakoCommentLong}</p>
-                ) : (
-                  <p className="text-text-secondary">
-                    ここは本当におすすめできる場所！今回はいろんなところを見比べて、カップルでいらっしゃいながら、まだまだ開拓中のお二人でも安心して楽しめる、コスパの良い施設を選びました。
-                  </p>
-                )}
-              </div>
-            </section>
-
-            {/* Divider */}
-            <hr className="border-border my-6" />
-
-            {/* Access */}
-            <section className="mb-8">
-              <h2 className="text-lg font-bold text-text-primary mb-4">アクセス</h2>
-              {facility.lat && facility.lng ? (
-                <div className="h-64 mb-4">
-                  <FacilityDetailMap
-                    lat={facility.lat}
-                    lng={facility.lng}
-                    name={facility.name}
-                  />
-                </div>
-              ) : (
-                <div className="h-64 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-text-tertiary">地図情報なし</span>
-                </div>
-              )}
-              <dl className="space-y-2">
-                <div className="flex">
-                  <dt className="w-20 text-text-secondary flex-shrink-0">住所</dt>
-                  <dd className="text-text-primary">{facility.address}</dd>
-                </div>
-                <div className="flex">
-                  <dt className="w-20 text-text-secondary flex-shrink-0">アクセス</dt>
-                  <dd className="text-text-primary">{facility.nearestStation}駅から徒歩{facility.walkMinutes}分</dd>
-                </div>
-              </dl>
-            </section>
-          </div>
-
-          {/* Right Sidebar - 2 columns */}
-          <div className="lg:col-span-2">
-            <div className="card p-6 sticky top-6">
-              <h3 className="font-bold text-text-primary mb-4">予約</h3>
-
-              {/* Date */}
-              <div className="mb-4">
-                <label className="block text-sm text-text-secondary mb-1">日付</label>
-                <input
-                  type="date"
-                  className="w-full border border-border rounded-lg px-3 py-2"
-                  defaultValue={new Date().toISOString().split('T')[0]}
-                />
-              </div>
-
-              {/* Time */}
-              <div className="mb-4">
-                <label className="block text-sm text-text-secondary mb-2">時間</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {timeSlots.map((time) => (
-                    <button
-                      key={time}
-                      className="py-2 px-3 border border-border rounded-lg text-sm hover:border-primary hover:text-primary transition-colors"
-                    >
-                      {time}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* People */}
-              <div className="mb-6">
-                <label className="block text-sm text-text-secondary mb-1">人数</label>
-                <select className="w-full border border-border rounded-lg px-3 py-2">
-                  {Array.from({ length: facility.capacity }, (_, i) => i + 1).map((n) => (
-                    <option key={n} value={n}>{n}名</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Price breakdown */}
-              <div className="border-t border-border pt-4 mb-4">
-                <div className="flex justify-between mb-2">
-                  <span className="text-text-secondary">基本料金（{facility.duration}分）</span>
-                  <span className="text-text-primary">¥{facility.priceMin.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-text-secondary">オプション料金</span>
-                  <span className="text-text-primary">¥0</span>
-                </div>
-                <div className="flex justify-between font-bold text-lg">
-                  <span className="text-text-primary">合計</span>
-                  <span className="text-primary">¥{facility.priceMin.toLocaleString()}</span>
-                </div>
-                <p className="text-xs text-text-tertiary mt-1">消費税込み</p>
-              </div>
-
-              {/* CTA */}
-              <a
-                href={facility.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary block text-center w-full"
+      {/* 専用ヘッダー */}
+      <header className="bg-surface shadow h-14 px-4 md:h-16 md:px-8">
+        <div className="flex items-center justify-between h-full">
+          {/* 左: 戻るボタン + ロゴ */}
+          <div className="flex items-center gap-2 md:gap-4">
+            <Link
+              href={`/area/${facility.prefecture}`}
+              className="flex items-center gap-1 text-text-secondary hover:text-text-primary rounded-lg p-2 md:px-3"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="text-sm font-medium hidden md:inline">戻る</span>
+            </Link>
+            <div className="flex items-center gap-2">
+              <div
+                className="flex items-center justify-center text-white font-bold text-sm w-8 h-8 md:w-9 md:h-9 rounded-full"
+                style={{
+                  background: 'linear-gradient(135deg, #E85A4F, #FF8A65)',
+                }}
               >
-                この内容で予約する
-              </a>
+                子
+              </div>
+              <span className="text-lg md:text-xl font-bold text-text-primary">サウナ子</span>
+            </div>
+          </div>
 
-              {/* Phone */}
-              {facility.phone && (
-                <a
-                  href={`tel:${facility.phone}`}
-                  className="mt-3 block text-center py-3 border border-border rounded-lg text-text-secondary hover:bg-gray-50 text-sm"
-                >
-                  電話で問い合わせる: {facility.phone}
-                </a>
-              )}
+          {/* 右: 共有 + ブックマーク + ユーザーアイコン(PC only) */}
+          <div className="flex items-center gap-2 md:gap-3">
+            <button
+              className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
+              style={{ background: '#F0F0F0' }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+              <span className="hidden md:inline">共有</span>
+            </button>
+            <button
+              className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
+              style={{ background: '#F0F0F0' }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+              <span className="hidden md:inline">保存</span>
+            </button>
+            {/* ユーザーアイコン: PC only */}
+            <div className="hidden md:block w-9 h-9 rounded-full bg-gray-300" />
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="p-0 md:p-8">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-8 max-w-[1400px] mx-auto">
+          {/* 左パネル: モバイル全幅、PC 880px固定 */}
+          <div className="w-full md:w-[880px] md:flex-shrink-0">
+            <div className="flex flex-col">
+              {/* a. Image Gallery */}
+              <div>
+                {/* メイン画像: モバイル全幅240px角丸なし、PC padding内rounded */}
+                <div className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center">
+                  <span className="text-text-tertiary">No Image</span>
+                </div>
+                {/* サムネイル */}
+                <div className="flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div
+                      key={i}
+                      className="flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary"
+                    >
+                      <span className="text-text-tertiary text-xs">{i}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* b. Facility Info Panel */}
+              <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                <div className="flex flex-col gap-3 md:gap-5">
+                  <div>
+                    <h1 className="text-text-primary text-[22px] md:text-2xl font-bold">
+                      {facility.name}
+                    </h1>
+                    <p className="text-text-secondary mt-1 text-sm">
+                      {facility.nearestStation}駅から徒歩{facility.walkMinutes}分
+                    </p>
+                    <div className="flex items-baseline gap-1 mt-2">
+                      <span className="text-saunako text-[28px] font-bold">
+                        ¥{facility.priceMin.toLocaleString()}
+                      </span>
+                      <span className="text-text-primary text-sm">〜 /時間</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {facility.features.waterBath && <span className="tag tag-primary">水風呂あり</span>}
+                    {facility.features.selfLoyly && <span className="tag tag-primary">ロウリュ可</span>}
+                    {facility.features.outdoorAir && <span className="tag tag-primary">外気浴</span>}
+                    {facility.features.coupleOk && <span className="tag tag-available">男女OK</span>}
+                  </div>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* c. Equipment Section */}
+              <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                <div className="flex flex-col gap-4 md:gap-5">
+                  <h2 className="text-text-primary text-base md:text-lg font-semibold">
+                    設備・サービス
+                  </h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🔥</span>
+                      <p className="text-text-primary font-medium">フィンランド式サウナ</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">💧</span>
+                      <div>
+                        <p className="text-text-primary font-medium">水風呂</p>
+                        {facility.features.waterBathTemp && (
+                          <p className="text-sm text-text-secondary">{facility.features.waterBathTemp}℃</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🌿</span>
+                      <p className="text-text-primary font-medium">
+                        {facility.features.outdoorAir ? '外気浴スペース' : '休憩スペース'}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">💨</span>
+                      <p className="text-text-primary font-medium">
+                        {facility.features.selfLoyly ? 'ロウリュサービス' : 'ロウリュなし'}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🚿</span>
+                      <p className="text-text-primary font-medium">シャワー室</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">🪑</span>
+                      <p className="text-text-primary font-medium">リクライニングチェア</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* d. Description Section */}
+              <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                <div className="flex flex-col gap-3 md:gap-5">
+                  <h2 className="text-text-primary text-base md:text-lg font-semibold">
+                    施設紹介
+                  </h2>
+                  <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
+                    {facility.name}は、{facility.prefectureLabel}{facility.city}に位置する
+                    プライベートサウナ施設です。{facility.nearestStation}駅から徒歩{facility.walkMinutes}分と
+                    アクセスも良好。最大{facility.capacity}名まで利用可能で、
+                    {facility.features.coupleOk ? 'カップルや友人同士での利用にもおすすめです。' : 'ゆったりとしたプライベート空間でサウナを楽しめます。'}
+                  </p>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* e. Notes Section */}
+              <div
+                className="md:mt-6 px-4 py-4 md:rounded-lg"
+                style={{
+                  background: '#FFF8F0',
+                  border: 'none',
+                }}
+              >
+                <div className="hidden md:block" style={{ border: '1px solid #FFE0CC', borderRadius: 8, padding: 16 }}>
+                  {/* PC: カードスタイル */}
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2">
+                      <span>⚠️</span>
+                      <h2 className="text-text-primary font-semibold">ご利用にあたっての注意事項</h2>
+                    </div>
+                    <ul className="space-y-2 text-text-secondary text-sm">
+                      <li>・完全予約制（当日予約可）</li>
+                      <li>・キャンセル：ご利用の前日18時まで無料</li>
+                      <li>・飲食物の持ち込み可能</li>
+                      <li>・最大収容人数：{facility.capacity}名</li>
+                      <li>・キャンセル料発生時期まで無料</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="md:hidden">
+                  {/* モバイル: 全幅フラット */}
+                  <div className="flex flex-col gap-2.5">
+                    <div className="flex items-center gap-2">
+                      <span>⚠️</span>
+                      <h2 className="text-text-primary font-semibold text-sm">ご利用にあたっての注意事項</h2>
+                    </div>
+                    <ul className="space-y-1.5 text-text-secondary text-xs leading-[1.5]">
+                      <li>・完全予約制（当日予約可）</li>
+                      <li>・キャンセル：ご利用の前日18時まで無料</li>
+                      <li>・飲食物の持ち込み可能</li>
+                      <li>・最大収容人数：{facility.capacity}名</li>
+                      <li>・キャンセル料発生時期まで無料</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 右パネル: モバイルでは左パネルの後にインライン表示、PCではstickyサイドバー */}
+          <div className="w-full md:flex-1 md:min-w-0">
+            <div className="md:sticky md:top-6 flex flex-col">
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* a. Reservation Panel */}
+              <div className="bg-surface md:shadow md:rounded-xl px-4 py-5 md:p-6">
+                <div className="flex flex-col gap-4 md:gap-5">
+                  <h3 className="font-bold text-text-primary text-lg">予約</h3>
+
+                  {/* 日付 */}
+                  <div>
+                    <label className="block text-sm text-text-secondary mb-1">日付</label>
+                    <input
+                      type="date"
+                      className="w-full border border-border rounded-lg px-3 py-2"
+                      defaultValue={new Date().toISOString().split('T')[0]}
+                    />
+                  </div>
+
+                  {/* 時間 */}
+                  <div>
+                    <label className="block text-sm text-text-secondary mb-2">時間</label>
+                    <div className="grid grid-cols-3 gap-2">
+                      {timeSlots.map((time, idx) => (
+                        <button
+                          key={time}
+                          className={`py-2 px-3 border rounded-lg text-sm transition-colors ${
+                            idx === 0
+                              ? 'bg-saunako text-white border-saunako'
+                              : 'border-border hover:border-primary hover:text-primary'
+                          }`}
+                        >
+                          {time}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 人数 */}
+                  <div>
+                    <label className="block text-sm text-text-secondary mb-1">人数</label>
+                    <select className="w-full border border-border rounded-lg px-3 py-2">
+                      {Array.from({ length: facility.capacity }, (_, i) => i + 1).map((n) => (
+                        <option key={n} value={n}>{n}名</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* 料金内訳 */}
+                  <div className="border-t border-border pt-4">
+                    <div className="flex justify-between mb-2">
+                      <span className="text-text-secondary text-sm">基本料金（{facility.duration}分）</span>
+                      <span className="text-text-primary">¥{facility.priceMin.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-text-secondary text-sm">オプション料金</span>
+                      <span className="text-text-primary">¥0</span>
+                    </div>
+                    <div className="flex justify-between font-bold text-lg mt-2">
+                      <span className="text-text-primary">合計</span>
+                      <span className="text-saunako">¥{facility.priceMin.toLocaleString()}</span>
+                    </div>
+                    <p className="text-xs text-text-tertiary mt-1">消費税込み</p>
+                  </div>
+
+                  {/* CTA */}
+                  <a
+                    href={facility.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center w-full text-white font-semibold rounded-[10px] h-12 leading-[48px] md:h-[52px] md:leading-[52px]"
+                    style={{
+                      background: 'var(--saunako)',
+                    }}
+                  >
+                    この内容で予約する
+                  </a>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* b. Saunako Comment */}
+              <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-5">
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex items-center justify-center text-white font-bold text-sm flex-shrink-0 w-10 h-10 rounded-full"
+                      style={{
+                        background: 'linear-gradient(135deg, #E85A4F, #FF8A65)',
+                      }}
+                    >
+                      子
+                    </div>
+                    <h3 className="font-bold text-text-primary">サウナ子のおすすめポイント</h3>
+                  </div>
+                  <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.7]">
+                    {facility.saunakoCommentLong ? (
+                      facility.saunakoCommentLong
+                    ) : (
+                      'ここは本当におすすめできる場所！今回はいろんなところを見比べて、カップルでいらっしゃいながら、まだまだ開拓中のお二人でも安心して楽しめる、コスパの良い施設を選びました。'
+                    )}
+                  </p>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* c. Access Info */}
+              <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-5">
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <h3 className="font-bold text-text-primary">アクセス</h3>
+                  {facility.lat && facility.lng ? (
+                    <div className="h-40 md:h-48 rounded-lg overflow-hidden">
+                      <FacilityDetailMap
+                        lat={facility.lat}
+                        lng={facility.lng}
+                        name={facility.name}
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-40 md:h-48 bg-gray-200 rounded-lg md:rounded-xl flex items-center justify-center">
+                      <span className="text-text-tertiary">地図情報なし</span>
+                    </div>
+                  )}
+                  <dl className="space-y-2">
+                    <div className="flex">
+                      <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">住所</dt>
+                      <dd className="text-text-primary text-sm">{facility.address}</dd>
+                    </div>
+                    <div className="flex">
+                      <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">アクセス</dt>
+                      <dd className="text-text-primary text-sm">{facility.nearestStation}駅から徒歩{facility.walkMinutes}分</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Nearby Facilities */}
-        {nearbyFacilities.length > 0 && (
-          <section className="mt-12 pt-8 border-t border-border">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-primary">●</span>
-              <h2 className="text-lg font-bold text-text-primary">このあたりなら、こっちもチェックしてみて</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {nearbyFacilities.map((f) => (
-                <FacilityCard key={f.id} facility={f} showComment={false} />
-              ))}
-            </div>
-          </section>
-        )}
       </main>
     </div>
   );
