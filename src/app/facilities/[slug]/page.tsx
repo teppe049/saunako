@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilityBySlug, getAllSlugs, getFacilitiesByPrefecture } from '@/lib/facilities';
 import FacilityCard from '@/components/FacilityCard';
+import FacilityDetailMap from '@/components/FacilityDetailMap';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -201,8 +202,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             <section className="mb-8">
               <h2 className="text-lg font-bold text-text-primary mb-4">アクセス</h2>
               {facility.lat && facility.lng ? (
-                <div className="h-64 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-text-tertiary">Google Map</span>
+                <div className="h-64 mb-4">
+                  <FacilityDetailMap
+                    lat={facility.lat}
+                    lng={facility.lng}
+                    name={facility.name}
+                  />
                 </div>
               ) : (
                 <div className="h-64 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
