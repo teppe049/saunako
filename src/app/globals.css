@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+  --bg: #F8F9FA;
+  --surface: #FFFFFF;
+  --border: #E5E7EB;
+
+  /* Primary (Orange) */
+  --primary: #E85A4F;
+  --primary-light: #FFE0D9;
+
+  /* Text */
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+
+  /* Saunako */
+  --saunako: #E85A4F;
+  --saunako-bg: #FFF8F5;
+  --saunako-border: #FFE0CC;
+
+  /* Status */
+  --available: #4CAF50;
+  --unavailable: #9E9E9E;
+  --warning: #FF9800;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-saunako: var(--saunako);
+  --color-saunako-bg: var(--saunako-bg);
+  --color-saunako-border: var(--saunako-border);
+  --color-available: var(--available);
+  --color-unavailable: var(--unavailable);
+  --color-warning: var(--warning);
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Utility classes */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.saunako-comment {
+  background: var(--saunako-bg);
+  border: 1px solid var(--saunako-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-primary {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.tag-available {
+  background: #E8F5E9;
+  color: var(--available);
+}
+
+.tag-unavailable {
+  background: #F5F5F5;
+  color: var(--unavailable);
 }
