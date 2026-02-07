@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Header from '@/components/Header';
+import Link from 'next/link';
 import SearchFilters from '@/components/SearchFilters';
 import FacilityListCard from '@/components/FacilityListCard';
 import FacilityMap from '@/components/FacilityMap';
@@ -39,60 +39,72 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     ? allFacilities.filter((f) => f.prefecture === prefecture).length
     : allFacilities.length;
 
+  // Build search summary
+  const searchSummary = [
+    prefData?.label || '全国',
+  ].filter(Boolean).join('・');
+
   return (
-    <>
-      {/* Search Bar */}
-      <div className="bg-surface border-b border-border py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4">
-            <div className="flex-1 flex items-center gap-2 bg-bg rounded-lg px-4 py-2">
-              <svg className="w-5 h-5 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <span className="text-text-secondary">
-                {prefData ? `${prefData.label}の個室サウナ` : '全国の個室サウナ'}
-              </span>
+    <div className="min-h-screen bg-bg">
+      {/* Header */}
+      <header className="bg-surface border-b border-border">
+        <div className="max-w-[1440px] mx-auto px-8 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-[#FF8A80] flex items-center justify-center">
+              <span className="text-white text-xl">♨</span>
             </div>
-            <select
-              className="border border-border rounded-lg px-3 py-2 text-sm"
-              defaultValue={prefecture}
-            >
-              <option value="">全国</option>
-              {PREFECTURES.map((pref) => (
-                <option key={pref.code} value={pref.code}>
-                  {pref.label}
-                </option>
-              ))}
-            </select>
+            <span className="font-bold text-xl text-text-primary">サウナ子</span>
+          </Link>
+
+          {/* Search Bar */}
+          <div className="w-[400px] h-10 bg-bg rounded-full px-4 flex items-center gap-2.5">
+            <svg className="w-4 h-4 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span className="text-text-secondary text-sm">{searchSummary}</span>
+          </div>
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-3">
+            <button className="flex items-center gap-1.5 px-3.5 py-2 bg-primary text-white rounded-full text-sm font-medium">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <span>地図</span>
+            </button>
+            <div className="w-9 h-9 bg-gray-200 rounded-full flex items-center justify-center">
+              <svg className="w-4.5 h-4.5 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header */}
-        <div className="mb-4">
-          <p className="text-text-secondary">
-            {prefData ? `${prefData.label}で` : ''}
-            {facilities.length}件のプライベートサウナが見つかりました
-          </p>
-        </div>
+      <div className="flex h-[calc(100vh-64px)]">
+        {/* Left Panel - Results */}
+        <div className="w-[820px] bg-surface flex flex-col overflow-hidden">
+          {/* Filters Header */}
+          <div className="p-6 border-b border-border">
+            <SearchFilters
+              totalCount={baseCount}
+              filteredCount={facilities.length}
+              prefectureLabel={prefData?.label}
+            />
+          </div>
 
-        {/* Filters */}
-        <SearchFilters totalCount={baseCount} filteredCount={facilities.length} />
-
-        {/* Results Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Left: Facility List */}
-          <div className="space-y-4 order-2 lg:order-1">
+          {/* Cards List */}
+          <div className="flex-1 overflow-y-auto">
             {facilities.map((facility, index) => (
               <FacilityListCard key={facility.id} facility={facility} index={index} />
             ))}
 
             {facilities.length === 0 && (
-              <div className="card p-8 text-center">
-                <div className="text-4xl mb-4">🧖</div>
-                <p className="text-text-secondary mb-4">
+              <div className="p-12 text-center">
+                <div className="text-5xl mb-4">🧖</div>
+                <p className="text-text-secondary mb-2">
                   この条件に合う施設が見つかりませんでした
                 </p>
                 <p className="text-sm text-text-tertiary">
@@ -101,24 +113,25 @@ async function SearchContent({ searchParams }: SearchPageProps) {
               </div>
             )}
           </div>
+        </div>
 
-          {/* Right: Map */}
-          <div className="h-64 lg:h-auto lg:min-h-[600px] lg:sticky lg:top-6 order-1 lg:order-2">
-            <FacilityMap facilities={facilities} />
-          </div>
+        {/* Right Panel - Map */}
+        <div className="flex-1 bg-bg">
+          <FacilityMap facilities={facilities} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default function SearchPage(props: SearchPageProps) {
   return (
-    <div className="min-h-screen bg-bg">
-      <Header />
-      <Suspense fallback={<div className="p-8 text-center">読み込み中...</div>}>
-        <SearchContent {...props} />
-      </Suspense>
-    </div>
+    <Suspense fallback={
+      <div className="min-h-screen bg-bg flex items-center justify-center">
+        <p className="text-text-tertiary">読み込み中...</p>
+      </div>
+    }>
+      <SearchContent {...props} />
+    </Suspense>
   );
 }
