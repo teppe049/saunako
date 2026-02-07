@@ -1,12 +1,22 @@
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 import Header from '@/components/Header';
-import FacilityCard from '@/components/FacilityCard';
 import { getFacilitiesByPrefecture, getAllPrefectures } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
+import AreaFilters from './AreaFilters';
 
 interface PageProps {
   params: Promise<{ prefecture: string }>;
 }
+
+// 都道府県ごとのサウナ子コメント
+const SAUNAKO_AREA_COMMENTS: Record<string, string> = {
+  tokyo: '東京は個室サウナの激戦区! 新宿・渋谷・池袋を中心に、こだわりの施設がたくさんあるわ。駅チカで仕事帰りにサクッと整えるのがおすすめよ。',
+  osaka: '大阪は東京に負けないくらい個室サウナが充実してきてるわ! 梅田・心斎橋エリアを中心に、コスパ抜群の施設が多いのが特徴ね。',
+};
+
+// デフォルトのサウナ子コメント
+const DEFAULT_SAUNAKO_COMMENT = 'このエリアの個室サウナをまとめてみたわ! 気になる施設があったらチェックしてみてね。';
 
 export async function generateStaticParams() {
   const prefectures = getAllPrefectures();
@@ -33,6 +43,7 @@ export default async function AreaPage({ params }: PageProps) {
   }
 
   const facilities = getFacilitiesByPrefecture(prefecture);
+  const saunakoComment = SAUNAKO_AREA_COMMENTS[prefecture] || DEFAULT_SAUNAKO_COMMENT;
 
   return (
     <div className="min-h-screen bg-bg">
@@ -41,41 +52,64 @@ export default async function AreaPage({ params }: PageProps) {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-text-secondary mb-6">
-          <a href="/" className="hover:text-primary">TOP</a>
+          <a href="/" className="hover:text-primary transition-colors">TOP</a>
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{prefData.label}</span>
         </nav>
 
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-text-primary mb-2">
-            {prefData.label}の個室サウナ一覧
-          </h1>
-          <p className="text-text-secondary">
-            {facilities.length}件の施設が見つかりました
-          </p>
-        </div>
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          <button className="tag tag-primary">水風呂あり</button>
-          <button className="tag bg-gray-100 text-text-secondary">ロウリュ可</button>
-          <button className="tag bg-gray-100 text-text-secondary">外気浴あり</button>
-          <button className="tag bg-gray-100 text-text-secondary">カップルOK</button>
-        </div>
-
-        {/* Facility List */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {facilities.map((facility) => (
-            <FacilityCard key={facility.id} facility={facility} />
-          ))}
-        </div>
-
-        {facilities.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-text-secondary">このエリアには施設がありません</p>
+        {/* Area Header */}
+        <div className="bg-surface border border-border rounded-xl p-6 mb-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-2">
+                {prefData.label}の個室サウナ
+              </h1>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center px-3 py-1 bg-primary-light text-primary rounded-full text-sm font-semibold">
+                  {facilities.length}件の施設
+                </span>
+                <span className="text-sm text-text-tertiary">
+                  最終更新: {new Date().toLocaleDateString('ja-JP')}
+                </span>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
+
+        {/* Saunako Comment Section */}
+        <div className="saunako-comment mb-8">
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 w-10 h-10 bg-saunako rounded-full flex items-center justify-center">
+              <span className="text-white text-sm font-bold">子</span>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-saunako font-bold">サウナ子</span>
+                <span className="text-xs text-text-tertiary">からのひとこと</span>
+              </div>
+              <p className="text-text-primary leading-relaxed">
+                {saunakoComment}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Filters and Facility List (Client Component) */}
+        <Suspense fallback={
+          <div className="animate-pulse">
+            <div className="bg-surface border border-border rounded-xl h-16 mb-6"></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="bg-surface border border-border rounded-xl h-64"></div>
+              ))}
+            </div>
+          </div>
+        }>
+          <AreaFilters
+            facilities={facilities}
+            prefectureLabel={prefData.label}
+          />
+        </Suspense>
       </main>
     </div>
   );
