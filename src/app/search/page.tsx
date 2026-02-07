@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import SearchFilters from '@/components/SearchFilters';
 import FacilityListCard from '@/components/FacilityListCard';
 import FacilityMap from '@/components/FacilityMap';
@@ -57,9 +58,13 @@ async function SearchContent({ searchParams }: SearchPageProps) {
               </svg>
             </Link>
             <Link href="/" className="flex items-center gap-2 md:gap-2.5">
-              <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gradient-to-br from-primary to-[#FF8A80] flex items-center justify-center">
-                <span className="text-white text-lg md:text-xl">♨</span>
-              </div>
+              <Image
+                src="/saunako-avatar.png"
+                alt="サウナ子"
+                width={36}
+                height={36}
+                className="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover"
+              />
               <span className="font-bold text-lg md:text-xl text-text-primary">サウナ子</span>
             </Link>
           </div>

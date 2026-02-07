@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import { getPopularFacilities } from '@/lib/facilities';
@@ -25,12 +26,13 @@ export default function Home() {
           {/* Saunako Comment */}
           <div className="max-w-3xl mx-auto mb-8">
             <div className="bg-saunako-bg border border-saunako-border rounded-[12px] md:rounded-xl px-4 py-3 md:px-5 md:py-4 flex items-start gap-2.5 md:gap-3">
-              <div
-                className="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold"
-                style={{ background: 'linear-gradient(135deg, #E85A4F, #FF8A80)' }}
-              >
-                ♨
-              </div>
+              <Image
+                src="/saunako-avatar.png"
+                alt="サウナ子"
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
+              />
               <p className="text-sm text-text-primary leading-relaxed pt-2">
                 今日はどんなサウナをお探し？条件を教えて、ぴったりの施設を見つけるね！
               </p>
@@ -112,12 +114,13 @@ export default function Home() {
               {/* Brand Column */}
               <div className="max-w-[280px]">
                 <div className="flex items-center gap-2 mb-4">
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm"
-                    style={{ background: 'linear-gradient(135deg, #E85A4F, #FF8A80)' }}
-                  >
-                    ♨
-                  </div>
+                  <Image
+                    src="/saunako-avatar.png"
+                    alt="サウナ子"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
                   <span className="font-bold text-base">サウナ子</span>
                 </div>
                 <p className="text-[13px] text-[#9CA3AF] leading-relaxed">

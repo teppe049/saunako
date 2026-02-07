@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     description:
       "東京・大阪の個室サウナを比較・検索。料金・設備・アクセス情報を一覧で確認。",
   },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
   robots: {
     index: true,
     follow: true,

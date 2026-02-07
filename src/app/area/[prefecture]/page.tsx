@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
@@ -79,9 +80,13 @@ export default async function AreaPage({ params }: PageProps) {
         {/* Saunako Comment Section */}
         <div className="saunako-comment mb-8">
           <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 w-10 h-10 bg-saunako rounded-full flex items-center justify-center">
-              <span className="text-white text-sm font-bold">子</span>
-            </div>
+            <Image
+              src="/saunako-avatar.png"
+              alt="サウナ子"
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
+            />
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-saunako font-bold">サウナ子</span>

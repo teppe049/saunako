@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getFacilityBySlug, getAllSlugs } from '@/lib/facilities';
 import FacilityDetailMap from '@/components/FacilityDetailMap';
 
@@ -51,14 +52,13 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               <span className="text-sm font-medium hidden md:inline">戻る</span>
             </Link>
             <div className="flex items-center gap-2">
-              <div
-                className="flex items-center justify-center text-white font-bold text-sm w-8 h-8 md:w-9 md:h-9 rounded-full"
-                style={{
-                  background: 'linear-gradient(135deg, #E85A4F, #FF8A65)',
-                }}
-              >
-                子
-              </div>
+              <Image
+                src="/saunako-avatar.png"
+                alt="サウナ子"
+                width={36}
+                height={36}
+                className="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover"
+              />
               <span className="text-lg md:text-xl font-bold text-text-primary">サウナ子</span>
             </div>
           </div>
@@ -344,14 +344,13 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-5">
                 <div className="flex flex-col gap-3 md:gap-4">
                   <div className="flex items-center gap-3">
-                    <div
-                      className="flex items-center justify-center text-white font-bold text-sm flex-shrink-0 w-10 h-10 rounded-full"
-                      style={{
-                        background: 'linear-gradient(135deg, #E85A4F, #FF8A65)',
-                      }}
-                    >
-                      子
-                    </div>
+                    <Image
+                      src="/saunako-avatar.png"
+                      alt="サウナ子"
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
+                    />
                     <h3 className="font-bold text-text-primary">サウナ子のおすすめポイント</h3>
                   </div>
                   <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.7]">
