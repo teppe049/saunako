@@ -2,13 +2,16 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Users, Calendar, MapPin, User, Search } from 'lucide-react';
+import { Users, Banknote, MapPin, User, Search } from 'lucide-react';
 import { PREFECTURES } from '@/lib/types';
+
+const PRICE_MAX = 30000;
+const PRICE_STEP = 1000;
 
 export default function HeroSearchForm() {
   const router = useRouter();
   const [rentalType, setRentalType] = useState('couple');
-  const [date, setDate] = useState('');
+  const [priceMax, setPriceMax] = useState(PRICE_MAX);
   const [selectedPrefecture, setSelectedPrefecture] = useState('');
   const [guests, setGuests] = useState('2');
 
@@ -17,8 +20,13 @@ export default function HeroSearchForm() {
     if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
     if (guests) params.set('capacity', guests);
     if (rentalType === 'couple') params.set('coupleOk', 'true');
+    if (priceMax < PRICE_MAX) params.set('priceMax', String(priceMax));
     router.push(`/search?${params.toString()}`);
   };
+
+  const priceLabel = priceMax >= PRICE_MAX
+    ? '上限なし'
+    : `¥${priceMax.toLocaleString()}以下`;
 
   return (
     <div className="bg-surface rounded-2xl border border-border shadow-lg px-4 py-5 md:px-10 md:py-8 max-w-3xl mx-auto">
@@ -40,22 +48,30 @@ export default function HeroSearchForm() {
           </select>
         </div>
 
-        {/* Date */}
-        <div className="col-span-1 flex flex-col gap-1.5">
+        {/* Price Range */}
+        <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
-            <Calendar size={12} />
-            日付
+            <Banknote size={12} />
+            予算
+            <span className="ml-auto text-saunako font-bold text-sm">{priceLabel}</span>
           </label>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
-          />
+          <div className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 flex items-center gap-3">
+            <span className="text-text-tertiary text-xs flex-shrink-0">¥0</span>
+            <input
+              type="range"
+              min={0}
+              max={PRICE_MAX}
+              step={PRICE_STEP}
+              value={priceMax}
+              onChange={(e) => setPriceMax(Number(e.target.value))}
+              className="w-full h-2 accent-saunako cursor-pointer"
+            />
+            <span className="text-text-tertiary text-xs flex-shrink-0">¥3万</span>
+          </div>
         </div>
 
         {/* Area */}
-        <div className="col-span-1 flex flex-col gap-1.5">
+        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <MapPin size={12} />
             エリア
@@ -75,7 +91,7 @@ export default function HeroSearchForm() {
         </div>
 
         {/* Guests */}
-        <div className="col-span-1 flex flex-col gap-1.5">
+        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <User size={12} />
             人数

@@ -10,6 +10,8 @@ import { PREFECTURES } from '@/lib/types';
 interface SearchPageProps {
   searchParams: Promise<{
     prefecture?: string;
+    priceMax?: string;
+    capacity?: string;
     waterBath?: string;
     selfLoyly?: string;
     outdoorAir?: string;
@@ -30,6 +32,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const allFacilities = getAllFacilities();
   const facilities = searchFacilities({
     prefecture: prefecture || undefined,
+    priceMax: params.priceMax ? Number(params.priceMax) : undefined,
+    capacity: params.capacity ? Number(params.capacity) : undefined,
     waterBath: params.waterBath === 'true',
     selfLoyly: params.selfLoyly === 'true',
     outdoorAir: params.outdoorAir === 'true',
