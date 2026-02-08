@@ -64,6 +64,8 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
     const params = new URLSearchParams();
     const prefecture = searchParams.get('prefecture');
     if (prefecture) params.set('prefecture', prefecture);
+    const sort = searchParams.get('sort');
+    if (sort) params.set('sort', sort);
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -120,11 +122,23 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
       {/* Sort Dropdown + Count */}
       <div className="flex items-center justify-between">
         <div className="relative inline-flex items-center">
-          <select className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer">
+          <select
+            value={searchParams.get('sort') || 'recommend'}
+            onChange={(e) => {
+              const params = new URLSearchParams(searchParams.toString());
+              if (e.target.value === 'recommend') {
+                params.delete('sort');
+              } else {
+                params.set('sort', e.target.value);
+              }
+              router.push(`?${params.toString()}`, { scroll: false });
+            }}
+            className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer"
+          >
             <option value="recommend">おすすめ順</option>
-            <option value="price-asc">価格が安い順</option>
-            <option value="price-desc">価格が高い順</option>
-            <option value="distance">駅から近い順</option>
+            <option value="price_asc">価格が安い順</option>
+            <option value="price_desc">価格が高い順</option>
+            <option value="station_asc">駅から近い順</option>
           </select>
           {/* Chevron-down icon */}
           <svg

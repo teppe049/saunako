@@ -272,11 +272,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* a. Reservation Panel */}
               <div className="bg-surface md:shadow md:rounded-xl px-4 py-5 md:p-6">
                 <div className="flex flex-col gap-4 md:gap-5">
-                  <h3 className="font-bold text-text-primary text-lg">料金情報</h3>
+                  <h3 className="font-bold text-text-primary text-lg">{facility.name}</h3>
 
                   {/* 料金情報 */}
                   {facility.priceMin > 0 ? (
                     <div className="flex items-baseline gap-1">
+                      <span className="text-text-secondary text-sm">料金:</span>
                       <span className="text-saunako text-2xl font-bold">
                         ¥{facility.priceMin.toLocaleString()}
                       </span>
@@ -299,21 +300,28 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   </div>
 
                   {/* CTA */}
-                  <a
-                    href={facility.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center w-full text-white font-semibold rounded-[10px] h-12 leading-[48px] md:h-[52px] md:leading-[52px]"
-                    style={{
-                      background: 'var(--saunako)',
-                    }}
-                  >
-                    公式サイトで予約する
-                    <span className="inline-block ml-1 text-xs align-middle">↗</span>
-                  </a>
-                  <p className="text-xs text-text-tertiary text-center">
-                    外部の公式サイトに移動します
-                  </p>
+                  {facility.website ? (
+                    <>
+                      <a
+                        href={facility.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full text-white font-semibold rounded-[10px] h-12 md:h-[52px] bg-saunako hover:opacity-90 transition-opacity"
+                      >
+                        公式サイトで予約する
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                      <p className="text-xs text-text-tertiary text-center">
+                        ※ 予約・料金の詳細は公式サイトでご確認ください
+                      </p>
+                    </>
+                  ) : (
+                    <div className="flex items-center justify-center w-full text-text-tertiary text-sm font-medium rounded-[10px] h-12 md:h-[52px] bg-gray-100">
+                      公式サイト情報なし
+                    </div>
+                  )}
                 </div>
               </div>
 

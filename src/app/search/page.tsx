@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SearchFilters from '@/components/SearchFilters';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
-import { searchFacilities, getAllFacilities } from '@/lib/facilities';
+import { searchFacilities, getAllFacilities, sortFacilities } from '@/lib/facilities';
+import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
 
 interface SearchPageProps {
@@ -16,6 +17,7 @@ interface SearchPageProps {
     selfLoyly?: string;
     outdoorAir?: string;
     coupleOk?: string;
+    sort?: string;
   }>;
 }
 
@@ -29,8 +31,12 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const prefecture = params.prefecture || '';
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
 
+  const sortKey = (['recommend', 'price_asc', 'price_desc', 'station_asc'].includes(params.sort || '')
+    ? params.sort
+    : 'recommend') as SortKey;
+
   const allFacilities = getAllFacilities();
-  const facilities = searchFacilities({
+  const filtered = searchFacilities({
     prefecture: prefecture || undefined,
     priceMin: params.priceMin ? Number(params.priceMin) : undefined,
     priceMax: params.priceMax ? Number(params.priceMax) : undefined,
@@ -40,6 +46,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     outdoorAir: params.outdoorAir === 'true',
     coupleOk: params.coupleOk === 'true',
   });
+  const facilities = sortFacilities(filtered, sortKey);
 
   const baseCount = prefecture
     ? allFacilities.filter((f) => f.prefecture === prefecture).length

@@ -62,6 +62,39 @@ export function searchFacilities(params: {
   return result;
 }
 
+export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc';
+
+export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[] {
+  if (sort === 'recommend') return facilities;
+
+  return [...facilities].sort((a, b) => {
+    switch (sort) {
+      case 'price_asc': {
+        // priceMin=0 means unknown — push to end
+        if (a.priceMin === 0 && b.priceMin === 0) return 0;
+        if (a.priceMin === 0) return 1;
+        if (b.priceMin === 0) return -1;
+        return a.priceMin - b.priceMin;
+      }
+      case 'price_desc': {
+        if (a.priceMin === 0 && b.priceMin === 0) return 0;
+        if (a.priceMin === 0) return 1;
+        if (b.priceMin === 0) return -1;
+        return b.priceMin - a.priceMin;
+      }
+      case 'station_asc': {
+        // walkMinutes=0 means unknown — push to end
+        if (a.walkMinutes === 0 && b.walkMinutes === 0) return 0;
+        if (a.walkMinutes === 0) return 1;
+        if (b.walkMinutes === 0) return -1;
+        return a.walkMinutes - b.walkMinutes;
+      }
+      default:
+        return 0;
+    }
+  });
+}
+
 export function getAllIds(): number[] {
   return facilities.map((f) => f.id);
 }
