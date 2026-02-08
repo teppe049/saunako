@@ -279,7 +279,9 @@
       "ボディソープ"
     ],
     "note": "朝ウナ2000円〜",
-    "images": [],
+    "images": [
+      "https://coubic-images.s3.ap-northeast-1.amazonaws.com/covers/3bee922e74fcaa9d0bb2_6b70ea.jpg"
+    ],
     "lat": 35.668591,
     "lng": 139.74234,
     "saunakoCommentShort": "2000円から！都内最安級の個室サウナ",
@@ -851,7 +853,9 @@
       "タオル等"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "https://solosauna-tune.com/ja/wp/wp-content/uploads/2021/04/ogp.jpg"
+    ],
     "lat": 35.699635,
     "lng": 139.741928,
     "saunakoCommentShort": "神楽坂の風情あるエリアでサウナ",
@@ -892,7 +896,9 @@
       "シャンプー等"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "https://storage.googleapis.com/production-os-assets/assets/7335f181-74e8-433d-a32c-1cec117a4511"
+    ],
     "lat": 35.66367,
     "lng": 139.697723,
     "saunakoCommentShort": "サウナハット付き！表参道でととのう",
@@ -931,7 +937,9 @@
       "タオル等"
     ],
     "note": "霧宙ミスト",
-    "images": [],
+    "images": [
+      "https://sauna-muchu.jp/wp-content/uploads/2023/09/muchu_anime2-1.gif"
+    ],
     "lat": 35.694107,
     "lng": 139.789856,
     "saunakoCommentShort": "霧宙ミストで幻想的なサウナ体験！",
@@ -1087,7 +1095,9 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "男性専用ラグジュアリー",
-    "images": [],
+    "images": [
+      "https://i0.wp.com/mente-salon.com/wp-content/uploads/top-main-2.jpg?fit=1600%2C1024&ssl=1"
+    ],
     "lat": 34.706799,
     "lng": 135.499542,
     "saunakoCommentShort": "男性専用のラグジュアリー空間！",
@@ -1239,7 +1249,9 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "会員制/和モダン",
-    "images": [],
+    "images": [
+      "https://haaave.net/wp-content/uploads/2023/03/room1VIP-scaled.jpg"
+    ],
     "lat": 34.670792,
     "lng": 135.494644,
     "saunakoCommentShort": "和モダンな空間でととのう会員制",
@@ -1683,7 +1695,9 @@
       "ボディソープ"
     ],
     "note": "個室に水風呂&湯船完備",
-    "images": [],
+    "images": [
+      "https://teppen-saunadojo.com/wp-content/uploads/2023/01/ogp.jpg"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "渋谷で11度の水風呂！個室も充実",
@@ -1765,7 +1779,9 @@
       "ボディソープ"
     ],
     "note": "サウナ×映画体験",
-    "images": [],
+    "images": [
+      "https://hubhub.jp/ogp.jpg"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "1800円から！サウナ×映画の新体験",
@@ -1806,7 +1822,9 @@
       "ボディソープ"
     ],
     "note": "外気浴スペース完備・BBQプランあり",
-    "images": [],
+    "images": [
+      "https://images.microcms-assets.io/assets/55ccde5f79cf432da07287318e237c18/52ebe7bdf21f45a6aec512aef4c373ce/HUBHUB%E6%A7%98_%E7%B4%8D%E5%93%81%E3%83%86%E3%82%99%E3%83%BC%E3%82%BF40.jpg?w=1200&h=630"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "外気浴あり！BBQプランも人気",
@@ -1847,7 +1865,9 @@
       "ボディソープ"
     ],
     "note": "60型TV完備・室内食事可",
-    "images": [],
+    "images": [
+      "https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/2107733/62c737078894d97cba0959850b20195a_760d67829cb1d8675fb0c25c107a7e54.jpg"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "TV完備で食事もOK！くつろぎの空間",
@@ -2052,7 +2072,9 @@
       "ボディソープ"
     ],
     "note": "一棟貸切ブティックサウナホテル",
-    "images": [],
+    "images": [
+      "https://storage.googleapis.com/production-os-assets/assets/c8911a81-7236-48ae-8ae1-0bde457d316f"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "一棟貸切！究極のプライベート空間",
@@ -2257,7 +2279,9 @@
       "ボディソープ"
     ],
     "note": "フィンランド直輸入サウナストーブ",
-    "images": [],
+    "images": [
+      "https://rokusauna.com/wp-content/uploads/2022/01/%E3%80%90%E6%B1%BA%E5%AE%9A%E3%80%91%E3%82%B5%E3%82%A6%E3%83%8A%E5%AE%A4.jpg"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "本格フィンランド式！駅2分で便利",
@@ -2421,7 +2445,9 @@
       "ボディソープ"
     ],
     "note": "サウナ＋コワーキング＋カフェ複合",
-    "images": [],
+    "images": [
+      "https://static.wixstatic.com/media/ebce77_e417296a4eaa4cb9a9fba2d9d767d74b%7Emv2.png/v1/fit/w_2500,h_1330,al_c/ebce77_e417296a4eaa4cb9a9fba2d9d767d74b%7Emv2.png"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "12度の水風呂！コワーキングも併設",
@@ -2462,7 +2488,9 @@
       "ボディソープ"
     ],
     "note": "駐車場8台完備",
-    "images": [],
+    "images": [
+      "https://rokusauna.com/wp-content/uploads/2022/01/%E3%80%90%E6%B1%BA%E5%AE%9A%E3%80%91%E3%82%B5%E3%82%A6%E3%83%8A%E5%AE%A4.jpg"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "駐車場完備！車でアクセスしやすい",
@@ -2503,7 +2531,9 @@
       "ボディソープ"
     ],
     "note": "全9室・日帰り&宿泊対応",
-    "images": [],
+    "images": [
+      "https://storage.googleapis.com/production-os-assets/assets/5bce8d50-554e-4f64-824c-66581292c056"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "宿泊もOK！全9室のサウナホテル",
@@ -2544,7 +2574,9 @@
       "ボディソープ"
     ],
     "note": "BOSEスピーカー・プロジェクター完備",
-    "images": [],
+    "images": [
+      "https://static.wixstatic.com/media/9b0277_39913235b7a74464af54a5f245f4b949%7Emv2.png/v1/fit/w_2500,h_1330,al_c/9b0277_39913235b7a74464af54a5f245f4b949%7Emv2.png"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "駅1分！BOSEスピーカー完備",
@@ -2708,7 +2740,9 @@
       "ボディソープ"
     ],
     "note": "6名まで・アロマが特徴",
-    "images": [],
+    "images": [
+      "https://lacool-sauna.com/_img/ja/cms/6346/thumbnail/"
+    ],
     "lat": 0,
     "lng": 0,
     "saunakoCommentShort": "6名で楽しめる！アロマ香るサウナ",
