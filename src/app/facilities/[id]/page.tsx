@@ -157,6 +157,34 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
 
+              {/* サウナ子のおすすめポイント */}
+              <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                <div className="flex flex-col gap-3 md:gap-4">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/saunako-avatar.png"
+                      alt="サウナ子"
+                      width={44}
+                      height={44}
+                      className="w-10 h-10 md:w-11 md:h-11 rounded-full flex-shrink-0 object-cover"
+                    />
+                    <div>
+                      <h2 className="font-bold text-text-primary text-base md:text-lg">サウナ子のおすすめポイント</h2>
+                    </div>
+                  </div>
+                  <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
+                    {facility.saunakoCommentLong ? (
+                      facility.saunakoCommentLong
+                    ) : (
+                      'ここは本当におすすめできる場所！今回はいろんなところを見比べて、カップルでいらっしゃいながら、まだまだ開拓中のお二人でも安心して楽しめる、コスパの良い施設を選びました。'
+                    )}
+                  </p>
+                </div>
+              </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
               {/* c. Equipment Section */}
               <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
                 <div className="flex flex-col gap-4 md:gap-5">
@@ -328,33 +356,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
 
-              {/* b. Saunako Comment */}
-              <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-5">
-                <div className="flex flex-col gap-3 md:gap-4">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/saunako-avatar.png"
-                      alt="サウナ子"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
-                    />
-                    <h3 className="font-bold text-text-primary">サウナ子のおすすめポイント</h3>
-                  </div>
-                  <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.7]">
-                    {facility.saunakoCommentLong ? (
-                      facility.saunakoCommentLong
-                    ) : (
-                      'ここは本当におすすめできる場所！今回はいろんなところを見比べて、カップルでいらっしゃいながら、まだまだ開拓中のお二人でも安心して楽しめる、コスパの良い施設を選びました。'
-                    )}
-                  </p>
-                </div>
-              </div>
-
-              {/* セクション区切り (モバイルのみ) */}
-              <div className="h-2 bg-bg md:hidden" />
-
-              {/* c. Access Info */}
+              {/* b. Access Info */}
               <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-5">
                 <div className="flex flex-col gap-3 md:gap-4">
                   <h3 className="font-bold text-text-primary">アクセス</h3>
