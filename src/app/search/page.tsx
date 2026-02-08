@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SearchFilters from '@/components/SearchFilters';
 import FacilityListCard from '@/components/FacilityListCard';
-import FacilityMap from '@/components/FacilityMap';
+import FacilityMapWrapper from '@/components/FacilityMapWrapper';
 import { searchFacilities, getAllFacilities } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
 
@@ -142,7 +142,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
 
         {/* Right Panel - Map (hidden on mobile) */}
         <div className="hidden md:block flex-1 bg-surface shadow-[-1px_0_3px_rgba(0,0,0,0.03)]">
-          <FacilityMap facilities={facilities} />
+          <FacilityMapWrapper facilities={facilities} />
         </div>
       </div>
     </div>

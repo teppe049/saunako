@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFacilityBySlug, getAllSlugs } from '@/lib/facilities';
-import FacilityDetailMap from '@/components/FacilityDetailMap';
+import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${facility.name} | サウナ子`,
-    description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation}から徒歩${facility.walkMinutes}分。${facility.priceMin.toLocaleString()}円〜`,
+    description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。` : ''}${facility.priceMin > 0 ? `${facility.priceMin.toLocaleString()}円〜` : '料金要問合せ'}`,
   };
 }
 
@@ -31,9 +31,6 @@ export default async function FacilityDetailPage({ params }: PageProps) {
   if (!facility) {
     notFound();
   }
-
-  // 仮の予約時間枠
-  const timeSlots = ['10:00', '12:00', '14:00', '16:00', '18:00', '20:00'];
 
   return (
     <div className="min-h-screen bg-bg">
@@ -124,14 +121,22 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <h1 className="text-text-primary text-[22px] md:text-2xl font-bold">
                       {facility.name}
                     </h1>
-                    <p className="text-text-secondary mt-1 text-sm">
-                      {facility.nearestStation}駅から徒歩{facility.walkMinutes}分
-                    </p>
+                    {facility.nearestStation && facility.walkMinutes > 0 && (
+                      <p className="text-text-secondary mt-1 text-sm">
+                        {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
+                      </p>
+                    )}
                     <div className="flex items-baseline gap-1 mt-2">
-                      <span className="text-saunako text-[28px] font-bold">
-                        ¥{facility.priceMin.toLocaleString()}
-                      </span>
-                      <span className="text-text-primary text-sm">〜 /時間</span>
+                      {facility.priceMin > 0 ? (
+                        <>
+                          <span className="text-saunako text-[28px] font-bold">
+                            ¥{facility.priceMin.toLocaleString()}
+                          </span>
+                          <span className="text-text-primary text-sm">〜 /時間</span>
+                        </>
+                      ) : (
+                        <span className="text-text-secondary text-sm">料金は公式サイトをご確認ください</span>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -201,8 +206,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   </h2>
                   <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
                     {facility.name}は、{facility.prefectureLabel}{facility.city}に位置する
-                    プライベートサウナ施設です。{facility.nearestStation}駅から徒歩{facility.walkMinutes}分と
-                    アクセスも良好。最大{facility.capacity}名まで利用可能で、
+                    プライベートサウナ施設です。{facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分とアクセスも良好。` : ''}最大{facility.capacity}名まで利用可能で、
                     {facility.features.coupleOk ? 'カップルや友人同士での利用にもおすすめです。' : 'ゆったりとしたプライベート空間でサウナを楽しめます。'}
                   </p>
                 </div>
@@ -264,62 +268,30 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* a. Reservation Panel */}
               <div className="bg-surface md:shadow md:rounded-xl px-4 py-5 md:p-6">
                 <div className="flex flex-col gap-4 md:gap-5">
-                  <h3 className="font-bold text-text-primary text-lg">予約</h3>
+                  <h3 className="font-bold text-text-primary text-lg">予約・料金</h3>
 
-                  {/* 日付 */}
-                  <div>
-                    <label className="block text-sm text-text-secondary mb-1">日付</label>
-                    <input
-                      type="date"
-                      className="w-full border border-border rounded-lg px-3 py-2"
-                      defaultValue={new Date().toISOString().split('T')[0]}
-                    />
-                  </div>
+                  {/* 料金情報 */}
+                  {facility.priceMin > 0 ? (
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-saunako text-2xl font-bold">
+                        ¥{facility.priceMin.toLocaleString()}
+                      </span>
+                      <span className="text-text-secondary text-sm">〜 / {facility.duration}分</span>
+                    </div>
+                  ) : (
+                    <p className="text-text-secondary text-sm">料金は公式サイトをご確認ください</p>
+                  )}
 
-                  {/* 時間 */}
-                  <div>
-                    <label className="block text-sm text-text-secondary mb-2">時間</label>
-                    <div className="grid grid-cols-3 gap-2">
-                      {timeSlots.map((time, idx) => (
-                        <button
-                          key={time}
-                          className={`py-2 px-3 border rounded-lg text-sm transition-colors ${
-                            idx === 0
-                              ? 'bg-saunako text-white border-saunako'
-                              : 'border-border hover:border-primary hover:text-primary'
-                          }`}
-                        >
-                          {time}
-                        </button>
-                      ))}
+                  {/* 基本情報 */}
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-text-secondary">利用時間</span>
+                      <span className="text-text-primary">{facility.duration}分〜</span>
                     </div>
-                  </div>
-
-                  {/* 人数 */}
-                  <div>
-                    <label className="block text-sm text-text-secondary mb-1">人数</label>
-                    <select className="w-full border border-border rounded-lg px-3 py-2">
-                      {Array.from({ length: facility.capacity }, (_, i) => i + 1).map((n) => (
-                        <option key={n} value={n}>{n}名</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* 料金内訳 */}
-                  <div className="border-t border-border pt-4">
-                    <div className="flex justify-between mb-2">
-                      <span className="text-text-secondary text-sm">基本料金（{facility.duration}分）</span>
-                      <span className="text-text-primary">¥{facility.priceMin.toLocaleString()}</span>
+                    <div className="flex justify-between">
+                      <span className="text-text-secondary">最大人数</span>
+                      <span className="text-text-primary">{facility.capacity}名</span>
                     </div>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-text-secondary text-sm">オプション料金</span>
-                      <span className="text-text-primary">¥0</span>
-                    </div>
-                    <div className="flex justify-between font-bold text-lg mt-2">
-                      <span className="text-text-primary">合計</span>
-                      <span className="text-saunako">¥{facility.priceMin.toLocaleString()}</span>
-                    </div>
-                    <p className="text-xs text-text-tertiary mt-1">消費税込み</p>
                   </div>
 
                   {/* CTA */}
@@ -332,8 +304,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       background: 'var(--saunako)',
                     }}
                   >
-                    この内容で予約する
+                    公式サイトで予約する →
                   </a>
+                  <p className="text-xs text-text-tertiary text-center">
+                    予約は施設の公式サイトで受け付けています
+                  </p>
                 </div>
               </div>
 
@@ -372,7 +347,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   <h3 className="font-bold text-text-primary">アクセス</h3>
                   {facility.lat && facility.lng ? (
                     <div className="h-40 md:h-48 rounded-lg overflow-hidden">
-                      <FacilityDetailMap
+                      <FacilityDetailMapWrapper
                         lat={facility.lat}
                         lng={facility.lng}
                         name={facility.name}
@@ -390,7 +365,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     </div>
                     <div className="flex">
                       <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">アクセス</dt>
-                      <dd className="text-text-primary text-sm">{facility.nearestStation}駅から徒歩{facility.walkMinutes}分</dd>
+                      <dd className="text-text-primary text-sm">
+                        {facility.nearestStation && facility.walkMinutes > 0
+                          ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`
+                          : '詳細は公式サイトをご確認ください'}
+                      </dd>
                     </div>
                   </dl>
                 </div>

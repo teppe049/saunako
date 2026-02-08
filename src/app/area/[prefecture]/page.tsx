@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
@@ -53,7 +54,7 @@ export default async function AreaPage({ params }: PageProps) {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-text-secondary mb-6">
-          <a href="/" className="hover:text-primary transition-colors">TOP</a>
+          <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{prefData.label}</span>
         </nav>

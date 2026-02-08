@@ -17,13 +17,21 @@ export default function FacilityCard({ facility, showComment = true }: FacilityC
       <div className="p-4">
         <h3 className="font-bold text-text-primary mb-1">{facility.name}</h3>
 
-        <p className="text-sm text-text-secondary mb-2">
-          {facility.nearestStation} 徒歩{facility.walkMinutes}分
-        </p>
+        {facility.nearestStation && facility.walkMinutes > 0 && (
+          <p className="text-sm text-text-secondary mb-2">
+            {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+          </p>
+        )}
 
         <p className="text-sm text-text-primary mb-2">
-          <span className="font-bold">{facility.priceMin.toLocaleString()}円</span>
-          <span className="text-text-secondary">〜 / {facility.duration}分</span>
+          {facility.priceMin > 0 ? (
+            <>
+              <span className="font-bold">{facility.priceMin.toLocaleString()}円</span>
+              <span className="text-text-secondary">〜 / {facility.duration}分</span>
+            </>
+          ) : (
+            <span className="text-text-secondary">要問合せ</span>
+          )}
         </p>
 
         {/* Tags */}

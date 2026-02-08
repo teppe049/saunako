@@ -1,6 +1,7 @@
 'use client';
 
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 
 interface FacilityDetailMapProps {
   lat: number;
@@ -8,61 +9,31 @@ interface FacilityDetailMapProps {
   name: string;
 }
 
-const mapContainerStyle = {
-  width: '100%',
-  height: '100%',
-};
-
-const mapOptions: google.maps.MapOptions = {
-  disableDefaultUI: false,
-  zoomControl: true,
-  mapTypeControl: false,
-  streetViewControl: true,
-  fullscreenControl: true,
-};
+const markerIcon = new L.DivIcon({
+  className: '',
+  html: `<div style="width:24px;height:24px;border-radius:50%;background:#E85A4F;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);"></div>`,
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -14],
+});
 
 export default function FacilityDetailMap({ lat, lng, name }: FacilityDetailMapProps) {
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
-  });
-
-  if (loadError) {
-    return (
-      <div className="w-full h-full bg-gray-200 rounded-xl flex items-center justify-center">
-        <p className="text-text-tertiary">地図の読み込みに失敗しました</p>
-      </div>
-    );
-  }
-
-  if (!isLoaded) {
-    return (
-      <div className="w-full h-full bg-gray-200 rounded-xl flex items-center justify-center">
-        <p className="text-text-tertiary">地図を読み込み中...</p>
-      </div>
-    );
-  }
-
   return (
     <div className="w-full h-full rounded-xl overflow-hidden">
-      <GoogleMap
-        mapContainerStyle={mapContainerStyle}
-        center={{ lat, lng }}
+      <MapContainer
+        center={[lat, lng]}
         zoom={16}
-        options={mapOptions}
+        scrollWheelZoom={false}
+        style={{ width: '100%', height: '100%' }}
       >
-        <Marker
-          position={{ lat, lng }}
-          title={name}
-          icon={{
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 12,
-            fillColor: '#E85A4F',
-            fillOpacity: 1,
-            strokeColor: '#FFFFFF',
-            strokeWeight: 3,
-          }}
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-      </GoogleMap>
+        <Marker position={[lat, lng]} icon={markerIcon}>
+          <Popup>{name}</Popup>
+        </Marker>
+      </MapContainer>
     </div>
   );
 }

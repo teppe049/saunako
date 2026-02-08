@@ -24,7 +24,11 @@ export default function FacilityListCard({ facility }: FacilityListCardProps) {
 
         {/* Price */}
         <span className="text-base md:text-lg font-bold text-primary">
-          ¥{facility.priceMin.toLocaleString()}<span className="text-xs md:text-sm font-normal text-text-tertiary"> / 1時間</span>
+          {facility.priceMin > 0 ? (
+            <>¥{facility.priceMin.toLocaleString()}<span className="text-xs md:text-sm font-normal text-text-tertiary"> / 1時間</span></>
+          ) : (
+            <span className="text-xs md:text-sm font-normal text-text-tertiary">要問合せ</span>
+          )}
         </span>
 
         {/* Tags */}
@@ -44,9 +48,11 @@ export default function FacilityListCard({ facility }: FacilityListCardProps) {
         </div>
 
         {/* Location */}
-        <p className="text-xs md:text-sm text-text-tertiary">
-          {facility.nearestStation}駅から徒歩{facility.walkMinutes}分
-        </p>
+        {facility.nearestStation && facility.walkMinutes > 0 && (
+          <p className="text-xs md:text-sm text-text-tertiary">
+            {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
+          </p>
+        )}
 
         {/* Features - hidden on mobile for space */}
         <p className="hidden md:block text-sm text-text-secondary truncate">

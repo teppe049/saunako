@@ -73,13 +73,21 @@ export default function Home() {
                     {facility.name}
                   </h3>
                   <p className="text-[13px] text-text-tertiary mb-3">
-                    {facility.nearestStation} 徒歩{facility.walkMinutes}分 | {facility.area}
+                    {facility.nearestStation && facility.walkMinutes > 0
+                      ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩${facility.walkMinutes}分 | `
+                      : ''}{facility.area}
                   </p>
 
                   <div className="flex items-center justify-between">
                     <p className="text-saunako text-sm md:text-base font-bold">
-                      ¥{facility.priceMin.toLocaleString()}〜
-                      <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ 1時間</span>
+                      {facility.priceMin > 0 ? (
+                        <>
+                          ¥{facility.priceMin.toLocaleString()}〜
+                          <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ 1時間</span>
+                        </>
+                      ) : (
+                        <span className="text-text-tertiary text-xs md:text-sm font-normal">要問合せ</span>
+                      )}
                     </p>
                     <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#E8F5E9] text-[#4CAF50]">
                       空きあり
