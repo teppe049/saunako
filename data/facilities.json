@@ -10,7 +10,7 @@
     "address": "東京都千代田区秋葉原",
     "nearestStation": "秋葉原駅",
     "walkMinutes": 9,
-    "priceMin": 30000,
+    "priceMin": 33000,
     "duration": 180,
     "capacity": 6,
     "features": {
@@ -41,7 +41,15 @@
     "description": "秋葉原駅から徒歩9分、最大6名で3時間の貸切が楽しめるプライベートサウナ。16〜17度の水風呂とセルフロウリュを備え、カップルでの利用にも対応している。24時間営業で深夜や早朝の利用も可能。",
     "saunakoCommentShort": "3時間貸切でグループ利用に最適！",
     "saunakoCommentLong": "秋葉原で3時間もゆっくり過ごせるプライベートサウナだよ！水風呂は16-17度でしっかり冷えるし、セルフロウリュもできるから自分好みの蒸し加減が楽しめるの。カップルOKだから大切な人と一緒に来るのもおすすめかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 180分 6名",
+        "price": 33000,
+        "duration": 180,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 2,
@@ -85,7 +93,33 @@
     "description": "銀座駅から徒歩5分、24時間営業のプライベートサウナ。水風呂・セルフロウリュ完備で、6,000円から90分の本格サウナ体験ができる。仕事終わりや深夜帯でも気軽に立ち寄れるアクセスの良さが魅力。",
     "saunakoCommentShort": "銀座駅近で24時間営業が嬉しい！",
     "saunakoCommentLong": "銀座駅から徒歩5分でアクセス抜群！24時間営業だから仕事終わりや深夜でも利用できるのがポイントだよ。6000円からで90分たっぷり楽しめるし、水風呂もセルフロウリュもあるから本格的なサウナ体験ができるよ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プレミアムVIP星空 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プラチナVIP繭 120分 6名",
+        "price": 26000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 3,
@@ -129,7 +163,57 @@
     "description": "銀座エリアで5,850円から利用できるコスパに優れた個室サウナ。最大3名までの少人数向けで、セルフロウリュと水風呂を完備。平日12時から営業しており、友人とのサウナ利用にも適している。",
     "saunakoCommentShort": "銀座でコスパ良く本格サウナ体験！",
     "saunakoCommentLong": "銀座エリアで5850円から利用できるコスパの良さが魅力だよ！3名までの少人数向けだから、友達との利用にぴったり。セルフロウリュで自分好みの熱さに調整できるし、水風呂でしっかりクールダウンできるの！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "Room1(un) 91分 1名 会員",
+        "price": 5850,
+        "duration": 91,
+        "capacity": 1
+      },
+      {
+        "name": "Room1(un) 90分 1名 ビジター",
+        "price": 6500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "Room2(deux) 91分 2名 会員",
+        "price": 13800,
+        "duration": 91,
+        "capacity": 2
+      },
+      {
+        "name": "Room2(deux) 90分 2名 ビジター",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Room3(trois) 91分 2名 会員",
+        "price": 15800,
+        "duration": 91,
+        "capacity": 2
+      },
+      {
+        "name": "Room3(trois) 90分 2名 ビジター",
+        "price": 17000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Room3(trois) 91分 3名 会員",
+        "price": 17800,
+        "duration": 91,
+        "capacity": 3
+      },
+      {
+        "name": "Room3(trois) 90分 3名 ビジター",
+        "price": 19500,
+        "duration": 90,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 4,
@@ -173,7 +257,33 @@
     "description": "馬喰横山駅から徒歩わずか1分の好立地に構えるプライベートサウナ。15度に設定された水風呂とセルフロウリュで本格的なサウナ体験を提供。最大6名まで利用可能で、グループでの貸切にも向いている。",
     "saunakoCommentShort": "駅徒歩1分！15度の水風呂が気持ちいい",
     "saunakoCommentLong": "馬喰横山駅から徒歩1分という超駅チカが最高だよ！水風呂は15度でキリッと冷たくて、サウナーにはたまらない温度設定。6人まで入れるから仲間とワイワイ楽しむのもいいし、セルフロウリュで自分流のサウナを堪能しちゃおう！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "サンカク 90分 2名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "サンカク 120分 2名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "シカク 110分 2名",
+        "price": 11000,
+        "duration": 110,
+        "capacity": 2
+      },
+      {
+        "name": "シカク 120分 2名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 5,
@@ -217,7 +327,45 @@
     "description": "赤坂見附駅から徒歩1分、24時間営業のプライベートサウナ。セルフロウリュ対応でカップルでの利用も可能。2時間8,000円からの料金設定で、最大6名まで入れるゆったりした空間が特徴。",
     "saunakoCommentShort": "赤坂見附駅1分！カップルOKが嬉しい",
     "saunakoCommentLong": "赤坂見附駅から徒歩1分でアクセス最高！24時間営業でいつでも行けるし、カップルOKだからデートにもおすすめだよ。2時間たっぷり過ごせて、セルフロウリュで自分好みの蒸し加減を楽しめるの！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "Silent Sanctuary 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Linden Tree 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "Blue Mosque 120分 4名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "Arabian Nights 120分 4名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "Holy Temple 120分 4名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "Moroccan Palace 120分 6名",
+        "price": 28000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 6,
@@ -261,7 +409,27 @@
     "description": "赤坂見附駅から徒歩2分、朝7時半から営業するプライベートサウナ。Bluetoothスピーカー搭載で好きな音楽を楽しみながらセルフロウリュが可能。最大4名利用で、朝活サウナにも最適な施設。",
     "saunakoCommentShort": "朝7時半から！Bluetooth対応で快適",
     "saunakoCommentLong": "朝7時半からオープンしてるから朝ウナもできちゃう！Bluetooth対応だから好きな音楽を聴きながらサウナを楽しめるのがポイントだよ。赤坂見附から徒歩2分で、仕事前にさくっとリフレッシュするのにぴったりかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 120分 4名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 7,
@@ -274,7 +442,7 @@
     "address": "東京都港区赤坂",
     "nearestStation": "赤坂駅",
     "walkMinutes": 1,
-    "priceMin": 2000,
+    "priceMin": 1500,
     "duration": 50,
     "capacity": 1,
     "features": {
@@ -305,7 +473,69 @@
     "description": "赤坂駅から徒歩1分、2,000円から利用できる都内最安級のソロサウナ。24時間営業・基本無休で、50分のセルフロウリュ付きプランを提供。初めての個室サウナとしても気軽に立ち寄れる手頃さが魅力。",
     "saunakoCommentShort": "2000円から！都内最安級の個室サウナ",
     "saunakoCommentLong": "なんと2000円から利用できる都内最安級のプライベートサウナだよ！赤坂駅から徒歩1分で、24時間営業だから朝ウナにも最適。50分で気軽にサクッととととのいたい人におすすめ！初めての個室サウナデビューにもいいかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "朝ウナ 45分 1名 ビジター",
+        "price": 1800,
+        "duration": 45,
+        "capacity": 1
+      },
+      {
+        "name": "朝ウナ 45分 1名 会員",
+        "price": 1500,
+        "duration": 45,
+        "capacity": 1
+      },
+      {
+        "name": "通常 55分 1名 ビジター",
+        "price": 3000,
+        "duration": 55,
+        "capacity": 1
+      },
+      {
+        "name": "通常 55分 1名 会員",
+        "price": 2500,
+        "duration": 55,
+        "capacity": 1
+      },
+      {
+        "name": "通常 85分 1名 ビジター",
+        "price": 4000,
+        "duration": 85,
+        "capacity": 1
+      },
+      {
+        "name": "通常 85分 1名 会員",
+        "price": 3500,
+        "duration": 85,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 70分 1名 ビジター",
+        "price": 3000,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 70分 1名 会員",
+        "price": 2500,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 100分 1名 ビジター",
+        "price": 4000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 100分 1名 会員",
+        "price": 3500,
+        "duration": 100,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 8,
@@ -318,7 +548,7 @@
     "address": "東京都港区六本木",
     "nearestStation": "六本木駅",
     "walkMinutes": 1,
-    "priceMin": 18000,
+    "priceMin": 12000,
     "duration": 120,
     "capacity": 6,
     "features": {
@@ -349,7 +579,27 @@
     "description": "六本木駅から徒歩1分のラグジュアリーなプライベートサウナ。4名18,000円からのグループ料金で、最大6名まで2時間貸切できる。カップルOK・24時間営業で、セルフロウリュを楽しみながら特別な時間を過ごせる。",
     "saunakoCommentShort": "六本木駅1分！グループでお得に貸切",
     "saunakoCommentLong": "六本木駅から徒歩1分のラグジュアリーなプライベートサウナだよ！4名で18000円からだから、みんなで割り勘すればお得に楽しめる。2時間たっぷり貸切で、カップルもOK！特別な日のサウナデートにもぴったりかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プレミアムVIP 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プラチナムVIP 120分 6名",
+        "price": 26000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 9,
@@ -393,7 +643,27 @@
     "description": "六本木駅から徒歩5分、サウナに加えて温泉も楽しめる贅沢な施設。13〜15度の水風呂とセルフロウリュを備え、最大8名まで対応。24時間営業で、大人数でのパーティー利用やご褒美サウナに最適。",
     "saunakoCommentShort": "温泉付き！六本木で贅沢サウナ体験",
     "saunakoCommentLong": "サウナだけじゃなくて温泉も楽しめる贅沢な施設だよ！水風呂は13-15度でキンキンに冷たいから、サウナ後のクールダウンが最高に気持ちいい。8人まで入れるから大人数でのパーティー利用にもおすすめ！ご褒美サウナにぴったりかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "Altamira 120分 6名",
+        "price": 34000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "SonDoong 120分 8名",
+        "price": 38000,
+        "duration": 120,
+        "capacity": 8
+      },
+      {
+        "name": "Cenote 120分 8名",
+        "price": 38000,
+        "duration": 120,
+        "capacity": 8
+      }
+    ]
   },
   {
     "id": 10,
@@ -435,7 +705,27 @@
     "description": "西麻布に位置する朝7時半オープンのプライベートサウナ。15度の水風呂とセルフロウリュを完備し、3,900円から60分利用できる。2名までの少人数向けで、出勤前の朝サウナにも対応する営業時間が特徴。",
     "saunakoCommentShort": "4900円から！朝ウナもできるよ",
     "saunakoCommentLong": "西麻布にあるコスパ抜群のプライベートサウナだよ！4900円から90分利用できて、15度の水風呂もついてる。朝7時半からオープンしてるから朝活サウナにもぴったり。2人で利用できるから友達と一緒に行くのもいいかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3900,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 80分 1名",
+        "price": 4900,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "ペア 80分 2名",
+        "price": 8400,
+        "duration": 80,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 11,
@@ -448,7 +738,7 @@
     "address": "東京都港区麻布十番",
     "nearestStation": "麻布十番駅",
     "walkMinutes": 3,
-    "priceMin": 21780,
+    "priceMin": 11000,
     "duration": 120,
     "capacity": 8,
     "features": {
@@ -479,7 +769,87 @@
     "description": "麻布十番駅から徒歩3分の高級プライベートスパ。外気浴スペースを備え、水風呂・セルフロウリュも完備。ガウン付きのホテルスパのようなサービスで、最大8名まで利用できる。24時間営業で特別な日の利用にも対応。",
     "saunakoCommentShort": "外気浴あり！麻布十番の高級スパ",
     "saunakoCommentLong": "麻布十番の高級プライベートスパだよ！外気浴スペースがあるから、サウナ後に外の空気を感じながらととのえるのが最高！ガウンも用意されていて、まるでホテルスパのような贅沢体験。8人まで入れるから特別なお祝いにもおすすめかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 120分 3名 平日",
+        "price": 15400,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "スタンダード 120分 3名 土日祝",
+        "price": 18700,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "スタンダード 60分 3名 朝サウナ",
+        "price": 11000,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "スタンダード 120分 3名 深夜",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "スタンダード 120分 3名 レディース",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "テラス 120分 4名 平日",
+        "price": 17600,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "テラス 120分 4名 土日祝",
+        "price": 20900,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "テラス 60分 4名 朝サウナ",
+        "price": 12650,
+        "duration": 60,
+        "capacity": 4
+      },
+      {
+        "name": "テラス 120分 4名 深夜",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "テラス 120分 4名 レディース",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "VIP 120分 8名 平日",
+        "price": 32780,
+        "duration": 120,
+        "capacity": 8
+      },
+      {
+        "name": "VIP 120分 8名 土日祝",
+        "price": 38500,
+        "duration": 120,
+        "capacity": 8
+      },
+      {
+        "name": "VIP 120分 8名 深夜",
+        "price": 32780,
+        "duration": 120,
+        "capacity": 8
+      }
+    ]
   },
   {
     "id": 12,
@@ -523,7 +893,45 @@
     "description": "麻布十番駅から徒歩3分、5,000円から60分利用できるリーズナブルな個室サウナ。水風呂・セルフロウリュ完備でカップル利用にも対応。ショートプランがあり、気軽にプライベートサウナを体験できる。",
     "saunakoCommentShort": "5000円から！カップルにおすすめ",
     "saunakoCommentLong": "麻布十番で5000円からリーズナブルに楽しめるプライベートサウナだよ！カップルOKだから二人でゆっくり過ごすのにぴったり。60分のショートプランがあるから、サクッとリフレッシュしたい時にもおすすめかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "シングル 60分 1名",
+        "price": 5000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 90分 1名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 120分 1名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ペア樽 60分 2名",
+        "price": 8000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "ペア樽 90分 2名",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ペア樽 120分 2名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 13,
@@ -567,7 +975,51 @@
     "description": "麻布十番の会員制プライベートサウナ。水着やサウナハットなどのレンタルが充実しており、手ぶらで来店可能。水風呂完備で24時間営業、最大4名まで2時間利用できる。こだわりのサウナ体験を求める方向け。",
     "saunakoCommentShort": "会員制の特別なサウナ体験！",
     "saunakoCommentLong": "会員制だから特別感のあるプライベートサウナだよ！水着やサウナハットまで用意されていて、手ぶらで行けるのが嬉しい。24時間営業で2時間たっぷり楽しめるから、こだわりのサウナ体験をしたい人におすすめかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "会員 120分 4名",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "会員 180分 4名",
+        "price": 29700,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "会員 240分 4名",
+        "price": 39600,
+        "duration": 240,
+        "capacity": 4
+      },
+      {
+        "name": "会員 300分 4名",
+        "price": 49500,
+        "duration": 300,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 120分 4名",
+        "price": 39600,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 180分 4名",
+        "price": 59400,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "トライアル体験 120分 2名",
+        "price": 21780,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 14,
@@ -611,7 +1063,33 @@
     "description": "麻布十番駅から徒歩3分、4,130円からと手頃な価格の個室サウナ。WiFi完備で水風呂・セルフロウリュも揃い、24時間営業・基本無休。60分からのサクッとした利用が可能で、忙しい方にも通いやすい。",
     "saunakoCommentShort": "4130円から！WiFi完備で快適",
     "saunakoCommentLong": "麻布十番で4130円からとリーズナブル！WiFi完備だからサウナ前後にちょっとした作業もできちゃう。24時間営業で60分からサクッと利用できるから、忙しい人でも通いやすいのがポイントだよ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ベーシック 60分 2名",
+        "price": 4130,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "ベーシック 90分 2名",
+        "price": 6200,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ベーシック 120分 2名",
+        "price": 8260,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プレミアム 120分 4名",
+        "price": 17360,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 15,
@@ -624,7 +1102,7 @@
     "address": "東京都港区南青山",
     "nearestStation": "外苑前駅",
     "walkMinutes": 3,
-    "priceMin": 4800,
+    "priceMin": 4000,
     "duration": 70,
     "capacity": 4,
     "features": {
@@ -655,7 +1133,33 @@
     "description": "外苑前駅から徒歩3分、南青山に位置するプライベートサウナ。Bluetooth・WiFi両対応で、カップルでの利用も可能。朝7時から翌5時までの長時間営業で、水風呂とセルフロウリュを備えた充実の設備が揃う。",
     "saunakoCommentShort": "南青山でBluetooth・WiFi完備！",
     "saunakoCommentLong": "おしゃれな南青山エリアにあるプライベートサウナだよ！BluetoothとWiFi両方完備で、好きな音楽を聴きながら快適に過ごせる。朝7時から翌5時まで営業してるから、いつでも行けるのが嬉しい。カップルOKでデートにも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ソロRoom1 60分 1名",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "ソロRoom2 60分 1名",
+        "price": 5400,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダードRoom4 80分 2名",
+        "price": 8000,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "グループRoom4 80分 4名",
+        "price": 12000,
+        "duration": 80,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 16,
@@ -699,7 +1203,45 @@
     "description": "田町駅から徒歩3分、朝8時から翌1時まで営業するプライベートサウナ。Bluetoothスピーカー搭載でセルフロウリュに対応し、5,000円から90分利用できる。最大3名までの少人数向けで、仕事前後のリフレッシュに最適。",
     "saunakoCommentShort": "田町駅近！朝8時からオープン",
     "saunakoCommentLong": "田町駅から徒歩3分でアクセス抜群！朝8時から翌1時まで営業してるから、朝活サウナにも仕事帰りにも対応できるよ。Bluetooth対応で好きな音楽を聴きながらリラックス。5000円で90分とコスパも良いかも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "STANDARD 90分 2名",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "STANDARD 120分 2名",
+        "price": 6500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "DELUXE 90分 2名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "DELUXE 120分 2名",
+        "price": 7500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 90分 3名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "VIP 120分 3名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 17,
@@ -743,7 +1285,21 @@
     "description": "新橋駅から徒歩2分のビジネス街に立地するプライベートサウナ。24時間営業・基本無休で、セルフロウリュ対応の90分プランを6,000円から提供。最大3名までの利用で、仕事帰りの深夜や出勤前にも立ち寄りやすい。",
     "saunakoCommentShort": "新橋駅2分！24時間営業が便利",
     "saunakoCommentLong": "サラリーマンの聖地・新橋から徒歩2分という好立地！24時間営業だから仕事帰りの深夜でも、出勤前の早朝でも利用できるよ。セルフロウリュで自分好みの蒸し加減を楽しんで、仕事の疲れを吹き飛ばしちゃおう！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "プライベートサウナ 90分 3名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "プライベートサウナ 120分 3名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 18,
@@ -787,7 +1343,39 @@
     "description": "歌舞伎町タワー内に位置し、外気浴スペースと温度指定機能を備えたプライベートサウナ。水風呂・セルフロウリュ完備で、新宿の夜景を眺めながらととのえる。13時から翌5時まで営業し、最大4名での利用が可能。",
     "saunakoCommentShort": "外気浴あり！温度指定もできる",
     "saunakoCommentLong": "歌舞伎町タワーにあるプライベートサウナだよ！外気浴スペースがあって、サウナ後に新宿の夜景を見ながらととのえるのが最高。温度指定もできるから、自分好みのサウナ体験ができるの！夜遊びの前後にもおすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "Moon 60分 2名",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "Moon 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Moon 120分 2名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Sakura Suite 90分 4名",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "Sakura Suite 120分 4名",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 19,
@@ -831,7 +1419,45 @@
     "description": "新宿駅東口から徒歩3分、4,290円から60分利用できるコスパの良い個室サウナ。セルフロウリュ対応で深夜5時半まで営業。2名までの少人数向けで、歌舞伎町エリアでの夜遊び前後のリフレッシュにも便利。",
     "saunakoCommentShort": "新宿東口3分！4290円からお得",
     "saunakoCommentLong": "新宿駅東口から徒歩3分という好アクセス！4290円から60分利用できてコスパ抜群だよ。深夜5時半まで営業してるから、終電を逃した夜でも寄れちゃう。セルフロウリュで自分好みの蒸し加減を楽しんでね！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "シングル 60分 1名",
+        "price": 4290,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 90分 1名",
+        "price": 5940,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 60分 1名 深夜",
+        "price": 5390,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 90分 1名 深夜",
+        "price": 7040,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ダブル 90分 2名",
+        "price": 10780,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ダブル 90分 2名 深夜",
+        "price": 11880,
+        "duration": 90,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 20,
@@ -844,7 +1470,7 @@
     "address": "東京都新宿区西新宿",
     "nearestStation": "新宿駅西口",
     "walkMinutes": 6,
-    "priceMin": 4900,
+    "priceMin": 2500,
     "duration": 90,
     "capacity": 2,
     "features": {
@@ -875,7 +1501,45 @@
     "description": "西新宿にある朝7時から利用できるプライベートサウナ。Bluetooth対応で好きな音楽を流しながらセルフロウリュを楽しめる。4,900円から90分利用で2名まで対応、朝活サウナを取り入れたい方にも向いている。",
     "saunakoCommentShort": "朝7時から！Bluetoothで音楽も",
     "saunakoCommentLong": "西新宿にあるプライベートサウナで、朝7時からオープンしてるから朝活にぴったり！Bluetooth対応だから好きな音楽を聴きながらリラックスできるよ。4900円で90分たっぷり楽しめて、コスパも良いのが嬉しい！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "朝サウナ 60分 1名",
+        "price": 2500,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 70分 1名",
+        "price": 3900,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "ロング 90分 1名",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "朝サウナ 60分 2名",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 70分 2名",
+        "price": 6500,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "ロング 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 21,
@@ -917,7 +1581,57 @@
     "description": "神楽坂駅から徒歩5分、風情ある街並みの中にあるプライベートサウナ。Bluetooth対応・セルフロウリュ完備で、最大4名まで利用可能。4,000円から60分の手頃なプランがあり、神楽坂散策と合わせて楽しめる。",
     "saunakoCommentShort": "神楽坂の風情あるエリアでサウナ",
     "saunakoCommentLong": "おしゃれな神楽坂エリアにあるプライベートサウナだよ！Bluetooth対応で好きな音楽を聴きながら、80分じっくりととのえる。4人まで入れるから友達と一緒に行くのもおすすめ。神楽坂散策とセットで楽しむのもいいかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "シングル 60分 1名 平日",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 80分 1名 平日",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 100分 1名 平日",
+        "price": 6000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 60分 1名 休日",
+        "price": 4300,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 80分 1名 休日",
+        "price": 5300,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 100分 1名 休日",
+        "price": 6300,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "グループ 80分 2-3名 平日",
+        "price": 14000,
+        "duration": 80,
+        "capacity": 3
+      },
+      {
+        "name": "グループ 80分 2-3名 休日",
+        "price": 14500,
+        "duration": 80,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 22,
@@ -961,7 +1675,33 @@
     "description": "表参道駅から徒歩5分、サウナハット貸出付きの本格派プライベートサウナ。15〜18度の水風呂にセルフロウリュ、Bluetoothスピーカーを完備。最大3名で90分6,600円から。火曜定休で10時から23時まで営業。",
     "saunakoCommentShort": "サウナハット付き！表参道でととのう",
     "saunakoCommentLong": "表参道のおしゃれエリアにあるプライベートサウナだよ！サウナハットまで用意されてて、本格的なサウナ体験ができる。水風呂は15-18度で心地よい冷たさ。Bluetooth対応で好きな音楽を聴きながらリラックスできるのも嬉しい！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "トライアル 90分 1名",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ビジター 90分 1名",
+        "price": 14300,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ビジター 90分 2名",
+        "price": 17600,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ビジター 90分 3名",
+        "price": 19800,
+        "duration": 90,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 24,
@@ -974,7 +1714,7 @@
     "address": "東京都墨田区両国",
     "nearestStation": "両国駅",
     "walkMinutes": 3,
-    "priceMin": 5000,
+    "priceMin": 7000,
     "duration": 70,
     "capacity": 4,
     "features": {
@@ -1003,7 +1743,69 @@
     "description": "両国駅から徒歩3分、独自の「霧宙ミスト」が特徴のプライベートサウナ。幻想的な霧に包まれながらセルフロウリュと水風呂を楽しめる。最大4名で5,000円から70分利用でき、他にはないユニークなサウナ体験を提供。",
     "saunakoCommentShort": "霧宙ミストで幻想的なサウナ体験！",
     "saunakoCommentLong": "両国にある「霧宙ミスト」が特徴のプライベートサウナだよ！幻想的な霧に包まれながらサウナを楽しめる、ちょっと変わった体験ができるの。セルフロウリュもできるし、4人まで入れるから友達と行くのもおすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "霧 70分 1名 平日",
+        "price": 7000,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "霧 70分 2名 平日",
+        "price": 10000,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "霧 70分 2名 休日",
+        "price": 11000,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "霧 90分 2名 平日",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "霧 90分 2名 休日",
+        "price": 13000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "宙 90分 1名 平日",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "宙 90分 2名 平日",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "宙 90分 2名 休日",
+        "price": 17000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "宙 120分 2名 平日",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "宙 120分 2名 休日",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 25,
@@ -1043,7 +1845,87 @@
     "description": "三軒茶屋駅から徒歩5分、2,200円から利用できる都内最安級のソロサウナ。セルフロウリュ対応で60分間一人の時間を満喫できる。初めての個室サウナや、気軽にサウナ習慣を始めたい方にうってつけの施設。",
     "saunakoCommentShort": "都内最安級！2000円からソロサウナ",
     "saunakoCommentLong": "なんと2000円から利用できる都内最安級のプライベートサウナだよ！三軒茶屋駅から徒歩5分で、60分一人でじっくり楽しめる。セルフロウリュもできて、この価格でこのクオリティはすごい！初心者にもおすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "QUICK 60分 1名 平日",
+        "price": 2200,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "QUICK 140分 1名 平日",
+        "price": 4400,
+        "duration": 140,
+        "capacity": 1
+      },
+      {
+        "name": "QUICK 60分 1名 休日",
+        "price": 2500,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "QUICK 140分 1名 休日",
+        "price": 4700,
+        "duration": 140,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 80分 1名 平日",
+        "price": 6000,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 180分 1名 平日",
+        "price": 12000,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 80分 2名 平日",
+        "price": 7000,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 180分 2名 平日",
+        "price": 14000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 80分 3名 平日",
+        "price": 9000,
+        "duration": 80,
+        "capacity": 3
+      },
+      {
+        "name": "VIP 180分 3名 平日",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "VIP 80分 1名 休日",
+        "price": 6300,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 80分 2名 休日",
+        "price": 7300,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 80分 3名 休日",
+        "price": 9300,
+        "duration": 80,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 26,
@@ -1087,7 +1969,45 @@
     "description": "日本橋駅から徒歩3分、道頓堀の屋上ルーフトップで外気浴できるプライベートサウナ。サウナハットやポンチョの貸出あり、カップルOKで最大6名まで対応。セルフロウリュ完備で、大阪観光と合わせた利用にも最適。",
     "saunakoCommentShort": "屋上で外気浴！道頓堀を一望",
     "saunakoCommentLong": "道頓堀の屋上ルーフトップで外気浴できる最高のロケーション！サウナハットやポンチョも用意されてて手ぶらでOK。カップルも利用できるから大阪観光デートにもぴったり。道頓堀を眺めながらととのうって最高かも！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 1名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "90分 3名",
+        "price": 21000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "90分 4名",
+        "price": 26000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "90分 5名",
+        "price": 30000,
+        "duration": 90,
+        "capacity": 5
+      },
+      {
+        "name": "90分 6名",
+        "price": 33000,
+        "duration": 90,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 27,
@@ -1100,7 +2020,7 @@
     "address": "大阪府大阪市中央区日本橋",
     "nearestStation": "日本橋駅",
     "walkMinutes": 2,
-    "priceMin": 13000,
+    "priceMin": 15000,
     "duration": 120,
     "capacity": 3,
     "features": {
@@ -1131,7 +2051,33 @@
     "description": "日本橋駅から徒歩2分、ドリンク無料サービスが付いた24時間営業のプライベートサウナ。水風呂・セルフロウリュ完備で、2時間13,000円から3名まで利用可能。大阪ミナミで本格的な貸切サウナを楽しめる。",
     "saunakoCommentShort": "ドリンク無料！24時間営業が嬉しい",
     "saunakoCommentLong": "日本橋駅から徒歩2分でアクセス抜群！ドリンクが無料でついてくるからお得感満載だよ。24時間営業で2時間たっぷり楽しめるし、水風呂もセルフロウリュも完備。大阪で本格プライベートサウナを楽しみたい人におすすめ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "銀の竹 90分 1名",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "銀の竹 120分 1名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "金の竹 90分 2名",
+        "price": 18000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "金の竹 120分 2名",
+        "price": 24000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 28,
@@ -1171,7 +2117,21 @@
     "description": "大阪梅田駅から徒歩4分、男性専用のラグジュアリーなプライベートサウナ。完全一人用の個室で80分5,000円から、セルフロウリュに対応。誰にも邪魔されない上質な空間で、仕事の疲れをリセットできる。",
     "saunakoCommentShort": "男性専用のラグジュアリー空間！",
     "saunakoCommentLong": "梅田エリアにある男性専用のラグジュアリーなプライベートサウナだよ！完全一人用だから誰にも邪魔されず、80分じっくり自分だけの時間を過ごせる。仕事で疲れた男性のリフレッシュにぴったりかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "個室サウナ 80分 1名",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "個室サウナ 80分 2名(ペア)",
+        "price": 10000,
+        "duration": 80,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 29,
@@ -1184,7 +2144,7 @@
     "address": "大阪府大阪市北区梅田",
     "nearestStation": "東梅田駅",
     "walkMinutes": 1,
-    "priceMin": 6000,
+    "priceMin": 3600,
     "duration": 80,
     "capacity": 2,
     "features": {
@@ -1215,7 +2175,39 @@
     "description": "東梅田駅から徒歩1分という抜群のアクセスを誇るプライベートサウナ。リピーターは5,000円で利用できる割引制度あり。セルフロウリュ対応で、朝9時から23時まで80分プランを提供。梅田エリアで気軽に通える。",
     "saunakoCommentShort": "東梅田駅1分！リピート割もあり",
     "saunakoCommentLong": "東梅田駅から徒歩1分という最高のアクセス！リピーターは5000円で利用できるから、通いやすいのがポイントだよ。朝9時から23時まで営業してて、80分しっかり楽しめる。梅田エリアで気軽に通えるサウナを探してる人におすすめ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 5200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 6700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "デラックス 90分 1名",
+        "price": 6200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "デラックス 120分 1名",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 30,
@@ -1228,7 +2220,7 @@
     "address": "大阪府大阪市中央区高麗橋",
     "nearestStation": "淀屋橋駅",
     "walkMinutes": 8,
-    "priceMin": 2480,
+    "priceMin": 990,
     "duration": 120,
     "capacity": 1,
     "features": {
@@ -1255,7 +2247,15 @@
     "description": "淀屋橋エリアにある2,480円から2時間利用できるコスパ抜群のプライベートサウナ。会員制だがビジター利用も可能で、24時間営業・年中無休。セルフロウリュ付きのソロサウナで、大阪市内で手軽にととのえる。",
     "saunakoCommentShort": "2750円から！24時間使い放題",
     "saunakoCommentLong": "なんと2750円から2時間も利用できる超コスパ良しのプライベートサウナ！会員制だけどビジター利用もOKだよ。24時間営業で年中無休だから、いつでも行けるのが嬉しい。大阪で安くサウナを楽しみたい人におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ウォークイン 120分 1名",
+        "price": 990,
+        "duration": 120,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 31,
@@ -1295,7 +2295,21 @@
     "description": "北新地駅から徒歩3分、水風呂の温度を6度から22度まで自由に調整できる超本格派プライベートサウナ。カップルOKで最大4名まで利用可能。セルフロウリュ完備で、こだわりのサウナ体験を求める方に応える。",
     "saunakoCommentShort": "水風呂6度から！超本格派サウナ",
     "saunakoCommentLong": "2025年9月にオープンした新しいプライベートサウナだよ！水風呂は6度から22度まで調整できる超本格派。北新地駅から徒歩3分でアクセスも良いし、カップルOK。こだわりのサウナーにはたまらない施設かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 1-4名",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "120分 1-4名",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 32,
@@ -1335,7 +2349,15 @@
     "description": "南堀江にある和モダンな雰囲気の会員制プライベートサウナ。セルフロウリュ対応でカップルでの利用も可能。落ち着いた和の空間で2時間16,000円から、特別感のあるプライベートサウナ時間を過ごせる。",
     "saunakoCommentShort": "和モダンな空間でととのう会員制",
     "saunakoCommentLong": "南堀江にある和モダンな雰囲気のプライベートサウナだよ！会員制だから落ち着いた雰囲気の中でゆっくり過ごせる。カップルOKだから大切な人と特別な時間を過ごすのにもぴったり。和の空間でととのいたい人におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "初回体験 120分 2名",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 33,
@@ -1378,7 +2400,33 @@
     "description": "美容室プロデュースの個室サウナで、ReFaやshu uemuraなど高級アメニティが揃う。水風呂・セルフロウリュ完備でカップルOK。サウナと美容ケアを同時に叶える、美意識の高い方に支持される施設。",
     "saunakoCommentShort": "美容室プロデュース！ReFa完備",
     "saunakoCommentLong": "美容室がプロデュースしたプライベートサウナだから、美意識高い人にぴったり！ReFaやshu uemuraなど高級アメニティが揃ってるのが嬉しい。サウナでリフレッシュしながら美容ケアもできちゃう、女性にもおすすめの施設だよ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 1名",
+        "price": 4980,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名",
+        "price": 5980,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名",
+        "price": 7980,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 2名",
+        "price": 9980,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 34,
@@ -1422,7 +2470,153 @@
     "description": "大阪市中央区にある4,000円から利用できるプライベートサウナ。3部屋を備え1名から最大6名まで人数に合わせて選択可能。水風呂・セルフロウリュ完備でカップルOK、ソロからグループまで幅広く対応する。",
     "saunakoCommentShort": "4000円から！1-6名まで対応",
     "saunakoCommentLong": "4000円からとリーズナブルで、3部屋あるから1人から6人まで人数に合わせて選べるよ！水風呂もセルフロウリュも完備で、カップルOK。みんなでワイワイ楽しむのも、一人で静かにととのうのもどっちもできちゃう！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "宵 100分 1名 平日",
+        "price": 4000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "宵 120分 1名 平日",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "宵 100分 1名 休日",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "宵 120分 1名 休日",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "暁 100分 1名 平日",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "暁 120分 1名 平日",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "暁 100分 2名 平日",
+        "price": 7000,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "暁 120分 2名 平日",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "暁 100分 1名 休日",
+        "price": 6000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "暁 120分 1名 休日",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "暁 100分 2名 休日",
+        "price": 8000,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "暁 120分 2名 休日",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "曙 120分 1名 平日",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "曙 120分 2名 平日",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "曙 120分 3名 平日",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "曙 120分 4名 平日",
+        "price": 14000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "曙 120分 5名 平日",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "曙 120分 6名 平日",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "曙 120分 1名 休日",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "曙 120分 2名 休日",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "曙 120分 3名 休日",
+        "price": 13000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "曙 120分 4名 休日",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "曙 120分 5名 休日",
+        "price": 17000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "曙 120分 6名 休日",
+        "price": 19000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 35,
@@ -1435,7 +2629,7 @@
     "address": "大阪府八尾市",
     "nearestStation": "八尾駅",
     "walkMinutes": 5,
-    "priceMin": 3700,
+    "priceMin": 12000,
     "duration": 120,
     "capacity": 1,
     "features": {
@@ -1462,7 +2656,39 @@
     "description": "八尾駅から徒歩5分、8種類のロウリュ水を用意した個性派プライベートサウナ。さまざまな香りを楽しみながらセルフロウリュが可能。3,700円から2時間利用でき、ソロ向けのゆったりとした空間を提供している。",
     "saunakoCommentShort": "8種のロウリュ水で香りを楽しむ！",
     "saunakoCommentLong": "8種類ものロウリュ水が用意されてて、いろんな香りを楽しみながらサウナに入れるのが魅力だよ！3700円で2時間たっぷり楽しめるからコスパも良い。八尾エリアでちょっと変わったサウナ体験をしたい人におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "150分 1-2名",
+        "price": 12000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "150分 3名",
+        "price": 17100,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "150分 4名",
+        "price": 22000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "150分 5名",
+        "price": 26000,
+        "duration": 150,
+        "capacity": 5
+      },
+      {
+        "name": "150分 6名",
+        "price": 30000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 36,
@@ -1506,7 +2732,27 @@
     "description": "茨木市駅から徒歩4分、3,600円から60分利用できるコスパの良いプライベートサウナ。Bluetoothスピーカー搭載でセルフロウリュに対応。朝9時から23時まで基本無休で営業し、北摂エリアで通いやすい立地にある。",
     "saunakoCommentShort": "3600円から！Bluetooth対応で快適",
     "saunakoCommentLong": "茨木市駅から徒歩4分で、3600円から60分利用できるコスパの良さが魅力！Bluetooth対応だから好きな音楽を聴きながらリラックスできるよ。朝9時から23時まで営業してて、北摂エリアで気軽に通えるサウナとしておすすめ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 5200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 6700,
+        "duration": 120,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 37,
@@ -1519,7 +2765,7 @@
     "address": "大阪府大阪市福島区野田",
     "nearestStation": "野田駅",
     "walkMinutes": 3,
-    "priceMin": 6000,
+    "priceMin": 7700,
     "duration": 120,
     "capacity": 4,
     "features": {
@@ -1550,7 +2796,45 @@
     "description": "野田駅から徒歩3分、パブリックサウナも併設したプライベートサウナ。水風呂・セルフロウリュ完備でカップルOK、最大4名まで利用可能。気分に応じてプライベートとパブリックを使い分けられるのが特徴。",
     "saunakoCommentShort": "パブリック併設！使い分けできる",
     "saunakoCommentLong": "パブリックサウナも併設されてるから、その日の気分で使い分けできるのがポイント！プライベートは4人まで入れてカップルもOKだから、グループでワイワイ楽しむのもいいね。野田駅から徒歩3分でアクセスも良いよ！",
-    "updatedAt": "2026-02-07"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "プライベート 120分 1-2名 平日",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プライベート 120分 3名 平日",
+        "price": 9900,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プライベート 120分 4名 平日",
+        "price": 12100,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "プライベート 120分 1-2名 休日",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プライベート 120分 3名 休日",
+        "price": 9900,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プライベート 120分 4名 休日",
+        "price": 12100,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 38,
@@ -1592,7 +2876,105 @@
     "description": "枚方市にあるバレルサウナが特徴のプライベートサウナ施設。IKEUCHI ORGANICのこだわりタオルを用意し、水風呂・セルフロウリュも完備。7,700円から2時間利用可能で、素材にこだわった本格サウナ体験を提供する。",
     "saunakoCommentShort": "バレルサウナ！こだわりタオル付き",
     "saunakoCommentLong": "枚方にあるバレルサウナが特徴のプライベートサウナだよ！IKEUCHI ORGANICのこだわりタオルが用意されてて、肌触りが最高。「ほんもの」にこだわった本格派サウナ体験ができる、サウナ好きにはたまらない施設かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "モーニング/ミッドナイト 120分 1名 平日",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 2名 平日",
+        "price": 9900,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 3名 平日",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 4名 平日",
+        "price": 15400,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 1名 休日",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 2名 休日",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 3名 休日",
+        "price": 14300,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "モーニング/ミッドナイト 120分 4名 休日",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "リトリート 180分 1名 平日",
+        "price": 8800,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "リトリート 180分 2名 平日",
+        "price": 11000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "リトリート 180分 3名 平日",
+        "price": 14300,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "リトリート 180分 4名 平日",
+        "price": 16500,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "リトリート 180分 1名 休日",
+        "price": 9900,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "リトリート 180分 2名 休日",
+        "price": 12100,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "リトリート 180分 3名 休日",
+        "price": 15400,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "リトリート 180分 4名 休日",
+        "price": 17600,
+        "duration": 180,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 39,
@@ -1605,7 +2987,7 @@
     "address": "東京都文京区湯島3-44-7",
     "nearestStation": "湯島駅",
     "walkMinutes": 5,
-    "priceMin": 4500,
+    "priceMin": 4000,
     "duration": 90,
     "capacity": 2,
     "features": {
@@ -1636,7 +3018,45 @@
     "description": "湯島駅から徒歩5分、「ととのうを科学する」をコンセプトにした新感覚の個室サウナ。3Dサウンドや好みの香りのセルフロウリュ、15度の水風呂で五感をフルに使ったサウナ体験ができる。4,500円から90分利用可能。",
     "saunakoCommentShort": "科学×サウナ！五感で楽しむ新体験",
     "saunakoCommentLong": "上野エリアにある「ととのうを科学する」がコンセプトの個室サウナだよ！3Dサウンドスピーカーで音に包まれながら、好みの香りでセルフロウリュできるの。15度の水風呂もあって、五感フルに使ったととのい体験ができるよ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "60分 1-2名 平日",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "90分 1-2名 平日",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 1-2名 平日",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "60分 1-2名 休日",
+        "price": 5000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "90分 1-2名 休日",
+        "price": 7500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 1-2名 休日",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 40,
@@ -1649,7 +3069,7 @@
     "address": "東京都台東区浅草1丁目",
     "nearestStation": "浅草駅",
     "walkMinutes": 2,
-    "priceMin": 2980,
+    "priceMin": 19000,
     "duration": 120,
     "capacity": 8,
     "features": {
@@ -1680,7 +3100,69 @@
     "description": "浅草駅から徒歩2分、都心では希少な本格的な薪サウナを体験できる施設。16度の水風呂とセルフロウリュを備え、カップルOKで最大8名対応。2,980円から2時間と手頃な価格で、朝7時から営業している。",
     "saunakoCommentShort": "都心で薪サウナ！浅草駅2分",
     "saunakoCommentLong": "浅草駅から徒歩2分で本格的な薪サウナが楽しめる、都内でも希少な施設だよ！日帰り2時間2,980円からとコスパも抜群。カップルOKで最大8名まで入れるから、友達やパートナーと特別なサウナ体験を楽しんでね！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "貸切 120分 2名 平日",
+        "price": 19000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "貸切 120分 3名 平日",
+        "price": 22000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "貸切 120分 4名 平日",
+        "price": 25000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 120分 5名 平日",
+        "price": 28000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "貸切 120分 6名 平日",
+        "price": 31000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "貸切 120分 2名 休日",
+        "price": 23000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "貸切 120分 3名 休日",
+        "price": 27000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "貸切 120分 4名 休日",
+        "price": 31000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 120分 5名 休日",
+        "price": 35000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "貸切 120分 6名 休日",
+        "price": 39000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 41,
@@ -1693,7 +3175,7 @@
     "address": "東京都台東区蔵前4-21-2",
     "nearestStation": "蔵前駅",
     "walkMinutes": 3,
-    "priceMin": 6000,
+    "priceMin": 4000,
     "duration": 70,
     "capacity": 3,
     "features": {
@@ -1724,7 +3206,45 @@
     "description": "蔵前駅から徒歩3分のボタニカルがテーマの個室サウナ。氷で水風呂の温度を自分で調節でき、アロマやお茶をテーマにした部屋を選べる。セルフロウリュ完備でカップルOK、6,000円から70分利用可能。",
     "saunakoCommentShort": "ボタニカルサウナで癒しの空間！",
     "saunakoCommentLong": "蔵前にあるボタニカルがテーマの個室サウナだよ！氷で水風呂の温度を自分で調節できるのがユニーク。アロマやお茶をテーマにした部屋が選べて、会員なら2,000〜4,000円割引になるからリピートもおすすめ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "& aroma/& tea 90分 1名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "& aroma/& tea 90分 2名",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "& co 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "& aroma/& tea 90分 1名 会員",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "& aroma/& tea 90分 2名 会員",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "& co 120分 3名 会員",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 42,
@@ -1768,7 +3288,33 @@
     "description": "恵比寿駅から徒歩5分の完全1人専用個室サウナ。80度のウェット&マイルドな蒸気と北欧輸入のととのい椅子が特徴。平日15時までなら60分3,300円から利用でき、事前予約制で待ち時間なく快適に過ごせる。",
     "saunakoCommentShort": "3300円から！恵比寿の一人専用サウナ",
     "saunakoCommentLong": "恵比寿にある完全1人用の個室サウナだよ！平日15時までなら60分3,300円とお手頃。北欧輸入のととのい椅子があって、80度のウェット&マイルドな蒸気で心地よくととのえるの。事前予約制だから待ち時間なしで快適！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 60分 1名",
+        "price": 3800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "通常 90分 1名",
+        "price": 4300,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日割引 60分 1名",
+        "price": 3300,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "平日割引 90分 1名",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 43,
@@ -1781,7 +3327,7 @@
     "address": "東京都渋谷区宇田川町29-4",
     "nearestStation": "渋谷駅",
     "walkMinutes": 5,
-    "priceMin": 5000,
+    "priceMin": 1200,
     "duration": 90,
     "capacity": 4,
     "features": {
@@ -1812,7 +3358,39 @@
     "description": "渋谷駅から徒歩5分、個室に水風呂と湯船の両方を完備したプライベートサウナ。水風呂は11度とキンキンに冷たく、ガツンとしたととのいを求める方に最適。24時間営業でカップルOK、5,000円から90分利用可能。",
     "saunakoCommentShort": "渋谷で11度の水風呂！個室も充実",
     "saunakoCommentLong": "渋谷の人気サウナに個室プランがあるよ！個室には水風呂と湯船が両方ついてて贅沢。水風呂は11度とキンキンで、ガツンとしたととのいが味わえるの。24時間営業で、カップルOKだからデートにもおすすめ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "朝ウナ 60分 1名",
+        "price": 1200,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "通常 60分 1名",
+        "price": 1500,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "通常 90分 1名",
+        "price": 1800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "深夜 60分 1名",
+        "price": 1800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "深夜 90分 1名",
+        "price": 2300,
+        "duration": 90,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 44,
@@ -1856,7 +3434,21 @@
     "description": "築地駅から徒歩3分、世界初の岩盤浴×サウナ融合施設。水風呂の温度を8度から45度まで自由に設定できるのが最大の特徴。朝7時からオープンし、3,490円から80分利用可能。カップルOKでセルフロウリュにも対応。",
     "saunakoCommentShort": "水風呂8〜45度！温度自由自在",
     "saunakoCommentLong": "築地にある世界初の岩盤浴×サウナ融合施設だよ！水風呂の温度を8度から45度まで自由に設定できるのがすごい。朝7時からオープンしてるから朝サウナにもぴったり。3,490円からと築地エリアではコスパ良しかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 100分 1名",
+        "price": 3490,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 120分 6名",
+        "price": 14950,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 45,
@@ -1900,7 +3492,27 @@
     "description": "下北沢駅から徒歩7分、5種類のサウナと3つの水風呂にシアターを併設した複合サウナ施設。1,800円からフィンランド式サウナを体験でき、サウナ×映画という他にない組み合わせを提供。カップルOKで貸切プランも用意。",
     "saunakoCommentShort": "1800円から！サウナ×映画の新体験",
     "saunakoCommentLong": "下北沢で1,800円からフィンランド式サウナが楽しめる、コスパ最強施設だよ！5種類のサウナと3つの水風呂があって飽きない。シアター併設でサウナ×映画という新体験もできちゃう。貸切プランもあるから特別な日にも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "パブリックサウナ 1名",
+        "price": 1800,
+        "duration": 0,
+        "capacity": 1
+      },
+      {
+        "name": "プライベートサウナ 90分 4名",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "プライベートサウナ 120分 6名",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 46,
@@ -1913,7 +3525,7 @@
     "address": "東京都台東区上野5-10-6",
     "nearestStation": "御徒町駅",
     "walkMinutes": 3,
-    "priceMin": 9000,
+    "priceMin": 5000,
     "duration": 90,
     "capacity": 6,
     "features": {
@@ -1944,7 +3556,69 @@
     "description": "御徒町駅から徒歩3分、外気浴スペース完備の貸切サウナ。2種類のフィンランドサウナに水風呂・セルフロウリュを備え、最大6名まで利用可能。飲み放題付きBBQプランもあり、仲間とのパーティー利用にも対応する。",
     "saunakoCommentShort": "外気浴あり！BBQプランも人気",
     "saunakoCommentLong": "御徒町にある貸切サウナで外気浴スペース完備なのが嬉しい！2種類のフィンランドサウナが楽しめるよ。飲み放題付きBBQプランもあるから、仲間とのパーティーにも最適。6名まで入れるからグループ利用におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ウーラッコ 90分 1名",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ウーラッコ 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ウーラッコ 90分 3名",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "ウーラッコ 90分 4名",
+        "price": 14000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "ウーラッコ 90分 5名",
+        "price": 17000,
+        "duration": 90,
+        "capacity": 5
+      },
+      {
+        "name": "ポルタ 90分 1名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ポルタ 90分 2名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ポルタ 90分 3名",
+        "price": 13000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "ポルタ 90分 4名",
+        "price": 16000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "ポルタ 90分 5名",
+        "price": 19000,
+        "duration": 90,
+        "capacity": 5
+      }
+    ]
   },
   {
     "id": 47,
@@ -1988,7 +3662,21 @@
     "description": "池尻大橋駅から徒歩5分の会員制個室サウナ。60型TVと室内食事可の環境で、サウナ以外の時間も充実。18〜19度の水風呂と特注板氷ロウリュが特徴で、カップルOK。体験利用も可能で5,800円から2時間楽しめる。",
     "saunakoCommentShort": "TV完備で食事もOK！くつろぎの空間",
     "saunakoCommentLong": "池尻大橋にある会員制個室サウナだよ！体験利用もできるから初めてでも安心。60型TVがあって室内で食事もOKだから、サウナ+αの贅沢な時間を過ごせるの。特注板氷でのロウリュも体験できる本格派！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "体験利用 120分 2名 平日",
+        "price": 5800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "体験利用 120分 2名 土日祝",
+        "price": 10300,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 48,
@@ -2032,7 +3720,69 @@
     "description": "自由が丘駅から徒歩3分のソロ専用プライベートサウナ。約90度のサウナでアロマ水ロウリュを楽しめ、冷水シャワーはオーバーヘッドとボディの切り替えが可能。3,600円から60分、朝9時から23時まで基本無休で営業。",
     "saunakoCommentShort": "自由が丘で3600円！1人専用個室",
     "saunakoCommentLong": "おしゃれな自由が丘で3,600円からソロサウナが楽しめるよ！約90度のサウナにアロマ水ロウリュができて本格的。冷水シャワーはオーバーヘッドとボディの切り替えができるから、自分好みのクールダウンが可能かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 5200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 6700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 60分 2名",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "デラックス 90分 1名",
+        "price": 6200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "デラックス 120分 1名",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "デラックス 90分 2名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "デラックス 120分 2名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 49,
@@ -2045,7 +3795,7 @@
     "address": "東京都品川区西五反田1-4-4",
     "nearestStation": "五反田駅",
     "walkMinutes": 1,
-    "priceMin": 3980,
+    "priceMin": 2980,
     "duration": 60,
     "capacity": 3,
     "features": {
@@ -2076,7 +3826,99 @@
     "description": "五反田駅西口から徒歩1分の完全非対面チェックイン式プライベートサウナ。セルフロウリュと寝そべれるベンチを完備し、3,980円から60分利用可能。レディースデーやメンズデーの割引もあり、気軽に通える。",
     "saunakoCommentShort": "五反田駅1分！非対面で気軽に利用",
     "saunakoCommentLong": "五反田駅西口から徒歩1分という超駅チカ！完全非対面チェックインだから人と会わずに利用できるよ。レディースデー（火曜）やメンズデー（木曜）は2,980円とさらにお得。寝そべれるベンチでととのいも最高かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 60分 1名",
+        "price": 3980,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "通常 80分 1名",
+        "price": 4980,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "通常 100分 1名",
+        "price": 5980,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "通常 100分 2名",
+        "price": 9280,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "通常 100分 3名",
+        "price": 11800,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "レディースデー 60分 1名",
+        "price": 2980,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 80分 1名",
+        "price": 3980,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 100分 1名",
+        "price": 4780,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "レディースデー 100分 2名",
+        "price": 7380,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "レディースデー 100分 3名",
+        "price": 9380,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "メンズデー 60分 1名",
+        "price": 2980,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "メンズデー 80分 1名",
+        "price": 3980,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "メンズデー 100分 1名",
+        "price": 4780,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "メンズデー 100分 2名",
+        "price": 7380,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "メンズデー 100分 3名",
+        "price": 9380,
+        "duration": 100,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 50,
@@ -2120,7 +3962,15 @@
     "description": "大森海岸駅から徒歩4分、マンション1室を使ったアットホームな個室サウナ。ベランダのハンモックで外気浴でき、ホームシアターも完備。100分3,400円で2名同額のためカップルに嬉しい料金体系が特徴。",
     "saunakoCommentShort": "3400円！ハンモックで外気浴",
     "saunakoCommentLong": "マンション1室のアットホームな個室サウナだよ！100分3,400円は2名でも同額だからカップルに嬉しい。ベランダにハンモックがあって外気浴が最高！ホームシアターも完備で、まるで自宅のように寛げちゃうかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 100分 2名",
+        "price": 3400,
+        "duration": 100,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 51,
@@ -2164,7 +4014,39 @@
     "description": "王子駅から徒歩2分、サウナとグロッサリーが一体になったユニークな複合施設。チラー冷却の水風呂とBluetoothスピーカーを完備し、3,300円から60分利用できる。朝8時からオープンで朝活にも対応。",
     "saunakoCommentShort": "王子駅2分！3300円でチラー水風呂",
     "saunakoCommentLong": "王子駅から徒歩2分、サウナとグロッサリーが一体になったユニークな施設だよ！3,300円から60分利用できて、チラー冷却の水風呂もあるからしっかりクールダウンできる。Bluetoothスピーカーも完備で快適にととのえるかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 60分 1名",
+        "price": 3300,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "通常 90分 1名",
+        "price": 4600,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "通常 120分 1名",
+        "price": 5900,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "通常 90分 2名",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "通常 120分 2名",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 52,
@@ -2208,7 +4090,15 @@
     "description": "神楽坂にある一棟丸ごと貸切のブティックサウナホテル。フィンランド式サウナに水風呂の温度を1度単位で調整できるこだわりの設備。メゾネットタイプもあり最大6名、カップルOK。宿泊も可能な特別な空間。",
     "saunakoCommentShort": "一棟貸切！究極のプライベート空間",
     "saunakoCommentLong": "神楽坂にある一棟丸ごと貸切のブティックサウナホテルだよ！フィンランド式サウナに水風呂の温度を1度単位で調整できるこだわりっぷり。メゾネットタイプもあって最大6名まで。宿泊もできるから特別な日にぜひ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "2nd ARCH デイユース 120分 2名",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 53,
@@ -2221,7 +4111,7 @@
     "address": "東京都目黒区東山3-7-11",
     "nearestStation": "池尻大橋駅",
     "walkMinutes": 4,
-    "priceMin": 14000,
+    "priceMin": 12000,
     "duration": 100,
     "capacity": 4,
     "features": {
@@ -2252,7 +4142,21 @@
     "description": "池尻大橋駅から徒歩4分、畳を敷いた和のサウナ空間が特徴の高級プライベートサウナ。16〜18度の水風呂とセルフロウリュ完備で、100分14,000円の均一料金で最大4名まで利用可能。カップルOKで和の趣を感じながらととのえる。",
     "saunakoCommentShort": "畳サウナで和の癒し！高級プライベート",
     "saunakoCommentLong": "池尻大橋にある畳サウナが特徴の高級プライベートサウナだよ！100分14,000円の均一料金で人数に関わらず利用できるから、4人で割ればお得。水風呂16-18度で心地よく、和の空間でととのう特別な体験ができるかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "80分枠 4名",
+        "price": 12000,
+        "duration": 80,
+        "capacity": 4
+      },
+      {
+        "name": "100分枠 4名",
+        "price": 14000,
+        "duration": 100,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 54,
@@ -2265,7 +4169,7 @@
     "address": "神奈川県横浜市中区常盤町4-45",
     "nearestStation": "関内駅",
     "walkMinutes": 3,
-    "priceMin": 4000,
+    "priceMin": 3600,
     "duration": 60,
     "capacity": 1,
     "features": {
@@ -2296,7 +4200,33 @@
     "description": "横浜・関内駅から徒歩3分の完全会員制個室サウナ。全室水風呂完備で、氷を投入すれば4〜5度の極冷水風呂も体験可能。「騒いでOK」がコンセプトで、国産ヒノキのお座舗サウナとカップル利用にも対応する。",
     "saunakoCommentShort": "氷で水風呂4度も！騒いでOKのサウナ",
     "saunakoCommentLong": "横浜・関内にある完全会員制の個室サウナだよ！全室水風呂完備で、氷を投入すれば4〜5度の極冷水風呂も体験できるの。「騒いでOK」がコンセプトだから、仲間とワイワイ楽しめる。国産ヒノキのお座舗サウナが最高かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "マンスリー1 70分 1名 月額",
+        "price": 3600,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "マンスリー2 70分 1名 月額",
+        "price": 6980,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "追加利用 70分 1名",
+        "price": 3800,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "同伴利用 70分 1名",
+        "price": 4400,
+        "duration": 70,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 55,
@@ -2340,7 +4270,39 @@
     "description": "川崎駅から徒歩5分、ラチッタデッラ内にある全25室の大型個室サウナ施設。90〜99度のサウナに14〜17度の水風呂を完備し、3,600円から60分利用可能。部屋数が多く予約が取りやすいのが嬉しいポイント。",
     "saunakoCommentShort": "川崎駅5分！25室の大型個室サウナ",
     "saunakoCommentLong": "川崎駅から徒歩5分、ラチッタデッラ内にある個室サウナだよ！25室もあるから予約が取りやすいのが嬉しい。サウナ90〜99度、水風呂14-17度で本格的。3,600円から60分利用できるコスパの良さもポイント！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "マンスリー1 70分 1名 月額",
+        "price": 3600,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "ライト2 70分 1名 月額",
+        "price": 6980,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "マンスリー4 70分 1名 月額",
+        "price": 13500,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "フルタイム 70分 1名 月額",
+        "price": 25000,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "追加利用/同伴利用 70分 1名",
+        "price": 4400,
+        "duration": 70,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 56,
@@ -2353,7 +4315,7 @@
     "address": "神奈川県横浜市中区不老町1-2",
     "nearestStation": "関内駅",
     "walkMinutes": 2,
-    "priceMin": 2480,
+    "priceMin": 3480,
     "duration": 100,
     "capacity": 2,
     "features": {
@@ -2384,7 +4346,21 @@
     "description": "関内駅から徒歩2分のホテル内プライベートサウナ。サウナ温度も水風呂温度も3段階から選択でき、グルシン（9〜12度）の水風呂も可能。2,480円から100分と関東最安級のコスパで、カップルOK・基本無休で営業。",
     "saunakoCommentShort": "2480円！温度カスタマイズが魅力",
     "saunakoCommentLong": "横浜・関内駅から徒歩2分のホテル内プライベートサウナだよ！サウナ温度も水風呂温度も3段階から選べるのがすごい。グルシン（9-12度）の水風呂も選択可能！2,480円から100分と関東最安級のコスパかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "サウナのみ 100分 2名 平日",
+        "price": 3480,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "サウナのみ 100分 2名 土日祝",
+        "price": 3980,
+        "duration": 100,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 57,
@@ -2428,7 +4404,63 @@
     "description": "たまプラーザ駅から徒歩2分、フィンランド直輸入のサウナストーブで本格ロウリュが楽しめる施設。15度の水風呂を完備し、温度も照明も自在にカスタマイズ可能。早朝7時20分から深夜まで営業し、カップルOK。",
     "saunakoCommentShort": "本格フィンランド式！駅2分で便利",
     "saunakoCommentLong": "たまプラーザ駅から徒歩2分！フィンランド直輸入のサウナストーブで本格的なロウリュが楽しめるよ。温度も照明も自分好みにカスタマイズ可能。早朝7:20から深夜まで営業してるから、いつでも行けるのが嬉しい！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "通常 80分 1名",
+        "price": 4500,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "通常 100分 1名",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "通常 120分 1名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "通常 80分 2名",
+        "price": 7650,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "通常 100分 2名",
+        "price": 8420,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "通常 120分 2名",
+        "price": 8900,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "通常 80分 3名",
+        "price": 11000,
+        "duration": 80,
+        "capacity": 3
+      },
+      {
+        "name": "通常 100分 3名",
+        "price": 11300,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "通常 120分 3名",
+        "price": 12500,
+        "duration": 120,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 58,
@@ -2472,7 +4504,27 @@
     "description": "海老名駅から徒歩8分、カフェ・バーを併設したプライベートサウナ。15〜16度の水風呂にセルフロウリュ完備で、よもぎ蒸しも提供。カップルOKで4,200円から75分利用でき、サウナ後のくつろぎ時間まで楽しめる。",
     "saunakoCommentShort": "カフェ併設！サウナ後のひと息も",
     "saunakoCommentLong": "海老名にあるプライベートサウナで、カフェ・バーが併設されてるからサウナ後のひと息も楽しめるよ！水風呂15-16度でしっかり冷やせて、カップルOK。よもぎ蒸しもあるから女性にもおすすめの施設かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "サウナ 75分 1名",
+        "price": 4200,
+        "duration": 75,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ 75分 2名",
+        "price": 8000,
+        "duration": 75,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ 75分 3名",
+        "price": 10500,
+        "duration": 75,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 59,
@@ -2516,7 +4568,63 @@
     "description": "川口駅から徒歩5分、水深1mの専用水風呂が自慢のソロサウナ。15度の水風呂に肩までしっかり浸かれるのが特徴で、セルフロウリュにも対応。2,800円から60分と手頃な価格で、埼玉エリアの個室サウナ入門にも最適。",
     "saunakoCommentShort": "2800円！水深1mの本格水風呂",
     "saunakoCommentLong": "川口駅から徒歩5分のソロサウナだよ！2,800円で60分と埼玉エリアではかなりお手頃。水深1mの専用水風呂がついてて、肩までしっかり浸かれるのが嬉しい。VIPルーム（複数名用）も新設されたから要チェック！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ソロルーム 60分 1名",
+        "price": 2800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "ソロルーム 90分 1名",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ソロルーム 120分 1名",
+        "price": 5600,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ソロルーム 150分 1名",
+        "price": 6600,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "ソロルーム 180分 1名",
+        "price": 7600,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "VIPルーム 120分 3名 平日",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "VIPルーム 240分 3名 平日",
+        "price": 24000,
+        "duration": 240,
+        "capacity": 3
+      },
+      {
+        "name": "VIPルーム 120分 3名 土日祝",
+        "price": 14000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "VIPルーム 240分 3名 土日祝",
+        "price": 28000,
+        "duration": 240,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 60,
@@ -2560,7 +4668,45 @@
     "description": "浦和駅から徒歩7分、ロイヤルパインズホテル内の個室サウナ。サウナ温度を90/100/110度から選べ、デカ氷サービスで水風呂をキンキンに冷やせる。14〜18度の水風呂完備で朝6時から営業、年中無休で通いやすい。",
     "saunakoCommentShort": "サウナ温度110度まで選べる本格派！",
     "saunakoCommentLong": "浦和のロイヤルパインズホテルB1Fにある個室サウナだよ！サウナ温度を90/100/110度から選べる本格派。デカ氷サービスで水風呂をキンキンにもできるの。朝6時からオープンだから朝サウナにも最適かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "エコノミールーム 70分 1名",
+        "price": 4400,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダードルーム 70分 2名",
+        "price": 6600,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダードルーム 70分 2名 同伴追加",
+        "price": 8800,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダードルーム 90分 2名",
+        "price": 8250,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダードルーム 90分 2名 同伴追加",
+        "price": 11550,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 120分 1名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 61,
@@ -2617,7 +4763,7 @@
     "address": "埼玉県さいたま市中央区円阿弥5-8-40",
     "nearestStation": "与野本町駅",
     "walkMinutes": 15,
-    "priceMin": 3960,
+    "priceMin": 4500,
     "duration": 80,
     "capacity": 3,
     "features": {
@@ -2648,7 +4794,63 @@
     "description": "さいたま市のフィンランド式個室サウナ。敷地内に駐車場8台完備で車でのアクセスも容易。15度の水風呂とセルフロウリュ完備、カップルOKで3,960円から80分利用可能。早朝7時20分から深夜まで基本無休で営業。",
     "saunakoCommentShort": "駐車場完備！車でアクセスしやすい",
     "saunakoCommentLong": "フィンランド式個室サウナのROKU SAUNA大宮与野店だよ！敷地内に駐車場8台完備だから車でも来やすい。3,960円から80分利用できて、カップルOK。早朝7:20から深夜まで営業してるからスケジュールも合わせやすいかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "大宮与野 80分 1名",
+        "price": 4500,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "大宮与野 100分 1名",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "大宮与野 120分 1名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "大宮与野 80分 2名",
+        "price": 7650,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "大宮与野 100分 2名",
+        "price": 8420,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "大宮与野 120分 2名",
+        "price": 8900,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "大宮与野 80分 3名",
+        "price": 10200,
+        "duration": 80,
+        "capacity": 3
+      },
+      {
+        "name": "大宮与野 100分 3名",
+        "price": 11000,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "大宮与野 120分 3名",
+        "price": 12200,
+        "duration": 120,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 63,
@@ -2692,7 +4894,63 @@
     "description": "日高市にある全9室のプライベートサウナ付きホテル。日帰り3,200円からと宿泊プランの両方を提供し、15度の水風呂とセルフロウリュを完備。24時間営業・基本無休で、カップルOK。自然に囲まれた環境でゆったり過ごせる。",
     "saunakoCommentShort": "宿泊もOK！全9室のサウナホテル",
     "saunakoCommentLong": "日高市にある全9室のプライベートサウナ付きホテルだよ！3,200円からの日帰りプランも宿泊プランも選べる。2024年秋オープンの新しい施設で、24時間営業。自然に囲まれた環境でゆっくりととのいたい人におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 1名",
+        "price": 3200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名",
+        "price": 3800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "180分 1名",
+        "price": 4600,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 2名",
+        "price": 5600,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "180分 2名",
+        "price": 7400,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "90分 3名",
+        "price": 6400,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "120分 3名",
+        "price": 7500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "180分 3名",
+        "price": 9600,
+        "duration": 180,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 64,
@@ -2736,7 +4994,15 @@
     "description": "上本郷駅から徒歩1分の好立地プライベートサウナ。チラー付き18〜20度の水風呂にBOSEスピーカー、プロジェクター完備のラウンジが充実。カップルOKで最大4名まで、3,400円から70分利用可能。水曜定休。",
     "saunakoCommentShort": "駅1分！BOSEスピーカー完備",
     "saunakoCommentLong": "松戸・上本郷駅から徒歩1分！チラー付き水風呂にBOSEスピーカー、プロジェクター完備のラウンジがある充実の施設だよ。カップルOKで4名まで入れるから友達との利用も。3,400円からの70分プランがおすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "70分 1名",
+        "price": 3400,
+        "duration": 70,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 65,
@@ -2780,7 +5046,27 @@
     "description": "京成船橋駅から徒歩1分、朝7時45分からオープンする個室サウナ。スタンダード60分3,600円から、VIPルームは水風呂付きで80分6,500円。セルフロウリュ完備・水曜定休で、千葉エリアの朝活サウナにも対応する。",
     "saunakoCommentShort": "船橋駅1分！朝7時台からオープン",
     "saunakoCommentLong": "京成船橋駅から徒歩1分の個室サウナだよ！朝7:45からオープンしてるから朝活にもぴったり。スタンダード60分3,600円から、VIPルームは水風呂付きで80分6,500円。千葉エリアで気軽に通える個室サウナとしておすすめ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 80分 1名",
+        "price": 4500,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 80分 1名",
+        "price": 6000,
+        "duration": 80,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 66,
@@ -2793,7 +5079,7 @@
     "address": "千葉県浦安市北栄1-16-17",
     "nearestStation": "浦安駅",
     "walkMinutes": 1,
-    "priceMin": 4950,
+    "priceMin": 2980,
     "duration": 70,
     "capacity": 3,
     "features": {
@@ -2824,7 +5110,69 @@
     "description": "浦安駅から徒歩1分の北欧スタイル個室サウナ。全6室で個室サウナ初のアウフグース体験ルームを設置。サウナ温度80〜100度選択制、15〜18度の水風呂にBluetoothスピーカー完備。ヘッドスパも併設で美容も叶う。",
     "saunakoCommentShort": "個室初のアウフグース体験ルーム！",
     "saunakoCommentLong": "浦安駅から徒歩1分の北欧スタイル個室サウナだよ！全6室で、なんと個室サウナ初のアウフグース体験ルームがあるの。サウナ温度は80〜100度から選べて、Bluetoothスピーカーも完備。ヘッドスパも併設で美容も叶うかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "アドバンスルーム 70分 初回トライアル",
+        "price": 4980,
+        "duration": 70,
+        "capacity": 3
+      },
+      {
+        "name": "アドバンスルーム 90分 初回トライアル",
+        "price": 5980,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "アドバンスルーム 120分 初回トライアル",
+        "price": 6980,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "ととのいルーム 70分 初回トライアル",
+        "price": 2980,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "ととのいルーム 90分 初回トライアル",
+        "price": 3980,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "アドバンスルーム 70分 ビジター",
+        "price": 5500,
+        "duration": 70,
+        "capacity": 3
+      },
+      {
+        "name": "アドバンスルーム 90分 ビジター",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "アドバンスルーム 120分 ビジター",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "ととのいルーム 70分 ビジター",
+        "price": 4950,
+        "duration": 70,
+        "capacity": 2
+      },
+      {
+        "name": "ととのいルーム 90分 ビジター",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 67,
@@ -2868,7 +5216,45 @@
     "description": "千葉・鋸南町にある絶景ロケーションのサウナカフェ。鋸山伏流水の天然湧き水を使った水風呂と、元名海岸を望む外気浴スペースが唯一無二の体験を提供。カップルOKで最大4名、10,800円から2時間利用可能。",
     "saunakoCommentShort": "天然湧水の水風呂！海を眺めて外気浴",
     "saunakoCommentLong": "鋸南町にある絶景ロケーションのサウナカフェだよ！鋸山伏流水の湧き水を使った天然水風呂は他では味わえない特別な体験。元名海岸を望みながらの外気浴は最高の一言！ちょっと遠出してでも行く価値ありかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "プライベートサウナ 120分 2名 平日",
+        "price": 10800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プライベートサウナ 120分 2名 土日祝",
+        "price": 13800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プライベートサウナ 180分 2名 平日",
+        "price": 15700,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "プライベートサウナ 180分 2名 土日祝",
+        "price": 20200,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "ビーチサウナ 150分 2名 平日",
+        "price": 17800,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "ビーチサウナ 150分 2名 土日祝",
+        "price": 20800,
+        "duration": 150,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 68,
@@ -2881,7 +5267,7 @@
     "address": "千葉県船橋市習志野台7-20-77-2F",
     "nearestStation": "船橋日大前駅",
     "walkMinutes": 1,
-    "priceMin": 7700,
+    "priceMin": 7000,
     "duration": 90,
     "capacity": 6,
     "features": {
@@ -2912,7 +5298,15 @@
     "description": "船橋日大前駅から徒歩1分、アロマの香りが特徴のグループ向けプライベートサウナ。最大6名まで利用可能で、水風呂・セルフロウリュ完備。カップルOKで7,700円から90分、友人や家族との利用に最適な施設。",
     "saunakoCommentShort": "6名で楽しめる！アロマ香るサウナ",
     "saunakoCommentLong": "船橋日大前駅から徒歩1分、最大6名までのグループサウナだよ！アロマの香りが特徴で、リラックス効果抜群。90分7,700円でグループなら割り勘でお得に。友達や家族と一緒にサウナを楽しみたい人におすすめかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "プライベートサウナ 90分 最大6名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 69,
@@ -2958,7 +5352,21 @@
     "description": "上野駅3番出口から徒歩3分、ホテルニューパーク1階にある完全個室プライベートサウナ。全4室それぞれ異なるコンセプトで、85〜100度のサウナと水風呂を完備。TV・Bluetooth対応で好きな音楽や映像を楽しみながらアロマセルフロウリュが可能。",
     "saunakoCommentShort": "上野駅チカの1人用完全プライベートサウナ！",
     "saunakoCommentLong": "上野駅から徒歩3分のホテル1階にある個室サウナだよ！1室1人限定だから完全に自分だけの空間で、TVやBluetoothで好きなコンテンツを楽しみながらととのえるの。4部屋それぞれ雰囲気が違うから、全部屋制覇してみてね！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "60分 1名",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "90分 1名",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 70,
@@ -2971,7 +5379,7 @@
     "address": "東京都北区滝野川2-4-17 Tokyo Guesthouse Oji内",
     "nearestStation": "王子駅",
     "walkMinutes": 5,
-    "priceMin": 4500,
+    "priceMin": 8000,
     "duration": 120,
     "capacity": 2,
     "features": {
@@ -3005,7 +5413,27 @@
     "description": "王子駅北口から徒歩5分、ゲストハウス内にある完全貸切個室プライベートサウナ。全室にアーティスト近藤康平氏の壁画が描かれ、サウナとアートが融合した空間。14度の水風呂とセルフロウリュを備え、Bluetoothスピーカーやインフィニティチェアも完備。",
     "saunakoCommentShort": "アートに包まれる貸切プライベートサウナ！",
     "saunakoCommentLong": "王子にあるアートとサウナの融合空間だよ！全部屋に壁画が描かれていてめちゃくちゃおしゃれ。水風呂は14度でキンキン、セルフロウリュもできるから自分好みにカスタマイズできるの。宿泊もできるからサウナ旅にもおすすめ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "デイユース 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "平日限定 180分 2名",
+        "price": 8000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "宿泊 2名",
+        "price": 14000,
+        "duration": 0,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 71,
@@ -3054,7 +5482,45 @@
     "description": "有明ガーデン内のホテル6階にある日帰り利用可能な完全個室サウナ。90度のサウナと15度の水風呂、セルフロウリュを完備し、インフィニティチェアとバスローブで優雅にととのえる。早朝6時から営業しており、朝活サウナにも対応。",
     "saunakoCommentShort": "有明の高級ホテルで日帰り個室サウナ体験！",
     "saunakoCommentLong": "有明ガーデンのホテル内にある個室サウナで、宿泊しなくても日帰りで使えるよ！バスローブにインフィニティチェア完備で、まるでリゾート気分。朝6時から開いてるから、朝サウナしてそのままお出かけなんてのもいいかも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 1名 平日",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 1名 休日",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名 平日",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "90分 2名 休日",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "90分 3名 平日",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "90分 3名 休日",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 3
+      }
+    ]
   },
   {
     "id": 72,
@@ -3104,7 +5570,27 @@
     "description": "両国駅徒歩3分、ビル最上階のワンフロア貸し切りヴィラ型プライベートサウナ。125㎡超の贅沢空間にサウナ・半露天風呂・薬草風呂・リビングを備え、最大8名で利用可能。SAUNA霧宙の冷頭スプラッシュを受け継いだ本格的な設計。",
     "saunakoCommentShort": "両国の最上階でワンフロア貸し切りサウナ！",
     "saunakoCommentLong": "両国のビル最上階をまるごと貸し切れるラグジュアリーなサウナヴィラだよ！サウナに半露天風呂に薬草風呂まであって、SAUNA霧宙の冷頭スプラッシュも体験できるの。お値段はしっかりだけど、特別な日のグループ利用にぴったり！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "デイユース 4名",
+        "price": 40000,
+        "duration": 0,
+        "capacity": 4
+      },
+      {
+        "name": "ショートステイ 2名",
+        "price": 100000,
+        "duration": 0,
+        "capacity": 2
+      },
+      {
+        "name": "宿泊 4名",
+        "price": 150000,
+        "duration": 0,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 73,
@@ -3117,7 +5603,7 @@
     "address": "東京都豊島区西池袋1-10-4",
     "nearestStation": "池袋駅",
     "walkMinutes": 2,
-    "priceMin": 22900,
+    "priceMin": 19800,
     "duration": 0,
     "capacity": 2,
     "features": {
@@ -3150,7 +5636,21 @@
     "description": "池袋駅西口から徒歩2分、全32室にプライベートサウナを完備したデザインホテル。ドライサウナ10室とミストサウナ21室があり、スイートルームには両方を設置。セルフロウリュ対応で、サウナハットや白樺オイルの貸出プランも用意。",
     "saunakoCommentShort": "全室サウナ付きの池袋デザインホテル！",
     "saunakoCommentLong": "池袋駅すぐのホテルで全室サウナ付きってすごくない？ドライサウナかミストサウナか選べるし、サウナエンジョイプランを付ければサウナハットに白樺オイルまで借りられるの。カップルでサウナステイしたい人にぴったりだよ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ドライサウナルーム 宿泊 2名",
+        "price": 19800,
+        "duration": 0,
+        "capacity": 2
+      },
+      {
+        "name": "ミストサウナルーム 宿泊 2名",
+        "price": 26700,
+        "duration": 0,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 74,
@@ -3163,7 +5663,7 @@
     "address": "東京都豊島区池袋2-16-4",
     "nearestStation": "池袋駅",
     "walkMinutes": 2,
-    "priceMin": 3200,
+    "priceMin": 4800,
     "duration": 120,
     "capacity": 2,
     "features": {
@@ -3196,7 +5696,27 @@
     "description": "池袋駅西口C1出口から徒歩2分、24時間営業のホテル内にある本格プライベートサウナ。501・502号室に108度のドライサウナと17度のバイブラ水風呂を完備。セルフロウリュにも対応し、休憩利用なら2時間3,200円からとリーズナブル。",
     "saunakoCommentShort": "池袋で24時間いつでもサウナ！コスパ最強！",
     "saunakoCommentLong": "池袋駅チカで24時間使えるプライベートサウナだよ！108度の本格サウナに17度のバイブラ水風呂まであって、休憩2時間3,200円からってコスパ良すぎ。深夜や早朝にサウナしたい人にもおすすめだよ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "休憩 120分 平日",
+        "price": 4800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "休憩 120分 土日祝",
+        "price": 6800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "宿泊 平日",
+        "price": 9800,
+        "duration": 0,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 75,
@@ -3244,7 +5764,21 @@
     "description": "桜新町駅徒歩4分、サザエさん通り沿いにある「ちょうどいい」フィンランド式プライベートサウナ。全面ヒノキのサウナ室でセルフロウリュを楽しめる。横になれる約2メートルのベンチが特徴的で、2室のみの隠れ家的空間。",
     "saunakoCommentShort": "桜新町の隠れ家ヒノキサウナ",
     "saunakoCommentLong": "サザエさん通り沿いにある小さな隠れ家サウナだよ！全面ヒノキの香りに包まれながらセルフロウリュできるの。2メートルのベンチで横になれるから、銭湯サウナとは全然違うリラックス感を味わえるよ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "70分 1名",
+        "price": 4200,
+        "duration": 70,
+        "capacity": 1
+      },
+      {
+        "name": "70分 2名（同性のみ）",
+        "price": 6000,
+        "duration": 70,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 76,
@@ -3290,7 +5824,21 @@
     "description": "祖師ヶ谷大蔵駅前徒歩1分、24時間営業の男性専用完全個室サウナ。80-100℃から好みの温度を選べ、セルフロウリュやBluetooth対応で自分好みの空間を作れる。月額制だが体験プラン90分2,000円も用意。",
     "saunakoCommentShort": "24時間営業！駅前1分の男性専用個室",
     "saunakoCommentLong": "24時間いつでも自分だけのサウナに入れるって最高だよね！温度を80・90・100度から選べるし、好きな音楽をかけながらセルフロウリュもできるの。体験プラン90分2,000円で試せるから気軽にどうぞ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "体験プラン 90分 1名",
+        "price": 2000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "月額会員 1名",
+        "price": 13200,
+        "duration": 0,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 77,
@@ -3338,7 +5886,27 @@
     "description": "三軒茶屋駅徒歩4分、日本初の個室サウナ付きヘッドスパ専門店。86℃と100℃の2つのサウナ室を備え、12℃の水風呂とセルフロウリュを完備。サウナとヘッドスパを組み合わせた新しいととのい体験が楽しめる。",
     "saunakoCommentShort": "サウナ×ヘッドスパの新体験！",
     "saunakoCommentLong": "サウナの後にヘッドスパって、もう究極のリラックスだよね！12℃のキンキンの水風呂もあるし、86℃と100℃の2つのサウナ室から好みで選べるの。三茶でサウナもヘッドスパも両方楽しめるなんて贅沢すぎ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "サウナ ショート 60分 1〜2名",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ スタンダード 80分 1〜2名",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ ロング 100分 1〜2名",
+        "price": 6000,
+        "duration": 100,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 78,
@@ -3351,7 +5919,7 @@
     "address": "東京都杉並区高円寺北2-34-5 グローブホームズ高円寺3F",
     "nearestStation": "高円寺駅",
     "walkMinutes": 5,
-    "priceMin": 2480,
+    "priceMin": 990,
     "duration": 120,
     "capacity": 1,
     "features": {
@@ -3386,7 +5954,21 @@
     "description": "高円寺駅徒歩5分、24時間365日営業の男性専用個室サウナ。5基の個室サウナで80-100℃の温度を自由に設定でき、日本初のフリーザーサウナ（マイナス5℃〜5℃）も3基完備。外気浴スペースもあり。",
     "saunakoCommentShort": "24時間！フリーザーサウナも体験できる",
     "saunakoCommentLong": "24時間365日いつでも使える個室サウナだよ！温度を自分で80〜100度に調整できるし、なんとマイナス5度のフリーザーサウナまであるの！外気浴スペースもあるから、ビジター利用2,480円で試してみてね！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ビジター 120分 1名",
+        "price": 2480,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ウォークイン 1名",
+        "price": 990,
+        "duration": 0,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 79,
@@ -3435,7 +6017,39 @@
     "description": "中野坂上駅徒歩7分、北欧HARVIA社製ストーブを備えた本格フィンランド式サウナ。最大4名の少人数制で、18℃の水風呂とセルフロウリュを完備。曜日別に男性・女性・貸切日が設定された事前予約制の施設。",
     "saunakoCommentShort": "HARVIA社製ストーブの本格フィンランド式",
     "saunakoCommentLong": "北欧トップブランドHARVIAのストーブで蒸されるフィンランドサウナが中野坂上にあるよ！最大4人の少人数制だからゆったりできるし、90分6,000円でグループ貸切もできるの。予約制だから混まないのも嬉しいポイント！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "90分 最大4名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "120分 最大4名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 90分 最大4名",
+        "price": 20000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 120分 最大4名",
+        "price": 27200,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 180分 最大4名",
+        "price": 40000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 80,
@@ -3489,7 +6103,69 @@
     "description": "野方駅徒歩5分、屋上にスウェーデンTYLOHELO社製ストーブのバレルサウナを備えた完全プライベート施設。晴れた日には富士山が望め、最大10名まで利用可能。外気浴スペースにフルフラットチェアも完備。",
     "saunakoCommentShort": "富士山が見えるルーフトップサウナ！",
     "saunakoCommentLong": "屋上にバレルサウナがあって、晴れた日は富士山が見えるんだよ！最大10人まで使えるから仲間とワイワイ楽しめるし、サウナポンチョやハットも無料貸出。ちょっとお高めだけど特別な日にぴったりの贅沢サウナ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "会員 180分 1〜3名 平日",
+        "price": 13600,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "会員 180分 1〜3名 土日祝",
+        "price": 16800,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "ビジター 180分 1〜2名 平日",
+        "price": 24000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "ビジター 180分 1〜2名 土日祝",
+        "price": 30000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "ビジター 180分 3名 平日",
+        "price": 33000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "ビジター 180分 3名 土日祝",
+        "price": 39000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "ビジター 180分 4名 平日",
+        "price": 40000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 180分 4名 土日祝",
+        "price": 46000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 180分 5名 平日",
+        "price": 45000,
+        "duration": 180,
+        "capacity": 5
+      },
+      {
+        "name": "ビジター 180分 5名 土日祝",
+        "price": 51000,
+        "duration": 180,
+        "capacity": 5
+      }
+    ]
   },
   {
     "id": 81,
@@ -3541,7 +6217,39 @@
     "description": "青物横丁駅徒歩1分、昭和スナックの奥に広がる異世界空間のプライベートサウナ。地下水掛け流しの水風呂とプロジェクションマッピングによる演出が特徴。水着着用で男女一緒に最大6名まで利用可能。",
     "saunakoCommentShort": "スナックの奥に隠れた異世界サウナ！",
     "saunakoCommentLong": "まさかスナックの奥にサウナがあるなんて！洞窟みたいな空間にプロジェクションマッピングが映し出されて、まるで異世界にいるみたい。地下水掛け流しの水風呂も気持ちいいし、水着着用だからカップルでも楽しめるよ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "プライベートサウナ 120分 1〜2名",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "プライベートサウナ 120分 3名",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プライベートサウナ 120分 4名",
+        "price": 24000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "プライベートサウナ 120分 5名",
+        "price": 28000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "プライベートサウナ 120分 6名",
+        "price": 32000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ]
   },
   {
     "id": 82,
@@ -3590,7 +6298,33 @@
     "description": "代官山駅徒歩2分、天然溶岩マグマ式サウナと9℃の深水風呂を備えたセミプライベート施設。プロジェクター付きシアタールームでくつろげる贅沢空間。最大6名まで利用可能で、水着着用でカップルもOK。",
     "saunakoCommentShort": "代官山のラグジュアリー溶岩サウナ",
     "saunakoCommentLong": "代官山駅から2分で行ける溶岩サウナだよ！9℃のキンキンに冷えた深い水風呂にドボンとできるし、シアタールームでプロジェクター見ながらまったりもできるの。水着OKだからカップルのサウナデートにもぴったり！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "75分 1名 オフピーク",
+        "price": 3000,
+        "duration": 75,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名 オフピーク",
+        "price": 4500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "75分 1名 ピーク",
+        "price": 4500,
+        "duration": 75,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名 ピーク",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ]
   },
   {
     "id": 83,
@@ -3638,7 +6372,45 @@
     "description": "恵比寿駅徒歩5分、「静寂と洗練が交差する大人の隠れ家」をコンセプトにした高級個室サウナ。セルフロウリュと氷で温度調整できる水風呂を備え、好きな音楽を流しながら自分だけの空間でととのえる。",
     "saunakoCommentShort": "恵比寿の高級隠れ家個室サウナ",
     "saunakoCommentLong": "恵比寿の大人な雰囲気にぴったりの高級個室サウナだよ！氷を入れて水風呂の温度を自分好みに調整できるのが面白いし、アロマ2種類も無料で選べるの。ちょっと贅沢なご褒美サウナとしてぜひ試してみて！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "ひとり 60分",
+        "price": 7800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "ひとり 90分",
+        "price": 11700,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ひとり 120分",
+        "price": 15600,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ふたり 60分",
+        "price": 9800,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "ふたり 90分",
+        "price": 14700,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ふたり 120分",
+        "price": 19600,
+        "duration": 120,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 84,
@@ -3683,7 +6455,39 @@
     "description": "東急歌舞伎町タワー5階の和をコンセプトにした個室サウナ。国産ヒノキの水風呂を全室に完備し、セルフロウリュマシーンで体感100度のサウナが楽しめる。整いテラスからはゴジラと目が合う絶景も。",
     "saunakoCommentShort": "歌舞伎町タワーで和の個室サウナ！",
     "saunakoCommentLong": "新宿ど真ん中なのに本格的な個室サウナが楽しめるの！ヒノキの水風呂が気持ちいいし、ととのいテラスでゴジラと目が合うのはここだけの体験だよ。Bluetoothで好きな音楽もかけられるから自分だけの空間を満喫して！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "2名部屋 60分",
+        "price": 9000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "2名部屋 90分",
+        "price": 13500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "2名部屋 120分",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "4名部屋 90分",
+        "price": 20000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "4名部屋 120分",
+        "price": 25000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ]
   },
   {
     "id": 85,
@@ -3728,7 +6532,15 @@
     "description": "新大久保駅徒歩2分のプライベートサウナ付きホテル。15〜17度の水風呂とアロマロウリュを備えたサウナスイートは45m2のゆったり空間。カップルや友人同士でのデイユース利用にも対応。",
     "saunakoCommentShort": "新大久保のおしゃれサウナホテル！",
     "saunakoCommentLong": "2025年春にオープンしたばかりの新しいサウナホテルだよ！サウナスイートは広々45平米で、アロマロウリュと水風呂の動線もバッチリ。カップルでデイユースもできるし、そのまま泊まれるのも嬉しいポイント！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "デイユース 90分 2名",
+        "price": 6900,
+        "duration": 90,
+        "capacity": 2
+      }
+    ]
   },
   {
     "id": 86,
@@ -3774,6 +6586,20 @@
     "description": "歌舞伎町の大人の隠れ家ホテルに併設された本格プライベートサウナ。110度まで調節可能なドライサウナとセルフロウリュ、水風呂を完備。豊富なアロマ水とサウナハットのアメニティも充実。",
     "saunakoCommentShort": "歌舞伎町の隠れ家で本格ドライサウナ！",
     "saunakoCommentLong": "歌舞伎町にある大人の隠れ家ホテルのサウナがめちゃくちゃ本格的！110度まで上げられるドライサウナにセルフロウリュもできて、アロマの種類も豊富なの。ジャグジーもあるからカップルで贅沢な時間を過ごすのにおすすめ！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "plans": [
+      {
+        "name": "2時間プラン 2名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "4時間プラン 2名",
+        "price": 24000,
+        "duration": 240,
+        "capacity": 2
+      }
+    ]
   }
 ]
