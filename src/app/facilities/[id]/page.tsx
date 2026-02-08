@@ -5,6 +5,8 @@ import { getFacilityById, getAllIds, getFacilitiesByPrefecture } from '@/lib/fac
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
 import ImageGallery from '@/components/ImageGallery';
 import BackButton from '@/components/BackButton';
+import ShareButton from '@/components/ShareButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -58,28 +60,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* 右: 共有 + ブックマーク + ユーザーアイコン(PC only) */}
+          {/* 右: 共有ボタン */}
           <div className="flex items-center gap-2 md:gap-3">
-            <button
-              className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
-              style={{ background: '#F0F0F0' }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-              </svg>
-              <span className="hidden md:inline">共有</span>
-            </button>
-            <button
-              className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
-              style={{ background: '#F0F0F0' }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-              </svg>
-              <span className="hidden md:inline">保存</span>
-            </button>
-            {/* ユーザーアイコン: PC only */}
-            <div className="hidden md:block w-9 h-9 rounded-full bg-gray-300" />
+            <ShareButton name={facility.name} url={`/facilities/${facility.id}`} />
           </div>
         </div>
       </header>
@@ -388,6 +371,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }

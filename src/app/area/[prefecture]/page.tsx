@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
+import ScrollToTop from '@/components/ScrollToTop';
 import AreaFilters from './AreaFilters';
 
 interface PageProps {
@@ -58,6 +59,23 @@ export default async function AreaPage({ params }: PageProps) {
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{prefData.label}</span>
         </nav>
+
+        {/* Area Navigation */}
+        <div className="flex gap-2 mb-6">
+          {PREFECTURES.map((pref) => (
+            <Link
+              key={pref.code}
+              href={`/area/${pref.code}`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                pref.code === prefecture
+                  ? 'bg-primary text-white'
+                  : 'bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary'
+              }`}
+            >
+              {pref.label}
+            </Link>
+          ))}
+        </div>
 
         {/* Area Header */}
         <div className="bg-surface border border-border rounded-xl p-6 mb-6">
@@ -117,6 +135,7 @@ export default async function AreaPage({ params }: PageProps) {
           />
         </Suspense>
       </main>
+      <ScrollToTop />
     </div>
   );
 }

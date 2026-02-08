@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import HeroSearchForm from '@/components/HeroSearchForm';
+import ScrollToTop from '@/components/ScrollToTop';
 import { getPopularFacilities } from '@/lib/facilities';
 
 export default function Home() {
@@ -108,9 +109,9 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 md:hidden">
             <span className="font-bold text-base text-white">サウナ子</span>
             <div className="flex items-center gap-4">
-              <Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">利用規約</Link>
-              <Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">プライバシー</Link>
-              <Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">お問い合わせ</Link>
+              <span className="text-[13px] text-[#9CA3AF]">利用規約（準備中）</span>
+              <span className="text-[13px] text-[#9CA3AF]">プライバシー（準備中）</span>
+              <span className="text-[13px] text-[#9CA3AF]">お問い合わせ（準備中）</span>
             </div>
             <p className="text-[11px] text-[#757575]">
               © 2026 サウナ子 All rights reserved.
@@ -143,8 +144,8 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
                   <li><Link href="/area/tokyo" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">エリアから探す</Link></li>
-                  <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">人気ランキング</Link></li>
-                  <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">新着施設</Link></li>
+                  <li><Link href="/search?sort=recommend" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">人気ランキング</Link></li>
+                  <li><Link href="/search?sort=newest" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">新着施設</Link></li>
                 </ul>
               </div>
 
@@ -152,9 +153,9 @@ export default function Home() {
               <div>
                 <h3 className="text-[13px] font-semibold text-white mb-4">会社情報</h3>
                 <ul className="space-y-3">
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">運営会社</Link></li>
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">お問い合わせ</Link></li>
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">採用情報</Link></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">運営会社（準備中）</span></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">お問い合わせ（準備中）</span></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">採用情報（準備中）</span></li>
                 </ul>
               </div>
 
@@ -162,9 +163,9 @@ export default function Home() {
               <div>
                 <h3 className="text-[13px] font-semibold text-white mb-4">法的情報</h3>
                 <ul className="space-y-3">
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">利用規約</Link></li>
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">プライバシーポリシー</Link></li>
-                  <li><Link href="#" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">特定商取引法に基づく表記</Link></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">利用規約（準備中）</span></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">プライバシーポリシー（準備中）</span></li>
+                  <li><span className="text-[13px] text-[#9CA3AF]">特定商取引法に基づく表記（準備中）</span></li>
                 </ul>
               </div>
             </div>
@@ -178,6 +179,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }
