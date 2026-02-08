@@ -51,7 +51,7 @@ export default function FacilityCard({ facility, showComment = true }: FacilityC
             <span className="tag tag-primary">外気浴</span>
           )}
           {facility.features.coupleOk && (
-            <span className="tag tag-primary">カップルOK</span>
+            <span className="tag tag-available">男女OK</span>
           )}
         </div>
 

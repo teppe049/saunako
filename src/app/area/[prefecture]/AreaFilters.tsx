@@ -96,7 +96,7 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
             onClick={() => toggleFilter('coupleOk')}
             className={`tag ${filters.coupleOk ? 'tag-primary' : 'bg-gray-100 text-text-secondary hover:bg-gray-200'} transition-colors`}
           >
-            カップルOK
+            男女OK
           </button>
           <span className="ml-auto text-sm text-text-secondary">
             {filteredFacilities.length}/{facilities.length}件

@@ -93,9 +93,6 @@ export default function Home() {
                         <span className="text-text-tertiary text-xs md:text-sm font-normal">要問合せ</span>
                       )}
                     </p>
-                    <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#E8F5E9] text-[#4CAF50]">
-                      空きあり
-                    </span>
                   </div>
                 </div>
               </Link>
