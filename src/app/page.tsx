@@ -59,13 +59,13 @@ export default function Home() {
             {popularFacilities.map((facility) => (
               <Link
                 key={facility.id}
-                href={`/facilities/${facility.slug}`}
+                href={`/facilities/${facility.id}`}
                 className="min-w-[220px] w-[220px] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
               >
                 {/* Image */}
-                <div className="h-[140px] md:h-[180px] bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="relative h-[140px] md:h-[180px] bg-gray-200 flex items-center justify-center overflow-hidden">
                   {facility.images.length > 0 ? (
-                    <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+                    <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 220px, 33vw" className="object-cover" />
                   ) : (
                     <span className="text-text-tertiary text-sm">No Image</span>
                   )}

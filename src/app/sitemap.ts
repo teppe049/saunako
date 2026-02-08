@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 全施設ページ
   const facilityPages: MetadataRoute.Sitemap = facilities.map((facility) => ({
-    url: `${baseUrl}/facilities/${facility.slug}`,
+    url: `${baseUrl}/facilities/${facility.id}`,
     lastModified: new Date(facility.updatedAt),
     changeFrequency: 'weekly' as const,
     priority: 0.8,

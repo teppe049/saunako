@@ -83,7 +83,7 @@ export default function FacilityMap({ facilities, selectedId, onSelect }: Facili
                       {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}/${facility.duration}分` : '要問合せ'}
                     </p>
                     <Link
-                      href={`/facilities/${facility.slug}`}
+                      href={`/facilities/${facility.id}`}
                       className="text-xs text-[#E85A4F] hover:underline"
                     >
                       詳細を見る →

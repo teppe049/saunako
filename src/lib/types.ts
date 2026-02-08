@@ -31,6 +31,7 @@ export interface Facility {
   images: string[];
   lat: number | null;
   lng: number | null;
+  description: string;
   saunakoCommentShort: string;
   saunakoCommentLong: string;
   updatedAt: string;

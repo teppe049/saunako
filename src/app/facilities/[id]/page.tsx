@@ -1,21 +1,21 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getFacilityBySlug, getAllSlugs } from '@/lib/facilities';
+import { getFacilityById, getAllIds } from '@/lib/facilities';
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ id: string }>;
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+  const ids = getAllIds();
+  return ids.map((id) => ({ id: String(id) }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
-  const facility = getFacilityBySlug(slug);
+  const { id } = await params;
+  const facility = getFacilityById(Number(id));
   if (!facility) return { title: 'Not Found' };
 
   return {
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function FacilityDetailPage({ params }: PageProps) {
-  const { slug } = await params;
-  const facility = getFacilityBySlug(slug);
+  const { id } = await params;
+  const facility = getFacilityById(Number(id));
 
   if (!facility) {
     notFound();
@@ -97,7 +97,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 {/* メイン画像: モバイル全幅240px角丸なし、PC padding内rounded */}
                 <div className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center overflow-hidden">
                   {facility.images.length > 0 ? (
-                    <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+                    <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 880px" className="object-cover" />
                   ) : (
                     <span className="text-text-tertiary">No Image</span>
                   )}
@@ -108,9 +108,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     {facility.images.map((img, i) => (
                       <div
                         key={i}
-                        className="flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary"
+                        className="relative flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary"
                       >
-                        <img src={img} alt={`${facility.name} ${i + 1}`} className="w-full h-full object-cover" />
+                        <Image src={img} alt={`${facility.name} ${i + 1}`} fill sizes="64px" className="object-cover" />
                       </div>
                     ))}
                   </div>
@@ -211,9 +211,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     施設紹介
                   </h2>
                   <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
-                    {facility.name}は、{facility.prefectureLabel}{facility.city}に位置する
-                    プライベートサウナ施設です。{facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分とアクセスも良好。` : ''}最大{facility.capacity}名まで利用可能で、
-                    {facility.features.coupleOk ? 'カップルや友人同士での利用にもおすすめです。' : 'ゆったりとしたプライベート空間でサウナを楽しめます。'}
+                    {facility.description}
                   </p>
                 </div>
               </div>
@@ -274,7 +272,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* a. Reservation Panel */}
               <div className="bg-surface md:shadow md:rounded-xl px-4 py-5 md:p-6">
                 <div className="flex flex-col gap-4 md:gap-5">
-                  <h3 className="font-bold text-text-primary text-lg">予約・料金</h3>
+                  <h3 className="font-bold text-text-primary text-lg">料金情報</h3>
 
                   {/* 料金情報 */}
                   {facility.priceMin > 0 ? (
@@ -310,10 +308,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       background: 'var(--saunako)',
                     }}
                   >
-                    公式サイトで予約する →
+                    公式サイトで予約する
+                    <span className="inline-block ml-1 text-xs align-middle">↗</span>
                   </a>
                   <p className="text-xs text-text-tertiary text-center">
-                    予約は施設の公式サイトで受け付けています
+                    外部の公式サイトに移動します
                   </p>
                 </div>
               </div>

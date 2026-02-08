@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facility } from '@/lib/types';
 
 interface FacilityCardProps {
@@ -8,11 +9,11 @@ interface FacilityCardProps {
 
 export default function FacilityCard({ facility, showComment = true }: FacilityCardProps) {
   return (
-    <Link href={`/facilities/${facility.slug}`} className="card block hover:shadow-md transition-shadow">
+    <Link href={`/facilities/${facility.id}`} className="card block hover:shadow-md transition-shadow">
       {/* Image */}
-      <div className="h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
+      <div className="relative h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
         {facility.images.length > 0 ? (
-          <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+          <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
         ) : (
           <span className="text-text-tertiary">No Image</span>
         )}

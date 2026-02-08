@@ -7,8 +7,8 @@ export function getAllFacilities(): Facility[] {
   return facilities;
 }
 
-export function getFacilityBySlug(slug: string): Facility | undefined {
-  return facilities.find((f) => f.slug === slug);
+export function getFacilityById(id: number): Facility | undefined {
+  return facilities.find((f) => f.id === id);
 }
 
 export function getFacilitiesByPrefecture(prefecture: string): Facility[] {
@@ -60,8 +60,8 @@ export function searchFacilities(params: {
   return result;
 }
 
-export function getAllSlugs(): string[] {
-  return facilities.map((f) => f.slug);
+export function getAllIds(): number[] {
+  return facilities.map((f) => f.id);
 }
 
 export function getAllPrefectures(): string[] {

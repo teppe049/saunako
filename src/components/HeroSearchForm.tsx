@@ -10,9 +10,9 @@ const PRICE_MAX = 30000;
 const PRICE_STEP = 1000;
 
 function formatPrice(v: number) {
-  if (v >= PRICE_MAX) return '¥3万';
+  if (v >= PRICE_MAX) return '¥30,000';
   if (v === 0) return '¥0';
-  return `¥${(v / 1000).toLocaleString()}k`;
+  return `¥${v.toLocaleString()}`;
 }
 
 export default function HeroSearchForm() {
@@ -108,7 +108,7 @@ export default function HeroSearchForm() {
                 className="dual-range-thumb absolute w-full"
               />
             </div>
-            <span className="text-text-tertiary text-xs flex-shrink-0">¥3万</span>
+            <span className="text-text-tertiary text-xs flex-shrink-0">¥30,000</span>
           </div>
         </div>
 
