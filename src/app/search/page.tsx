@@ -57,6 +57,9 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     prefData?.label || '全国',
   ].filter(Boolean).join('・');
 
+  // Build URL to top page with current search params pre-filled
+  const searchUrl = `/?${new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([, v]) => v))).toString()}`;
+
   return (
     <div className="min-h-screen bg-bg">
       {/* Header */}
@@ -82,12 +85,12 @@ async function SearchContent({ searchParams }: SearchPageProps) {
           </div>
 
           {/* Search Bar - PC only (mobile version is below header) */}
-          <div className="hidden md:flex w-[400px] h-10 bg-bg rounded-full px-4 items-center gap-2.5">
+          <Link href={searchUrl} className="hidden md:flex w-[400px] h-10 bg-bg rounded-full px-4 items-center gap-2.5 hover:bg-gray-100 transition-colors cursor-pointer">
             <svg className="w-4 h-4 text-text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <span className="text-text-secondary text-sm">{searchSummary}</span>
-          </div>
+          </Link>
 
           {/* Right Actions */}
           <div className="flex items-center gap-3">
@@ -109,12 +112,12 @@ async function SearchContent({ searchParams }: SearchPageProps) {
 
       {/* Mobile Search Bar */}
       <div className="md:hidden bg-surface border-b border-border px-4 py-3">
-        <div className="flex items-center gap-2 bg-bg rounded-full px-4 py-2.5">
+        <Link href={searchUrl} className="flex items-center gap-2 bg-bg rounded-full px-4 py-2.5 hover:bg-gray-100 transition-colors">
           <svg className="w-4 h-4 text-text-tertiary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <span className="text-text-secondary text-sm">{searchSummary}</span>
-        </div>
+        </Link>
       </div>
 
       {/* Main Content */}

@@ -17,7 +17,7 @@ function formatPrice(v: number) {
 
 export default function HeroSearchForm() {
   const router = useRouter();
-  const [rentalType, setRentalType] = useState('couple');
+  const [coupleOk, setCoupleOk] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
   const [selectedPrefecture, setSelectedPrefecture] = useState('');
   const [guests, setGuests] = useState('2');
@@ -36,7 +36,7 @@ export default function HeroSearchForm() {
     const params = new URLSearchParams();
     if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
     if (guests) params.set('capacity', guests);
-    if (rentalType === 'couple') params.set('coupleOk', 'true');
+    if (coupleOk) params.set('coupleOk', 'true');
     if (priceRange[0] > PRICE_MIN) params.set('priceMin', String(priceRange[0]));
     if (priceRange[1] < PRICE_MAX) params.set('priceMax', String(priceRange[1]));
     router.push(`/search?${params.toString()}`);
@@ -57,17 +57,19 @@ export default function HeroSearchForm() {
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Users size={12} />
-            貸切条件
+            こだわり条件
           </label>
-          <select
-            value={rentalType}
-            onChange={(e) => setRentalType(e.target.value)}
-            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 text-text-primary text-sm"
+          <button
+            type="button"
+            onClick={() => setCoupleOk(!coupleOk)}
+            className={`h-11 md:h-12 rounded-lg px-4 text-sm font-medium transition-colors border ${
+              coupleOk
+                ? 'bg-primary text-white border-primary'
+                : 'bg-[#F8F9FA] text-text-primary border-border hover:border-primary'
+            }`}
           >
-            <option value="couple">男女で利用可能</option>
-            <option value="solo">一人利用</option>
-            <option value="group">グループ利用</option>
-          </select>
+            男女で利用OK
+          </button>
         </div>
 
         {/* Price Range - dual thumb */}
