@@ -32,6 +32,7 @@
 2. **Design Agent は UI 変更時に必ず起動** — Pencil MCP でデザイン準拠を確認
 3. **QA Agent は実装完了後に必ず起動** — `npm run build && npm run lint` を実行
 4. **コミット前チェック**: ビルド成功 + lint パスを確認してからコミット
+5. **実装完了後は自動的に main に commit + push** — ユーザーから指示がなくても、実装が完了し QA パスしたら main にコミットしてプッシュする
 
 ### フローパターン
 
@@ -63,7 +64,7 @@ src/
 │   ├── page.tsx          # トップページ
 │   ├── search/           # 検索結果
 │   ├── area/[prefecture] # エリア別一覧
-│   └── facilities/[slug] # 施設詳細
+│   └── facilities/[id]   # 施設詳細
 ├── components/           # 共通コンポーネント
 └── lib/                  # ユーティリティ・型定義
 data/
