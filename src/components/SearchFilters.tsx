@@ -9,13 +9,16 @@ interface SearchFiltersProps {
   prefectureLabel?: string;
 }
 
-type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk';
+type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
 
 const filterLabels: Record<FilterKey, string> = {
   waterBath: '水風呂あり',
   selfLoyly: 'ロウリュ可',
   outdoorAir: '外気浴あり',
   coupleOk: '男女OK',
+  open24h: '24時間営業',
+  lateNight: '深夜OK',
+  earlyMorning: '早朝OK',
 };
 
 export default function SearchFilters({ totalCount, filteredCount, prefectureLabel }: SearchFiltersProps) {
@@ -27,6 +30,9 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
     selfLoyly: searchParams.get('selfLoyly') === 'true',
     outdoorAir: searchParams.get('outdoorAir') === 'true',
     coupleOk: searchParams.get('coupleOk') === 'true',
+    open24h: searchParams.get('open24h') === 'true',
+    lateNight: searchParams.get('lateNight') === 'true',
+    earlyMorning: searchParams.get('earlyMorning') === 'true',
   });
 
   const activeFilters = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]);
@@ -59,6 +65,9 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
       selfLoyly: false,
       outdoorAir: false,
       coupleOk: false,
+      open24h: false,
+      lateNight: false,
+      earlyMorning: false,
     });
 
     const params = new URLSearchParams();
@@ -66,6 +75,8 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
     if (prefecture) params.set('prefecture', prefecture);
     const sort = searchParams.get('sort');
     if (sort) params.set('sort', sort);
+    const duration = searchParams.get('duration');
+    if (duration) params.set('duration', duration);
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -119,36 +130,69 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
         ))}
       </div>
 
-      {/* Sort Dropdown + Count */}
+      {/* Sort Dropdown + Duration Dropdown + Count */}
       <div className="flex items-center justify-between">
-        <div className="relative inline-flex items-center">
-          <select
-            value={searchParams.get('sort') || 'recommend'}
-            onChange={(e) => {
-              const params = new URLSearchParams(searchParams.toString());
-              if (e.target.value === 'recommend') {
-                params.delete('sort');
-              } else {
-                params.set('sort', e.target.value);
-              }
-              router.push(`?${params.toString()}`, { scroll: false });
-            }}
-            className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer"
-          >
-            <option value="recommend">おすすめ順</option>
-            <option value="price_asc">価格が安い順</option>
-            <option value="price_desc">価格が高い順</option>
-            <option value="station_asc">駅から近い順</option>
-          </select>
-          {/* Chevron-down icon */}
-          <svg
-            className="pointer-events-none absolute right-2 w-3.5 h-3.5 text-text-tertiary"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+        <div className="flex items-center gap-2">
+          <div className="relative inline-flex items-center">
+            <select
+              value={searchParams.get('sort') || 'recommend'}
+              onChange={(e) => {
+                const params = new URLSearchParams(searchParams.toString());
+                if (e.target.value === 'recommend') {
+                  params.delete('sort');
+                } else {
+                  params.set('sort', e.target.value);
+                }
+                router.push(`?${params.toString()}`, { scroll: false });
+              }}
+              className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer"
+            >
+              <option value="recommend">おすすめ順</option>
+              <option value="price_asc">価格が安い順</option>
+              <option value="price_desc">価格が高い順</option>
+              <option value="station_asc">駅から近い順</option>
+            </select>
+            {/* Chevron-down icon */}
+            <svg
+              className="pointer-events-none absolute right-2 w-3.5 h-3.5 text-text-tertiary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+
+          <div className="relative inline-flex items-center">
+            <select
+              value={searchParams.get('duration') || ''}
+              onChange={(e) => {
+                const params = new URLSearchParams(searchParams.toString());
+                if (e.target.value) {
+                  params.set('duration', e.target.value);
+                } else {
+                  params.delete('duration');
+                }
+                router.push(`?${params.toString()}`, { scroll: false });
+              }}
+              className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer"
+            >
+              <option value="">利用時間</option>
+              <option value="60">60分〜</option>
+              <option value="90">90分〜</option>
+              <option value="120">120分〜</option>
+              <option value="180">180分〜</option>
+            </select>
+            {/* Chevron-down icon */}
+            <svg
+              className="pointer-events-none absolute right-2 w-3.5 h-3.5 text-text-tertiary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </div>
         <span className="text-[13px] text-text-tertiary">
           {filteredCount}/{totalCount}件

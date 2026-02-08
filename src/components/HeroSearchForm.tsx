@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { Users, Banknote, MapPin, User, Search } from 'lucide-react';
+import { Users, Banknote, MapPin, User, Search, Clock } from 'lucide-react';
 import { PREFECTURES } from '@/lib/types';
 
 const PRICE_MIN = 0;
@@ -21,6 +21,7 @@ export default function HeroSearchForm() {
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
   const [selectedPrefecture, setSelectedPrefecture] = useState('tokyo');
   const [guests, setGuests] = useState('2');
+  const [duration, setDuration] = useState('');
 
   const handleMinChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const val = Number(e.target.value);
@@ -37,6 +38,7 @@ export default function HeroSearchForm() {
     if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
     if (guests) params.set('capacity', guests);
     if (coupleOk) params.set('coupleOk', 'true');
+    if (duration) params.set('duration', duration);
     if (priceRange[0] > PRICE_MIN) params.set('priceMin', String(priceRange[0]));
     if (priceRange[1] < PRICE_MAX) params.set('priceMax', String(priceRange[1]));
     router.push(`/search?${params.toString()}`);
@@ -150,6 +152,25 @@ export default function HeroSearchForm() {
             <option value="3">3人</option>
             <option value="4">4人</option>
             <option value="5">5人以上</option>
+          </select>
+        </div>
+
+        {/* Duration */}
+        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+            <Clock size={12} />
+            利用時間
+          </label>
+          <select
+            value={duration}
+            onChange={(e) => setDuration(e.target.value)}
+            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
+          >
+            <option value="">指定なし</option>
+            <option value="60">60分</option>
+            <option value="90">90分</option>
+            <option value="120">120分</option>
+            <option value="180">180分</option>
           </select>
         </div>
       </div>

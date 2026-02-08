@@ -2,8 +2,8 @@
 
 import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Facility } from '@/lib/types';
+import ImageCarousel from '@/components/ImageCarousel';
 
 interface FacilityListCardProps {
   facility: Facility;
@@ -41,12 +41,12 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
           className="flex gap-3 md:gap-5 p-3 md:p-5 rounded-xl md:rounded-none border border-border md:border-0 md:border-b bg-surface md:bg-transparent hover:bg-gray-50 transition-colors"
         >
           {/* Image */}
-          <div className="relative flex-shrink-0 w-[100px] h-[100px] md:w-[180px] md:h-[100px] bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-            {facility.images.length > 0 ? (
-              <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 100px, 180px" className="object-cover" />
-            ) : (
-              <span className="text-text-tertiary text-xs">No Image</span>
-            )}
+          <div className="relative flex-shrink-0 w-[100px] h-[100px] md:w-[180px] md:h-[100px] bg-gray-200 rounded-lg overflow-hidden">
+            <ImageCarousel
+              images={facility.images.slice(0, 5)}
+              alt={facility.name}
+              sizes="(max-width: 768px) 100px, 180px"
+            />
           </div>
 
           {/* Content */}
@@ -92,8 +92,8 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               </p>
             )}
 
-            {/* Features - hidden on mobile for space */}
-            <p className="hidden md:block text-sm text-text-secondary truncate">
+            {/* Saunako comment */}
+            <p className="text-xs md:text-sm text-text-secondary line-clamp-1 md:line-clamp-none md:truncate">
               {facility.saunakoCommentShort || 'サウナ・水風呂完備'}
             </p>
           </div>

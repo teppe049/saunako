@@ -13,10 +13,14 @@ interface SearchPageProps {
     priceMin?: string;
     priceMax?: string;
     capacity?: string;
+    duration?: string;
     waterBath?: string;
     selfLoyly?: string;
     outdoorAir?: string;
     coupleOk?: string;
+    open24h?: string;
+    lateNight?: string;
+    earlyMorning?: string;
     sort?: string;
   }>;
 }
@@ -41,10 +45,14 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     priceMin: params.priceMin ? Number(params.priceMin) : undefined,
     priceMax: params.priceMax ? Number(params.priceMax) : undefined,
     capacity: params.capacity ? Number(params.capacity) : undefined,
+    duration: params.duration ? Number(params.duration) : undefined,
     waterBath: params.waterBath === 'true',
     selfLoyly: params.selfLoyly === 'true',
     outdoorAir: params.outdoorAir === 'true',
     coupleOk: params.coupleOk === 'true',
+    open24h: params.open24h === 'true',
+    lateNight: params.lateNight === 'true',
+    earlyMorning: params.earlyMorning === 'true',
   });
   const facilities = sortFacilities(filtered, sortKey);
 

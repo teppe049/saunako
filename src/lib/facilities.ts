@@ -22,15 +22,33 @@ export function getPopularFacilities(limit: number = 6): Facility[] {
   return [...withImages, ...withoutImages].slice(0, limit);
 }
 
+export function parseBusinessHoursTags(bh: string): { is24h: boolean; lateNight: boolean; earlyMorning: boolean } {
+  if (!bh || bh === '不明') return { is24h: false, lateNight: false, earlyMorning: false };
+
+  const is24h = bh.includes('24時間');
+
+  // Look for closing time after 22:00 or "翌" (next day)
+  const lateNight = is24h || bh.includes('翌') || /2[2-3]:\d{2}/.test(bh) || /[01]:\d{2}/.test(bh.split('-')[1] || '');
+
+  // Opening before 9:00
+  const earlyMorning = is24h || /^[0-8]:\d{2}/.test(bh) || /^0[0-8]:\d{2}/.test(bh);
+
+  return { is24h, lateNight, earlyMorning };
+}
+
 export function searchFacilities(params: {
   prefecture?: string;
   priceMin?: number;
   priceMax?: number;
   capacity?: number;
+  duration?: number;
   waterBath?: boolean;
   selfLoyly?: boolean;
   outdoorAir?: boolean;
   coupleOk?: boolean;
+  open24h?: boolean;
+  lateNight?: boolean;
+  earlyMorning?: boolean;
 }): Facility[] {
   let result = [...facilities];
 
@@ -46,6 +64,9 @@ export function searchFacilities(params: {
   if (params.capacity) {
     result = result.filter((f) => f.capacity >= params.capacity!);
   }
+  if (params.duration) {
+    result = result.filter((f) => f.duration >= params.duration!);
+  }
   if (params.waterBath) {
     result = result.filter((f) => f.features.waterBath);
   }
@@ -57,6 +78,15 @@ export function searchFacilities(params: {
   }
   if (params.coupleOk) {
     result = result.filter((f) => f.features.coupleOk);
+  }
+  if (params.open24h) {
+    result = result.filter((f) => parseBusinessHoursTags(f.businessHours).is24h);
+  }
+  if (params.lateNight) {
+    result = result.filter((f) => parseBusinessHoursTags(f.businessHours).lateNight);
+  }
+  if (params.earlyMorning) {
+    result = result.filter((f) => parseBusinessHoursTags(f.businessHours).earlyMorning);
   }
 
   return result;

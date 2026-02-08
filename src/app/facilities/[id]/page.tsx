@@ -340,6 +340,26 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                           : '詳細は公式サイトをご確認ください'}
                       </dd>
                     </div>
+                    {facility.businessHours && facility.businessHours !== '不明' && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">営業時間</dt>
+                        <dd className="text-text-primary text-sm">{facility.businessHours}</dd>
+                      </div>
+                    )}
+                    {facility.holidays && facility.holidays !== '不明' && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">定休日</dt>
+                        <dd className="text-text-primary text-sm">{facility.holidays}</dd>
+                      </div>
+                    )}
+                    {facility.phone && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">電話</dt>
+                        <dd className="text-text-primary text-sm">
+                          <a href={`tel:${facility.phone}`} className="text-primary hover:underline">{facility.phone}</a>
+                        </dd>
+                      </div>
+                    )}
                   </dl>
                 </div>
               </div>
