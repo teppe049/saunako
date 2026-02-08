@@ -2,8 +2,7 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import SearchFilters from '@/components/SearchFilters';
-import FacilityListCard from '@/components/FacilityListCard';
-import FacilityMapWrapper from '@/components/FacilityMapWrapper';
+import SearchInteractivePanel from '@/components/SearchInteractivePanel';
 import { searchFacilities, getAllFacilities } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
 
@@ -112,44 +111,18 @@ async function SearchContent({ searchParams }: SearchPageProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row h-[calc(100vh-112px)] md:h-[calc(100vh-64px)]">
-        {/* Left Panel - Results */}
-        <div className="w-full md:w-[820px] bg-surface flex flex-col overflow-hidden">
-          {/* Filters Header */}
-          <div className="px-4 md:px-6 py-3 md:py-4 border-b border-border">
-            <SearchFilters
-              totalCount={baseCount}
-              filteredCount={facilities.length}
-              prefectureLabel={prefData?.label}
-            />
-          </div>
-
-          {/* Cards List */}
-          <div className="flex-1 overflow-y-auto">
-            <div className="px-4 md:px-0 py-2 md:py-0 flex flex-col gap-3 md:gap-0">
-              {facilities.map((facility, index) => (
-                <FacilityListCard key={facility.id} facility={facility} index={index} />
-              ))}
-            </div>
-
-            {facilities.length === 0 && (
-              <div className="p-8 md:p-12 text-center">
-                <div className="text-4xl md:text-5xl mb-4">🧖</div>
-                <p className="text-text-secondary mb-2">
-                  この条件に合う施設が見つかりませんでした
-                </p>
-                <p className="text-sm text-text-tertiary">
-                  条件を変更して再検索してみてください
-                </p>
-              </div>
-            )}
-          </div>
+      <div className="flex flex-col h-[calc(100vh-112px)] md:h-[calc(100vh-64px)]">
+        {/* Filters Header */}
+        <div className="bg-surface px-4 md:px-6 py-3 md:py-4 border-b border-border">
+          <SearchFilters
+            totalCount={baseCount}
+            filteredCount={facilities.length}
+            prefectureLabel={prefData?.label}
+          />
         </div>
 
-        {/* Right Panel - Map (hidden on mobile) */}
-        <div className="hidden md:block flex-1 bg-surface shadow-[-1px_0_3px_rgba(0,0,0,0.03)]">
-          <FacilityMapWrapper facilities={facilities} />
-        </div>
+        {/* Interactive List + Map */}
+        <SearchInteractivePanel facilities={facilities} />
       </div>
     </div>
   );

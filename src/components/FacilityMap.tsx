@@ -1,36 +1,73 @@
 'use client';
 
-import { useCallback, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useCallback, useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
 
 interface FacilityMapProps {
   facilities: Facility[];
+  hoveredId?: number | null;
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
 }
 
-function createNumberedIcon(index: number, isActive: boolean) {
+type MarkerState = 'default' | 'hovered' | 'selected';
+
+function createPriceIcon(price: number, state: MarkerState) {
+  const label = price > 0 ? `¥${price.toLocaleString()}` : '--';
+  const styles = {
+    default: { bg: '#fff', color: '#222', border: '1px solid #ddd', shadow: '0 2px 4px rgba(0,0,0,0.1)', scale: 'scale(1)' },
+    hovered: { bg: '#222', color: '#fff', border: '1px solid #222', shadow: '0 4px 12px rgba(0,0,0,0.25)', scale: 'scale(1.15)' },
+    selected: { bg: '#222', color: '#fff', border: '1px solid #222', shadow: '0 4px 12px rgba(0,0,0,0.25)', scale: 'scale(1.15)' },
+  };
+  const s = styles[state];
+
   return new L.DivIcon({
     className: '',
     html: `<div style="
-      width:40px;height:40px;border-radius:50%;
-      background:#E85A4F;
-      color:#fff;font-size:16px;font-weight:600;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 2px 6px rgba(0,0,0,0.3);
-      transform:${isActive ? 'scale(1.25)' : 'scale(1)'};
-      transition:transform 0.15s;
-    ">${index}</div>`,
-    iconSize: [40, 40],
-    iconAnchor: [20, 20],
-    popupAnchor: [0, -22],
+      padding:4px 10px;border-radius:20px;
+      background:${s.bg};color:${s.color};
+      border:${s.border};
+      font-size:12px;font-weight:700;white-space:nowrap;
+      display:inline-flex;align-items:center;justify-content:center;
+      box-shadow:${s.shadow};
+      transform:${s.scale};
+      transition:all 0.15s ease;
+      cursor:pointer;
+    ">${label}</div>`,
+    iconSize: [80, 28],
+    iconAnchor: [40, 14],
+    popupAnchor: [0, -16],
   });
 }
 
-export default function FacilityMap({ facilities, selectedId, onSelect }: FacilityMapProps) {
+function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facilities: Facility[] }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (selectedId) {
+      const facility = facilities.find((f) => f.id === selectedId);
+      if (facility?.lat && facility?.lng) {
+        map.panTo([facility.lat, facility.lng], { animate: true });
+      }
+    }
+  }, [selectedId, facilities, map]);
+
+  return null;
+}
+
+function MapClickHandler({ onMapClick }: { onMapClick: () => void }) {
+  useMapEvents({
+    click: () => {
+      onMapClick();
+    },
+  });
+  return null;
+}
+
+export default function FacilityMap({ facilities, hoveredId, selectedId, onSelect }: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -47,6 +84,16 @@ export default function FacilityMap({ facilities, selectedId, onSelect }: Facili
     onSelect?.(facility);
   }, [onSelect]);
 
+  const handleMapClick = useCallback(() => {
+    setActiveMarker(null);
+  }, []);
+
+  function getMarkerState(facilityId: number): MarkerState {
+    if (selectedId === facilityId || activeMarker === facilityId) return 'selected';
+    if (hoveredId === facilityId) return 'hovered';
+    return 'default';
+  }
+
   return (
     <div className="w-full h-full flex flex-col">
       <MapHeader isVisible={isVisible} onToggle={() => setIsVisible(!isVisible)} />
@@ -62,36 +109,42 @@ export default function FacilityMap({ facilities, selectedId, onSelect }: Facili
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {validFacilities.map((facility, index) => (
-              <Marker
-                key={facility.id}
-                position={[facility.lat!, facility.lng!]}
-                icon={createNumberedIcon(index + 1, activeMarker === facility.id)}
-                eventHandlers={{
-                  click: () => handleMarkerClick(facility),
-                }}
-              >
-                <Popup>
-                  <div className="min-w-[200px]">
-                    <h3 className="font-bold text-sm mb-1">{facility.name}</h3>
-                    {facility.nearestStation && facility.walkMinutes > 0 && (
-                      <p className="text-xs text-gray-600 mb-2">
-                        {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+            <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
+            <MapClickHandler onMapClick={handleMapClick} />
+            {validFacilities.map((facility) => {
+              const state = getMarkerState(facility.id);
+              return (
+                <Marker
+                  key={facility.id}
+                  position={[facility.lat!, facility.lng!]}
+                  icon={createPriceIcon(facility.priceMin, state)}
+                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : 0}
+                  eventHandlers={{
+                    click: () => handleMarkerClick(facility),
+                  }}
+                >
+                  <Popup>
+                    <div className="min-w-[200px]">
+                      <h3 className="font-bold text-sm mb-1">{facility.name}</h3>
+                      {facility.nearestStation && facility.walkMinutes > 0 && (
+                        <p className="text-xs text-gray-600 mb-2">
+                          {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+                        </p>
+                      )}
+                      <p className="text-sm font-bold text-[#E85A4F] mb-2">
+                        {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}/${facility.duration}分` : '要問合せ'}
                       </p>
-                    )}
-                    <p className="text-sm font-bold text-[#E85A4F] mb-2">
-                      {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}/${facility.duration}分` : '要問合せ'}
-                    </p>
-                    <Link
-                      href={`/facilities/${facility.id}`}
-                      className="text-xs text-[#E85A4F] hover:underline"
-                    >
-                      詳細を見る →
-                    </Link>
-                  </div>
-                </Popup>
-              </Marker>
-            ))}
+                      <Link
+                        href={`/facilities/${facility.id}`}
+                        className="text-xs text-[#E85A4F] hover:underline"
+                      >
+                        詳細を見る →
+                      </Link>
+                    </div>
+                  </Popup>
+                </Marker>
+              );
+            })}
           </MapContainer>
         </div>
       )}

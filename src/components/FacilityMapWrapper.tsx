@@ -14,6 +14,7 @@ const FacilityMap = dynamic(() => import('./FacilityMap'), {
 
 interface Props {
   facilities: Facility[];
+  hoveredId?: number | null;
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
 }
