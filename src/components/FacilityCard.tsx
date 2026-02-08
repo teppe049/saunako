@@ -9,9 +9,13 @@ interface FacilityCardProps {
 export default function FacilityCard({ facility, showComment = true }: FacilityCardProps) {
   return (
     <Link href={`/facilities/${facility.slug}`} className="card block hover:shadow-md transition-shadow">
-      {/* Image placeholder */}
-      <div className="h-40 bg-gray-200 rounded-t-xl flex items-center justify-center">
-        <span className="text-text-tertiary">No Image</span>
+      {/* Image */}
+      <div className="h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
+        {facility.images.length > 0 ? (
+          <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+        ) : (
+          <span className="text-text-tertiary">No Image</span>
+        )}
       </div>
 
       <div className="p-4">

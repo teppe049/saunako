@@ -14,7 +14,11 @@ export default function FacilityListCard({ facility }: FacilityListCardProps) {
     >
       {/* Image */}
       <div className="flex-shrink-0 w-[100px] h-[100px] md:w-[180px] md:h-[100px] bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-        <span className="text-text-tertiary text-xs">No Image</span>
+        {facility.images.length > 0 ? (
+          <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+        ) : (
+          <span className="text-text-tertiary text-xs">No Image</span>
+        )}
       </div>
 
       {/* Content */}

@@ -95,20 +95,26 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* a. Image Gallery */}
               <div>
                 {/* メイン画像: モバイル全幅240px角丸なし、PC padding内rounded */}
-                <div className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center">
-                  <span className="text-text-tertiary">No Image</span>
+                <div className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center overflow-hidden">
+                  {facility.images.length > 0 ? (
+                    <img src={facility.images[0]} alt={facility.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-text-tertiary">No Image</span>
+                  )}
                 </div>
-                {/* サムネイル */}
-                <div className="flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className="flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary"
-                    >
-                      <span className="text-text-tertiary text-xs">{i}</span>
-                    </div>
-                  ))}
-                </div>
+                {/* サムネイル: 画像がない場合は非表示 */}
+                {facility.images.length > 1 && (
+                  <div className="flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
+                    {facility.images.map((img, i) => (
+                      <div
+                        key={i}
+                        className="flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary"
+                      >
+                        <img src={img} alt={`${facility.name} ${i + 1}`} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* セクション区切り (モバイルのみ) */}
