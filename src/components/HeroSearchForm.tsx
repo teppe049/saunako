@@ -19,7 +19,7 @@ export default function HeroSearchForm() {
   const router = useRouter();
   const [coupleOk, setCoupleOk] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
-  const [selectedPrefecture, setSelectedPrefecture] = useState('');
+  const [selectedPrefecture, setSelectedPrefecture] = useState('tokyo');
   const [guests, setGuests] = useState('2');
 
   const handleMinChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

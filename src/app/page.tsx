@@ -50,7 +50,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5 md:px-20">
           <div className="flex items-center justify-between mb-4 md:mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-text-primary">人気の施設</h2>
-            <Link href="/search" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
+            <Link href="/search?prefecture=tokyo" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
               すべて見る →
             </Link>
           </div>
