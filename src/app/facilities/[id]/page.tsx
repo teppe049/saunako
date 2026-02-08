@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
 import { getFacilityById, getAllIds } from '@/lib/facilities';
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
+import ImageGallery from '@/components/ImageGallery';
+import BackButton from '@/components/BackButton';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -39,15 +40,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         <div className="flex items-center justify-between h-full">
           {/* 左: 戻るボタン + ロゴ */}
           <div className="flex items-center gap-2 md:gap-4">
-            <Link
-              href={`/area/${facility.prefecture}`}
-              className="flex items-center gap-1 text-text-secondary hover:text-text-primary rounded-lg p-2 md:px-3"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              <span className="text-sm font-medium hidden md:inline">戻る</span>
-            </Link>
+            <BackButton />
             <div className="flex items-center gap-2">
               <Image
                 src="/saunako-avatar.png"
@@ -93,29 +86,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <div className="w-full md:w-[880px] md:flex-shrink-0">
             <div className="flex flex-col">
               {/* a. Image Gallery */}
-              <div>
-                {/* メイン画像: モバイル全幅240px角丸なし、PC padding内rounded */}
-                <div className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center overflow-hidden">
-                  {facility.images.length > 0 ? (
-                    <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 880px" className="object-cover" />
-                  ) : (
-                    <span className="text-text-tertiary">No Image</span>
-                  )}
-                </div>
-                {/* サムネイル: 画像がない場合は非表示 */}
-                {facility.images.length > 1 && (
-                  <div className="flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
-                    {facility.images.map((img, i) => (
-                      <div
-                        key={i}
-                        className="relative flex-shrink-0 w-[60px] h-[60px] md:w-16 md:h-16 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary"
-                      >
-                        <Image src={img} alt={`${facility.name} ${i + 1}`} fill sizes="64px" className="object-cover" />
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <ImageGallery images={facility.images} facilityName={facility.name} />
 
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
