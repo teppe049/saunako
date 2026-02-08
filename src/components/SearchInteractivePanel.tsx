@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useMemo } from 'react';
+import { useState, useRef, useCallback, useMemo, useSyncExternalStore } from 'react';
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import type { MapBounds } from './FacilityMap';
@@ -26,10 +26,22 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
+  // Track whether the map is visible (md breakpoint = 768px)
+  const isMapVisible = useSyncExternalStore(
+    (callback) => {
+      const mql = window.matchMedia('(min-width: 768px)');
+      mql.addEventListener('change', callback);
+      return () => mql.removeEventListener('change', callback);
+    },
+    () => window.matchMedia('(min-width: 768px)').matches,
+    () => false, // SSR snapshot: assume mobile (map hidden)
+  );
+
   const visibleFacilities = useMemo(() => {
-    if (!mapBounds) return facilities;
+    // Skip bounds filtering when the map is not visible (mobile)
+    if (!isMapVisible || !mapBounds) return facilities;
     return facilities.filter((f) => isInBounds(f, mapBounds));
-  }, [facilities, mapBounds]);
+  }, [facilities, mapBounds, isMapVisible]);
 
   const handleMapSelect = useCallback((facility: Facility) => {
     setSelectedId(facility.id);
@@ -59,8 +71,8 @@ export default function SearchInteractivePanel({ facilities }: Props) {
     <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
       {/* Left: List */}
       <div className="flex-1 md:flex-none md:w-[820px] overflow-y-auto">
-        {/* Bounds filter indicator */}
-        {mapBounds && visibleFacilities.length !== facilities.length && (
+        {/* Bounds filter indicator (only when map is visible) */}
+        {isMapVisible && mapBounds && visibleFacilities.length !== facilities.length && (
           <div className="px-4 md:px-5 py-2 bg-[#F8F9FA] border-b border-border text-xs text-text-secondary">
             この範囲に <span className="font-bold text-text-primary">{visibleFacilities.length}件</span> の施設（全{facilities.length}件中）
           </div>
@@ -84,10 +96,10 @@ export default function SearchInteractivePanel({ facilities }: Props) {
           <div className="p-8 md:p-12 text-center">
             <div className="text-4xl md:text-5xl mb-4">🧖</div>
             <p className="text-text-secondary mb-2">
-              {mapBounds ? 'この範囲に施設がありません' : 'この条件に合う施設が見つかりませんでした'}
+              {isMapVisible && mapBounds ? 'この範囲に施設がありません' : 'この条件に合う施設が見つかりませんでした'}
             </p>
             <p className="text-sm text-text-tertiary">
-              {mapBounds ? '地図を移動・縮小して範囲を広げてみてください' : '条件を変更して再検索してみてください'}
+              {isMapVisible && mapBounds ? '地図を移動・縮小して範囲を広げてみてください' : '条件を変更して再検索してみてください'}
             </p>
           </div>
         )}

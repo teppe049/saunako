@@ -16,8 +16,10 @@ export function getFacilitiesByPrefecture(prefecture: string): Facility[] {
 }
 
 export function getPopularFacilities(limit: number = 6): Facility[] {
-  // TODO: 人気順のロジックを実装（現状は最初のN件）
-  return facilities.slice(0, limit);
+  // 画像がある施設を優先的に返す
+  const withImages = facilities.filter((f) => f.images.length > 0);
+  const withoutImages = facilities.filter((f) => f.images.length === 0);
+  return [...withImages, ...withoutImages].slice(0, limit);
 }
 
 export function searchFacilities(params: {
