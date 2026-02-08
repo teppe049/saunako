@@ -49,6 +49,7 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
     const stationCount: Record<string, number> = {};
     facilities.forEach((f) => {
       const station = f.nearestStation;
+      if (!station) return;
       stationCount[station] = (stationCount[station] || 0) + 1;
     });
     return Object.entries(stationCount)

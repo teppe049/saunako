@@ -82,7 +82,7 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
             {/* Location */}
             {facility.nearestStation && facility.walkMinutes > 0 && (
               <p className="text-xs md:text-sm text-text-tertiary">
-                {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
+                {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
               </p>
             )}
 

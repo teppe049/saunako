@@ -24,7 +24,7 @@ export default function FacilityCard({ facility, showComment = true }: FacilityC
 
         {facility.nearestStation && facility.walkMinutes > 0 && (
           <p className="text-sm text-text-secondary mb-2">
-            {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+            {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
           </p>
         )}
 

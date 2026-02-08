@@ -165,7 +165,7 @@ export default function FacilityMap({ facilities, hoveredId, selectedId, onSelec
                       <h3 className="font-bold text-sm mb-1">{facility.name}</h3>
                       {facility.nearestStation && facility.walkMinutes > 0 && (
                         <p className="text-xs text-gray-600 mb-2">
-                          {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+                          {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
                         </p>
                       )}
                       <p className="text-sm font-bold text-[#E85A4F] mb-2">

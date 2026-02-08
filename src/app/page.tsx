@@ -78,7 +78,7 @@ export default function Home() {
                   </h3>
                   <p className="text-[13px] text-text-tertiary mb-3">
                     {facility.nearestStation && facility.walkMinutes > 0
-                      ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'} 徒歩${facility.walkMinutes}分 | `
+                      ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩${facility.walkMinutes}分 | `
                       : ''}{facility.area}
                   </p>
 

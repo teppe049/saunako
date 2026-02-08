@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${facility.name} | サウナ子`,
-    description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。` : ''}${facility.priceMin > 0 ? `${facility.priceMin.toLocaleString()}円〜` : '料金要問合せ'}`,
+    description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。` : ''}${facility.priceMin > 0 ? `${facility.priceMin.toLocaleString()}円〜` : '料金要問合せ'}`,
   };
 }
 
@@ -129,7 +129,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     </h1>
                     {facility.nearestStation && facility.walkMinutes > 0 && (
                       <p className="text-text-secondary mt-1 text-sm">
-                        {facility.nearestStation}{facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
+                        {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
                       </p>
                     )}
                     <div className="flex items-baseline gap-1 mt-2">
@@ -372,7 +372,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">アクセス</dt>
                       <dd className="text-text-primary text-sm">
                         {facility.nearestStation && facility.walkMinutes > 0
-                          ? `${facility.nearestStation}${facility.nearestStation.endsWith('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`
+                          ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`
                           : '詳細は公式サイトをご確認ください'}
                       </dd>
                     </div>
