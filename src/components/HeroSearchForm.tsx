@@ -1,32 +1,54 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Users, Banknote, MapPin, User, Search } from 'lucide-react';
 import { PREFECTURES } from '@/lib/types';
 
+const PRICE_MIN = 0;
 const PRICE_MAX = 30000;
 const PRICE_STEP = 1000;
+
+function formatPrice(v: number) {
+  if (v >= PRICE_MAX) return '¥3万';
+  if (v === 0) return '¥0';
+  return `¥${(v / 1000).toLocaleString()}k`;
+}
 
 export default function HeroSearchForm() {
   const router = useRouter();
   const [rentalType, setRentalType] = useState('couple');
-  const [priceMax, setPriceMax] = useState(PRICE_MAX);
+  const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
   const [selectedPrefecture, setSelectedPrefecture] = useState('');
   const [guests, setGuests] = useState('2');
+
+  const handleMinChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = Number(e.target.value);
+    setPriceRange(([, max]) => [Math.min(val, max - PRICE_STEP), max]);
+  }, []);
+
+  const handleMaxChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = Number(e.target.value);
+    setPriceRange(([min]) => [min, Math.max(val, min + PRICE_STEP)]);
+  }, []);
 
   const handleSearch = () => {
     const params = new URLSearchParams();
     if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
     if (guests) params.set('capacity', guests);
     if (rentalType === 'couple') params.set('coupleOk', 'true');
-    if (priceMax < PRICE_MAX) params.set('priceMax', String(priceMax));
+    if (priceRange[0] > PRICE_MIN) params.set('priceMin', String(priceRange[0]));
+    if (priceRange[1] < PRICE_MAX) params.set('priceMax', String(priceRange[1]));
     router.push(`/search?${params.toString()}`);
   };
 
-  const priceLabel = priceMax >= PRICE_MAX
-    ? '上限なし'
-    : `¥${priceMax.toLocaleString()}以下`;
+  const priceLabel = priceRange[0] === PRICE_MIN && priceRange[1] === PRICE_MAX
+    ? '指定なし'
+    : `${formatPrice(priceRange[0])}〜${priceRange[1] >= PRICE_MAX ? '上限なし' : formatPrice(priceRange[1])}`;
+
+  // Calculate track fill percentage
+  const minPercent = ((priceRange[0] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) * 100;
+  const maxPercent = ((priceRange[1] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) * 100;
 
   return (
     <div className="bg-surface rounded-2xl border border-border shadow-lg px-4 py-5 md:px-10 md:py-8 max-w-3xl mx-auto">
@@ -48,7 +70,7 @@ export default function HeroSearchForm() {
           </select>
         </div>
 
-        {/* Price Range */}
+        {/* Price Range - dual thumb */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Banknote size={12} />
@@ -57,15 +79,35 @@ export default function HeroSearchForm() {
           </label>
           <div className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 flex items-center gap-3">
             <span className="text-text-tertiary text-xs flex-shrink-0">¥0</span>
-            <input
-              type="range"
-              min={0}
-              max={PRICE_MAX}
-              step={PRICE_STEP}
-              value={priceMax}
-              onChange={(e) => setPriceMax(Number(e.target.value))}
-              className="w-full h-2 accent-saunako cursor-pointer"
-            />
+            <div className="relative w-full h-6 flex items-center">
+              {/* Track background */}
+              <div className="absolute w-full h-1.5 bg-gray-200 rounded-full" />
+              {/* Active track */}
+              <div
+                className="absolute h-1.5 bg-saunako rounded-full"
+                style={{ left: `${minPercent}%`, width: `${maxPercent - minPercent}%` }}
+              />
+              {/* Min thumb */}
+              <input
+                type="range"
+                min={PRICE_MIN}
+                max={PRICE_MAX}
+                step={PRICE_STEP}
+                value={priceRange[0]}
+                onChange={handleMinChange}
+                className="dual-range-thumb absolute w-full"
+              />
+              {/* Max thumb */}
+              <input
+                type="range"
+                min={PRICE_MIN}
+                max={PRICE_MAX}
+                step={PRICE_STEP}
+                value={priceRange[1]}
+                onChange={handleMaxChange}
+                className="dual-range-thumb absolute w-full"
+              />
+            </div>
             <span className="text-text-tertiary text-xs flex-shrink-0">¥3万</span>
           </div>
         </div>

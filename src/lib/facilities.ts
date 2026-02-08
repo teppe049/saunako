@@ -22,6 +22,7 @@ export function getPopularFacilities(limit: number = 6): Facility[] {
 
 export function searchFacilities(params: {
   prefecture?: string;
+  priceMin?: number;
   priceMax?: number;
   capacity?: number;
   waterBath?: boolean;
@@ -34,8 +35,11 @@ export function searchFacilities(params: {
   if (params.prefecture) {
     result = result.filter((f) => f.prefecture === params.prefecture);
   }
+  if (params.priceMin) {
+    result = result.filter((f) => f.priceMin >= params.priceMin!);
+  }
   if (params.priceMax) {
-    result = result.filter((f) => f.priceMin <= params.priceMax!);
+    result = result.filter((f) => f.priceMin > 0 && f.priceMin <= params.priceMax!);
   }
   if (params.capacity) {
     result = result.filter((f) => f.capacity >= params.capacity!);
