@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { Facility } from '@/lib/types';
+import type { MapBounds } from './FacilityMap';
 
 const FacilityMap = dynamic(() => import('./FacilityMap'), {
   ssr: false,
@@ -17,6 +18,7 @@ interface Props {
   hoveredId?: number | null;
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
+  onBoundsChange?: (bounds: MapBounds) => void;
 }
 
 export default function FacilityMapWrapper(props: Props) {

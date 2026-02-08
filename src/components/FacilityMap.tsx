@@ -6,11 +6,19 @@ import L from 'leaflet';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
 
+export interface MapBounds {
+  north: number;
+  south: number;
+  east: number;
+  west: number;
+}
+
 interface FacilityMapProps {
   facilities: Facility[];
   hoveredId?: number | null;
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
+  onBoundsChange?: (bounds: MapBounds) => void;
 }
 
 type MarkerState = 'default' | 'hovered' | 'selected';
@@ -58,6 +66,34 @@ function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facili
   return null;
 }
 
+function MapBoundsHandler({ onBoundsChange }: { onBoundsChange?: (bounds: MapBounds) => void }) {
+  const map = useMap();
+
+  const emitBounds = useCallback(() => {
+    if (!onBoundsChange) return;
+    const b = map.getBounds();
+    onBoundsChange({
+      north: b.getNorth(),
+      south: b.getSouth(),
+      east: b.getEast(),
+      west: b.getWest(),
+    });
+  }, [map, onBoundsChange]);
+
+  useMapEvents({
+    moveend: emitBounds,
+    zoomend: emitBounds,
+    click: () => {},
+  });
+
+  // Emit initial bounds when map loads
+  useEffect(() => {
+    emitBounds();
+  }, [emitBounds]);
+
+  return null;
+}
+
 function MapClickHandler({ onMapClick }: { onMapClick: () => void }) {
   useMapEvents({
     click: () => {
@@ -67,7 +103,7 @@ function MapClickHandler({ onMapClick }: { onMapClick: () => void }) {
   return null;
 }
 
-export default function FacilityMap({ facilities, hoveredId, selectedId, onSelect }: FacilityMapProps) {
+export default function FacilityMap({ facilities, hoveredId, selectedId, onSelect, onBoundsChange }: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -110,6 +146,7 @@ export default function FacilityMap({ facilities, hoveredId, selectedId, onSelec
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
+            <MapBoundsHandler onBoundsChange={onBoundsChange} />
             <MapClickHandler onMapClick={handleMapClick} />
             {validFacilities.map((facility) => {
               const state = getMarkerState(facility.id);
