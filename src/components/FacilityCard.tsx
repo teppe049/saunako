@@ -33,6 +33,9 @@ export default function FacilityCard({ facility, showComment = true }: FacilityC
             <>
               <span className="font-bold">{facility.priceMin.toLocaleString()}円</span>
               <span className="text-text-secondary">〜 / {facility.duration}分</span>
+              {facility.plans && facility.plans.length > 1 && (
+                <span className="text-text-tertiary text-xs ml-1.5">({facility.plans.length}プラン)</span>
+              )}
             </>
           ) : (
             <span className="text-text-secondary">要問合せ</span>

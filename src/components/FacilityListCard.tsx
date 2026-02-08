@@ -57,7 +57,13 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
             {/* Price */}
             <span className="text-base md:text-lg font-bold text-primary">
               {facility.priceMin > 0 ? (
-                <>¥{facility.priceMin.toLocaleString()}<span className="text-xs md:text-sm font-normal text-text-tertiary"> / 1時間</span></>
+                <>
+                  ¥{facility.priceMin.toLocaleString()}
+                  <span className="text-xs md:text-sm font-normal text-text-tertiary"> / 1時間</span>
+                  {facility.plans && facility.plans.length > 1 && (
+                    <span className="text-xs font-normal text-text-tertiary ml-1.5">({facility.plans.length}プラン)</span>
+                  )}
+                </>
               ) : (
                 <span className="text-xs md:text-sm font-normal text-text-tertiary">要問合せ</span>
               )}

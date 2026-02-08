@@ -1,3 +1,10 @@
+export interface Plan {
+  name: string;
+  price: number;
+  duration: number;
+  capacity: number;
+}
+
 export interface Facility {
   id: number;
   slug: string;
@@ -35,6 +42,7 @@ export interface Facility {
   saunakoCommentShort: string;
   saunakoCommentLong: string;
   updatedAt: string;
+  plans: Plan[] | null;
 }
 
 export interface Prefecture {

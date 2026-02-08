@@ -7,6 +7,7 @@ import ImageGallery from '@/components/ImageGallery';
 import BackButton from '@/components/BackButton';
 import ShareButton from '@/components/ShareButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import PricingTable from '@/components/PricingTable';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -205,6 +206,24 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
+
+              {/* d2. Pricing Table Section */}
+              {facility.plans && facility.plans.length > 0 && (
+                <>
+                  <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                    <div className="flex flex-col gap-3 md:gap-4">
+                      <h2 className="text-text-primary text-base md:text-lg font-semibold">
+                        料金プラン
+                      </h2>
+                      <PricingTable plans={facility.plans} />
+                      <p className="text-xs text-text-tertiary">
+                        ※ 最新の料金は公式サイトでご確認ください
+                      </p>
+                    </div>
+                  </div>
+                  <div className="h-2 bg-bg md:hidden" />
+                </>
+              )}
 
               {/* e. Notes Section */}
               <div className="md:mt-6 px-4 py-4 md:px-6 md:py-5 md:rounded-lg" style={{ background: '#FFF8F0' }}>
