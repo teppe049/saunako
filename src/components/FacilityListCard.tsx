@@ -3,6 +3,7 @@
 import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
+import { getTimeSlotTags } from '@/lib/facilities';
 import ImageCarousel from '@/components/ImageCarousel';
 
 interface FacilityListCardProps {
@@ -28,6 +29,8 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
       : isHovered
         ? 'bg-[#FFF5F4]'
         : '';
+
+    const { hasMorningSlot, hasLateNightSlot } = getTimeSlotTags(facility);
 
     return (
       <div
@@ -82,6 +85,12 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
               {facility.features.outdoorAir && (
                 <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-primary text-white rounded">外気浴</span>
+              )}
+              {hasMorningSlot && (
+                <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-[#E8F5E9] text-[#4CAF50] rounded">朝枠あり</span>
+              )}
+              {hasLateNightSlot && (
+                <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-[#E8F5E9] text-[#4CAF50] rounded">深夜枠あり</span>
               )}
             </div>
 

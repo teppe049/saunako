@@ -36,6 +36,26 @@ export function parseBusinessHoursTags(bh: string): { is24h: boolean; lateNight:
   return { is24h, lateNight, earlyMorning };
 }
 
+export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
+  if (facility.timeSlots && facility.timeSlots.length > 0) {
+    const allTimes = facility.timeSlots.flatMap(g => g.startTimes);
+    const hasMorningSlot = allTimes.some(t => {
+      const hour = parseInt(t.split(':')[0], 10);
+      return hour < 9;
+    });
+    const hasLateNightSlot = allTimes.some(t => {
+      const hour = parseInt(t.split(':')[0], 10);
+      return hour >= 22;
+    });
+    return { hasMorningSlot, hasLateNightSlot };
+  }
+  const tags = parseBusinessHoursTags(facility.businessHours);
+  return {
+    hasMorningSlot: tags.earlyMorning,
+    hasLateNightSlot: tags.lateNight,
+  };
+}
+
 export function searchFacilities(params: {
   prefecture?: string;
   priceMin?: number;
@@ -83,10 +103,10 @@ export function searchFacilities(params: {
     result = result.filter((f) => parseBusinessHoursTags(f.businessHours).is24h);
   }
   if (params.lateNight) {
-    result = result.filter((f) => parseBusinessHoursTags(f.businessHours).lateNight);
+    result = result.filter((f) => getTimeSlotTags(f).hasLateNightSlot);
   }
   if (params.earlyMorning) {
-    result = result.filter((f) => parseBusinessHoursTags(f.businessHours).earlyMorning);
+    result = result.filter((f) => getTimeSlotTags(f).hasMorningSlot);
   }
 
   return result;
