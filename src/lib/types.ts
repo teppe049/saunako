@@ -5,6 +5,12 @@ export interface Plan {
   capacity: number;
 }
 
+export interface TimeSlotGroup {
+  label: string;
+  startTimes: string[];
+  note?: string;
+}
+
 export interface Facility {
   id: number;
   slug: string;
@@ -43,6 +49,7 @@ export interface Facility {
   saunakoCommentLong: string;
   updatedAt: string;
   plans: Plan[] | null;
+  timeSlots: TimeSlotGroup[] | null;
 }
 
 export interface Prefecture {

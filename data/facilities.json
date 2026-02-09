@@ -49,7 +49,8 @@
         "duration": 180,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 2,
@@ -119,7 +120,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 3,
@@ -213,7 +215,8 @@
         "duration": 90,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 4,
@@ -283,7 +286,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 5,
@@ -365,7 +369,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 6,
@@ -429,7 +434,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 7,
@@ -535,6 +541,31 @@
         "duration": 100,
         "capacity": 1
       }
+    ],
+    "timeSlots": [
+      {
+        "label": "朝ウナ 45分",
+        "startTimes": [
+          "07:15",
+          "08:15",
+          "09:15",
+          "10:15",
+          "11:15"
+        ],
+        "note": "午前中限定"
+      },
+      {
+        "label": "通常 85分",
+        "startTimes": [
+          "12:20",
+          "14:00",
+          "15:40",
+          "17:20",
+          "19:00",
+          "20:40",
+          "22:20"
+        ]
+      }
     ]
   },
   {
@@ -599,7 +630,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 9,
@@ -663,7 +695,8 @@
         "duration": 120,
         "capacity": 8
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 10,
@@ -725,7 +758,8 @@
         "duration": 80,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 11,
@@ -849,7 +883,8 @@
         "duration": 120,
         "capacity": 8
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 12,
@@ -931,7 +966,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 13,
@@ -1019,7 +1055,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 14,
@@ -1089,7 +1126,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 15,
@@ -1159,7 +1197,8 @@
         "duration": 80,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 16,
@@ -1241,7 +1280,8 @@
         "duration": 120,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 17,
@@ -1299,7 +1339,8 @@
         "duration": 120,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 18,
@@ -1375,7 +1416,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 19,
@@ -1457,7 +1499,8 @@
         "duration": 90,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 20,
@@ -1539,7 +1582,8 @@
         "duration": 90,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 21,
@@ -1631,7 +1675,8 @@
         "duration": 80,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 22,
@@ -1701,7 +1746,8 @@
         "duration": 90,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 24,
@@ -1805,7 +1851,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 25,
@@ -1925,7 +1972,8 @@
         "duration": 80,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 26,
@@ -2007,7 +2055,8 @@
         "duration": 90,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 27,
@@ -2077,7 +2126,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 28,
@@ -2131,7 +2181,8 @@
         "duration": 80,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 29,
@@ -2207,7 +2258,8 @@
         "duration": 120,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 30,
@@ -2255,7 +2307,8 @@
         "duration": 120,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 31,
@@ -2309,7 +2362,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 32,
@@ -2357,7 +2411,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 33,
@@ -2426,7 +2481,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 34,
@@ -2616,7 +2672,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 35,
@@ -2688,7 +2745,8 @@
         "duration": 150,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 36,
@@ -2752,7 +2810,8 @@
         "duration": 120,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 37,
@@ -2834,7 +2893,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 38,
@@ -2974,7 +3034,8 @@
         "duration": 180,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 39,
@@ -3056,7 +3117,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 40,
@@ -3162,7 +3224,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 41,
@@ -3244,7 +3307,8 @@
         "duration": 120,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 42,
@@ -3314,7 +3378,8 @@
         "duration": 90,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 43,
@@ -3390,7 +3455,8 @@
         "duration": 90,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 44,
@@ -3448,7 +3514,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 45,
@@ -3512,7 +3579,8 @@
         "duration": 120,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 46,
@@ -3618,7 +3686,8 @@
         "duration": 90,
         "capacity": 5
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 47,
@@ -3676,7 +3745,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 48,
@@ -3782,7 +3852,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 49,
@@ -3918,7 +3989,8 @@
         "duration": 100,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 50,
@@ -3970,7 +4042,8 @@
         "duration": 100,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 51,
@@ -4046,7 +4119,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 52,
@@ -4098,7 +4172,8 @@
         "duration": 120,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 53,
@@ -4156,7 +4231,8 @@
         "duration": 100,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 54,
@@ -4226,7 +4302,8 @@
         "duration": 70,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 55,
@@ -4302,7 +4379,8 @@
         "duration": 70,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 56,
@@ -4360,7 +4438,8 @@
         "duration": 100,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 57,
@@ -4460,7 +4539,8 @@
         "duration": 120,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 58,
@@ -4524,7 +4604,8 @@
         "duration": 75,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 59,
@@ -4624,7 +4705,8 @@
         "duration": 240,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 60,
@@ -4706,7 +4788,8 @@
         "duration": 120,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 61,
@@ -4750,7 +4833,8 @@
     "description": "大宮駅から徒歩4分のサウナ×コワーキング×カフェ複合施設。12度前後のチラー管理された水風呂とセルフロウリュを備え、男女同室OKでカップルにも対応。3,800円から70分利用でき、サウナ後にカフェでくつろげる。",
     "saunakoCommentShort": "12度の水風呂！コワーキングも併設",
     "saunakoCommentLong": "大宮駅から徒歩4分！サウナ×コワーキング×カフェの複合施設だよ。水風呂は12度前後でキンキン、チラー管理で安定の冷たさ。男女同室OKだからカップルにもおすすめ。サウナ後にカフェでゆっくりするのも最高かも！",
-    "updatedAt": "2026-02-08"
+    "updatedAt": "2026-02-08",
+    "timeSlots": null
   },
   {
     "id": 62,
@@ -4850,7 +4934,8 @@
         "duration": 120,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 63,
@@ -4950,7 +5035,8 @@
         "duration": 180,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 64,
@@ -5002,7 +5088,8 @@
         "duration": 70,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 65,
@@ -5066,7 +5153,8 @@
         "duration": 80,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 66,
@@ -5172,7 +5260,8 @@
         "duration": 90,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 67,
@@ -5254,7 +5343,8 @@
         "duration": 150,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 68,
@@ -5306,7 +5396,8 @@
         "duration": 90,
         "capacity": 6
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 69,
@@ -5366,7 +5457,8 @@
         "duration": 90,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 70,
@@ -5433,7 +5525,8 @@
         "duration": 0,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 71,
@@ -5520,7 +5613,8 @@
         "duration": 90,
         "capacity": 3
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 72,
@@ -5590,7 +5684,8 @@
         "duration": 0,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 73,
@@ -5650,7 +5745,8 @@
         "duration": 0,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 74,
@@ -5716,7 +5812,8 @@
         "duration": 0,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 75,
@@ -5778,7 +5875,8 @@
         "duration": 70,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 76,
@@ -5838,7 +5936,8 @@
         "duration": 0,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 77,
@@ -5906,7 +6005,8 @@
         "duration": 100,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 78,
@@ -5968,7 +6068,8 @@
         "duration": 0,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 79,
@@ -6049,7 +6150,8 @@
         "duration": 180,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 80,
@@ -6165,7 +6267,8 @@
         "duration": 180,
         "capacity": 5
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 81,
@@ -6249,6 +6352,16 @@
         "duration": 120,
         "capacity": 6
       }
+    ],
+    "timeSlots": [
+      {
+        "label": "プライベートサウナ 120分",
+        "startTimes": [
+          "09:00",
+          "14:00",
+          "21:30"
+        ]
+      }
     ]
   },
   {
@@ -6324,7 +6437,8 @@
         "duration": 120,
         "capacity": 1
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 83,
@@ -6410,6 +6524,54 @@
         "duration": 120,
         "capacity": 2
       }
+    ],
+    "timeSlots": [
+      {
+        "label": "60分コース",
+        "startTimes": [
+          "13:30",
+          "14:30",
+          "15:30",
+          "16:30",
+          "17:30",
+          "18:30",
+          "19:30",
+          "20:30",
+          "21:30",
+          "22:30"
+        ],
+        "note": "平日13:30〜 / 土日祝10:30〜"
+      },
+      {
+        "label": "90分コース",
+        "startTimes": [
+          "13:30",
+          "14:30",
+          "15:30",
+          "16:30",
+          "17:30",
+          "18:30",
+          "19:30",
+          "20:30",
+          "21:30"
+        ],
+        "note": "平日13:30〜 / 土日祝10:30〜"
+      },
+      {
+        "label": "120分コース",
+        "startTimes": [
+          "13:30",
+          "14:30",
+          "15:30",
+          "16:30",
+          "17:30",
+          "18:30",
+          "19:30",
+          "20:30",
+          "21:00"
+        ],
+        "note": "平日13:30〜 / 土日祝10:30〜"
+      }
     ]
   },
   {
@@ -6487,7 +6649,8 @@
         "duration": 120,
         "capacity": 4
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 85,
@@ -6540,7 +6703,8 @@
         "duration": 90,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   },
   {
     "id": 86,
@@ -6600,6 +6764,7 @@
         "duration": 240,
         "capacity": 2
       }
-    ]
+    ],
+    "timeSlots": null
   }
 ]
