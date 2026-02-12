@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#F3F4F6"/>
+  <!-- Sauna house silhouette -->
+  <path d="M130 210 L200 160 L270 210 Z" fill="#E8725C" opacity="0.15"/>
+  <rect x="145" y="210" width="110" height="50" rx="2" fill="#E8725C" opacity="0.15"/>
+  <!-- Door -->
+  <rect x="185" y="230" width="30" height="30" rx="2" fill="#E8725C" opacity="0.25"/>
+  <!-- Steam lines -->
+  <path d="M175 150 Q170 135 175 120 Q180 105 175 90" stroke="#E8725C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <path d="M200 145 Q195 128 200 112 Q205 96 200 80" stroke="#E8725C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.3"/>
+  <path d="M225 150 Q220 135 225 120 Q230 105 225 90" stroke="#E8725C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.25"/>
+</svg>

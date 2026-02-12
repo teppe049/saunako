@@ -49,19 +49,21 @@ export default function RecentlyViewed({ allFacilities }: { allFacilities: Facil
           <h2 className="text-xl md:text-2xl font-bold text-text-primary">最近見た施設</h2>
         </div>
 
-        <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 scrollbar-hide">
+        <div className="flex gap-3 overflow-x-auto pb-2 pr-5 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 md:pr-0 scrollbar-hide">
           {recentFacilities.slice(0, 6).map((facility) => (
             <Link
               key={facility.id}
               href={`/facilities/${facility.id}`}
-              className="min-w-[220px] w-[220px] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
+              className="min-w-[72vw] w-[72vw] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
             >
               <div className="relative h-[140px] md:h-[180px] bg-gray-200 flex items-center justify-center overflow-hidden">
-                {facility.images.length > 0 ? (
-                  <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 220px, 33vw" className="object-cover" />
-                ) : (
-                  <span className="text-text-tertiary text-sm">No Image</span>
-                )}
+                <Image
+                  src={facility.images.length > 0 ? facility.images[0] : '/placeholder-facility.svg'}
+                  alt={facility.name}
+                  fill
+                  sizes="(max-width: 768px) 72vw, 33vw"
+                  className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
+                />
               </div>
 
               <div className="p-4 md:p-5">

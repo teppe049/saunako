@@ -12,11 +12,13 @@ export default function FacilityCard({ facility, showComment = true }: FacilityC
     <Link href={`/facilities/${facility.id}`} className="card block hover:shadow-md transition-shadow">
       {/* Image */}
       <div className="relative h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
-        {facility.images.length > 0 ? (
-          <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-        ) : (
-          <span className="text-text-tertiary">No Image</span>
-        )}
+        <Image
+          src={facility.images.length > 0 ? facility.images[0] : '/placeholder-facility.svg'}
+          alt={facility.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
+        />
       </div>
 
       <div className="p-4">

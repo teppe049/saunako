@@ -41,17 +41,13 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
         className="relative h-60 md:h-96 bg-gray-200 rounded-none md:rounded-xl md:mt-0 flex items-center justify-center overflow-hidden cursor-pointer"
         onClick={() => images.length > 0 && setLightboxOpen(true)}
       >
-        {images.length > 0 ? (
-          <Image
-            src={images[selectedIndex]}
-            alt={facilityName}
-            fill
-            sizes="(max-width: 768px) 100vw, 880px"
-            className="object-cover"
-          />
-        ) : (
-          <span className="text-text-tertiary">No Image</span>
-        )}
+        <Image
+          src={images.length > 0 ? images[selectedIndex] : '/placeholder-facility.svg'}
+          alt={facilityName}
+          fill
+          sizes="(max-width: 768px) 100vw, 880px"
+          className={images.length > 0 ? 'object-cover' : 'object-contain p-8'}
+        />
       </div>
       {/* サムネイル: 画像が1枚以下の場合は非表示 */}
       {images.length > 1 && (

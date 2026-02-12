@@ -22,8 +22,8 @@ export default function ImageCarousel({ images, alt, sizes }: ImageCarouselProps
 
   if (images.length === 0) {
     return (
-      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-        <span className="text-text-tertiary text-xs">No Image</span>
+      <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
+        <Image src="/placeholder-facility.svg" alt={alt} fill sizes={sizes} className="object-contain p-2" />
       </div>
     );
   }
