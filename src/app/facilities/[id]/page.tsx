@@ -9,6 +9,7 @@ import ShareButton from '@/components/ShareButton';
 import ScrollToTop from '@/components/ScrollToTop';
 import PricingTable from '@/components/PricingTable';
 import TimeSlotTable from '@/components/TimeSlotTable';
+import RecordVisit from '@/components/RecordVisit';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -44,6 +45,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg">
+      <RecordVisit facilityId={facility.id} />
       {/* 専用ヘッダー */}
       <header className="bg-surface shadow h-14 px-4 md:h-16 md:px-8">
         <div className="flex items-center justify-between h-full">

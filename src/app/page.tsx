@@ -3,10 +3,12 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import ScrollToTop from '@/components/ScrollToTop';
-import { getPopularFacilities } from '@/lib/facilities';
+import { getPopularFacilities, getAllFacilities } from '@/lib/facilities';
+import RecentlyViewed from '@/components/RecentlyViewed';
 
 export default function Home() {
   const popularFacilities = getPopularFacilities(3);
+  const allFacilities = getAllFacilities();
 
   return (
     <div className="min-h-screen bg-bg">
@@ -101,6 +103,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Recently Viewed */}
+      <RecentlyViewed allFacilities={allFacilities} />
 
       {/* Footer */}
       <footer className="bg-[#1A1A1A] text-white py-8 md:pt-12 md:pb-8">
