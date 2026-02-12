@@ -2,11 +2,15 @@
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { AREA_GROUPS } from '@/lib/types';
+import { getAreaFacilityCounts } from '@/lib/facilities';
 
 interface SearchFiltersProps {
   totalCount: number;
   filteredCount: number;
   prefectureLabel?: string;
+  prefectureCode?: string;
+  areaSlug?: string;
 }
 
 type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
@@ -21,7 +25,7 @@ const filterLabels: Record<FilterKey, string> = {
   earlyMorning: '早朝OK',
 };
 
-export default function SearchFilters({ totalCount, filteredCount, prefectureLabel }: SearchFiltersProps) {
+export default function SearchFilters({ totalCount, filteredCount, prefectureLabel, prefectureCode, areaSlug }: SearchFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -73,6 +77,8 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
     const params = new URLSearchParams();
     const prefecture = searchParams.get('prefecture');
     if (prefecture) params.set('prefecture', prefecture);
+    const area = searchParams.get('area');
+    if (area) params.set('area', area);
     const sort = searchParams.get('sort');
     if (sort) params.set('sort', sort);
     const duration = searchParams.get('duration');
@@ -109,6 +115,52 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
           >
             すべてクリア
           </button>
+        </div>
+      )}
+
+      {/* Area Chips */}
+      {prefectureCode && AREA_GROUPS[prefectureCode] && (
+        <div className="flex items-center gap-2 mb-2 md:mb-3 overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap">
+          <span className="text-[13px] text-text-tertiary mr-1 flex-shrink-0">エリア:</span>
+          {(() => {
+            const counts = getAreaFacilityCounts(prefectureCode);
+            const areas = AREA_GROUPS[prefectureCode];
+            return (
+              <>
+                <button
+                  onClick={() => {
+                    const params = new URLSearchParams(searchParams.toString());
+                    params.delete('area');
+                    router.push(`?${params.toString()}`, { scroll: false });
+                  }}
+                  className={`px-3 py-1 rounded-full md:rounded-[20px] text-[13px] font-medium transition-colors border flex-shrink-0 ${
+                    !areaSlug
+                      ? 'bg-primary text-white border-primary'
+                      : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
+                  }`}
+                >
+                  すべて
+                </button>
+                {areas.map((area) => (
+                  <button
+                    key={area.slug}
+                    onClick={() => {
+                      const params = new URLSearchParams(searchParams.toString());
+                      params.set('area', area.slug);
+                      router.push(`?${params.toString()}`, { scroll: false });
+                    }}
+                    className={`px-3 py-1 rounded-full md:rounded-[20px] text-[13px] font-medium transition-colors border flex-shrink-0 ${
+                      areaSlug === area.slug
+                        ? 'bg-primary text-white border-primary'
+                        : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
+                    }`}
+                  >
+                    {area.label}({counts[area.slug] || 0})
+                  </button>
+                ))}
+              </>
+            );
+          })()}
         </div>
       )}
 

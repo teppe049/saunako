@@ -64,3 +64,40 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'chiba', label: '千葉県' },
   { code: 'osaka', label: '大阪府' },
 ];
+
+export interface AreaGroup {
+  slug: string;
+  label: string;
+  cities: string[];
+}
+
+export const AREA_GROUPS: Record<string, AreaGroup[]> = {
+  tokyo: [
+    { slug: 'toshin', label: '都心・副都心', cities: ['千代田区', '中央区', '港区', '新宿区'] },
+    { slug: 'josei', label: '城西', cities: ['世田谷区', '渋谷区', '中野区', '杉並区', '目黒区'] },
+    { slug: 'joto', label: '城東', cities: ['台東区', '墨田区', '文京区', '江東区'] },
+    { slug: 'johoku', label: '城北', cities: ['北区', '豊島区'] },
+    { slug: 'jonan', label: '城南', cities: ['品川区'] },
+  ],
+  osaka: [
+    { slug: 'kita', label: 'キタ', cities: ['大阪市北区', '大阪市福島区'] },
+    { slug: 'minami', label: 'ミナミ', cities: ['大阪市中央区', '大阪市西区'] },
+    { slug: 'other', label: 'その他', cities: ['八尾市', '枚方市', '茨木市'] },
+  ],
+  kanagawa: [
+    { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区'] },
+    { slug: 'kawasaki', label: '川崎', cities: ['川崎市川崎区'] },
+    { slug: 'other', label: 'その他', cities: ['海老名市'] },
+  ],
+  saitama: [
+    { slug: 'urawa-omiya', label: '浦和・大宮', cities: ['さいたま市浦和区', 'さいたま市大宮区', 'さいたま市中央区'] },
+    { slug: 'kawaguchi-warabi', label: '川口・蕨', cities: ['川口市'] },
+    { slug: 'other', label: 'その他', cities: ['日高市'] },
+  ],
+  chiba: [
+    { slug: 'funabashi-ichikawa', label: '船橋・市川', cities: ['船橋市'] },
+    { slug: 'urayasu-ichikawa', label: '浦安・市川', cities: ['浦安市'] },
+    { slug: 'matsudo-kashiwa', label: '松戸・柏', cities: ['松戸市'] },
+    { slug: 'other', label: 'その他', cities: ['安房郡鋸南町'] },
+  ],
+};

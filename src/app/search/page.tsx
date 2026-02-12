@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SearchFilters from '@/components/SearchFilters';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
-import { searchFacilities, getAllFacilities, sortFacilities } from '@/lib/facilities';
+import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
 
@@ -22,6 +22,7 @@ interface SearchPageProps {
     lateNight?: string;
     earlyMorning?: string;
     sort?: string;
+    area?: string;
   }>;
 }
 
@@ -34,6 +35,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const params = await searchParams;
   const prefecture = params.prefecture || '';
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
+  const areaSlug = params.area || '';
+  const areaData = areaSlug && prefecture ? getAreaBySlug(prefecture, areaSlug) : undefined;
 
   const sortKey = (['recommend', 'price_asc', 'price_desc', 'station_asc'].includes(params.sort || '')
     ? params.sort
@@ -42,6 +45,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const allFacilities = getAllFacilities();
   const filtered = searchFacilities({
     prefecture: prefecture || undefined,
+    area: areaData?.label,
     priceMin: params.priceMin ? Number(params.priceMin) : undefined,
     priceMax: params.priceMax ? Number(params.priceMax) : undefined,
     capacity: params.capacity ? Number(params.capacity) : undefined,
@@ -63,7 +67,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   // Build search summary
   const searchSummary = [
     prefData?.label || '全国',
-  ].filter(Boolean).join('・');
+    areaData?.label,
+  ].filter(Boolean).join(' ');
 
   // Build URL to top page with current search params pre-filled
   const searchUrl = `/?${new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([, v]) => v))).toString()}`;
@@ -130,6 +135,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
             totalCount={baseCount}
             filteredCount={facilities.length}
             prefectureLabel={prefData?.label}
+            prefectureCode={prefecture}
+            areaSlug={areaSlug}
           />
         </div>
 

@@ -1,4 +1,4 @@
-import { Facility } from './types';
+import { Facility, AreaGroup, AREA_GROUPS } from './types';
 import facilitiesData from '../../data/facilities.json';
 
 const facilities: Facility[] = facilitiesData as Facility[];
@@ -56,8 +56,29 @@ export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; 
   };
 }
 
+export function getAreaBySlug(prefectureCode: string, areaSlug: string): AreaGroup | undefined {
+  const areas = AREA_GROUPS[prefectureCode];
+  if (!areas) return undefined;
+  return areas.find((a) => a.slug === areaSlug);
+}
+
+export function getFacilitiesByArea(prefectureCode: string, areaLabel: string): Facility[] {
+  return facilities.filter((f) => f.prefecture === prefectureCode && f.area === areaLabel);
+}
+
+export function getAreaFacilityCounts(prefectureCode: string): Record<string, number> {
+  const areas = AREA_GROUPS[prefectureCode];
+  if (!areas) return {};
+  const counts: Record<string, number> = {};
+  for (const area of areas) {
+    counts[area.slug] = facilities.filter((f) => f.prefecture === prefectureCode && f.area === area.label).length;
+  }
+  return counts;
+}
+
 export function searchFacilities(params: {
   prefecture?: string;
+  area?: string;
   priceMin?: number;
   priceMax?: number;
   capacity?: number;
@@ -74,6 +95,9 @@ export function searchFacilities(params: {
 
   if (params.prefecture) {
     result = result.filter((f) => f.prefecture === params.prefecture);
+  }
+  if (params.area) {
+    result = result.filter((f) => f.area === params.area);
   }
   if (params.priceMin) {
     result = result.filter((f) => f.priceMin >= params.priceMin!);
