@@ -19,9 +19,8 @@ export default function HeroSearchForm() {
   const router = useRouter();
   const [coupleOk, setCoupleOk] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
-  const [selectedPrefecture, setSelectedPrefecture] = useState('tokyo');
+  const [selectedLocation, setSelectedLocation] = useState('tokyo');
   const [guests, setGuests] = useState('2');
-  const [selectedArea, setSelectedArea] = useState('');
   const [duration, setDuration] = useState('');
 
   const handleMinChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,8 +35,11 @@ export default function HeroSearchForm() {
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
-    if (selectedArea) params.set('area', selectedArea);
+    if (selectedLocation) {
+      const [pref, area] = selectedLocation.split(':');
+      if (pref) params.set('prefecture', pref);
+      if (area) params.set('area', area);
+    }
     if (guests) params.set('capacity', guests);
     if (coupleOk) params.set('coupleOk', 'true');
     if (duration) params.set('duration', duration);
@@ -118,47 +120,30 @@ export default function HeroSearchForm() {
           </div>
         </div>
 
-        {/* Area */}
+        {/* Area - single select with optgroup */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <MapPin size={12} />
             エリア
           </label>
           <select
-            value={selectedPrefecture}
-            onChange={(e) => { setSelectedPrefecture(e.target.value); setSelectedArea(''); }}
+            value={selectedLocation}
+            onChange={(e) => setSelectedLocation(e.target.value)}
             className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
           >
-            <option value="">エリアを選択</option>
+            <option value="">全国</option>
             {PREFECTURES.map((pref) => (
-              <option key={pref.code} value={pref.code}>
-                {pref.label}
-              </option>
+              <optgroup key={pref.code} label={pref.label}>
+                <option value={pref.code}>{pref.label} すべて</option>
+                {(AREA_GROUPS[pref.code] || []).map((group) => (
+                  <option key={group.slug} value={`${pref.code}:${group.slug}`}>
+                    {group.label}
+                  </option>
+                ))}
+              </optgroup>
             ))}
           </select>
         </div>
-
-        {/* Sub-area */}
-        {AREA_GROUPS[selectedPrefecture] && (
-          <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
-            <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
-              <MapPin size={12} />
-              サブエリア
-            </label>
-            <select
-              value={selectedArea}
-              onChange={(e) => setSelectedArea(e.target.value)}
-              className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
-            >
-              <option value="">全エリア</option>
-              {AREA_GROUPS[selectedPrefecture].map((group) => (
-                <option key={group.slug} value={group.slug}>
-                  {group.label}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
 
         {/* Guests */}
         <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">

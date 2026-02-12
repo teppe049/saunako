@@ -79,17 +79,19 @@ export default async function AreaPage({ params }: PageProps) {
           ))}
         </div>
 
-        {/* Sub-Area Navigation */}
+        {/* Area Chips */}
         {areaGroups.length > 0 && (
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+          <div className="flex flex-wrap gap-2 mb-6">
+            <span className="px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
+              すべて ({facilities.length})
+            </span>
             {areaGroups.map((area) => (
               <Link
                 key={area.slug}
                 href={`/area/${prefecture}/${area.slug}`}
-                className="bg-surface border border-border rounded-xl p-4 hover:border-primary hover:shadow-sm transition-all text-center"
+                className="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary"
               >
-                <span className="font-bold text-text-primary">{area.label}</span>
-                <span className="block text-sm text-text-tertiary">{areaCounts[area.slug] || 0}件</span>
+                {area.label} ({areaCounts[area.slug] || 0})
               </Link>
             ))}
           </div>

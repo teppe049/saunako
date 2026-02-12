@@ -4,7 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
-import { getFacilitiesByArea, getAreaBySlug, getAllPrefectures } from '@/lib/facilities';
+import { getFacilitiesByArea, getAreaBySlug, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
+import Header from '@/components/Header';
+import ScrollToTop from '@/components/ScrollToTop';
 import AreaFilters from '../AreaFilters';
 
 interface PageProps {
@@ -71,58 +73,69 @@ export default async function SubAreaPage({ params }: PageProps) {
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const facilities = getFacilitiesByArea(prefecture, areaLabel);
   const saunakoComment = SAUNAKO_SUB_AREA_COMMENTS[`${prefecture}/${areaSlug}`] || DEFAULT_SUB_AREA_COMMENT;
+  const areaCounts = getAreaFacilityCounts(prefecture);
+  const allFacilitiesCount = Object.values(areaCounts).reduce((sum, c) => sum + c, 0);
 
   return (
     <div className="min-h-screen bg-bg">
-      {/* Header */}
-      <header className="bg-surface border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/saunako-avatar.png"
-              alt="サウナ子"
-              width={32}
-              height={32}
-              className="w-8 h-8 rounded-full object-cover"
-            />
-            <span className="text-lg font-bold text-text-primary">サウナ子</span>
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">
-        {/* Breadcrumb */}
+        {/* Breadcrumb - 2 levels only */}
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
           <Link href={`/area/${prefecture}`} className="hover:text-primary transition-colors">{prefLabel}</Link>
-          <span className="mx-2">{'>'}</span>
-          <span className="text-text-primary">{areaLabel}</span>
         </nav>
 
-        {/* Area Navigation Chips */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {areaGroups.map((area) => (
+        {/* Prefecture Navigation - same as prefecture page */}
+        <div className="flex gap-2 mb-6">
+          {PREFECTURES.map((pref) => (
             <Link
-              key={area.slug}
-              href={`/area/${prefecture}/${area.slug}`}
+              key={pref.code}
+              href={`/area/${pref.code}`}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                area.slug === areaSlug
+                pref.code === prefecture
                   ? 'bg-primary text-white'
                   : 'bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary'
               }`}
             >
-              {area.label}
+              {pref.label}
             </Link>
           ))}
         </div>
+
+        {/* Area Chips - with "すべて" + all areas, current area active */}
+        {areaGroups.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Link
+              href={`/area/${prefecture}`}
+              className="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary"
+            >
+              すべて ({allFacilitiesCount})
+            </Link>
+            {areaGroups.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/area/${prefecture}/${area.slug}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  area.slug === areaSlug
+                    ? 'bg-primary text-white'
+                    : 'bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary'
+                }`}
+              >
+                {area.label} ({areaCounts[area.slug] || 0})
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Area Header */}
         <div className="bg-surface border border-border rounded-xl p-6 mb-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-2">
-                {prefLabel} {areaLabel}の個室サウナ
+                {prefLabel}の個室サウナ
               </h1>
               <div className="flex items-center gap-3">
                 <span className="inline-flex items-center px-3 py-1 bg-primary-light text-primary rounded-full text-sm font-semibold">
@@ -131,10 +144,6 @@ export default async function SubAreaPage({ params }: PageProps) {
               </div>
             </div>
           </div>
-          {/* Cities included */}
-          <p className="text-sm text-text-tertiary mt-3">
-            対象エリア: {areaData.cities.join('・')}
-          </p>
         </div>
 
         {/* Saunako Comment Section */}
@@ -172,10 +181,11 @@ export default async function SubAreaPage({ params }: PageProps) {
         }>
           <AreaFilters
             facilities={facilities}
-            prefectureLabel={prefLabel}
+            prefectureLabel={areaLabel}
           />
         </Suspense>
       </main>
+      <ScrollToTop />
     </div>
   );
 }
