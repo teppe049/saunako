@@ -13,11 +13,11 @@ interface PageProps {
 
 // エリアごとのサウナ子コメント
 const SAUNAKO_SUB_AREA_COMMENTS: Record<string, string> = {
-  'tokyo/toshin': '都心エリアは新宿・港区を中心に個室サウナの激戦区！駅チカで仕事帰りにサクッと整えるのが最高よ。',
-  'tokyo/josei': '城西エリアは渋谷・世田谷を中心におしゃれな施設が多いわ。住宅街に隠れた穴場も要チェック！',
-  'tokyo/joto': '城東エリアは台東区・墨田区を中心に下町情緒あふれるサウナが魅力。コスパ抜群の施設が多いのよ！',
-  'tokyo/johoku': '城北エリアは池袋周辺にアクセス抜群の施設がそろってるわ。',
-  'tokyo/jonan': '城南エリアは品川区にこだわりの施設が集中してるの。',
+  'tokyo/shinjuku-minato': '新宿・港区・銀座エリアは個室サウナの激戦区！駅チカで仕事帰りにサクッと整えるのが最高よ。',
+  'tokyo/shibuya-setagaya': '渋谷・世田谷エリアはおしゃれな施設が多いわ。住宅街に隠れた穴場も要チェック！',
+  'tokyo/ueno-asakusa': '上野・浅草エリアは下町情緒あふれるサウナが魅力。コスパ抜群の施設が多いのよ！',
+  'tokyo/ikebukuro': '池袋・赤羽エリアはアクセス抜群の施設がそろってるわ。',
+  'tokyo/shinagawa': '品川エリアにはこだわりの施設が集中してるの。',
 };
 
 const DEFAULT_SUB_AREA_COMMENT = 'このエリアのおすすめ個室サウナを紹介するわね。';

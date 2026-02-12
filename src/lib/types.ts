@@ -73,11 +73,11 @@ export interface AreaGroup {
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   tokyo: [
-    { slug: 'toshin', label: '都心・副都心', cities: ['千代田区', '中央区', '港区', '新宿区'] },
-    { slug: 'josei', label: '城西', cities: ['世田谷区', '渋谷区', '中野区', '杉並区', '目黒区'] },
-    { slug: 'joto', label: '城東', cities: ['台東区', '墨田区', '文京区', '江東区'] },
-    { slug: 'johoku', label: '城北', cities: ['北区', '豊島区'] },
-    { slug: 'jonan', label: '城南', cities: ['品川区'] },
+    { slug: 'shinjuku-minato', label: '新宿・港・銀座', cities: ['千代田区', '中央区', '港区', '新宿区'] },
+    { slug: 'shibuya-setagaya', label: '渋谷・世田谷', cities: ['世田谷区', '渋谷区', '中野区', '杉並区', '目黒区'] },
+    { slug: 'ueno-asakusa', label: '上野・浅草', cities: ['台東区', '墨田区', '文京区', '江東区'] },
+    { slug: 'ikebukuro', label: '池袋・赤羽', cities: ['北区', '豊島区'] },
+    { slug: 'shinagawa', label: '品川', cities: ['品川区'] },
   ],
   osaka: [
     { slug: 'kita', label: 'キタ', cities: ['大阪市北区', '大阪市福島区'] },
