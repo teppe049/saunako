@@ -59,26 +59,32 @@ export default function HeroSearchForm() {
   return (
     <div className="bg-surface rounded-2xl border border-border shadow-lg px-4 py-5 md:px-10 md:py-8 max-w-3xl mx-auto">
       <div className="grid grid-cols-3 md:grid-cols-2 gap-2.5 md:gap-4">
-        {/* Rental Type - full width on mobile */}
+        {/* Area - full width */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
-            <Users size={12} />
-            こだわり条件
+            <MapPin size={12} />
+            エリア
           </label>
-          <button
-            type="button"
-            onClick={() => setCoupleOk(!coupleOk)}
-            className={`h-11 md:h-12 rounded-lg px-4 text-sm font-medium transition-colors border ${
-              coupleOk
-                ? 'bg-primary text-white border-primary'
-                : 'bg-[#F8F9FA] text-text-primary border-border hover:border-primary'
-            }`}
+          <select
+            value={selectedLocation}
+            onChange={(e) => setSelectedLocation(e.target.value)}
+            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 text-text-primary text-sm"
           >
-            男女で利用OK
-          </button>
+            <option value="">全国</option>
+            {PREFECTURES.map((pref) => (
+              <optgroup key={pref.code} label={pref.label}>
+                <option value={pref.code}>{pref.label} すべて</option>
+                {(AREA_GROUPS[pref.code] || []).map((group) => (
+                  <option key={group.slug} value={`${pref.code}:${group.slug}`}>
+                    {group.label}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
         </div>
 
-        {/* Price Range - dual thumb */}
+        {/* Price Range - full width */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Banknote size={12} />
@@ -120,33 +126,8 @@ export default function HeroSearchForm() {
           </div>
         </div>
 
-        {/* Area - single select with optgroup */}
-        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
-            <MapPin size={12} />
-            エリア
-          </label>
-          <select
-            value={selectedLocation}
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
-          >
-            <option value="">全国</option>
-            {PREFECTURES.map((pref) => (
-              <optgroup key={pref.code} label={pref.label}>
-                <option value={pref.code}>{pref.label} すべて</option>
-                {(AREA_GROUPS[pref.code] || []).map((group) => (
-                  <option key={group.slug} value={`${pref.code}:${group.slug}`}>
-                    {group.label}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
-        </div>
-
         {/* Guests */}
-        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+        <div className="col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <User size={12} />
             人数
@@ -165,7 +146,7 @@ export default function HeroSearchForm() {
         </div>
 
         {/* Duration */}
-        <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+        <div className="col-span-1 flex flex-col gap-1.5">
           <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Clock size={12} />
             利用時間
@@ -181,6 +162,25 @@ export default function HeroSearchForm() {
             <option value="120">120分</option>
             <option value="180">180分</option>
           </select>
+        </div>
+
+        {/* Couple OK toggle */}
+        <div className="col-span-1 flex flex-col gap-1.5">
+          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+            <Users size={12} />
+            こだわり
+          </label>
+          <button
+            type="button"
+            onClick={() => setCoupleOk(!coupleOk)}
+            className={`h-11 md:h-12 rounded-lg px-2 md:px-4 text-sm font-medium transition-colors border ${
+              coupleOk
+                ? 'bg-primary text-white border-primary'
+                : 'bg-[#F8F9FA] text-text-primary border-border hover:border-primary'
+            }`}
+          >
+            男女OK
+          </button>
         </div>
       </div>
 
