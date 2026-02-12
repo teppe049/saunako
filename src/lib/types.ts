@@ -59,5 +59,8 @@ export interface Prefecture {
 
 export const PREFECTURES: Prefecture[] = [
   { code: 'tokyo', label: '東京都' },
+  { code: 'kanagawa', label: '神奈川県' },
+  { code: 'saitama', label: '埼玉県' },
+  { code: 'chiba', label: '千葉県' },
   { code: 'osaka', label: '大阪府' },
 ];
