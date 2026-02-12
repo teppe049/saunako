@@ -3,8 +3,8 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { getFacilitiesByPrefecture, getAllPrefectures } from '@/lib/facilities';
-import { PREFECTURES } from '@/lib/types';
+import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
+import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
 import ScrollToTop from '@/components/ScrollToTop';
 import AreaFilters from './AreaFilters';
 
@@ -47,6 +47,8 @@ export default async function AreaPage({ params }: PageProps) {
 
   const facilities = getFacilitiesByPrefecture(prefecture);
   const saunakoComment = SAUNAKO_AREA_COMMENTS[prefecture] || DEFAULT_SAUNAKO_COMMENT;
+  const areaGroups = AREA_GROUPS[prefecture] || [];
+  const areaCounts = getAreaFacilityCounts(prefecture);
 
   return (
     <div className="min-h-screen bg-bg">
@@ -76,6 +78,22 @@ export default async function AreaPage({ params }: PageProps) {
             </Link>
           ))}
         </div>
+
+        {/* Sub-Area Navigation */}
+        {areaGroups.length > 0 && (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+            {areaGroups.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/area/${prefecture}/${area.slug}`}
+                className="bg-surface border border-border rounded-xl p-4 hover:border-primary hover:shadow-sm transition-all text-center"
+              >
+                <span className="font-bold text-text-primary">{area.label}</span>
+                <span className="block text-sm text-text-tertiary">{areaCounts[area.slug] || 0}件</span>
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Area Header */}
         <div className="bg-surface border border-border rounded-xl p-6 mb-6">
