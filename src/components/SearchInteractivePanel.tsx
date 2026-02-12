@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useMemo, useSyncExternalStore } from 'react';
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
+import MobileMapOverlay from './MobileMapOverlay';
 import type { MapBounds } from './FacilityMap';
 import { Facility } from '@/lib/types';
 
@@ -24,6 +25,7 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
+  const [mobileMapOpen, setMobileMapOpen] = useState(false);
   const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   // Track whether the map is visible (md breakpoint = 768px)
@@ -115,6 +117,29 @@ export default function SearchInteractivePanel({ facilities }: Props) {
           onBoundsChange={handleBoundsChange}
         />
       </div>
+
+      {/* Mobile: Floating map button */}
+      {!isMapVisible && facilities.length > 0 && (
+        <button
+          onClick={() => setMobileMapOpen(true)}
+          className="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
+          aria-label="地図で見る"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>地図で見る</span>
+        </button>
+      )}
+
+      {/* Mobile: Fullscreen map overlay */}
+      {mobileMapOpen && (
+        <MobileMapOverlay
+          facilities={facilities}
+          onClose={() => setMobileMapOpen(false)}
+        />
+      )}
     </div>
   );
 }
