@@ -10,6 +10,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import PricingTable from '@/components/PricingTable';
 import TimeSlotTable from '@/components/TimeSlotTable';
 import RecordVisit from '@/components/RecordVisit';
+import ReservationLink from '@/components/ReservationLink';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -83,7 +84,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             <BackButton />
             <div className="flex items-center gap-2">
               <Image
-                src="/saunako-avatar.png"
+                src="/saunako-avatar.webp"
                 alt="サウナ子"
                 width={36}
                 height={36}
@@ -154,7 +155,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3 md:gap-4">
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/saunako-avatar.png"
+                      src="/saunako-avatar.webp"
                       alt="サウナ子"
                       width={44}
                       height={44}
@@ -432,11 +433,13 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 className="min-w-[220px] w-[220px] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
               >
                 <div className="relative h-[140px] md:h-[160px] bg-gray-200 flex items-center justify-center overflow-hidden">
-                  {f.images.length > 0 ? (
-                    <Image src={f.images[0]} alt={f.name} fill sizes="(max-width: 768px) 220px, 33vw" className="object-cover" />
-                  ) : (
-                    <span className="text-text-tertiary text-sm">No Image</span>
-                  )}
+                  <Image
+                    src={f.images.length > 0 ? f.images[0] : '/placeholder-facility.svg'}
+                    alt={f.name}
+                    fill
+                    sizes="(max-width: 768px) 220px, 33vw"
+                    className={f.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
+                  />
                 </div>
                 <div className="p-3 md:p-4">
                   <h3 className="text-sm md:text-base font-semibold text-text-primary mb-1 truncate">{f.name}</h3>
@@ -454,7 +457,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
       <footer className="bg-[#1A1A1A] text-white py-6 md:py-8">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
           <Link href="/" className="inline-flex items-center gap-2 mb-3">
-            <Image src="/saunako-avatar.png" alt="サウナ子" width={28} height={28} className="w-7 h-7 rounded-full object-cover" />
+            <Image src="/saunako-avatar.webp" alt="サウナ子" width={28} height={28} className="w-7 h-7 rounded-full object-cover" />
             <span className="font-bold text-sm text-white">サウナ子</span>
           </Link>
           <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>

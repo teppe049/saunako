@@ -7,7 +7,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-20 h-14 md:h-[72px] flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/saunako-avatar.png"
+            src="/saunako-avatar.webp"
             alt="サウナ子"
             width={36}
             height={36}

@@ -30,7 +30,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto mb-8">
             <div className="bg-saunako-bg border border-saunako-border rounded-[12px] md:rounded-xl px-4 py-3 md:px-5 md:py-4 flex items-start gap-2.5 md:gap-3">
               <Image
-                src="/saunako-avatar.png"
+                src="/saunako-avatar.webp"
                 alt="サウナ子"
                 width={40}
                 height={40}
@@ -58,20 +58,22 @@ export default function Home() {
           </div>
 
           {/* Mobile: horizontal scroll, PC: 3-column grid */}
-          <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 scrollbar-hide">
+          <div className="flex gap-3 overflow-x-auto pb-2 pr-5 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 md:pr-0 scrollbar-hide">
             {popularFacilities.map((facility) => (
               <Link
                 key={facility.id}
                 href={`/facilities/${facility.id}`}
-                className="min-w-[220px] w-[220px] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
+                className="min-w-[72vw] w-[72vw] md:min-w-0 md:w-auto bg-surface rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow overflow-hidden flex-shrink-0 md:flex-shrink"
               >
                 {/* Image */}
                 <div className="relative h-[140px] md:h-[180px] bg-gray-200 flex items-center justify-center overflow-hidden">
-                  {facility.images.length > 0 ? (
-                    <Image src={facility.images[0]} alt={facility.name} fill sizes="(max-width: 768px) 220px, 33vw" className="object-cover" />
-                  ) : (
-                    <span className="text-text-tertiary text-sm">No Image</span>
-                  )}
+                  <Image
+                    src={facility.images.length > 0 ? facility.images[0] : '/placeholder-facility.svg'}
+                    alt={facility.name}
+                    fill
+                    sizes="(max-width: 768px) 72vw, 33vw"
+                    className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
+                  />
                 </div>
 
                 {/* Info */}
@@ -125,7 +127,7 @@ export default function Home() {
               <div className="max-w-[320px]">
                 <div className="flex items-center gap-2 mb-4">
                   <Image
-                    src="/saunako-avatar.png"
+                    src="/saunako-avatar.webp"
                     alt="サウナ子"
                     width={32}
                     height={32}

@@ -125,7 +125,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
             </Link>
             <Link href="/" className="flex items-center gap-2 md:gap-2.5">
               <Image
-                src="/saunako-avatar.png"
+                src="/saunako-avatar.webp"
                 alt="サウナ子"
                 width={36}
                 height={36}

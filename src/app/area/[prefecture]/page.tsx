@@ -143,7 +143,7 @@ export default async function AreaPage({ params }: PageProps) {
         <div className="saunako-comment mb-8">
           <div className="flex items-start gap-3">
             <Image
-              src="/saunako-avatar.png"
+              src="/saunako-avatar.webp"
               alt="サウナ子"
               width={40}
               height={40}

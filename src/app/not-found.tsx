@@ -10,7 +10,7 @@ export default function NotFound() {
       <main className="flex flex-col items-center justify-center px-5 py-16 md:py-24">
         {/* Avatar */}
         <Image
-          src="/saunako-avatar.png"
+          src="/saunako-avatar.webp"
           alt="サウナ子"
           width={96}
           height={96}
@@ -36,7 +36,7 @@ export default function NotFound() {
         {/* Saunako Comment */}
         <div className="bg-saunako-bg border border-saunako-border rounded-xl px-4 py-3 md:px-5 md:py-4 flex items-start gap-2.5 md:gap-3 max-w-md w-full mb-10">
           <Image
-            src="/saunako-avatar.png"
+            src="/saunako-avatar.webp"
             alt="サウナ子"
             width={40}
             height={40}
