@@ -1,0 +1,21 @@
+{
+  "name": "サウナ子 - 個室サウナ検索",
+  "short_name": "サウナ子",
+  "description": "プライベートサウナ専門の比較・予約サービス",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#E8725C",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

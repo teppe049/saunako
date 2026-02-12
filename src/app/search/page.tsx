@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import SearchFilters from '@/components/SearchFilters';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
 import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
@@ -26,10 +27,47 @@ interface SearchPageProps {
   }>;
 }
 
-export const metadata = {
-  title: '検索結果 | サウナ子',
-  description: '条件に合った個室サウナを検索。料金・設備・エリアで絞り込んで、あなたにぴったりの施設を見つけよう。',
-};
+export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const prefecture = params.prefecture || '';
+  const prefData = PREFECTURES.find((p) => p.code === prefecture);
+  const areaSlug = params.area || '';
+  const areaData = areaSlug && prefecture ? getAreaBySlug(prefecture, areaSlug) : undefined;
+
+  // Build title
+  let title: string;
+  if (prefData && areaData) {
+    title = `${prefData.label} ${areaData.label}の個室サウナ検索結果`;
+  } else if (prefData) {
+    title = `${prefData.label}の個室サウナ検索結果`;
+  } else {
+    title = '個室サウナ検索結果';
+  }
+
+  // Build description with active filters
+  const filterParts: string[] = [];
+  const areaLabel = areaData ? `${prefData!.label} ${areaData.label}` : prefData?.label || '全国';
+  filterParts.push(areaLabel);
+  if (params.priceMin || params.priceMax) {
+    const min = params.priceMin ? `${Number(params.priceMin).toLocaleString()}円` : '';
+    const max = params.priceMax ? `${Number(params.priceMax).toLocaleString()}円` : '';
+    if (min && max) filterParts.push(`${min}〜${max}`);
+    else if (min) filterParts.push(`${min}以上`);
+    else if (max) filterParts.push(`${max}以下`);
+  }
+  if (params.capacity) filterParts.push(`${params.capacity}人以上`);
+  if (params.waterBath === 'true') filterParts.push('水風呂あり');
+  if (params.selfLoyly === 'true') filterParts.push('セルフロウリュ');
+  if (params.outdoorAir === 'true') filterParts.push('外気浴');
+  if (params.coupleOk === 'true') filterParts.push('カップルOK');
+
+  const description = `${filterParts.join('・')}の条件で個室サウナを検索。料金・設備・アクセス情報を比較して、あなたにぴったりの施設を見つけよう。`;
+
+  return {
+    title,
+    description,
+  };
+}
 
 async function SearchContent({ searchParams }: SearchPageProps) {
   const params = await searchParams;
