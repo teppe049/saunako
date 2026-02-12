@@ -50,8 +50,31 @@ export default async function AreaPage({ params }: PageProps) {
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const areaCounts = getAreaFacilityCounts(prefecture);
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'TOP',
+        item: 'https://saunako.jp/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: prefData.label,
+        item: `https://saunako.jp/area/${prefecture}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">

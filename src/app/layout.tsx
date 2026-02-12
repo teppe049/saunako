@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     icon: '/favicon.png',
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -54,6 +55,28 @@ export const metadata: Metadata = {
   },
 };
 
+const siteJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'サウナ子',
+      url: 'https://saunako.jp',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://saunako.jp/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Organization',
+      name: 'サウナ子',
+      url: 'https://saunako.jp',
+      logo: 'https://saunako.jp/saunako-avatar.png',
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +87,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         {children}
       </body>
     </html>

@@ -76,8 +76,37 @@ export default async function SubAreaPage({ params }: PageProps) {
   const areaCounts = getAreaFacilityCounts(prefecture);
   const allFacilitiesCount = Object.values(areaCounts).reduce((sum, c) => sum + c, 0);
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'TOP',
+        item: 'https://saunako.jp/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: prefLabel,
+        item: `https://saunako.jp/area/${prefecture}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: areaLabel,
+        item: `https://saunako.jp/area/${prefecture}/${areaSlug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">

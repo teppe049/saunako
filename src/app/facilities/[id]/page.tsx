@@ -43,8 +43,37 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     .filter((f) => f.id !== facility.id)
     .slice(0, 3);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: facility.name,
+    description: facility.description,
+    ...(facility.phone && { telephone: facility.phone }),
+    ...(facility.website && { url: facility.website }),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: facility.city,
+      addressRegion: facility.prefectureLabel,
+      addressCountry: 'JP',
+    },
+    ...(facility.lat && facility.lng && {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: facility.lat,
+        longitude: facility.lng,
+      },
+    }),
+    ...(facility.images.length > 0 && { image: facility.images[0] }),
+    priceRange: facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : undefined,
+    ...(facility.businessHours && facility.businessHours !== '不明' && { openingHours: facility.businessHours }),
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <RecordVisit facilityId={facility.id} />
       {/* 専用ヘッダー */}
       <header className="bg-surface shadow h-14 px-4 md:h-16 md:px-8">
