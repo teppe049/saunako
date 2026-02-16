@@ -23,7 +23,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "www.private-sauna.jp" },
+      { protocol: "https", hostname: "ledianspa.jp" },
+      { protocol: "https", hostname: "firebasestorage.googleapis.com" },
+      { protocol: "https", hostname: "teppen-saunadojo.com" },
+      { protocol: "https", hostname: "hotel-kabuki.jp" },
+    ],
   },
   async redirects() {
     return buildFacilityRedirects();
