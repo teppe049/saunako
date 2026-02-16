@@ -151,14 +151,6 @@ export default function Home() {
                 </ul>
               </div>
 
-              {/* Contact Column */}
-              <div>
-                <h3 className="text-[13px] font-semibold text-white mb-4">お問い合わせ</h3>
-                <p className="text-[13px] text-[#9CA3AF] leading-relaxed">
-                  掲載情報の修正・施設掲載のご依頼は<br />
-                  <a href="mailto:hello@saunako.jp" className="text-primary hover:opacity-80 transition-opacity">hello@saunako.jp</a> まで
-                </p>
-              </div>
             </div>
 
             {/* Divider */}
