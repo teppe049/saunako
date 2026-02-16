@@ -22,7 +22,7 @@ export default function Home() {
               {`あなたの「整い」を、\n私が見つける`}
             </h1>
             <p className="text-text-tertiary md:text-text-secondary text-sm md:text-base">
-              プライベートサウナ専門の比較・予約サービス
+              プライベートサウナ専門の比較・検索サービス
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
       <section className="bg-bg py-6 md:py-12">
         <div className="max-w-7xl mx-auto px-5 md:px-20">
           <div className="flex items-center justify-between mb-4 md:mb-8">
-            <h2 className="text-xl md:text-2xl font-bold text-text-primary">人気の施設</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-text-primary">ピックアップ</h2>
             <Link href="/search?prefecture=tokyo" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
               すべて見る →
             </Link>
@@ -115,6 +115,9 @@ export default function Home() {
           {/* Mobile: centered single column */}
           <div className="flex flex-col items-center gap-4 md:hidden">
             <span className="font-bold text-base text-white">サウナ子</span>
+            <p className="text-[11px] text-[#757575] text-center leading-relaxed">
+              当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
+            </p>
             <p className="text-[11px] text-[#757575]">
               © 2026 サウナ子 All rights reserved.
             </p>
@@ -136,7 +139,7 @@ export default function Home() {
                   <span className="font-bold text-base">サウナ子</span>
                 </div>
                 <p className="text-[13px] text-[#9CA3AF] leading-relaxed">
-                  あなたの「整い」を見つける、プライベートサウナ専門の比較・予約サービス。水風呂の温度からロウリュの有無まで、サウナ好きが気になるポイントを徹底比較。
+                  あなたの「整い」を見つける、プライベートサウナ専門の比較・検索サービス。水風呂の温度からロウリュの有無まで、サウナ好きが気になるポイントを徹底比較。
                 </p>
               </div>
 
@@ -146,11 +149,18 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
                   <li><Link href="/area/tokyo" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">エリアから探す</Link></li>
-                  <li><Link href="/search?sort=recommend" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">人気ランキング</Link></li>
+                  <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設一覧</Link></li>
                   <li><Link href="/search?sort=newest" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">新着施設</Link></li>
                 </ul>
               </div>
 
+              {/* Disclaimer Column */}
+              <div>
+                <h3 className="text-[13px] font-semibold text-white mb-4">ご注意</h3>
+                <p className="text-[12px] text-[#9CA3AF] leading-relaxed">
+                  当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
+                </p>
+              </div>
             </div>
 
             {/* Divider */}

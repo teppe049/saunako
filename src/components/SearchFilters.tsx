@@ -199,7 +199,7 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
               }}
               className="appearance-none pl-3 pr-7 py-1.5 border border-border rounded-[6px] text-[13px] text-text-secondary bg-white cursor-pointer"
             >
-              <option value="recommend">おすすめ順</option>
+              <option value="recommend">掲載順</option>
               <option value="price_asc">価格が安い順</option>
               <option value="price_desc">価格が高い順</option>
               <option value="station_asc">駅から近い順</option>

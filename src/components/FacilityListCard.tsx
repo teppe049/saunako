@@ -102,9 +102,11 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
             )}
 
             {/* Saunako comment */}
-            <p className="text-xs md:text-sm text-text-secondary line-clamp-1 md:line-clamp-none md:truncate">
-              {facility.saunakoCommentShort || 'サウナ・水風呂完備'}
-            </p>
+            {facility.saunakoCommentShort && (
+              <p className="text-xs md:text-sm text-text-secondary line-clamp-1 md:line-clamp-none md:truncate">
+                {facility.saunakoCommentShort}
+              </p>
+            )}
           </div>
         </Link>
       </div>

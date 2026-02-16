@@ -46,27 +46,34 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: facility.name,
+    '@type': 'WebPage',
+    name: `${facility.name} | サウナ子`,
     description: facility.description,
-    ...(facility.phone && { telephone: facility.phone }),
-    ...(facility.website && { url: facility.website }),
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: facility.city,
-      addressRegion: facility.prefectureLabel,
-      addressCountry: 'JP',
+    url: `https://saunako.jp/facilities/${facility.id}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'サウナ子',
+      url: 'https://saunako.jp',
     },
-    ...(facility.lat && facility.lng && {
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: facility.lat,
-        longitude: facility.lng,
+    about: {
+      '@type': 'LocalBusiness',
+      name: facility.name,
+      ...(facility.phone && { telephone: facility.phone }),
+      ...(facility.website && { url: facility.website }),
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: facility.city,
+        addressRegion: facility.prefectureLabel,
+        addressCountry: 'JP',
       },
-    }),
-    ...(facility.images.length > 0 && { image: facility.images[0] }),
-    priceRange: facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : undefined,
-    ...(facility.businessHours && facility.businessHours !== '不明' && { openingHours: facility.businessHours }),
+      ...(facility.lat && facility.lng && {
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: facility.lat,
+          longitude: facility.lng,
+        },
+      }),
+    },
   };
 
   return (
@@ -151,29 +158,27 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               <div className="h-2 bg-bg md:hidden" />
 
               {/* サウナ子のおすすめポイント */}
-              <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
-                <div className="flex flex-col gap-3 md:gap-4">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/saunako-avatar.webp"
-                      alt="サウナ子"
-                      width={44}
-                      height={44}
-                      className="w-10 h-10 md:w-11 md:h-11 rounded-full flex-shrink-0 object-cover"
-                    />
-                    <div>
-                      <h2 className="font-bold text-text-primary text-base md:text-lg">サウナ子のおすすめポイント</h2>
+              {facility.saunakoCommentLong && (
+                <div className="bg-saunako-bg border-y border-saunako-border md:border md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                  <div className="flex flex-col gap-3 md:gap-4">
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/saunako-avatar.webp"
+                        alt="サウナ子"
+                        width={44}
+                        height={44}
+                        className="w-10 h-10 md:w-11 md:h-11 rounded-full flex-shrink-0 object-cover"
+                      />
+                      <div>
+                        <h2 className="font-bold text-text-primary text-base md:text-lg">サウナ子のおすすめポイント</h2>
+                      </div>
                     </div>
+                    <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
+                      {facility.saunakoCommentLong}
+                    </p>
                   </div>
-                  <p className="text-text-secondary text-[13px] md:text-sm leading-[1.6] md:leading-[1.8]">
-                    {facility.saunakoCommentLong ? (
-                      facility.saunakoCommentLong
-                    ) : (
-                      'ここは本当におすすめできる場所！今回はいろんなところを見比べて、カップルでいらっしゃいながら、まだまだ開拓中のお二人でも安心して楽しめる、コスパの良い施設を選びました。'
-                    )}
-                  </p>
                 </div>
-              </div>
+              )}
 
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
@@ -454,6 +459,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             <Image src="/saunako-avatar.webp" alt="サウナ子" width={28} height={28} className="w-7 h-7 rounded-full object-cover" />
             <span className="font-bold text-sm text-white">サウナ子</span>
           </Link>
+          <p className="text-[11px] text-[#757575] max-w-lg mx-auto mb-3 leading-relaxed">
+            当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
+          </p>
           <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
         </div>
       </footer>
