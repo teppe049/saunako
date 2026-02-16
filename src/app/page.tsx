@@ -18,8 +18,8 @@ export default function Home() {
       <section className="bg-surface py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-5 md:px-20">
           <div className="text-center mb-6 md:mb-10">
-            <h1 className="text-[28px] leading-[1.3] md:text-[40px] md:leading-tight font-bold text-text-primary mb-4 whitespace-pre-line">
-              {`あなたの「整い」を、\n私が見つける`}
+            <h1 className="text-[28px] leading-[1.3] md:text-[40px] md:leading-tight font-bold text-text-primary mb-4">
+              あなたの「整い」を、私が見つける
             </h1>
             <p className="text-text-tertiary md:text-text-secondary text-sm md:text-base">
               プライベートサウナ専門の比較・検索サービス
