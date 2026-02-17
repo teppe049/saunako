@@ -3,7 +3,6 @@
 import { useCallback, useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
-import MarkerClusterGroup from 'react-leaflet-cluster';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
@@ -264,27 +263,20 @@ export default function FacilityMap({
             <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
             <MapClickHandler onMapClick={handleMapClick} />
             <LocateButton />
-            <MarkerClusterGroup
-              chunkedLoading
-              maxClusterRadius={50}
-              spiderfyOnMaxZoom
-              showCoverageOnHover={false}
-            >
-              {validFacilities.map((facility) => {
-                const state = getMarkerState(facility.id);
-                return (
-                  <Marker
-                    key={facility.id}
-                    position={[facility.lat!, facility.lng!]}
-                    icon={getCachedPriceIcon(facility.priceMin, state)}
-                    zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
-                    eventHandlers={{
-                      click: () => handleMarkerClick(facility),
-                    }}
-                  />
-                );
-              })}
-            </MarkerClusterGroup>
+            {validFacilities.map((facility) => {
+              const state = getMarkerState(facility.id);
+              return (
+                <Marker
+                  key={facility.id}
+                  position={[facility.lat!, facility.lng!]}
+                  icon={getCachedPriceIcon(facility.priceMin, state)}
+                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
+                  eventHandlers={{
+                    click: () => handleMarkerClick(facility),
+                  }}
+                />
+              );
+            })}
           </MapContainer>
 
           {/* Facility info card overlay */}
