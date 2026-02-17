@@ -136,6 +136,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Scene Links Section */}
+      <section className="bg-bg py-6 md:py-12">
+        <div className="max-w-7xl mx-auto px-5 md:px-20">
+          <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-8">シーン別に探す</h2>
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide md:flex-wrap md:gap-3 md:overflow-x-visible md:pb-0">
+            {[
+              { label: 'カップル向け', href: '/search?coupleOk=true' },
+              { label: 'コスパ重視', href: '/search?sort=price_asc' },
+              { label: '深夜OK', href: '/search?lateNight=true' },
+              { label: '早朝OK', href: '/search?earlyMorning=true' },
+              { label: '水風呂付き', href: '/search?waterBath=true' },
+              { label: '外気浴あり', href: '/search?outdoorAir=true' },
+              { label: '新着順', href: '/search?sort=newest' },
+            ].map((scene) => (
+              <Link
+                key={scene.href}
+                href={scene.href}
+                className="rounded-full border border-border px-4 py-2 text-sm text-text-primary hover:bg-surface hover:border-saunako hover:text-saunako transition-colors whitespace-nowrap flex-shrink-0"
+              >
+                {scene.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Recently Viewed */}
       <RecentlyViewed allFacilities={allFacilities} />
 
@@ -148,10 +174,12 @@ export default function Home() {
             <p className="text-[11px] text-[#757575] text-center leading-relaxed">
               当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap justify-center">
               <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
               <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
+              <Link href="/faq" className="text-[11px] text-[#757575] hover:text-white transition-colors">よくある質問</Link>
+              <Link href="/for-owners" className="text-[11px] text-[#757575] hover:text-white transition-colors">施設掲載のご案内</Link>
             </div>
             <p className="text-[11px] text-[#757575]">
               © 2026 サウナ子 All rights reserved.
@@ -186,6 +214,7 @@ export default function Home() {
                   <li><Link href="/area/tokyo" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">エリアから探す</Link></li>
                   <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設一覧</Link></li>
                   <li><Link href="/search?sort=newest" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">新着施設</Link></li>
+                  <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
                 </ul>
               </div>
 
@@ -204,6 +233,7 @@ export default function Home() {
                 <Link href="/terms" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">利用規約</Link>
                 <Link href="/privacy" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">プライバシーポリシー</Link>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">お問い合わせ</a>
+                <Link href="/for-owners" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">施設掲載のご案内</Link>
               </div>
               <p className="text-[12px] text-[#6B7280] text-center">
                 © 2026 サウナ子 All rights reserved.

@@ -4,7 +4,7 @@ import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
 import { getTimeSlotTags } from '@/lib/facilities';
-import { trackFacilityCardClick } from '@/lib/analytics';
+import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 
 interface FacilityListCardProps {
@@ -105,6 +105,25 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               <p className="text-xs md:text-sm text-text-tertiary">
                 {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
               </p>
+            )}
+
+            {/* Website link */}
+            {facility.website && (
+              <a
+                href={facility.website}
+                className="inline-flex items-center gap-1 text-[11px] md:text-xs border border-saunako text-saunako rounded-full px-2.5 py-0.5 hover:bg-saunako hover:text-white transition-colors w-fit"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  trackExternalLinkClick(facility.id, 'website', facility.website!);
+                  window.open(facility.website, '_blank', 'noopener,noreferrer');
+                }}
+              >
+                公式サイトへ
+                <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             )}
 
             {/* Saunako comment */}
