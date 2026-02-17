@@ -239,8 +239,8 @@ export default function FacilityMap({
             style={{ width: '100%', height: '100%' }}
           >
             <TileLayer
-              attribution='&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              url="https://tile.openstreetmap.jp/styles/osm-bright-ja/{z}/{x}/{y}.png"
             />
             <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
             <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
@@ -270,7 +270,7 @@ export default function FacilityMap({
           {showSearchAreaButton && mapMoved && (
             <button
               onClick={handleSearchArea}
-              className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-white text-text-primary text-sm font-medium px-4 py-2.5 rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-text-primary text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-lg hover:bg-black transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -288,10 +288,10 @@ function RichPopupCard({ facility }: { facility: Facility }) {
   const hasImage = facility.images.length > 0;
 
   return (
-    <div className="min-w-[240px] max-w-[280px]" style={{ margin: '-8px -12px' }}>
+    <div className="min-w-[240px] max-w-[280px]" style={{ margin: '-14px -20px -14px -20px' }}>
       {/* Image */}
       {hasImage && (
-        <div className="relative w-full h-[120px] -mt-0 overflow-hidden rounded-t-lg">
+        <div className="relative w-full h-[120px] overflow-hidden">
           <Image
             src={facility.images[0]}
             alt={facility.name}
