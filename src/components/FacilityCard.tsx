@@ -1,9 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
-import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 
 interface FacilityCardProps {
   facility: Facility;
@@ -12,12 +9,15 @@ interface FacilityCardProps {
 }
 
 export default function FacilityCard({ facility, index = 0, showComment = true }: FacilityCardProps) {
-  const handleClick = () => {
-    trackFacilityCardClick(facility.id, facility.name, index);
-  };
-
   return (
-    <Link href={`/facilities/${facility.id}`} onClick={handleClick} className="card block hover:shadow-md transition-shadow">
+    <Link
+      href={`/facilities/${facility.id}`}
+      data-track-click="facility_card"
+      data-track-facility-id={facility.id}
+      data-track-facility-name={facility.name}
+      data-track-index={index}
+      className="card block hover:shadow-md transition-shadow"
+    >
       {/* Image */}
       <div className="relative h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
         <Image
@@ -78,21 +78,17 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
 
         {/* Website link */}
         {facility.website && (
-          <a
-            href={facility.website}
+          <span
+            data-track-click="external_link"
+            data-track-facility-id={facility.id}
+            data-href-external={facility.website}
             className="inline-flex items-center gap-1 text-xs border border-saunako text-saunako rounded-full px-3 py-1 hover:bg-saunako hover:text-white transition-colors mt-2"
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              trackExternalLinkClick(facility.id, 'website', facility.website!);
-              window.open(facility.website, '_blank', 'noopener,noreferrer');
-            }}
           >
             公式サイトへ
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-          </a>
+          </span>
         )}
       </div>
     </Link>

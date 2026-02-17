@@ -12,12 +12,17 @@ interface ImageCarouselProps {
 export default function ImageCarousel({ images, alt, sizes }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
 
   const handleScroll = useCallback(() => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, clientWidth } = scrollRef.current;
-    const index = Math.round(scrollLeft / clientWidth);
-    setCurrentIndex(index);
+    if (rafRef.current !== null) return;
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = null;
+      if (!scrollRef.current) return;
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const index = Math.round(scrollLeft / clientWidth);
+      setCurrentIndex(index);
+    });
   }, []);
 
   if (images.length === 0) {
@@ -45,7 +50,11 @@ export default function ImageCarousel({ images, alt, sizes }: ImageCarouselProps
       >
         {images.map((img, i) => (
           <div key={i} className="relative flex-shrink-0 w-full h-full snap-start">
-            <Image src={img} alt={`${alt} ${i + 1}`} fill sizes={sizes} className="object-cover" />
+            {Math.abs(i - currentIndex) <= 1 ? (
+              <Image src={img} alt={`${alt} ${i + 1}`} fill sizes={sizes} className="object-cover" />
+            ) : (
+              <div className="w-full h-full bg-gray-200" />
+            )}
           </div>
         ))}
       </div>

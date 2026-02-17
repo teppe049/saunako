@@ -24,6 +24,8 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   images: {
     remotePatterns: [],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
   },
   async redirects() {
     return buildFacilityRedirects();

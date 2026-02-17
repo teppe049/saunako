@@ -3,6 +3,7 @@
 import { useCallback, useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
@@ -36,6 +37,15 @@ function getVisitedIds(): Set<number> {
   } catch {
     return new Set();
   }
+}
+
+const iconCache = new Map<string, L.DivIcon>();
+function getCachedPriceIcon(price: number, state: MarkerState): L.DivIcon {
+  const key = `${price}-${state}`;
+  if (!iconCache.has(key)) {
+    iconCache.set(key, createPriceIcon(price, state));
+  }
+  return iconCache.get(key)!;
 }
 
 function createPriceIcon(price: number, state: MarkerState) {
@@ -86,6 +96,7 @@ function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facili
 function MapBoundsHandler({ onBoundsChange, onMapMoved }: { onBoundsChange?: (bounds: MapBounds) => void; onMapMoved?: () => void }) {
   const map = useMap();
   const isInitialLoad = useRef(true);
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   const emitBounds = useCallback(() => {
     if (!onBoundsChange) return;
@@ -98,16 +109,21 @@ function MapBoundsHandler({ onBoundsChange, onMapMoved }: { onBoundsChange?: (bo
     });
   }, [map, onBoundsChange]);
 
+  const debouncedEmitBounds = useCallback(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(emitBounds, 150);
+  }, [emitBounds]);
+
   useMapEvents({
     moveend: () => {
-      emitBounds();
+      debouncedEmitBounds();
       if (!isInitialLoad.current) {
         onMapMoved?.();
       }
       isInitialLoad.current = false;
     },
     zoomend: () => {
-      emitBounds();
+      debouncedEmitBounds();
       if (!isInitialLoad.current) {
         onMapMoved?.();
       }
@@ -248,20 +264,27 @@ export default function FacilityMap({
             <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
             <MapClickHandler onMapClick={handleMapClick} />
             <LocateButton />
-            {validFacilities.map((facility) => {
-              const state = getMarkerState(facility.id);
-              return (
-                <Marker
-                  key={facility.id}
-                  position={[facility.lat!, facility.lng!]}
-                  icon={createPriceIcon(facility.priceMin, state)}
-                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
-                  eventHandlers={{
-                    click: () => handleMarkerClick(facility),
-                  }}
-                />
-              );
-            })}
+            <MarkerClusterGroup
+              chunkedLoading
+              maxClusterRadius={50}
+              spiderfyOnMaxZoom
+              showCoverageOnHover={false}
+            >
+              {validFacilities.map((facility) => {
+                const state = getMarkerState(facility.id);
+                return (
+                  <Marker
+                    key={facility.id}
+                    position={[facility.lat!, facility.lng!]}
+                    icon={getCachedPriceIcon(facility.priceMin, state)}
+                    zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
+                    eventHandlers={{
+                      click: () => handleMarkerClick(facility),
+                    }}
+                  />
+                );
+              })}
+            </MarkerClusterGroup>
           </MapContainer>
 
           {/* Facility info card overlay */}

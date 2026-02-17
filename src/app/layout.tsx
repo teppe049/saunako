@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { ADSENSE_CLIENT_ID, isAdSenseEnabled } from "@/lib/adsense";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -118,6 +119,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         {children}
+        <AnalyticsTracker />
         <CookieConsentBanner />
       </body>
     </html>

@@ -68,6 +68,7 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
                 fill
                 sizes="64px"
                 className="object-cover"
+                loading={i < 4 ? 'eager' : 'lazy'}
               />
             </div>
           ))}
