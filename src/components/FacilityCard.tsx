@@ -1,15 +1,23 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
+import { trackFacilityCardClick } from '@/lib/analytics';
 
 interface FacilityCardProps {
   facility: Facility;
+  index?: number;
   showComment?: boolean;
 }
 
-export default function FacilityCard({ facility, showComment = true }: FacilityCardProps) {
+export default function FacilityCard({ facility, index = 0, showComment = true }: FacilityCardProps) {
+  const handleClick = () => {
+    trackFacilityCardClick(facility.id, facility.name, index);
+  };
+
   return (
-    <Link href={`/facilities/${facility.id}`} className="card block hover:shadow-md transition-shadow">
+    <Link href={`/facilities/${facility.id}`} onClick={handleClick} className="card block hover:shadow-md transition-shadow">
       {/* Image */}
       <div className="relative h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
         <Image

@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { AREA_GROUPS } from '@/lib/types';
 import { getAreaFacilityCounts } from '@/lib/facilities';
+import { trackSearch, trackFilterChange } from '@/lib/analytics';
 
 interface SearchFiltersProps {
   totalCount: number;
@@ -41,9 +42,24 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
 
   const activeFilters = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]);
 
+  // 検索結果表示時にsearchイベントを送信
+  const hasTrackedSearch = useRef(false);
+  useEffect(() => {
+    if (!hasTrackedSearch.current) {
+      const searchTerm = [
+        prefectureLabel || '全国',
+        areaSlug,
+      ].filter(Boolean).join(' ');
+      trackSearch(searchTerm, filteredCount);
+      hasTrackedSearch.current = true;
+    }
+  }, [prefectureLabel, areaSlug, filteredCount]);
+
   const toggleFilter = (key: FilterKey) => {
     const newFilters = { ...filters, [key]: !filters[key] };
     setFilters(newFilters);
+
+    trackFilterChange(key, String(newFilters[key]));
 
     const params = new URLSearchParams(searchParams.toString());
     if (newFilters[key]) {
@@ -129,6 +145,7 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
               <>
                 <button
                   onClick={() => {
+                    trackFilterChange('area', 'all');
                     const params = new URLSearchParams(searchParams.toString());
                     params.delete('area');
                     router.push(`?${params.toString()}`, { scroll: false });
@@ -145,6 +162,7 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
                   <button
                     key={area.slug}
                     onClick={() => {
+                      trackFilterChange('area', area.slug);
                       const params = new URLSearchParams(searchParams.toString());
                       params.set('area', area.slug);
                       router.push(`?${params.toString()}`, { scroll: false });
@@ -189,6 +207,7 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
             <select
               value={searchParams.get('sort') || 'recommend'}
               onChange={(e) => {
+                trackFilterChange('sort', e.target.value);
                 const params = new URLSearchParams(searchParams.toString());
                 if (e.target.value === 'recommend') {
                   params.delete('sort');
@@ -219,6 +238,7 @@ export default function SearchFilters({ totalCount, filteredCount, prefectureLab
             <select
               value={searchParams.get('duration') || ''}
               onChange={(e) => {
+                trackFilterChange('duration', e.target.value || 'all');
                 const params = new URLSearchParams(searchParams.toString());
                 if (e.target.value) {
                   params.set('duration', e.target.value);

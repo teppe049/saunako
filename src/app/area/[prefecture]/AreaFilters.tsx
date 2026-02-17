@@ -153,8 +153,8 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
 
       {/* Facility List */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredFacilities.map((facility) => (
-          <FacilityCard key={facility.id} facility={facility} />
+        {filteredFacilities.map((facility, index) => (
+          <FacilityCard key={facility.id} facility={facility} index={index} />
         ))}
       </div>
 
