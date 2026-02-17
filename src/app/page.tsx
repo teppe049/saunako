@@ -121,6 +121,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
               <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
             </div>
             <p className="text-[11px] text-[#757575]">
               © 2026 サウナ子 All rights reserved.
@@ -172,6 +173,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <Link href="/terms" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">利用規約</Link>
                 <Link href="/privacy" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">プライバシーポリシー</Link>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">お問い合わせ</a>
               </div>
               <p className="text-[12px] text-[#6B7280] text-center">
                 © 2026 サウナ子 All rights reserved.

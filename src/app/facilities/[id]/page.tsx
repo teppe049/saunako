@@ -476,6 +476,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <div className="flex items-center justify-center gap-4 mb-3">
             <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
             <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
           </div>
           <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
         </div>
