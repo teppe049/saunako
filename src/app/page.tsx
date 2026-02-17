@@ -74,30 +74,6 @@ export default function Home() {
 
           {/* Search Form */}
           <HeroSearchForm />
-
-          {/* Scene Links */}
-          <div className="max-w-3xl mx-auto mt-6">
-            <p className="text-text-tertiary text-xs mb-3 text-center">シーン別に探す</p>
-            <div className="flex gap-2 justify-center flex-wrap">
-              {[
-                { label: 'カップル向け', href: '/search?coupleOk=true' },
-                { label: 'コスパ重視', href: '/search?sort=price_asc' },
-                { label: '深夜OK', href: '/search?lateNight=true' },
-                { label: '早朝OK', href: '/search?earlyMorning=true' },
-                { label: '水風呂付き', href: '/search?waterBath=true' },
-                { label: '外気浴あり', href: '/search?outdoorAir=true' },
-                { label: '新着順', href: '/search?sort=newest' },
-              ].map((scene) => (
-                <Link
-                  key={scene.href}
-                  href={scene.href}
-                  className="rounded-full border border-border px-3 py-1.5 text-xs text-text-secondary hover:bg-bg hover:border-saunako hover:text-saunako transition-colors whitespace-nowrap"
-                >
-                  {scene.label}
-                </Link>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
