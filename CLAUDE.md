@@ -122,6 +122,12 @@ data/
 サウナ子のキャラクターガイドラインは `docs/character-guide.md` を参照。
 コメント・UIテキスト生成時は必ず準拠すること。
 
+## Issue 管理ルール
+
+- **実装完了後は対応したIssueを必ずクローズする** — コミット&プッシュ後に GitHub MCP で `state: closed`, `state_reason: completed` を設定
+- 実装したが不要と判断して削除した場合は `state_reason: not_planned` でクローズし、理由をコメントに残す
+- Issue作成前に `search_issues` で重複チェックし、重複があれば `state_reason: duplicate` でクローズ
+
 ## 実装時のコミュニケーションルール
 
 複数Issue を並列実装する際のルール:
