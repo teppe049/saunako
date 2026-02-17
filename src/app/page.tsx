@@ -74,6 +74,30 @@ export default function Home() {
 
           {/* Search Form */}
           <HeroSearchForm />
+
+          {/* Scene Links */}
+          <div className="max-w-3xl mx-auto mt-6">
+            <p className="text-text-tertiary text-xs mb-3 text-center">シーン別に探す</p>
+            <div className="flex gap-2 justify-center flex-wrap">
+              {[
+                { label: 'カップル向け', href: '/search?coupleOk=true' },
+                { label: 'コスパ重視', href: '/search?sort=price_asc' },
+                { label: '深夜OK', href: '/search?lateNight=true' },
+                { label: '早朝OK', href: '/search?earlyMorning=true' },
+                { label: '水風呂付き', href: '/search?waterBath=true' },
+                { label: '外気浴あり', href: '/search?outdoorAir=true' },
+                { label: '新着順', href: '/search?sort=newest' },
+              ].map((scene) => (
+                <Link
+                  key={scene.href}
+                  href={scene.href}
+                  className="rounded-full border border-border px-3 py-1.5 text-xs text-text-secondary hover:bg-bg hover:border-saunako hover:text-saunako transition-colors whitespace-nowrap"
+                >
+                  {scene.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -130,32 +154,6 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Scene Links Section */}
-      <section className="bg-bg py-6 md:py-12">
-        <div className="max-w-7xl mx-auto px-5 md:px-20">
-          <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-8">シーン別に探す</h2>
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide md:flex-wrap md:gap-3 md:overflow-x-visible md:pb-0">
-            {[
-              { label: 'カップル向け', href: '/search?coupleOk=true' },
-              { label: 'コスパ重視', href: '/search?sort=price_asc' },
-              { label: '深夜OK', href: '/search?lateNight=true' },
-              { label: '早朝OK', href: '/search?earlyMorning=true' },
-              { label: '水風呂付き', href: '/search?waterBath=true' },
-              { label: '外気浴あり', href: '/search?outdoorAir=true' },
-              { label: '新着順', href: '/search?sort=newest' },
-            ].map((scene) => (
-              <Link
-                key={scene.href}
-                href={scene.href}
-                className="rounded-full border border-border px-4 py-2 text-sm text-text-primary hover:bg-surface hover:border-saunako hover:text-saunako transition-colors whitespace-nowrap flex-shrink-0"
-              >
-                {scene.label}
               </Link>
             ))}
           </div>
