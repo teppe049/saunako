@@ -118,6 +118,10 @@ export default function Home() {
             <p className="text-[11px] text-[#757575] text-center leading-relaxed">
               当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
             </p>
+            <div className="flex items-center gap-4">
+              <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
+              <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
+            </div>
             <p className="text-[11px] text-[#757575]">
               © 2026 サウナ子 All rights reserved.
             </p>
@@ -164,7 +168,11 @@ export default function Home() {
             </div>
 
             {/* Divider */}
-            <div className="border-t border-[#333333] pt-6">
+            <div className="border-t border-[#333333] pt-6 flex flex-col items-center gap-3">
+              <div className="flex items-center gap-4">
+                <Link href="/terms" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">利用規約</Link>
+                <Link href="/privacy" className="text-[12px] text-[#6B7280] hover:text-white transition-colors">プライバシーポリシー</Link>
+              </div>
               <p className="text-[12px] text-[#6B7280] text-center">
                 © 2026 サウナ子 All rights reserved.
               </p>
