@@ -266,7 +266,7 @@ export default function FacilityMap({
 
           {/* Facility info card overlay */}
           {activeFacility && (
-            <div className="absolute bottom-16 left-3 right-3 z-[1000] max-w-[320px] mx-auto">
+            <div className="absolute bottom-16 left-3 z-[1000]">
               <OverlayCard facility={activeFacility} onClose={() => setActiveMarker(null)} />
             </div>
           )}
@@ -293,7 +293,7 @@ function OverlayCard({ facility, onClose }: { facility: Facility; onClose: () =>
   const hasImage = facility.images.length > 0;
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-[fadeSlideUp_0.15s_ease-out]">
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-[fadeSlideUp_0.15s_ease-out] w-[280px]">
       {/* Close button */}
       <button
         onClick={onClose}
@@ -305,31 +305,31 @@ function OverlayCard({ facility, onClose }: { facility: Facility; onClose: () =>
         </svg>
       </button>
 
-      <Link href={`/facilities/${facility.id}`} className="flex">
+      <Link href={`/facilities/${facility.id}`}>
         {/* Image */}
         {hasImage && (
-          <div className="relative w-[100px] min-h-[100px] shrink-0">
+          <div className="relative w-full h-[140px]">
             <Image
               src={facility.images[0]}
               alt={facility.name}
               fill
-              sizes="100px"
+              sizes="280px"
               className="object-cover"
             />
           </div>
         )}
 
         {/* Content */}
-        <div className="flex-1 p-3 min-w-0">
+        <div className="p-3">
           <h3 className="font-bold text-sm text-text-primary mb-1 line-clamp-1">{facility.name}</h3>
 
           {facility.nearestStation && facility.walkMinutes > 0 && (
-            <p className="text-xs text-text-tertiary mb-1">
+            <p className="text-xs text-text-tertiary mb-1.5">
               {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
             </p>
           )}
 
-          <p className="text-sm font-bold text-saunako mb-1.5">
+          <p className="text-base font-bold text-saunako mb-2">
             {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : '要問合せ'}
             {facility.priceMin > 0 && (
               <span className="text-xs font-normal text-text-tertiary ml-1">/ {facility.duration}分</span>
