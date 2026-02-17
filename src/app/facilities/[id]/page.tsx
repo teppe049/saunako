@@ -239,7 +239,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       {facility.features.waterBath && (
                         <div className="flex items-center gap-3">
-                          <span className="text-xl">💧</span>
+                          <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m-7.071-2.929l.707-.707M4.929 4.929l.707.707M3 12h1m16 0h1m-2.636 7.071l-.707-.707M19.071 4.929l-.707.707M12 7a5 5 0 00-5 5h10a5 5 0 00-5-5z" /></svg>
                           <div>
                             <p className="text-text-primary font-medium">水風呂</p>
                             {facility.features.waterBathTemp && (
@@ -250,19 +250,19 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       )}
                       {facility.features.selfLoyly && (
                         <div className="flex items-center gap-3">
-                          <span className="text-xl">💨</span>
+                          <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
                           <p className="text-text-primary font-medium">セルフロウリュ</p>
                         </div>
                       )}
                       {facility.features.outdoorAir && (
                         <div className="flex items-center gap-3">
-                          <span className="text-xl">🌿</span>
+                          <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                           <p className="text-text-primary font-medium">外気浴スペース</p>
                         </div>
                       )}
                       {facility.amenities.map((amenity, i) => (
                         <div key={i} className="flex items-center gap-3">
-                          <span className="text-xl">✨</span>
+                          <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" /></svg>
                           <p className="text-text-primary font-medium">{amenity}</p>
                         </div>
                       ))}
