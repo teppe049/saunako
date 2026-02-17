@@ -212,8 +212,6 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
                   <li><Link href="/area/tokyo" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">エリアから探す</Link></li>
-                  <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設一覧</Link></li>
-                  <li><Link href="/search?sort=newest" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">新着施設</Link></li>
                   <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
                 </ul>
               </div>
