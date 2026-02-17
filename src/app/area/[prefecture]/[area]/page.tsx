@@ -267,7 +267,7 @@ export default async function SubAreaPage({ params }: PageProps) {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-2">
-                {prefLabel}の個室サウナ
+                {prefLabel} {areaLabel}の個室サウナ
               </h1>
               <div className="flex items-center gap-3">
                 <span className="inline-flex items-center px-3 py-1 bg-primary-light text-primary rounded-full text-sm font-semibold">

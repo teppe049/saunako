@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -198,6 +198,8 @@ export default function FacilityMap({
       ]
     : [35.6762, 139.6503];
 
+  const activeFacility = validFacilities.find((f) => f.id === activeMarker) || null;
+
   const handleMarkerClick = useCallback((facility: Facility) => {
     setActiveMarker(facility.id);
     onSelect?.(facility);
@@ -257,20 +259,23 @@ export default function FacilityMap({
                   eventHandlers={{
                     click: () => handleMarkerClick(facility),
                   }}
-                >
-                  <Popup>
-                    <RichPopupCard facility={facility} />
-                  </Popup>
-                </Marker>
+                />
               );
             })}
           </MapContainer>
+
+          {/* Facility info card overlay */}
+          {activeFacility && (
+            <div className="absolute bottom-16 left-3 right-3 z-[1000] max-w-[320px] mx-auto">
+              <OverlayCard facility={activeFacility} onClose={() => setActiveMarker(null)} />
+            </div>
+          )}
 
           {/* Search this area button */}
           {showSearchAreaButton && mapMoved && (
             <button
               onClick={handleSearchArea}
-              className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-text-primary text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-lg hover:bg-black transition-colors"
+              className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-text-primary text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-lg hover:bg-black transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -284,64 +289,70 @@ export default function FacilityMap({
   );
 }
 
-function RichPopupCard({ facility }: { facility: Facility }) {
+function OverlayCard({ facility, onClose }: { facility: Facility; onClose: () => void }) {
   const hasImage = facility.images.length > 0;
 
   return (
-    <div className="min-w-[240px] max-w-[280px]" style={{ margin: '-14px -20px -14px -20px' }}>
-      {/* Image */}
-      {hasImage && (
-        <div className="relative w-full h-[120px] overflow-hidden">
-          <Image
-            src={facility.images[0]}
-            alt={facility.name}
-            fill
-            sizes="280px"
-            className="object-cover"
-          />
-        </div>
-      )}
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-[fadeSlideUp_0.15s_ease-out]">
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute top-2 right-2 z-10 w-7 h-7 bg-white/90 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-100 transition-colors"
+        aria-label="閉じる"
+      >
+        <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
 
-      {/* Content */}
-      <div className="p-3">
-        <h3 className="font-bold text-sm text-text-primary mb-1 line-clamp-1">{facility.name}</h3>
-
-        {facility.nearestStation && facility.walkMinutes > 0 && (
-          <p className="text-xs text-text-tertiary mb-1.5">
-            {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
-          </p>
+      <Link href={`/facilities/${facility.id}`} className="flex">
+        {/* Image */}
+        {hasImage && (
+          <div className="relative w-[100px] min-h-[100px] shrink-0">
+            <Image
+              src={facility.images[0]}
+              alt={facility.name}
+              fill
+              sizes="100px"
+              className="object-cover"
+            />
+          </div>
         )}
 
-        <p className="text-base font-bold text-saunako mb-2">
-          {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : '要問合せ'}
-          {facility.priceMin > 0 && (
-            <span className="text-xs font-normal text-text-tertiary ml-1">/ {facility.duration}分</span>
-          )}
-        </p>
+        {/* Content */}
+        <div className="flex-1 p-3 min-w-0">
+          <h3 className="font-bold text-sm text-text-primary mb-1 line-clamp-1">{facility.name}</h3>
 
-        {/* Feature tags */}
-        <div className="flex flex-wrap gap-1 mb-2.5">
-          {facility.features.waterBath && (
-            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">水風呂</span>
+          {facility.nearestStation && facility.walkMinutes > 0 && (
+            <p className="text-xs text-text-tertiary mb-1">
+              {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+            </p>
           )}
-          {facility.features.selfLoyly && (
-            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">ロウリュ</span>
-          )}
-          {facility.features.outdoorAir && (
-            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">外気浴</span>
-          )}
-          {facility.features.coupleOk && (
-            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-[#E8F5E9] text-[#4CAF50] rounded">男女OK</span>
-          )}
+
+          <p className="text-sm font-bold text-saunako mb-1.5">
+            {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : '要問合せ'}
+            {facility.priceMin > 0 && (
+              <span className="text-xs font-normal text-text-tertiary ml-1">/ {facility.duration}分</span>
+            )}
+          </p>
+
+          {/* Feature tags */}
+          <div className="flex flex-wrap gap-1">
+            {facility.features.waterBath && (
+              <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">水風呂</span>
+            )}
+            {facility.features.selfLoyly && (
+              <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">ロウリュ</span>
+            )}
+            {facility.features.outdoorAir && (
+              <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">外気浴</span>
+            )}
+            {facility.features.coupleOk && (
+              <span className="text-[10px] font-medium px-1.5 py-0.5 bg-[#E8F5E9] text-[#4CAF50] rounded">男女OK</span>
+            )}
+          </div>
         </div>
-
-        <Link
-          href={`/facilities/${facility.id}`}
-          className="block w-full text-center py-2 bg-saunako text-white text-xs font-medium rounded-lg hover:opacity-90 transition-opacity"
-        >
-          詳細を見る
-        </Link>
-      </div>
+      </Link>
     </div>
   );
 }

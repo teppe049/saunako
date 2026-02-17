@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     siteName: "サウナ子",
     locale: "ja_JP",
     type: "website",
+    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",

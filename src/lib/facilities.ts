@@ -172,6 +172,23 @@ export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[
   });
 }
 
+export function getRelatedFacilities(facility: Facility, limit: number = 6): { sameArea: Facility[]; similarPrice: Facility[] } {
+  const sameArea = facilities
+    .filter((f) => f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area)
+    .slice(0, limit);
+
+  const priceRange = facility.priceMin > 0 ? facility.priceMin * 0.5 : 0;
+  const priceMax = facility.priceMin > 0 ? facility.priceMin * 1.5 : 0;
+  const sameAreaIds = new Set(sameArea.map((f) => f.id));
+  const similarPrice = facility.priceMin > 0
+    ? facilities
+        .filter((f) => f.id !== facility.id && !sameAreaIds.has(f.id) && f.priceMin >= priceRange && f.priceMin <= priceMax)
+        .slice(0, limit)
+    : [];
+
+  return { sameArea, similarPrice };
+}
+
 export function getAllIds(): number[] {
   return facilities.map((f) => f.id);
 }
