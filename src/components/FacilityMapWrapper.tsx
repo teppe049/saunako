@@ -19,6 +19,8 @@ interface Props {
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
   onBoundsChange?: (bounds: MapBounds) => void;
+  showSearchAreaButton?: boolean;
+  onSearchArea?: () => void;
 }
 
 export default function FacilityMapWrapper(props: Props) {

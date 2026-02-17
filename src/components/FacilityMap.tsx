@@ -1,9 +1,10 @@
 'use client';
 
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facility } from '@/lib/types';
 
 export interface MapBounds {
@@ -19,16 +20,31 @@ interface FacilityMapProps {
   selectedId?: number;
   onSelect?: (facility: Facility) => void;
   onBoundsChange?: (bounds: MapBounds) => void;
+  showSearchAreaButton?: boolean;
+  onSearchArea?: () => void;
+  hideHeader?: boolean;
 }
 
-type MarkerState = 'default' | 'hovered' | 'selected';
+type MarkerState = 'default' | 'hovered' | 'selected' | 'visited';
+
+const RECENT_STORAGE_KEY = 'saunako_recent';
+
+function getVisitedIds(): Set<number> {
+  try {
+    const stored = localStorage.getItem(RECENT_STORAGE_KEY);
+    return new Set(stored ? JSON.parse(stored) : []);
+  } catch {
+    return new Set();
+  }
+}
 
 function createPriceIcon(price: number, state: MarkerState) {
   const label = price > 0 ? `¥${price.toLocaleString()}` : '--';
   const styles = {
-    default: { bg: '#fff', color: '#222', border: '1px solid #ddd', shadow: '0 2px 4px rgba(0,0,0,0.1)', scale: 'scale(1)' },
-    hovered: { bg: '#222', color: '#fff', border: '1px solid #222', shadow: '0 4px 12px rgba(0,0,0,0.25)', scale: 'scale(1.15)' },
-    selected: { bg: '#222', color: '#fff', border: '1px solid #222', shadow: '0 4px 12px rgba(0,0,0,0.25)', scale: 'scale(1.15)' },
+    default: { bg: '#fff', color: '#222', border: '1px solid #ddd', shadow: '0 2px 6px rgba(0,0,0,0.08)', scale: 'scale(1)', opacity: '1' },
+    visited: { bg: '#f3f4f6', color: '#9ca3af', border: '1px solid #e5e7eb', shadow: '0 1px 3px rgba(0,0,0,0.06)', scale: 'scale(1)', opacity: '0.75' },
+    hovered: { bg: '#222', color: '#fff', border: '1px solid #222', shadow: '0 4px 12px rgba(0,0,0,0.25)', scale: 'scale(1.15)', opacity: '1' },
+    selected: { bg: '#E85A4F', color: '#fff', border: '1px solid #E85A4F', shadow: '0 4px 12px rgba(0,0,0,0.3)', scale: 'scale(1.15)', opacity: '1' },
   };
   const s = styles[state];
 
@@ -42,6 +58,7 @@ function createPriceIcon(price: number, state: MarkerState) {
       display:inline-flex;align-items:center;justify-content:center;
       box-shadow:${s.shadow};
       transform:${s.scale};
+      opacity:${s.opacity};
       transition:all 0.15s ease;
       cursor:pointer;
     ">${label}</div>`,
@@ -66,8 +83,9 @@ function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facili
   return null;
 }
 
-function MapBoundsHandler({ onBoundsChange }: { onBoundsChange?: (bounds: MapBounds) => void }) {
+function MapBoundsHandler({ onBoundsChange, onMapMoved }: { onBoundsChange?: (bounds: MapBounds) => void; onMapMoved?: () => void }) {
   const map = useMap();
+  const isInitialLoad = useRef(true);
 
   const emitBounds = useCallback(() => {
     if (!onBoundsChange) return;
@@ -81,12 +99,21 @@ function MapBoundsHandler({ onBoundsChange }: { onBoundsChange?: (bounds: MapBou
   }, [map, onBoundsChange]);
 
   useMapEvents({
-    moveend: emitBounds,
-    zoomend: emitBounds,
-    click: () => {},
+    moveend: () => {
+      emitBounds();
+      if (!isInitialLoad.current) {
+        onMapMoved?.();
+      }
+      isInitialLoad.current = false;
+    },
+    zoomend: () => {
+      emitBounds();
+      if (!isInitialLoad.current) {
+        onMapMoved?.();
+      }
+    },
   });
 
-  // Emit initial bounds when map loads
   useEffect(() => {
     emitBounds();
   }, [emitBounds]);
@@ -103,9 +130,65 @@ function MapClickHandler({ onMapClick }: { onMapClick: () => void }) {
   return null;
 }
 
-export default function FacilityMap({ facilities, hoveredId, selectedId, onSelect, onBoundsChange }: FacilityMapProps) {
+function LocateButton() {
+  const map = useMap();
+  const [locating, setLocating] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    // Prevent map click/drag events from propagating through the button
+    L.DomEvent.disableClickPropagation(containerRef.current);
+    L.DomEvent.disableScrollPropagation(containerRef.current);
+  }, []);
+
+  const handleLocate = useCallback(() => {
+    setLocating(true);
+    map.locate({ setView: true, maxZoom: 14 });
+    map.once('locationfound', () => setLocating(false));
+    map.once('locationerror', () => setLocating(false));
+  }, [map]);
+
+  return (
+    <div ref={containerRef} className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'auto' }}>
+      <div className="leaflet-control" style={{ marginBottom: '16px', marginRight: '10px' }}>
+        <button
+          onClick={handleLocate}
+          className="w-10 h-10 bg-white rounded-lg shadow-md border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
+          aria-label="現在地を表示"
+          title="現在地を表示"
+        >
+          {locating ? (
+            <svg className="w-5 h-5 text-[#E85A4F] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3" strokeWidth={2} />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2v4m0 12v4m10-10h-4M6 12H2" />
+            </svg>
+          )}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function FacilityMap({
+  facilities,
+  hoveredId,
+  selectedId,
+  onSelect,
+  onBoundsChange,
+  showSearchAreaButton,
+  onSearchArea,
+  hideHeader,
+}: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
   const [isVisible, setIsVisible] = useState(true);
+  const [visitedIds] = useState<Set<number>>(() => getVisitedIds());
+  const [mapMoved, setMapMoved] = useState(false);
 
   const validFacilities = facilities.filter((f) => f.lat && f.lng);
   const center: [number, number] = validFacilities.length > 0
@@ -124,30 +207,45 @@ export default function FacilityMap({ facilities, hoveredId, selectedId, onSelec
     setActiveMarker(null);
   }, []);
 
+  const handleMapMoved = useCallback(() => {
+    if (showSearchAreaButton) {
+      setMapMoved(true);
+    }
+  }, [showSearchAreaButton]);
+
+  const handleSearchArea = useCallback(() => {
+    setMapMoved(false);
+    onSearchArea?.();
+  }, [onSearchArea]);
+
   function getMarkerState(facilityId: number): MarkerState {
     if (selectedId === facilityId || activeMarker === facilityId) return 'selected';
     if (hoveredId === facilityId) return 'hovered';
+    if (visitedIds.has(facilityId)) return 'visited';
     return 'default';
   }
 
   return (
     <div className="w-full h-full flex flex-col">
-      <MapHeader isVisible={isVisible} onToggle={() => setIsVisible(!isVisible)} />
+      {!hideHeader && (
+        <MapHeader isVisible={isVisible} onToggle={() => setIsVisible(!isVisible)} />
+      )}
 
       {isVisible && (
-        <div className="flex-1">
+        <div className="flex-1 relative">
           <MapContainer
             center={center}
             zoom={12}
             style={{ width: '100%', height: '100%' }}
           >
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
             />
             <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
-            <MapBoundsHandler onBoundsChange={onBoundsChange} />
+            <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
             <MapClickHandler onMapClick={handleMapClick} />
+            <LocateButton />
             {validFacilities.map((facility) => {
               const state = getMarkerState(facility.id);
               return (
@@ -155,52 +253,118 @@ export default function FacilityMap({ facilities, hoveredId, selectedId, onSelec
                   key={facility.id}
                   position={[facility.lat!, facility.lng!]}
                   icon={createPriceIcon(facility.priceMin, state)}
-                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : 0}
+                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
                   eventHandlers={{
                     click: () => handleMarkerClick(facility),
                   }}
                 >
                   <Popup>
-                    <div className="min-w-[200px]">
-                      <h3 className="font-bold text-sm mb-1">{facility.name}</h3>
-                      {facility.nearestStation && facility.walkMinutes > 0 && (
-                        <p className="text-xs text-gray-600 mb-2">
-                          {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
-                        </p>
-                      )}
-                      <p className="text-sm font-bold text-[#E85A4F] mb-2">
-                        {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}/${facility.duration}分` : '要問合せ'}
-                      </p>
-                      <Link
-                        href={`/facilities/${facility.id}`}
-                        className="text-xs text-[#E85A4F] hover:underline"
-                      >
-                        詳細を見る →
-                      </Link>
-                    </div>
+                    <RichPopupCard facility={facility} />
                   </Popup>
                 </Marker>
               );
             })}
           </MapContainer>
+
+          {/* Search this area button */}
+          {showSearchAreaButton && mapMoved && (
+            <button
+              onClick={handleSearchArea}
+              className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-white text-text-primary text-sm font-medium px-4 py-2.5 rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              このエリアで検索
+            </button>
+          )}
         </div>
       )}
     </div>
   );
 }
 
+function RichPopupCard({ facility }: { facility: Facility }) {
+  const hasImage = facility.images.length > 0;
+
+  return (
+    <div className="min-w-[240px] max-w-[280px]" style={{ margin: '-8px -12px' }}>
+      {/* Image */}
+      {hasImage && (
+        <div className="relative w-full h-[120px] -mt-0 overflow-hidden rounded-t-lg">
+          <Image
+            src={facility.images[0]}
+            alt={facility.name}
+            fill
+            sizes="280px"
+            className="object-cover"
+          />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="p-3">
+        <h3 className="font-bold text-sm text-text-primary mb-1 line-clamp-1">{facility.name}</h3>
+
+        {facility.nearestStation && facility.walkMinutes > 0 && (
+          <p className="text-xs text-text-tertiary mb-1.5">
+            {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+          </p>
+        )}
+
+        <p className="text-base font-bold text-saunako mb-2">
+          {facility.priceMin > 0 ? `¥${facility.priceMin.toLocaleString()}〜` : '要問合せ'}
+          {facility.priceMin > 0 && (
+            <span className="text-xs font-normal text-text-tertiary ml-1">/ {facility.duration}分</span>
+          )}
+        </p>
+
+        {/* Feature tags */}
+        <div className="flex flex-wrap gap-1 mb-2.5">
+          {facility.features.waterBath && (
+            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">水風呂</span>
+          )}
+          {facility.features.selfLoyly && (
+            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">ロウリュ</span>
+          )}
+          {facility.features.outdoorAir && (
+            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-primary-light text-primary rounded">外気浴</span>
+          )}
+          {facility.features.coupleOk && (
+            <span className="text-[10px] font-medium px-1.5 py-0.5 bg-[#E8F5E9] text-[#4CAF50] rounded">男女OK</span>
+          )}
+        </div>
+
+        <Link
+          href={`/facilities/${facility.id}`}
+          className="block w-full text-center py-2 bg-saunako text-white text-xs font-medium rounded-lg hover:opacity-90 transition-opacity"
+        >
+          詳細を見る
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 function MapHeader({ isVisible, onToggle }: { isVisible: boolean; onToggle: () => void }) {
   return (
-    <div className="flex items-center justify-between px-5 py-4 border-b border-border">
-      <span className="text-base font-semibold text-text-primary">エリアマップ</span>
+    <div className="flex items-center justify-between px-5 py-3 border-b border-border">
+      <span className="text-sm font-semibold text-text-primary">エリアマップ</span>
       <button
         onClick={onToggle}
-        className="flex items-center gap-2 px-3 py-1.5 bg-[#F0F0F0] rounded-full text-sm text-text-tertiary hover:bg-gray-200 transition-colors"
+        className="flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F0F0] hover:bg-gray-200 transition-colors"
+        aria-label={isVisible ? '地図を隠す' : '地図を表示'}
+        title={isVisible ? '地図を隠す' : '地図を表示'}
       >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-        </svg>
-        <span>{isVisible ? '地図を隠す' : '地図を表示'}</span>
+        {isVisible ? (
+          <svg className="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        ) : (
+          <svg className="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+          </svg>
+        )}
       </button>
     </div>
   );

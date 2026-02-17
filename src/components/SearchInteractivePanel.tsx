@@ -26,7 +26,9 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
+  const [pendingBounds, setPendingBounds] = useState<MapBounds | null>(null);
   const [mobileMapOpen, setMobileMapOpen] = useState(false);
+  const isInitialBounds = useRef(true);
   const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   // Track whether the map is visible (md breakpoint = 768px)
@@ -59,8 +61,22 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   }, []);
 
   const handleBoundsChange = useCallback((bounds: MapBounds) => {
-    setMapBounds(bounds);
+    // On initial load, apply bounds immediately
+    if (isInitialBounds.current) {
+      setMapBounds(bounds);
+      isInitialBounds.current = false;
+    } else {
+      // Store pending bounds — user needs to click "Search this area" to apply
+      setPendingBounds(bounds);
+    }
   }, []);
+
+  const handleSearchArea = useCallback(() => {
+    if (pendingBounds) {
+      setMapBounds(pendingBounds);
+      setPendingBounds(null);
+    }
+  }, [pendingBounds]);
 
   const setCardRef = useCallback((id: number, el: HTMLDivElement | null) => {
     if (el) {
@@ -125,6 +141,8 @@ export default function SearchInteractivePanel({ facilities }: Props) {
           selectedId={selectedId}
           onSelect={handleMapSelect}
           onBoundsChange={handleBoundsChange}
+          showSearchAreaButton
+          onSearchArea={handleSearchArea}
         />
       </div>
 
