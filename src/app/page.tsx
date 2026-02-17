@@ -2,10 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import HeroSearchForm from '@/components/HeroSearchForm';
-import ScrollToTop from '@/components/ScrollToTop';
+import dynamic from 'next/dynamic';
 import { getPopularFacilities, getAllFacilities } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
-import RecentlyViewed from '@/components/RecentlyViewed';
+const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
+const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
 
 export default function Home() {
   const popularFacilities = getPopularFacilities(3);

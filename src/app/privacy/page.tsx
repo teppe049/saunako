@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
-import ScrollToTop from '@/components/ScrollToTop';
+const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',

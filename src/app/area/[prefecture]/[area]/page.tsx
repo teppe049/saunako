@@ -6,7 +6,8 @@ import { Metadata } from 'next';
 import { PREFECTURES, AREA_GROUPS, Facility } from '@/lib/types';
 import { getFacilitiesByArea, getAreaBySlug, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
 import Header from '@/components/Header';
-import ScrollToTop from '@/components/ScrollToTop';
+import dynamic from 'next/dynamic';
+const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from '../AreaFilters';
 
 interface PageProps {

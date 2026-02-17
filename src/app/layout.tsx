@@ -3,8 +3,9 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { ADSENSE_CLIENT_ID, isAdSenseEnabled } from "@/lib/adsense";
-import CookieConsentBanner from "@/components/CookieConsentBanner";
+import dynamic from "next/dynamic";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBanner"));
 import "./globals.css";
 
 const geistSans = Geist({
