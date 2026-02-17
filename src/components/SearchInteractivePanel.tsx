@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useMemo, useSyncExternalStore } from 're
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
+import AdUnit from './AdUnit';
 import type { MapBounds } from './FacilityMap';
 import { Facility } from '@/lib/types';
 
@@ -93,6 +94,15 @@ export default function SearchInteractivePanel({ facilities }: Props) {
             />
           ))}
         </div>
+
+        {/* 広告ユニット: リスト下部 */}
+        {visibleFacilities.length > 0 && (
+          <AdUnit
+            slot="XXXXXXXXXX"
+            format="horizontal"
+            className="px-4 md:px-5 py-4 border-t border-border"
+          />
+        )}
 
         {visibleFacilities.length === 0 && (
           <div className="p-8 md:p-12 text-center">

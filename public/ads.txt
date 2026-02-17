@@ -1,0 +1,3 @@
+# Google AdSense ads.txt
+# AdSense パブリッシャーID 取得後に pub-XXXXXXXXXXXXXXXX を実際のIDに更新すること
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

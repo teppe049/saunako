@@ -4,6 +4,7 @@ import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
 import { getTimeSlotTags } from '@/lib/facilities';
+import { trackFacilityCardClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 
 interface FacilityListCardProps {
@@ -15,7 +16,7 @@ interface FacilityListCardProps {
 }
 
 const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
-  ({ facility, isHovered, isSelected, onHover }, ref) => {
+  ({ facility, index, isHovered, isSelected, onHover }, ref) => {
     const handleMouseEnter = useCallback(() => {
       onHover?.(facility.id);
     }, [onHover, facility.id]);
@@ -23,6 +24,10 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
     const handleMouseLeave = useCallback(() => {
       onHover?.(null);
     }, [onHover]);
+
+    const handleClick = useCallback(() => {
+      trackFacilityCardClick(facility.id, facility.name, index);
+    }, [facility.id, facility.name, index]);
 
     const highlightClass = isSelected
       ? 'ring-2 ring-saunako'
@@ -41,6 +46,7 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
       >
         <Link
           href={`/facilities/${facility.id}`}
+          onClick={handleClick}
           className="flex gap-3 md:gap-5 p-3 md:p-5 rounded-xl md:rounded-none border border-border md:border-0 md:border-b bg-surface md:bg-transparent hover:bg-gray-50 transition-colors"
         >
           {/* Image */}

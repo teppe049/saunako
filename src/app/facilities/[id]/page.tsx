@@ -10,7 +10,10 @@ import ScrollToTop from '@/components/ScrollToTop';
 import PricingTable from '@/components/PricingTable';
 import TimeSlotTable from '@/components/TimeSlotTable';
 import RecordVisit from '@/components/RecordVisit';
+import TrackFacilityView from '@/components/TrackFacilityView';
 import ReservationLink from '@/components/ReservationLink';
+import TrackExternalLink from '@/components/TrackExternalLink';
+import AdUnit from '@/components/AdUnit';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -83,6 +86,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <RecordVisit facilityId={facility.id} />
+      <TrackFacilityView facilityId={facility.id} facilityName={facility.name} area={facility.prefectureLabel} />
       {/* 専用ヘッダー */}
       <header className="bg-surface shadow h-14 px-4 md:h-16 md:px-8">
         <div className="flex items-center justify-between h-full">
@@ -406,7 +410,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       <div className="flex">
                         <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">電話</dt>
                         <dd className="text-text-primary text-sm">
-                          <a href={`tel:${facility.phone}`} className="text-primary hover:underline">{facility.phone}</a>
+                          <TrackExternalLink facilityId={facility.id} linkType="phone" href={`tel:${facility.phone}`} className="text-primary hover:underline">{facility.phone}</TrackExternalLink>
                         </dd>
                       </div>
                     )}
@@ -451,6 +455,13 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* 広告ユニット: コンテンツ下部 */}
+      <div className="bg-bg py-4 md:py-6">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <AdUnit slot="XXXXXXXXXX" format="auto" />
+        </div>
+      </div>
 
       {/* Simple Footer */}
       <footer className="bg-[#1A1A1A] text-white py-6 md:py-8">
