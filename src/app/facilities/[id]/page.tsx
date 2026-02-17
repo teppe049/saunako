@@ -47,6 +47,31 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     .filter((f) => f.id !== facility.id)
     .slice(0, 3);
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'TOP',
+        item: 'https://saunako.jp/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: facility.prefectureLabel,
+        item: `https://saunako.jp/area/${facility.prefecture}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: facility.name,
+        item: `https://saunako.jp/facilities/${facility.id}`,
+      },
+    ],
+  };
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -94,6 +119,10 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -14,7 +14,25 @@ export default function TermsPage() {
     <div className="min-h-screen bg-bg">
       <Header />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
+            { '@type': 'ListItem', position: 2, name: '利用規約', item: 'https://saunako.jp/terms' },
+          ],
+        }) }}
+      />
+
       <main className="max-w-3xl mx-auto px-5 md:px-8 py-10 md:py-16">
+        <nav className="text-sm text-text-secondary mb-6">
+          <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
+          <span className="mx-2">{'>'}</span>
+          <span className="text-text-primary">利用規約</span>
+        </nav>
+
         <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-8">
           利用規約
         </h1>

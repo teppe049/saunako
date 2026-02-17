@@ -14,7 +14,25 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-bg">
       <Header />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
+            { '@type': 'ListItem', position: 2, name: 'プライバシーポリシー', item: 'https://saunako.jp/privacy' },
+          ],
+        }) }}
+      />
+
       <main className="max-w-3xl mx-auto px-5 md:px-8 py-8 md:py-16">
+        <nav className="text-sm text-text-secondary mb-6">
+          <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
+          <span className="mx-2">{'>'}</span>
+          <span className="text-text-primary">プライバシーポリシー</span>
+        </nav>
+
         <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-8">
           プライバシーポリシー
         </h1>

@@ -211,11 +211,13 @@ export default async function SubAreaPage({ params }: PageProps) {
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">
-        {/* Breadcrumb - 2 levels only */}
+        {/* Breadcrumb */}
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
           <Link href={`/area/${prefecture}`} className="hover:text-primary transition-colors">{prefLabel}</Link>
+          <span className="mx-2">{'>'}</span>
+          <span className="text-text-primary">{areaLabel}</span>
         </nav>
 
         {/* Prefecture Navigation - same as prefecture page */}

@@ -136,7 +136,7 @@ export function searchFacilities(params: {
   return result;
 }
 
-export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc';
+export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc' | 'newest';
 
 export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[] {
   if (sort === 'recommend') return facilities;
@@ -162,6 +162,9 @@ export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[
         if (a.walkMinutes === 0) return 1;
         if (b.walkMinutes === 0) return -1;
         return a.walkMinutes - b.walkMinutes;
+      }
+      case 'newest': {
+        return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
       }
       default:
         return 0;

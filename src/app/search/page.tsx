@@ -85,7 +85,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const areaSlug = params.area || '';
   const areaData = areaSlug && prefecture ? getAreaBySlug(prefecture, areaSlug) : undefined;
 
-  const sortKey = (['recommend', 'price_asc', 'price_desc', 'station_asc'].includes(params.sort || '')
+  const sortKey = (['recommend', 'price_asc', 'price_desc', 'station_asc', 'newest'].includes(params.sort || '')
     ? params.sort
     : 'recommend') as SortKey;
 
@@ -120,8 +120,31 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   // Build URL to top page with current search params pre-filled
   const searchUrl = `/?${new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([, v]) => v))).toString()}`;
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'TOP',
+        item: 'https://saunako.jp/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: '検索結果',
+        item: 'https://saunako.jp/search',
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Header */}
       <header className="bg-surface border-b border-border">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 h-14 md:h-16 flex items-center justify-between">
