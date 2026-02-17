@@ -1,11 +1,15 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
-export const runtime = 'edge';
 export const alt = 'サウナ子 | 個室サウナ検索';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default function OGImage() {
+export default async function OGImage() {
+  const avatarData = await readFile(join(process.cwd(), 'public/saunako-avatar.png'));
+  const avatarBase64 = `data:image/png;base64,${avatarData.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
@@ -55,21 +59,16 @@ export default function OGImage() {
             gap: 24,
           }}
         >
-          {/* Icon */}
-          <div
+          {/* Avatar */}
+          <img
+            src={avatarBase64}
+            width={120}
+            height={120}
             style={{
-              width: 80,
-              height: 80,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #E87957, #D4634A)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 40,
+              border: '4px solid rgba(232, 121, 87, 0.4)',
             }}
-          >
-            ♨
-          </div>
+          />
 
           {/* Title */}
           <div
