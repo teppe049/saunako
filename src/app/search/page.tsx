@@ -41,7 +41,7 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   } else if (prefData) {
     title = `${prefData.label}の個室サウナ検索結果`;
   } else {
-    title = '個室サウナ検索結果';
+    title = '個室サウナを条件で検索・比較 | サウナ子';
   }
 
   // Build description with active filters
@@ -61,11 +61,20 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   if (params.outdoorAir === 'true') filterParts.push('外気浴');
   if (params.coupleOk === 'true') filterParts.push('カップルOK');
 
-  const description = `${filterParts.join('・')}の条件で個室サウナを検索。料金・設備・アクセス情報を比較して、あなたにぴったりの施設を見つけよう。`;
+  // Check if any filters are actually applied
+  const hasFilters = prefecture || params.priceMin || params.priceMax || params.capacity ||
+    params.waterBath === 'true' || params.selfLoyly === 'true' || params.outdoorAir === 'true' || params.coupleOk === 'true';
+
+  const description = hasFilters
+    ? `${filterParts.join('・')}の条件で個室サウナを検索。料金・設備・アクセス情報を比較して、あなたにぴったりの施設を見つけよう。`
+    : '全国の個室サウナを料金・エリア・設備で検索・比較。水風呂・ロウリュ・外気浴などこだわり条件で、あなたにぴったりの施設を見つけよう。';
 
   return {
     title,
     description,
+    alternates: {
+      canonical: 'https://saunako.jp/search',
+    },
   };
 }
 

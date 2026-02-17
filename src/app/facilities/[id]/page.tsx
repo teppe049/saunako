@@ -76,6 +76,19 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           longitude: facility.lng,
         },
       }),
+      ...(facility.businessHours && facility.businessHours !== '不明' && {
+        openingHours: facility.businessHours,
+      }),
+      ...(facility.priceMin > 0 && {
+        priceRange: `¥${facility.priceMin.toLocaleString()}〜`,
+      }),
+      ...(facility.amenities.length > 0 && {
+        amenityFeature: facility.amenities.map(amenity => ({
+          '@type': 'LocationFeatureSpecification',
+          name: amenity,
+          value: true,
+        })),
+      }),
     },
   };
 

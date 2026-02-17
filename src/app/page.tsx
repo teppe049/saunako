@@ -4,14 +4,44 @@ import Header from '@/components/Header';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getPopularFacilities, getAllFacilities } from '@/lib/facilities';
+import { PREFECTURES } from '@/lib/types';
 import RecentlyViewed from '@/components/RecentlyViewed';
 
 export default function Home() {
   const popularFacilities = getPopularFacilities(3);
   const allFacilities = getAllFacilities();
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'サウナ子',
+    url: 'https://saunako.jp',
+    description: 'プライベートサウナ専門の比較・検索サービス',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://saunako.jp/search?prefecture={prefecture}',
+      'query-input': 'required name=prefecture',
+    },
+  };
+
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'サウナ子',
+    url: 'https://saunako.jp',
+    description: `全国${allFacilities.length}施設以上の個室サウナを掲載。${PREFECTURES.length}都府県のエリアから検索できます。`,
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
       <Header />
 
       {/* Hero Section */}

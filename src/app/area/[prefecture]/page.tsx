@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
-import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
+import { PREFECTURES, AREA_GROUPS, Facility } from '@/lib/types';
 import ScrollToTop from '@/components/ScrollToTop';
 import AreaFilters from './AreaFilters';
 
@@ -16,6 +16,9 @@ interface PageProps {
 const SAUNAKO_AREA_COMMENTS: Record<string, string> = {
   tokyo: '東京は個室サウナの激戦区! 新宿・渋谷・池袋を中心に、こだわりの施設がたくさんあるわ。駅チカで仕事帰りにサクッと整えるのがおすすめよ。',
   osaka: '大阪は東京に負けないくらい個室サウナが充実してきてるわ! 梅田・心斎橋エリアを中心に、コスパ抜群の施設が多いのが特徴ね。',
+  kanagawa: '神奈川は横浜・川崎を中心に個室サウナが増えてきてるわ！都内からのアクセスも良いから、休日にゆっくり整うのにぴったりよ。',
+  saitama: '埼玉は大宮・浦和エリアを中心に、コスパ抜群の個室サウナがそろってるわ。都心より広々とした施設が多いのが魅力ね！',
+  chiba: '千葉は船橋・浦安エリアを中心に、個性豊かな個室サウナが点在してるの。東京のベッドタウンだからアクセスも便利よ。',
 };
 
 // デフォルトのサウナ子コメント
@@ -34,7 +37,52 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${prefData.label}の個室サウナ一覧 | サウナ子`,
     description: `${prefData.label}の個室サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`,
+    alternates: {
+      canonical: `https://saunako.jp/area/${prefecture}`,
+    },
   };
+}
+
+function generateFaqData(facilities: Facility[], areaLabel: string) {
+  const pricedFacilities = facilities.filter(f => f.priceMin > 0);
+  const avgPrice = pricedFacilities.length > 0
+    ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
+    : null;
+
+  const popularNames = facilities
+    .filter(f => f.images.length > 0)
+    .slice(0, 3)
+    .map(f => f.name);
+
+  const coupleNames = facilities
+    .filter(f => f.features.coupleOk)
+    .slice(0, 3)
+    .map(f => f.name);
+
+  const faqs: { question: string; answer: string }[] = [];
+
+  if (avgPrice) {
+    faqs.push({
+      question: `${areaLabel}の個室サウナの料金相場は？`,
+      answer: `${areaLabel}の個室サウナの料金相場は1時間あたり約${avgPrice.toLocaleString()}円です。最安値は${Math.min(...pricedFacilities.map(f => f.priceMin)).toLocaleString()}円〜となっています。`,
+    });
+  }
+
+  if (popularNames.length > 0) {
+    faqs.push({
+      question: `${areaLabel}で人気の個室サウナは？`,
+      answer: `${areaLabel}で人気の個室サウナは${popularNames.join('、')}などがあります。それぞれ特徴が異なるので、設備や料金を比較して選ぶのがおすすめです。`,
+    });
+  }
+
+  if (coupleNames.length > 0) {
+    faqs.push({
+      question: `${areaLabel}でカップルで利用できる個室サウナは？`,
+      answer: `${areaLabel}でカップル（男女）で利用できる個室サウナは${coupleNames.join('、')}などがあります。事前予約がおすすめです。`,
+    });
+  }
+
+  return faqs;
 }
 
 export default async function AreaPage({ params }: PageProps) {
@@ -69,11 +117,50 @@ export default async function AreaPage({ params }: PageProps) {
     ],
   };
 
+  // FAQ JSON-LD
+  const faqItems = generateFaqData(facilities, prefData.label);
+  const faqJsonLd = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
+
+  // ItemList JSON-LD
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${prefData.label}の個室サウナ一覧`,
+    numberOfItems: facilities.length,
+    itemListElement: facilities.slice(0, 10).map((f, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: f.name,
+      url: `https://saunako.jp/facilities/${f.id}`,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-bg">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <Header />
 
@@ -160,6 +247,32 @@ export default async function AreaPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+
+        {/* FAQ Section */}
+        {(() => {
+          const faqs = generateFaqData(facilities, prefData.label);
+          if (faqs.length === 0) return null;
+          return (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-text-primary mb-4">よくある質問</h2>
+              <div className="space-y-4">
+                {faqs.map((faq, i) => (
+                  <details key={i} className="bg-surface border border-border rounded-xl overflow-hidden group">
+                    <summary className="px-5 py-4 cursor-pointer text-text-primary font-medium hover:bg-gray-50 transition-colors flex items-center justify-between">
+                      <span>{faq.question}</span>
+                      <svg className="w-5 h-5 text-text-tertiary flex-shrink-0 ml-2 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <div className="px-5 pb-4 text-text-secondary text-sm leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Filters and Facility List (Client Component) */}
         <Suspense fallback={
