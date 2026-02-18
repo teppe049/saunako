@@ -86,6 +86,10 @@ function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facili
     if (hasFitBounds.current || facilities.length === 0) return;
     const bounds = L.latLngBounds(facilities.map((f) => [f.lat!, f.lng!]));
     map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
+    // Prevent zooming out too far (e.g. when Tokyo + Osaka spread the bounds)
+    if (map.getZoom() < 8) {
+      map.setZoom(8);
+    }
     hasFitBounds.current = true;
   }, [facilities, map]);
 
