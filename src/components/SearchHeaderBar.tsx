@@ -14,6 +14,8 @@ interface SearchHeaderBarProps {
   prefectureLabel?: string;
   prefectureCode?: string;
   areaSlug?: string;
+  station?: string;
+  allStations?: string[];
 }
 
 type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
@@ -39,7 +41,7 @@ const CHEVRON_SVG = (
   </svg>
 );
 
-export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, areaSlug }: SearchHeaderBarProps) {
+export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, areaSlug, station, allStations }: SearchHeaderBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -53,7 +55,23 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     earlyMorning: searchParams.get('earlyMorning') === 'true',
   });
 
-  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]);
+  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('station');
+
+  const stationTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleStationChange = (value: string) => {
+    if (stationTimerRef.current) clearTimeout(stationTimerRef.current);
+    stationTimerRef.current = setTimeout(() => {
+      trackFilterChange('station', value || 'all');
+      const params = new URLSearchParams(searchParams.toString());
+      if (value.trim()) {
+        params.set('station', value.trim());
+      } else {
+        params.delete('station');
+      }
+      router.push(`?${params.toString()}`, { scroll: false });
+    }, 300);
+  };
 
   // 検索結果表示時にsearchイベントを送信
   const hasTrackedSearch = useRef(false);
@@ -190,6 +208,26 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
             ))}
           </select>
           {CHEVRON_SVG}
+        </div>
+
+        {/* Station Search */}
+        <div className="relative inline-flex items-center flex-shrink-0">
+          <input
+            type="text"
+            list="station-list"
+            placeholder="駅名で検索"
+            defaultValue={station || ''}
+            onChange={(e) => handleStationChange(e.target.value)}
+            className="pl-3 pr-2 py-1.5 rounded-full text-[13px] font-medium bg-bg border border-border text-text-primary w-[100px] md:w-[140px] placeholder:text-text-tertiary"
+            data-track-click="station_search"
+          />
+          {allStations && allStations.length > 0 && (
+            <datalist id="station-list">
+              {allStations.map((s) => (
+                <option key={s} value={s} />
+              ))}
+            </datalist>
+          )}
         </div>
 
         {/* Filter Chips - horizontal scroll on mobile, wrap on PC */}

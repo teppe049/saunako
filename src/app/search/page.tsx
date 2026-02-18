@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import SearchHeaderBar from '@/components/SearchHeaderBar';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
-import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
+import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug, getAllStations } from '@/lib/facilities';
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES } from '@/lib/types';
 
@@ -22,6 +22,7 @@ interface SearchPageProps {
     earlyMorning?: string;
     sort?: string;
     area?: string;
+    station?: string;
   }>;
 }
 
@@ -102,8 +103,11 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     open24h: params.open24h === 'true',
     lateNight: params.lateNight === 'true',
     earlyMorning: params.earlyMorning === 'true',
+    station: params.station || undefined,
   });
   const facilities = sortFacilities(filtered, sortKey);
+
+  const allStations = getAllStations();
 
   const baseCount = prefecture
     ? allFacilities.filter((f) => f.prefecture === prefecture).length
@@ -140,6 +144,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         prefectureLabel={prefData?.label}
         prefectureCode={prefecture}
         areaSlug={areaSlug}
+        station={params.station || ''}
+        allStations={allStations}
       />
       <div className="flex-1 min-h-0">
         <SearchInteractivePanel facilities={facilities} />

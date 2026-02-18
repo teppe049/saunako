@@ -6,6 +6,7 @@ import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
 import ImageGallery from '@/components/ImageGallery';
 import BackButton from '@/components/BackButton';
 import ShareButton from '@/components/ShareButton';
+import FavoriteButton from '@/components/FavoriteButton';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import PricingTable from '@/components/PricingTable';
@@ -162,8 +163,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* 右: 共有ボタン */}
+          {/* 右: 共有ボタン + お気に入り */}
           <div className="flex items-center gap-2 md:gap-3">
+            <FavoriteButton facilityId={facility.id} size="md" />
             <ShareButton name={facility.name} url={`/facilities/${facility.id}`} />
           </div>
         </div>

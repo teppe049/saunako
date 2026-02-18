@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Heart } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -14,6 +15,10 @@ export default function Header() {
             className="w-9 h-9 rounded-[18px] object-cover"
           />
           <span className="font-bold text-[20px] text-text-primary">サウナ子</span>
+        </Link>
+        <Link href="/favorites" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
+          <Heart size={18} />
+          <span className="text-sm font-medium hidden md:inline">お気に入り</span>
         </Link>
       </div>
     </header>

@@ -6,6 +6,7 @@ import { Facility } from '@/lib/types';
 import { getTimeSlotTags } from '@/lib/facilities';
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
+import FavoriteButton from '@/components/FavoriteButton';
 
 interface FacilityListCardProps {
   facility: Facility;
@@ -56,6 +57,9 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               alt={facility.name}
               sizes="(max-width: 768px) 100px, 180px"
             />
+            <div className="absolute top-1.5 right-1.5 z-10">
+              <FavoriteButton facilityId={facility.id} size="sm" />
+            </div>
           </div>
 
           {/* Content */}

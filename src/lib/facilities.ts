@@ -90,6 +90,7 @@ export function searchFacilities(params: {
   open24h?: boolean;
   lateNight?: boolean;
   earlyMorning?: boolean;
+  station?: string;
 }): Facility[] {
   let result = [...facilities];
 
@@ -131,6 +132,10 @@ export function searchFacilities(params: {
   }
   if (params.earlyMorning) {
     result = result.filter((f) => getTimeSlotTags(f).hasMorningSlot);
+  }
+  if (params.station) {
+    const s = params.station.toLowerCase();
+    result = result.filter((f) => f.nearestStation.toLowerCase().includes(s));
   }
 
   return result;
@@ -195,4 +200,8 @@ export function getAllIds(): number[] {
 
 export function getAllPrefectures(): string[] {
   return [...new Set(facilities.map((f) => f.prefecture))];
+}
+
+export function getAllStations(): string[] {
+  return [...new Set(facilities.filter((f) => f.nearestStation).map((f) => f.nearestStation))].sort();
 }
