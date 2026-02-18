@@ -77,20 +77,46 @@ function createPriceIcon(price: number, state: MarkerState) {
   });
 }
 
+// Find the cluster with the most facilities (within ~1 degree ≈ 100km radius)
+function findDensestCluster(facilities: Facility[]): Facility[] {
+  if (facilities.length <= 3) return facilities;
+
+  let bestCenter: Facility | null = null;
+  let bestCount = 0;
+  const RADIUS = 1.0; // ~1 degree latitude/longitude ≈ 100km
+
+  for (const f of facilities) {
+    const nearby = facilities.filter(
+      (other) => Math.abs(f.lat! - other.lat!) < RADIUS && Math.abs(f.lng! - other.lng!) < RADIUS
+    );
+    if (nearby.length > bestCount) {
+      bestCount = nearby.length;
+      bestCenter = f;
+    }
+  }
+
+  if (!bestCenter) return facilities;
+  return facilities.filter(
+    (f) => Math.abs(f.lat! - bestCenter!.lat!) < RADIUS && Math.abs(f.lng! - bestCenter!.lng!) < RADIUS
+  );
+}
+
 function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facilities: Facility[] }) {
   const map = useMap();
-  const hasFitBounds = useRef(false);
+  const prevFacilityIdsRef = useRef<string>('');
 
-  // Initial fitBounds to show all facilities
+  // fitBounds when facilities change (e.g. prefecture filter)
   useEffect(() => {
-    if (hasFitBounds.current || facilities.length === 0) return;
-    const bounds = L.latLngBounds(facilities.map((f) => [f.lat!, f.lng!]));
-    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
-    // Prevent zooming out too far (e.g. when Tokyo + Osaka spread the bounds)
-    if (map.getZoom() < 8) {
-      map.setZoom(8);
-    }
-    hasFitBounds.current = true;
+    if (facilities.length === 0) return;
+
+    const currentIds = facilities.map((f) => f.id).sort((a, b) => a - b).join(',');
+    if (currentIds === prevFacilityIdsRef.current) return;
+    prevFacilityIdsRef.current = currentIds;
+
+    // Find the densest cluster to avoid centering between distant groups (e.g. Tokyo + Osaka)
+    const targetFacilities = findDensestCluster(facilities);
+    const bounds = L.latLngBounds(targetFacilities.map((f) => [f.lat!, f.lng!]));
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
   }, [facilities, map]);
 
   useEffect(() => {
