@@ -79,6 +79,15 @@ function createPriceIcon(price: number, state: MarkerState) {
 
 function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facilities: Facility[] }) {
   const map = useMap();
+  const hasFitBounds = useRef(false);
+
+  // Initial fitBounds to show all facilities
+  useEffect(() => {
+    if (hasFitBounds.current || facilities.length === 0) return;
+    const bounds = L.latLngBounds(facilities.map((f) => [f.lat!, f.lng!]));
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
+    hasFitBounds.current = true;
+  }, [facilities, map]);
 
   useEffect(() => {
     if (selectedId) {
