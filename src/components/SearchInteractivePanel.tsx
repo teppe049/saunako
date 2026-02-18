@@ -89,7 +89,7 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   return (
     <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
       {/* Left: List */}
-      <div className="flex-1 md:flex-none md:w-[820px] overflow-y-auto">
+      <div className="flex-1 md:flex-none md:w-[55%] lg:w-[50%] xl:w-[45%] overflow-y-auto">
         {/* Bounds filter indicator (only when map is visible) */}
         {isMapVisible && mapBounds && visibleFacilities.length !== facilities.length && (
           <div className="px-4 md:px-5 py-2 bg-[#F8F9FA] border-b border-border text-xs text-text-secondary">

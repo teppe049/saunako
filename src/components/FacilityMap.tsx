@@ -22,7 +22,6 @@ interface FacilityMapProps {
   onBoundsChange?: (bounds: MapBounds) => void;
   showSearchAreaButton?: boolean;
   onSearchArea?: () => void;
-  hideHeader?: boolean;
 }
 
 type MarkerState = 'default' | 'hovered' | 'selected' | 'visited';
@@ -237,10 +236,8 @@ export default function FacilityMap({
   onBoundsChange,
   showSearchAreaButton,
   onSearchArea,
-  hideHeader,
 }: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
-  const [isVisible, setIsVisible] = useState(true);
   const [visitedIds] = useState<Set<number>>(() => getVisitedIds());
   const [mapMoved, setMapMoved] = useState(false);
 
@@ -282,62 +279,54 @@ export default function FacilityMap({
   }
 
   return (
-    <div className="w-full h-full flex flex-col">
-      {!hideHeader && (
-        <MapHeader isVisible={isVisible} onToggle={() => setIsVisible(!isVisible)} />
+    <div className="w-full h-full relative">
+      <MapContainer
+        center={center}
+        zoom={12}
+        style={{ width: '100%', height: '100%' }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://tile.openstreetmap.jp/styles/osm-bright-ja/{z}/{x}/{y}.png"
+        />
+        <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
+        <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
+        <MapClickHandler onMapClick={handleMapClick} />
+        <LocateButton />
+        {validFacilities.map((facility) => {
+          const state = getMarkerState(facility.id);
+          return (
+            <Marker
+              key={facility.id}
+              position={[facility.lat!, facility.lng!]}
+              icon={getCachedPriceIcon(facility.priceMin, state)}
+              zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
+              eventHandlers={{
+                click: () => handleMarkerClick(facility),
+              }}
+            />
+          );
+        })}
+      </MapContainer>
+
+      {/* Facility info card overlay */}
+      {activeFacility && (
+        <div className="absolute bottom-16 left-3 z-[1000]">
+          <OverlayCard facility={activeFacility} onClose={() => setActiveMarker(null)} />
+        </div>
       )}
 
-      {isVisible && (
-        <div className="flex-1 relative">
-          <MapContainer
-            center={center}
-            zoom={12}
-            style={{ width: '100%', height: '100%' }}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-              url="https://tile.openstreetmap.jp/styles/osm-bright-ja/{z}/{x}/{y}.png"
-            />
-            <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
-            <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
-            <MapClickHandler onMapClick={handleMapClick} />
-            <LocateButton />
-            {validFacilities.map((facility) => {
-              const state = getMarkerState(facility.id);
-              return (
-                <Marker
-                  key={facility.id}
-                  position={[facility.lat!, facility.lng!]}
-                  icon={getCachedPriceIcon(facility.priceMin, state)}
-                  zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
-                  eventHandlers={{
-                    click: () => handleMarkerClick(facility),
-                  }}
-                />
-              );
-            })}
-          </MapContainer>
-
-          {/* Facility info card overlay */}
-          {activeFacility && (
-            <div className="absolute bottom-16 left-3 z-[1000]">
-              <OverlayCard facility={activeFacility} onClose={() => setActiveMarker(null)} />
-            </div>
-          )}
-
-          {/* Search this area button */}
-          {showSearchAreaButton && mapMoved && (
-            <button
-              onClick={handleSearchArea}
-              className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-text-primary text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-lg hover:bg-black transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              このエリアで検索
-            </button>
-          )}
-        </div>
+      {/* Search this area button */}
+      {showSearchAreaButton && mapMoved && (
+        <button
+          onClick={handleSearchArea}
+          className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1.5 bg-text-primary text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-lg hover:bg-black transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          このエリアで検索
+        </button>
       )}
     </div>
   );
@@ -411,26 +400,3 @@ function OverlayCard({ facility, onClose }: { facility: Facility; onClose: () =>
   );
 }
 
-function MapHeader({ isVisible, onToggle }: { isVisible: boolean; onToggle: () => void }) {
-  return (
-    <div className="flex items-center justify-between px-5 py-3 border-b border-border">
-      <span className="text-sm font-semibold text-text-primary">エリアマップ</span>
-      <button
-        onClick={onToggle}
-        className="flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F0F0] hover:bg-gray-200 transition-colors"
-        aria-label={isVisible ? '地図を隠す' : '地図を表示'}
-        title={isVisible ? '地図を隠す' : '地図を表示'}
-      >
-        {isVisible ? (
-          <svg className="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        ) : (
-          <svg className="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-          </svg>
-        )}
-      </button>
-    </div>
-  );
-}
