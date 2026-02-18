@@ -182,6 +182,16 @@ body {
   box-shadow: none !important;
 }
 
+/* Bottom sheet slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* Cookie consent banner animation */
 @keyframes fadeSlideUp {
   from {

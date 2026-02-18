@@ -77,6 +77,7 @@ export default function MobileMapOverlay({ facilities, onClose }: MobileMapOverl
           facilities={facilities}
           selectedId={selectedFacility?.id}
           onSelect={handleSelect}
+          hideOverlayCard
         />
 
         {/* Bottom sheet: card carousel */}

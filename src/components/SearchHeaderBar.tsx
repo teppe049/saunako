@@ -53,7 +53,10 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     earlyMorning: searchParams.get('earlyMorning') === 'true',
   });
 
+  const [showFilterSheet, setShowFilterSheet] = useState(false);
+
   const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]);
+  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length;
 
   // 検索結果表示時にsearchイベントを送信
   const hasTrackedSearch = useRef(false);
@@ -192,13 +195,13 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           {CHEVRON_SVG}
         </div>
 
-        {/* Filter Chips - horizontal scroll on mobile, wrap on PC */}
-        <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide flex-1 min-w-0 md:flex-wrap">
+        {/* Filter Chips - desktop only */}
+        <div className="hidden md:flex items-center gap-1.5 flex-1 min-w-0 flex-wrap">
           {(Object.keys(filters) as FilterKey[]).map((key) => (
             <button
               key={key}
               onClick={() => toggleFilter(key)}
-              className={`px-2.5 py-1 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
+              className={`px-2.5 py-1 rounded-full text-[13px] font-medium transition-colors border flex-shrink-0 ${
                 filters[key]
                   ? 'bg-primary text-white border-primary'
                   : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
@@ -214,12 +217,31 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           {hasActiveFilters && (
             <button
               onClick={clearAllFilters}
-              className="text-[12px] md:text-[13px] text-text-tertiary hover:text-text-secondary transition-colors flex-shrink-0 ml-0.5"
+              className="text-[13px] text-text-tertiary hover:text-text-secondary transition-colors flex-shrink-0 ml-0.5"
             >
               クリア
             </button>
           )}
         </div>
+
+        {/* Filter Button - mobile only */}
+        <button
+          onClick={() => setShowFilterSheet(true)}
+          className="md:hidden flex items-center gap-1 px-3 py-1.5 rounded-full text-[12px] font-medium border transition-colors flex-shrink-0 bg-white text-text-secondary border-border active:bg-gray-50"
+          data-track-click="filter_button_mobile"
+        >
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
+          フィルタ
+          {activeFilterCount > 0 && (
+            <span className="ml-0.5 w-4.5 h-4.5 rounded-full bg-primary text-white text-[10px] font-bold flex items-center justify-center leading-none">
+              {activeFilterCount}
+            </span>
+          )}
+        </button>
+
+        <div className="flex-1 md:hidden" />
 
         {/* Count Badge */}
         <span className="text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
@@ -261,8 +283,8 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         {/* Spacer when no area chips */}
         {!showAreaRow && <div className="flex-1" />}
 
-        {/* Sort + Duration dropdowns (always visible, right-aligned) */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        {/* Sort + Duration dropdowns (desktop only, right-aligned) */}
+        <div className="hidden md:flex items-center gap-2 flex-shrink-0">
           <div className="relative inline-flex items-center">
             <select
               value={searchParams.get('sort') || 'recommend'}
@@ -294,6 +316,117 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           </div>
         </div>
       </div>
+
+      {/* === Mobile Filter Bottom Sheet === */}
+      {showFilterSheet && (
+        <div className="md:hidden fixed inset-0 z-50">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setShowFilterSheet(false)}
+          />
+          {/* Sheet */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl animate-[slideUp_0.25s_ease-out] max-h-[85vh] flex flex-col">
+            {/* Drag handle */}
+            <div className="flex justify-center pt-3 pb-1">
+              <div className="w-10 h-1 rounded-full bg-gray-300" />
+            </div>
+
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 pb-3">
+              <h2 className="text-base font-bold text-text-primary">条件で絞り込み</h2>
+              <button
+                onClick={() => setShowFilterSheet(false)}
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                aria-label="閉じる"
+              >
+                <svg className="w-4 h-4 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="overflow-y-auto px-5 pb-8 flex-1">
+              {/* Facility Features */}
+              <div className="mb-6">
+                <p className="text-[13px] font-medium text-text-tertiary mb-3">設備・条件</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {(Object.keys(filters) as FilterKey[]).map((key) => (
+                    <button
+                      key={key}
+                      onClick={() => toggleFilter(key)}
+                      className={`px-4 py-2.5 rounded-lg text-[13px] font-medium transition-colors border text-center ${
+                        filters[key]
+                          ? 'bg-primary text-white border-primary'
+                          : 'bg-white text-text-secondary border-border'
+                      }`}
+                      data-track-click="filter_sheet_toggle"
+                      data-track-filter={key}
+                    >
+                      {filterLabels[key]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sort + Duration */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <p className="text-[13px] font-medium text-text-tertiary mb-2">並び順</p>
+                  <div className="relative">
+                    <select
+                      value={searchParams.get('sort') || 'recommend'}
+                      onChange={(e) => handleSortChange(e.target.value)}
+                      className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
+                    >
+                      <option value="recommend">掲載順</option>
+                      <option value="newest">新着順</option>
+                      <option value="price_asc">価格が安い順</option>
+                      <option value="price_desc">価格が高い順</option>
+                      <option value="station_asc">駅から近い順</option>
+                    </select>
+                    {CHEVRON_SVG}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[13px] font-medium text-text-tertiary mb-2">利用時間</p>
+                  <div className="relative">
+                    <select
+                      value={searchParams.get('duration') || ''}
+                      onChange={(e) => handleDurationChange(e.target.value)}
+                      className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
+                    >
+                      <option value="">すべて</option>
+                      <option value="60">60分〜</option>
+                      <option value="90">90分〜</option>
+                      <option value="120">120分〜</option>
+                      <option value="180">180分〜</option>
+                    </select>
+                    {CHEVRON_SVG}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="flex items-center gap-3 px-5 py-4 border-t border-border bg-white">
+              <button
+                onClick={clearAllFilters}
+                className="text-[13px] font-medium text-text-tertiary hover:text-text-secondary transition-colors"
+              >
+                クリア
+              </button>
+              <button
+                onClick={() => setShowFilterSheet(false)}
+                className="flex-1 py-2.5 rounded-lg bg-primary text-white text-[14px] font-bold transition-opacity hover:opacity-90"
+              >
+                {filteredCount}件を表示
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

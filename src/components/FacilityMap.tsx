@@ -22,6 +22,7 @@ interface FacilityMapProps {
   onBoundsChange?: (bounds: MapBounds) => void;
   showSearchAreaButton?: boolean;
   onSearchArea?: () => void;
+  hideOverlayCard?: boolean;
 }
 
 type MarkerState = 'default' | 'hovered' | 'selected' | 'visited';
@@ -236,6 +237,7 @@ export default function FacilityMap({
   onBoundsChange,
   showSearchAreaButton,
   onSearchArea,
+  hideOverlayCard,
 }: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
   const [visitedIds] = useState<Set<number>>(() => getVisitedIds());
@@ -310,7 +312,7 @@ export default function FacilityMap({
       </MapContainer>
 
       {/* Facility info card overlay */}
-      {activeFacility && (
+      {activeFacility && !hideOverlayCard && (
         <div className="absolute bottom-16 left-3 z-[1000]">
           <OverlayCard facility={activeFacility} onClose={() => setActiveMarker(null)} />
         </div>
