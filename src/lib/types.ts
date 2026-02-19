@@ -1,3 +1,26 @@
+export interface ArticleMeta {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  publishedAt: string;
+  updatedAt: string;
+  thumbnail: string;
+  author: string;
+  facilityIds: number[];
+  readingTime: number;
+}
+
+export const ARTICLE_CATEGORIES = [
+  { slug: 'area-guide', label: 'エリアガイド' },
+  { slug: 'beginners', label: 'サウナ入門' },
+  { slug: 'ranking', label: 'ランキング' },
+  { slug: 'column', label: 'コラム' },
+] as const;
+
+export type ArticleCategory = (typeof ARTICLE_CATEGORIES)[number]['slug'];
+
 export interface Plan {
   name: string;
   price: number;
