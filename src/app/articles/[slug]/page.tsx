@@ -102,7 +102,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      <main className="max-w-4xl mx-auto px-4 py-6 md:py-10">
+      <main className="max-w-5xl mx-auto px-4 py-6 md:py-10">
         {/* Breadcrumb */}
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>

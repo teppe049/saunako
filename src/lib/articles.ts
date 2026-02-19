@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import { ArticleMeta, ARTICLE_CATEGORIES } from './types';
 import { mdxComponents } from '@/components/MDXComponents';
 
@@ -56,6 +57,11 @@ export async function getArticleBySlug(slug: string) {
   const { content: compiledContent } = await compileMDX({
     source: content,
     components: mdxComponents,
+    options: {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
   });
 
   return { meta, content: compiledContent };
