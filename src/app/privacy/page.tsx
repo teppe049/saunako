@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'プライバシーポリシー',
   description: 'サウナ子のプライバシーポリシー。個人情報の取り扱い、Cookie、アクセスログ等に関する方針を記載しています。',
   alternates: {
-    canonical: 'https://saunako.jp/privacy',
+    canonical: 'https://www.saunako.jp/privacy',
   },
 };
 
@@ -24,8 +24,8 @@ export default function PrivacyPage() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-            { '@type': 'ListItem', position: 2, name: 'プライバシーポリシー', item: 'https://saunako.jp/privacy' },
+            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+            { '@type': 'ListItem', position: 2, name: 'プライバシーポリシー', item: 'https://www.saunako.jp/privacy' },
           ],
         }) }}
       />

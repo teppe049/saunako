@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: '利用規約',
   description: 'サウナ子の利用規約です。本サービスをご利用いただく前に、必ずお読みください。',
   alternates: {
-    canonical: 'https://saunako.jp/terms',
+    canonical: 'https://www.saunako.jp/terms',
   },
 };
 
@@ -24,8 +24,8 @@ export default function TermsPage() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-            { '@type': 'ListItem', position: 2, name: '利用規約', item: 'https://saunako.jp/terms' },
+            { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+            { '@type': 'ListItem', position: 2, name: '利用規約', item: 'https://www.saunako.jp/terms' },
           ],
         }) }}
       />

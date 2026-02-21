@@ -71,7 +71,7 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     title,
     description,
     alternates: {
-      canonical: 'https://saunako.jp/search',
+      canonical: 'https://www.saunako.jp/search',
     },
     openGraph: {
       title,
@@ -121,13 +121,13 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'TOP',
-        item: 'https://saunako.jp/',
+        item: 'https://www.saunako.jp/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '検索結果',
-        item: 'https://saunako.jp/search',
+        item: 'https://www.saunako.jp/search',
       },
     ],
   };

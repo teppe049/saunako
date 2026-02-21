@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'よくある質問 | サウナ子',
   description: '個室サウナに関するよくある質問をまとめました。予約方法・料金・持ち物・利用方法など、初めての方にも分かりやすく解説しています。',
   alternates: {
-    canonical: 'https://saunako.jp/faq',
+    canonical: 'https://www.saunako.jp/faq',
   },
   openGraph: {
     title: 'よくある質問 | サウナ子',
@@ -109,8 +109,8 @@ export default function FaqPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'よくある質問', item: 'https://saunako.jp/faq' },
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'よくある質問', item: 'https://www.saunako.jp/faq' },
     ],
   };
 

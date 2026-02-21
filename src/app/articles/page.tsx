@@ -9,7 +9,7 @@ export const metadata = {
   title: 'コラム | サウナ子',
   description: 'サウナ子が厳選した個室サウナの情報、エリアガイド、初心者向けの入門記事をお届けします。',
   alternates: {
-    canonical: 'https://saunako.jp/articles',
+    canonical: 'https://www.saunako.jp/articles',
   },
   openGraph: {
     title: 'コラム | サウナ子',
@@ -24,8 +24,8 @@ export default function ArticlesListPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://saunako.jp/articles' },
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://www.saunako.jp/articles' },
     ],
   };
 

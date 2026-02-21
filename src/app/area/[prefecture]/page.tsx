@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps) {
     title,
     description,
     alternates: {
-      canonical: `https://saunako.jp/area/${prefecture}`,
+      canonical: `https://www.saunako.jp/area/${prefecture}`,
     },
     openGraph: {
       title,
@@ -115,13 +115,13 @@ export default async function AreaPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'TOP',
-        item: 'https://saunako.jp/',
+        item: 'https://www.saunako.jp/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: prefData.label,
-        item: `https://saunako.jp/area/${prefecture}`,
+        item: `https://www.saunako.jp/area/${prefecture}`,
       },
     ],
   };
@@ -151,7 +151,7 @@ export default async function AreaPage({ params }: PageProps) {
       '@type': 'ListItem',
       position: i + 1,
       name: f.name,
-      url: `https://saunako.jp/facilities/${f.id}`,
+      url: `https://www.saunako.jp/facilities/${f.id}`,
     })),
   };
 

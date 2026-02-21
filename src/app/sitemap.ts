@@ -4,7 +4,7 @@ import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
 import { getAllArticles, getAllTags } from '@/lib/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://saunako.jp'
+  const baseUrl = 'https://www.saunako.jp'
 
   // 施設データの最新更新日をサイト全体の基準にする
   const latestFacilityUpdate = facilities.reduce((latest, f) => {

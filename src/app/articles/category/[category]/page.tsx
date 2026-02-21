@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
     title,
     description,
     alternates: {
-      canonical: `https://saunako.jp/articles/category/${cat.slug}`,
+      canonical: `https://www.saunako.jp/articles/category/${cat.slug}`,
     },
     openGraph: {
       title,
@@ -49,9 +49,9 @@ export default async function CategoryPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://saunako.jp/articles' },
-      { '@type': 'ListItem', position: 3, name: cat.label, item: `https://saunako.jp/articles/category/${cat.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://www.saunako.jp/articles' },
+      { '@type': 'ListItem', position: 3, name: cat.label, item: `https://www.saunako.jp/articles/category/${cat.slug}` },
     ],
   };
 

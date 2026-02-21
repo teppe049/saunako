@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://saunako.jp/sitemap.xml',
+    sitemap: 'https://www.saunako.jp/sitemap.xml',
   }
 }

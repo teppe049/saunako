@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     "全国85施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・神奈川・埼玉・千葉・大阪など主要エリアの料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
   keywords: ["個室サウナ", "プライベートサウナ", "東京", "神奈川", "埼玉", "千葉", "大阪", "サウナ検索", "サウナ比較"],
   authors: [{ name: "サウナ子" }],
-  metadataBase: new URL("https://saunako.jp"),
+  metadataBase: new URL("https://www.saunako.jp"),
   openGraph: {
     title: "サウナ子 | 個室・プライベートサウナを全国から比較・検索",
     description:
       "全国85施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・神奈川・埼玉・千葉・大阪など主要エリアの料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
-    url: "https://saunako.jp",
+    url: "https://www.saunako.jp",
     siteName: "サウナ子",
     locale: "ja_JP",
     type: "website",
@@ -74,18 +74,18 @@ const siteJsonLd = {
     {
       '@type': 'WebSite',
       name: 'サウナ子',
-      url: 'https://saunako.jp',
+      url: 'https://www.saunako.jp',
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://saunako.jp/search?prefecture={prefecture}',
+        target: 'https://www.saunako.jp/search?prefecture={prefecture}',
         'query-input': 'required name=prefecture',
       },
     },
     {
       '@type': 'Organization',
       name: 'サウナ子',
-      url: 'https://saunako.jp',
-      logo: 'https://saunako.jp/saunako-avatar.webp',
+      url: 'https://www.saunako.jp',
+      logo: 'https://www.saunako.jp/saunako-avatar.webp',
     },
   ],
 };

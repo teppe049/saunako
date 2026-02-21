@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${meta.title} | サウナ子`,
     description: meta.description,
     alternates: {
-      canonical: `https://saunako.jp/articles/${meta.slug}`,
+      canonical: `https://www.saunako.jp/articles/${meta.slug}`,
     },
     openGraph: {
       title: meta.title,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps) {
       tags: meta.tags,
       images: [
         {
-          url: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`,
+          url: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://www.saunako.jp${meta.thumbnail}`,
           width: 1200,
           height: 630,
           alt: meta.title,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.description,
-      images: [meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`],
+      images: [meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://www.saunako.jp${meta.thumbnail}`],
     },
   };
 }
@@ -76,10 +76,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://saunako.jp/articles' },
-      { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://saunako.jp/articles/category/${meta.category}` },
-      { '@type': 'ListItem', position: 4, name: meta.title, item: `https://saunako.jp/articles/${meta.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://www.saunako.jp/articles' },
+      { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://www.saunako.jp/articles/category/${meta.category}` },
+      { '@type': 'ListItem', position: 4, name: meta.title, item: `https://www.saunako.jp/articles/${meta.slug}` },
     ],
   };
 
@@ -95,18 +95,18 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     author: {
       '@type': 'Person',
       name: meta.author,
-      url: 'https://saunako.jp',
+      url: 'https://www.saunako.jp',
     },
     publisher: {
       '@type': 'Organization',
       name: 'サウナ子',
-      url: 'https://saunako.jp',
+      url: 'https://www.saunako.jp',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://saunako.jp/articles/${meta.slug}`,
+      '@id': `https://www.saunako.jp/articles/${meta.slug}`,
     },
-    image: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`,
+    image: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://www.saunako.jp${meta.thumbnail}`,
   };
 
   return (

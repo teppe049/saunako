@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: '施設掲載のご案内 | サウナ子',
   description: 'サウナ子への施設掲載は完全無料。個室サウナ・プライベートサウナの集客をサポートします。掲載料・手数料は一切かかりません。',
   alternates: {
-    canonical: 'https://saunako.jp/for-owners',
+    canonical: 'https://www.saunako.jp/for-owners',
   },
   openGraph: {
     title: '施設掲載のご案内 | サウナ子',
@@ -79,8 +79,8 @@ export default function ForOwnersPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: '施設掲載のご案内', item: 'https://saunako.jp/for-owners' },
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: '施設掲載のご案内', item: 'https://www.saunako.jp/for-owners' },
     ],
   };
 

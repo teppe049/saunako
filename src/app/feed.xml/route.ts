@@ -15,7 +15,7 @@ export async function GET() {
   const items = articles
     .map((article) => {
       const pubDate = new Date(article.publishedAt).toUTCString();
-      const link = `https://saunako.jp/articles/${article.slug}`;
+      const link = `https://www.saunako.jp/articles/${article.slug}`;
 
       return `    <item>
       <title>${escapeXml(article.title)}</title>
@@ -32,9 +32,9 @@ export async function GET() {
   <channel>
     <title>サウナ子 | 個室サウナコラム</title>
     <description>個室・プライベートサウナに関する最新コラム・ガイド記事</description>
-    <link>https://saunako.jp/articles</link>
+    <link>https://www.saunako.jp/articles</link>
     <language>ja</language>
-    <atom:link href="https://saunako.jp/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.saunako.jp/feed.xml" rel="self" type="application/rss+xml" />
 ${items}
   </channel>
 </rss>`;
