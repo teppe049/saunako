@@ -69,16 +69,19 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     ],
   };
 
+  const toISOWithTZ = (date: string) => `${date}T00:00:00+09:00`;
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: meta.title,
     description: meta.description,
-    datePublished: meta.publishedAt,
-    dateModified: meta.updatedAt,
+    datePublished: toISOWithTZ(meta.publishedAt),
+    dateModified: toISOWithTZ(meta.updatedAt),
     author: {
       '@type': 'Person',
       name: meta.author,
+      url: 'https://saunako.jp',
     },
     publisher: {
       '@type': 'Organization',
