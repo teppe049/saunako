@@ -67,24 +67,32 @@ function generatePost(facility) {
     features,
     saunakoCommentShort,
     prefectureLabel,
+    bookingUrl,
+    website,
   } = facility;
 
   const featureText = buildFeatureText(features);
   const area = areaHashtag(prefectureLabel);
+  const officialUrl = bookingUrl || website || '';
 
   const lines = [];
-  lines.push('\u3010' + name + '\u3011\uD83E\uDDD6\u200D\u2640\uFE0F');
+  lines.push('【' + name + '】🧖‍♀️');
   lines.push('');
   lines.push(saunakoCommentShort || '');
   lines.push('');
-  lines.push('\uD83D\uDCCD ' + nearestStation + ' \u5F92\u6B69' + walkMinutes + '\u5206');
-  lines.push('\uD83D\uDCB0 ' + formatPrice(priceMin) + '\u5186\uFF5E / ' + duration + '\u5206');
-  lines.push('\uD83D\uDD25 ' + featureText);
+  lines.push('📍 ' + nearestStation + ' 徒歩' + walkMinutes + '分');
+  lines.push('💰 ' + formatPrice(priceMin) + '円～ / ' + duration + '分');
+  lines.push('🔥 ' + featureText);
   lines.push('');
-  lines.push('\u8A73\u3057\u304F\u306F\u3053\u3061\u3089\uD83D\uDC47');
+  lines.push('▶️ サウナ子で詳しく見る');
   lines.push('https://saunako.jp/facilities/' + id);
+  if (officialUrl) {
+    lines.push('');
+    lines.push('🔗 公式サイト・予約はこちら');
+    lines.push(officialUrl);
+  }
   lines.push('');
-  lines.push('#\u500B\u5BA4\u30B5\u30A6\u30CA #\u30B5\u30A6\u30CA #\u30B5\u6D3B #' + area + '\u30B5\u30A6\u30CA');
+  lines.push('#個室サウナ #サウナ #サ活 #' + area + 'サウナ');
 
   return lines.join('\n');
 }
