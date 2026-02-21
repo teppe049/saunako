@@ -170,9 +170,8 @@ function MapBoundsHandler({ onBoundsChange, onMapMoved }: { onBoundsChange?: (bo
     },
   });
 
-  useEffect(() => {
-    emitBounds();
-  }, [emitBounds]);
+  // Don't emit bounds on mount — wait for fitBounds (in MapPanHandler) to
+  // trigger moveend so the list filters by the correct viewport.
 
   return null;
 }
