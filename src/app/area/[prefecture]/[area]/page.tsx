@@ -67,11 +67,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const areaLabel = areaData.label;
   const cities = areaData.cities;
 
+  const title = `${prefLabel} ${areaLabel}の個室サウナ一覧`;
+  const description = `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
+
   return {
-    title: `${prefLabel} ${areaLabel}の個室サウナ一覧`,
-    description: `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`,
+    title,
+    description,
     alternates: {
       canonical: `https://saunako.jp/area/${prefecture}/${areaSlug}`,
+    },
+    openGraph: {
+      title,
+      description,
     },
   };
 }

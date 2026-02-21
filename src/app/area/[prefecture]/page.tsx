@@ -35,11 +35,18 @@ export async function generateMetadata({ params }: PageProps) {
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
   if (!prefData) return { title: 'Not Found' };
 
+  const title = `${prefData.label}の個室サウナ一覧 | サウナ子`;
+  const description = `${prefData.label}の個室サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
+
   return {
-    title: `${prefData.label}の個室サウナ一覧 | サウナ子`,
-    description: `${prefData.label}の個室サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`,
+    title,
+    description,
     alternates: {
       canonical: `https://saunako.jp/area/${prefecture}`,
+    },
+    openGraph: {
+      title,
+      description,
     },
   };
 }

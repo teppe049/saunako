@@ -7,6 +7,13 @@ const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 export const metadata: Metadata = {
   title: 'よくある質問 | サウナ子',
   description: '個室サウナに関するよくある質問をまとめました。予約方法・料金・持ち物・利用方法など、初めての方にも分かりやすく解説しています。',
+  alternates: {
+    canonical: 'https://saunako.jp/faq',
+  },
+  openGraph: {
+    title: 'よくある質問 | サウナ子',
+    description: '個室サウナに関するよくある質問をまとめました。予約方法・料金・持ち物・利用方法など、初めての方にも分かりやすく解説しています。',
+  },
 };
 
 const faqCategories = [

@@ -132,8 +132,15 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     ],
   };
 
+  const h1Text = prefData && areaData
+    ? `${prefData.label} ${areaData.label}の個室サウナ検索結果`
+    : prefData
+      ? `${prefData.label}の個室サウナ検索結果`
+      : '個室サウナ検索';
+
   return (
     <div className="flex flex-col h-screen bg-bg">
+      <h1 className="sr-only">{h1Text}</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

@@ -8,6 +8,13 @@ import { getAllFacilities } from '@/lib/facilities';
 export const metadata: Metadata = {
   title: '施設掲載のご案内 | サウナ子',
   description: 'サウナ子への施設掲載は完全無料。個室サウナ・プライベートサウナの集客をサポートします。掲載料・手数料は一切かかりません。',
+  alternates: {
+    canonical: 'https://saunako.jp/for-owners',
+  },
+  openGraph: {
+    title: '施設掲載のご案内 | サウナ子',
+    description: 'サウナ子への施設掲載は完全無料。個室サウナ・プライベートサウナの集客をサポートします。掲載料・手数料は一切かかりません。',
+  },
 };
 
 const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header';
@@ -54,6 +61,19 @@ const ownerFaqs = [
 export default function ForOwnersPage() {
   const facilityCount = getAllFacilities().length;
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: ownerFaqs.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
+
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -68,6 +88,10 @@ export default function ForOwnersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Header />
 

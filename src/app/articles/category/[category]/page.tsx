@@ -18,11 +18,18 @@ export async function generateMetadata({ params }: PageProps) {
   const cat = ARTICLE_CATEGORIES.find((c) => c.slug === category);
   if (!cat) return { title: 'Not Found' };
 
+  const title = `${cat.label}の記事一覧 | サウナ子`;
+  const description = `サウナ子の${cat.label}に関する記事一覧。個室サウナの最新情報をお届けします。`;
+
   return {
-    title: `${cat.label}の記事一覧 | サウナ子`,
-    description: `サウナ子の${cat.label}に関する記事一覧。個室サウナの最新情報をお届けします。`,
+    title,
+    description,
     alternates: {
       canonical: `https://saunako.jp/articles/category/${cat.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
     },
   };
 }
@@ -37,8 +44,22 @@ export default async function CategoryPage({ params }: PageProps) {
 
   const articles = getArticlesByCategory(category);
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://saunako.jp/articles' },
+      { '@type': 'ListItem', position: 3, name: cat.label, item: `https://saunako.jp/articles/category/${cat.slug}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="max-w-5xl mx-auto px-4 py-6 md:py-10">
         {/* Breadcrumb */}

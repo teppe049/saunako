@@ -10,13 +10,30 @@ export const metadata = {
   alternates: {
     canonical: 'https://saunako.jp/articles',
   },
+  openGraph: {
+    title: 'コラム | サウナ子',
+    description: 'サウナ子が厳選した個室サウナの情報、エリアガイド、初心者向けの入門記事をお届けします。',
+  },
 };
 
 export default function ArticlesListPage() {
   const articles = getAllArticles();
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://saunako.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://saunako.jp/articles' },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="max-w-5xl mx-auto px-4 py-6 md:py-10">
         {/* Breadcrumb */}
