@@ -182,6 +182,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         {/* Prefecture Select */}
         <div className="relative inline-flex items-center flex-shrink-0">
           <select
+            aria-label="エリア選択"
             value={prefectureCode || ''}
             onChange={(e) => handlePrefectureChange(e.target.value)}
             className="appearance-none pl-3 pr-7 py-1.5 rounded-full text-[13px] font-medium bg-bg border border-border text-text-primary cursor-pointer"
@@ -287,6 +288,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         <div className="hidden md:flex items-center gap-2 flex-shrink-0">
           <div className="relative inline-flex items-center">
             <select
+              aria-label="並び順"
               value={searchParams.get('sort') || 'recommend'}
               onChange={(e) => handleSortChange(e.target.value)}
               className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
@@ -302,6 +304,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
           <div className="relative inline-flex items-center">
             <select
+              aria-label="利用時間"
               value={searchParams.get('duration') || ''}
               onChange={(e) => handleDurationChange(e.target.value)}
               className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
@@ -373,9 +376,10 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
               {/* Sort + Duration */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <p className="text-[13px] font-medium text-text-tertiary mb-2">並び順</p>
+                  <p className="text-[13px] font-medium text-text-tertiary mb-2" id="sort-label-mobile">並び順</p>
                   <div className="relative">
                     <select
+                      aria-labelledby="sort-label-mobile"
                       value={searchParams.get('sort') || 'recommend'}
                       onChange={(e) => handleSortChange(e.target.value)}
                       className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
@@ -390,9 +394,10 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
                   </div>
                 </div>
                 <div>
-                  <p className="text-[13px] font-medium text-text-tertiary mb-2">利用時間</p>
+                  <p className="text-[13px] font-medium text-text-tertiary mb-2" id="duration-label-mobile">利用時間</p>
                   <div className="relative">
                     <select
+                      aria-labelledby="duration-label-mobile"
                       value={searchParams.get('duration') || ''}
                       onChange={(e) => handleDurationChange(e.target.value)}
                       className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"

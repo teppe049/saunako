@@ -17,11 +17,11 @@ export default function Header() {
           <span className="font-bold text-[20px] text-text-primary">サウナ子</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Link href="/articles" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
+          <Link href="/articles" aria-label="記事" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
             <BookOpen size={18} />
             <span className="text-sm font-medium hidden md:inline">記事</span>
           </Link>
-          <Link href="/favorites" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
+          <Link href="/favorites" aria-label="お気に入り" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
             <Heart size={18} />
             <span className="text-sm font-medium hidden md:inline">お気に入り</span>
           </Link>

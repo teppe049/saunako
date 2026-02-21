@@ -61,11 +61,12 @@ export default function HeroSearchForm() {
       <div className="grid grid-cols-3 md:grid-cols-2 gap-2.5 md:gap-4">
         {/* Area - full width */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+          <label htmlFor="hero-area" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <MapPin size={12} />
             エリア
           </label>
           <select
+            id="hero-area"
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
             className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 text-text-primary text-sm"
@@ -86,7 +87,7 @@ export default function HeroSearchForm() {
 
         {/* Price Range - full width */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+          <label htmlFor="hero-price-min" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Banknote size={12} />
             予算
             <span className="ml-auto text-saunako font-bold text-sm">{priceLabel}</span>
@@ -103,6 +104,8 @@ export default function HeroSearchForm() {
               />
               {/* Min thumb */}
               <input
+                id="hero-price-min"
+                aria-label="最低予算"
                 type="range"
                 min={PRICE_MIN}
                 max={PRICE_MAX}
@@ -113,6 +116,7 @@ export default function HeroSearchForm() {
               />
               {/* Max thumb */}
               <input
+                aria-label="最高予算"
                 type="range"
                 min={PRICE_MIN}
                 max={PRICE_MAX}
@@ -128,11 +132,12 @@ export default function HeroSearchForm() {
 
         {/* Guests */}
         <div className="col-span-1 flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+          <label htmlFor="hero-guests" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <User size={12} />
             人数
           </label>
           <select
+            id="hero-guests"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
             className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"
@@ -147,11 +152,12 @@ export default function HeroSearchForm() {
 
         {/* Duration */}
         <div className="col-span-1 flex flex-col gap-1.5">
-          <label className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+          <label htmlFor="hero-duration" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <Clock size={12} />
             利用時間
           </label>
           <select
+            id="hero-duration"
             value={duration}
             onChange={(e) => setDuration(e.target.value)}
             className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-2 md:px-4 text-text-primary text-sm"

@@ -113,7 +113,7 @@ export default function RootLayout({
         {isAdSenseEnabled && (
           <Script
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             crossOrigin="anonymous"
           />
         )}
@@ -125,7 +125,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
-        {children}
+        <main>{children}</main>
         <AnalyticsTracker />
         <WebVitalsReporter />
         <CookieConsentBanner />

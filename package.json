@@ -21,6 +21,9 @@
     "remark-gfm": "^4.0.1",
     "web-vitals": "^5.1.0"
   },
+  "browserslist": [
+    "defaults and fully supports es6-module"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.21",
