@@ -149,7 +149,14 @@ export default function Home() {
             <p className="text-[11px] text-[#757575] text-center leading-relaxed">
               当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
             </p>
+            <div className="flex items-center gap-3 flex-wrap justify-center">
+              {PREFECTURES.map((pref) => (
+                <Link key={pref.code} href={`/area/${pref.code}`} className="text-[11px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link>
+              ))}
+            </div>
             <div className="flex items-center gap-4 flex-wrap justify-center">
+              <Link href="/search" className="text-[11px] text-[#757575] hover:text-white transition-colors">施設を探す</Link>
+              <Link href="/articles" className="text-[11px] text-[#757575] hover:text-white transition-colors">コラム</Link>
               <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
               <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
@@ -163,7 +170,7 @@ export default function Home() {
 
           {/* PC: 3-column grid */}
           <div className="hidden md:block">
-            <div className="grid grid-cols-3 gap-16 mb-10">
+            <div className="grid grid-cols-4 gap-12 mb-10">
               {/* Brand Column */}
               <div className="max-w-[320px]">
                 <div className="flex items-center gap-2 mb-4">
@@ -186,8 +193,18 @@ export default function Home() {
                 <h3 className="text-[13px] font-semibold text-white mb-4">サービス</h3>
                 <ul className="space-y-3">
                   <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
-                  <li><Link href="/area/tokyo" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">エリアから探す</Link></li>
+                  <li><Link href="/articles" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">コラム</Link></li>
                   <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
+                </ul>
+              </div>
+
+              {/* Area Column */}
+              <div>
+                <h3 className="text-[13px] font-semibold text-white mb-4">エリアから探す</h3>
+                <ul className="space-y-3">
+                  {PREFECTURES.map((pref) => (
+                    <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
+                  ))}
                 </ul>
               </div>
 

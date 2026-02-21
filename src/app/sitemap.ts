@@ -6,17 +6,23 @@ import { getAllArticles } from '@/lib/articles'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://saunako.jp'
 
+  // 施設データの最新更新日をサイト全体の基準にする
+  const latestFacilityUpdate = facilities.reduce((latest, f) => {
+    const d = new Date(f.updatedAt)
+    return d > latest ? d : latest
+  }, new Date('2026-01-01'))
+
   // トップページ
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: latestFacilityUpdate,
       changeFrequency: 'daily',
       priority: 1,
     },
     {
       url: `${baseUrl}/search`,
-      lastModified: new Date(),
+      lastModified: latestFacilityUpdate,
       changeFrequency: 'daily',
       priority: 0.9,
     },
@@ -34,13 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-01'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/for-owners`,
-      lastModified: new Date(),
+      lastModified: new Date('2026-02-01'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
@@ -49,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // エリアページ（全都道府県）
   const areaPages: MetadataRoute.Sitemap = PREFECTURES.map((pref) => ({
     url: `${baseUrl}/area/${pref.code}`,
-    lastModified: new Date(),
+    lastModified: latestFacilityUpdate,
     changeFrequency: 'daily' as const,
     priority: 0.9,
   }))
@@ -59,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ([prefecture, areas]) =>
       areas.map((area) => ({
         url: `${baseUrl}/area/${prefecture}/${area.slug}`,
-        lastModified: new Date(),
+        lastModified: latestFacilityUpdate,
         changeFrequency: 'daily' as const,
         priority: 0.85,
       }))
@@ -73,18 +79,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // 記事一覧ページ
+  // 記事ページ
+  const articles = getAllArticles()
+
+  // 記事一覧ページ（最新記事の更新日を使用）
+  const latestArticleDate = articles.length > 0
+    ? new Date(articles[0].updatedAt)
+    : new Date('2026-02-01')
   const articlesListPage: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/articles`,
-      lastModified: new Date(),
+      lastModified: latestArticleDate,
       changeFrequency: 'daily',
       priority: 0.8,
     },
   ]
-
-  // 記事ページ
-  const articles = getAllArticles()
   const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${baseUrl}/articles/${article.slug}`,
     lastModified: new Date(article.updatedAt),
@@ -95,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // カテゴリページ
   const categoryPages: MetadataRoute.Sitemap = ARTICLE_CATEGORIES.map((cat) => ({
     url: `${baseUrl}/articles/category/${cat.slug}`,
-    lastModified: new Date(),
+    lastModified: latestArticleDate,
     changeFrequency: 'weekly' as const,
     priority: 0.6,
   }))
