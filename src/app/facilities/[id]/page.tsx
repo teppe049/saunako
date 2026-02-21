@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getFacilityById, getAllIds, getRelatedFacilities } from '@/lib/facilities';
+import { getArticlesByFacilityId } from '@/lib/articles';
+import ArticleCard from '@/components/ArticleCard';
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
 import ImageGallery from '@/components/ImageGallery';
 import BackButton from '@/components/BackButton';
@@ -54,6 +56,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
   }
 
   const { sameArea, similarPrice } = getRelatedFacilities(facility, 3);
+  const relatedArticles = getArticlesByFacilityId(Number(id));
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -560,6 +563,22 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           )}
         </div>
       </section>
+
+      {/* この施設が紹介されている記事 */}
+      {relatedArticles.length > 0 && (
+        <section className="bg-bg py-6 md:py-10">
+          <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+            <h2 className="text-lg md:text-xl font-bold text-text-primary mb-4 md:mb-6">
+              この施設が紹介されている記事
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedArticles.map((article) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 広告ユニット: コンテンツ下部 */}
       <div className="bg-bg py-4 md:py-6">
