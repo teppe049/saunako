@@ -29,7 +29,7 @@ export default function FavoriteButton({ facilityId, size = 'sm' }: FavoriteButt
     <button
       onClick={handleClick}
       className={`inline-flex items-center justify-center rounded-full transition-colors ${
-        size === 'sm' ? 'w-8 h-8' : 'w-10 h-10 border border-border hover:bg-gray-100'
+        size === 'sm' ? 'w-9 h-9' : 'w-11 h-11 border border-border hover:bg-gray-100'
       } ${isFav ? 'text-saunako' : size === 'sm' ? 'text-white/80 hover:text-white' : 'text-text-tertiary hover:text-saunako'}`}
       style={bgStyle}
       aria-label={isFav ? 'お気に入りから削除' : 'お気に入りに追加'}

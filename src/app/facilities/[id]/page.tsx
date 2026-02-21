@@ -613,6 +613,26 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <p className="text-xs text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
         </div>
       </footer>
+      {/* モバイル固定予約CTAバー */}
+      {facility.website && (
+        <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-border shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:hidden px-4 py-3 pb-[env(safe-area-inset-bottom,12px)]">
+          <div className="flex items-center justify-between gap-3">
+            {facility.priceMin > 0 && (
+              <div className="flex items-baseline gap-0.5 flex-shrink-0">
+                <span className="text-saunako text-lg font-bold">¥{facility.priceMin.toLocaleString()}</span>
+                <span className="text-text-secondary text-xs">〜</span>
+              </div>
+            )}
+            <div className="flex-1 min-w-0">
+              <ReservationLink
+                facilityId={facility.id}
+                facilityName={facility.name}
+                website={facility.website}
+              />
+            </div>
+          </div>
+        </div>
+      )}
       <ScrollToTop />
     </div>
   );

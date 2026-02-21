@@ -14,24 +14,24 @@ export default function Footer() {
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
             </a>
           </div>
-          <p className="text-[11px] text-[#757575] text-center leading-relaxed">
+          <p className="text-xs text-[#757575] text-center leading-relaxed">
             当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
           </p>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             {PREFECTURES.map((pref) => (
-              <Link key={pref.code} href={`/area/${pref.code}`} className="text-[11px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link>
+              <Link key={pref.code} href={`/area/${pref.code}`} className="text-xs text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link>
             ))}
           </div>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <Link href="/search" className="text-[11px] text-[#757575] hover:text-white transition-colors">施設を探す</Link>
-            <Link href="/articles" className="text-[11px] text-[#757575] hover:text-white transition-colors">コラム</Link>
-            <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
-            <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
-            <Link href="/faq" className="text-[11px] text-[#757575] hover:text-white transition-colors">よくある質問</Link>
-            <Link href="/for-owners" className="text-[11px] text-[#757575] hover:text-white transition-colors">施設掲載のご案内</Link>
+            <Link href="/search" className="text-xs text-[#757575] hover:text-white transition-colors">施設を探す</Link>
+            <Link href="/articles" className="text-xs text-[#757575] hover:text-white transition-colors">コラム</Link>
+            <Link href="/terms" className="text-xs text-[#757575] hover:text-white transition-colors">利用規約</Link>
+            <Link href="/privacy" className="text-xs text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-xs text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
+            <Link href="/faq" className="text-xs text-[#757575] hover:text-white transition-colors">よくある質問</Link>
+            <Link href="/for-owners" className="text-xs text-[#757575] hover:text-white transition-colors">施設掲載のご案内</Link>
           </div>
-          <p className="text-[11px] text-[#757575]">
+          <p className="text-xs text-[#757575]">
             © 2026 サウナ子 All rights reserved.
           </p>
         </div>

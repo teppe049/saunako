@@ -201,7 +201,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
             <button
               key={key}
               onClick={() => toggleFilter(key)}
-              className={`px-2.5 py-1 rounded-full text-[13px] font-medium transition-colors border flex-shrink-0 ${
+              className={`px-2.5 py-1.5 rounded-full text-[13px] font-medium transition-colors border flex-shrink-0 ${
                 filters[key]
                   ? 'bg-primary text-white border-primary'
                   : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
@@ -227,7 +227,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         {/* Filter Button - mobile only */}
         <button
           onClick={() => setShowFilterSheet(true)}
-          className="md:hidden flex items-center gap-1 px-3 py-1.5 rounded-full text-[12px] font-medium border transition-colors flex-shrink-0 bg-white text-text-secondary border-border active:bg-gray-50"
+          className="md:hidden flex items-center gap-1 px-3 py-2 rounded-full text-[12px] font-medium border transition-colors flex-shrink-0 bg-white text-text-secondary border-border active:bg-gray-50"
           data-track-click="filter_button_mobile"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -256,7 +256,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide flex-1 min-w-0 md:flex-wrap">
             <button
               onClick={() => handleAreaChange('')}
-              className={`px-2.5 py-1 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
+              className={`px-2.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
                 !areaSlug
                   ? 'bg-primary text-white border-primary'
                   : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
@@ -268,7 +268,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
               <button
                 key={area.slug}
                 onClick={() => handleAreaChange(area.slug)}
-                className={`px-2.5 py-1 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
+                className={`px-2.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
                   areaSlug === area.slug
                     ? 'bg-primary text-white border-primary'
                     : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
@@ -356,7 +356,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
                     <button
                       key={key}
                       onClick={() => toggleFilter(key)}
-                      className={`px-4 py-2.5 rounded-lg text-[13px] font-medium transition-colors border text-center ${
+                      className={`px-4 py-3 rounded-lg text-[13px] font-medium transition-colors border text-center ${
                         filters[key]
                           ? 'bg-primary text-white border-primary'
                           : 'bg-white text-text-secondary border-border'
