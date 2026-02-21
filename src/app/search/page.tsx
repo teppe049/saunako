@@ -152,7 +152,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         prefectureCode={prefecture}
         areaSlug={areaSlug}
       />
-      <div className="flex-1 min-h-0">
+      <div className="flex flex-col flex-1 min-h-0">
         <SearchInteractivePanel facilities={facilities} />
       </div>
     </div>
