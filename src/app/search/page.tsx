@@ -73,6 +73,10 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     alternates: {
       canonical: 'https://saunako.jp/search',
     },
+    openGraph: {
+      title,
+      description,
+    },
   };
 }
 

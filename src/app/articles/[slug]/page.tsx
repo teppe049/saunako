@@ -36,11 +36,20 @@ export async function generateMetadata({ params }: PageProps) {
       modifiedTime: meta.updatedAt,
       authors: [meta.author],
       tags: meta.tags,
+      images: [
+        {
+          url: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`,
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.description,
+      images: [meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`],
     },
   };
 }

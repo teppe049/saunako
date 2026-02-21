@@ -263,7 +263,7 @@ export default async function OGImage({ params }: { params: Promise<{ id: string
               display: 'flex',
             }}
           >
-            saunako.vercel.app
+            saunako.jp
           </div>
         </div>
 
