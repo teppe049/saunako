@@ -6766,5 +6766,295 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 87,
+    "slug": "so-you",
+    "name": "個室サウナ So You",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋",
+    "address": "愛知県名古屋市瑞穂区河岸町1-1-49",
+    "nearestStation": "堀田駅",
+    "walkMinutes": 5,
+    "priceMin": 4100,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14-18",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "月〜土 12:00-22:00",
+    "holidays": "日曜日",
+    "website": "https://soyou.jp/",
+    "phone": "052-618-8268",
+    "bookingUrl": "https://select-type.com/rsv/?id=jn6YpoTkWLo",
+    "amenities": ["タオル", "バスタオル", "シャンプー", "コンディショナー", "ボディソープ", "洗顔", "カミソリ", "ドライヤー", "ヘアアイロン", "化粧水", "乳液", "イオンウォーター"],
+    "note": null,
+    "images": [],
+    "lat": 35.115053,
+    "lng": 136.925223,
+    "description": "名古屋市営地下鉄堀田駅から徒歩5分の完全予約制個室サウナ。全5室の完全個室で、水風呂温度は14〜18度で調整可能。セルフロウリュにも対応し、無料駐車場10台完備でアクセスも便利。",
+    "saunakoCommentShort": "全5室完全個室で水風呂温度もリクエストできるよ!",
+    "saunakoCommentLong": "名古屋で5室もある完全個室サウナはなかなかレアかも! 水風呂は14〜18度でリクエストすれば調整してくれるし、セルフロウリュもできるから自分好みのサウナタイムが楽しめるよ。無料駐車場もあるから車で行けるのも嬉しいポイントだね!",
+    "updatedAt": "2026-02-21",
+    "plans": [
+      {
+        "name": "ノーマルルーム 90分 1名",
+        "price": 4100,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "ノーマルルーム 90分 2名",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ノーマルルーム 120分 1名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ノーマルルーム 120分 2名",
+        "price": 8600,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 120分 1名",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "VIPルーム 120分 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 88,
+    "slug": "sauna-kuveta",
+    "name": "sauna KUVETA",
+    "prefecture": "tokyo",
+    "prefectureLabel": "東京都",
+    "city": "小金井市",
+    "area": "多摩",
+    "address": "東京都小金井市本町1-17-10",
+    "nearestStation": "武蔵小金井駅",
+    "walkMinutes": 2,
+    "priceMin": 3800,
+    "duration": 60,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "19",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "平日10:00-24:00 / 土日祝9:00-23:00",
+    "holidays": "基本無休",
+    "website": "https://sauna-kuveta.com/",
+    "phone": "080-2304-1201",
+    "bookingUrl": "https://sauna-kuveta.com/select.php",
+    "amenities": ["タオル", "バスタオル", "シャンプー", "コンディショナー", "ボディソープ", "スキンケア", "ドライヤー", "サウナハット", "Bluetoothスピーカー", "ミネラルウォーター"],
+    "note": "会員制度あり（年会費15,070円で1回1,000円引き）。18歳以上限定",
+    "images": [],
+    "lat": 35.700754,
+    "lng": 139.508415,
+    "description": "JR武蔵小金井駅南口から徒歩2分のプライベートサウナ。2タイプの個室があり、Vettaルームはベランダ付きで外気浴も可能。セルフアロマロウリュ無料、スマートロックで完全セルフチェックイン。",
+    "saunakoCommentShort": "駅徒歩2分で外気浴もできる個室サウナ!",
+    "saunakoCommentLong": "武蔵小金井の駅チカ個室サウナだよ! Vettaルームにはベランダがあって外気浴もできるのが嬉しいポイント。アロマロウリュも無料で使えるし、Bluetoothスピーカーで好きな音楽かけながら整えるのも最高かも!",
+    "updatedAt": "2026-02-21",
+    "plans": [
+      {
+        "name": "Kulta 60分 1名",
+        "price": 3800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "Kulta 90分 2名",
+        "price": 8800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Vetta 60分 1名",
+        "price": 4800,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "Vetta 90分 2名",
+        "price": 9800,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 89,
+    "slug": "sou-sauna",
+    "name": "想 -SOU-",
+    "prefecture": "osaka",
+    "prefectureLabel": "大阪府",
+    "city": "大阪市",
+    "area": "ミナミ",
+    "address": "大阪府大阪市中央区島之内1丁目5-11",
+    "nearestStation": "松屋町駅",
+    "walkMinutes": 4,
+    "priceMin": 4500,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14.5-15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00-23:00",
+    "holidays": "不定休",
+    "website": "https://sou-sauna.jp/",
+    "phone": "06-6226-8663",
+    "bookingUrl": "https://sou-sauna.hacomono.jp/reserve/schedule/1/1/",
+    "amenities": ["タオル", "バスタオル", "シャンプー", "コンディショナー", "ボディソープ", "洗顔", "スキンケア", "ドライヤー", "ヘアアイロン", "サウナマット", "ミネラルウォーター"],
+    "note": "水着着用で男女混合利用可。ホテル併設施設",
+    "images": [],
+    "lat": 34.6736258,
+    "lng": 135.5101876,
+    "description": "松屋町駅から徒歩4分、ホテルの一角に併設された完全予約制プライベートサウナ。2室の個室があり、HARVIAストーブでのセルフロウリュに対応。水風呂は14.5〜15度で深さ最大120cm。オリジナルヒーリングミュージックが流れる癒し空間。",
+    "saunakoCommentShort": "水風呂深さ120cmでしっかり浸かれるのが最高!",
+    "saunakoCommentLong": "大阪ミナミの隠れ家的プライベートサウナだよ! 縁ノ間の水風呂は深さ120cmで全身しっかり浸かれるのが気持ちいい。HARVIAストーブのセルフロウリュも本格的だし、オリジナルのヒーリングミュージックが流れてて雰囲気もすごく良いかも!",
+    "updatedAt": "2026-02-21",
+    "plans": [
+      {
+        "name": "流ノ間 90分 1名",
+        "price": 4500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "流ノ間 90分 2名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "縁ノ間 90分 1-2名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "縁ノ間 90分 3名",
+        "price": 14000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "縁ノ間 90分 4名",
+        "price": 16000,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 90,
+    "slug": "takanawa-saunas",
+    "name": "高輪SAUNAS",
+    "prefecture": "tokyo",
+    "prefectureLabel": "東京都",
+    "city": "港区",
+    "area": "新宿・港・銀座",
+    "address": "東京都港区高輪2-21-21 ニュウマン高輪 North 5F",
+    "nearestStation": "高輪ゲートウェイ駅",
+    "walkMinutes": 1,
+    "priceMin": 2800,
+    "duration": 80,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-16",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "11:00-26:00",
+    "holidays": "不定休",
+    "website": "https://saunas-saunas.com/takanawa/",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": ["タオル", "バスタオル", "シャンプー", "コンディショナー", "ボディソープ", "スキンケア", "ドライヤー", "イオンウォーター"],
+    "note": "プライベートサウナ「Huone」は4名まで利用可（料金・予約方法は後日公開予定）。共用サウナ9室を備える大型施設",
+    "images": [],
+    "lat": 35.6361074,
+    "lng": 139.7400215,
+    "description": "高輪ゲートウェイ駅直結のニュウマン高輪にオープンした都市型サウナリトリート。男女合計9室のサウナに加え、プライベートサウナ室「Huone」も完備。レストラン・ワークスペース・仮眠スペース併設。",
+    "saunakoCommentShort": "高輪ゲートウェイ駅直結の9室サウナリトリート!",
+    "saunakoCommentLong": "高輪ゲートウェイ駅から直結で雨に濡れずに行けるのが最高! 9室もサウナがあるから混雑しにくいし、プライベートサウナ「Huone」ならグループ貸切もできるよ。レストランや仮眠スペースも併設されてるから、一日中ゆっくり過ごせるかも!",
+    "updatedAt": "2026-02-21",
+    "plans": [
+      {
+        "name": "平日ショートプラン（男性）",
+        "price": 2800,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "平日スタンダード（男性）",
+        "price": 3700,
+        "duration": 240,
+        "capacity": 1
+      },
+      {
+        "name": "平日ショートプラン（女性）",
+        "price": 2500,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "平日スタンダード（女性）",
+        "price": 3200,
+        "duration": 240,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝スタンダード（男性）",
+        "price": 4400,
+        "duration": 240,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝スタンダード（女性）",
+        "price": 3900,
+        "duration": 240,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
   }
 ]
