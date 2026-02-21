@@ -22,31 +22,6 @@ for (let i = 0; i < args.length; i++) {
 const dataPath = path.resolve(__dirname, '..', 'data', 'facilities.json');
 const facilities = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
-// --- 特徴タグ生成 ---
-const featureLabels = {
-  waterBath: '水風呂',
-  selfLoyly: 'セルフロウリュ',
-  outdoorAir: '外気浴',
-  coupleOk: 'カップルOK',
-  bluetooth: 'Bluetooth',
-  wifi: 'Wi-Fi',
-};
-
-function buildFeatureText(features) {
-  const tags = [];
-  for (const [key, label] of Object.entries(featureLabels)) {
-    if (features[key] === true) {
-      tags.push(label);
-    }
-  }
-  return tags.join(' / ') || 'プライベート空間';
-}
-
-// --- 価格フォーマット ---
-function formatPrice(price) {
-  return price.toLocaleString('ja-JP');
-}
-
 // --- エリア名からハッシュタグ用テキスト生成 ---
 function areaHashtag(prefectureLabel) {
   return prefectureLabel
@@ -60,37 +35,31 @@ function generatePost(facility) {
   const {
     id,
     name,
-    nearestStation,
-    walkMinutes,
-    priceMin,
-    duration,
-    features,
+    saunakoCommentLong,
     saunakoCommentShort,
     prefectureLabel,
     bookingUrl,
     website,
   } = facility;
 
-  const featureText = buildFeatureText(features);
   const area = areaHashtag(prefectureLabel);
   const officialUrl = bookingUrl || website || '';
+  const comment = saunakoCommentLong || saunakoCommentShort || '';
 
   const lines = [];
-  lines.push('【' + name + '】🧖‍♀️');
+  lines.push('【' + name + '】');
   lines.push('');
-  lines.push(saunakoCommentShort || '');
-  lines.push('');
-  lines.push('📍 ' + nearestStation + ' 徒歩' + walkMinutes + '分');
-  lines.push('💰 ' + formatPrice(priceMin) + '円～ / ' + duration + '分');
-  lines.push('🔥 ' + featureText);
+  lines.push(comment);
   lines.push('');
   lines.push('▶️ サウナ子で詳しく見る');
   lines.push('https://saunako.jp/facilities/' + id);
   if (officialUrl) {
     lines.push('');
-    lines.push('🔗 公式サイト・予約はこちら');
+    lines.push('🔗 予約・公式サイト');
     lines.push(officialUrl);
   }
+  lines.push('');
+  lines.push('※画像は公式サイトよりお借りしています');
   lines.push('');
   lines.push('#個室サウナ #サウナ #サ活 #' + area + 'サウナ');
 
