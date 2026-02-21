@@ -838,7 +838,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/11-0.webp"
+      "/facilities/11-0.webp",
+      "/facilities/11-1.webp",
+      "/facilities/11-2.webp",
+      "/facilities/11-3.webp"
     ],
     "lat": 35.656673,
     "lng": 139.735092,
@@ -964,7 +967,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/12-0.webp"
+      "/facilities/12-0.webp",
+      "/facilities/12-1.webp",
+      "/facilities/12-2.webp",
+      "/facilities/12-3.webp"
     ],
     "lat": 35.656673,
     "lng": 139.735092,
@@ -1048,7 +1054,10 @@
     ],
     "note": "会員制",
     "images": [
-      "/facilities/13-0.webp"
+      "/facilities/13-0.webp",
+      "/facilities/13-1.webp",
+      "/facilities/13-2.webp",
+      "/facilities/13-3.webp"
     ],
     "lat": 35.656673,
     "lng": 139.735092,
@@ -1138,7 +1147,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/14-0.webp"
+      "/facilities/14-0.webp",
+      "/facilities/14-1.webp",
+      "/facilities/14-2.webp",
+      "/facilities/14-3.webp"
     ],
     "lat": 35.656673,
     "lng": 139.735092,
@@ -1210,7 +1222,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/15-0.webp"
+      "/facilities/15-0.webp",
+      "/facilities/15-1.webp",
+      "/facilities/15-2.webp",
+      "/facilities/15-3.webp"
     ],
     "lat": 35.669693,
     "lng": 139.725235,
@@ -1282,7 +1297,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/16-0.webp"
+      "/facilities/16-0.webp",
+      "/facilities/16-1.webp",
+      "/facilities/16-2.webp",
+      "/facilities/16-3.webp"
     ],
     "lat": 35.648743,
     "lng": 139.755447,
@@ -1366,7 +1384,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/17-0.webp"
+      "/facilities/17-0.webp",
+      "/facilities/17-1.webp",
+      "/facilities/17-2.webp",
+      "/facilities/17-3.webp"
     ],
     "lat": 35.667927,
     "lng": 139.758179,
@@ -1426,7 +1447,10 @@
     ],
     "note": "温度指定可",
     "images": [
-      "/facilities/18-0.webp"
+      "/facilities/18-0.webp",
+      "/facilities/18-1.webp",
+      "/facilities/18-2.webp",
+      "/facilities/18-3.webp"
     ],
     "lat": 35.695393,
     "lng": 139.701294,
@@ -1504,7 +1528,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/19-0.webp"
+      "/facilities/19-0.webp",
+      "/facilities/19-1.webp",
+      "/facilities/19-2.webp",
+      "/facilities/19-3.webp"
     ],
     "lat": 35.695393,
     "lng": 139.701294,
@@ -1588,7 +1615,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/20-0.webp"
+      "/facilities/20-0.webp",
+      "/facilities/20-1.webp",
+      "/facilities/20-2.webp",
+      "/facilities/20-3.webp"
     ],
     "lat": 35.690384,
     "lng": 139.697495,
