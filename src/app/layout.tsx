@@ -5,6 +5,7 @@ import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { ADSENSE_CLIENT_ID, isAdSenseEnabled } from "@/lib/adsense";
 import dynamic from "next/dynamic";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import WebVitalsReporter from "@/components/WebVitalsReporter";
 const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBanner"));
 import "./globals.css";
 
@@ -126,6 +127,7 @@ export default function RootLayout({
         />
         {children}
         <AnalyticsTracker />
+        <WebVitalsReporter />
         <CookieConsentBanner />
       </body>
     </html>
