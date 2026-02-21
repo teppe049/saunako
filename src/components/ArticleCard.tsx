@@ -6,34 +6,22 @@ interface ArticleCardProps {
   article: ArticleMeta;
 }
 
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  'area-guide': 'from-blue-400 to-blue-600',
-  beginners: 'from-emerald-400 to-emerald-600',
-  ranking: 'from-orange-400 to-orange-600',
-  column: 'from-purple-400 to-purple-600',
-};
-
 export default function ArticleCard({ article }: ArticleCardProps) {
-  const categoryLabel =
-    ARTICLE_CATEGORIES.find((c) => c.slug === article.category)?.label || article.category;
-  const gradient = CATEGORY_GRADIENTS[article.category] || 'from-gray-400 to-gray-600';
+  const categoryLabel = ARTICLE_CATEGORIES.find((c) => c.slug === article.category)?.label || article.category;
 
   return (
     <Link
       href={`/articles/${article.slug}`}
       className="block bg-surface border border-border rounded-xl hover:shadow-md transition-shadow overflow-hidden"
     >
-      <div
-        className={`relative h-44 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-2 px-4`}
-      >
+      <div className="relative h-44 bg-gray-200">
         <Image
-          src="/saunako-avatar.webp"
-          alt="サウナ子"
-          width={64}
-          height={64}
-          className="rounded-full"
+          src={article.thumbnail}
+          alt={article.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
         />
-        <p className="text-white text-sm font-bold text-center line-clamp-2">{article.title}</p>
         <span className="absolute top-3 left-3 bg-saunako text-white text-xs font-medium px-2.5 py-1 rounded-full">
           {categoryLabel}
         </span>
