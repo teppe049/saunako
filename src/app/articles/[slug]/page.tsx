@@ -5,6 +5,7 @@ import { getArticleBySlug, getAllSlugs, getArticlesByCategory, extractHeadings, 
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
 import ShareButton from '@/components/ShareButton';
+import TableOfContents from '@/components/TableOfContents';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -154,24 +155,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
           {/* Sidebar - TOC */}
           {headings.length > 0 && (
-            <aside className="hidden md:block w-64 flex-shrink-0">
-              <div className="sticky top-6 bg-surface rounded-xl border border-border p-5">
-                <h4 className="font-bold text-text-primary text-sm mb-3">目次</h4>
-                <nav className="space-y-2">
-                  {headings.map((heading) => (
-                    <a
-                      key={heading.id}
-                      href={`#${heading.id}`}
-                      className={`block text-sm text-text-secondary hover:text-primary transition-colors ${
-                        heading.level === 3 ? 'pl-4' : ''
-                      }`}
-                    >
-                      {heading.text}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </aside>
+            <TableOfContents headings={headings} />
           )}
         </div>
 
