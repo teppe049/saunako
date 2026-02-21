@@ -34,7 +34,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/1-0.webp"
+      "/facilities/1-0.webp",
+      "/facilities/1-1.webp",
+      "/facilities/1-2.webp",
+      "/facilities/1-3.webp"
     ],
     "lat": 35.69389,
     "lng": 139.753616,
@@ -88,7 +91,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/2-0.webp"
+      "/facilities/2-0.webp",
+      "/facilities/2-1.webp",
+      "/facilities/2-2.webp",
+      "/facilities/2-3.webp"
     ],
     "lat": 35.673634,
     "lng": 139.770294,
@@ -160,7 +166,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/3-0.webp"
+      "/facilities/3-0.webp",
+      "/facilities/3-1.webp",
+      "/facilities/3-2.webp",
+      "/facilities/3-3.webp"
     ],
     "lat": 35.673634,
     "lng": 139.770294,
@@ -256,7 +265,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/4-0.webp"
+      "/facilities/4-0.webp",
+      "/facilities/4-1.webp",
+      "/facilities/4-2.webp",
+      "/facilities/4-3.webp"
     ],
     "lat": 35.691647,
     "lng": 139.787033,
@@ -328,7 +340,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/5-0.webp"
+      "/facilities/5-0.webp",
+      "/facilities/5-1.webp",
+      "/facilities/5-2.webp",
+      "/facilities/5-3.webp"
     ],
     "lat": 35.668591,
     "lng": 139.74234,
@@ -412,7 +427,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/6-0.webp"
+      "/facilities/6-0.webp",
+      "/facilities/6-1.webp",
+      "/facilities/6-2.webp",
+      "/facilities/6-3.webp"
     ],
     "lat": 35.668591,
     "lng": 139.74234,
@@ -478,7 +496,10 @@
     ],
     "note": "朝ウナ2000円〜",
     "images": [
-      "/facilities/7-0.webp"
+      "/facilities/7-0.webp",
+      "/facilities/7-1.webp",
+      "/facilities/7-2.webp",
+      "/facilities/7-3.webp"
     ],
     "lat": 35.668591,
     "lng": 139.74234,
@@ -610,7 +631,10 @@
     ],
     "note": "4名18000円〜",
     "images": [
-      "/facilities/8-0.webp"
+      "/facilities/8-0.webp",
+      "/facilities/8-1.webp",
+      "/facilities/8-2.webp",
+      "/facilities/8-3.webp"
     ],
     "lat": 35.665062,
     "lng": 139.740799,
@@ -676,7 +700,10 @@
     ],
     "note": "温泉付き",
     "images": [
-      "/facilities/9-0.webp"
+      "/facilities/9-0.webp",
+      "/facilities/9-1.webp",
+      "/facilities/9-2.webp",
+      "/facilities/9-3.webp"
     ],
     "lat": 35.665062,
     "lng": 139.740799,
@@ -741,7 +768,12 @@
       "ボディソープ"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "/facilities/10-0.webp",
+      "/facilities/10-1.webp",
+      "/facilities/10-2.webp",
+      "/facilities/10-3.webp"
+    ],
     "lat": 35.661224,
     "lng": 139.725357,
     "description": "西麻布に位置する朝7時半オープンのプライベートサウナ。15度の水風呂とセルフロウリュを完備し、3,900円から60分利用できる。2名までの少人数向けで、出勤前の朝サウナにも対応する営業時間が特徴。",
