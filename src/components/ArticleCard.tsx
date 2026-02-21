@@ -25,6 +25,11 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <span className="absolute top-3 left-3 bg-saunako text-white text-xs font-medium px-2.5 py-1 rounded-full">
           {categoryLabel}
         </span>
+        {!article.published && (
+          <span className="absolute top-3 right-3 bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+            DRAFT
+          </span>
+        )}
       </div>
       <div className="p-4">
         <h3 className="font-bold text-text-primary mb-2 line-clamp-2">{article.title}</h3>

@@ -16,6 +16,8 @@ function getArticleFiles(): string[] {
     .filter((file) => file.endsWith('.mdx'));
 }
 
+const isDev = process.env.NODE_ENV === 'development';
+
 function parseArticleMeta(slug: string, content: string, data: Record<string, unknown>): ArticleMeta {
   const { minutes } = readingTime(content);
   return {
@@ -30,6 +32,7 @@ function parseArticleMeta(slug: string, content: string, data: Record<string, un
     author: (data.author as string) || 'サウナ子',
     facilityIds: (data.facilityIds as number[]) || [],
     readingTime: Math.ceil(minutes),
+    published: data.published !== false,
   };
 }
 
@@ -41,9 +44,11 @@ export function getAllArticles(): ArticleMeta[] {
     const { data, content } = matter(raw);
     return parseArticleMeta(slug, content, data);
   });
-  return articles.sort(
+  const sorted = articles.sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
+  if (isDev) return sorted;
+  return sorted.filter((a) => a.published);
 }
 
 export async function getArticleBySlug(slug: string) {
@@ -53,6 +58,8 @@ export async function getArticleBySlug(slug: string) {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(raw);
   const meta = parseArticleMeta(slug, content, data);
+
+  if (!isDev && !meta.published) return null;
 
   const { content: compiledContent } = await compileMDX({
     source: content,
@@ -76,7 +83,10 @@ export function getArticlesByFacilityId(facilityId: number): ArticleMeta[] {
 }
 
 export function getAllSlugs(): string[] {
-  return getArticleFiles().map((file) => file.replace(/\.mdx$/, ''));
+  if (isDev) {
+    return getArticleFiles().map((file) => file.replace(/\.mdx$/, ''));
+  }
+  return getAllArticles().map((a) => a.slug);
 }
 
 export function getAllTags(): string[] {

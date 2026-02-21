@@ -10,6 +10,7 @@ export interface ArticleMeta {
   author: string;
   facilityIds: number[];
   readingTime: number;
+  published: boolean;
 }
 
 export const ARTICLE_CATEGORIES = [

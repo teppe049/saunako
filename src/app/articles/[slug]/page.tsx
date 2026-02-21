@@ -140,9 +140,16 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
         {/* Article Header */}
         <div className="bg-surface rounded-xl border border-border p-6 md:p-8 mb-6">
-          <span className="inline-block bg-saunako text-white text-xs font-medium px-2.5 py-1 rounded-full mb-4">
-            {categoryLabel}
-          </span>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="inline-block bg-saunako text-white text-xs font-medium px-2.5 py-1 rounded-full">
+              {categoryLabel}
+            </span>
+            {!meta.published && (
+              <span className="inline-block bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                DRAFT
+              </span>
+            )}
+          </div>
           <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-tight">
             {meta.title}
           </h1>
