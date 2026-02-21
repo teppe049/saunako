@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
-import { getAllArticles } from '@/lib/articles'
+import { getAllArticles, getAllTags } from '@/lib/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://saunako.jp'
@@ -109,5 +109,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...areaPages, ...subAreaPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages]
+  // タグページ
+  const tags = getAllTags()
+  const tagPages: MetadataRoute.Sitemap = tags.map((tag) => ({
+    url: `${baseUrl}/articles/tag/${encodeURIComponent(tag)}`,
+    lastModified: latestArticleDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }))
+
+  return [...staticPages, ...areaPages, ...subAreaPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
 }

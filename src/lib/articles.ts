@@ -79,6 +79,17 @@ export function getAllSlugs(): string[] {
   return getArticleFiles().map((file) => file.replace(/\.mdx$/, ''));
 }
 
+export function getAllTags(): string[] {
+  const articles = getAllArticles();
+  const tagSet = new Set<string>();
+  articles.forEach((a) => a.tags.forEach((t) => tagSet.add(t)));
+  return Array.from(tagSet).sort();
+}
+
+export function getArticlesByTag(tag: string): ArticleMeta[] {
+  return getAllArticles().filter((a) => a.tags.includes(tag));
+}
+
 export function getAllCategories() {
   return ARTICLE_CATEGORIES;
 }
