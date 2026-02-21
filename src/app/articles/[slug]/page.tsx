@@ -2,8 +2,10 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getArticleBySlug, getAllSlugs, getArticlesByCategory, extractHeadings, getRawContent } from '@/lib/articles';
+import { getFacilityById } from '@/lib/facilities';
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
+import FacilityCard from '@/components/FacilityCard';
 import ShareButton from '@/components/ShareButton';
 import TableOfContents from '@/components/TableOfContents';
 
@@ -67,6 +69,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   const rawContent = getRawContent(slug);
   const headings = rawContent ? extractHeadings(rawContent) : [];
+
+  const relatedFacilities = (meta.facilityIds || [])
+    .map((id) => getFacilityById(id))
+    .filter((f): f is NonNullable<typeof f> => f != null);
 
   const relatedArticles = getArticlesByCategory(meta.category)
     .filter((a) => a.slug !== meta.slug)
@@ -181,6 +187,22 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           <span className="text-sm font-medium text-text-primary">シェアする</span>
           <ShareButton name={meta.title} url={`/articles/${meta.slug}`} />
         </div>
+
+        {/* この記事で紹介した施設 */}
+        {relatedFacilities.length > 0 && (
+          <section className="mt-10">
+            <h2 className="text-lg md:text-xl font-bold text-text-primary mb-4">
+              この記事で紹介した施設
+            </h2>
+            <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-4 md:overflow-x-visible md:pb-0 scrollbar-hide">
+              {relatedFacilities.map((facility, i) => (
+                <div key={facility.id} className="min-w-[260px] md:min-w-0 flex-shrink-0 md:flex-shrink">
+                  <FacilityCard facility={facility} index={i} showComment={false} />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (

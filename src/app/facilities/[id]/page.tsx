@@ -103,8 +103,10 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         '@type': 'LocalBusiness',
         '@id': `https://www.saunako.jp/facilities/${facility.id}#localbusiness`,
         name: facility.name,
+        description: facility.description,
         ...(facility.phone && { telephone: facility.phone }),
         ...(facility.website && { url: facility.website }),
+        ...(facility.website && { sameAs: [facility.website] }),
         ...(facility.images.length > 0 && { image: facility.images[0] }),
         address: {
           '@type': 'PostalAddress',
@@ -118,6 +120,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             latitude: facility.lat,
             longitude: facility.lng,
           },
+          hasMap: `https://www.google.com/maps?q=${facility.lat},${facility.lng}`,
         }),
         ...(facility.businessHours && facility.businessHours !== '不明' && {
           openingHours: facility.businessHours,

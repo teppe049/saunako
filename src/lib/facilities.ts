@@ -171,6 +171,15 @@ export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[
   });
 }
 
+export function getNewFacilities(limit: number = 6, days: number = 30): Facility[] {
+  const now = new Date();
+  const cutoff = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
+  return facilities
+    .filter((f) => f.openedAt && new Date(f.openedAt) >= cutoff)
+    .sort((a, b) => new Date(b.openedAt!).getTime() - new Date(a.openedAt!).getTime())
+    .slice(0, limit);
+}
+
 export function getRelatedFacilities(facility: Facility, limit: number = 6): { sameArea: Facility[]; similarPrice: Facility[] } {
   const sameArea = facilities
     .filter((f) => f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area)
