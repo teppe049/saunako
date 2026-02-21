@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { PREFECTURES, AREA_GROUPS, Facility } from '@/lib/types';
 import { getFacilitiesByArea, getAreaBySlug, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from '../AreaFilters';
@@ -351,6 +352,7 @@ export default async function SubAreaPage({ params }: PageProps) {
           />
         </Suspense>
       </main>
+      <Footer />
       <ScrollToTop />
     </div>
   );

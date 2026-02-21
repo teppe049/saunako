@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 
 export const metadata: Metadata = {
@@ -240,28 +240,7 @@ export default function PrivacyPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#1A1A1A] text-white py-6 md:py-8">
-        <div className="max-w-3xl mx-auto px-5 md:px-8 text-center">
-          <Link href="/" className="inline-flex items-center gap-2 mb-3">
-            <Image src="/saunako-avatar.webp" alt="サウナ子" width={28} height={28} className="w-7 h-7 rounded-full object-cover" />
-            <span className="font-bold text-sm text-white">サウナ子</span>
-          </Link>
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <a href="https://x.com/saunako_jp" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors" aria-label="X (Twitter)" data-track-click="sns_follow" data-track-service="x">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
-            </a>
-          </div>
-          <p className="text-[11px] text-[#757575] max-w-lg mx-auto mb-3 leading-relaxed">
-            当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。
-          </p>
-          <div className="flex items-center justify-center gap-4 mb-3">
-            <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
-          </div>
-          <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
       <ScrollToTop />
     </div>
   );

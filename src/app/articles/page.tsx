@@ -3,6 +3,7 @@ import { getAllArticles } from '@/lib/articles';
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'コラム | サウナ子',
@@ -77,6 +78,7 @@ export default function ArticlesListPage() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 }

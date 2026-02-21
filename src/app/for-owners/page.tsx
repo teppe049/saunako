@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import { getAllFacilities } from '@/lib/facilities';
 
@@ -194,6 +195,7 @@ export default function ForOwnersPage() {
         </section>
       </main>
 
+      <Footer />
       <ScrollToTop />
     </div>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import FavoritesView from '@/components/FavoritesView';
 import { getAllFacilities } from '@/lib/facilities';
 
@@ -19,6 +20,7 @@ export default function FavoritesPage() {
         <h1 className="text-xl md:text-2xl font-bold text-text-primary mb-6">お気に入り</h1>
         <FavoritesView allFacilities={allFacilities} />
       </main>
+      <Footer />
     </div>
   );
 }

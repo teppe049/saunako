@@ -4,6 +4,7 @@ import { getArticlesByCategory } from '@/lib/articles';
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -109,6 +110,7 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 }
