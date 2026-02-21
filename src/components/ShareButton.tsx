@@ -1,22 +1,35 @@
 'use client';
 
-export default function ShareButton({ name, url }: { name: string; url: string }) {
+interface ShareButtonProps {
+  name: string;
+  url: string;
+  area?: string;
+  priceMin?: number;
+}
+
+export default function ShareButton({ name, url, area, priceMin }: ShareButtonProps) {
+  const fullUrl = `https://saunako.jp${url}`;
+
   const handleShare = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: name, url });
+        await navigator.share({ title: name, url: fullUrl });
       } catch {
         // user cancelled
       }
     } else {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(fullUrl);
       alert('URLをコピーしました');
     }
   };
 
   const handleXShare = () => {
-    const text = encodeURIComponent(`${name} | サウナ子 - 個室サウナ検索 #サウナ子 #個室サウナ`);
-    const shareUrl = encodeURIComponent(url);
+    const details = [
+      area && `📍${area}`,
+      priceMin && priceMin > 0 && `💰${priceMin.toLocaleString()}円〜`,
+    ].filter(Boolean).join(' ');
+    const text = encodeURIComponent(`${name}${details ? `\n${details}` : ''}\n\n#サウナ子 #個室サウナ`);
+    const shareUrl = encodeURIComponent(fullUrl);
     window.open(
       `https://x.com/intent/tweet?text=${text}&url=${shareUrl}`,
       '_blank',
@@ -28,7 +41,7 @@ export default function ShareButton({ name, url }: { name: string; url: string }
     <div className="flex items-center gap-1.5">
       <button
         onClick={handleXShare}
-        className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
+        className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-3 py-2.5 md:px-3 md:py-2"
         style={{ background: '#F0F0F0' }}
         data-track-click="share_x"
         aria-label="Xでシェア"
@@ -38,7 +51,7 @@ export default function ShareButton({ name, url }: { name: string; url: string }
       </button>
       <button
         onClick={handleShare}
-        className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-2 py-1.5 md:px-3 md:py-2"
+        className="flex items-center gap-1 text-text-secondary hover:text-text-primary text-sm rounded-lg px-3 py-2.5 md:px-3 md:py-2"
         style={{ background: '#F0F0F0' }}
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

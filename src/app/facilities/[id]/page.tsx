@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${facility.name} | サウナ子`,
     description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。` : ''}${facility.priceMin > 0 ? `${facility.priceMin.toLocaleString()}円〜` : '料金要問合せ'}`,
     alternates: {
-      canonical: `https://saunako.jp/facilities/${facility.id}`,
+      canonical: `https://www.saunako.jp/facilities/${facility.id}`,
     },
     openGraph: {
       title: `${facility.name} | サウナ子`,
@@ -66,19 +66,19 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'TOP',
-        item: 'https://saunako.jp/',
+        item: 'https://www.saunako.jp/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: facility.prefectureLabel,
-        item: `https://saunako.jp/area/${facility.prefecture}`,
+        item: `https://www.saunako.jp/area/${facility.prefecture}`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: facility.name,
-        item: `https://saunako.jp/facilities/${facility.id}`,
+        item: `https://www.saunako.jp/facilities/${facility.id}`,
       },
     ],
   };
@@ -88,20 +88,20 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': `https://saunako.jp/facilities/${facility.id}#webpage`,
+        '@id': `https://www.saunako.jp/facilities/${facility.id}#webpage`,
         name: `${facility.name} | サウナ子`,
         description: facility.description,
-        url: `https://saunako.jp/facilities/${facility.id}`,
+        url: `https://www.saunako.jp/facilities/${facility.id}`,
         isPartOf: {
           '@type': 'WebSite',
           name: 'サウナ子',
-          url: 'https://saunako.jp',
+          url: 'https://www.saunako.jp',
         },
-        about: { '@id': `https://saunako.jp/facilities/${facility.id}#localbusiness` },
+        about: { '@id': `https://www.saunako.jp/facilities/${facility.id}#localbusiness` },
       },
       {
         '@type': 'LocalBusiness',
-        '@id': `https://saunako.jp/facilities/${facility.id}#localbusiness`,
+        '@id': `https://www.saunako.jp/facilities/${facility.id}#localbusiness`,
         name: facility.name,
         ...(facility.phone && { telephone: facility.phone }),
         ...(facility.website && { url: facility.website }),
@@ -169,7 +169,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           {/* 右: 共有ボタン + お気に入り */}
           <div className="flex items-center gap-2 md:gap-3">
             <FavoriteButton facilityId={facility.id} size="md" />
-            <ShareButton name={facility.name} url={`/facilities/${facility.id}`} />
+            <ShareButton name={facility.name} url={`/facilities/${facility.id}`} area={facility.area} priceMin={facility.priceMin} />
           </div>
         </div>
       </header>
@@ -602,15 +602,15 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
             </a>
           </div>
-          <p className="text-[11px] text-[#757575] max-w-lg mx-auto mb-3 leading-relaxed">
+          <p className="text-xs text-[#757575] max-w-lg mx-auto mb-3 leading-relaxed">
             当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
           </p>
           <div className="flex items-center justify-center gap-4 mb-3">
-            <Link href="/terms" className="text-[11px] text-[#757575] hover:text-white transition-colors">利用規約</Link>
-            <Link href="/privacy" className="text-[11px] text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-[11px] text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
+            <Link href="/terms" className="text-xs text-[#757575] hover:text-white transition-colors">利用規約</Link>
+            <Link href="/privacy" className="text-xs text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-xs text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
           </div>
-          <p className="text-[11px] text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
+          <p className="text-xs text-[#757575]">&copy; 2026 サウナ子 All rights reserved.</p>
         </div>
       </footer>
       <ScrollToTop />
