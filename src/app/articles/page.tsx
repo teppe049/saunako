@@ -6,13 +6,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'コラム | サウナ子',
+  title: '記事一覧 | サウナ子',
   description: 'サウナ子が厳選した個室サウナの情報、エリアガイド、初心者向けの入門記事をお届けします。',
   alternates: {
     canonical: 'https://www.saunako.jp/articles',
   },
   openGraph: {
-    title: 'コラム | サウナ子',
+    title: '記事一覧 | サウナ子',
     description: 'サウナ子が厳選した個室サウナの情報、エリアガイド、初心者向けの入門記事をお届けします。',
   },
 };
@@ -25,7 +25,7 @@ export default function ArticlesListPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://www.saunako.jp/articles' },
+      { '@type': 'ListItem', position: 2, name: '記事一覧', item: 'https://www.saunako.jp/articles' },
     ],
   };
 
@@ -41,10 +41,10 @@ export default function ArticlesListPage() {
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
-          <span className="text-text-primary">コラム</span>
+          <span className="text-text-primary">記事一覧</span>
         </nav>
 
-        <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-6">コラム</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-6">記事一覧</h1>
 
         {/* Category Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2 mb-6 scrollbar-hide">

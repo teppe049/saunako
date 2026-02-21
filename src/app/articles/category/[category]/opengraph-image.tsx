@@ -101,7 +101,7 @@ export default async function OGImage({ params }: { params: Promise<{ category: 
               display: 'flex',
             }}
           >
-            サウナ子コラム
+            サウナ子の記事
           </div>
         </div>
 

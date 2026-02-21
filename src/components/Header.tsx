@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link href="/articles" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
             <BookOpen size={18} />
-            <span className="text-sm font-medium hidden md:inline">コラム</span>
+            <span className="text-sm font-medium hidden md:inline">記事</span>
           </Link>
           <Link href="/favorites" className="flex items-center gap-1.5 text-text-secondary hover:text-saunako transition-colors">
             <Heart size={18} />

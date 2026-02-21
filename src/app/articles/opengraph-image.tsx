@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
-export const alt = 'コラム | サウナ子';
+export const alt = '記事一覧 | サウナ子';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -80,7 +80,7 @@ export default async function OGImage() {
               display: 'flex',
             }}
           >
-            コラム
+            記事一覧
           </div>
 
           {/* Subtitle */}

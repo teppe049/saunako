@@ -43,7 +43,7 @@ export default async function TagPage({ params }: PageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'TOP', item: 'https://www.saunako.jp/' },
-      { '@type': 'ListItem', position: 2, name: 'コラム', item: 'https://www.saunako.jp/articles' },
+      { '@type': 'ListItem', position: 2, name: '記事一覧', item: 'https://www.saunako.jp/articles' },
       { '@type': 'ListItem', position: 3, name: tag, item: `https://www.saunako.jp/articles/tag/${encodeURIComponent(tag)}` },
     ],
   };
@@ -59,7 +59,7 @@ export default async function TagPage({ params }: PageProps) {
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
-          <Link href="/articles" className="hover:text-primary transition-colors">コラム</Link>
+          <Link href="/articles" className="hover:text-primary transition-colors">記事一覧</Link>
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{tag}</span>
         </nav>

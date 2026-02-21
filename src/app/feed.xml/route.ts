@@ -30,8 +30,8 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>サウナ子 | 個室サウナコラム</title>
-    <description>個室・プライベートサウナに関する最新コラム・ガイド記事</description>
+    <title>サウナ子 | 個室サウナの記事</title>
+    <description>個室・プライベートサウナに関する最新記事・ガイド</description>
     <link>https://www.saunako.jp/articles</link>
     <language>ja</language>
     <atom:link href="https://www.saunako.jp/feed.xml" rel="self" type="application/rss+xml" />

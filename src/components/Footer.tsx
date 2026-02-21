@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link href="/search" className="text-xs text-[#757575] hover:text-white transition-colors">施設を探す</Link>
-            <Link href="/articles" className="text-xs text-[#757575] hover:text-white transition-colors">コラム</Link>
+            <Link href="/articles" className="text-xs text-[#757575] hover:text-white transition-colors">記事</Link>
             <Link href="/terms" className="text-xs text-[#757575] hover:text-white transition-colors">利用規約</Link>
             <Link href="/privacy" className="text-xs text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-xs text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
@@ -66,7 +66,7 @@ export default function Footer() {
               <h3 className="text-[13px] font-semibold text-white mb-4">サービス</h3>
               <ul className="space-y-3">
                 <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
-                <li><Link href="/articles" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">コラム</Link></li>
+                <li><Link href="/articles" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">記事</Link></li>
                 <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
               </ul>
             </div>
