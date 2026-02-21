@@ -20,42 +20,22 @@ export const metadata: Metadata = {
 
 const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header';
 
-const valueProps = [
-  {
-    emoji: '\u{1F4B0}',
-    title: '完全無料',
-    description: '掲載料・手数料は一切なし。初期費用も月額費用もかかりません。',
-  },
-  {
-    emoji: '\u{1F3AF}',
-    title: '集客効果',
-    description: 'サウナ好きユーザーへの露出を高め、施設の認知度アップに貢献します。',
-  },
-  {
-    emoji: '\u{1F4DD}',
-    title: 'かんたん掲載',
-    description: 'フォームから施設情報を送信するだけ。面倒な手続きは不要です。',
-  },
-];
-
-const steps = [
-  { number: 1, title: 'フォームから施設情報を送信', description: '施設名・住所・料金などの基本情報をフォームからお送りください。' },
-  { number: 2, title: 'サウナ子チームが掲載準備', description: 'いただいた情報をもとに、掲載ページを作成します。' },
-  { number: 3, title: 'サイトに掲載開始', description: '準備が整い次第、サウナ子に施設が掲載されます。' },
-];
-
 const ownerFaqs = [
   {
-    q: '掲載は本当に無料？',
-    a: 'はい、完全無料。費用は一切なし。',
+    q: '費用はかかりますか？',
+    a: '掲載料・手数料ともに無料です。今後も課金する予定はありません。',
   },
   {
-    q: '掲載までどのくらいかかる？',
-    a: '通常1週間以内に掲載。',
+    q: '掲載までどのくらいかかりますか？',
+    a: '施設情報をいただいてから、通常1週間以内に掲載します。混み合っている場合はもう少しお時間をいただくこともあります。',
   },
   {
-    q: '掲載内容の変更はできる？',
-    a: 'もちろん。お問い合わせフォームから連絡してね。',
+    q: '掲載後に情報を修正できますか？',
+    a: 'はい。料金改定や営業時間の変更など、いつでもフォームからご連絡ください。',
+  },
+  {
+    q: '掲載を取りやめたい場合は？',
+    a: 'ご連絡いただければすぐに削除します。',
   },
 ];
 
@@ -96,7 +76,7 @@ export default function ForOwnersPage() {
       />
       <Header />
 
-      <main className="max-w-3xl mx-auto px-5 md:px-8 py-8 md:py-16">
+      <main className="max-w-2xl mx-auto px-5 md:px-8 py-8 md:py-16">
         <nav className="text-sm text-text-secondary mb-6">
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
@@ -104,58 +84,52 @@ export default function ForOwnersPage() {
         </nav>
 
         {/* Hero */}
-        <section className="mb-12">
+        <section className="mb-10">
           <h1 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
-            施設オーナー様へ
+            施設掲載のご案内
           </h1>
-          <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-            サウナ子で、あなたの施設をもっと多くのサウナファンに届けませんか？
-          </p>
-        </section>
-
-        {/* Value Proposition */}
-        <section className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {valueProps.map((prop) => (
-              <div key={prop.title} className="bg-surface border border-border rounded-xl p-5 md:p-6 text-center">
-                <span className="text-3xl mb-3 block">{prop.emoji}</span>
-                <h3 className="text-lg font-bold text-text-primary mb-2">{prop.title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">{prop.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* How it works */}
-        <section className="mb-12">
-          <h2 className="text-lg md:text-xl font-bold text-text-primary mb-6">掲載までの流れ</h2>
-          <div className="space-y-4">
-            {steps.map((step) => (
-              <div key={step.number} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-saunako text-white flex items-center justify-center font-bold text-sm">
-                  {step.number}
-                </div>
-                <div>
-                  <h3 className="font-bold text-text-primary mb-1">{step.title}</h3>
-                  <p className="text-sm text-text-secondary">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Stats */}
-        <section className="mb-12">
-          <div className="bg-saunako-bg border border-saunako-border rounded-xl p-6 text-center">
-            <p className="text-text-primary text-base md:text-lg">
-              現在<span className="text-saunako font-bold text-2xl md:text-3xl mx-1">{facilityCount}</span>施設を掲載中
+          <div className="text-sm md:text-base text-text-secondary leading-relaxed space-y-3">
+            <p>
+              サウナ子は個室サウナ・プライベートサウナに特化した検索サイトです。
+              現在 <span className="font-bold text-text-primary">{facilityCount}施設</span> を掲載しています。
+            </p>
+            <p>
+              掲載は無料です。費用は一切かかりません。
             </p>
           </div>
         </section>
 
+        {/* How it works */}
+        <section className="mb-10">
+          <h2 className="text-lg font-bold text-text-primary mb-4">掲載までの流れ</h2>
+          <div className="bg-surface border border-border rounded-xl divide-y divide-border">
+            <div className="flex gap-4 items-start p-5">
+              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-saunako text-white flex items-center justify-center font-bold text-xs">1</span>
+              <div>
+                <p className="text-text-primary font-medium">下記フォームから施設情報を送信</p>
+                <p className="text-sm text-text-secondary mt-1">施設名・住所・料金・営業時間などをお送りください。</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start p-5">
+              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-saunako text-white flex items-center justify-center font-bold text-xs">2</span>
+              <div>
+                <p className="text-text-primary font-medium">掲載ページを作成</p>
+                <p className="text-sm text-text-secondary mt-1">いただいた情報をもとに、1週間以内を目安にページを作成します。</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start p-5">
+              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-saunako text-white flex items-center justify-center font-bold text-xs">3</span>
+              <div>
+                <p className="text-text-primary font-medium">掲載開始</p>
+                <p className="text-sm text-text-secondary mt-1">検索結果・エリア別ページ・施設詳細ページに掲載されます。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
-        <section className="mb-12">
-          <h2 className="text-lg md:text-xl font-bold text-text-primary mb-4">よくある質問</h2>
+        <section className="mb-10">
+          <h2 className="text-lg font-bold text-text-primary mb-4">よくある質問</h2>
           <div className="space-y-3">
             {ownerFaqs.map((item) => (
               <details
@@ -187,11 +161,11 @@ export default function ForOwnersPage() {
             href={CONTACT_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-saunako text-white font-bold text-base md:text-lg px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+            className="inline-block bg-saunako text-white font-bold text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+            data-track-click="for-owners-cta"
           >
-            無料で施設を掲載する
+            掲載を申し込む（無料）
           </a>
-          <p className="text-xs text-text-tertiary mt-3">掲載料・手数料は一切かかりません</p>
         </section>
       </main>
 
