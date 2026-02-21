@@ -1,6 +1,8 @@
 'use client';
 
 import { useCallback, useState, useEffect, useRef } from 'react';
+import 'leaflet/dist/leaflet.css';
+import './leaflet-custom.css';
 import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
