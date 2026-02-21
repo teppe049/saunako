@@ -1700,7 +1700,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/21-0.webp"
+      "/facilities/21-0.webp",
+      "/facilities/21-1.webp",
+      "/facilities/21-2.webp",
+      "/facilities/21-3.webp"
     ],
     "lat": 35.699635,
     "lng": 139.741928,
@@ -1796,7 +1799,10 @@
     ],
     "note": null,
     "images": [
-      "/facilities/22-0.webp"
+      "/facilities/22-0.webp",
+      "/facilities/22-1.webp",
+      "/facilities/22-2.webp",
+      "/facilities/22-3.webp"
     ],
     "lat": 35.66367,
     "lng": 139.697723,
@@ -1866,7 +1872,10 @@
     ],
     "note": "霧宙ミスト",
     "images": [
-      "/facilities/24-0.webp"
+      "/facilities/24-0.webp",
+      "/facilities/24-1.webp",
+      "/facilities/24-2.webp",
+      "/facilities/24-3.webp"
     ],
     "lat": 35.694107,
     "lng": 139.789856,
@@ -1970,7 +1979,10 @@
     "amenities": [],
     "note": "都内最安級",
     "images": [
-      "/facilities/25-0.webp"
+      "/facilities/25-0.webp",
+      "/facilities/25-1.webp",
+      "/facilities/25-2.webp",
+      "/facilities/25-3.webp"
     ],
     "lat": 35.641197,
     "lng": 139.671494,
@@ -2096,7 +2108,10 @@
     ],
     "note": "屋上ルーフトップ",
     "images": [
-      "/facilities/26-0.webp"
+      "/facilities/26-0.webp",
+      "/facilities/26-1.webp",
+      "/facilities/26-2.webp",
+      "/facilities/26-3.webp"
     ],
     "lat": 34.668533,
     "lng": 135.503204,
@@ -2180,7 +2195,10 @@
     ],
     "note": "ドリンク無料",
     "images": [
-      "/facilities/27-0.webp"
+      "/facilities/27-0.webp",
+      "/facilities/27-1.webp",
+      "/facilities/27-2.webp",
+      "/facilities/27-3.webp"
     ],
     "lat": 34.666924,
     "lng": 135.507324,
@@ -2248,7 +2266,10 @@
     "amenities": [],
     "note": "男性専用ラグジュアリー",
     "images": [
-      "/facilities/28-0.webp"
+      "/facilities/28-0.webp",
+      "/facilities/28-1.webp",
+      "/facilities/28-2.webp",
+      "/facilities/28-3.webp"
     ],
     "lat": 34.706799,
     "lng": 135.499542,
@@ -2308,7 +2329,10 @@
     ],
     "note": "リピート5000円",
     "images": [
-      "/facilities/29-0.webp"
+      "/facilities/29-0.webp",
+      "/facilities/29-1.webp",
+      "/facilities/29-2.webp",
+      "/facilities/29-3.webp"
     ],
     "lat": 34.700012,
     "lng": 135.497726,
@@ -2382,7 +2406,10 @@
     "amenities": [],
     "note": "会員制/ビジター可",
     "images": [
-      "/facilities/30-0.webp"
+      "/facilities/30-0.webp",
+      "/facilities/30-1.webp",
+      "/facilities/30-2.webp",
+      "/facilities/30-3.webp"
     ],
     "lat": 34.689423,
     "lng": 135.508102,
