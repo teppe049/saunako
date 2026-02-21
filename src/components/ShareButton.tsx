@@ -8,7 +8,7 @@ interface ShareButtonProps {
 }
 
 export default function ShareButton({ name, url, area, priceMin }: ShareButtonProps) {
-  const fullUrl = `https://saunako.jp${url}`;
+  const fullUrl = `https://www.saunako.jp${url}`;
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -25,10 +25,10 @@ export default function ShareButton({ name, url, area, priceMin }: ShareButtonPr
 
   const handleXShare = () => {
     const details = [
-      area && `📍${area}`,
-      priceMin && priceMin > 0 && `💰${priceMin.toLocaleString()}円〜`,
-    ].filter(Boolean).join(' ');
-    const text = encodeURIComponent(`${name}${details ? `\n${details}` : ''}\n\n#サウナ子 #個室サウナ`);
+      area,
+      priceMin && priceMin > 0 && `${priceMin.toLocaleString()}円〜`,
+    ].filter(Boolean).join('｜');
+    const text = encodeURIComponent(`${name}${details ? `（${details}）` : ''}\n\n#サウナ子 #個室サウナ`);
     const shareUrl = encodeURIComponent(fullUrl);
     window.open(
       `https://x.com/intent/tweet?text=${text}&url=${shareUrl}`,
