@@ -77,8 +77,8 @@ const siteJsonLd = {
       url: 'https://saunako.jp',
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://saunako.jp/search?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
+        target: 'https://saunako.jp/search?prefecture={prefecture}',
+        'query-input': 'required name=prefecture',
       },
     },
     {

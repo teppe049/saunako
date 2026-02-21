@@ -70,6 +70,7 @@ export default async function OGImage({ params }: { params: Promise<{ category: 
         >
           {/* Avatar */}
           <img
+            alt="サウナ子"
             src={avatarBase64}
             width={120}
             height={120}

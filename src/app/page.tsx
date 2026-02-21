@@ -36,6 +36,7 @@ export default function Home() {
                 alt="サウナ子"
                 width={40}
                 height={40}
+                priority
                 className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
               />
               <p className="text-sm text-text-primary leading-relaxed pt-2">
@@ -54,7 +55,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5 md:px-20">
           <div className="flex items-center justify-between mb-4 md:mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-text-primary">ピックアップ</h2>
-            <Link href="/search?prefecture=tokyo" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
+            <Link href="/search" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
               すべて見る →
             </Link>
           </div>

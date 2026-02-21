@@ -61,6 +61,7 @@ export default async function OGImage() {
         >
           {/* Avatar */}
           <img
+            alt="サウナ子"
             src={avatarBase64}
             width={120}
             height={120}
