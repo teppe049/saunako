@@ -244,9 +244,9 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         <div className="flex-1 md:hidden" />
 
         {/* Count Badge */}
-        <span className="text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
+        <h1 className="text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
           {filteredCount !== totalCount ? `${filteredCount}/${totalCount}` : filteredCount}件
-        </span>
+        </h1>
       </div>
 
       {/* === Row 2: Area chips + Sort/Duration === */}

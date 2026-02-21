@@ -37,6 +37,11 @@ export async function generateMetadata({ params }: PageProps) {
       authors: [meta.author],
       tags: meta.tags,
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
+    },
   };
 }
 
@@ -92,7 +97,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       '@type': 'WebPage',
       '@id': `https://saunako.jp/articles/${meta.slug}`,
     },
-    image: meta.thumbnail,
+    image: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://saunako.jp${meta.thumbnail}`,
   };
 
   return (
