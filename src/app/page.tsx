@@ -5,8 +5,15 @@ import Footer from '@/components/Footer';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import dynamic from 'next/dynamic';
 import { getPopularFacilities, getAllFacilities, getNewFacilities } from '@/lib/facilities';
+import type { Metadata } from 'next';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.saunako.jp/',
+  },
+};
 
 export default function Home() {
   const popularFacilities = getPopularFacilities(3);
