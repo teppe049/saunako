@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getArticleBySlug, getAllSlugs, getArticlesByCategory, extractHeadings, getRawContent } from '@/lib/articles';
+import { getArticleBySlug, getAllSlugs, getRelatedArticles, extractHeadings, getRawContent } from '@/lib/articles';
 import { getFacilityById } from '@/lib/facilities';
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
@@ -74,9 +74,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     .map((id) => getFacilityById(id))
     .filter((f): f is NonNullable<typeof f> => f != null);
 
-  const relatedArticles = getArticlesByCategory(meta.category)
-    .filter((a) => a.slug !== meta.slug)
-    .slice(0, 3);
+  const relatedArticles = getRelatedArticles(meta.slug, {
+    category: meta.category,
+    facilityIds: meta.facilityIds,
+  });
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -217,7 +218,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             <h2 className="text-lg md:text-xl font-bold text-text-primary mb-4">
               関連記事
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {relatedArticles.map((a) => (
                 <ArticleCard key={a.slug} article={a} />
               ))}

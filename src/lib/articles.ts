@@ -119,6 +119,28 @@ export function extractHeadings(raw: string): { id: string; text: string; level:
   return headings;
 }
 
+export function getRelatedArticles(
+  currentSlug: string,
+  currentMeta: { category: string; facilityIds: number[] },
+  limit = 6
+): ArticleMeta[] {
+  const all = getAllArticles().filter((a) => a.slug !== currentSlug);
+  const currentFacilityIds = new Set(currentMeta.facilityIds);
+
+  // Score each article: shared facilities count as relevance
+  const scored = all.map((article) => {
+    const sharedCount = article.facilityIds.filter((id) => currentFacilityIds.has(id)).length;
+    const sameCategory = article.category === currentMeta.category;
+    // Priority: shared facilities (x100) > same category (x10) > recency (base)
+    const score = sharedCount * 100 + (sameCategory ? 10 : 0);
+    return { article, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+
+  return scored.slice(0, limit).map((s) => s.article);
+}
+
 export function getRawContent(slug: string): string | null {
   const filePath = path.join(ARTICLES_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
