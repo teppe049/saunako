@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
+import { isFacilityClosed } from '@/lib/facilities';
 
 interface FacilityCardProps {
   facility: Facility;
@@ -27,9 +28,11 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
           sizes="(max-width: 768px) 100vw, 33vw"
           className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
         />
-        {facility.openedAt && (new Date().getTime() - new Date(facility.openedAt).getTime()) < 30 * 24 * 60 * 60 * 1000 && (
+        {isFacilityClosed(facility) ? (
+          <span className="absolute top-2 left-2 bg-gray-600 text-white text-xs font-bold px-2 py-0.5 rounded">閉店</span>
+        ) : facility.openedAt && (new Date().getTime() - new Date(facility.openedAt).getTime()) < 30 * 24 * 60 * 60 * 1000 ? (
           <span className="absolute top-2 left-2 bg-saunako text-white text-xs font-bold px-2 py-0.5 rounded">NEW</span>
-        )}
+        ) : null}
       </div>
 
       <div className="p-4">

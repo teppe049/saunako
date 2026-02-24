@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getFacilityById, getAllIds, getRelatedFacilities } from '@/lib/facilities';
+import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed } from '@/lib/facilities';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
@@ -187,6 +187,14 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{facility.name}</span>
         </nav>
+        {isFacilityClosed(facility) && (
+          <div className="max-w-[1400px] mx-auto px-4 md:px-0 mb-4">
+            <div className="bg-gray-100 border border-gray-300 rounded-lg p-4 text-center">
+              <p className="text-gray-600 font-bold">この施設は閉店しました</p>
+              <p className="text-gray-500 text-sm mt-1">掲載情報は閉店時点のものです。</p>
+            </div>
+          </div>
+        )}
         <div className="flex flex-col md:flex-row gap-0 md:gap-8 max-w-[1400px] mx-auto">
           {/* 左パネル: モバイル全幅、PC 880px固定 */}
           <div className="w-full md:w-[880px] md:flex-shrink-0">

@@ -3,6 +3,8 @@ import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
 import { getAllArticles, getAllTags } from '@/lib/articles'
 
+const activeFacilities = facilities.filter((f) => !f.closedAt)
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.saunako.jp'
 
@@ -71,8 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   )
 
-  // 全施設ページ
-  const facilityPages: MetadataRoute.Sitemap = facilities.map((facility) => ({
+  // 全施設ページ（閉店施設を除外）
+  const facilityPages: MetadataRoute.Sitemap = activeFacilities.map((facility) => ({
     url: `${baseUrl}/facilities/${facility.id}`,
     lastModified: new Date(facility.updatedAt),
     changeFrequency: 'weekly' as const,

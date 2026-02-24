@@ -3,7 +3,7 @@
 import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
-import { getTimeSlotTags } from '@/lib/facilities';
+import { getTimeSlotTags, isFacilityClosed } from '@/lib/facilities';
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
@@ -65,7 +65,12 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
           {/* Content */}
           <div className="flex-1 min-w-0 flex flex-col justify-center gap-1.5 md:gap-2">
             {/* Name */}
-            <h3 className="font-semibold text-base md:text-lg text-text-primary truncate">{facility.name}</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold text-base md:text-lg text-text-primary truncate">{facility.name}</h3>
+              {isFacilityClosed(facility) && (
+                <span className="flex-shrink-0 bg-gray-600 text-white text-[10px] md:text-xs font-bold px-1.5 py-0.5 rounded">閉店</span>
+              )}
+            </div>
 
             {/* Price */}
             <span className="text-base md:text-lg font-bold text-primary">
