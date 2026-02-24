@@ -73,6 +73,7 @@ export interface Facility {
   saunakoCommentLong: string;
   updatedAt: string;
   openedAt: string | null;
+  closedAt: string | null;
   plans: Plan[] | null;
   timeSlots: TimeSlotGroup[] | null;
 }

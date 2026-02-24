@@ -3,8 +3,18 @@ import facilitiesData from '../../data/facilities.json';
 
 const facilities: Facility[] = facilitiesData as Facility[];
 
+/** 営業中の施設のみ（closedAt が未来 or null） */
+function isOpen(f: Facility): boolean {
+  return !f.closedAt || new Date(f.closedAt) > new Date();
+}
+
+/** 施設が閉店済みかどうか判定 */
+export function isFacilityClosed(facility: Facility): boolean {
+  return !!facility.closedAt && new Date(facility.closedAt) <= new Date();
+}
+
 export function getAllFacilities(): Facility[] {
-  return facilities;
+  return facilities.filter(isOpen);
 }
 
 export function getFacilityById(id: number): Facility | undefined {
@@ -12,13 +22,14 @@ export function getFacilityById(id: number): Facility | undefined {
 }
 
 export function getFacilitiesByPrefecture(prefecture: string): Facility[] {
-  return facilities.filter((f) => f.prefecture === prefecture);
+  return facilities.filter((f) => isOpen(f) && f.prefecture === prefecture);
 }
 
 export function getPopularFacilities(limit: number = 6): Facility[] {
-  // 画像がある施設を優先的に返す
-  const withImages = facilities.filter((f) => f.images.length > 0);
-  const withoutImages = facilities.filter((f) => f.images.length === 0);
+  // 画像がある施設を優先的に返す（閉店済み除外）
+  const open = facilities.filter(isOpen);
+  const withImages = open.filter((f) => f.images.length > 0);
+  const withoutImages = open.filter((f) => f.images.length === 0);
   return [...withImages, ...withoutImages].slice(0, limit);
 }
 
@@ -63,7 +74,7 @@ export function getAreaBySlug(prefectureCode: string, areaSlug: string): AreaGro
 }
 
 export function getFacilitiesByArea(prefectureCode: string, areaLabel: string): Facility[] {
-  return facilities.filter((f) => f.prefecture === prefectureCode && f.area === areaLabel);
+  return facilities.filter((f) => isOpen(f) && f.prefecture === prefectureCode && f.area === areaLabel);
 }
 
 export function getAreaFacilityCounts(prefectureCode: string): Record<string, number> {
@@ -71,7 +82,7 @@ export function getAreaFacilityCounts(prefectureCode: string): Record<string, nu
   if (!areas) return {};
   const counts: Record<string, number> = {};
   for (const area of areas) {
-    counts[area.slug] = facilities.filter((f) => f.prefecture === prefectureCode && f.area === area.label).length;
+    counts[area.slug] = facilities.filter((f) => isOpen(f) && f.prefecture === prefectureCode && f.area === area.label).length;
   }
   return counts;
 }
@@ -91,7 +102,7 @@ export function searchFacilities(params: {
   lateNight?: boolean;
   earlyMorning?: boolean;
 }): Facility[] {
-  let result = [...facilities];
+  let result = facilities.filter(isOpen);
 
   if (params.prefecture) {
     result = result.filter((f) => f.prefecture === params.prefecture);
@@ -175,14 +186,14 @@ export function getNewFacilities(limit: number = 6, days: number = 30): Facility
   const now = new Date();
   const cutoff = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
   return facilities
-    .filter((f) => f.openedAt && new Date(f.openedAt) >= cutoff)
+    .filter((f) => isOpen(f) && f.openedAt && new Date(f.openedAt) >= cutoff)
     .sort((a, b) => new Date(b.openedAt!).getTime() - new Date(a.openedAt!).getTime())
     .slice(0, limit);
 }
 
 export function getRelatedFacilities(facility: Facility, limit: number = 6): { sameArea: Facility[]; similarPrice: Facility[] } {
   const sameArea = facilities
-    .filter((f) => f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area)
+    .filter((f) => isOpen(f) && f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area)
     .slice(0, limit);
 
   const priceRange = facility.priceMin > 0 ? facility.priceMin * 0.5 : 0;
@@ -190,7 +201,7 @@ export function getRelatedFacilities(facility: Facility, limit: number = 6): { s
   const sameAreaIds = new Set(sameArea.map((f) => f.id));
   const similarPrice = facility.priceMin > 0
     ? facilities
-        .filter((f) => f.id !== facility.id && !sameAreaIds.has(f.id) && f.priceMin >= priceRange && f.priceMin <= priceMax)
+        .filter((f) => isOpen(f) && f.id !== facility.id && !sameAreaIds.has(f.id) && f.priceMin >= priceRange && f.priceMin <= priceMax)
         .slice(0, limit)
     : [];
 
@@ -198,10 +209,10 @@ export function getRelatedFacilities(facility: Facility, limit: number = 6): { s
 }
 
 export function getAllIds(): number[] {
-  return facilities.map((f) => f.id);
+  return facilities.filter(isOpen).map((f) => f.id);
 }
 
 export function getAllPrefectures(): string[] {
-  return [...new Set(facilities.map((f) => f.prefecture))];
+  return [...new Set(facilities.filter(isOpen).map((f) => f.prefecture))];
 }
 
