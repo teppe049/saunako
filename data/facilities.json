@@ -7583,7 +7583,7 @@
     "bookingUrl": "https://kasika-sauna.hacomono.jp/home",
     "amenities": ["バスローブ", "水着", "サウナハット", "スキンケア(THREE)", "ドライヤー(レプロナイザー/Dyson)", "バリブラシ"],
     "note": "水着着用必須。温水ジャグジー・エアベッド完備。心拍センサーでととのいを可視化。駐車場1台あり。",
-    "images": [],
+    "images": ["/facilities/91-0.webp", "/facilities/91-1.webp", "/facilities/91-2.webp", "/facilities/91-3.webp"],
     "lat": 35.0536,
     "lng": 135.7606,
     "description": "北山駅徒歩3分、最大6名で3時間の完全貸切プライベートサウナ。医療法人監修で光学式心拍センサーによる『ととのい可視化』が特徴。水風呂・温水ジャグジー・セルフロウリュを備え、好きな音楽を流しながら楽しめる。",
