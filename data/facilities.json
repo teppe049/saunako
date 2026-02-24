@@ -7552,5 +7552,50 @@
     "timeSlots": null,
     "openedAt": "2026-02-21",
     "closedAt": null
+  },
+  {
+    "id": 91,
+    "slug": "kasika-kitayama",
+    "name": "kasika 京都北山",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市左京区",
+    "area": "京都市内",
+    "address": "京都市左京区下鴨南芝町43-3 KITAYAMA HILLS 1F",
+    "nearestStation": "北山駅",
+    "walkMinutes": 3,
+    "priceMin": 20000,
+    "duration": 180,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00-25:00",
+    "holidays": "年中無休",
+    "website": "https://www.kasika-sauna.jp/",
+    "phone": "",
+    "bookingUrl": "https://kasika-sauna.hacomono.jp/home",
+    "amenities": ["バスローブ", "水着", "サウナハット", "スキンケア(THREE)", "ドライヤー(レプロナイザー/Dyson)", "バリブラシ"],
+    "note": "水着着用必須。温水ジャグジー・エアベッド完備。心拍センサーでととのいを可視化。駐車場1台あり。",
+    "images": [],
+    "lat": 35.0536,
+    "lng": 135.7606,
+    "description": "北山駅徒歩3分、最大6名で3時間の完全貸切プライベートサウナ。医療法人監修で光学式心拍センサーによる『ととのい可視化』が特徴。水風呂・温水ジャグジー・セルフロウリュを備え、好きな音楽を流しながら楽しめる。",
+    "saunakoCommentShort": "ととのいを可視化できる京都の貸切サウナ!",
+    "saunakoCommentLong": "京都・北山にある完全貸切のプライベートサウナだよ! 心拍センサーでととのい具合を数値で見られるのがすごく面白いの。セルフロウリュで好きなだけ蒸気を浴びられるし、好きな音楽を流せるのも嬉しいポイント。温水ジャグジーもあるから、水風呂が苦手な人でも楽しめるかも!",
+    "updatedAt": "2026-02-24",
+    "openedAt": "2025-05-01",
+    "closedAt": null,
+    "plans": [
+      {"name": "平日チケット 3時間 6名", "price": 20000, "duration": 180, "capacity": 6},
+      {"name": "全日チケット 3時間 6名", "price": 24000, "duration": 180, "capacity": 6}
+    ],
+    "timeSlots": null
   }
 ]

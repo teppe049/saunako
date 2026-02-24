@@ -89,6 +89,7 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'saitama', label: '埼玉県' },
   { code: 'chiba', label: '千葉県' },
   { code: 'osaka', label: '大阪府' },
+  { code: 'kyoto', label: '京都府' },
 ];
 
 export interface AreaGroup {
@@ -109,6 +110,9 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'kita', label: 'キタ', cities: ['大阪市北区', '大阪市福島区'] },
     { slug: 'minami', label: 'ミナミ', cities: ['大阪市中央区', '大阪市西区'] },
     { slug: 'other', label: 'その他', cities: ['八尾市', '枚方市', '茨木市'] },
+  ],
+  kyoto: [
+    { slug: 'kyoto-city', label: '京都市内', cities: ['京都市左京区', '京都市北区', '京都市中京区', '京都市下京区', '京都市東山区'] },
   ],
   kanagawa: [
     { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区'] },
