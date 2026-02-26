@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
-import { getAllArticles, getAllTags } from '@/lib/articles'
+import { getAllArticles, getAllTags, getArticlesByTag, getArticlesByCategory } from '@/lib/articles'
 
 const activeFacilities = facilities.filter((f) => !f.closedAt)
 
@@ -21,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestFacilityUpdate,
       changeFrequency: 'daily',
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/search`,
-      lastModified: latestFacilityUpdate,
-      changeFrequency: 'daily',
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy`,
@@ -103,22 +97,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // カテゴリページ
-  const categoryPages: MetadataRoute.Sitemap = ARTICLE_CATEGORIES.map((cat) => ({
-    url: `${baseUrl}/articles/category/${cat.slug}`,
-    lastModified: latestArticleDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }))
+  // カテゴリページ（記事が存在するカテゴリのみ）
+  const categoryPages: MetadataRoute.Sitemap = ARTICLE_CATEGORIES
+    .filter((cat) => getArticlesByCategory(cat.slug).length > 0)
+    .map((cat) => ({
+      url: `${baseUrl}/articles/category/${cat.slug}`,
+      lastModified: latestArticleDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
 
-  // タグページ
+  // タグページ（記事3件以上のタグのみ — 薄いコンテンツページを除外）
   const tags = getAllTags()
-  const tagPages: MetadataRoute.Sitemap = tags.map((tag) => ({
-    url: `${baseUrl}/articles/tag/${encodeURIComponent(tag)}`,
-    lastModified: latestArticleDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }))
+  const tagPages: MetadataRoute.Sitemap = tags
+    .filter((tag) => getArticlesByTag(tag).length >= 3)
+    .map((tag) => ({
+      url: `${baseUrl}/articles/tag/${encodeURIComponent(tag)}`,
+      lastModified: latestArticleDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    }))
 
   return [...staticPages, ...areaPages, ...subAreaPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
 }
