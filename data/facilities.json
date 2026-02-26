@@ -7581,9 +7581,21 @@
     "website": "https://www.kasika-sauna.jp/",
     "phone": "",
     "bookingUrl": "https://kasika-sauna.hacomono.jp/home",
-    "amenities": ["バスローブ", "水着", "サウナハット", "スキンケア(THREE)", "ドライヤー(レプロナイザー/Dyson)", "バリブラシ"],
+    "amenities": [
+      "バスローブ",
+      "水着",
+      "サウナハット",
+      "スキンケア(THREE)",
+      "ドライヤー(レプロナイザー/Dyson)",
+      "バリブラシ"
+    ],
     "note": "水着着用必須。温水ジャグジー・エアベッド完備。心拍センサーでととのいを可視化。駐車場1台あり。",
-    "images": ["/facilities/91-0.webp", "/facilities/91-1.webp", "/facilities/91-2.webp", "/facilities/91-3.webp"],
+    "images": [
+      "/facilities/91-0.webp",
+      "/facilities/91-1.webp",
+      "/facilities/91-2.webp",
+      "/facilities/91-3.webp"
+    ],
     "lat": 35.0536,
     "lng": 135.7606,
     "description": "北山駅徒歩3分、最大6名で3時間の完全貸切プライベートサウナ。医療法人監修で光学式心拍センサーによる『ととのい可視化』が特徴。水風呂・温水ジャグジー・セルフロウリュを備え、好きな音楽を流しながら楽しめる。",
@@ -7593,8 +7605,18 @@
     "openedAt": "2025-05-01",
     "closedAt": null,
     "plans": [
-      {"name": "平日チケット 3時間 6名", "price": 20000, "duration": 180, "capacity": 6},
-      {"name": "全日チケット 3時間 6名", "price": 24000, "duration": 180, "capacity": 6}
+      {
+        "name": "平日チケット 3時間 6名",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "全日チケット 3時間 6名",
+        "price": 24000,
+        "duration": 180,
+        "capacity": 6
+      }
     ],
     "timeSlots": null
   },
@@ -7626,9 +7648,20 @@
     "website": "https://kuuma-sauna.jp/",
     "phone": "048-782-8388",
     "bookingUrl": "https://airrsv.net/kuuma/calendar",
-    "amenities": ["シャンプー", "コンディショナー", "ボディソープ", "ドライヤー", "アロマ水"],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "アロマ水"
+    ],
     "note": "VIPルームは同性2名まで。サブスクプランあり。バスタオルは有料レンタル220円。",
-    "images": [],
+    "images": [
+      "/facilities/92-0.webp",
+      "/facilities/92-1.webp",
+      "/facilities/92-2.webp",
+      "/facilities/92-3.webp"
+    ],
     "lat": 35.9046,
     "lng": 139.6257,
     "description": "大宮駅東口徒歩2分の個室サウナ専門店。スタンダードルーム（1名）とVIPルーム（同性2名）を完備し、全室にチラー付き水風呂を設置。HARVIA製ストーブでセルフロウリュ対応。サウナ温度は90/100/110℃から選択可能。サブスクプランもあり。",
@@ -7638,14 +7671,54 @@
     "openedAt": null,
     "closedAt": null,
     "plans": [
-      {"name": "スタンダードルーム 40分 1名", "price": 1480, "duration": 40, "capacity": 1},
-      {"name": "スタンダードルーム 60分 1名", "price": 2980, "duration": 60, "capacity": 1},
-      {"name": "スタンダードルーム 90分 1名", "price": 3980, "duration": 90, "capacity": 1},
-      {"name": "スタンダードルーム 120分 1名", "price": 4980, "duration": 120, "capacity": 1},
-      {"name": "VIPルーム 40分 1名", "price": 1980, "duration": 40, "capacity": 2},
-      {"name": "VIPルーム 60分 1名", "price": 3980, "duration": 60, "capacity": 2},
-      {"name": "VIPルーム 90分 1名", "price": 4980, "duration": 90, "capacity": 2},
-      {"name": "VIPルーム 120分 1名", "price": 5980, "duration": 120, "capacity": 2}
+      {
+        "name": "スタンダードルーム 40分 1名",
+        "price": 1480,
+        "duration": 40,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダードルーム 60分 1名",
+        "price": 2980,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダードルーム 90分 1名",
+        "price": 3980,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダードルーム 120分 1名",
+        "price": 4980,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "VIPルーム 40分 1名",
+        "price": 1980,
+        "duration": 40,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 60分 1名",
+        "price": 3980,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 90分 1名",
+        "price": 4980,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 120分 1名",
+        "price": 5980,
+        "duration": 120,
+        "capacity": 2
+      }
     ],
     "timeSlots": null
   },
@@ -7677,9 +7750,22 @@
     "website": "https://tere-saun.com/",
     "phone": "048-446-9009",
     "bookingUrl": "https://coubic.com/teresaun_01",
-    "amenities": ["シャンプー", "コンディショナー", "ボディソープ", "メイク落とし", "化粧水", "ドライヤー", "バスタオル"],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "メイク落とし",
+      "化粧水",
+      "ドライヤー",
+      "バスタオル"
+    ],
     "note": "1日5部制・1セッション150分の完全貸切。韓国料理カフェ併設。最大8名。キャッシュレス決済のみ。",
-    "images": [],
+    "images": [
+      "/facilities/93-0.webp",
+      "/facilities/93-1.webp",
+      "/facilities/93-2.webp",
+      "/facilities/93-3.webp"
+    ],
     "lat": 35.8734,
     "lng": 139.7429,
     "description": "東川口駅徒歩3分の完全貸切サウナ。1セッション150分で最大8名まで利用可能。チラー導入の14℃水風呂に加え、屋上テラスで外気浴も楽しめる。韓国料理カフェを併設しており、サウナ後の食事も充実。カップル・グループ利用に最適。",
@@ -7689,14 +7775,54 @@
     "openedAt": null,
     "closedAt": null,
     "plans": [
-      {"name": "平日 1名", "price": 7000, "duration": 150, "capacity": 1},
-      {"name": "平日 2名", "price": 12000, "duration": 150, "capacity": 2},
-      {"name": "平日 3名", "price": 15000, "duration": 150, "capacity": 3},
-      {"name": "平日 4-8名", "price": 18000, "duration": 150, "capacity": 8},
-      {"name": "土日祝 1名", "price": 8000, "duration": 150, "capacity": 1},
-      {"name": "土日祝 2名", "price": 14000, "duration": 150, "capacity": 2},
-      {"name": "土日祝 3名", "price": 17000, "duration": 150, "capacity": 3},
-      {"name": "土日祝 4-8名", "price": 20000, "duration": 150, "capacity": 8}
+      {
+        "name": "平日 1名",
+        "price": 7000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "平日 2名",
+        "price": 12000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "平日 3名",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "平日 4-8名",
+        "price": 18000,
+        "duration": 150,
+        "capacity": 8
+      },
+      {
+        "name": "土日祝 1名",
+        "price": 8000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 2名",
+        "price": 14000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 3名",
+        "price": 17000,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "土日祝 4-8名",
+        "price": 20000,
+        "duration": 150,
+        "capacity": 8
+      }
     ],
     "timeSlots": null
   },
@@ -7728,9 +7854,20 @@
     "website": "https://www.seibu-leisure.co.jp/matsuri/",
     "phone": "0494-22-7111",
     "bookingUrl": "https://www.seibu-leisure.co.jp/matsuri/43890/index.html",
-    "amenities": ["サウナ着", "レンタルタオル2名分", "シャンプー", "ボディソープ", "ドライヤー"],
+    "amenities": [
+      "サウナ着",
+      "レンタルタオル2名分",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
     "note": "入館料別途（平日1,100円/土日祝1,380円）。「月」「滝」2種類の個室あり。水風呂なし、-20℃アイスルームでクールダウン。温泉も利用可能。",
-    "images": [],
+    "images": [
+      "/facilities/94-0.webp",
+      "/facilities/94-1.webp",
+      "/facilities/94-2.webp",
+      "/facilities/94-3.webp"
+    ],
     "lat": 35.9892,
     "lng": 139.0838,
     "description": "西武秩父駅直結の温泉施設内にある個室サウナ。「月-tsuki-」（セルフロウリュ・最大6名）と「滝-taki-」（オートロウリュ・最大8名）の2部屋を完備。-20℃のアイスルームでクールダウンする独自スタイル。秩父観光と組み合わせやすい立地も魅力。",
@@ -7740,8 +7877,18 @@
     "openedAt": "2024-10-25",
     "closedAt": null,
     "plans": [
-      {"name": "個室サウナ 平日 90分", "price": 3000, "duration": 90, "capacity": 6},
-      {"name": "個室サウナ 土日祝 90分", "price": 5000, "duration": 90, "capacity": 6}
+      {
+        "name": "個室サウナ 平日 90分",
+        "price": 3000,
+        "duration": 90,
+        "capacity": 6
+      },
+      {
+        "name": "個室サウナ 土日祝 90分",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 6
+      }
     ],
     "timeSlots": null
   }

@@ -120,9 +120,57 @@ WebSearch で「{施設名} {住所} 緯度 経度」または Google Maps の�
 
 実装完了後、QA Agent（`npm run build && npm run lint`）でビルドが通ることを確認する。
 
+### 11. 施設画像の取得
+
+データ追加・QAチェック後、各施設の画像を3〜4枚取得する。
+
+#### 画像取得ルール
+- **公式HPのみ使用**（sauna-ikitai.com は使用禁止）
+- **人物が写っていない画像のみ**（施設内観・設備のみ）
+- PR Times のプレスリリースは公式の補助ソースとして利用可
+- Coubic/STORES 予約ページの施設写真も利用可
+
+#### 画像ソースの優先順位
+1. 公式HP の `<img>` タグ
+2. 公式HP の CSS `background-image`
+3. PR Times プレスリリース画像
+4. Coubic/STORES 予約ページの施設写真
+5. atpress.ne.jp 等の公式プレスリリース
+
+#### 変換仕様
+```bash
+cwebp -q 80 -resize 800 0 /tmp/input.jpg -o public/facilities/{id}-{index}.webp
+```
+- 形式: webp、幅800px、品質80
+- ファイル名: `{id}-{0,1,2,3}.webp`（0 はサムネイル）
+
+#### SPA サイト対応
+- Bubble.io, Nuxt.js, Wix, Studio Design, Framer 等の SPA は WebFetch で画像URLが取れない
+- → Playwright MCP でDOMから直接画像URLを抽出する
+- CSS `background-image` で画像を配置しているサイトも多い
+
+#### よくある問題と対処
+| 問題 | 対処 |
+|------|------|
+| ロゴ画像を誤取得 | ファイルサイズが小さい（<10KB）場合はロゴの可能性あり。目視確認 |
+| 人物が写っている | Read で webp を目視確認。手・足だけでも除外が安全 |
+| SSL証明書エラー | PR Times やプレスリリースサイトから代替取得 |
+| cwebp が CMYK JPEG を処理できない | 別の画像を選ぶか、ImageMagick で RGB 変換してから cwebp |
+
+#### 画像取得後の処理
+1. `data/facilities.json` の `images` 配列にパスを追加
+2. QA Agent でビルド確認
+3. コミット & プッシュ
+
+### 12. 完了確認
+
+すべての手順完了後、以下をユーザーに報告:
+- 追加した施設名・ID
+- 画像取得状況（成功/失敗の施設）
+- ビルド・lint の結果
+
 ## 注意事項
 
-- `images` は空配列 `[]` で初期化（画像は後で手動追加）
 - `priceMin` / `duration` / `capacity` はプランの中で最も基本的なものの値を使う
 - 情報が取得できなかった項目は `null` または空文字にし、コメントで「要確認」と明記
 - `updatedAt` は実行日の日付を `YYYY-MM-DD` 形式で設定
