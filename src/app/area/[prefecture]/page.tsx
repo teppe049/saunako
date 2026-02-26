@@ -26,6 +26,34 @@ const SAUNAKO_AREA_COMMENTS: Record<string, string> = {
 // デフォルトのサウナ子コメント
 const DEFAULT_SAUNAKO_COMMENT = 'このエリアの個室サウナをまとめてみたわ! 気になる施設があったらチェックしてみてね。';
 
+// 都道府県ごとのカスタム title / description（SEO最適化）
+const AREA_META: Record<string, { title: string; description: string }> = {
+  tokyo: {
+    title: '東京の個室サウナ一覧｜新宿・渋谷・池袋の駅チカ施設を比較 | サウナ子',
+    description: '東京の個室サウナを探すならサウナ子。新宿・渋谷・池袋など駅チカで仕事帰りに寄れる施設を厳選。料金・設備・アクセスを比較して、あなたにぴったりの個室サウナが見つかる。',
+  },
+  kanagawa: {
+    title: '神奈川の個室サウナ一覧｜横浜・川崎エリアの施設を比較 | サウナ子',
+    description: '神奈川の個室サウナを探すならサウナ子。横浜・川崎エリアを中心に、カップル利用OK・料金比較・アクセス情報を掲載。あなたにぴったりの個室サウナが見つかる。',
+  },
+  saitama: {
+    title: '埼玉の個室サウナ・プライベートサウナ一覧｜カップル利用OK | サウナ子',
+    description: '埼玉の個室サウナ・プライベートサウナをお探しの方に。カップル利用OK・料金比較・大宮/浦和エリアの施設情報を掲載。あなたにぴったりの個室サウナが見つかる。',
+  },
+  chiba: {
+    title: '千葉の個室サウナ一覧｜船橋エリアの施設を比較 | サウナ子',
+    description: '千葉の個室サウナを探すならサウナ子。船橋・浦安エリアを中心に、料金・設備・アクセスを比較。都心からのアクセスも便利な個室サウナが見つかる。',
+  },
+  osaka: {
+    title: '大阪の個室サウナ一覧｜梅田・心斎橋のコスパ抜群施設を比較 | サウナ子',
+    description: '大阪の個室サウナを探すならサウナ子。梅田・心斎橋エリアを中心に、コスパ抜群の施設を厳選。料金比較・カップル利用OK・設備情報を掲載。',
+  },
+  kyoto: {
+    title: '京都の個室サウナ一覧｜京都らしい上質な貸切サウナを比較 | サウナ子',
+    description: '京都の個室サウナ・貸切サウナを探すならサウナ子。京都ならではの上質な空間で整う、料金・設備・アクセスを比較。あなたにぴったりの個室サウナが見つかる。',
+  },
+};
+
 export async function generateStaticParams() {
   const prefectures = getAllPrefectures();
   return prefectures.map((prefecture) => ({ prefecture }));
@@ -36,8 +64,9 @@ export async function generateMetadata({ params }: PageProps) {
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
   if (!prefData) return { title: 'Not Found' };
 
-  const title = `${prefData.label}の個室サウナ一覧 | サウナ子`;
-  const description = `${prefData.label}の個室サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
+  const customMeta = AREA_META[prefecture];
+  const title = customMeta?.title ?? `${prefData.label}の個室サウナ一覧 | サウナ子`;
+  const description = customMeta?.description ?? `${prefData.label}の個室サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
 
   return {
     title,

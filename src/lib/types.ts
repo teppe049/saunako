@@ -122,6 +122,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   saitama: [
     { slug: 'urawa-omiya', label: '浦和・大宮', cities: ['さいたま市浦和区', 'さいたま市大宮区', 'さいたま市中央区'] },
     { slug: 'kawaguchi-warabi', label: '川口・蕨', cities: ['川口市'] },
+    { slug: 'chichibu', label: '秩父', cities: ['秩父市'] },
     { slug: 'other', label: 'その他', cities: ['日高市'] },
   ],
   chiba: [
