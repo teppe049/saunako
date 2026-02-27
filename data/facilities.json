@@ -4831,7 +4831,7 @@
     "prefecture": "kanagawa",
     "prefectureLabel": "神奈川県",
     "city": "海老名市",
-    "area": "その他",
+    "area": "厚木・県央",
     "address": "神奈川県海老名市国分南1-2-19",
     "nearestStation": "海老名駅",
     "walkMinutes": 8,
@@ -8545,7 +8545,12 @@
       "ボディソープ"
     ],
     "note": "男性専用。予約不要・9室の個室サウナ。地下100m天然水かけ流し水風呂",
-    "images": [],
+    "images": [
+      "/facilities/103-0.webp",
+      "/facilities/103-1.webp",
+      "/facilities/103-2.webp",
+      "/facilities/103-3.webp"
+    ],
     "lat": 35.71456,
     "lng": 139.94337,
     "description": "下総中山駅から徒歩1分の男性専用個室サウナ。予約不要で9室の個室を完備。地下100mの天然水かけ流し水風呂にセルフロウリュ、外気浴スペースも。平日1,100円からの手頃な料金で90分3セット楽しめる。",
@@ -8616,7 +8621,12 @@
       "ボディソープ"
     ],
     "note": "女性専用・ヘッドスパ併設。完全予約制",
-    "images": [],
+    "images": [
+      "/facilities/104-0.webp",
+      "/facilities/104-1.webp",
+      "/facilities/104-2.webp",
+      "/facilities/104-3.webp"
+    ],
     "lat": 35.85525,
     "lng": 139.97138,
     "description": "柏駅南口から徒歩4分の女性専用個室サウナ。サウナとヘッドスパを組み合わせた独自の「飛ぶ」体験が特徴。貸切サウナは90分4,400円から、サウナ×ヘッドスパコースは9,800円から。完全予約制。",
@@ -8688,8 +8698,13 @@
       "ボディソープ"
     ],
     "note": "1棟貸切・完全予約制。薪ストーブサウナ。海を望む外気浴。車でのアクセス推奨",
-    "images": [],
-    "lat": 34.97530,
+    "images": [
+      "/facilities/105-0.webp",
+      "/facilities/105-1.webp",
+      "/facilities/105-2.webp",
+      "/facilities/105-3.webp"
+    ],
+    "lat": 34.9753,
     "lng": 139.77946,
     "description": "館山市の海沿いに佇む1棟貸切のプライベートサウナ。薪ストーブのサウナ小屋にセルフロウリュ、天然地下水の水風呂、鏡ヶ浦と富士山を望む外気浴が揃う。最大12名で2.5時間、平日21,000円から。完全予約制。",
     "saunakoCommentShort": "海と富士山を望む絶景貸切サウナ！",
@@ -8750,7 +8765,12 @@
       "ポンチョ"
     ],
     "note": "1組限定貸切。ヒノキサウナ・BBQスペース・宿泊可。駐車場2台",
-    "images": [],
+    "images": [
+      "/facilities/106-0.webp",
+      "/facilities/106-1.webp",
+      "/facilities/106-2.webp",
+      "/facilities/106-3.webp"
+    ],
     "lat": 34.97086,
     "lng": 139.85735,
     "description": "館山市の1組限定プライベートサウナ。ヒノキ造りの本格サウナにセルフロウリュ、水風呂、外気浴を完備。BBQスペースやキッチン付きで宿泊も可能。日帰り21,000円/2.5時間（4名まで）、Wi-Fi完備。完全予約制。",
@@ -8774,5 +8794,603 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null
+  },
+  {
+    "id": 107,
+    "slug": "oneperson-yokohama-kannai",
+    "name": "ONEPERSON 横浜関内",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "横浜市中区",
+    "area": "横浜",
+    "address": "神奈川県横浜市中区羽衣町1-2-8 銀泉関内ビル4F",
+    "nearestStation": "関内駅",
+    "walkMinutes": 1,
+    "priceMin": 3600,
+    "duration": 60,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "要確認",
+    "website": "https://oneperson.jp/",
+    "phone": "080-5774-5934",
+    "bookingUrl": "https://onepersonkhd.hacomono.jp/home",
+    "amenities": [
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "化粧品",
+      "バスタオル",
+      "フェイスタオル",
+      "天然水1本"
+    ],
+    "note": "デラックスルーム(1室)のみ水風呂・55インチTV・ノンアルコール飲料無料付き。スタンダードルーム5室はシャワーのみ。",
+    "images": [],
+    "lat": 35.4444,
+    "lng": 139.6345,
+    "description": "関内駅北口徒歩1分の完全個室プライベートサウナ。スタンダードルーム5室とデラックスルーム1室を完備。フィンランド式セルフロウリュ対応で、カップル利用も可能。手ぶらで来店OK。",
+    "saunakoCommentShort": "関内駅1分! 手ぶらで行ける完全個室サウナ!",
+    "saunakoCommentLong": "関内駅から徒歩1分でアクセス抜群の完全個室サウナだよ! セルフロウリュで好みの蒸気を楽しめるし、Bluetoothスピーカーで音楽も流せるの。デラックスルームには水風呂もついてるから、しっかり整いたい人はそっちがおすすめかも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2022-07-07",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 5200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 6700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 60分 2名",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "デラックス 90分 1名",
+        "price": 6200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "デラックス 90分 2名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 108,
+    "slug": "oneperson-noborito",
+    "name": "ONEPERSON 登戸",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "川崎市多摩区",
+    "area": "川崎",
+    "address": "神奈川県川崎市多摩区登戸3465 いろはビル3F",
+    "nearestStation": "登戸駅",
+    "walkMinutes": 1,
+    "priceMin": 3900,
+    "duration": 60,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "要確認",
+    "website": "https://oneperson.jp/",
+    "phone": "080-5774-5964",
+    "bookingUrl": "https://onepersonkhd.hacomono.jp/home",
+    "amenities": [
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "サウナハット",
+      "化粧品",
+      "バスタオル",
+      "フェイスタオル"
+    ],
+    "note": "全4室に水風呂完備。TVモニター付き（Netflix・YouTube視聴可）。",
+    "images": [],
+    "lat": 35.6194,
+    "lng": 139.5711,
+    "description": "登戸駅徒歩1分の完全個室プライベートサウナ。全4室に水風呂を完備し、フィンランド式セルフロウリュに対応。TVモニターでNetflixやYouTubeも楽しめる。カップル利用OK。",
+    "saunakoCommentShort": "登戸駅1分! 全室水風呂完備の個室サウナ!",
+    "saunakoCommentLong": "登戸駅から1分で着ける完全個室サウナだよ! ここは全4室すべてに水風呂がついてるのが嬉しいポイント。セルフロウリュで蒸気を楽しんだ後にキンキンの水風呂に入れるの最高! TVでNetflixも見られるからゆっくり過ごせるかも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2023-01-14",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 3900,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 4900,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 5900,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 60分 2名",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 109,
+    "slug": "tennimo",
+    "name": "TENNIMO.",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "厚木市",
+    "area": "厚木・県央",
+    "address": "神奈川県厚木市中町4-14-6 パティオビル1F",
+    "nearestStation": "本厚木駅",
+    "walkMinutes": 3,
+    "priceMin": 5200,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（金土 〜25:00）",
+    "holidays": "不定休",
+    "website": "https://tennimo.jp/",
+    "phone": "046-259-5920",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000664471/",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー(リファ)",
+      "ヘアアイロン",
+      "スキンケア",
+      "バスタオル",
+      "フェイスタオル"
+    ],
+    "note": "VIP・プレミアムVIPルームのみ水風呂あり。スタンダードはシャワーのみ。キャッシュレス決済のみ。サ飯（はるひごはん監修）も提供。",
+    "images": [],
+    "lat": 35.4387,
+    "lng": 139.3623,
+    "description": "本厚木駅北口徒歩3分の完全個室サウナ。Standard（1名）・VIP（1-2名）・Premium VIP（1-3名）の3タイプ。15℃の水風呂、セルフロウリュ、Bluetoothスピーカー完備。サ飯も充実。",
+    "saunakoCommentShort": "厚木で3タイプの個室サウナが選べる!",
+    "saunakoCommentLong": "本厚木駅から3分の完全個室サウナだよ! Standard・VIP・Premium VIPの3タイプから選べるのが面白いの。VIP以上なら15℃の水風呂でしっかり冷やせるし、セルフロウリュで好みの蒸気も楽しめる。サウナ後のサ飯もあるから、ゆっくり過ごせるかも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2023-09-01",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "Standard 90分 1名",
+        "price": 5200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "Standard 120分 1名",
+        "price": 6700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 90分 1-2名",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 120分 1-2名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Premium VIP 90分 1-3名",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "Premium VIP 120分 1-3名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 110,
+    "slug": "sauna-hide-out",
+    "name": "SAUNA HIDE OUT",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "藤沢市",
+    "area": "湘南・鎌倉",
+    "address": "神奈川県藤沢市片瀬海岸2-6-9",
+    "nearestStation": "片瀬江ノ島駅",
+    "walkMinutes": 2,
+    "priceMin": 3500,
+    "duration": 150,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "7:00〜22:00",
+    "holidays": "不定休（予約サイトで確認）",
+    "website": "https://coubic.com/SAUNAHIDEOUT",
+    "phone": "070-1189-4340",
+    "bookingUrl": "https://coubic.com/SAUNAHIDEOUT/services",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "ドライヤー",
+      "リファシャワーヘッド",
+      "サウナマット"
+    ],
+    "note": "完全予約制。最大3名。タオルは有料レンタル500円。水着着用必須。キャッシュレス決済のみ。HARVIA製ストーブ。",
+    "images": [],
+    "lat": 35.3105,
+    "lng": 139.4857,
+    "description": "片瀬江ノ島駅徒歩2分の隠れ家貸切サウナ。HARVIA製ストーブでセルフロウリュ対応、14℃の水風呂完備。最大3名の完全予約制で、江ノ島観光と合わせて楽しめる。",
+    "saunakoCommentShort": "江ノ島の隠れ家で貸切サウナ体験!",
+    "saunakoCommentLong": "片瀬江ノ島駅から2分の住宅街にある隠れ家サウナだよ! HARVIA製ストーブでセルフロウリュを楽しめるし、14℃の水風呂でしっかり冷やせるの。最大3名の完全貸切だから、カップルや友達とプライベート空間を満喫できるかも! 江ノ島観光のついでに立ち寄るのもいいよね!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日朝イチ 150分 1名",
+        "price": 3500,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "平日10時以降 150分 1名",
+        "price": 4000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "平日10時以降 150分 2名",
+        "price": 8000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "平日10時以降 150分 3名",
+        "price": 12000,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "土日祝 150分 1名",
+        "price": 5000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 150分 2名",
+        "price": 10000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 150分 3名",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 111,
+    "slug": "enoshima-sauna",
+    "name": "エノシマサウナ",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "藤沢市",
+    "area": "湘南・鎌倉",
+    "address": "神奈川県藤沢市江の島1-8-5",
+    "nearestStation": "片瀬江ノ島駅",
+    "walkMinutes": 15,
+    "priceMin": 4620,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜22:30（最終受付 20:00）",
+    "holidays": "要確認",
+    "website": "https://enoshimasauna.com/",
+    "phone": "090-8466-6136",
+    "bookingUrl": "https://enoshimasauna.com/",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディウォッシュ",
+      "ドライヤー",
+      "サウナハット(貸出)"
+    ],
+    "note": "江の島島内の古民家改装。日帰り貸切と一棟貸し宿泊の2プラン。MISAストーブ使用。江ノ島地下水の12℃水風呂。アロマ水4種選択可。タオルは有料レンタル。",
+    "images": [],
+    "lat": 35.3,
+    "lng": 139.4823,
+    "description": "江の島島内の古民家を改装した貸切サウナ。MISA製ストーブのフィンランド式サウナと、江ノ島地下水を使った12℃の水風呂が特徴。外気浴スペースあり。日帰り90分〜と宿泊プランを提供。最大4名。",
+    "saunakoCommentShort": "江の島の古民家で12℃地下水の水風呂!",
+    "saunakoCommentLong": "江の島の中にある古民家を改装した貸切サウナだよ! MISAストーブでのセルフロウリュが楽しめるし、江ノ島の地下水を使った12℃の水風呂がキンキンで最高! 外気浴もできるから整い環境バッチリ。江の島観光と合わせて楽しめるのがいいよね!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "サウナ90分 1名",
+        "price": 4620,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ90分 2名",
+        "price": 6820,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ120分 1名",
+        "price": 6160,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ120分 2名",
+        "price": 8360,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 112,
+    "slug": "sauna-to-mizuburo",
+    "name": "サウナと水風呂",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "小田原市",
+    "area": "小田原・西湘",
+    "address": "神奈川県小田原市国府津1815",
+    "nearestStation": "国府津駅",
+    "walkMinutes": 10,
+    "priceMin": 4400,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-17",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00（最終受付 21:00）",
+    "holidays": "木曜日",
+    "website": "https://saunatomizuburo.com/",
+    "phone": "070-7773-3226",
+    "bookingUrl": "https://app.aitemasu.me/u/saunatomizuburo52/small",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー(リファ)",
+      "ストレートアイロン(リファ)"
+    ],
+    "note": "古民家改装。小部屋(1-2名)と大部屋(1-6名)の2室。総ヒノキ造りサウナ。チラー水風呂(水深1m)。アロマ水4種選択可。タトゥーOK。タオル有料550円。土日祝+1,100円/名。",
+    "images": [],
+    "lat": 35.286,
+    "lng": 139.2084,
+    "description": "国府津駅徒歩10分、築70年以上の古民家を改装した完全貸切プライベートサウナ。総ヒノキ造りのサウナ室（90-95℃）とチラー冷却の水風呂（15-17℃、水深1m）が自慢。小部屋・大部屋の2室。",
+    "saunakoCommentShort": "古民家×総ヒノキサウナ×水深1mの水風呂!",
+    "saunakoCommentLong": "小田原の古民家を改装した貸切サウナだよ! 総ヒノキ造りのサウナ室は90-95℃でしっかり熱いし、チラーで冷やした15-17℃の水風呂は水深1mで肩までしっかり浸かれるの。アロマ水4種類から選んでセルフロウリュも楽しめるし、タトゥーOKなのも嬉しいポイントだね!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "小部屋 平日 90分 1-2名",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "小部屋 平日 120分 1-2名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "小部屋 平日 150分 1-2名",
+        "price": 6600,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "大部屋 平日 90分 1-6名",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 6
+      },
+      {
+        "name": "大部屋 平日 120分 1-6名",
+        "price": 6600,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "大部屋 平日 150分 1-6名",
+        "price": 7700,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 113,
+    "slug": "kamakura-sauna-plus",
+    "name": "鎌倉Sauna+",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "鎌倉市",
+    "area": "湘南・鎌倉",
+    "address": "神奈川県鎌倉市由比ガ浜4-2-10 ホライズンビル3F",
+    "nearestStation": "由比ヶ浜駅",
+    "walkMinutes": 4,
+    "priceMin": 5000,
+    "duration": 100,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（最終受付 21:00）",
+    "holidays": "水曜日",
+    "website": "https://sauna-kamakura.com/",
+    "phone": "0467-22-8131",
+    "bookingUrl": "https://my-site-109038-101730.square.site/",
+    "amenities": [
+      "シリカ水(受付時提供)"
+    ],
+    "note": "サウナ+BBQプランあり。屋上にBBQスペース（由比ヶ浜オーシャンビュー）。タオル・水着は有料レンタル（セット500円）。",
+    "images": [],
+    "lat": 35.3106,
+    "lng": 139.5429,
+    "description": "由比ヶ浜駅徒歩4分のプライベートサウナ。セルフロウリュ対応のサウナと水風呂、屋上の外気浴スペースを完備。BBQ付きプランもあり、由比ヶ浜のオーシャンビューを楽しめる。",
+    "saunakoCommentShort": "鎌倉でサウナ×BBQ×オーシャンビュー!",
+    "saunakoCommentLong": "由比ヶ浜にあるプライベートサウナだよ! セルフロウリュで整った後は、屋上の外気浴スペースから由比ヶ浜の海が見えるのが最高! BBQ付きプランもあるから、サウナ→外気浴→BBQっていう最高のコースが楽しめるかも。鎌倉観光と合わせて行くのもおすすめだよ!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "サウナプラン 100分 1名",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "サウナプラン 100分 2名",
+        "price": 7000,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "サウナプラン 100分 3名",
+        "price": 9000,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "BBQスタンダード 120分 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "BBQスペシャル 120分 1名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
   }
 ]
