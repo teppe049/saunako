@@ -46,7 +46,10 @@ export const metadata: Metadata = {
       "全国85施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・神奈川・埼玉・千葉・大阪など主要エリアの料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
   },
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
