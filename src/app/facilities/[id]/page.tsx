@@ -33,15 +33,35 @@ export async function generateMetadata({ params }: PageProps) {
   const facility = getFacilityById(Number(id));
   if (!facility) return { title: 'Not Found' };
 
+  // SEO: 検索意図に合う詳細なdescriptionを構築
+  const descParts: string[] = [];
+  descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ`);
+  if (facility.nearestStation && facility.walkMinutes > 0) {
+    descParts.push(`${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`);
+  }
+  if (facility.priceMin > 0) {
+    descParts.push(`${facility.priceMin.toLocaleString()}円〜/${facility.duration}分`);
+  }
+  if (facility.capacity > 0) {
+    descParts.push(`最大${facility.capacity}名`);
+  }
+  const featureTags: string[] = [];
+  if (facility.features.waterBath) featureTags.push('水風呂あり');
+  if (facility.features.selfLoyly) featureTags.push('セルフロウリュ');
+  if (facility.features.outdoorAir) featureTags.push('外気浴');
+  if (facility.features.coupleOk) featureTags.push('カップルOK');
+  if (featureTags.length > 0) descParts.push(featureTags.join('・'));
+  const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。';
+
   return {
-    title: `${facility.name} | サウナ子`,
-    description: `${facility.name}の料金・設備・アクセス情報。${facility.nearestStation && facility.walkMinutes > 0 ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。` : ''}${facility.priceMin > 0 ? `${facility.priceMin.toLocaleString()}円〜` : '料金要問合せ'}`,
+    title: `${facility.name}の料金・プラン・口コミ｜${facility.prefectureLabel}の個室サウナ | サウナ子`,
+    description,
     alternates: {
       canonical: `https://www.saunako.jp/facilities/${facility.id}`,
     },
     openGraph: {
-      title: `${facility.name} | サウナ子`,
-      description: `${facility.name}の料金・設備・アクセス情報`,
+      title: `${facility.name}の料金・プラン｜${facility.prefectureLabel}の個室サウナ`,
+      description,
       images: facility.images.length > 0 ? [facility.images[0]] : [],
     },
   };
