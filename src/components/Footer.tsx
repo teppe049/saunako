@@ -1,6 +1,34 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { PREFECTURES } from '@/lib/types';
+
+const REGION_GROUPS = [
+  {
+    label: '関東',
+    prefectures: [
+      { code: 'tokyo', label: '東京都' },
+      { code: 'kanagawa', label: '神奈川県' },
+      { code: 'saitama', label: '埼玉県' },
+      { code: 'chiba', label: '千葉県' },
+      { code: 'ibaraki', label: '茨城県' },
+      { code: 'gunma', label: '群馬県' },
+      { code: 'tochigi', label: '栃木県' },
+    ],
+  },
+  {
+    label: '関西',
+    prefectures: [
+      { code: 'osaka', label: '大阪府' },
+      { code: 'kyoto', label: '京都府' },
+    ],
+  },
+  {
+    label: 'その他',
+    prefectures: [
+      { code: 'aichi', label: '愛知県' },
+      { code: 'fukuoka', label: '福岡県' },
+    ],
+  },
+] as const;
 
 export default function Footer() {
   return (
@@ -17,9 +45,16 @@ export default function Footer() {
           <p className="text-xs text-[#757575] text-center leading-relaxed">
             当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
           </p>
-          <div className="flex items-center gap-3 flex-wrap justify-center">
-            {PREFECTURES.map((pref) => (
-              <Link key={pref.code} href={`/area/${pref.code}`} className="text-xs text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link>
+          <div className="flex gap-6 text-left w-full justify-center">
+            {REGION_GROUPS.map((region) => (
+              <div key={region.label}>
+                <p className="text-[10px] text-[#6B7280] mb-1">{region.label}</p>
+                <ul className="space-y-1">
+                  {region.prefectures.map((pref) => (
+                    <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-xs text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
           <div className="flex items-center gap-4 flex-wrap justify-center">
@@ -74,11 +109,18 @@ export default function Footer() {
             {/* Area Column */}
             <div>
               <h3 className="text-[13px] font-semibold text-white mb-4">エリアから探す</h3>
-              <ul className="space-y-3">
-                {PREFECTURES.map((pref) => (
-                  <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
+              <div className="flex gap-8">
+                {REGION_GROUPS.map((region) => (
+                  <div key={region.label}>
+                    <p className="text-[12px] text-[#6B7280] mb-2">{region.label}</p>
+                    <ul className="space-y-2">
+                      {region.prefectures.map((pref) => (
+                        <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Disclaimer Column */}
