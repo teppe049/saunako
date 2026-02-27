@@ -28,7 +28,16 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
   },
   async redirects() {
-    return buildFacilityRedirects();
+    return [
+      // 非www → www リダイレクト（canonical統一）
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'saunako.jp' }],
+        destination: 'https://www.saunako.jp/:path*',
+        permanent: true,
+      },
+      ...buildFacilityRedirects(),
+    ];
   },
 };
 
