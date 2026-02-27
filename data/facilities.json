@@ -12838,5 +12838,131 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 150,
+    "slug": "quiet-storm-nasu",
+    "name": "Quiet Storm Nasu",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須郡那須町",
+    "area": "那須",
+    "address": "栃木県那須郡那須町大島1190",
+    "nearestStation": "那須ICから車30分",
+    "walkMinutes": null,
+    "priceMin": 10000,
+    "duration": 120,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/quietstormnasu/",
+    "phone": "090-6455-1185",
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "タオル・サンダル・飲み物は持参推奨。予約はInstagram DMまたは電話",
+    "images": [
+      "/facilities/150-0.webp",
+      "/facilities/150-1.webp",
+      "/facilities/150-2.webp",
+      "/facilities/150-3.webp"
+    ],
+    "lat": 37.13248,
+    "lng": 140.044283,
+    "description": "那須高原の牧草地にたたずむフィンランド式薪サウナ。HARVIAクラシックモデルの薪ストーブでセルフロウリュが楽しめ、水風呂は地下50mからの飲める天然地下水。草原での外気浴が圧巻の完全貸切施設。",
+    "saunakoCommentShort": "那須高原の草原で味わう本格フィンランドサウナ!",
+    "saunakoCommentLong": "那須の牧草地にぽつんと建つフィンランド式サウナだよ! 薪ストーブは120度まで上がってセルフロウリュもできるの。水風呂は地下水で15〜17度、飲めるくらいキレイな水なのがすごい。外気浴は目の前に広がる高原の景色が最高で、ハンモックでぼーっとしてると時間忘れちゃうかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 3時間（5名まで）",
+        "price": 10000,
+        "duration": 180,
+        "capacity": 5
+      },
+      {
+        "name": "土日祝 2時間（5名まで）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 151,
+    "slug": "nasu-utopia",
+    "name": "那須ユートピア",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須郡那須町",
+    "area": "那須",
+    "address": "栃木県那須郡那須町簔沢563-4",
+    "nearestStation": "那須ICから車35分",
+    "walkMinutes": null,
+    "priceMin": 7800,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜19:30",
+    "holidays": "不定休",
+    "website": "https://nasu-utopia.jp",
+    "phone": "0287-73-5333",
+    "bookingUrl": "https://select-type.com/p/utopia_sauna/",
+    "amenities": [
+      "タオル",
+      "サンダル",
+      "ドライヤー"
+    ],
+    "note": "廃校リノベのサウナリゾート。CUBERU/Rekka/プライベートサウナルームの3種",
+    "images": [
+      "/facilities/151-0.webp",
+      "/facilities/151-1.webp",
+      "/facilities/151-2.webp",
+      "/facilities/151-3.webp"
+    ],
+    "lat": 36.984153,
+    "lng": 140.207456,
+    "description": "廃校をリノベーションした那須の複合サウナリゾート。コンクリート蓄熱式のCUBERU、薪ストーブのRekka、プライベートサウナルームの3種を完備。牧場のミルクタンクを再利用した水風呂やオリジナルアロマ水のセルフロウリュが楽しめる。",
+    "saunakoCommentShort": "廃校リノベの3種サウナが選べるリゾート!",
+    "saunakoCommentLong": "旧小学校をリノベした唯一無二のサウナリゾートだよ! コンクリート蓄熱のCUBERUと120度超えの薪サウナRekkaの2種類が選べて、どっちもセルフロウリュOK。水風呂は牧場のミルクタンクを再利用してるのがユニークで面白い。外気浴スペースには焚き火もあって最高かも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "CUBERU/Rekka 平日 120分（4名まで）",
+        "price": 7800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "CUBERU/Rekka 土日祝 120分（4名まで）",
+        "price": 9800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "サウナパーティプラン 7時間（5名以上）",
+        "price": 11000,
+        "duration": 420,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
   }
 ]
