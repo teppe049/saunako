@@ -115,9 +115,11 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'kyoto-city', label: '京都市内', cities: ['京都市左京区', '京都市北区', '京都市中京区', '京都市下京区', '京都市東山区'] },
   ],
   kanagawa: [
-    { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区'] },
-    { slug: 'kawasaki', label: '川崎', cities: ['川崎市川崎区'] },
-    { slug: 'other', label: 'その他', cities: ['海老名市'] },
+    { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区', '横浜市港北区'] },
+    { slug: 'kawasaki', label: '川崎', cities: ['川崎市川崎区', '川崎市多摩区'] },
+    { slug: 'shonan', label: '湘南・鎌倉', cities: ['藤沢市', '鎌倉市'] },
+    { slug: 'atsugi', label: '厚木・県央', cities: ['厚木市', '海老名市'] },
+    { slug: 'odawara', label: '小田原・西湘', cities: ['小田原市'] },
   ],
   saitama: [
     { slug: 'urawa-omiya', label: '浦和・大宮', cities: ['さいたま市浦和区', 'さいたま市大宮区', 'さいたま市中央区'] },
