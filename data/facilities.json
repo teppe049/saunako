@@ -9427,5 +9427,649 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 114,
+    "slug": "off-sauna",
+    "name": "OFF SAUNA",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "水戸市",
+    "area": "水戸",
+    "address": "茨城県水戸市宮町2-4-35 水戸ビル5階",
+    "nearestStation": "水戸駅",
+    "walkMinutes": 4,
+    "priceMin": 3500,
+    "duration": 100,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日13:00〜24:00、土日12:00〜24:00",
+    "holidays": "不定休（要予約）",
+    "website": "https://offiiapp.amebaownd.com/",
+    "phone": "080-4088-5461",
+    "bookingUrl": "https://coubic.com/offsauna317",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "水着着用男女混浴。全9室（室内3室+外気浴6室）。氷の持ち込み可",
+    "images": [
+      "/facilities/114-0.webp",
+      "/facilities/114-1.webp",
+      "/facilities/114-2.webp",
+      "/facilities/114-3.webp"
+    ],
+    "lat": 36.373105,
+    "lng": 140.474372,
+    "description": "水戸駅から徒歩4分、全9室の貸切個室サウナ。室内3室と外気浴付き6室を備え、全室セルフロウリュ対応。水着着用の男女混浴式で、カップルや友人同士での利用にも最適。サウナ温度は最大100度。",
+    "saunakoCommentShort": "水戸駅チカで全9室の個室サウナが選べるよ！",
+    "saunakoCommentLong": "水戸駅から徒歩4分で全9部屋もあるプライベートサウナだよ！外気浴付きの部屋なら水戸の空を見上げながらととのえるのが最高かも。セルフロウリュもできるから自分好みの蒸し加減で楽しめるね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 100分 1名",
+        "price": 3500,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 100分 1名",
+        "price": 4500,
+        "duration": 100,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 115,
+    "slug": "mito-sauna-koto",
+    "name": "MITO SAUNA KOTO",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "水戸市",
+    "area": "水戸",
+    "address": "茨城県水戸市南町3-3-30 グランディールオノセ2F",
+    "nearestStation": "水戸駅",
+    "walkMinutes": 10,
+    "priceMin": 4500,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12-13",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:30",
+    "holidays": "月曜日",
+    "website": "https://fanfare-koto.com/koto",
+    "phone": "029-224-5618",
+    "bookingUrl": "https://coubic.com/mitosauna_koto",
+    "amenities": [
+      "タオル",
+      "バスタオル"
+    ],
+    "note": "水着着用男女混浴。レンタル水着300円、サウナハット100円。併設BAR fanfareあり",
+    "images": [
+      "/facilities/115-0.webp",
+      "/facilities/115-1.webp",
+      "/facilities/115-2.webp",
+      "/facilities/115-3.webp"
+    ],
+    "lat": 36.377133,
+    "lng": 140.467103,
+    "description": "水戸駅から徒歩約10分、BAR併設の屋上付き貸切フィンランド式サウナ。水風呂は約12-13度でしっかり冷え、屋上の外気浴スペースではインフィニティチェアで空を見渡しながらととのえる。90分の完全貸切制。",
+    "saunakoCommentShort": "屋上外気浴とBAR併設が最高の組み合わせ！",
+    "saunakoCommentLong": "屋上で空を見上げながらととのえるのがたまらないよ！水風呂は12-13度でキンキンに冷えてるし、セルフロウリュもできるから蒸し加減は自分次第。サウナのあとは併設のBARで一杯なんてのもアリかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 90分 1名",
+        "price": 4500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日 90分 2名",
+        "price": 6500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "平日 90分 3名",
+        "price": 7500,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "休日 90分 1名",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "休日 90分 2名",
+        "price": 7500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "休日 90分 3名",
+        "price": 8500,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 116,
+    "slug": "kominka-sauna-kiki",
+    "name": "古民家サウナ KIKI",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "つくば市",
+    "area": "つくば",
+    "address": "茨城県つくば市吉瀬1679-1 つくば文化郷内",
+    "nearestStation": "つくば駅",
+    "walkMinutes": null,
+    "priceMin": 6000,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "完全予約制",
+    "holidays": "不定休",
+    "website": "https://kominka-sauna.com/",
+    "phone": "070-5555-1848",
+    "bookingUrl": null,
+    "amenities": [
+      "バスタオル",
+      "サウナポンチョ",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "LINE予約制。車でのアクセス推奨（常磐道桜土浦ICから約8分）。BBQ・焚き火オプションあり。宿泊施設「別邸」併設",
+    "images": [
+      "/facilities/116-0.webp",
+      "/facilities/116-1.webp",
+      "/facilities/116-2.webp",
+      "/facilities/116-3.webp"
+    ],
+    "lat": 36.084688,
+    "lng": 140.149594,
+    "description": "築150年の古民家に併設されたフィンランド製ストーブの貸切サウナ。天井高4mの白壁ドーム型サウナ室でセルフロウリュが楽しめる。外気浴スペースと水風呂を完備し、BBQや焚き火、古民家宿泊との組み合わせも可能。",
+    "saunakoCommentShort": "築150年の古民家で味わう貸切サウナ体験！",
+    "saunakoCommentLong": "築150年の古民家に囲まれたドーム型サウナがめちゃくちゃ雰囲気いいよ！天井高4mの空間でセルフロウリュを楽しんだら、自然の中で外気浴。BBQや焚き火も一緒にできるから、友達と1日まるごと楽しむのもおすすめかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "日帰りサウナ 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "日帰りサウナ 2名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 117,
+    "slug": "koamigame",
+    "name": "コアミガメ",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "高萩市",
+    "area": "その他",
+    "address": "茨城県高萩市下君田741",
+    "nearestStation": "高萩駅",
+    "walkMinutes": null,
+    "priceMin": 30000,
+    "duration": 180,
+    "capacity": 6,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜17:00",
+    "holidays": "火・水・木曜日",
+    "website": "https://koamigame.com/",
+    "phone": "080-7557-0127",
+    "bookingUrl": "https://coubic.com/koamigame",
+    "amenities": [
+      "全身ソープ",
+      "ドライヤー",
+      "サンダル"
+    ],
+    "note": "水風呂なし（目の前の大北川で冷却、水温3〜18度）。車必須（常磐道高萩ICから約20分）。飲み物付き",
+    "images": [
+      "/facilities/117-0.webp",
+      "/facilities/117-1.webp",
+      "/facilities/117-2.webp",
+      "/facilities/117-3.webp"
+    ],
+    "lat": 36.809407,
+    "lng": 140.590795,
+    "description": "茨城県高萩市の山奥にある築80年の蔵を改装した薪ストーブ式フィンランドサウナ。水風呂の代わりに目の前の大北川（水温3〜18度）でクールダウンする野趣あふれる体験が魅力。1棟貸切で最大6名利用可能。",
+    "saunakoCommentShort": "蔵サウナ×川ダイブの野趣あふれる体験！",
+    "saunakoCommentLong": "築80年の蔵で薪サウナを楽しんだら、目の前の大北川にダイブ！水温は季節で3〜18度まで変わるから、訪れるたびに違う体験ができるのが面白いよね。山奥の秘境感がたまらないから、冒険好きな仲間と行くのがおすすめかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切サウナ 180分（最大6名）",
+        "price": 30000,
+        "duration": 180,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 118,
+    "slug": "shika-to-sauna",
+    "name": "鹿とサウナ",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "鹿嶋市",
+    "area": "その他",
+    "address": "茨城県鹿嶋市宮中5213-2",
+    "nearestStation": "鹿島神宮駅",
+    "walkMinutes": 25,
+    "priceMin": 19500,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:30〜22:00（4部制）",
+    "holidays": "火曜日",
+    "website": "https://shikasauna.jp/",
+    "phone": "080-2930-0420",
+    "bookingUrl": "https://shikasauna.jp/",
+    "amenities": [
+      "タオル",
+      "サウナポンチョ",
+      "サウナマット",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
+    "note": "水着着用必須。5名以上は+3,500円/人。1日4枠制。井戸水使用の水風呂",
+    "images": [
+      "/facilities/118-0.webp",
+      "/facilities/118-1.webp",
+      "/facilities/118-2.webp",
+      "/facilities/118-3.webp"
+    ],
+    "lat": 35.965241,
+    "lng": 140.639116,
+    "description": "茨城県鹿嶋市にある完全予約制の薪ストーブ式プライベートサウナ。サウナ室は最大110度まで上昇し、セルフロウリュにも対応。井戸水を使った水風呂と自然に囲まれた外気浴スペースで180分の貸切体験が楽しめる。",
+    "saunakoCommentShort": "薪サウナ110度×井戸水の本格アウトドア体験！",
+    "saunakoCommentLong": "薪ストーブで110度まで上がる本格サウナが気持ちいい！井戸水の水風呂でクールダウンしたら、自然に囲まれた外気浴でじっくりととのえるよ。180分たっぷり使えるから、仲間とゆっくり過ごすのにぴったりかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 180分（1-4名）",
+        "price": 19500,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "土日祝 180分（1-4名）",
+        "price": 25000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 119,
+    "slug": "sauna-naya",
+    "name": "SAUNA NAYA",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "古河市",
+    "area": "その他",
+    "address": "茨城県古河市大堤1185-3",
+    "nearestStation": "古河駅",
+    "walkMinutes": 27,
+    "priceMin": 3000,
+    "duration": 180,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-20",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜20:00（3部制）",
+    "holidays": "水・木曜日",
+    "website": "https://naya-sauna.studio.site/",
+    "phone": "080-2017-7037",
+    "bookingUrl": "https://naya-sauna.studio.site/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "化粧水",
+      "乳液",
+      "ドライヤー"
+    ],
+    "note": "相席利用と貸切利用の2形態あり。お茶テーマのロウリュ。味噌樽水風呂（深さ160cm）とワイン樽水風呂の2種類",
+    "images": [
+      "/facilities/119-0.webp",
+      "/facilities/119-1.webp",
+      "/facilities/119-2.webp",
+      "/facilities/119-3.webp"
+    ],
+    "lat": 36.177839,
+    "lng": 139.714095,
+    "description": "茨城県古河市にある築70年超の納屋をリノベーションしたお茶テーマのアウトドアサウナ。薪ストーブで80〜110度に熱し、隣接茶畑の緑茶・和紅茶・ほうじ茶でセルフロウリュが楽しめる。味噌樽とワイン樽の2種類の水風呂を備える。",
+    "saunakoCommentShort": "お茶ロウリュ×味噌樽水風呂の唯一無二体験！",
+    "saunakoCommentLong": "納屋をリノベした空間で、茶畑のお茶を使ったロウリュが楽しめるのがここだけの魅力！味噌樽の水風呂は深さ160cmで全身しっかり浸かれるし、ワイン樽水風呂もあるから2種類を比べてみてね。お茶の香りに包まれるサウナ、きっとハマるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "相席利用 平日 180分 1名",
+        "price": 3000,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "相席利用 土日祝 180分 1名",
+        "price": 3500,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "貸切利用 平日 180分（1-4名）",
+        "price": 26000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "貸切利用 土日祝 180分（1-4名）",
+        "price": 28000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 120,
+    "slug": "yamizo-barrel-sauna",
+    "name": "大子温泉やみぞホテル（バレルサウナ）",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "久慈郡大子町",
+    "area": "その他",
+    "address": "茨城県久慈郡大子町大字山田3218",
+    "nearestStation": "常陸大子駅",
+    "walkMinutes": null,
+    "priceMin": 10000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": null,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜17:00（3部制）",
+    "holidays": null,
+    "website": "https://www.yamizo.com/barrel-sauna/",
+    "phone": "0295-72-1511",
+    "bookingUrl": null,
+    "amenities": [
+      "サウナポンチョ",
+      "サウナハット"
+    ],
+    "note": "車でのアクセス推奨（常陸大子駅から車約5分）。サウナ利用者は温泉大浴場も利用可。レンタル水着500円",
+    "images": [
+      "/facilities/120-0.webp",
+      "/facilities/120-1.webp",
+      "/facilities/120-2.webp",
+      "/facilities/120-3.webp"
+    ],
+    "lat": 36.76844,
+    "lng": 140.312067,
+    "description": "茨城県大子町のやみぞホテル敷地内にあるバレルサウナ2基を備えた貸切サウナ。ヒノキ造りの水風呂とウッドデッキの外気浴スペースを完備。サウナ後は温泉大浴場も利用でき、日帰りでも充実のサウナ体験が楽しめる。",
+    "saunakoCommentShort": "バレルサウナ×温泉大浴場のダブル体験！",
+    "saunakoCommentLong": "バレルサウナでしっかり蒸されたあと、ヒノキの水風呂でクールダウン！ウッドデッキでの外気浴も気持ちいいよ。サウナのあとは温泉大浴場にも入れるから、1日で2倍楽しめちゃうのが嬉しいポイントだね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "基本プラン 120分（4名まで）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 121,
+    "slug": "tsumugi-tsukuba",
+    "name": "紡〜TSUMUGI〜",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "つくば市",
+    "area": "つくば",
+    "address": "茨城県つくば市春日4-24-2 La ViLLA Museo 1F 112号室",
+    "nearestStation": "つくば駅",
+    "walkMinutes": 10,
+    "priceMin": 12000,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "完全予約制",
+    "holidays": null,
+    "website": "https://www.instagram.com/sauna_tsumugi_tsukuba/",
+    "phone": "080-5833-1771",
+    "bookingUrl": null,
+    "amenities": [
+      "Aesopシャンプー",
+      "Aesopコンディショナー",
+      "Aesopボディソープ",
+      "ドライヤー"
+    ],
+    "note": "LINE予約制。HARVIA製サウナヒーター。Aesop統一アメニティ。公式サイトなし（Instagram・LINE窓口）",
+    "images": [
+      "/facilities/121-0.webp",
+      "/facilities/121-1.webp",
+      "/facilities/121-2.webp"
+    ],
+    "lat": 36.102128,
+    "lng": 140.098933,
+    "description": "茨城県つくば市の完全個室プライベートサウナ。HARVIA製ヒーターによる本格フィンランド式サウナを最大3名で貸切利用できる。Aesop統一のアメニティを備え、上質なプライベートサウナ体験を提供。つくば駅から徒歩約10分。",
+    "saunakoCommentShort": "Aesop完備の上質プライベートサウナ！",
+    "saunakoCommentLong": "HARVIA製ヒーターで本格フィンランド式サウナが楽しめるプライベート空間だよ！アメニティはAesopで統一されていて、細部までこだわりが感じられるのが嬉しいね。つくば駅から徒歩圏内だからアクセスもいいかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "基本プラン 90分（1-2名）",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "基本プラン 120分（1-2名）",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "基本プラン 180分（1-2名）",
+        "price": 22000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "基本プラン 90分（3名）",
+        "price": 13000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "基本プラン 120分（3名）",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "基本プラン 180分（3名）",
+        "price": 23000,
+        "duration": 180,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 122,
+    "slug": "kasamabi-sauna",
+    "name": "KASAMABI SAUNA",
+    "prefecture": "ibaraki",
+    "prefectureLabel": "茨城県",
+    "city": "笠間市",
+    "area": "その他",
+    "address": "茨城県笠間市笠間2192-2",
+    "nearestStation": "笠間駅",
+    "walkMinutes": 20,
+    "priceMin": 44000,
+    "duration": 240,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜20:00（3部制）",
+    "holidays": null,
+    "website": "https://kasamabi.com/",
+    "phone": null,
+    "bookingUrl": "https://kasamabi.hacomono.jp/home",
+    "amenities": [
+      "バスローブ",
+      "サウナハット",
+      "タオル",
+      "歯ブラシ",
+      "コスメ"
+    ],
+    "note": "会員制/ビジター可。初回体験44,000円、ビジター66,000円、メンバー16,500円（入会金300,000円+年会費100,000円）。ドリンクオールインクルーシブ",
+    "images": [
+      "/facilities/122-0.webp",
+      "/facilities/122-1.webp",
+      "/facilities/122-2.webp",
+      "/facilities/122-3.webp"
+    ],
+    "lat": 36.371446,
+    "lng": 140.257844,
+    "description": "茨城県笠間市の完全予約制一棟貸しプライベートサウナ。笠間焼タイルと稲田石を使った薪ストーブサウナ、地下120mの天然地下水かけ流し水風呂、6m超の吹き抜け外気浴スペースを備える。ドリンク・コスメ・リネンはオールインクルーシブ。",
+    "saunakoCommentShort": "笠間焼×天然地下水の極上プライベート空間！",
+    "saunakoCommentLong": "笠間焼タイルが美しいサウナ室で薪ストーブの熱を浴びたら、地下120mの天然地下水かけ流し水風呂へ！6mの吹き抜け外気浴も開放感がすごいよ。ドリンクもコスメも全部込みだから、手ぶらで贅沢なサウナ体験が楽しめるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "初回体験 240分（最大4名）",
+        "price": 44000,
+        "duration": 240,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 240分（最大4名）",
+        "price": 66000,
+        "duration": 240,
+        "capacity": 4
+      },
+      {
+        "name": "メンバー 240分（最大6名）",
+        "price": 16500,
+        "duration": 240,
+        "capacity": 6
+      },
+      {
+        "name": "メンバー 90分（最大6名）",
+        "price": 8250,
+        "duration": 90,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
   }
 ]
