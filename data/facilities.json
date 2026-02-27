@@ -13062,7 +13062,7 @@
     "prefecture": "gunma",
     "prefectureLabel": "群馬県",
     "city": "桐生市",
-    "area": "群馬・その他",
+    "area": "群馬・太田・桐生",
     "address": "群馬県桐生市広沢町6丁目320-1",
     "nearestStation": "新桐生駅",
     "walkMinutes": null,
@@ -13141,7 +13141,7 @@
     "prefecture": "gunma",
     "prefectureLabel": "群馬県",
     "city": "太田市",
-    "area": "群馬・その他",
+    "area": "群馬・太田・桐生",
     "address": "群馬県太田市新井町533-1",
     "nearestStation": "太田駅",
     "walkMinutes": null,
@@ -13205,7 +13205,7 @@
     "prefecture": "gunma",
     "prefectureLabel": "群馬県",
     "city": "利根郡みなかみ町",
-    "area": "群馬・その他",
+    "area": "群馬・みなかみ・沼田",
     "address": "群馬県利根郡みなかみ町月夜野2537-2",
     "nearestStation": "上毛高原駅",
     "walkMinutes": null,
@@ -13276,6 +13276,550 @@
         "price": 16000,
         "duration": 120,
         "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 156,
+    "slug": "kutsurogi-takasaki",
+    "name": "プライベートサウナ&ラウンジ くつろぎ",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "高崎市",
+    "area": "群馬・高崎",
+    "address": "群馬県高崎市鞘町1-1 スズラン高崎4階",
+    "nearestStation": "高崎駅",
+    "walkMinutes": 12,
+    "priceMin": 5500,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:00（最終受付 22:00）",
+    "holidays": "年中無休",
+    "website": "https://itoi-hd.co.jp/kutsurogi/",
+    "phone": "027-386-2683",
+    "bookingUrl": "https://coubic.com/kutsurogi-sauna",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "化粧水",
+      "ドライヤー",
+      "ヘアゴム",
+      "マウスウォッシュ",
+      "天然水",
+      "ポカリスエット"
+    ],
+    "note": "完全会員制（ビジター利用は会員の紹介が必要）。二十四節気をテーマにした8つの個室",
+    "images": [
+      "/facilities/156-0.webp",
+      "/facilities/156-1.webp",
+      "/facilities/156-2.webp",
+      "/facilities/156-3.webp"
+    ],
+    "lat": 36.324759,
+    "lng": 139.005532,
+    "description": "高崎駅徒歩12分、スズラン百貨店4階にある完全会員制のプライベートサウナ。二十四節気をテーマにした8つの個室を備え、セルフロウリュやカップル利用も可能。深夜24時まで営業で仕事帰りにも利用しやすい。",
+    "saunakoCommentShort": "百貨店の中にある隠れ家プライベートサウナ!",
+    "saunakoCommentLong": "スズラン百貨店の4階に8つの個室サウナがあるんだよ! 二十四節気をテーマにした空間で、セルフロウリュもできるし深夜24時まで営業してるから仕事帰りにも寄れるのが嬉しいね。カップルでも利用できるよ!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2024-06-03",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "2〜3人部屋 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "4人部屋 90分",
+        "price": 7700,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "6人部屋 90分",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 157,
+    "slug": "calm-ota",
+    "name": "CALM",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "太田市",
+    "area": "群馬・太田・桐生",
+    "address": "群馬県太田市本町23-24",
+    "nearestStation": "太田駅",
+    "walkMinutes": 10,
+    "priceMin": 2700,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日 10:00〜19:00 / 日祝 10:00〜17:00",
+    "holidays": "第1・3・5日曜、他不定休",
+    "website": "https://www.instagram.com/calm_sauna/",
+    "phone": "0276-55-4511",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000623155/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "クレンジング",
+      "化粧水",
+      "乳液",
+      "ドライヤー"
+    ],
+    "note": "エステサロン併設の1組限定プライベートサウナ。3種のアロマ選択可能",
+    "images": [
+      "/facilities/157-0.webp",
+      "/facilities/157-1.webp",
+      "/facilities/157-2.webp",
+      "/facilities/157-3.webp"
+    ],
+    "lat": 36.297548,
+    "lng": 139.370852,
+    "description": "太田駅徒歩10分のエステサロン併設プライベートサウナ。1組限定で90分2,700円からとリーズナブル。水風呂15°C、セルフロウリュ対応で、3種のアロマから選べる。カップルでの利用もOK。",
+    "saunakoCommentShort": "1組限定で2,700円〜のコスパ最強サウナ!",
+    "saunakoCommentLong": "太田駅から歩ける距離に、1組限定のプライベートサウナがあるよ! 90分2,700円〜とコスパ抜群で、水風呂は15°Cにキンキンに冷えてるし、3種のアロマからセルフロウリュも楽しめるかも。エステサロン併設だから女性にもおすすめだよ!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2023-11-01",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "プライベートサウナ 90分",
+        "price": 2700,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 158,
+    "slug": "shiroiya-hotel-sauna",
+    "name": "白井屋ホテル サウナ",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "前橋市",
+    "area": "群馬・前橋",
+    "address": "群馬県前橋市本町2-2-15",
+    "nearestStation": "前橋駅",
+    "walkMinutes": 15,
+    "priceMin": 5000,
+    "duration": 80,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "16:00〜22:20 / 8:00〜9:20（時間枠制）",
+    "holidays": "不定休",
+    "website": "https://www.shiroiya.com/",
+    "phone": "027-231-4618",
+    "bookingUrl": "https://www.tablecheck.com/en/shops/shiroiya-sauna/reserve",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "スキンケア",
+      "ポンチョ",
+      "サンダル"
+    ],
+    "note": "創業300年の老舗旅館を藤本壮介設計でリノベーション。TTNE監修。フィンランドサウナ・薬草サウナの2種（日帰り利用可）。1日4組限定",
+    "images": [
+      "/facilities/158-0.webp",
+      "/facilities/158-1.webp",
+      "/facilities/158-2.webp",
+      "/facilities/158-3.webp"
+    ],
+    "lat": 36.390306,
+    "lng": 139.070046,
+    "description": "創業300年の老舗旅館を建築家・藤本壮介がリノベーションしたデザインホテル内のプライベートサウナ。TTNE監修のフィンランドサウナと薬草サウナの2種を日帰りで利用可能。外気浴スペースも完備。1日4組限定。",
+    "saunakoCommentShort": "藤本壮介設計のアートホテルで整う贅沢体験!",
+    "saunakoCommentLong": "創業300年の老舗旅館がおしゃれにリノベされたホテルの中に、TTNE監修のサウナがあるんだよ! フィンランドサウナと薬草サウナの2種類から選べて、外気浴もできるのが最高。1日4組限定だから特別感もあるし、3種のオリジナルアロマでセルフロウリュもできるよ!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "フィンランドサウナ 80分",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 4
+      },
+      {
+        "name": "薬草サウナ 80分",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 159,
+    "slug": "akagi-loginn",
+    "name": "Akagi LogINN",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "前橋市",
+    "area": "群馬・前橋",
+    "address": "群馬県前橋市粕川町中之沢249-126",
+    "nearestStation": "駒形駅",
+    "walkMinutes": 0,
+    "priceMin": 7000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜22:00（時間枠制）",
+    "holidays": "不定休",
+    "website": "https://akagi-loginn.com/",
+    "phone": "080-8880-2312",
+    "bookingUrl": "https://reserve.489ban.net/client/akagi-loginn/0/plan/availability/room",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "化粧水",
+      "ドライヤー",
+      "サウナマット",
+      "ミネラルウォーター"
+    ],
+    "note": "赤城山麓の貸切サウナ。ログサウナとカントリーサウナの2棟。赤城山の地下80m伏流水の水風呂。車でのアクセス推奨",
+    "images": [
+      "/facilities/159-0.webp",
+      "/facilities/159-1.webp",
+      "/facilities/159-2.webp",
+      "/facilities/159-3.webp"
+    ],
+    "lat": 36.478519,
+    "lng": 139.196734,
+    "description": "赤城山麓に位置する貸切サウナ施設。ログサウナとカントリーサウナの2棟を備え、赤城山の地下80m伏流水を使った水風呂が特徴。外気浴スペースでは赤城山の自然を満喫できる。日帰り・宿泊どちらも対応。",
+    "saunakoCommentShort": "赤城山の伏流水で冷える贅沢な森サウナ!",
+    "saunakoCommentLong": "赤城山のふもとにある貸切サウナで、2タイプのサウナ小屋から選べるよ! 水風呂は赤城山の地下80mから汲み上げた伏流水で、これがまた気持ちいいの。外気浴では山の空気を吸いながらリラックスできるし、自然好きにはたまらないかも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "日帰りサウナ 2時間",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "日帰りサウナ 4時間",
+        "price": 11000,
+        "duration": 240,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 160,
+    "slug": "the-five-rivers",
+    "name": "THE FIVE RIVERS FINE GLAMPING 群馬白沢",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "沼田市",
+    "area": "群馬・みなかみ・沼田",
+    "address": "群馬県沼田市白沢町高平2540-5",
+    "nearestStation": "沼田駅",
+    "walkMinutes": 0,
+    "priceMin": 6000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "10",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜18:00（時間枠制）",
+    "holidays": "不定休",
+    "website": "https://www.thefiveriversfineglamping.com/",
+    "phone": "080-8543-4211",
+    "bookingUrl": "https://reserve.489ban.net/client/fg-shirasawa/0/detail/642982",
+    "amenities": [
+      "タオル",
+      "アロマオイル"
+    ],
+    "note": "白沢川沿いのグランピング施設。WOODサウナとRIVERサウナの2種。RIVERサウナは白沢川の天然水風呂。車でのアクセス推奨",
+    "images": [
+      "/facilities/160-0.webp",
+      "/facilities/160-1.webp",
+      "/facilities/160-2.webp",
+      "/facilities/160-3.webp"
+    ],
+    "lat": 36.68048,
+    "lng": 139.15754,
+    "description": "沼田市の白沢川沿いにあるグランピング施設併設の貸切サウナ。WOODサウナ（檜水風呂）とRIVERサウナ（白沢川の天然水風呂）の2種を日帰りで利用可能。川のせせらぎを聴きながら整える贅沢な空間。",
+    "saunakoCommentShort": "白沢川の天然水風呂が最高に気持ちいい!",
+    "saunakoCommentLong": "沼田の白沢川沿いにある貸切サウナで、2タイプから選べるよ! おすすめはRIVERサウナ。白沢川にそのまま入れる天然水風呂で約10°Cのキンキン体験ができるの。川のせせらぎを聴きながらの外気浴は最高かも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "WOODサウナ 120分貸切（2名）",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "RIVERサウナ 120分貸切（2名）",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 161,
+    "slug": "mizunuma-village",
+    "name": "サウナの森 水沼ヴィレッジ",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "桐生市",
+    "area": "群馬・太田・桐生",
+    "address": "群馬県桐生市黒保根町八木原579-1",
+    "nearestStation": "水沼駅",
+    "walkMinutes": 3,
+    "priceMin": 9000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://mizunuma-village.jp/",
+    "phone": "0277-32-4344",
+    "bookingUrl": "https://mizunuma.snack.chillnn.com/",
+    "amenities": [
+      "タオルセット（有料）",
+      "サウナハット（有料）",
+      "水着（有料）"
+    ],
+    "note": "築地銀だこグループ運営。MONTBLANC・TAPIO・VIHTAの3棟の貸切サウナあり。天然温泉併設。水沼駅徒歩3分で電車アクセス可",
+    "images": [
+      "/facilities/161-0.webp",
+      "/facilities/161-1.webp",
+      "/facilities/161-2.webp",
+      "/facilities/161-3.webp"
+    ],
+    "lat": 36.496539,
+    "lng": 139.286678,
+    "description": "桐生市の渡良瀬渓谷沿いにある大型サウナ施設。貸切サウナは3棟（MONTBLANC・TAPIO・VIHTA）を備え、天然温泉やグランピングも併設。わたらせ渓谷鐵道・水沼駅徒歩3分と電車でもアクセスしやすい。",
+    "saunakoCommentShort": "渓谷沿いの貸切サウナが3棟もある大型施設!",
+    "saunakoCommentLong": "渡良瀬渓谷沿いに貸切サウナが3棟もあるんだよ! 薪火サウナにセルフロウリュ、水風呂は地下水16°Cでしっかり冷える。しかも水沼駅から徒歩3分で電車でも行けるのが嬉しいポイント。天然温泉もあるから1日楽しめるかも!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2024-04-23",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "MONTBLANC 貸切サウナ 120分（平日）",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "MONTBLANC 貸切サウナ 120分（土日祝）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "TAPIO 貸切サウナ 150分（平日）",
+        "price": 10000,
+        "duration": 150,
+        "capacity": 6
+      },
+      {
+        "name": "TAPIO 貸切サウナ 150分（土日祝）",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 6
+      },
+      {
+        "name": "VIHTA 貸切サウナ 150分（平日）",
+        "price": 10000,
+        "duration": 150,
+        "capacity": 6
+      },
+      {
+        "name": "VIHTA 貸切サウナ 150分（土日祝）",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 162,
+    "slug": "takitsubo-sauna",
+    "name": "滝つぼサウナ",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "利根郡みなかみ町",
+    "area": "群馬・みなかみ・沼田",
+    "address": "群馬県利根郡みなかみ町藤原4957",
+    "nearestStation": "水上駅",
+    "walkMinutes": 0,
+    "priceMin": 11000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "3〜17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜17:00（時間枠制）",
+    "holidays": "不定休",
+    "website": "https://hotel-sunbird.com/saunalp/",
+    "phone": "0278-75-2321",
+    "bookingUrl": "https://www.nap-camp.com/gunma/13839",
+    "amenities": [
+      "バスタオル",
+      "サンダル"
+    ],
+    "note": "ホテルサンバード内の貸切トレーラーサウナ。天然の滝つぼが水風呂。谷川連峰の絶景を見ながら外気浴。冬季は雪ダイブ体験も。車でのアクセス推奨",
+    "images": [
+      "/facilities/162-0.webp",
+      "/facilities/162-1.webp",
+      "/facilities/162-2.webp",
+      "/facilities/162-3.webp"
+    ],
+    "lat": 36.851201,
+    "lng": 139.06626,
+    "description": "みなかみ町のホテルサンバード敷地内にある貸切トレーラーサウナ。HARVIA製薪ストーブを使用し、天然の滝つぼが水風呂という唯一無二の体験ができる。谷川連峰を望む外気浴も魅力。",
+    "saunakoCommentShort": "天然の滝つぼに飛び込む水風呂は衝撃体験!",
+    "saunakoCommentLong": "みなかみの大自然の中で、なんと天然の滝つぼが水風呂なんだよ! 季節によって3〜17°Cと変わるのも自然ならでは。HARVIA製の薪ストーブでしっかり蒸されたあとに谷川連峰を眺めながらの外気浴は格別かも。冬は雪ダイブもできるって!",
+    "updatedAt": "2026-02-27",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切トレーラーサウナ 120分",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 163,
+    "slug": "kanrano-sauna",
+    "name": "kanrano sauna",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "甘楽郡甘楽町",
+    "area": "群馬・その他",
+    "address": "群馬県甘楽郡甘楽町秋畑814-3",
+    "nearestStation": "上州福島駅",
+    "walkMinutes": 0,
+    "priceMin": 12000,
+    "duration": 120,
+    "capacity": 2,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜18:00",
+    "holidays": "火曜定休",
+    "website": "https://sites.google.com/view/kanrano-sauna/",
+    "phone": "0274-64-9745",
+    "bookingUrl": "https://kanranosauna.booking.chillnn.com/",
+    "amenities": [],
+    "note": "森の中の薪火式フィンランドサウナ。水風呂は天然の渓流。キャンプ場併設。水着・タオル・サンダル持参必要。車でのアクセス推奨",
+    "images": [
+      "/facilities/163-0.webp",
+      "/facilities/163-1.webp",
+      "/facilities/163-2.webp",
+      "/facilities/163-3.webp"
+    ],
+    "lat": 36.204125,
+    "lng": 138.899015,
+    "description": "甘楽町の森の中にある薪火式フィンランドサウナ。水風呂の代わりに天然の渓流で冷水浴ができる。キャンプ場も併設しており、自然の中でサウナを楽しみたい人におすすめ。",
+    "saunakoCommentShort": "森の中で渓流に飛び込む野性派サウナ!",
+    "saunakoCommentLong": "甘楽町の森の奥にある薪火式のフィンランドサウナだよ! 水風呂は天然の渓流で、自然そのものの冷水浴が味わえるの。キャンプ場も併設してるから、アウトドア好きにはたまらない体験かも。タオルや水着は持参してね!",
+    "updatedAt": "2026-02-27",
+    "openedAt": "2023-01-01",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "サウナ貸切 平日 120分（2名）",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ貸切 土日祝 120分（2名）",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
       }
     ],
     "timeSlots": null

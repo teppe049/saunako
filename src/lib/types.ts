@@ -90,6 +90,11 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'chiba', label: '千葉県' },
   { code: 'osaka', label: '大阪府' },
   { code: 'kyoto', label: '京都府' },
+  { code: 'gunma', label: '群馬県' },
+  { code: 'tochigi', label: '栃木県' },
+  { code: 'ibaraki', label: '茨城県' },
+  { code: 'aichi', label: '愛知県' },
+  { code: 'fukuoka', label: '福岡県' },
 ];
 
 export interface AreaGroup {
@@ -133,5 +138,32 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'matsudo-kashiwa', label: '松戸・柏', cities: ['松戸市', '柏市'] },
     { slug: 'tateyama-minamiboso', label: '館山・南房総', cities: ['館山市'] },
     { slug: 'other', label: 'その他', cities: ['安房郡鋸南町'] },
+  ],
+  gunma: [
+    { slug: 'takasaki', label: '高崎', cities: ['高崎市'] },
+    { slug: 'maebashi', label: '前橋', cities: ['前橋市'] },
+    { slug: 'ota-kiryu', label: '太田・桐生', cities: ['太田市', '桐生市'] },
+    { slug: 'minakami-numata', label: 'みなかみ・沼田', cities: ['利根郡みなかみ町', '沼田市'] },
+    { slug: 'other', label: 'その他', cities: ['甘楽郡甘楽町'] },
+  ],
+  tochigi: [
+    { slug: 'utsunomiya', label: '宇都宮', cities: ['宇都宮市'] },
+    { slug: 'nasu', label: '那須・塩原', cities: ['那須郡那須町', '那須塩原市', '塩谷郡塩谷町'] },
+    { slug: 'nikko', label: '日光', cities: ['日光市'] },
+    { slug: 'other', label: 'その他', cities: ['小山市', '芳賀郡茂木町'] },
+  ],
+  ibaraki: [
+    { slug: 'mito', label: '水戸・笠間', cities: ['水戸市', '笠間市'] },
+    { slug: 'tsukuba', label: 'つくば', cities: ['つくば市'] },
+    { slug: 'other', label: 'その他', cities: ['古河市', '久慈郡大子町', '高萩市', '鹿嶋市'] },
+  ],
+  aichi: [
+    { slug: 'nagoya', label: '名古屋', cities: ['名古屋市'] },
+    { slug: 'other', label: 'その他', cities: ['刈谷市', '岡崎市', '岩倉市', '常滑市'] },
+  ],
+  fukuoka: [
+    { slug: 'fukuoka-city', label: '福岡市', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
+    { slug: 'kitakyushu', label: '北九州', cities: ['北九州市小倉北区'] },
+    { slug: 'other', label: 'その他', cities: ['久留米市', '福津市', '筑紫野市'] },
   ],
 };
