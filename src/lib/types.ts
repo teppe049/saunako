@@ -84,16 +84,23 @@ export interface Prefecture {
 }
 
 export const PREFECTURES: Prefecture[] = [
-  { code: 'tokyo', label: '東京都' },
-  { code: 'kanagawa', label: '神奈川県' },
+  { code: 'hokkaido', label: '北海道' },
+  { code: 'aomori', label: '青森県' },
+  { code: 'iwate', label: '岩手県' },
+  { code: 'miyagi', label: '宮城県' },
+  { code: 'akita', label: '秋田県' },
+  { code: 'yamagata', label: '山形県' },
+  { code: 'fukushima', label: '福島県' },
+  { code: 'ibaraki', label: '茨城県' },
+  { code: 'tochigi', label: '栃木県' },
+  { code: 'gunma', label: '群馬県' },
   { code: 'saitama', label: '埼玉県' },
   { code: 'chiba', label: '千葉県' },
-  { code: 'osaka', label: '大阪府' },
-  { code: 'kyoto', label: '京都府' },
-  { code: 'gunma', label: '群馬県' },
-  { code: 'tochigi', label: '栃木県' },
-  { code: 'ibaraki', label: '茨城県' },
+  { code: 'tokyo', label: '東京都' },
+  { code: 'kanagawa', label: '神奈川県' },
   { code: 'aichi', label: '愛知県' },
+  { code: 'kyoto', label: '京都府' },
+  { code: 'osaka', label: '大阪府' },
   { code: 'fukuoka', label: '福岡県' },
 ];
 
@@ -103,6 +110,23 @@ export interface RegionGroup {
 }
 
 export const REGION_GROUPS: RegionGroup[] = [
+  {
+    label: '北海道',
+    prefectures: [
+      { code: 'hokkaido', label: '北海道' },
+    ],
+  },
+  {
+    label: '東北',
+    prefectures: [
+      { code: 'aomori', label: '青森県' },
+      { code: 'iwate', label: '岩手県' },
+      { code: 'miyagi', label: '宮城県' },
+      { code: 'akita', label: '秋田県' },
+      { code: 'yamagata', label: '山形県' },
+      { code: 'fukushima', label: '福島県' },
+    ],
+  },
   {
     label: '関東',
     prefectures: [
@@ -116,16 +140,21 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
-    label: '関西',
+    label: '東海',
     prefectures: [
-      { code: 'osaka', label: '大阪府' },
-      { code: 'kyoto', label: '京都府' },
+      { code: 'aichi', label: '愛知県' },
     ],
   },
   {
-    label: 'その他',
+    label: '関西',
     prefectures: [
-      { code: 'aichi', label: '愛知県' },
+      { code: 'kyoto', label: '京都府' },
+      { code: 'osaka', label: '大阪府' },
+    ],
+  },
+  {
+    label: '九州',
+    prefectures: [
       { code: 'fukuoka', label: '福岡県' },
     ],
   },
@@ -138,6 +167,45 @@ export interface AreaGroup {
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
+  hokkaido: [
+    { slug: 'sapporo', label: '札幌', cities: ['札幌市中央区', '札幌市東区', '札幌市白石区'] },
+    { slug: 'douo', label: '道央', cities: ['千歳市', '室蘭市'] },
+    { slug: 'donan', label: '道南', cities: ['函館市'] },
+    { slug: 'dohoku', label: '道北', cities: ['旭川市', '上川郡当麻町'] },
+    { slug: 'dotou', label: '道東', cities: ['帯広市', '北見市'] },
+  ],
+  aomori: [
+    { slug: 'aomori-city', label: '青森市', cities: ['青森市'] },
+    { slug: 'hachinohe', label: '八戸', cities: ['八戸市'] },
+    { slug: 'tsugaru', label: '津軽', cities: ['平川市'] },
+    { slug: 'towada', label: '十和田', cities: ['十和田市'] },
+  ],
+  iwate: [
+    { slug: 'morioka', label: '盛岡', cities: ['盛岡市'] },
+    { slug: 'other', label: 'その他', cities: ['紫波郡紫波町', '岩手郡岩手町', '北上市'] },
+  ],
+  miyagi: [
+    { slug: 'sendai', label: '仙台', cities: ['仙台市青葉区'] },
+    { slug: 'other', label: 'その他', cities: ['宮城郡利府町', '柴田郡柴田町', '岩沼市', '牡鹿郡女川町', '大崎市', '気仙沼市'] },
+  ],
+  akita: [
+    { slug: 'yokote', label: '横手', cities: ['横手市'] },
+    { slug: 'other', label: 'その他', cities: ['山本郡八峰町'] },
+  ],
+  yamagata: [
+    { slug: 'yamagata-city', label: '山形市', cities: ['山形市'] },
+    { slug: 'tendo', label: '天童', cities: ['天童市'] },
+    { slug: 'yonezawa', label: '米沢', cities: ['米沢市'] },
+    { slug: 'zaou', label: '蔵王', cities: ['上山市'] },
+    { slug: 'shonai', label: '庄内', cities: ['鶴岡市'] },
+  ],
+  fukushima: [
+    { slug: 'fukushima-city', label: '福島市', cities: ['福島市'] },
+    { slug: 'koriyama', label: '郡山', cities: ['郡山市'] },
+    { slug: 'iwaki', label: 'いわき', cities: ['いわき市'] },
+    { slug: 'aizu', label: '会津', cities: ['耶麻郡猪苗代町'] },
+    { slug: 'shirakawa', label: '白河', cities: ['白河市'] },
+  ],
   tokyo: [
     { slug: 'shinjuku-minato', label: '新宿・港・銀座', cities: ['千代田区', '中央区', '港区', '新宿区'] },
     { slug: 'shibuya-setagaya', label: '渋谷・世田谷', cities: ['世田谷区', '渋谷区', '中野区', '杉並区', '目黒区'] },
