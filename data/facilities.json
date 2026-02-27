@@ -16639,7 +16639,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "同性同士のみ利用可。LED15色切替・風景映像ディスプレイ・アロマ水完備",
-    "images": [],
+    "images": [
+      "/facilities/224-0.webp",
+      "/facilities/224-1.webp",
+      "/facilities/224-2.webp",
+      "/facilities/224-3.webp"
+    ],
     "lat": 38.212778,
     "lng": 140.337336,
     "description": "山形市にある完全プライベートサウナ。LED15色切替や風景映像ディスプレイ、アロマ水など五感を刺激する演出が特徴。セルフロウリュ対応で、70分1名3,500円・2名1名あたり2,500円。",
@@ -16681,7 +16686,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "薪サウナ・ドライサウナ・スチームサウナの3種完備。水着着用で男女一緒に利用可。壺風呂水風呂あり",
-    "images": [],
+    "images": [
+      "/facilities/225-0.webp",
+      "/facilities/225-1.webp",
+      "/facilities/225-2.webp",
+      "/facilities/225-3.webp"
+    ],
     "lat": 38.217002,
     "lng": 140.332061,
     "description": "山形市にある完全貸切のサウナ施設。薪サウナ・ドライサウナ・スチームサウナの3種類を楽しめる。壺風呂型の水風呂やウッドデッキでの外気浴スペースも完備。",
@@ -16723,7 +16733,12 @@
     "bookingUrl": "https://coubic.com/hakko-satoyama/593481",
     "amenities": [],
     "note": "薪ストーブ使用のバレル型サウナ。天然地下水かけ流し水風呂",
-    "images": [],
+    "images": [
+      "/facilities/226-0.webp",
+      "/facilities/226-1.webp",
+      "/facilities/226-2.webp",
+      "/facilities/226-3.webp"
+    ],
     "lat": 38.231658,
     "lng": 140.415236,
     "description": "山形市の自然の中にある完全予約制のバレル型プライベートサウナ。薪ストーブによるセルフロウリュと天然地下水かけ流しの水風呂が魅力。開放的な外気浴スペースも完備。",
@@ -16765,7 +16780,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "新左衛門の湯内。1名専用。最高120℃サウナ、アロマロウリュ4種、冷やし温泉の水風呂、外気浴テラス",
-    "images": [],
+    "images": [
+      "/facilities/227-0.webp",
+      "/facilities/227-1.webp",
+      "/facilities/227-2.webp",
+      "/facilities/227-3.webp"
+    ],
     "lat": 38.164508,
     "lng": 140.3949,
     "description": "蔵王温泉・新左衛門の湯内にある1名専用プライベートサウナ。最高120℃のサウナ室でアロマロウリュ4種を楽しめる。冷やし温泉で体を冷やした後は、外気浴テラスで蔵王の風を感じながらととのえる。",
@@ -16807,7 +16827,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "2名以上から利用可。ドライサウナ・テントサウナ・湧き水水風呂・75インチTV完備。カフェ併設",
-    "images": [],
+    "images": [
+      "/facilities/228-0.webp",
+      "/facilities/228-1.webp",
+      "/facilities/228-2.webp",
+      "/facilities/228-3.webp"
+    ],
     "lat": 38.180343,
     "lng": 140.319722,
     "description": "山形市蔵王の大鳥居のふもとにあるカフェ併設のサウナ施設。ドライサウナとテントサウナを備え、湧き水を使った水風呂と開放的な外気浴が楽しめる。2名以上から利用可能。",
@@ -16849,7 +16874,12 @@
     "bookingUrl": "https://reserva.be/sauna_tsukiakari",
     "amenities": [],
     "note": "湯坊いちらく内。フィンランド式85-90℃、露天風呂（温泉42℃）付き",
-    "images": [],
+    "images": [
+      "/facilities/229-0.webp",
+      "/facilities/229-1.webp",
+      "/facilities/229-2.webp",
+      "/facilities/229-3.webp"
+    ],
     "lat": 38.35906,
     "lng": 140.385123,
     "description": "天童温泉・湯坊いちらく内にあるプライベートサウナ。フィンランド式85〜90℃のサウナ室でセルフロウリュを楽しめる。16℃の水風呂に加え、42℃の天然温泉露天風呂も完備。天童駅から徒歩15分。",
@@ -16891,7 +16921,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "温度調整可能なサウナ＆水風呂。源泉100%かけ流し温泉付き。カップルOK",
-    "images": [],
+    "images": [
+      "/facilities/230-0.webp",
+      "/facilities/230-1.webp",
+      "/facilities/230-2.webp",
+      "/facilities/230-3.webp"
+    ],
     "lat": 37.880678,
     "lng": 140.053956,
     "description": "米沢市の小野川温泉にある貸切プライベートサウナ。サウナも水風呂も温度調整可能で、好みに合わせた体験ができる。源泉100%かけ流しの温泉付き。カップルでの利用もOK。",
@@ -16933,7 +16968,12 @@
     "bookingUrl": "https://coubic.com/kogenyu",
     "amenities": [],
     "note": "標高1,000m。入浴+サウナ2h 1,600円。アロマ数十種類、プール・酸素カプセル併設",
-    "images": [],
+    "images": [
+      "/facilities/231-0.webp",
+      "/facilities/231-1.webp",
+      "/facilities/231-2.webp",
+      "/facilities/231-3.webp"
+    ],
     "lat": 38.123938,
     "lng": 140.397263,
     "description": "蔵王坊平の標高1,000mに位置するリカバリー温泉施設。セルフロウリュ対応のサウナに数十種類のアロマを用意。外気浴で蔵王の高原の空気を満喫できる。入浴+サウナ2時間1,600円。",
@@ -16975,7 +17015,11 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "日本海ビュー。アロマオイル選択可。水着着用必須",
-    "images": [],
+    "images": [
+      "/facilities/232-0.webp",
+      "/facilities/232-1.webp",
+      "/facilities/232-2.webp"
+    ],
     "lat": 38.780495,
     "lng": 139.756093,
     "description": "鶴岡市湯野浜にあるプライベートサウナ。日本海を眺めながらセルフロウリュを楽しめる。アロマオイルは好みのものを選択可能。水風呂も完備で、1名90分2,000円から。",
@@ -17017,7 +17061,12 @@
     "bookingUrl": "https://iareserve01.i-asp.ne.jp/reservle/Ftuuli.html",
     "amenities": [],
     "note": "個室サウナ3部屋（ホワイトバーチ/ストーン/フレイム）＋大部屋サウナ。Bluetooth対応",
-    "images": [],
+    "images": [
+      "/facilities/233-0.webp",
+      "/facilities/233-1.webp",
+      "/facilities/233-2.webp",
+      "/facilities/233-3.webp"
+    ],
     "lat": 37.754434,
     "lng": 140.461732,
     "description": "福島駅から徒歩1分の好立地にあるサウナ施設。個室サウナ3部屋と大部屋サウナを備える。フィンランド式ロウリュ、水風呂、外気浴に加えBluetooth対応で音楽も楽しめる。",
@@ -17059,7 +17108,10 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "バレルサウナ、屋上外気浴、水着着用で男女利用可。ベーグルカフェ併設",
-    "images": [],
+    "images": [
+      "/facilities/234-0.webp",
+      "/facilities/234-1.webp"
+    ],
     "lat": 37.754168,
     "lng": 140.468256,
     "description": "福島市の文化堂ビル4Fにあるプライベートサウナ。バレルサウナでセルフロウリュを楽しみ、屋上の外気浴スペースでととのえる。水風呂も完備。福島駅から徒歩10分。",
@@ -17101,7 +17153,10 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "福島産アロマ使用。2種水風呂（極冷・ぬるめ）。水着着用で男女利用可",
-    "images": [],
+    "images": [
+      "/facilities/235-0.webp",
+      "/facilities/235-1.webp"
+    ],
     "lat": 36.98577,
     "lng": 140.901413,
     "description": "いわき市にある完全個室の貸切プライベートサウナ。福島産アロマを使用したロウリュが特徴で、極冷とぬるめの2種類の水風呂を完備。外気浴スペースも充実。",
@@ -17143,7 +17198,10 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "無人営業。桶型水風呂。水着持参必須。LINE予約",
-    "images": [],
+    "images": [
+      "/facilities/236-0.webp",
+      "/facilities/236-1.webp"
+    ],
     "lat": 37.010222,
     "lng": 140.845246,
     "description": "いわき市湯本にある無人営業のフィンランド式プライベートサウナ。セルフロウリュと桶型水風呂を備え、最大4名まで利用可能。湯本駅から徒歩10分。90分4,800円。",
@@ -17185,7 +17243,11 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "ヒノキ材バレルサウナ。水風呂は浴槽＋川の2種。山の伏流水使用。自然体験施設内",
-    "images": [],
+    "images": [
+      "/facilities/237-0.webp",
+      "/facilities/237-1.webp",
+      "/facilities/237-2.webp"
+    ],
     "lat": 36.993289,
     "lng": 140.618763,
     "description": "いわき市田人町の森の中にある自然体験施設内のバレルサウナ。ヒノキ材を使用し、水風呂は浴槽と川の2種類。山の伏流水を使った水風呂で大自然のクールダウンが楽しめる。貸切3.5時間11,000円。",
@@ -17227,7 +17289,10 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "北欧直輸入バレルサウナ。井戸水かけ流し水風呂。川利用可。キャンプ場併設",
-    "images": [],
+    "images": [
+      "/facilities/238-0.webp",
+      "/facilities/238-1.webp"
+    ],
     "lat": 37.388956,
     "lng": 140.232358,
     "description": "郡山市の自然豊かなキャンプ場併設のサウナ施設。北欧から直輸入したバレルサウナで薪ストーブによるセルフロウリュを楽しめる。井戸水かけ流しの水風呂に加え、川での水浴びも可能。",
@@ -17269,7 +17334,11 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "テラヘルツ鉱石使用。最高105℃。屋外プール水風呂18℃",
-    "images": [],
+    "images": [
+      "/facilities/239-0.webp",
+      "/facilities/239-1.webp",
+      "/facilities/239-2.webp"
+    ],
     "lat": 37.392687,
     "lng": 140.35889,
     "description": "郡山市にある貸切ミニログハウスサウナ。テラヘルツ鉱石を使用し最高105℃のサウナ室でセルフロウリュを楽しめる。18℃の屋外プール水風呂と外気浴スペースも完備。1名2,750円から。",
@@ -17311,7 +17380,11 @@
     "bookingUrl": "https://coubic.com/mihota_sauna",
     "amenities": [],
     "note": "HARVIA電気ストーブ。フィンランド式ロウリュ。天然温泉入浴料込み。2024年11月オープン",
-    "images": [],
+    "images": [
+      "/facilities/240-0.webp",
+      "/facilities/240-1.webp",
+      "/facilities/240-2.webp"
+    ],
     "lat": 37.352786,
     "lng": 140.30079,
     "description": "郡山三穂田温泉に2024年11月オープンしたフィンランド式ロウリュサウナ。HARVIA電気ストーブを採用し、定員4名の落ち着いた空間。天然温泉入浴料込みで2時間1,700円とリーズナブル。",
@@ -17353,7 +17426,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "ドライ・スチーム・バレルの3種サウナ。猪苗代湖ビュー。グランピング併設",
-    "images": [],
+    "images": [
+      "/facilities/241-0.webp",
+      "/facilities/241-1.webp",
+      "/facilities/241-2.webp",
+      "/facilities/241-3.webp"
+    ],
     "lat": 37.489899,
     "lng": 140.155077,
     "description": "猪苗代湖畔に位置するアウトドアサウナ施設。ドライ・スチーム・バレルの3種類のサウナを備え、猪苗代湖を眺めながらの外気浴が楽しめる。平日1名2,200円から。",
@@ -17395,7 +17473,12 @@
     "bookingUrl": null,
     "amenities": [],
     "note": "古民家一棟貸し。江戸時代の蔵をリノベーションした蔵サウナ。2025年12月3日開業。宿泊プランあり",
-    "images": [],
+    "images": [
+      "/facilities/242-0.webp",
+      "/facilities/242-1.webp",
+      "/facilities/242-2.webp",
+      "/facilities/242-3.webp"
+    ],
     "lat": 37.074678,
     "lng": 140.218575,
     "description": "白河市の古民家を一棟貸しするサウナ施設。江戸時代の蔵をリノベーションした「蔵サウナ」が特徴。2025年12月開業。日帰り1名3,000円/2時間から。新白河駅からタクシー10〜15分。",
