@@ -11044,7 +11044,7 @@
     "closedAt": null
   },
   {
-    "id": 123,
+    "id": 167,
     "slug": "utsunomiya-sauna-club-honten",
     "name": "ウツノミヤサウナクラブ 本店",
     "prefecture": "tochigi",
@@ -11084,10 +11084,10 @@
     ],
     "note": "宇都宮初の完全個室型サウナ。110度。氷バケツで水風呂を追加冷却可能",
     "images": [
-      "/facilities/123-0.webp",
-      "/facilities/123-1.webp",
-      "/facilities/123-2.webp",
-      "/facilities/123-3.webp"
+      "/facilities/167-0.webp",
+      "/facilities/167-1.webp",
+      "/facilities/167-2.webp",
+      "/facilities/167-3.webp"
     ],
     "lat": 36.559533,
     "lng": 139.888521,
@@ -11114,7 +11114,7 @@
     "closedAt": null
   },
   {
-    "id": 124,
+    "id": 168,
     "slug": "utsunomiya-sauna-club-yanase",
     "name": "ウツノミヤサウナクラブ 簗瀬店",
     "prefecture": "tochigi",
@@ -11154,10 +11154,10 @@
     ],
     "note": "本店2号店。総桧HINOKI部屋と蔵造KULA部屋の2室。無料駐車場完備。1Fにサ飯店あり",
     "images": [
-      "/facilities/124-0.webp",
-      "/facilities/124-1.webp",
-      "/facilities/124-2.webp",
-      "/facilities/124-3.webp"
+      "/facilities/168-0.webp",
+      "/facilities/168-1.webp",
+      "/facilities/168-2.webp",
+      "/facilities/168-3.webp"
     ],
     "lat": 36.543164,
     "lng": 139.889081,
@@ -11190,7 +11190,7 @@
     "closedAt": null
   },
   {
-    "id": 125,
+    "id": 169,
     "slug": "private-sauna-hygge",
     "name": "プライベートサウナ Hygge",
     "prefecture": "tochigi",
@@ -11231,10 +11231,10 @@
     ],
     "note": "1名専用個室×5室。温度80〜100度で調整可能。天然地下水水風呂。ホテルサンロイヤル小山2F",
     "images": [
-      "/facilities/125-0.webp",
-      "/facilities/125-1.webp",
-      "/facilities/125-2.webp",
-      "/facilities/125-3.webp"
+      "/facilities/169-0.webp",
+      "/facilities/169-1.webp",
+      "/facilities/169-2.webp",
+      "/facilities/169-3.webp"
     ],
     "lat": 36.309638,
     "lng": 139.810148,
@@ -11267,7 +11267,7 @@
     "closedAt": null
   },
   {
-    "id": 126,
+    "id": 170,
     "slug": "sauna-gym-misogi-oyama",
     "name": "SAUNA GYM MISOGI 小山店",
     "prefecture": "tochigi",
@@ -11305,10 +11305,10 @@
     ],
     "note": "会員制/ビジター可。静岡発の人気サウナ。RefaシャワーとDysonドライヤー完備。イオンモール小山から徒歩1分",
     "images": [
-      "/facilities/126-0.webp",
-      "/facilities/126-1.webp",
-      "/facilities/126-2.webp",
-      "/facilities/126-3.webp"
+      "/facilities/170-0.webp",
+      "/facilities/170-1.webp",
+      "/facilities/170-2.webp",
+      "/facilities/170-3.webp"
     ],
     "lat": 36.322125,
     "lng": 139.839283,
@@ -11341,7 +11341,7 @@
     "closedAt": null
   },
   {
-    "id": 127,
+    "id": 171,
     "slug": "kura-sauna-utsunomiya",
     "name": "KURA:SAUNA UTSUNOMIYA",
     "prefecture": "tochigi",
@@ -11379,10 +11379,10 @@
     ],
     "note": "大谷石蔵リノベーション。薪火式セルフロウリュ。ドリンク飲み放題付き。1名利用時も2名分料金が必要",
     "images": [
-      "/facilities/127-0.webp",
-      "/facilities/127-1.webp",
-      "/facilities/127-2.webp",
-      "/facilities/127-3.webp"
+      "/facilities/171-0.webp",
+      "/facilities/171-1.webp",
+      "/facilities/171-2.webp",
+      "/facilities/171-3.webp"
     ],
     "lat": 36.560997,
     "lng": 139.879164,
@@ -11409,7 +11409,7 @@
     "closedAt": null
   },
   {
-    "id": 128,
+    "id": 172,
     "slug": "yuminoyu",
     "name": "弓乃湯",
     "prefecture": "tochigi",
@@ -11448,10 +11448,10 @@
     ],
     "note": "天然温泉（源泉かけ流し・地下1500m）付き。山ゆり・山つつじ・山さくらの3棟独立。那須ICから車5分",
     "images": [
-      "/facilities/128-0.webp",
-      "/facilities/128-1.webp",
-      "/facilities/128-2.webp",
-      "/facilities/128-3.webp"
+      "/facilities/172-0.webp",
+      "/facilities/172-1.webp",
+      "/facilities/172-2.webp",
+      "/facilities/172-3.webp"
     ],
     "lat": 37.007603,
     "lng": 140.023742,
@@ -11490,7 +11490,7 @@
     "closedAt": null
   },
   {
-    "id": 129,
+    "id": 173,
     "slug": "mori-no-tenku-sauna",
     "name": "森の天空サウナ&露天風呂",
     "prefecture": "tochigi",
@@ -11524,10 +11524,10 @@
     ],
     "note": "完全貸切。110度ヒノキサウナ。那須エリア無料送迎あり（2名以上・要電話予約）。タトゥーOK",
     "images": [
-      "/facilities/129-0.webp",
-      "/facilities/129-1.webp",
-      "/facilities/129-2.webp",
-      "/facilities/129-3.webp"
+      "/facilities/173-0.webp",
+      "/facilities/173-1.webp",
+      "/facilities/173-2.webp",
+      "/facilities/173-3.webp"
     ],
     "lat": 37.042878,
     "lng": 139.960383,
@@ -11548,7 +11548,7 @@
     "closedAt": null
   },
   {
-    "id": 130,
+    "id": 174,
     "slug": "the-pine",
     "name": "THE PINE",
     "prefecture": "tochigi",
@@ -11582,10 +11582,10 @@
     ],
     "note": "那須スポーツガーデン内。水着着用必須。薪ストーブ110度。井戸水水風呂。若駒酒造の日本酒タンク改造五右衛門風呂",
     "images": [
-      "/facilities/130-0.webp",
-      "/facilities/130-1.webp",
-      "/facilities/130-2.webp",
-      "/facilities/130-3.webp"
+      "/facilities/174-0.webp",
+      "/facilities/174-1.webp",
+      "/facilities/174-2.webp",
+      "/facilities/174-3.webp"
     ],
     "lat": 37.096638,
     "lng": 140.042559,
@@ -11606,7 +11606,7 @@
     "closedAt": null
   },
   {
-    "id": 131,
+    "id": 175,
     "slug": "private-sauna-tera",
     "name": "Private Sauna TERA",
     "prefecture": "tochigi",
@@ -11639,10 +11639,10 @@
     ],
     "note": "1日1組限定の完全貸切。オオシマ式サウナ115度+テントサウナ100度。源泉かけ流し温泉付き。渓流天然水風呂13度。タオル持参",
     "images": [
-      "/facilities/131-0.webp",
-      "/facilities/131-1.webp",
-      "/facilities/131-2.webp",
-      "/facilities/131-3.webp"
+      "/facilities/175-0.webp",
+      "/facilities/175-1.webp",
+      "/facilities/175-2.webp",
+      "/facilities/175-3.webp"
     ],
     "lat": 36.830224,
     "lng": 139.840651,
@@ -11663,7 +11663,7 @@
     "closedAt": null
   },
   {
-    "id": 132,
+    "id": 176,
     "slug": "yagan-totonoimura",
     "name": "野岩ととのい村",
     "prefecture": "tochigi",
@@ -11696,10 +11696,10 @@
     ],
     "note": "古民家一棟貸切。日光杉サウナ室にHARVIA製薪ストーブ。畳の座敷・縁側で休憩可。ペット同伴可（屋外のみ）。土日のみ営業",
     "images": [
-      "/facilities/132-0.webp",
-      "/facilities/132-1.webp",
-      "/facilities/132-2.webp",
-      "/facilities/132-3.webp"
+      "/facilities/176-0.webp",
+      "/facilities/176-1.webp",
+      "/facilities/176-2.webp",
+      "/facilities/176-3.webp"
     ],
     "lat": 36.989023,
     "lng": 139.697798,
@@ -11720,7 +11720,7 @@
     "closedAt": null
   },
   {
-    "id": 133,
+    "id": 177,
     "slug": "santa-loyly-sauna",
     "name": "サンタ ロウリュ サウナ",
     "prefecture": "tochigi",
@@ -11752,10 +11752,10 @@
     ],
     "note": "昭和ふるさと村内。Narvi薪ストーブ+サウナストーン80kg。季節のハーブ水風呂。5名以上は+330円/名。2枠連続予約可（165分13,200円）",
     "images": [
-      "/facilities/133-0.webp",
-      "/facilities/133-1.webp",
-      "/facilities/133-2.webp",
-      "/facilities/133-3.webp"
+      "/facilities/177-0.webp",
+      "/facilities/177-1.webp",
+      "/facilities/177-2.webp",
+      "/facilities/177-3.webp"
     ],
     "lat": 36.504063,
     "lng": 140.162814,
@@ -11782,7 +11782,7 @@
     "closedAt": null
   },
   {
-    "id": 134,
+    "id": 178,
     "slug": "barrel-no-mori-shikishima-farm",
     "name": "バレルの杜 敷島ファーム",
     "prefecture": "tochigi",
@@ -11816,10 +11816,10 @@
     ],
     "note": "3棟独立バレルサウナ。TypeA:電気90度/B:薪60-110度/C:薪60-110度(6名22,000円)。全棟HARVIA製。25mインフィニティベンチ。温泉入浴券付き",
     "images": [
-      "/facilities/134-0.webp",
-      "/facilities/134-1.webp",
-      "/facilities/134-2.webp",
-      "/facilities/134-3.webp"
+      "/facilities/178-0.webp",
+      "/facilities/178-1.webp",
+      "/facilities/178-2.webp",
+      "/facilities/178-3.webp"
     ],
     "lat": 37.079831,
     "lng": 140.038982,
@@ -11846,7 +11846,7 @@
     "closedAt": null
   },
   {
-    "id": 135,
+    "id": 179,
     "slug": "nikko-sauna-resort",
     "name": "日光サウナリゾート",
     "prefecture": "tochigi",
@@ -11880,10 +11880,10 @@
     ],
     "note": "バレル/ポッドは貸切、エアストリームは共用(1名4,500円/2h)。薪ストーブ120度。天然泉水風呂。カフェスペースあり。駐車場20台",
     "images": [
-      "/facilities/135-0.webp",
-      "/facilities/135-1.webp",
-      "/facilities/135-2.webp",
-      "/facilities/135-3.webp"
+      "/facilities/179-0.webp",
+      "/facilities/179-1.webp",
+      "/facilities/179-2.webp",
+      "/facilities/179-3.webp"
     ],
     "lat": 36.796054,
     "lng": 139.63808,
@@ -13819,6 +13819,768 @@
         "name": "サウナ貸切 土日祝 120分（2名）",
         "price": 15000,
         "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 180,
+    "slug": "rezone-kyoto",
+    "name": "RE:ZONE",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市中京区",
+    "area": "京都市内",
+    "address": "京都府京都市中京区丸太町通西洞院上る梅屋町166-7 SDビル5F",
+    "nearestStation": "丸太町駅",
+    "walkMinutes": 5,
+    "priceMin": 3680,
+    "duration": 60,
+    "capacity": 1,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "8:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://sauna-rezone.com/",
+    "phone": "090-1242-3274",
+    "bookingUrl": "https://sauna-rezone.com/reservation/select",
+    "amenities": [
+      "タオル",
+      "サウナハット",
+      "シャンプー",
+      "ボディソープ",
+      "化粧水",
+      "乳液",
+      "ドライヤー",
+      "ドリンク"
+    ],
+    "note": "水風呂なし（冷水オーバーヘッドシャワーのみ）",
+    "images": [
+      "/facilities/180-0.webp",
+      "/facilities/180-1.webp",
+      "/facilities/180-2.webp",
+      "/facilities/180-3.webp"
+    ],
+    "lat": 35.017563,
+    "lng": 135.755093,
+    "description": "丸太町駅から徒歩5分、京都府庁前のフィンランド式個室サウナ。helo社製ストーブと最高品質のオリビンストーンを使用し、セルフロウリュが楽しめる。シングルルームとグループルームの2タイプを完備。水風呂はなく冷水シャワーで冷却する。",
+    "saunakoCommentShort": "京都府庁前で本格フィンランド式サウナ体験!",
+    "saunakoCommentLong": "フィンランドから直輸入したhelo製ストーブに最高級オリビンストーンって、こだわりがすごいよね。水風呂はないけど冷水シャワーでしっかり冷やせるし、ひとりサウナが3,680円〜って京都ではかなりお手頃かも。Bluetoothスピーカーで好きな音楽かけながらととのえるのも最高!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "シングルルーム 60分",
+        "price": 3680,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "シングルルーム 80分",
+        "price": 4680,
+        "duration": 80,
+        "capacity": 1
+      },
+      {
+        "name": "シングルルーム 100分",
+        "price": 5680,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "グループルーム 80分",
+        "price": 11040,
+        "duration": 80,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 181,
+    "slug": "kudochi-sauna-kyoto-kawaramachi",
+    "name": "KUDOCHI sauna 京都河原町店",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市中京区",
+    "area": "京都市内",
+    "address": "京都府京都市中京区河原町通三条下る二丁目山崎町258番地 AD-G四条河原町7階",
+    "nearestStation": "京都河原町駅",
+    "walkMinutes": 3,
+    "priceMin": 16000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13-18",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "24時間",
+    "holidays": "基本無休",
+    "website": "https://kudochi-sauna.com/kyotokawaramachi/",
+    "phone": null,
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "アメニティ"
+    ],
+    "note": null,
+    "images": [
+      "/facilities/181-0.webp",
+      "/facilities/181-1.webp",
+      "/facilities/181-2.webp",
+      "/facilities/181-3.webp"
+    ],
+    "lat": 35.006744,
+    "lng": 135.768887,
+    "description": "京都河原町駅から徒歩3分、24時間営業の完全個室ラグジュアリーサウナ。KUDOCHI系列の京都店で4つの異なるコンセプトの個室を備え、音・光・香り・温度を自由にカスタマイズ可能。水風呂は13〜18度でチラー完備。カップル利用可、完全予約制。",
+    "saunakoCommentShort": "KUDOCHI京都上陸! 24時間の個室ラグジュアリー!",
+    "saunakoCommentLong": "KUDOCHIが京都にも来たよ! 河原町三条のビル7階で24時間営業だから、観光の合間や夜遊びの後でもサクッと整えられる。4つの部屋それぞれコンセプトが違うから、何回来ても新鮮かも。水風呂の温度も自分で調整できるのがKUDOCHIらしいよね!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "CRADLE / SPIRITS 120分（最大4名）",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "CRADLE / SPIRITS ナイト5時間（最大4名）",
+        "price": 24000,
+        "duration": 300,
+        "capacity": 4
+      },
+      {
+        "name": "GENESIS / ECLIPSE 120分（最大6名）",
+        "price": 26000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "GENESIS / ECLIPSE ナイト5時間（最大6名）",
+        "price": 38000,
+        "duration": 300,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 182,
+    "slug": "sayoka-kyoto",
+    "name": "sayoka",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市上京区",
+    "area": "京都市内",
+    "address": "京都府京都市上京区溝前町83",
+    "nearestStation": "北野白梅町駅",
+    "walkMinutes": 12,
+    "priceMin": 15400,
+    "duration": 140,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "月曜日",
+    "website": "https://sayoka-kyoto.com/",
+    "phone": "075-600-9626",
+    "bookingUrl": "https://airrsv.net/sayoka/calendar",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "洗顔料",
+      "クレンジング",
+      "化粧水",
+      "乳液",
+      "綿棒"
+    ],
+    "note": "築100年超の京町家。水着着用で男女利用可",
+    "images": [
+      "/facilities/182-0.webp",
+      "/facilities/182-1.webp",
+      "/facilities/182-2.webp",
+      "/facilities/182-3.webp"
+    ],
+    "lat": 35.030811,
+    "lng": 135.740141,
+    "description": "上七軒に佇む築100年超の京町家を改装した一棟貸し切りプライベートサウナ。1日5組限定で最大5名まで利用可能。ヒノキの水風呂（約16度）、ほうじ茶を使ったセルフロウリュ、和の外気浴スペースを備える。水着着用で男女一緒に楽しめる。",
+    "saunakoCommentShort": "京町家で寝サウナ&ヒノキ水風呂の贅沢体験!",
+    "saunakoCommentLong": "築100年の京町家がまるごとサウナになってるのがすごい! ヒノキの水風呂に和の外気浴スペース、ほうじ茶ロウリュって京都らしさ全開だよね。1日5組限定だから特別感もあるし、カップルや友達と水着で一緒に楽しめるのも嬉しいポイント。上七軒の雰囲気も含めてぜひ味わってほしいな!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "土日祝 10:00-12:20",
+        "price": 15400,
+        "duration": 140,
+        "capacity": 2
+      },
+      {
+        "name": "平日 9:00-11:20",
+        "price": 17600,
+        "duration": 140,
+        "capacity": 2
+      },
+      {
+        "name": "平日 18:00-20:20",
+        "price": 19800,
+        "duration": 140,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 183,
+    "slug": "private-sauna-takasegawa",
+    "name": "プライベートサウナ 京都 高瀬川",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市下京区",
+    "area": "京都市内",
+    "address": "京都府京都市下京区船頭町238 リーブ上ぼん105",
+    "nearestStation": "京都河原町駅",
+    "walkMinutes": 5,
+    "priceMin": 12760,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://sauna-takasegawa.com/",
+    "phone": null,
+    "bookingUrl": "https://select-type.com/rsv/?id=bHv1iONNlWY",
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "水着",
+      "サウナハット",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "化粧水",
+      "保湿クリーム",
+      "綿棒",
+      "ヘアゴム",
+      "アロマ"
+    ],
+    "note": "完全事前予約制・事前決済制。問い合わせはInstagram DMにて",
+    "images": [
+      "/facilities/183-0.webp",
+      "/facilities/183-1.webp",
+      "/facilities/183-2.webp",
+      "/facilities/183-3.webp"
+    ],
+    "lat": 35.002263,
+    "lng": 135.770076,
+    "description": "四条河原町から徒歩5分、高瀬川沿いに佇む完全貸切のフィンランド式プライベートサウナ。窓越しに高瀬川の景色を眺めながらセルフロウリュを楽しめる。15度の水風呂と外気浴スペースを備え、ウィスキングプランも用意されている。",
+    "saunakoCommentShort": "高瀬川を眺めながらロウリュできる贅沢空間！",
+    "saunakoCommentLong": "四条河原町からすぐの場所で、窓の外に高瀬川が流れてるのがめちゃくちゃ最高なの！フィンランド式サウナでセルフロウリュしながら川を眺めるって、京都ならではの贅沢だよね。ウィスキングプランもあるから、本格派にもおすすめかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "ウィスキングショート込み 60分",
+        "price": 12760,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "サウナのみ 140分",
+        "price": 17600,
+        "duration": 140,
+        "capacity": 2
+      },
+      {
+        "name": "サウナのみ 220分",
+        "price": 26400,
+        "duration": 220,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 184,
+    "slug": "rokkaku",
+    "name": "ROKKAKU",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市中京区",
+    "area": "京都市内",
+    "address": "京都府京都市中京区越後町198",
+    "nearestStation": "烏丸御池駅",
+    "walkMinutes": 7,
+    "priceMin": 18000,
+    "duration": 140,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:30〜20:50",
+    "holidays": "年中無休",
+    "website": "https://rokkakuspa.com/",
+    "phone": "075-746-4337",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000757355/",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "サウナハット",
+      "ガウン",
+      "シャンプー",
+      "ドライヤー",
+      "ヘアアイロン"
+    ],
+    "note": "京町家を改装。醒ヶ井の地下水使用の水風呂。タトゥーOK",
+    "images": [
+      "/facilities/184-0.webp",
+      "/facilities/184-1.webp",
+      "/facilities/184-2.webp",
+      "/facilities/184-3.webp"
+    ],
+    "lat": 35.007271,
+    "lng": 135.75296,
+    "description": "京町家の伝統美とモダン設計を融合した完全貸切プライベートサウナ。4人が寝転べる広さの茶室サウナ、岩盤浴、醒ヶ井の地下水を使用した水風呂を備える。ほうじ茶と紅茶でのセルフロウリュや、ドライヘッドスパのオプションも充実。",
+    "saunakoCommentShort": "京町家×茶室サウナ、京都感ハンパない！",
+    "saunakoCommentLong": "京町家をリノベした空間がもう雰囲気抜群で、茶室みたいなサウナに4人で寝転べるのがすごい！ほうじ茶ロウリュって京都っぽくて好き。水風呂は醒ヶ井の地下水だから水質も良さそう。岩盤浴もあるし、140分でかなり満喫できると思う！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "サウナ+リラクゼーション 140分",
+        "price": 18000,
+        "duration": 140,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 185,
+    "slug": "ebisugawa-sauna",
+    "name": "えびす川サウナ",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市中京区",
+    "area": "京都市内",
+    "address": "京都府京都市中京区西洞院通夷川下る薬師町652-1",
+    "nearestStation": "丸太町駅",
+    "walkMinutes": 6,
+    "priceMin": 7700,
+    "duration": 80,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:20",
+    "holidays": "不定休",
+    "website": "https://ebisugawa-sauna.com/",
+    "phone": "075-223-0141",
+    "bookingUrl": "https://airrsv.net/ebisugawasauna/calendar",
+    "amenities": [
+      "ドライヤー",
+      "綿棒",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "化粧水",
+      "乳液",
+      "メイク落とし"
+    ],
+    "note": null,
+    "images": [
+      "/facilities/185-0.webp",
+      "/facilities/185-1.webp",
+      "/facilities/185-2.webp",
+      "/facilities/185-3.webp"
+    ],
+    "lat": 35.014785,
+    "lng": 135.754841,
+    "description": "京都・夷川に位置する屋上型の完全貸切プライベートサウナ。フィンランド式サウナでセルフロウリュを楽しみ、地下水かけ流しの水風呂で冷やした後は、屋上の外気浴スペースで京都の空を眺めてととのえる。1階の夷川餃子なかじま本店との併設施設。",
+    "saunakoCommentShort": "屋上で京都の空の下ととのえる！",
+    "saunakoCommentLong": "屋上にあるサウナだから、外気浴で京都の空をぼーっと眺められるのが最高なの！しかも1階が餃子屋さんだから、ととのった後に餃子食べられるの、天才すぎない？2人で7,700円ってコスパも良くて通いたくなるやつ！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切サウナ 80分",
+        "price": 7700,
+        "duration": 80,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 186,
+    "slug": "machiya-sauna-kyoto",
+    "name": "MACHIYA:SAUNA KYOTO",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市中京区",
+    "area": "京都市内",
+    "address": "京都府京都市中京区三坊西洞院町561西側奥",
+    "nearestStation": "烏丸御池駅",
+    "walkMinutes": 5,
+    "priceMin": 8000,
+    "duration": 180,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00〜22:30（4部制）",
+    "holidays": "不定休",
+    "website": "https://resauna.jp/kyoto/",
+    "phone": "090-9838-9637",
+    "bookingUrl": "https://select-type.com/rsv/?id=k9Vb4qOCt2U&pm1=official",
+    "amenities": [
+      "バスタオル",
+      "ハンドタオル",
+      "化粧水",
+      "クリーム",
+      "レンタルポンチョ",
+      "サウナハット",
+      "水着レンタル",
+      "ソフトドリンク飲み放題"
+    ],
+    "note": "1人あたり料金（最低2名から）。チラーで水風呂4度まで調整可",
+    "images": [
+      "/facilities/186-0.webp",
+      "/facilities/186-1.webp",
+      "/facilities/186-2.webp",
+      "/facilities/186-3.webp"
+    ],
+    "lat": 35.010019,
+    "lng": 135.754958,
+    "description": "築160年の京町家を改装した完全貸切プライベートサウナ。水墨調のサウナ室でセルフロウリュ（3種のアロマ選択可）を楽しめる。半露天の檜水風呂はチラーで15度に冷却され、坪庭を望む縁側と和室で外気浴が可能。丸久小山園の煎茶と和菓子付き。",
+    "saunakoCommentShort": "築160年の町家で風情あるととのい体験！",
+    "saunakoCommentLong": "京町家の坪庭を眺めながらの外気浴がたまらないんだよね。サウナ室は水墨画調で雰囲気抜群だし、3種類のアロマロウリュも選べる。水風呂はチラーで4度まで調整できるから、攻めたい人も大丈夫。丸久小山園のお茶と和菓子のおもてなしも嬉しいポイント！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日プラン（2〜6名）",
+        "price": 8000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日祝プラン（2〜6名）",
+        "price": 9800,
+        "duration": 180,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 187,
+    "slug": "sayu-kamogawa",
+    "name": "sayu kamogawa",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市下京区",
+    "area": "京都市内",
+    "address": "京都府京都市下京区木屋町通五条下る都市町143番地12",
+    "nearestStation": "清水五条駅",
+    "walkMinutes": 4,
+    "priceMin": 22000,
+    "duration": 140,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜22:20（5部制）",
+    "holidays": "不定休",
+    "website": "https://www.sayu-spa.jp/",
+    "phone": "090-1816-8427",
+    "bookingUrl": "https://sayu-sauna.hacomono.jp",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "サウナマット",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "化粧水",
+      "乳液",
+      "ドライヤー",
+      "綿棒"
+    ],
+    "note": null,
+    "images": [
+      "/facilities/187-0.webp",
+      "/facilities/187-1.webp",
+      "/facilities/187-2.webp",
+      "/facilities/187-3.webp"
+    ],
+    "lat": 34.994447,
+    "lng": 135.767151,
+    "description": "鴨川沿いの住宅を改装したプライベートスパ。1階に地下水掛け流しの水風呂（約17度）と約95度のサウナ室を備え、2階テラスから鴨川を望む外気浴が楽しめる。1組貸切・完全予約制で、QRコード入場によるスタッフ不在の完全プライベート空間。",
+    "saunakoCommentShort": "鴨川テラスで空と緑を眺めて外気浴！",
+    "saunakoCommentLong": "鴨川を眺めながらの外気浴は京都でしか味わえない贅沢だよね。地下水の水風呂は柔らかくて包み込まれる感じがすごく気持ちいい。サウナは95度でセルフロウリュもできるから、しっかり蒸されたい人も満足できると思う。完全無人だから気兼ねなく過ごせるのも嬉しい！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切プラン（1〜4名）",
+        "price": 22000,
+        "duration": 140,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 164,
+    "slug": "gyozayu",
+    "name": "ぎょうざ湯",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市東山区",
+    "area": "京都市内",
+    "address": "京都府京都市東山区団栗通大和大路西入六軒町206-1",
+    "nearestStation": "祇園四条駅",
+    "walkMinutes": 1,
+    "priceMin": 7700,
+    "duration": 80,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（6部制）",
+    "holidays": "不定休",
+    "website": "https://www.nakajimagyoza.com/gyozayu",
+    "phone": "075-533-4126",
+    "bookingUrl": "https://airrsv.net/nakajimagyoza02/calendar",
+    "amenities": [
+      "ドライヤー",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "ボディローション",
+      "綿棒"
+    ],
+    "note": "混浴不可。タオル・カミソリ等は有料販売",
+    "images": [
+      "/facilities/164-0.webp",
+      "/facilities/164-1.webp",
+      "/facilities/164-2.webp",
+      "/facilities/164-3.webp"
+    ],
+    "lat": 35.002005,
+    "lng": 135.771987,
+    "description": "祇園四条駅から徒歩1分、夷川餃子なかじま団栗店に併設された完全予約制の貸切銭湯。賀茂川水系の天然地下水を使用した15度の水風呂にはMADMAXボタン付きの打たせ水も。ZIEL製ストーブのサウナ室は約90度でセルフロウリュ可能。中庭での外気浴もできる。",
+    "saunakoCommentShort": "祇園のど真ん中でサウナ×餃子！",
+    "saunakoCommentLong": "祇園四条から徒歩1分ってアクセス最強すぎない？天然地下水の水風呂は15度でキンキンだし、MADMAXボタンで打たせ水も浴びれるの面白い。サウナ後に隣で焼きたての餃子が食べられるっていう唯一無二の体験がここにはあるよ。混浴NGだからそこだけ注意ね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切プラン（2名まで）",
+        "price": 7700,
+        "duration": 80,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 165,
+    "slug": "suisyun-matsuiyamate",
+    "name": "SPA&HOTEL水春 松井山手",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京田辺市",
+    "area": "京都府その他",
+    "address": "京都府京田辺市山手中央5-1",
+    "nearestStation": "松井山手駅",
+    "walkMinutes": 8,
+    "priceMin": 3300,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "6:00〜26:00",
+    "holidays": "無休（メンテナンス臨時休あり）",
+    "website": "https://suisyun.jp/matsuiyamate/",
+    "phone": "0774-62-1126",
+    "bookingUrl": "https://suisyun.jp/matsuiyamate/private-sauna/",
+    "amenities": [
+      "タオル",
+      "サウナ着",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "大型温浴施設に併設。温泉・岩盤浴も利用可",
+    "images": [
+      "/facilities/165-0.webp",
+      "/facilities/165-1.webp",
+      "/facilities/165-2.webp",
+      "/facilities/165-3.webp"
+    ],
+    "lat": 34.834631,
+    "lng": 135.723529,
+    "description": "JR松井山手駅から徒歩8分、全17種の天然温泉と岩盤浴を備えた大型温浴施設に併設されたプライベートサウナ。シングルタイプとダブルタイプの2種類の個室があり、セルフロウリュやBluetooth対応で自分好みのサウナ体験が可能。水風呂は14度のレインシャワー式。",
+    "saunakoCommentShort": "温泉も岩盤浴もまるごと楽しめる個室サウナ！",
+    "saunakoCommentLong": "スーパー銭湯の中に個室サウナがあるって最高じゃない？サウナ後に天然温泉も岩盤浴も入れちゃうの。Bluetoothで好きな音楽流しながらセルフロウリュできるし、14度のレインシャワー水風呂もなかなか。シングルなら3,300円〜とお手頃だから気軽に使えるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "シングルタイプ 60分",
+        "price": 3300,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "シングルタイプ 90分",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ダブルタイプ 60分",
+        "price": 5500,
+        "duration": 60,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 166,
+    "slug": "nuka-to-yuge",
+    "name": "ぬかとゆげ",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京丹後市",
+    "area": "京都府その他",
+    "address": "京都府京丹後市峰山町杉谷941-1",
+    "nearestStation": "峰山駅",
+    "walkMinutes": 10,
+    "priceMin": 7500,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-18",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "6:00〜24:00（最終受付22:00）",
+    "holidays": "木曜日",
+    "website": "https://nuka-yuge.com/",
+    "phone": "0772-66-3988",
+    "bookingUrl": "https://www.asoview.com/base/160139/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "丹後縮緬湯浴み着"
+    ],
+    "note": "酵素風呂併設。サウナシュラン2023選出",
+    "images": [
+      "/facilities/166-0.webp",
+      "/facilities/166-1.webp",
+      "/facilities/166-2.webp",
+      "/facilities/166-3.webp"
+    ],
+    "lat": 35.62474,
+    "lng": 135.064282,
+    "description": "京丹後市にある医師が手がけた予防医療コンセプトの温浴施設。フィンランド式サウナ5室を完備し、各室でセルフロウリュやBluetoothスピーカーが利用可能。地下水を使った15〜18度の水風呂と外気浴スペースも備える。京丹後産100%米ぬか酵素風呂も体験できる。",
+    "saunakoCommentShort": "5つの個室サウナ＋酵素風呂の唯一無二の体験！",
+    "saunakoCommentLong": "お医者さんが作った温浴施設で、フィンランド式サウナが5部屋もあるんだよね。寝転びサウナとかシアタータイプとか、全部雰囲気が違って面白い！水風呂は地下水くみ上げで、外気浴もできる。京丹後産の米ぬか酵素風呂まであるのはここだけかも。バリアフリーサウナがあるのも素敵！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "サウナ 90分 1名",
+        "price": 7500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ 150分 1名",
+        "price": 12000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ 90分 2名",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ 150分 2名",
+        "price": 15000,
+        "duration": 150,
         "capacity": 2
       }
     ],
