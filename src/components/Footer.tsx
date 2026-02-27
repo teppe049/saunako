@@ -1,34 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-const REGION_GROUPS = [
-  {
-    label: '関東',
-    prefectures: [
-      { code: 'tokyo', label: '東京都' },
-      { code: 'kanagawa', label: '神奈川県' },
-      { code: 'saitama', label: '埼玉県' },
-      { code: 'chiba', label: '千葉県' },
-      { code: 'ibaraki', label: '茨城県' },
-      { code: 'gunma', label: '群馬県' },
-      { code: 'tochigi', label: '栃木県' },
-    ],
-  },
-  {
-    label: '関西',
-    prefectures: [
-      { code: 'osaka', label: '大阪府' },
-      { code: 'kyoto', label: '京都府' },
-    ],
-  },
-  {
-    label: 'その他',
-    prefectures: [
-      { code: 'aichi', label: '愛知県' },
-      { code: 'fukuoka', label: '福岡県' },
-    ],
-  },
-] as const;
+import { REGION_GROUPS } from '@/lib/types';
 
 export default function Footer() {
   return (

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
-import { PREFECTURES, AREA_GROUPS, Facility } from '@/lib/types';
+import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
@@ -236,19 +236,26 @@ export default async function AreaPage({ params }: PageProps) {
         </nav>
 
         {/* Area Navigation */}
-        <div className="flex gap-2 mb-6">
-          {PREFECTURES.map((pref) => (
-            <Link
-              key={pref.code}
-              href={`/area/${pref.code}`}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                pref.code === prefecture
-                  ? 'bg-primary text-white'
-                  : 'bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary'
-              }`}
-            >
-              {pref.label}
-            </Link>
+        <div className="flex gap-4 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+          {REGION_GROUPS.map((region) => (
+            <div key={region.label} className="flex items-center gap-2 shrink-0">
+              <span className="text-xs text-text-tertiary whitespace-nowrap">{region.label}</span>
+              <div className="flex gap-1.5">
+                {region.prefectures.map((pref) => (
+                  <Link
+                    key={pref.code}
+                    href={`/area/${pref.code}`}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
+                      pref.code === prefecture
+                        ? 'bg-primary text-white'
+                        : 'bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary'
+                    }`}
+                  >
+                    {pref.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
