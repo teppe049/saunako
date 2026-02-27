@@ -128,7 +128,8 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   chiba: [
     { slug: 'funabashi-ichikawa', label: '船橋・市川', cities: ['船橋市'] },
     { slug: 'urayasu-ichikawa', label: '浦安・市川', cities: ['浦安市'] },
-    { slug: 'matsudo-kashiwa', label: '松戸・柏', cities: ['松戸市'] },
+    { slug: 'matsudo-kashiwa', label: '松戸・柏', cities: ['松戸市', '柏市'] },
+    { slug: 'tateyama-minamiboso', label: '館山・南房総', cities: ['館山市'] },
     { slug: 'other', label: 'その他', cities: ['安房郡鋸南町'] },
   ],
 };

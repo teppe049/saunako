@@ -8507,5 +8507,272 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null
+  },
+  {
+    "id": 103,
+    "slug": "sauna-in-nakayama",
+    "name": "サウナイン中山店",
+    "prefecture": "chiba",
+    "prefectureLabel": "千葉県",
+    "city": "船橋市",
+    "area": "船橋・市川",
+    "address": "千葉県船橋市本中山2-15-10 EPガーデン本中山 2F",
+    "nearestStation": "下総中山駅",
+    "walkMinutes": 1,
+    "priceMin": 1100,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": false,
+      "wifi": false
+    },
+    "businessHours": "火水木 11:00〜21:00 / 金土日祝 9:30〜22:00",
+    "holidays": "月曜（祝日の場合は翌火曜）",
+    "website": "https://www.sauna-in.jp",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "サウナマット",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ"
+    ],
+    "note": "男性専用。予約不要・9室の個室サウナ。地下100m天然水かけ流し水風呂",
+    "images": [],
+    "lat": 35.71456,
+    "lng": 139.94337,
+    "description": "下総中山駅から徒歩1分の男性専用個室サウナ。予約不要で9室の個室を完備。地下100mの天然水かけ流し水風呂にセルフロウリュ、外気浴スペースも。平日1,100円からの手頃な料金で90分3セット楽しめる。",
+    "saunakoCommentShort": "予約不要！駅1分で天然水かけ流し水風呂",
+    "saunakoCommentLong": "下総中山駅から徒歩1分の個室サウナだよ！予約不要でふらっと行けるのが最高。地下100mの天然水かけ流し水風呂はお肌にも優しいし、外気浴スペースもあるからしっかり整えるかも。平日1,100円からのコスパも嬉しいポイント！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日昼 90分 1名",
+        "price": 1100,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日夜 90分 1名",
+        "price": 1250,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "休日昼 90分 1名",
+        "price": 1250,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "休日夜 90分 1名",
+        "price": 1350,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 104,
+    "slug": "sansui-sauna",
+    "name": "SANSUI SAUNA",
+    "prefecture": "chiba",
+    "prefectureLabel": "千葉県",
+    "city": "柏市",
+    "area": "松戸・柏",
+    "address": "千葉県柏市旭町1-14-13 澤本ビル1F",
+    "nearestStation": "柏駅",
+    "walkMinutes": 4,
+    "priceMin": 4400,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:10",
+    "holidays": "不定休",
+    "website": "https://sansuisauna.com/",
+    "phone": "",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000695358/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "女性専用・ヘッドスパ併設。完全予約制",
+    "images": [],
+    "lat": 35.85525,
+    "lng": 139.97138,
+    "description": "柏駅南口から徒歩4分の女性専用個室サウナ。サウナとヘッドスパを組み合わせた独自の「飛ぶ」体験が特徴。貸切サウナは90分4,400円から、サウナ×ヘッドスパコースは9,800円から。完全予約制。",
+    "saunakoCommentShort": "女性専用！サウナ×ヘッドスパで飛ぶ体験",
+    "saunakoCommentLong": "柏駅から徒歩4分の女性専用個室サウナだよ！サウナとヘッドスパを組み合わせた「飛ぶ」体験がここならではの魅力。プロの飛ばし屋さんのヘッドスパで極上のととのいが味わえるかも。女性だけの空間で安心してリラックスできるのも嬉しいね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切サウナ 90分 2名",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "貸切サウナ 120分 2名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ60分+ヘッドスパ50分 1名",
+        "price": 9800,
+        "duration": 110,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ90分+ヘッドスパ80分 1名",
+        "price": 12800,
+        "duration": 170,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 105,
+    "slug": "sea-sauna-shack",
+    "name": "Sea Sauna Shack",
+    "prefecture": "chiba",
+    "prefectureLabel": "千葉県",
+    "city": "館山市",
+    "area": "館山・南房総",
+    "address": "千葉県館山市波左間1063-2",
+    "nearestStation": "館山駅",
+    "walkMinutes": null,
+    "priceMin": 21000,
+    "duration": 150,
+    "capacity": 12,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": false
+    },
+    "businessHours": "9:00〜20:30（火曜 9:00〜23:30）",
+    "holidays": "不定休",
+    "website": "https://sea-sauna-shack.com/",
+    "phone": "0470-29-7976",
+    "bookingUrl": "https://coubic.com/seasaunashack/booking_pages",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "1棟貸切・完全予約制。薪ストーブサウナ。海を望む外気浴。車でのアクセス推奨",
+    "images": [],
+    "lat": 34.97530,
+    "lng": 139.77946,
+    "description": "館山市の海沿いに佇む1棟貸切のプライベートサウナ。薪ストーブのサウナ小屋にセルフロウリュ、天然地下水の水風呂、鏡ヶ浦と富士山を望む外気浴が揃う。最大12名で2.5時間、平日21,000円から。完全予約制。",
+    "saunakoCommentShort": "海と富士山を望む絶景貸切サウナ！",
+    "saunakoCommentLong": "館山の海を目の前にした1棟貸切のプライベートサウナだよ！薪ストーブのサウナにセルフロウリュ、天然地下水の水風呂、そして鏡ヶ浦と富士山を望む外気浴が最高すぎる。Bluetoothスピーカーで好きな音楽をかけながら、大自然の中で整えるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 150分 4名",
+        "price": 21000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "休日 150分 4名",
+        "price": 26000,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 106,
+    "slug": "private-sauna-kizami",
+    "name": "プライベートサウナ KIZAMI",
+    "prefecture": "chiba",
+    "prefectureLabel": "千葉県",
+    "city": "館山市",
+    "area": "館山・南房総",
+    "address": "千葉県館山市藤原896",
+    "nearestStation": "館山駅",
+    "walkMinutes": null,
+    "priceMin": 21000,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00〜18:30（日帰り枠）",
+    "holidays": "不定休",
+    "website": "https://sauna-kizami.jp/",
+    "phone": "080-8078-2791",
+    "bookingUrl": "https://coubic.com/kizami-sauna",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "化粧水",
+      "サウナハット",
+      "ポンチョ"
+    ],
+    "note": "1組限定貸切。ヒノキサウナ・BBQスペース・宿泊可。駐車場2台",
+    "images": [],
+    "lat": 34.97086,
+    "lng": 139.85735,
+    "description": "館山市の1組限定プライベートサウナ。ヒノキ造りの本格サウナにセルフロウリュ、水風呂、外気浴を完備。BBQスペースやキッチン付きで宿泊も可能。日帰り21,000円/2.5時間（4名まで）、Wi-Fi完備。完全予約制。",
+    "saunakoCommentShort": "1組限定！ヒノキサウナ×BBQが最高",
+    "saunakoCommentLong": "館山の1組限定プライベートサウナだよ！ヒノキ造りの本格サウナでセルフロウリュを楽しんだ後は、BBQスペースで焚き火を囲みながらまったり。カップルや家族でのんびり過ごせるし、宿泊もできるから特別な日にもおすすめかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "日帰り 150分 4名",
+        "price": 21000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "宿泊 4名",
+        "price": 50000,
+        "duration": null,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
   }
 ]
