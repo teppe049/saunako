@@ -14585,5 +14585,1076 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 188,
+    "slug": "solos",
+    "name": "solos",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区南1条西10丁目4-156 大通ホワイトビル2F・3F",
+    "nearestStation": "西11丁目駅",
+    "walkMinutes": 1,
+    "priceMin": 2800,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "10-15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "年中無休",
+    "website": "https://solos-pl.com/",
+    "phone": "011-600-2022",
+    "bookingUrl": "https://coubic.com/solos_sapporo/booking_pages",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "クレンジング",
+      "洗顔料",
+      "ドライヤー",
+      "ヘアブラシ",
+      "カミソリ",
+      "歯ブラシ",
+      "ミネラルウォーター"
+    ],
+    "note": "水風呂なしルーム（冷水オーバーヘッドシャワー付き）と水風呂ありルームの2タイプあり",
+    "images": [
+      "/facilities/188-0.webp",
+      "/facilities/188-1.webp",
+      "/facilities/188-2.webp",
+      "/facilities/188-3.webp"
+    ],
+    "lat": 43.058011,
+    "lng": 141.342164,
+    "description": "地下鉄西11丁目駅から徒歩1分、完全個室のプライベートサウナ。フィンランド製ストーブによるセルフロウリュを楽しめる。水風呂付きルームと冷水シャワー付きルームの2タイプがあり、カフェやエステも併設した複合施設。",
+    "saunakoCommentShort": "駅チカ1分で手ぶらサウナ!",
+    "saunakoCommentLong": "西11丁目駅から徒歩1分ってアクセス最強だよね!水風呂付きルームは体感10〜15度でしっかり冷えるし、セルフロウリュでフィンランド式の蒸しが楽しめる。Bluetoothスピーカーで好きな音楽流せるのもポイント高い!カフェ併設だからサウナ後のまったりも最高かも。",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "冷水シャワー付きルーム 90分 1名",
+        "price": 2800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "冷水シャワー付きルーム 90分 2名",
+        "price": 4200,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "水風呂付きルーム 90分 1名",
+        "price": 3300,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "水風呂付きルーム 90分 2名",
+        "price": 4950,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 189,
+    "slug": "a-sauna",
+    "name": "A-SAUNA",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区南9条西4丁目3-1 AMS TOWER 2階",
+    "nearestStation": "中島公園駅",
+    "walkMinutes": 2,
+    "priceMin": 3500,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "17.5",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "月曜 15:00〜翌6:00 / 火〜土曜 24時間 / 日曜 6:00〜23:00",
+    "holidays": "なし",
+    "website": "https://a-sauna.jp/",
+    "phone": "011-600-1794",
+    "bookingUrl": "https://coubic.com/a-sauna-yoyaku",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "ミネラルウォーター",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "メイク落とし"
+    ],
+    "note": "会員制/ビジター可（初回お試し90分3,500円）",
+    "images": [
+      "/facilities/189-0.webp",
+      "/facilities/189-1.webp",
+      "/facilities/189-2.webp",
+      "/facilities/189-3.webp"
+    ],
+    "lat": 43.049543,
+    "lng": 141.353804,
+    "description": "中島公園駅から徒歩2分、すすきのエリアの完全個室サウナ専門店。HARVIAストーブを全室に採用し、4種類のアロマオイルでセルフロウリュが楽しめる。男性3室・女性3室の計6室で、火〜土曜は24時間営業。",
+    "saunakoCommentShort": "HARVIAストーブで本格ロウリュ!",
+    "saunakoCommentLong": "すすきのエリアで24時間使える個室サウナだよ!HARVIAストーブの熱波がとにかく気持ちいいし、アロマオイル4種から選べるセルフロウリュも楽しい。水風呂は17.5度スタートで温度調整もできるから自分好みに追い込めるの。Bluetoothスピーカーで好きな曲流しながら整えちゃおう!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "初回お試し 90分 1名",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "1名 60分（非会員）",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "1名 90分（非会員）",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名 90分（非会員）",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 190,
+    "slug": "private-sauna-s-life",
+    "name": "PRIVATE SAUNA S-LIFE",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区南6条西24丁目2-12",
+    "nearestStation": "円山公園駅",
+    "walkMinutes": 5,
+    "priceMin": 4400,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "24時間",
+    "holidays": "年中無休",
+    "website": "https://www.privatesaunas-life.com/",
+    "phone": "011-200-9188",
+    "bookingUrl": null,
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "ドライヤー",
+      "ヘアアイロン",
+      "クレンジング",
+      "化粧水",
+      "ミネラルウォーター"
+    ],
+    "note": "会員制/ビジター可。予約はLINE公式アカウントから。サウナ温度110度。",
+    "images": [
+      "/facilities/190-0.webp",
+      "/facilities/190-1.webp",
+      "/facilities/190-2.webp",
+      "/facilities/190-3.webp"
+    ],
+    "lat": 43.049298,
+    "lng": 141.323166,
+    "description": "円山公園駅から徒歩5分、隠れ家的な会員制プライベートサウナ。サウナ温度は110度でセルフロウリュにより120度近くまで上昇。深さ約1mの水風呂、リクライニングベッドでの外気浴を備え、24時間営業で3部屋を完備。",
+    "saunakoCommentShort": "隠れ家感満載の24時間サウナ!",
+    "saunakoCommentLong": "円山エリアの住宅街にひっそり佇む隠れ家サウナだよ!110度のサ室にセルフロウリュで120度近くまで追い込めるし、水風呂は深さ1mあるから全身しっかり浸かれる。リクライニングベッドで外気浴もできて、24時間いつでも行けるのがうれしいよね。",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "スタンダードプラン 90分",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 191,
+    "slug": "fumino-sauna",
+    "name": "フミノサウナ",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市白石区",
+    "area": "札幌",
+    "address": "北海道札幌市白石区菊水上町3条2丁目52-143",
+    "nearestStation": "菊水駅",
+    "walkMinutes": 15,
+    "priceMin": 3100,
+    "duration": 120,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:30（金土 翌4:00）",
+    "holidays": "年中無休",
+    "website": "https://fumino-sauna.com/",
+    "phone": "011-807-4949",
+    "bookingUrl": "https://booking.ebica.jp/webrsv/plan_search/e020069201/28061",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "アロマ水"
+    ],
+    "note": "1960年創業の老舗銭湯「富美の湯」をリニューアル。全6室。水風呂付きは部屋3・部屋7のみ。外気浴は共用スペース（着衣必須）",
+    "images": [
+      "/facilities/191-0.webp",
+      "/facilities/191-1.webp",
+      "/facilities/191-2.webp",
+      "/facilities/191-3.webp"
+    ],
+    "lat": 43.064092,
+    "lng": 141.390469,
+    "description": "1960年創業の老舗銭湯「富美の湯」が個室サウナとしてリニューアルした施設。全6室すべてでセルフロウリュが可能で、5種類のアロマオイルから好みの香りを選べる。豊平川の伏流水を使用した水風呂も備える。",
+    "saunakoCommentShort": "老舗銭湯生まれ変わりの個室サウナ!",
+    "saunakoCommentLong": "60年以上の歴史がある銭湯が個室サウナに生まれ変わったんだよ!全室セルフロウリュOKで、5種類のアロマから好きな香りを選べるのが楽しい。水風呂は豊平川の伏流水を使ってるし、Bluetoothスピーカーで音楽流しながらゆっくり整えるよ!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "スタンダードルーム 120分 1〜3名",
+        "price": 3100,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "ボディシャワー付きルーム 120分 1〜2名",
+        "price": 3300,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "水風呂付きルーム 120分 1〜4名",
+        "price": 3800,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "大型水風呂付きルーム 120分 1〜7名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 7
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 192,
+    "slug": "pot-sauna",
+    "name": "POT SAUNA",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市白石区",
+    "area": "札幌",
+    "address": "北海道札幌市白石区菊水1条1丁目3-17 HOTEL POTMUM 2F",
+    "nearestStation": "菊水駅",
+    "walkMinutes": 3,
+    "priceMin": 3800,
+    "duration": 120,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "7:30〜22:00",
+    "holidays": "予約サイトで確認",
+    "website": "https://www.potmumhotel.jp/sauna/",
+    "phone": "011-826-4500",
+    "bookingUrl": "https://d-reserve.jp/GSEA001F01300/GSEA001A01?hotelCode=0000001101&dayuse=true",
+    "amenities": [
+      "タオル",
+      "バスローブ",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "スキンケア",
+      "ドライヤー",
+      "サウナハット"
+    ],
+    "note": "HOTEL POTMUM併設。外気浴テラス「POT TERRACE」年間利用可",
+    "images": [
+      "/facilities/192-0.webp",
+      "/facilities/192-1.webp",
+      "/facilities/192-2.webp",
+      "/facilities/192-3.webp"
+    ],
+    "lat": 43.057097,
+    "lng": 141.370078,
+    "description": "札幌・菊水のホテル併設プライベートサウナ。90〜100度のサウナにセルフロウリュ、年間通して使える外気浴テラス「POT TERRACE」を完備。Bluetoothスピーカーで好きな音楽を流しながら最大3名で貸切利用できる。",
+    "saunakoCommentShort": "外気浴テラスが年中使えるホテル併設サウナ!",
+    "saunakoCommentLong": "菊水駅から徒歩3分のホテル併設サウナだよ!セルフロウリュで蒸し加減を自分好みに調整できて、外気浴テラスは真冬の北海道でも使えるのがポイント。Bluetoothスピーカーで好きな音楽流しながらととのえるし、カップル利用もOK!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "デイユース 1名",
+        "price": 3800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "デイユース 2名",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "デイユース 3名",
+        "price": 9300,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 193,
+    "slug": "sauna-ooo-sapporo",
+    "name": "SAUNA OOO SAPPORO",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区南1条西5丁目1-7 N.Vientoビル 8F",
+    "nearestStation": "大通駅",
+    "walkMinutes": 3,
+    "priceMin": 4500,
+    "duration": 100,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:10〜23:10",
+    "holidays": "予約サイトで確認",
+    "website": "https://ooo-sauna.com/sapporo.html",
+    "phone": "",
+    "bookingUrl": "https://sw.gflow.cloud/ooo-sapporo/calendar_open",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "化粧水",
+      "乳液",
+      "クレンジング",
+      "ドライヤー",
+      "ヘアアイロン",
+      "サウナマット"
+    ],
+    "note": "完全予約制。茶室をイメージした和の空間。3室（い・ろ・は）",
+    "images": [
+      "/facilities/193-0.webp",
+      "/facilities/193-1.webp",
+      "/facilities/193-2.webp",
+      "/facilities/193-3.webp"
+    ],
+    "lat": 43.056154,
+    "lng": 141.333183,
+    "description": "札幌・大通駅徒歩3分、ビル8階にある完全予約制プライベートサウナ。茶室をイメージした和の空間に「い」「ろ」「は」の3室を用意。96度のサウナと16度の壺水風呂を備え、畳の上でゆったりととのえる。",
+    "saunakoCommentShort": "茶室サウナで和の空間にととのう!",
+    "saunakoCommentLong": "大通駅から徒歩3分、ビルの8階にある隠れ家サウナだよ!茶室みたいな和の空間がめちゃくちゃ落ち着くし、96度のサウナでセルフロウリュしてからの16度の壺水風呂が気持ちいい。畳の休憩スペースでごろんとできるのも最高!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "ろ・はの部屋 100分 1名",
+        "price": 4500,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "ろ・はの部屋 100分 2名",
+        "price": 7000,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "いの部屋 120分 1名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "いの部屋 120分 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 194,
+    "slug": "flymoi",
+    "name": "FLYMOI",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区大通西6丁目5-1 PINNビル 2F",
+    "nearestStation": "大通駅",
+    "walkMinutes": 1,
+    "priceMin": 5500,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:30",
+    "holidays": "年末年始",
+    "website": "https://flymoi.jp/",
+    "phone": "011-214-9965",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドリンク無料（オロナミンC・ポカリスエット・水）"
+    ],
+    "note": "会員制/ビジター可。同伴1名まで追加料金なし。予約はLINE公式アカウント経由",
+    "images": [
+      "/facilities/194-0.webp",
+      "/facilities/194-1.webp",
+      "/facilities/194-2.webp",
+      "/facilities/194-3.webp"
+    ],
+    "lat": 43.059179,
+    "lng": 141.34834,
+    "description": "札幌・大通駅から徒歩1分の会員制プライベートサウナ。90度のサウナ室に12度の水風呂を完備し、複数のアロマから好みの香りを選んでセルフロウリュが楽しめる。同伴1名まで追加料金なしでカップル利用にも対応。",
+    "saunakoCommentShort": "大通駅1分!アロマ選べるプライベートサウナ!",
+    "saunakoCommentLong": "大通駅から徒歩1分ってアクセス最強だよね!90度のサウナでアロマを選んでセルフロウリュできるのが楽しいし、12度の水風呂もしっかり冷たい。同伴1名は追加料金なしだからカップルにぴったり。ドリンク無料なのも地味にうれしいポイント!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "プライベートサウナ 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 195,
+    "slug": "boro-sapporo",
+    "name": "BORO SAPPORO",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市東区",
+    "area": "札幌",
+    "address": "北海道札幌市東区本町2条1丁目9-12",
+    "nearestStation": "環状通東駅",
+    "walkMinutes": 10,
+    "priceMin": 13000,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "デイユース 14:00〜17:00 / 宿泊 18:00〜翌11:00",
+    "holidays": "完全予約制",
+    "website": "https://borosapporo.com/",
+    "phone": "080-3294-7769",
+    "bookingUrl": "https://borosauna.airhost.co/ja/houses/575242",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "サウナハット",
+      "サウナポンチョ",
+      "サウナマット"
+    ],
+    "note": "一軒家貸切型。五右衛門風呂を水風呂として利用可",
+    "images": [
+      "/facilities/195-0.webp",
+      "/facilities/195-1.webp",
+      "/facilities/195-2.webp",
+      "/facilities/195-3.webp"
+    ],
+    "lat": 43.081977,
+    "lng": 141.381832,
+    "description": "札幌・東区の一軒家を丸ごと貸切にしたプライベートサウナ。Harvia製サウナでセルフロウリュを楽しんだ後は、風情ある五右衛門風呂で水風呂体験ができる。デイユース3時間プランと宿泊プランがあり、最大8名まで対応。",
+    "saunakoCommentShort": "一軒家まるごと貸切のサウナ体験!",
+    "saunakoCommentLong": "一軒家を丸ごと貸し切れるサウナってなかなかないよね!Harviaのサウナでしっかりセルフロウリュした後の五右衛門風呂がめちゃくちゃ風情あるの。キッチンも使えるからサウナ飯も楽しめるし、友達やグループでワイワイ使うのにぴったり!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "ととのい日帰りプラン（平日）",
+        "price": 13000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "ととのい日帰りプラン（土日祝）",
+        "price": 15000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 196,
+    "slug": "kohan-sauna-marukoma",
+    "name": "湖畔のSAUNA 丸駒温泉",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "千歳市",
+    "area": "道央",
+    "address": "北海道千歳市幌美内7番地",
+    "nearestStation": "千歳駅",
+    "walkMinutes": null,
+    "priceMin": 13200,
+    "duration": 150,
+    "capacity": 4,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "10:00〜12:30 / 13:00〜15:30（1日2部制）",
+    "holidays": "火曜・水曜",
+    "website": "https://kohansauna.jp/",
+    "phone": "0123-25-2341",
+    "bookingUrl": "https://kohan-no-sauna.stores.jp/",
+    "amenities": [
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "洗顔",
+      "ドライヤー",
+      "綿棒",
+      "ブラシ"
+    ],
+    "note": "丸駒温泉旅館に併設。源泉かけ流し温泉も利用可能。水風呂なし（支笏湖の水でかけ水可能）。車でのアクセス推奨",
+    "images": [
+      "/facilities/196-0.webp",
+      "/facilities/196-1.webp",
+      "/facilities/196-2.webp",
+      "/facilities/196-3.webp"
+    ],
+    "lat": 42.7802133,
+    "lng": 141.3103895,
+    "description": "支笏湖畔の丸駒温泉旅館に併設された完全予約制の貸切屋外サウナ。木質ペレットストーブを使った電力不使用のサウナ棟で、支笏湖の水でセルフロウリュが楽しめる。プライベートデッキから支笏湖の絶景を望む外気浴が最大の魅力。",
+    "saunakoCommentShort": "支笏湖の絶景を独り占めできる貸切サウナ!",
+    "saunakoCommentLong": "支笏湖の水でロウリュして、湖を一望できる絶景デッキで外気浴...最高すぎない?水風呂はないけど支笏湖の水でかけ水できるし、サウナ後は源泉かけ流し温泉にも入れちゃうの。電力ゼロの木質ペレットストーブで自然をまるごと感じられるよ!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "湖畔のSAUNA 150分貸切（最大4名）",
+        "price": 13200,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 197,
+    "slug": "moruran-sauna",
+    "name": "Moruran Sauna",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "室蘭市",
+    "area": "道央",
+    "address": "北海道室蘭市清水町2-3-11",
+    "nearestStation": "室蘭駅",
+    "walkMinutes": 12,
+    "priceMin": 4500,
+    "duration": 60,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜20:00",
+    "holidays": "不定休",
+    "website": "https://select-type.com/s/moruransauna",
+    "phone": "070-2447-1137",
+    "bookingUrl": "https://select-type.com/s/moruransauna",
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
+    "note": "室蘭初の一棟貸切プライベートサウナ。BBQスペース併設。3段構成サウナ室",
+    "images": [
+      "/facilities/197-0.webp",
+      "/facilities/197-1.webp",
+      "/facilities/197-2.webp",
+      "/facilities/197-3.webp"
+    ],
+    "lat": 42.3156869,
+    "lng": 140.9643337,
+    "description": "室蘭初の完全予約制プライベートサウナ。フィンランド式セルフロウリュを備えた3段構成のサウナ室は最上段で約90℃。18℃の屋外プール型水風呂と、インフィニティチェア・ハンモック・コットを備えた広い外気浴スペースが特徴。BBQスペースも併設。",
+    "saunakoCommentShort": "室蘭初のプライベートサウナ!BBQもできる!",
+    "saunakoCommentLong": "3段構成のサウナで好みの温度帯を選べるのがいいよね。水風呂は18℃の屋外プールタイプで開放感たっぷり!外気浴もインフィニティチェアにハンモック、コットまであって選び放題。BBQスペースもあるからサウナ→BBQ→サウナの無限ループもできちゃう!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "1時間貸切プラン（1名料金）",
+        "price": 4500,
+        "duration": 60,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 198,
+    "slug": "etanbetsu-marginal-sauna",
+    "name": "江丹別マージナルサウナ",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "旭川市",
+    "area": "道北",
+    "address": "北海道旭川市江丹別町拓北217",
+    "nearestStation": "旭川駅",
+    "walkMinutes": null,
+    "priceMin": 13200,
+    "duration": 150,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "10",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "6:30〜21:30（2時間30分の5部制）",
+    "holidays": "月曜日（祝日の場合は営業）",
+    "website": "https://marginal-sauna.jp/",
+    "phone": "090-9284-9534",
+    "bookingUrl": "https://reserve.489ban.net/client/etanbetsu-ms/0/plan",
+    "amenities": [
+      "タオルセット",
+      "水着レンタル",
+      "サウナハット",
+      "シャンプー",
+      "スキンケア用品"
+    ],
+    "note": "車でのアクセス推奨（旭川鷹栖ICから約25分）。未就学児利用不可。エストニア製薪ストーブ使用。水着着用",
+    "images": [
+      "/facilities/198-0.webp",
+      "/facilities/198-1.webp",
+      "/facilities/198-2.webp",
+      "/facilities/198-3.webp"
+    ],
+    "lat": 43.903568,
+    "lng": 142.226466,
+    "description": "旭川市郊外の大自然に佇む完全予約制の貸切プライベートサウナ。エストニア製薪ストーブのサウナ室でセルフロウリュが可能。地下水かけ流しの約10℃の水風呂と、森に囲まれた外気浴スペースが魅力。水着着用で男女一緒に利用できる。",
+    "saunakoCommentShort": "旭川の森で薪サウナ&地下水水風呂!",
+    "saunakoCommentLong": "エストニア製の薪ストーブに旭川産アロマ「はりぐら」でロウリュ、香りがめちゃくちゃいいんだよね。地下水かけ流しの水風呂は約10℃でキンキン!森に囲まれた外気浴は冬の雪景色も夏の緑も最高。水着着用で男女一緒に入れるからカップルにもおすすめだよ!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "日帰りサウナ 平日（3名まで/150分）",
+        "price": 13200,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "日帰りサウナ 土日祝（3名まで/150分）",
+        "price": 14700,
+        "duration": 150,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 199,
+    "slug": "koti-private-sauna-cottage",
+    "name": "Koti Private SAUNA Cottage",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "上川郡当麻町",
+    "area": "道北",
+    "address": "北海道上川郡当麻町北星2区5537-1",
+    "nearestStation": "当麻駅",
+    "walkMinutes": null,
+    "priceMin": 12000,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://koti-toma.com/",
+    "phone": "080-3504-3577",
+    "bookingUrl": "https://reserve.489ban.net/client/koti/0/plan",
+    "amenities": [
+      "シャンプー",
+      "スキンケア用品",
+      "ドライヤー",
+      "タオルレンタル",
+      "サウナハットレンタル",
+      "フリードリンク"
+    ],
+    "note": "日本初のヘンプサウナ設置。4種類のサウナ（アースバッグ×2・バレル・ヘンプ）。車でのアクセス推奨。飲食物持ち込み自由",
+    "images": [
+      "/facilities/199-0.webp",
+      "/facilities/199-1.webp",
+      "/facilities/199-2.webp",
+      "/facilities/199-3.webp"
+    ],
+    "lat": 43.8535605,
+    "lng": 142.5333531,
+    "description": "当麻町の大自然の中に佇む完全予約制プライベートサウナコテージ。日本初のヘンプサウナをはじめ、アースバッグサウナ、バレルサウナなど4種類のサウナを完備。15℃の水風呂と開放的な外気浴スペース、フリードリンクコーナーを備える。",
+    "saunakoCommentShort": "4種のサウナにフリードリンク付き!",
+    "saunakoCommentLong": "ヘンプサウナ、アースバッグ、バレルと4種類もサウナがあるの贅沢すぎない?水風呂は15℃で気持ちよく冷えるし、外気浴も北海道の大自然の中で最高に開放的。フリードリンクも付いてて至れり尽くせり!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "バレルサウナ 3時間プラン（1〜4名）",
+        "price": 12000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 200,
+    "slug": "hanakazoku",
+    "name": "個室温泉花家族",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "函館市",
+    "area": "道南",
+    "address": "北海道函館市石川町226-10",
+    "nearestStation": "桔梗駅",
+    "walkMinutes": 24,
+    "priceMin": 3800,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:00（最終受付22:00）",
+    "holidays": "年中無休",
+    "website": "https://e-hanakazoku.com/",
+    "phone": "0138-47-0800",
+    "bookingUrl": null,
+    "amenities": [
+      "ドライヤー"
+    ],
+    "note": "天然温泉かけ流し（ナトリウム・カルシウム塩化物泉）。サウナ付き客室は全3室。駐車場約50台",
+    "images": [
+      "/facilities/200-0.webp",
+      "/facilities/200-1.webp",
+      "/facilities/200-2.webp",
+      "/facilities/200-3.webp"
+    ],
+    "lat": 41.840454,
+    "lng": 140.736218,
+    "description": "函館市石川町にある完全個室の天然温泉施設。サウナ付き客室は全3室で、各室に天然温泉・水風呂・サウナを完備。セルフロウリュ対応で、屋外にととのいスペースもあり。毎回お湯を入れ替えるかけ流し方式で清潔。",
+    "saunakoCommentShort": "天然温泉×サウナの個室が3,800円で!",
+    "saunakoCommentLong": "函館の天然温泉を個室で独占できるのがすごい!サウナ付き客室は3部屋あって、セルフロウリュもできるよ。屋外に水風呂とととのいスペースがあるから、サウナ→水風呂→外気浴の動線もバッチリ。温泉は毎回入れ替えのかけ流しだから清潔感も安心!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "サウナ付き客室 90分",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 201,
+    "slug": "private-sauna-shinori",
+    "name": "プライベートサウナステイ Shinori",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "函館市",
+    "area": "道南",
+    "address": "北海道函館市志海苔町404-3",
+    "nearestStation": "函館空港から車7分",
+    "walkMinutes": null,
+    "priceMin": 10000,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00（完全予約制）",
+    "holidays": "不定休",
+    "website": "https://www.private-sauna-shinori.com/",
+    "phone": "080-3533-4376",
+    "bookingUrl": "https://reserva.be/shinori/about",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "1棟貸切型。薪ストーブのフィンランド式サウナ。BBQ設備あり。車でのアクセス推奨",
+    "images": [
+      "/facilities/201-0.webp",
+      "/facilities/201-1.webp",
+      "/facilities/201-2.webp",
+      "/facilities/201-3.webp"
+    ],
+    "lat": 41.767416,
+    "lng": 140.821119,
+    "description": "函館空港から車7分の場所にある1棟貸切型プライベートサウナ。本格的な薪ストーブを使用したフィンランド式サウナで、セルフロウリュ・水風呂・外気浴を完備。最大8名まで利用可能で、BBQも楽しめる。",
+    "saunakoCommentShort": "薪ストーブの本格フィンランド式サウナ!",
+    "saunakoCommentLong": "函館で薪サウナが楽しめる贅沢な1棟貸切スタイル!セルフロウリュでアロマの香りに包まれながら、自分のペースでサウナ→水風呂→外気浴をぐるぐる回せるのが最高。BBQもできるから仲間と来るのもアリだし、カップルでのんびり過ごすのもいい感じ!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "2時間プラン（最大8名）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 8
+      },
+      {
+        "name": "日帰り 2.5時間（1〜6名）",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 202,
+    "slug": "harvia-sauna-spa-tokachi",
+    "name": "HARVIA SAUNA&SPA TOKACHI",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "帯広市",
+    "area": "道東",
+    "address": "北海道帯広市西5条南13丁目1",
+    "nearestStation": "帯広駅",
+    "walkMinutes": 15,
+    "priceMin": 1200,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜21:00（6部制・完全予約制）",
+    "holidays": "火曜日",
+    "website": "https://note.com/goodandsauna",
+    "phone": "0155-65-0800",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル（大小）"
+    ],
+    "note": "HARVIA社正規ディーラーのショールーム兼プライベートサウナ。4タイプの個室。公式サイトは要確認（暫定でnote記載）",
+    "images": [
+      "/facilities/202-0.webp",
+      "/facilities/202-1.webp",
+      "/facilities/202-2.webp",
+      "/facilities/202-3.webp"
+    ],
+    "lat": 42.917299,
+    "lng": 143.197362,
+    "description": "帯広市にあるフィンランドHARVIA社正規ディーラー運営のプライベートサウナ。4種類の個室サウナを完備し、全室にHARVIA製ストーブと浴室を設置。水風呂は15〜16度で、セルフロウリュにも対応。バレルサウナでは外気浴も楽しめる。",
+    "saunakoCommentShort": "HARVIA本家の個室サウナが1,200円〜!",
+    "saunakoCommentLong": "世界最大のサウナメーカーHARVIAの正規ディーラーが運営するプライベートサウナだよ!水風呂は15-16度でキリッと冷えるし、セルフロウリュでアロマも楽しめる。4タイプの部屋があって、バレルサウナは外気浴付き。90分1,200円からってコスパもすごい!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "スタンダード1（1名用）90分",
+        "price": 1200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード2（1〜2名用）90分",
+        "price": 1500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "グループプラン（5名以上）90分",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 203,
+    "slug": "forest-private-sauna-hokkaidou",
+    "name": "Forest Private Sauna Hokkaidou",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "北見市",
+    "area": "道東",
+    "address": "北海道北見市端野町川向727-6",
+    "nearestStation": "端野駅",
+    "walkMinutes": null,
+    "priceMin": 6600,
+    "duration": 60,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "完全予約制",
+    "holidays": "不定休",
+    "website": "https://forestprivatesaunahokkaidou.com/",
+    "phone": "0157-57-4321",
+    "bookingUrl": "https://fpsaunayoyaku.com/",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ドライヤー",
+      "綿棒",
+      "充電器"
+    ],
+    "note": "3棟（瞑想・座禅・翠嵐）から選択可。HARVIAストーブ Spirit9（道東初採用）。地下水100%の水風呂。車でのアクセス推奨",
+    "images": [
+      "/facilities/203-0.webp",
+      "/facilities/203-1.webp",
+      "/facilities/203-2.webp",
+      "/facilities/203-3.webp"
+    ],
+    "lat": 43.828582,
+    "lng": 143.989646,
+    "description": "北見市端野町の森の中にある完全予約制プライベートサウナ。瞑想・座禅・翠嵐の3棟から選べ、全棟にHARVIA Spirit9ストーブを設置（道東初）。地下水100%の水風呂とセルフロウリュを完備し、外気浴スペースも充実。",
+    "saunakoCommentShort": "道東の森に佇むHARVIA個室サウナ!",
+    "saunakoCommentLong": "北見の森の中で本格サウナ体験ができるよ!3棟あって「瞑想」「座禅」「翠嵐」ってネーミングもいい感じ。HARVIAのSpirit9は道東初採用で、セルフロウリュもばっちり。水風呂は地下水100%だから水質も期待できそう。外気浴で北海道の空気を味わうのが最高!",
+    "updatedAt": "2026-02-28",
+    "plans": [
+      {
+        "name": "60分プラン（平日）",
+        "price": 6600,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "60分プラン（土日祝）",
+        "price": 7700,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "90分プラン（平日）",
+        "price": 9900,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "90分プラン（土日祝）",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
   }
 ]
