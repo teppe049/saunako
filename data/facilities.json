@@ -7201,7 +7201,7 @@
     "prefecture": "aichi",
     "prefectureLabel": "愛知県",
     "city": "名古屋市",
-    "area": "名古屋",
+    "area": "名古屋・栄",
     "address": "愛知県名古屋市瑞穂区河岸町1-1-49",
     "nearestStation": "堀田駅",
     "walkMinutes": 5,
@@ -11042,5 +11042,1736 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null
+  },
+  {
+    "id": 123,
+    "slug": "utsunomiya-sauna-club-honten",
+    "name": "ウツノミヤサウナクラブ 本店",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "宇都宮市",
+    "area": "宇都宮",
+    "address": "栃木県宇都宮市一番町1-29 鈴木ビル1階",
+    "nearestStation": "東武宇都宮駅",
+    "walkMinutes": 9,
+    "priceMin": 3800,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12-17",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "月〜金 12:00〜24:00 / 土日 9:30〜24:00",
+    "holidays": "基本無休",
+    "website": "https://www.saunaclub-wd.com/",
+    "phone": "080-7408-8571",
+    "bookingUrl": "https://saunaclub.stores.jp/reserve/1bancho",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "サウナハット",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "ミネラルウォーター"
+    ],
+    "note": "宇都宮初の完全個室型サウナ。110度。氷バケツで水風呂を追加冷却可能",
+    "images": [
+      "/facilities/123-0.webp",
+      "/facilities/123-1.webp",
+      "/facilities/123-2.webp",
+      "/facilities/123-3.webp"
+    ],
+    "lat": 36.559533,
+    "lng": 139.888521,
+    "description": "宇都宮初の完全個室型プライベートサウナ。110度の本格フィンランド式サウナにセルフロウリュを備え、12〜17度の水風呂は氷バケツで冷却も可能。東武宇都宮駅から徒歩9分。",
+    "saunakoCommentShort": "宇都宮初の完全個室！110度の本格派",
+    "saunakoCommentLong": "宇都宮の街なかで110度の本格フィンランド式サウナが楽しめるよ！セルフロウリュでアロマの蒸気を浴びたら、水風呂は氷バケツでキンキンに冷やせるのがポイント。Bluetoothで好きな音楽も流せるから、自分だけの空間でゆっくりととのえるかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 1名 平日",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 1名 土日祝",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 124,
+    "slug": "utsunomiya-sauna-club-yanase",
+    "name": "ウツノミヤサウナクラブ 簗瀬店",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "宇都宮市",
+    "area": "宇都宮",
+    "address": "栃木県宇都宮市簗瀬町1865-1 BOSS15TOWN 2F",
+    "nearestStation": "宇都宮駅",
+    "walkMinutes": 27,
+    "priceMin": 3800,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "12:00〜24:00",
+    "holidays": "基本無休",
+    "website": "https://www.saunaclub-wd.com/",
+    "phone": "090-5607-4800",
+    "bookingUrl": "https://saunaclub.stores.jp/reserve/ysc",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "サウナハット",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "ミネラルウォーター"
+    ],
+    "note": "本店2号店。総桧HINOKI部屋と蔵造KULA部屋の2室。無料駐車場完備。1Fにサ飯店あり",
+    "images": [
+      "/facilities/124-0.webp",
+      "/facilities/124-1.webp",
+      "/facilities/124-2.webp",
+      "/facilities/124-3.webp"
+    ],
+    "lat": 36.543164,
+    "lng": 139.889081,
+    "description": "ウツノミヤサウナクラブの2号店。総桧のHINOKI部屋と蔵造のKULA部屋の2室を用意し、14度の水風呂とセルフロウリュを完備。無料駐車場があり車でのアクセスに便利。",
+    "saunakoCommentShort": "ヒノキと蔵、2つの個性派サウナ！",
+    "saunakoCommentLong": "本店の2号店は、総桧の香りが心地いいHINOKI部屋と蔵造りのKULA部屋、2つの個性的なサウナが選べるよ！水風呂14度でしっかり冷えるし、無料駐車場完備だから車で来やすいのも嬉しいポイントかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 1名 平日",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 1名 土日祝",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分 土日祝 3名",
+        "price": 9100,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 125,
+    "slug": "private-sauna-hygge",
+    "name": "プライベートサウナ Hygge",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "小山市",
+    "area": "小山",
+    "address": "栃木県小山市駅東通り1-24-20 ホテルサンロイヤル小山2F",
+    "nearestStation": "小山駅",
+    "walkMinutes": 7,
+    "priceMin": 3500,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "20",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "9:00〜24:00（最終受付22:00）",
+    "holidays": "基本無休",
+    "website": "https://sauna-hygge.jp/",
+    "phone": "0285-24-7111",
+    "bookingUrl": "https://sauna-hygge.jp/",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔",
+      "化粧水",
+      "Refaドライヤー",
+      "雪肌精スキンケア",
+      "アロマオイル"
+    ],
+    "note": "1名専用個室×5室。温度80〜100度で調整可能。天然地下水水風呂。ホテルサンロイヤル小山2F",
+    "images": [
+      "/facilities/125-0.webp",
+      "/facilities/125-1.webp",
+      "/facilities/125-2.webp",
+      "/facilities/125-3.webp"
+    ],
+    "lat": 36.309638,
+    "lng": 139.810148,
+    "description": "JR小山駅から徒歩7分、ホテルサンロイヤル小山2Fにある1名専用の個室サウナ。全5室を備え、80〜100度で温度調整可能。天然地下水の水風呂とRefaドライヤーや雪肌精など充実のアメニティ。",
+    "saunakoCommentShort": "天然地下水の水風呂が気持ちいい！",
+    "saunakoCommentLong": "小山駅から徒歩7分、1名専用の個室が5つあるよ！サウナは80〜100度で自分好みに調整できて、天然地下水の水風呂は肌あたりがすごく柔らかいの。Bluetoothで音楽流しながらアロマでセルフロウリュするのが最高かも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分コース",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分コース",
+        "price": 4500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "150分コース",
+        "price": 5500,
+        "duration": 150,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 126,
+    "slug": "sauna-gym-misogi-oyama",
+    "name": "SAUNA GYM MISOGI 小山店",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "小山市",
+    "area": "小山",
+    "address": "栃木県小山市中久喜5丁目22",
+    "nearestStation": "小山駅",
+    "walkMinutes": 15,
+    "priceMin": 3800,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "22",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "月水木 13:00〜24:00 / 金土日 9:00〜24:00",
+    "holidays": "火曜定休",
+    "website": "https://coubic.com/misogi-oyama",
+    "phone": "080-9275-7471",
+    "bookingUrl": "https://coubic.com/misogi-oyama",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "Refaシャワー",
+      "Dysonドライヤー",
+      "アロマ8種"
+    ],
+    "note": "会員制/ビジター可。静岡発の人気サウナ。RefaシャワーとDysonドライヤー完備。イオンモール小山から徒歩1分",
+    "images": [
+      "/facilities/126-0.webp",
+      "/facilities/126-1.webp",
+      "/facilities/126-2.webp",
+      "/facilities/126-3.webp"
+    ],
+    "lat": 36.322125,
+    "lng": 139.839283,
+    "description": "静岡発の人気プライベートサウナMISOGIの栃木進出店。全室完全個室で8種のアロマでセルフロウリュが楽しめる。RefaシャワーやDysonドライヤーなど設備も充実。",
+    "saunakoCommentShort": "静岡発の人気サウナが栃木に上陸！",
+    "saunakoCommentLong": "静岡で大人気のMISOGIが小山にやってきたよ！8種類のアロマから選んでセルフロウリュできるし、RefaシャワーにDysonドライヤーって、サウナ後のケアまで抜かりないのが嬉しいところ",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "B号室 90分 1-2名",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "A号室 120分 1名",
+        "price": 3800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "E号室 120分 1-3名",
+        "price": 5300,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 127,
+    "slug": "kura-sauna-utsunomiya",
+    "name": "KURA:SAUNA UTSUNOMIYA",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "宇都宮市",
+    "area": "宇都宮",
+    "address": "栃木県宇都宮市伝馬町2-6",
+    "nearestStation": "東武宇都宮駅",
+    "walkMinutes": 3,
+    "priceMin": 6000,
+    "duration": 180,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日 10:00〜20:00 / 土日祝 9:00〜22:30",
+    "holidays": "木曜定休",
+    "website": null,
+    "phone": "090-6955-7523",
+    "bookingUrl": "https://select-type.com/rsv/?id=FnOtwyrX3cI&c_id=298425",
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "スキンケア用品",
+      "ドリンク飲み放題"
+    ],
+    "note": "大谷石蔵リノベーション。薪火式セルフロウリュ。ドリンク飲み放題付き。1名利用時も2名分料金が必要",
+    "images": [
+      "/facilities/127-0.webp",
+      "/facilities/127-1.webp",
+      "/facilities/127-2.webp",
+      "/facilities/127-3.webp"
+    ],
+    "lat": 36.560997,
+    "lng": 139.879164,
+    "description": "戦前に建てられた大谷石蔵をリノベーションした完全貸切サウナ。薪で温める本格セルフロウリュと16度の水風呂、緑に囲まれた外気浴が楽しめる。東武宇都宮駅から徒歩3分。ドリンク飲み放題付き。",
+    "saunakoCommentShort": "大谷石蔵で薪火ロウリュ、外気浴も！",
+    "saunakoCommentLong": "戦前の大谷石蔵をリノベした雰囲気抜群のサウナだよ！薪で温めるセルフロウリュは本格的で、お茶のキューゲルやアロマも選べるの。水風呂16度のあとは緑に囲まれた外気浴でととのえるし、ドリンク飲み放題なのも嬉しいかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 180分/人",
+        "price": 6000,
+        "duration": 180,
+        "capacity": 8
+      },
+      {
+        "name": "土日祝 180分/人",
+        "price": 8000,
+        "duration": 180,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 128,
+    "slug": "yuminoyu",
+    "name": "弓乃湯",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須郡那須町",
+    "area": "那須",
+    "address": "栃木県那須郡那須町高久甲4389-140",
+    "nearestStation": "黒磯駅",
+    "walkMinutes": null,
+    "priceMin": 6500,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜19:30",
+    "holidays": "水曜定休",
+    "website": "https://www.yuminoyu.com/",
+    "phone": "0287-73-4126",
+    "bookingUrl": "https://yuminoyu.resv.jp/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
+    "note": "天然温泉（源泉かけ流し・地下1500m）付き。山ゆり・山つつじ・山さくらの3棟独立。那須ICから車5分",
+    "images": [
+      "/facilities/128-0.webp",
+      "/facilities/128-1.webp",
+      "/facilities/128-2.webp",
+      "/facilities/128-3.webp"
+    ],
+    "lat": 37.007603,
+    "lng": 140.023742,
+    "description": "那須高原にある天然温泉付きの完全個室サウナ。地下1500mからの源泉かけ流し温泉とサウナ、16度の水風呂を3棟の独立した貸切空間で楽しめる。セルフロウリュと外気浴も完備。",
+    "saunakoCommentShort": "天然温泉×サウナの贅沢な貸切空間！",
+    "saunakoCommentLong": "那須の自然に囲まれた3棟独立の貸切サウナだよ！地下1500mからの源泉かけ流し温泉が付いてるのがすごいところ。サウナで蒸されたあとは16度の水風呂、そして外気浴…ととのい確定かも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 平日 1棟(4名)",
+        "price": 6500,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "90分 土日祝 1棟(4名)",
+        "price": 7600,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "120分 平日 1棟(4名)",
+        "price": 8700,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "120分 土日祝 1棟(4名)",
+        "price": 10200,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 129,
+    "slug": "mori-no-tenku-sauna",
+    "name": "森の天空サウナ&露天風呂",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須塩原市",
+    "area": "那須",
+    "address": "栃木県那須塩原市戸田178-4",
+    "nearestStation": "那須塩原駅",
+    "walkMinutes": null,
+    "priceMin": 6600,
+    "duration": 80,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "3-17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00〜20:50（6枠入替制）",
+    "holidays": "不定休",
+    "website": "https://lbcg.net/sauna/",
+    "phone": "0287-74-5517",
+    "bookingUrl": "https://lbcg.net/sauna/",
+    "amenities": [
+      "タオルセット",
+      "ミネラルウォーター",
+      "湯浴み着"
+    ],
+    "note": "完全貸切。110度ヒノキサウナ。那須エリア無料送迎あり（2名以上・要電話予約）。タトゥーOK",
+    "images": [
+      "/facilities/129-0.webp",
+      "/facilities/129-1.webp",
+      "/facilities/129-2.webp",
+      "/facilities/129-3.webp"
+    ],
+    "lat": 37.042878,
+    "lng": 139.960383,
+    "description": "那須塩原の森の中にある完全貸切のプライベートサウナ。110度のヒノキサウナにセルフロウリュ、3〜17度の水風呂、ハンモックでの360度パノラマ外気浴が楽しめる。80分6,600円/人で最大8名まで利用可能。",
+    "saunakoCommentShort": "森に囲まれた天空のととのいスポット！",
+    "saunakoCommentLong": "那須の森のなかで110度のヒノキサウナを完全貸切できるよ！水風呂は季節で3〜17度まで変わるのがワイルドだし、ハンモックに揺られながらの外気浴は360度の森パノラマ。無料送迎もあるから電車組でも安心かも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "大人 80分/人",
+        "price": 6600,
+        "duration": 80,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 130,
+    "slug": "the-pine",
+    "name": "THE PINE",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須郡那須町",
+    "area": "那須",
+    "address": "栃木県那須郡那須町高久丙3236-3",
+    "nearestStation": "黒磯駅",
+    "walkMinutes": null,
+    "priceMin": 9800,
+    "duration": 150,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜19:00（3枠制）",
+    "holidays": "水曜定休",
+    "website": "https://sportsgarden.jp/",
+    "phone": "0287-77-3344",
+    "bookingUrl": "https://select-type.com/s/thepine/",
+    "amenities": [
+      "タオルセット（有料）",
+      "水着（有料）",
+      "サウナポンチョ（有料）"
+    ],
+    "note": "那須スポーツガーデン内。水着着用必須。薪ストーブ110度。井戸水水風呂。若駒酒造の日本酒タンク改造五右衛門風呂",
+    "images": [
+      "/facilities/130-0.webp",
+      "/facilities/130-1.webp",
+      "/facilities/130-2.webp",
+      "/facilities/130-3.webp"
+    ],
+    "lat": 37.096638,
+    "lng": 140.042559,
+    "description": "那須スポーツガーデン内にあるプライベートサウナ。薪ストーブで110度のサウナ室と井戸水水風呂、若駒酒造の日本酒タンクを改造した五右衛門風呂が特徴。松やイチョウに囲まれた外気浴スペースも。",
+    "saunakoCommentShort": "酒蔵タンク五右衛門風呂が唯一無二！",
+    "saunakoCommentLong": "那須高原の森の中で110度の本格薪サウナが楽しめるよ！井戸水の水風呂でしっかり冷えたあとは、酒蔵タンクを改造した五右衛門風呂であったまるっていう贅沢コース。外気浴スペースも最高で、焚き火もあるから冬でも安心かも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "通常プラン 150分 2名",
+        "price": 9800,
+        "duration": 150,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 131,
+    "slug": "private-sauna-tera",
+    "name": "Private Sauna TERA",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "塩谷郡塩谷町",
+    "area": "その他",
+    "address": "栃木県塩谷郡塩谷町鳥羽新田390-1",
+    "nearestStation": "矢板駅",
+    "walkMinutes": null,
+    "priceMin": 19800,
+    "duration": 180,
+    "capacity": 10,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜17:00",
+    "holidays": "通年営業",
+    "website": "https://tera2022.com/",
+    "phone": "050-7109-5411",
+    "bookingUrl": "https://www.nap-camp.com/tochigi/16343",
+    "amenities": [
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "1日1組限定の完全貸切。オオシマ式サウナ115度+テントサウナ100度。源泉かけ流し温泉付き。渓流天然水風呂13度。タオル持参",
+    "images": [
+      "/facilities/131-0.webp",
+      "/facilities/131-1.webp",
+      "/facilities/131-2.webp",
+      "/facilities/131-3.webp"
+    ],
+    "lat": 36.830224,
+    "lng": 139.840651,
+    "description": "塩谷町の自然に囲まれた1日1組限定の完全貸切サウナ。オオシマ式サウナは最大120度に達し、渓流の天然水風呂は約13度。源泉かけ流しの温泉も備え、サウナと温泉の両方を贅沢に楽しめる。",
+    "saunakoCommentShort": "温泉×オオシマ式サウナの1日1組貸切！",
+    "saunakoCommentLong": "1日1組だけの完全貸切だから、誰にも邪魔されずにととのえるよ！オオシマ式サウナは115度でかなりパワフル、渓流の天然水風呂は13度でキンキン。しかも源泉かけ流し温泉まであるから、サウナと温泉の最強ループが楽しめちゃうかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "デイサウナ 3時間 2名",
+        "price": 19800,
+        "duration": 180,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 132,
+    "slug": "yagan-totonoimura",
+    "name": "野岩ととのい村",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "日光市",
+    "area": "日光",
+    "address": "栃木県日光市中三依796番地",
+    "nearestStation": "中三依温泉駅",
+    "walkMinutes": null,
+    "priceMin": 33000,
+    "duration": 180,
+    "capacity": 15,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜17:00",
+    "holidays": "月〜金曜定休（土日のみ営業）",
+    "website": "https://furusatotetsudou.jp/yagansauna",
+    "phone": "080-7750-1594",
+    "bookingUrl": "https://coubic.com/totonoimura",
+    "amenities": [
+      "タオル",
+      "スリッパ"
+    ],
+    "note": "古民家一棟貸切。日光杉サウナ室にHARVIA製薪ストーブ。畳の座敷・縁側で休憩可。ペット同伴可（屋外のみ）。土日のみ営業",
+    "images": [
+      "/facilities/132-0.webp",
+      "/facilities/132-1.webp",
+      "/facilities/132-2.webp",
+      "/facilities/132-3.webp"
+    ],
+    "lat": 36.989023,
+    "lng": 139.697798,
+    "description": "日光市の山間にある古民家を再生した貸切サウナ。日光杉のサウナ室にHARVIA製薪ストーブを設置し、3段ベンチで最大15名まで対応。畳の座敷や大自然の中での外気浴が楽しめる。土日のみ営業。",
+    "saunakoCommentShort": "古民家まるごと貸切の山間サウナ！",
+    "saunakoCommentLong": "日光の山奥にある古民家をまるっと貸切できるサウナだよ！HARVIA薪ストーブで本格フィンランド式、日光杉のサウナ室が香りも最高。蒸されたあとは大自然の中で外気浴して、畳の座敷でゴロゴロ休憩っていう贅沢な過ごし方ができるかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切プラン 3時間 1-10名",
+        "price": 33000,
+        "duration": 180,
+        "capacity": 10
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 133,
+    "slug": "santa-loyly-sauna",
+    "name": "サンタ ロウリュ サウナ",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "芳賀郡茂木町",
+    "area": "その他",
+    "address": "栃木県芳賀郡茂木町木幡252",
+    "nearestStation": "茂木駅",
+    "walkMinutes": null,
+    "priceMin": 6600,
+    "duration": 75,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜17:45",
+    "holidays": "火曜・水曜定休",
+    "website": "https://showafurusato.com/sauna/",
+    "phone": "0285-64-3116",
+    "bookingUrl": "https://showafurusato.com/sauna/",
+    "amenities": [
+      "タオルマット（1枚無料）"
+    ],
+    "note": "昭和ふるさと村内。Narvi薪ストーブ+サウナストーン80kg。季節のハーブ水風呂。5名以上は+330円/名。2枠連続予約可（165分13,200円）",
+    "images": [
+      "/facilities/133-0.webp",
+      "/facilities/133-1.webp",
+      "/facilities/133-2.webp",
+      "/facilities/133-3.webp"
+    ],
+    "lat": 36.504063,
+    "lng": 140.162814,
+    "description": "昭和ふるさと村内にある貸切薪サウナ。フィンランドNarvi社の薪ストーブに80kgのサウナストーンを備え、セルフロウリュで本格的な蒸気を楽しめる。17度の井戸水水風呂には季節のハーブが浮かぶ。75分6,600円からとリーズナブル。",
+    "saunakoCommentShort": "ハーブ香る水風呂が気持ちいい！",
+    "saunakoCommentLong": "昭和レトロな雰囲気の中で本格フィンランド式サウナが楽しめるよ！Narviの薪ストーブにサウナストーン80kgでロウリュもバッチリ。水風呂は17度の井戸水で季節のハーブが浮いてるのがすごく癒される。75分6,600円ってかなりお手頃だよね",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切1枠 75分 4名",
+        "price": 6600,
+        "duration": 75,
+        "capacity": 4
+      },
+      {
+        "name": "貸切2枠 165分 4名",
+        "price": 13200,
+        "duration": 165,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 134,
+    "slug": "barrel-no-mori-shikishima-farm",
+    "name": "バレルの杜 敷島ファーム",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "那須郡那須町",
+    "area": "那須",
+    "address": "栃木県那須郡那須町大字高久丙1796",
+    "nearestStation": "黒磯駅",
+    "walkMinutes": null,
+    "priceMin": 16000,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:30〜20:00（3部制）",
+    "holidays": "不定休",
+    "website": "https://nasushiobara-sauna.com/",
+    "phone": "080-6775-5604",
+    "bookingUrl": "https://nasushiobara-sauna.com/",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "温泉入浴券（ホテルフロラシオン那須）"
+    ],
+    "note": "3棟独立バレルサウナ。TypeA:電気90度/B:薪60-110度/C:薪60-110度(6名22,000円)。全棟HARVIA製。25mインフィニティベンチ。温泉入浴券付き",
+    "images": [
+      "/facilities/134-0.webp",
+      "/facilities/134-1.webp",
+      "/facilities/134-2.webp",
+      "/facilities/134-3.webp"
+    ],
+    "lat": 37.079831,
+    "lng": 140.038982,
+    "description": "那須高原に3棟のHARVIA製バレルサウナを構える自然一体型サウナ。電気ストーブのTypeAと薪ストーブのTypeB・Cから選べ、全棟セルフロウリュ対応。水風呂と25mインフィニティベンチでの外気浴が楽しめる。温泉入浴券付き。",
+    "saunakoCommentShort": "渓流沿い3棟バレルで選べる楽しさ！",
+    "saunakoCommentLong": "那須の渓流沿いに3つのバレルサウナが並んでるよ！電気派も薪派も選べるのが嬉しい。25mのインフィニティベンチやハンモックで外気浴したら最高にととのえそう。温泉入浴券も付いてくるからお得感あるかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "TypeA/B 貸切 150分 4名",
+        "price": 16000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "TypeC 貸切 150分 6名",
+        "price": 22000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 135,
+    "slug": "nikko-sauna-resort",
+    "name": "日光サウナリゾート",
+    "prefecture": "tochigi",
+    "prefectureLabel": "栃木県",
+    "city": "日光市",
+    "area": "日光",
+    "address": "栃木県日光市瀬尾3351",
+    "nearestStation": "東武日光駅",
+    "walkMinutes": null,
+    "priceMin": 4500,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00〜18:00",
+    "holidays": "不定休",
+    "website": "https://www.nikko-sauna-resort.com/",
+    "phone": "0288-25-5209",
+    "bookingUrl": "https://www.nikko-sauna-resort.com/",
+    "amenities": [
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "バレル/ポッドは貸切、エアストリームは共用(1名4,500円/2h)。薪ストーブ120度。天然泉水風呂。カフェスペースあり。駐車場20台",
+    "images": [
+      "/facilities/135-0.webp",
+      "/facilities/135-1.webp",
+      "/facilities/135-2.webp",
+      "/facilities/135-3.webp"
+    ],
+    "lat": 36.796054,
+    "lng": 139.63808,
+    "description": "日光国立公園内の大自然に囲まれた屋外サウナリゾート。貸切バレルサウナ・ポッドサウナと共用エアストリームサウナの3種を用意。薪ストーブは最大120度、天然泉でクールダウン。カフェスペースも完備。",
+    "saunakoCommentShort": "天然泉の水風呂が湧く国立公園サウナ！",
+    "saunakoCommentLong": "日光国立公園の中にあるサウナリゾートだよ！薪ストーブ120度のバレルサウナで蒸されたあと、天然泉にドボンっていうのが最高。貸切バレルもあるし、1人4,500円のエアストリームもあるからソロでも気軽に来れるのが嬉しいかも",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "エアストリーム 2時間 1名",
+        "price": 4500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "バレル貸切 平日 3時間 4名",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "バレル貸切 休日 3時間 4名",
+        "price": 25000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 137,
+    "slug": "tobe-sauna",
+    "name": "TOBE SAUNA（飛べサウナ）",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・栄",
+    "address": "愛知県名古屋市中区丸の内2-16-8 名古屋プレミアム医療モール丸の内 2F",
+    "nearestStation": "丸の内駅",
+    "walkMinutes": 3,
+    "priceMin": 4000,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "12:00〜翌3:30（最終受付24:00）",
+    "holidays": "不定休",
+    "website": "https://tobesauna.com/",
+    "phone": "052-228-3981",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔",
+      "化粧水",
+      "乳液",
+      "ドライヤー",
+      "ヘアアイロン"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 35.17453,
+    "lng": 136.89847,
+    "description": "名古屋・丸の内駅から徒歩3分の完全予約制個室サウナ。フィンランド式バレルサウナを屋内で体験でき、水風呂は13度と本格派。90分制で平日1名4,000円からとリーズナブル。深夜3時半まで営業しており仕事帰りにも利用しやすい。",
+    "saunakoCommentShort": "13度の水風呂×バレルサウナで深夜までOK!",
+    "saunakoCommentLong": "丸の内にあるバレルサウナの個室だよ! 水風呂が13度としっかり冷えてるのがポイント高い。セルフロウリュもできるし、深夜3時半まで営業してるから仕事が遅くなっても余裕で行けるの。アメニティもスキンケアまで充実してて手ぶらでOKなのも嬉しいかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日 90分 1名",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日 90分 2名",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 90分 1名",
+        "price": 4500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 90分 4名",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 138,
+    "slug": "sauna-m",
+    "name": "Sauna M",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・名駅",
+    "address": "愛知県名古屋市西区名駅2-25-2",
+    "nearestStation": "名古屋駅",
+    "walkMinutes": 5,
+    "priceMin": 19800,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:00",
+    "holidays": "不定休",
+    "website": "https://sauna-m.com/",
+    "phone": "052-433-9535",
+    "bookingUrl": "https://lin.ee/mN5OwBs",
+    "amenities": [
+      "タオル",
+      "バスローブ",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔",
+      "化粧水",
+      "乳液",
+      "ドライヤー",
+      "ヘアアイロン"
+    ],
+    "note": "会員制/ビジター可",
+    "images": [],
+    "lat": 35.17218,
+    "lng": 136.88542,
+    "description": "名古屋駅から徒歩5分、「ととのえ親方」松尾大監修の完全個室プライベートサウナ。AGUNI・VANAの2部屋を備え、約100度のサウナと15-16度の水風呂、開放的な外気浴スペースが魅力。180分制でカップル・男女混合利用可。",
+    "saunakoCommentShort": "ととのえ親方監修の外気浴付き高級個室!",
+    "saunakoCommentLong": "名駅から徒歩5分の高級プライベートサウナだよ! 100度のサウナに15-16度の水風呂、そして外気浴スペースまであるのがすごい。180分もあるからゆっくり何セットも楽しめるし、男女一緒に入れるからカップルにもぴったり。アメニティもバスローブまで付いてて至れり尽くせりだね!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "ビジター 平日昼 180分",
+        "price": 19800,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 平日夜 180分",
+        "price": 22000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 休日 180分",
+        "price": 22000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 139,
+    "slug": "private-sauna-exit",
+    "name": "Private Sauna EXIT",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・栄",
+    "address": "愛知県名古屋市中区錦3-17-5 EXIT NISHIKI north 8F",
+    "nearestStation": "栄駅",
+    "walkMinutes": 1,
+    "priceMin": 2000,
+    "duration": 60,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜翌5:00（最終受付 翌3:30）",
+    "holidays": "12/31・1/1",
+    "website": "https://exitsauna.com/",
+    "phone": "052-962-1414",
+    "bookingUrl": "https://www.tablecheck.com/shops/sauna-exit/reserve",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
+    "note": "男性専用",
+    "images": [],
+    "lat": 35.16927,
+    "lng": 136.90784,
+    "description": "栄駅から徒歩1分、サウナ師匠・秋山大輔プロデュースの完全個室フィンランド式サウナ。7種のアロマロウリュとカラーセラピー照明が特徴。14度の水風呂と外気浴スペースを備え、朝9時から翌朝5時まで営業。",
+    "saunakoCommentShort": "栄駅1分! 7種アロマ×カラーサウナ!",
+    "saunakoCommentLong": "栄駅からたった1分で行ける個室サウナだよ! 7パターンのアロマロウリュが選べるのが楽しいし、ネオンのカラー照明で気分も上がる。水風呂は14度でキリッと冷えて、外気浴スペースもあるからしっかりととのえるよ。60分2,000円からでサクッと行けるのもいいよね!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "60分",
+        "price": 2000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "90分",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "160分",
+        "price": 5000,
+        "duration": 160,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 140,
+    "slug": "sauna-monkey",
+    "name": "SAUNA MONKEY",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・名駅",
+    "address": "愛知県名古屋市中村区名駅南1-17-23 ニッタビル B1F",
+    "nearestStation": "名古屋駅",
+    "walkMinutes": 5,
+    "priceMin": 15000,
+    "duration": 100,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "月〜木・日・祝 9:00〜24:00 / 金土・祝前 9:00〜翌2:00",
+    "holidays": "年中無休",
+    "website": "https://www.sauna-monkey.com/",
+    "phone": "052-485-6363",
+    "bookingUrl": "https://sauna-monkey.hacomono.jp/reserve/schedule/1/1/",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "フェイスシート",
+      "ミネラルウォーター"
+    ],
+    "note": "個室はBlack Room/White Roomの2室（水着着用・男女利用可）",
+    "images": [],
+    "lat": 35.16526,
+    "lng": 136.8837,
+    "description": "名古屋駅から徒歩5分、東海エリア最大級のサウナ専用施設。Black Room・White Roomの2つの個室サウナはセルフロウリュに対応し、Bluetoothスピーカー・Wi-Fi完備。100分15,000円から、最大4名で水着着用の男女利用が可能。",
+    "saunakoCommentShort": "名駅すぐ! Black/White 2つの個室!",
+    "saunakoCommentLong": "名古屋駅から5分の東海最大級サウナ施設の個室だよ! Black RoomとWhite Roomで雰囲気が全然違うから両方試してみたくなるかも。Bluetoothスピーカーで好きな音楽かけられるし、Wi-Fiもあるから快適。水着着用で男女一緒に入れるからカップルにもおすすめだね!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "個室 平日 100分",
+        "price": 15000,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "個室 平日 120分",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "個室 休日 100分",
+        "price": 18000,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "個室 休日 120分",
+        "price": 21000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 141,
+    "slug": "cred-spa-sauna",
+    "name": "CRED SPA SAUNA",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・栄",
+    "address": "愛知県名古屋市中区錦3-16-5 SLOW ART CENTER NAGOYA",
+    "nearestStation": "栄駅",
+    "walkMinutes": 2,
+    "priceMin": 3500,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "10-20",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:30〜23:00（個室最終受付 21:00）",
+    "holidays": "第4月曜日",
+    "website": "https://www.credspasauna.com/",
+    "phone": "052-228-1201",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000695282/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "スキンケア",
+      "ドライヤー",
+      "水着レンタル"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 35.170491,
+    "lng": 136.907491,
+    "description": "栄駅から徒歩2分、SLOW ART CENTER NAGOYA内のサウナ施設。2Fに完全個室サウナ5室を備え、水風呂温度を10〜20℃で好みに調整可能。セルフロウリュや外気浴スペースも完備し、カップルでの利用にも対応。",
+    "saunakoCommentShort": "水風呂温度を自分好みに調整できる個室!",
+    "saunakoCommentLong": "栄駅すぐの好立地で、個室サウナの水風呂温度が10〜20℃で選べるのが嬉しいポイント! セルフロウリュもできて、好きな香りで蒸されたあとは外気浴スペースでととのえるよ。1人利用もグループも対応してて使い勝手がいい感じ!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "シングル 90分 平日",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "シングル 120分 平日",
+        "price": 4000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "グループ 90分 平日",
+        "price": 9500,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "グループ 120分 平日",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 142,
+    "slug": "loca-the-class-nagoya",
+    "name": "LOCA THE CLASS. NAGOYA",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・栄",
+    "address": "愛知県名古屋市中区錦2-12-32 さくらHills錦 1F",
+    "nearestStation": "伏見駅",
+    "walkMinutes": 5,
+    "priceMin": 20000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜翌4:00（最終受付 翌2:00）",
+    "holidays": "不定休",
+    "website": "https://www.loca-nagoya.com/",
+    "phone": "052-228-3440",
+    "bookingUrl": "https://lin.ee/tS3th1E",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "スキンケア",
+      "ドライヤー",
+      "ガウン",
+      "サウナウェア",
+      "ドリンク"
+    ],
+    "note": "会員制/ビジター可",
+    "images": [],
+    "lat": 35.170827,
+    "lng": 136.901056,
+    "description": "伏見駅から徒歩5分の会員制プライベートサウナ。富士山の溶岩プレートを使ったマグマスパ式サウナ（65℃・湿度60%）で身体の芯から温まる独自体験を提供。完全個室で最大4名、初回体験20,000円から。",
+    "saunakoCommentShort": "マグマスパで芯から温まる会員制サウナ!",
+    "saunakoCommentLong": "富士山の溶岩プレートで温める「マグマスパ」が他にはない体験! 65℃と温度は控えめだけど湿度60%で身体の芯からじんわり温まるタイプ。水風呂は約15℃でととのいもバッチリ。完全個室でドリンク・サプリまで揃った空間は圧巻かも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "初回体験 120分",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター 120分",
+        "price": 50000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 143,
+    "slug": "nagono-work-bar-sauna",
+    "name": "NAGONO WORK BAR & SAUNA",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋・名駅",
+    "address": "愛知県名古屋市西区那古野2-8-11 メゾンなごの808",
+    "nearestStation": "国際センター駅",
+    "walkMinutes": 8,
+    "priceMin": 13200,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "火〜金 10:00〜22:30 / 土 12:00〜20:00",
+    "holidays": "日曜・月曜・祝日",
+    "website": "https://leopards.co.jp/service/workbarsauna/",
+    "phone": "050-3613-6494",
+    "bookingUrl": "https://nagono.gflow.cloud/workbar/calendar_open",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "スキンケア",
+      "ドライヤー",
+      "ヘアアイロン"
+    ],
+    "note": "水風呂なし（冷水シャワーのみ）",
+    "images": [],
+    "lat": 35.176858,
+    "lng": 136.887968,
+    "description": "国際センター駅から徒歩8分、円頓寺商店街近くの「仕事×サウナ×バー」複合施設。岐阜県産ヒノキ造りの貸切フィンランド式サウナ（最大6名）で、5種のアロマによるセルフロウリュが楽しめる。水風呂はなく冷水シャワーで冷却。",
+    "saunakoCommentShort": "ヒノキ香るフィンランド式サウナを貸切で!",
+    "saunakoCommentLong": "円頓寺商店街のそばにある隠れ家的スポット! 岐阜県産ヒノキで造られたサウナ室で5種類のアロマロウリュが楽しめるよ。水風呂はないけど冷水シャワーでクールダウンして、インフィニティチェアでプロジェクター見ながらととのえるのが最高かも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切 120分（3名まで）平日",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "貸切 120分（3名まで）土日祝",
+        "price": 14850,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 144,
+    "slug": "88do",
+    "name": "88℃（ハチジュウハチド）",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "岩倉市",
+    "area": "愛知県その他",
+    "address": "愛知県岩倉市鈴井町観音寺32-1",
+    "nearestStation": "石仏駅",
+    "walkMinutes": 20,
+    "priceMin": 1300,
+    "duration": 60,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "20",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "平日 18:00〜24:00 / 土日祝 10:00〜24:00（受付終了 23:00）",
+    "holidays": "水曜定休",
+    "website": "https://88sauna.jp/",
+    "phone": "0587-84-3850",
+    "bookingUrl": "https://coubic.com/hahachijuhachido",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "化粧水",
+      "くし"
+    ],
+    "note": "水風呂は氷で好みの温度に調整可能",
+    "images": [],
+    "lat": 35.287075,
+    "lng": 136.862679,
+    "description": "岩倉市の完全個室プライベートサウナ。スタンダード2室とVIP1室の計3室を備え、Harvia製ストーブでセルフロウリュが楽しめる。水風呂は氷で好みの温度に調整可能。30分1,300円/人からのリーズナブルな価格設定。",
+    "saunakoCommentShort": "30分1,300円〜! 氷で水風呂を自分好みに!",
+    "saunakoCommentLong": "30分1,300円からっていうコスパの良さがまず嬉しい! 水風呂は氷を好きなだけ入れて自分好みの冷たさにできるし、Bluetoothスピーカーで好きな音楽流しながらセルフロウリュできるのが楽しいよ。外気浴は屋内だから雨の日でも安心かも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "スタンダード 60分 1名",
+        "price": 2600,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 60分 2名",
+        "price": 5200,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 60分",
+        "price": 16800,
+        "duration": 60,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 145,
+    "slug": "steamers",
+    "name": "Steamers Beach & Sauna",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "常滑市",
+    "area": "愛知県その他",
+    "address": "愛知県常滑市りんくう町2丁目 りんくうビーチBBQエリア内",
+    "nearestStation": "りんくう常滑駅",
+    "walkMinutes": 13,
+    "priceMin": 3500,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜21:00",
+    "holidays": "基本無休（平日は予約がない場合休業）",
+    "website": "https://steamers-sauna.com/",
+    "phone": "070-4002-1367",
+    "bookingUrl": "https://steamers-sauna.com/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ドライヤー"
+    ],
+    "note": "水着着用・海が水風呂",
+    "images": [],
+    "lat": 34.886501,
+    "lng": 136.822944,
+    "description": "常滑りんくうビーチに位置する日本唯一のビーチ常設サウナリゾート。貸切サウナキャビン4棟を備え、伊勢湾を天然水風呂として利用できる。愛知県産ヒノキのサウナキャビンでセルフロウリュを楽しんだ後、海へダイブ。",
+    "saunakoCommentShort": "海が水風呂! りんくうビーチの絶景サウナ!",
+    "saunakoCommentLong": "サウナで蒸されたあと海にドボンできる最高のロケーション! ヒノキのサウナキャビンでセルフロウリュして、伊勢湾にダイブっていう贅沢な体験ができるよ。水着着用だからカップルや友達グループで気軽に楽しめるのもポイント高いかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "サウナ貸切 平日 2時間 1名",
+        "price": 3500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "サウナ貸切 休日 2時間 1名",
+        "price": 4000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 146,
+    "slug": "pleasure-sauna-tlm",
+    "name": "PLEASURE SAUNA TLM（たるむ）",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "刈谷市",
+    "area": "愛知県その他",
+    "address": "愛知県刈谷市一色町3-7-10 ミキビル1階",
+    "nearestStation": "重原駅",
+    "walkMinutes": 9,
+    "priceMin": 3800,
+    "duration": 90,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜25:00",
+    "holidays": "基本無休",
+    "website": "https://www.instagram.com/pleasure_sauna_tlm/",
+    "phone": "0566-91-4328",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000687420/",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "化粧水",
+      "ドライヤー",
+      "使い捨て水着"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 34.995856,
+    "lng": 137.017425,
+    "description": "刈谷市の完全予約制プライベートサウナ。スタンダードルームとプレジャールームの2室を備え、チラーで14℃に管理された水風呂と天然溶岩石のセルフロウリュが魅力。サウナ温度は80〜110℃の3段階で調整可能。",
+    "saunakoCommentShort": "チラー14℃の水風呂とリビング付き完全個室!",
+    "saunakoCommentLong": "三河エリアの個室サウナだよ! 水風呂がチラーで14℃にキッチリ管理されてるのがありがたい。サウナ温度も80〜110℃の3段階で選べるし、天然溶岩石のロウリュも気持ちいいの。ReFaのドライヤーやシャンプーが使えるアメニティも嬉しいかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "スタンダード 90分 1名",
+        "price": 3800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 120分 1名",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "プレジャー 90分 1名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "プレジャー 120分 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 147,
+    "slug": "s-plus",
+    "name": "S+（エスプラス）",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "岡崎市",
+    "area": "愛知県その他",
+    "address": "愛知県岡崎市昭和町神郷8-2",
+    "nearestStation": "西岡崎駅",
+    "walkMinutes": 3,
+    "priceMin": 5000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "6:00〜24:00（最終受付 22:00）",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/splus.splus/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "ボディソープ",
+      "サウナハット（レンタル）",
+      "水着（レンタル）"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 34.946249,
+    "lng": 137.121042,
+    "description": "西岡崎駅から徒歩3分のプライベートサウナ。完全個室2室を備え、HARVIAストーブによるセルフロウリュが楽しめる。水風呂は15度、Bluetoothスピーカーで好きな音楽を流しながら照明も自由に調整できる。水着レンタルありで手ぶら利用可能。",
+    "saunakoCommentShort": "岡崎の男女OKプライベートサウナ!",
+    "saunakoCommentLong": "岡崎にある完全個室のプライベートサウナだよ! HARVIAストーブでセルフロウリュができて、照明もBGMも自分好みにカスタマイズできるの。水風呂は15度で程よく冷えるし、水着レンタルもあるからカップルで手ぶらで行けちゃうのが嬉しいかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日デイタイム 2時間 2名",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "平日ナイト 2時間 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "休日デイタイム 2時間 2名",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "休日ナイト 2時間 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 148,
+    "slug": "mimodama-sauna",
+    "name": "mimodama sauna",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋市郊外",
+    "address": "愛知県名古屋市中川区西伏屋2-1313",
+    "nearestStation": "春田駅",
+    "walkMinutes": 5,
+    "priceMin": 2000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/mimodamasauna/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "シャワー",
+      "駐車場3台"
+    ],
+    "note": "予約はInstagram DMのみ",
+    "images": [],
+    "lat": 35.142581,
+    "lng": 136.819575,
+    "description": "名古屋市中川区の住宅街にあるDIY貸切プライベートサウナ。オーナー手作りのサウナ小屋は約80度で、アロマ水を使ったセルフロウリュが楽しめる。屋外の水風呂は約16度、緑に囲まれた庭でインフィニティチェアの外気浴も充実。",
+    "saunakoCommentShort": "住宅街に潜むDIY貸切サウナ!",
+    "saunakoCommentLong": "オーナーさんがDIYで作り上げたプライベートサウナなんだけど、クオリティが高い! サウナは80度でアロマロウリュができて、庭のインフィニティチェアでの外気浴がほんとに気持ちいい。水風呂は16度くらいで、1人2,000円っていう価格も魅力的だよね!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "貸切 2時間 1名あたり",
+        "price": 2000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 149,
+    "slug": "hotel-hoqa-hanaironoyu",
+    "name": "HOTEL HOQA 花色の湯",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "名古屋市",
+    "area": "名古屋市郊外",
+    "address": "愛知県名古屋市南区千竈通1-46-3",
+    "nearestStation": "堀田駅",
+    "walkMinutes": 13,
+    "priceMin": 6980,
+    "duration": 960,
+    "capacity": 4,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "チェックイン 15:00 / チェックアウト 11:00",
+    "holidays": "基本無休",
+    "website": "https://nagoyahotel-hoqa.jp/",
+    "phone": "052-825-2701",
+    "bookingUrl": "https://reservation.nagoyahotel-hoqa.jp/",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "サウナハット"
+    ],
+    "note": "ホテル併設",
+    "images": [],
+    "lat": 35.1078,
+    "lng": 136.922728,
+    "description": "名古屋市南区のサウナ・温泉付きホテル。プレミアムルームでは竹炭高温プライベートサウナ・個室露天風呂・天然鉱石の岩盤浴を客室内で楽しめる。宿泊は6,980円〜で、朝食付きプランや最大20時間滞在プランも用意。",
+    "saunakoCommentShort": "客室に温泉もサウナも完備のお泊まりサ活!",
+    "saunakoCommentLong": "ホテルの客室にサウナと露天風呂と岩盤浴が全部揃ってるってすごくない?! 竹炭サウナで温まったあとお部屋の露天風呂でゆっくりできるの。ルームサービスも充実してるし、サウナ後のご褒美感がたまらないよ。6,980円〜泊まれるのもコスパ良いかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "平日宿泊 2名",
+        "price": 6980,
+        "duration": 960,
+        "capacity": 2
+      },
+      {
+        "name": "土曜宿泊 2名",
+        "price": 9980,
+        "duration": 960,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
   }
 ]
