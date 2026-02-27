@@ -84,9 +84,10 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
           {/* Close button */}
           <button
             onClick={() => setLightboxOpen(false)}
-            className="absolute top-4 right-4 text-white/80 hover:text-white z-10"
+            className="absolute top-4 right-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full bg-black/30"
+            aria-label="閉じる"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -95,9 +96,10 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
           {images.length > 1 && (
             <button
               onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev - 1 + images.length) % images.length); }}
-              className="absolute left-4 text-white/80 hover:text-white z-10"
+              className="absolute left-2 md:left-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full bg-black/30"
+              aria-label="前の画像"
             >
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -118,9 +120,10 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
           {images.length > 1 && (
             <button
               onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev + 1) % images.length); }}
-              className="absolute right-4 text-white/80 hover:text-white z-10"
+              className="absolute right-2 md:right-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full bg-black/30"
+              aria-label="次の画像"
             >
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>

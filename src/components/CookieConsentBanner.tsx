@@ -43,7 +43,7 @@ export default function CookieConsentBanner() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 animate-[fadeSlideUp_0.4s_ease-out]"
+      className="fixed bottom-0 left-0 right-0 z-50 animate-[fadeSlideUp_0.4s_ease-out] pb-[env(safe-area-inset-bottom,0px)]"
       role="banner"
       aria-label="Cookie同意バナー"
     >

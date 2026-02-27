@@ -159,7 +159,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
       {/* === Row 1: Logo + Prefecture + Filter chips + Count === */}
       <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center gap-2 md:gap-3">
         {/* Back button (mobile) */}
-        <Link href="/" className="md:hidden flex items-center justify-center w-7 h-7 flex-shrink-0"
+        <Link href="/" className="md:hidden flex items-center justify-center w-10 h-10 -ml-1 flex-shrink-0"
           data-track-click="search_back"
         >
           <svg className="w-5 h-5 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
