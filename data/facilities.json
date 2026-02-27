@@ -10071,5 +10071,906 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null
+  },
+  {
+    "id": 123,
+    "slug": "base-private-sauna-yakuin",
+    "name": "BASE Private sauna 福岡薬院店",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市中央区薬院1丁目2-5 リアンプレミアム薬院ステーション1F",
+    "nearestStation": "薬院駅",
+    "walkMinutes": 2,
+    "priceMin": 5000,
+    "duration": 80,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15-16",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜23:00",
+    "holidays": "不定休",
+    "website": "https://base-sauna.jp/",
+    "phone": "092-791-1210",
+    "bookingUrl": "https://coubic.com/base-private-sauna",
+    "amenities": [
+      "シャンプー(MARKS&WEB)",
+      "コンディショナー",
+      "ボディソープ",
+      "バスタオル",
+      "フェイスタオル",
+      "ドライヤー"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 33.5836,
+    "lng": 130.3991,
+    "description": "薬院駅から徒歩2分の完全個室サウナ。全5室を完備し、サウナ温度93度・水風呂15〜16度でセルフロウリュ対応。MARKS&WEBのアメニティで手ぶら利用可。80分5,000円から。",
+    "saunakoCommentShort": "薬院駅2分! 5室の本格個室サウナ!",
+    "saunakoCommentLong": "薬院駅から徒歩2分の完全個室サウナだよ！MARKS&WEBのアメニティが揃ってて手ぶらで行けるのが嬉しい。セルフロウリュで好みの蒸気を楽しめるし、80分5,000円からとコスパもいい感じ！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "80分 2名",
+        "price": 5000,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "100分 2名",
+        "price": 5800,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "120分 2名",
+        "price": 6500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "150分 2名",
+        "price": 7000,
+        "duration": 150,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 124,
+    "slug": "tenjin-sauna",
+    "name": "テンジンサウナ",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市中央区今泉1-9-2 3F",
+    "nearestStation": "西鉄福岡（天神）駅",
+    "walkMinutes": 5,
+    "priceMin": 2090,
+    "duration": 60,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜23:30",
+    "holidays": "不定休",
+    "website": "https://www.tenjin-sauna.com/",
+    "phone": "",
+    "bookingUrl": "https://select-type.com/rsv/?id=1nwOWa5ac9Y",
+    "amenities": [
+      "タオル",
+      "ドライヤー"
+    ],
+    "note": "製氷機で水風呂温度調整可",
+    "images": [],
+    "lat": 33.5879,
+    "lng": 130.4054,
+    "description": "天神駅から徒歩5分、60分2,090円からの個室サウナ。スタンダードとデラックスの2タイプ3室。デラックスはドライ+スチームのハイブリッドサウナ。製氷機で水風呂温度を自分好みに調整できる。",
+    "saunakoCommentShort": "60分2,090円! 天神の格安個室サウナ!",
+    "saunakoCommentLong": "天神駅から徒歩5分で60分2,090円から入れるコスパ最強の個室サウナだよ！デラックスルームはドライとスチームのハイブリッドサウナで、製氷機で水風呂の温度も自分好みに調整できるの。サクッと整いたい時にぴったりかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "スタンダード 60分 2名",
+        "price": 2090,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "デラックス 60分 4名",
+        "price": 3410,
+        "duration": 60,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 125,
+    "slug": "myaku-sauna-fukuoka",
+    "name": "脈 MYAKU PRIVATE SAUNA",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市中央区天神2丁目7-14 いちご天神シティビル8F",
+    "nearestStation": "天神駅",
+    "walkMinutes": 4,
+    "priceMin": 6600,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "5-40",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "24時間",
+    "holidays": "不定休",
+    "website": "https://www.myaku-sauna.com/",
+    "phone": "050-3101-9683",
+    "bookingUrl": null,
+    "amenities": [
+      "サウナハット",
+      "ガウン",
+      "バスタオル",
+      "スキンケア(MARKS&WEB/無印良品)",
+      "ドライヤー"
+    ],
+    "note": "脈拍計測で「ととのい」を可視化。宿泊プランあり",
+    "images": [],
+    "lat": 33.591,
+    "lng": 130.399,
+    "description": "天神駅から徒歩4分、脈拍計測で科学的にととのいを追求する完全個室サウナ。3室（火・水・休）それぞれ異なるコンセプト。水風呂は5℃〜40℃で調温可能。24時間営業で宿泊プランもあり。",
+    "saunakoCommentShort": "脈拍計測で科学的にととのう!",
+    "saunakoCommentLong": "天神にある24時間営業のプライベートサウナだよ！脈拍バンドで心拍を測りながらととのいを追求できるの。火・水・休の3部屋はそれぞれコンセプトが違うから、何度来ても新鮮。水風呂は5℃まで冷やせるのも最高！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "火(HI) 90分",
+        "price": 7150,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "水(MIZU) 90分",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "休(KYU) 90分",
+        "price": 9130,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 126,
+    "slug": "kudochi-sauna-fukuoka-nakasu",
+    "name": "KUDOCHI sauna 福岡中洲店",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市博多区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市博多区中洲5-1-7 SPOONビル7階",
+    "nearestStation": "中洲川端駅",
+    "walkMinutes": 1,
+    "priceMin": 6000,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14-16",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "24時間",
+    "holidays": "なし",
+    "website": "https://kudochi-sauna.com/fukuoka/",
+    "phone": "",
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/",
+    "amenities": [
+      "タオル",
+      "アメニティ完備"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 33.5942,
+    "lng": 130.4047,
+    "description": "中洲川端駅から徒歩1分のラグジュアリー個室サウナ。KUDOCHI系列の九州初出店。全7タイプの完全個室で24時間営業。水風呂14〜16度、温度調節可能。",
+    "saunakoCommentShort": "中洲川端1分! KUDOCHI九州初出店!",
+    "saunakoCommentLong": "KUDOCHIが中洲に上陸だよ！中洲川端駅から徒歩1分で24時間営業だから、飲みの後にもサクッと整えちゃう。7タイプの部屋があるからシーンに合わせて選べるのも嬉しいポイントだね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "スタンダード 90分 2名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "スーペリア 90分 3名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "セミVIP 120分 4名",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "VIP 120分 6名",
+        "price": 24000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 127,
+    "slug": "sauna-ooo-fukuoka",
+    "name": "SAUNA OOO FUKUOKA",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市博多区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市博多区中洲5丁目2-5 サフィール許斐 6F",
+    "nearestStation": "中洲川端駅",
+    "walkMinutes": 1,
+    "priceMin": 4500,
+    "duration": 100,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:40〜23:40",
+    "holidays": "なし",
+    "website": "https://ooo-sauna.com/fukuoka.html",
+    "phone": "092-292-7715",
+    "bookingUrl": "https://sw.gflow.cloud/ooo-fukuoka/calendar_open",
+    "amenities": [
+      "ドライヤー",
+      "ヘアアイロン",
+      "化粧水",
+      "タオル",
+      "フェイスタオル"
+    ],
+    "note": null,
+    "images": [],
+    "lat": 33.594,
+    "lng": 130.405,
+    "description": "中洲川端駅から徒歩1分の完全個室サウナ。3タイプの部屋（サンカク・マル・シカク）から選べる。サウナ90〜100度、セルフロウリュ対応。男女利用可能。",
+    "saunakoCommentShort": "中洲の個室サウナ! 3タイプから選べる!",
+    "saunakoCommentLong": "中洲にある完全個室のコミュニケーションサウナだよ！サンカク・マル・シカクの3タイプから部屋が選べて、カップルや友達同士での利用もOK。セルフロウリュで好きなだけ蒸気を楽しめるよ！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "サンカク 100分 2名",
+        "price": 4500,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "マル 100分 4名",
+        "price": 5000,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "シカク 120分 6名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 128,
+    "slug": "sauna-sakurado",
+    "name": "SAUNA SAKURADO",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市博多区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市博多区綱場町9-5",
+    "nearestStation": "中洲川端駅",
+    "walkMinutes": 4,
+    "priceMin": 9000,
+    "duration": 125,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜24:00",
+    "holidays": "不定休",
+    "website": "https://sauna-sakurado.spa/",
+    "phone": "0120-277-227",
+    "bookingUrl": "https://sauna-sakurado.spa/reservation/",
+    "amenities": [
+      "タオル",
+      "サウナマット",
+      "サウナハット",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "会員制/ビジター可（登録料22,000円）。サウナシュラン2025受賞。超軟水掛け流し水風呂",
+    "images": [],
+    "lat": 33.597,
+    "lng": 130.408,
+    "description": "博多・綱場町にあるビル1棟型のプライベートサウナ。全6室完全個室で、超軟水掛け流しの水風呂は16度以下。セルフロウリュは茶葉やハーブから選択可能。サウナシュラン2025受賞。会員登録制（22,000円）。",
+    "saunakoCommentShort": "サウナシュラン受賞! ビル1棟型個室サウナ!",
+    "saunakoCommentLong": "博多にあるビル1棟まるごとサウナの個室施設だよ！超軟水掛け流しの水風呂がとにかく肌に優しくて気持ちいいの。ほうじ茶やハーブのロウリュも選べて、サウナシュラン2025も受賞した実力派。特別な体験をしたい時にぴったりかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "125分 6名",
+        "price": 9000,
+        "duration": 125,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 129,
+    "slug": "sauna-giraffe-tenjin",
+    "name": "SAUNA Giraffe 天神",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市中央区春吉3-25-2",
+    "nearestStation": "天神南駅",
+    "walkMinutes": 8,
+    "priceMin": 6600,
+    "duration": 120,
+    "capacity": 7,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "9:30〜翌8:30",
+    "holidays": "不定休",
+    "website": "https://sauna-giraffe.com/tenjin/",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": [
+      "ドライヤー",
+      "シャンプー",
+      "ボディソープ",
+      "化粧水",
+      "ウォーターサーバー"
+    ],
+    "note": "天然地下水「澄心源水」使用の水風呂。タトゥーOK",
+    "images": [],
+    "lat": 33.586,
+    "lng": 130.402,
+    "description": "天神南エリアにある完全個室サウナ。陰・陽の2室でHUUMヒーター搭載。天然地下水「澄心源水」の水風呂が特徴。最大7名でナイトパックも利用可能。タトゥーOK。",
+    "saunakoCommentShort": "天然地下水の水風呂が気持ちいい!",
+    "saunakoCommentLong": "天神にある完全個室サウナだよ！天然地下水「澄心源水」を使った水風呂がとにかく気持ちいいの。陰と陽の2タイプから選べて、ナイトパックもあるから朝までゆっくり過ごせるよ。タトゥーOKなのも嬉しいポイント！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "120分 1名 平日",
+        "price": 6600,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名 土日祝",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ナイトパック 平日",
+        "price": 11000,
+        "duration": 480,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 130,
+    "slug": "sauna-giraffe-minami-tenjin",
+    "name": "SAUNA Giraffe 南天神",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市南区",
+    "area": "福岡市郊外",
+    "address": "福岡市南区向野1-3-16 R-BLDG 2F",
+    "nearestStation": "南市民センター前バス停",
+    "walkMinutes": 1,
+    "priceMin": 4400,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:30〜翌1:30",
+    "holidays": "不定休",
+    "website": "https://sauna-giraffe.com/minami/",
+    "phone": "",
+    "bookingUrl": "https://reserva.be/giraffe_minamitenjin",
+    "amenities": [
+      "シャンプー",
+      "タオル",
+      "ドライヤー"
+    ],
+    "note": "Giraffe系列。無人施設",
+    "images": [],
+    "lat": 33.5714,
+    "lng": 130.3992,
+    "description": "Giraffe系列の南天神店。和の静寂と温冷交互の2タイプのサウナを備えた完全個室。120分4,400円からで無人オートロック運営。男女・グループ利用可能。",
+    "saunakoCommentShort": "Giraffe系列の平日4,400円個室サウナ!",
+    "saunakoCommentLong": "Giraffe系列の南天神店だよ！和の静寂と温冷交互の2タイプのサウナがあって、どちらも完全個室で貸切できるの。平日4,400円からとお手頃で、無人運営だから人目を気にせずリラックスできるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "120分 1名 平日",
+        "price": 4400,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名 土日祝",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 131,
+    "slug": "sauna-yuba",
+    "name": "sauna yuba",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市早良区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市早良区高取2丁目17-42 エルモス藤崎駅前1号室",
+    "nearestStation": "藤崎駅",
+    "walkMinutes": 1,
+    "priceMin": 5800,
+    "duration": 120,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://saunayuba.com/",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": [
+      "シャンプー(MARKS&WEB)",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "ミネラルウォーター"
+    ],
+    "note": "水着着用必須（貸出500円〜）。駐車場1台あり",
+    "images": [],
+    "lat": 33.583,
+    "lng": 130.355,
+    "description": "藤崎駅から徒歩1分のプライベートサウナ。フィンランド製電気ストーブのテントサウナでセルフロウリュ対応。外気浴スペースあり。MARKS&WEBのアメニティ完備。最大3名、水着着用制。",
+    "saunakoCommentShort": "藤崎駅1分! テントサウナの個室体験!",
+    "saunakoCommentLong": "藤崎駅から徒歩1分のプライベートサウナだよ！テントサウナだからこそのフィンランド式の蒸し心地がたまらないの。外気浴スペースもあって、MARKS&WEBのアメニティも充実。水着着用だからカップルでも気兼ねなく楽しめるかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "120分 1名 平日",
+        "price": 5800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名 土日祝",
+        "price": 6800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 2名 平日",
+        "price": 7800,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 132,
+    "slug": "sauna-yogan-fukuoka-private",
+    "name": "サウナヨーガン福岡天神 プライベートサウナ",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "天神・中洲・博多",
+    "address": "福岡市中央区舞鶴1-5-6 平和台ホテル天神9F",
+    "nearestStation": "天神駅",
+    "walkMinutes": 8,
+    "priceMin": 7700,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:30〜24:00",
+    "holidays": "なし",
+    "website": "https://yogan-sauna-fukuoka-tenjin.jp/private-sauna/",
+    "phone": "",
+    "bookingUrl": "https://reserva.be/saunayogan",
+    "amenities": [
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "化粧水",
+      "ドライヤー(ReFa)",
+      "ヘアアイロン",
+      "歯ブラシ"
+    ],
+    "note": "同性もしくは家族（夫婦）のみ。12種類のアロマでセルフロウリュ",
+    "images": [],
+    "lat": 33.5925,
+    "lng": 130.394,
+    "description": "天神の平和台ホテル9Fにあるプライベートサウナ。サウナ温度80〜100度で調節可能、12種類のアロマでセルフロウリュ。氷で水風呂温度を調整でき、屋上外気浴スペースあり。同性もしくは家族（夫婦）のみ利用可能。",
+    "saunakoCommentShort": "12種のアロマロウリュと屋上外気浴!",
+    "saunakoCommentLong": "天神のホテル9Fにあるプライベートサウナだよ！12種類のアロマから選んでセルフロウリュできるのが贅沢。屋上の外気浴スペースもあって、天神の空を眺めながら整えるのが最高かも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 3名 平日",
+        "price": 7700,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "90分 3名 土日祝",
+        "price": 8800,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "150分 3名 平日",
+        "price": 9900,
+        "duration": 150,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 133,
+    "slug": "totonoi-kokura",
+    "name": "小倉サウナ TOTONOI 個室サウナ",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "北九州市小倉北区",
+    "area": "北九州",
+    "address": "福岡県北九州市小倉北区鍛冶町1-6-17",
+    "nearestStation": "小倉駅",
+    "walkMinutes": 5,
+    "priceMin": 5000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "11:00〜23:00（金土24時間）",
+    "holidays": "年中無休（12/31-1/3除く）",
+    "website": "https://www.totonoikokura.com/",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "ヘアアイロン",
+      "ガウン",
+      "歯ブラシ"
+    ],
+    "note": "共用サウナ併設。個室はTV・冷蔵庫・個室トイレ完備",
+    "images": [],
+    "lat": 33.8826,
+    "lng": 130.879,
+    "description": "小倉駅近くの個室サウナ。デジタル温度管理の水風呂、セルフロウリュ、ととのいベッド完備。個室にはTV・冷蔵庫・Bluetooth・Wi-Fi・個室トイレも。金土は24時間営業。",
+    "saunakoCommentShort": "小倉の完全個室サウナ! 金土は24時間!",
+    "saunakoCommentLong": "小倉にある完全個室のサウナだよ！個室にTV、冷蔵庫、Bluetooth、Wi-Fiまで完備されててまるで自分だけの空間。水風呂はデジタル温度管理で好みの冷たさに調整できるの。金土は24時間営業だから深夜でも整えちゃうかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "個室 120分 1名",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "個室 120分 2-4名 1人",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 134,
+    "slug": "ohoru-private-sauna",
+    "name": "OHORU private sauna",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "久留米市",
+    "area": "久留米",
+    "address": "福岡県久留米市津福今町233-6",
+    "nearestStation": "津福駅",
+    "walkMinutes": 13,
+    "priceMin": 4000,
+    "duration": 60,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "20",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜22:00（金曜は24:00まで）",
+    "holidays": "不定休",
+    "website": "https://reserva.be/ohoru2023",
+    "phone": "",
+    "bookingUrl": "https://reserva.be/ohoru2023",
+    "amenities": [
+      "シャンプー",
+      "スキンケア"
+    ],
+    "note": "タオルは有料。駐車場あり",
+    "images": [],
+    "lat": 33.296,
+    "lng": 130.506,
+    "description": "久留米市にある完全個室サウナ。サウナ92度、水風呂20度。セルフロウリュ対応でインフィニティチェアあり。60分4,000円からと手頃な価格設定。駐車場完備。",
+    "saunakoCommentShort": "久留米で60分4,000円の個室サウナ!",
+    "saunakoCommentLong": "久留米にある個室サウナだよ！60分4,000円からとお手頃で、セルフロウリュもできるの。インフィニティチェアでゆったり整えるし、駐車場もあるから車でも来やすいのが嬉しいポイントだね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "60分 3名",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "90分 3名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 135,
+    "slug": "sun-effect",
+    "name": "SUN EFFECT",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福津市",
+    "area": "福岡県その他",
+    "address": "福岡県福津市西福間3丁目48-1",
+    "nearestStation": "福間駅",
+    "walkMinutes": 15,
+    "priceMin": 5800,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜21:00",
+    "holidays": "火曜日",
+    "website": "https://suneffect.jp/sauna/",
+    "phone": "",
+    "bookingUrl": "https://coubic.com/suneffect",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "タオル"
+    ],
+    "note": "海が見える立地。レストラン・BBQ併設",
+    "images": [],
+    "lat": 33.767,
+    "lng": 130.483,
+    "description": "福津市の海が見える立地にある完全個室サウナ。檜サウナ室にHARVIA電気ストーブ、地下水使用の水風呂。インフィニティチェアから海を眺めながら外気浴できる。レストラン・BBQ併設。",
+    "saunakoCommentShort": "海を眺めながら外気浴できる!",
+    "saunakoCommentLong": "福津の海沿いにある個室サウナだよ！インフィニティチェアから海を眺めながらの外気浴がとにかく最高。地下水の水風呂に氷を入れて温度調整もできるし、サウナ後はレストランでご飯も楽しめるの。ドライブがてら行くのもおすすめかも！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 2名",
+        "price": 5800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ120分+ご飯 2名",
+        "price": 11200,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 136,
+    "slug": "chikushi-no-yu-solo-sauna",
+    "name": "筑紫の湯 ソロサウナ・キング",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "筑紫野市",
+    "area": "福岡県その他",
+    "address": "福岡県筑紫野市筑紫973",
+    "nearestStation": "原田駅",
+    "walkMinutes": 15,
+    "priceMin": 4400,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜21:10（最終受付19:40）",
+    "holidays": "不定休",
+    "website": "https://www.chikushinosato.co.jp/",
+    "phone": "092-919-8426",
+    "bookingUrl": "https://www.chikushinosato.co.jp/",
+    "amenities": [
+      "サウナ着",
+      "タオル"
+    ],
+    "note": "日帰り温泉「筑紫の湯」併設。入館料別途（平日1,100円/土日祝1,380円）。TV（Netflix/YouTube）あり",
+    "images": [],
+    "lat": 33.477,
+    "lng": 130.514,
+    "description": "筑紫野市の日帰り温泉施設内にある個室サウナ。セルフロウリュ対応で、Netflix/YouTube視聴可能なTVとサウナ関連書籍を完備。温泉も利用可能。入館料別途。",
+    "saunakoCommentShort": "温泉施設内の個室サウナ! Netflix付き!",
+    "saunakoCommentLong": "筑紫野市の温泉施設にある個室サウナだよ！セルフロウリュしながらNetflixやYouTubeも見れちゃうの。サウナの後は温泉にも入れるから、一日中リラックスできるかも。サウナ好きの本も置いてあるのが嬉しいね！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "90分 1名 平日",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 1名 土日祝",
+        "price": 4900,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
   }
 ]
