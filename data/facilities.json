@@ -12964,5 +12964,320 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 152,
+    "slug": "private-sauna-zero",
+    "name": "プライベートサウナ ZERO",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "高崎市",
+    "area": "群馬・高崎",
+    "address": "群馬県高崎市飯塚町1380-3 1F",
+    "nearestStation": "高崎問屋町駅",
+    "walkMinutes": 11,
+    "priceMin": 3000,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "平日10:00〜23:00、土日祝10:00〜21:00",
+    "holidays": "水曜日",
+    "website": "https://sauna-zero.jp/",
+    "phone": "027-386-3557",
+    "bookingUrl": "https://reserva.be/saunazero",
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "歯ブラシ",
+      "マウスウォッシュ",
+      "くし",
+      "ヘアゴム",
+      "コットン",
+      "サウナハット",
+      "ドライヤー",
+      "ヘアアイロン"
+    ],
+    "note": "水風呂なし（冷水オーバーヘッドシャワーあり）",
+    "images": [
+      "/facilities/152-0.webp",
+      "/facilities/152-1.webp",
+      "/facilities/152-2.webp",
+      "/facilities/152-3.webp"
+    ],
+    "lat": 36.342146,
+    "lng": 139.011917,
+    "description": "高崎問屋町駅から徒歩約11分、完全個室のフィンランド式プライベートサウナ。1〜2名利用で60分3,000円から。セルフロウリュは7種のアロマオイルから選べ、調光機能付きの空間でBluetooth音楽も楽しめる。水風呂はないが冷水オーバーヘッドシャワーを完備。2階にはリラクゼーション施設を併設。",
+    "saunakoCommentShort": "アロマ7種のロウリュ×リラクゼーション併設が魅力!",
+    "saunakoCommentLong": "60分3,000円からっていうお手頃さがうれしいサウナ！セルフロウリュは7種類のアロマから選べるし、調光で自分好みの空間にできるのがいいよね。水風呂はないんだけど、冷水のオーバーヘッドシャワーでクールダウンはしっかりできるよ。2階にヘッドスパや整体もあるから、サウナ後のケアまでまとめて楽しめちゃう！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "60分コース",
+        "price": 3000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "90分コース",
+        "price": 4300,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分コース",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ペア割90分",
+        "price": 7500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "ペア割120分",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 153,
+    "slug": "yurabu-kiryu",
+    "name": "天然温泉 ゆらぶ 桐生店",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "桐生市",
+    "area": "群馬・その他",
+    "address": "群馬県桐生市広沢町6丁目320-1",
+    "nearestStation": "新桐生駅",
+    "walkMinutes": null,
+    "priceMin": 3400,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16-17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "10:00〜23:00（最終入室21:30）",
+    "holidays": "不定休",
+    "website": "https://yurabu-kiryu.com/",
+    "phone": "0277-46-9967",
+    "bookingUrl": "https://reserva.be/yurabukiryu",
+    "amenities": [
+      "タオルセット",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー",
+      "化粧水",
+      "綿棒",
+      "ヘアゴム"
+    ],
+    "note": "車でのアクセス推奨（駐車場あり）",
+    "images": [
+      "/facilities/153-0.webp",
+      "/facilities/153-1.webp",
+      "/facilities/153-2.webp",
+      "/facilities/153-3.webp"
+    ],
+    "lat": 36.370749,
+    "lng": 139.359707,
+    "description": "群馬県桐生市の天然温泉施設に併設されたプライベートサウナ。約90度のサウナ室で日替わりアロマのセルフロウリュが楽しめる。チラー付き水風呂は16〜17度、インフィニティチェアでの外気浴も完備。ReFaシャワーやBluetoothスピーカーなど設備が充実し、最大3名まで利用可能。",
+    "saunakoCommentShort": "温泉施設内の本格プライベートサウナ!",
+    "saunakoCommentLong": "日帰り温泉ゆらぶの中にある個室サウナだよ! 日替わりアロマでセルフロウリュできて、水風呂は16〜17度のチラー付き。インフィニティチェアで外気浴もばっちり。Bluetoothスピーカーで好きな音楽かけながらととのえるし、ReFaシャワーまであるのが嬉しいポイント。90分3,400円からとコスパも良くて、温泉も別料金で入れるから一日楽しめちゃうかも!",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "プライベートサウナ 90分",
+        "price": 3400,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "プライベートサウナ 120分",
+        "price": 3900,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "プライベートサウナ 150分（平日限定）",
+        "price": 4400,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "プライベートサウナ 180分（平日限定）",
+        "price": 4900,
+        "duration": 180,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 154,
+    "slug": "libere-ota",
+    "name": "Libere",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "太田市",
+    "area": "群馬・その他",
+    "address": "群馬県太田市新井町533-1",
+    "nearestStation": "太田駅",
+    "walkMinutes": null,
+    "priceMin": 2750,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日13:00〜翌1:00、土日祝11:00〜翌3:00",
+    "holidays": "木曜日",
+    "website": "https://libere-2023.com/",
+    "phone": "0276-57-6082",
+    "bookingUrl": "https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000674805",
+    "amenities": [
+      "シャンプー",
+      "トリートメント",
+      "メイク落とし",
+      "部屋着",
+      "水"
+    ],
+    "note": "車でのアクセス推奨（駐車場5台）。22時以降は男性入店不可",
+    "images": [
+      "/facilities/154-0.webp",
+      "/facilities/154-1.webp",
+      "/facilities/154-2.webp",
+      "/facilities/154-3.webp"
+    ],
+    "lat": 36.285263,
+    "lng": 139.371028,
+    "description": "群馬県太田市の完全個室プライベートサウナ。個室サウナ2室と個室岩盤浴3室を備え、4種類のアロマから選べるセルフロウリュと水風呂で整える。カップルやグループ利用にも対応し、深夜営業で仕事終わりにも利用しやすい。",
+    "saunakoCommentShort": "4種のアロマロウリュを独り占めできる個室サウナ!",
+    "saunakoCommentLong": "太田市にある完全個室サウナで、4種類のアロマから好きなの選んでセルフロウリュできるのが最高！水風呂もあるからしっかりととのえるよ。岩盤浴も併設してるから、サウナ後にまったり岩盤浴で過ごすのもアリかも。カップルや友達と一緒に入れるのもうれしいポイント！",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "個室サウナ 60分",
+        "price": 2750,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "個室サウナ 90分",
+        "price": 3850,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 155,
+    "slug": "sanazawa-terrace",
+    "name": "さなざわ㞢テラス",
+    "prefecture": "gunma",
+    "prefectureLabel": "群馬県",
+    "city": "利根郡みなかみ町",
+    "area": "群馬・その他",
+    "address": "群馬県利根郡みなかみ町月夜野2537-2",
+    "nearestStation": "上毛高原駅",
+    "walkMinutes": null,
+    "priceMin": 6000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "0-10",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "12:00〜20:00（最終受付19:00）",
+    "holidays": "水曜日・不定休",
+    "website": "https://sanazawa.jp/",
+    "phone": "050-1807-3582",
+    "bookingUrl": "https://airrsv.net/SanazawanoSauna/calendar",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ"
+    ],
+    "note": "水着着用必須。車でのアクセス推奨（上毛高原駅から車5分）",
+    "images": [
+      "/facilities/155-0.webp",
+      "/facilities/155-1.webp",
+      "/facilities/155-2.webp",
+      "/facilities/155-3.webp"
+    ],
+    "lat": 36.70494,
+    "lng": 138.963709,
+    "description": "群馬県みなかみ町の真沢温泉に位置するバレルサウナ施設。国産木材のバレルサウナは最大6名まで利用可能で、みなかみ産の薪を使用。棚田を一望する外気浴スペースと天然水の水風呂を備え、セルフロウリュにも対応。サウナ利用料には温泉入浴とタオルが含まれる。",
+    "saunakoCommentShort": "棚田を見下ろす薪バレルサウナ！",
+    "saunakoCommentLong": "みなかみの山あいにある薪焚きバレルサウナ！地元の薪で焚くから木の香りがたまらないの。水風呂は天然水で0〜10度とキンキンに冷えてるし、外気浴は棚田ビューで開放感バツグン。セルフロウリュもできるから自分のペースで蒸されちゃおう。温泉もセットで入れるのがうれしいよね〜",
+    "updatedAt": "2026-02-27",
+    "plans": [
+      {
+        "name": "2名利用（2時間）",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "3名利用（2時間）",
+        "price": 8500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "4名利用（2時間）",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "5名利用（2時間）",
+        "price": 13500,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "6名利用（2時間）",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
   }
 ]
