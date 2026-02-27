@@ -10109,7 +10109,12 @@
       "ドライヤー"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "/facilities/123-0.webp",
+      "/facilities/123-1.webp",
+      "/facilities/123-2.webp",
+      "/facilities/123-3.webp"
+    ],
     "lat": 33.5836,
     "lng": 130.3991,
     "description": "薬院駅から徒歩2分の完全個室サウナ。全5室を完備し、サウナ温度93度・水風呂15〜16度でセルフロウリュ対応。MARKS&WEBのアメニティで手ぶら利用可。80分5,000円から。",
@@ -10179,7 +10184,12 @@
       "ドライヤー"
     ],
     "note": "製氷機で水風呂温度調整可",
-    "images": [],
+    "images": [
+      "/facilities/124-0.webp",
+      "/facilities/124-1.webp",
+      "/facilities/124-2.webp",
+      "/facilities/124-3.webp"
+    ],
     "lat": 33.5879,
     "lng": 130.4054,
     "description": "天神駅から徒歩5分、60分2,090円からの個室サウナ。スタンダードとデラックスの2タイプ3室。デラックスはドライ+スチームのハイブリッドサウナ。製氷機で水風呂温度を自分好みに調整できる。",
@@ -10240,7 +10250,12 @@
       "ドライヤー"
     ],
     "note": "脈拍計測で「ととのい」を可視化。宿泊プランあり",
-    "images": [],
+    "images": [
+      "/facilities/125-0.webp",
+      "/facilities/125-1.webp",
+      "/facilities/125-2.webp",
+      "/facilities/125-3.webp"
+    ],
     "lat": 33.591,
     "lng": 130.399,
     "description": "天神駅から徒歩4分、脈拍計測で科学的にととのいを追求する完全個室サウナ。3室（火・水・休）それぞれ異なるコンセプト。水風呂は5℃〜40℃で調温可能。24時間営業で宿泊プランもあり。",
@@ -10304,7 +10319,12 @@
       "アメニティ完備"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "/facilities/126-0.webp",
+      "/facilities/126-1.webp",
+      "/facilities/126-2.webp",
+      "/facilities/126-3.webp"
+    ],
     "lat": 33.5942,
     "lng": 130.4047,
     "description": "中洲川端駅から徒歩1分のラグジュアリー個室サウナ。KUDOCHI系列の九州初出店。全7タイプの完全個室で24時間営業。水風呂14〜16度、温度調節可能。",
@@ -10383,7 +10403,12 @@
       "フェイスタオル"
     ],
     "note": null,
-    "images": [],
+    "images": [
+      "/facilities/127-0.webp",
+      "/facilities/127-1.webp",
+      "/facilities/127-2.webp",
+      "/facilities/127-3.webp"
+    ],
     "lat": 33.594,
     "lng": 130.405,
     "description": "中洲川端駅から徒歩1分の完全個室サウナ。3タイプの部屋（サンカク・マル・シカク）から選べる。サウナ90〜100度、セルフロウリュ対応。男女利用可能。",
@@ -10450,7 +10475,12 @@
       "ボディソープ"
     ],
     "note": "会員制/ビジター可（登録料22,000円）。サウナシュラン2025受賞。超軟水掛け流し水風呂",
-    "images": [],
+    "images": [
+      "/facilities/128-0.webp",
+      "/facilities/128-1.webp",
+      "/facilities/128-2.webp",
+      "/facilities/128-3.webp"
+    ],
     "lat": 33.597,
     "lng": 130.408,
     "description": "博多・綱場町にあるビル1棟型のプライベートサウナ。全6室完全個室で、超軟水掛け流しの水風呂は16度以下。セルフロウリュは茶葉やハーブから選択可能。サウナシュラン2025受賞。会員登録制（22,000円）。",
@@ -10505,7 +10535,12 @@
       "ウォーターサーバー"
     ],
     "note": "天然地下水「澄心源水」使用の水風呂。タトゥーOK",
-    "images": [],
+    "images": [
+      "/facilities/129-0.webp",
+      "/facilities/129-1.webp",
+      "/facilities/129-2.webp",
+      "/facilities/129-3.webp"
+    ],
     "lat": 33.586,
     "lng": 130.402,
     "description": "天神南エリアにある完全個室サウナ。陰・陽の2室でHUUMヒーター搭載。天然地下水「澄心源水」の水風呂が特徴。最大7名でナイトパックも利用可能。タトゥーOK。",
@@ -10570,7 +10605,12 @@
       "ドライヤー"
     ],
     "note": "Giraffe系列。無人施設",
-    "images": [],
+    "images": [
+      "/facilities/130-0.webp",
+      "/facilities/130-1.webp",
+      "/facilities/130-2.webp",
+      "/facilities/130-3.webp"
+    ],
     "lat": 33.5714,
     "lng": 130.3992,
     "description": "Giraffe系列の南天神店。和の静寂と温冷交互の2タイプのサウナを備えた完全個室。120分4,400円からで無人オートロック運営。男女・グループ利用可能。",
@@ -10632,7 +10672,12 @@
       "ミネラルウォーター"
     ],
     "note": "水着着用必須（貸出500円〜）。駐車場1台あり",
-    "images": [],
+    "images": [
+      "/facilities/131-0.webp",
+      "/facilities/131-1.webp",
+      "/facilities/131-2.webp",
+      "/facilities/131-3.webp"
+    ],
     "lat": 33.583,
     "lng": 130.355,
     "description": "藤崎駅から徒歩1分のプライベートサウナ。フィンランド製電気ストーブのテントサウナでセルフロウリュ対応。外気浴スペースあり。MARKS&WEBのアメニティ完備。最大3名、水着着用制。",
@@ -10701,7 +10746,12 @@
       "歯ブラシ"
     ],
     "note": "同性もしくは家族（夫婦）のみ。12種類のアロマでセルフロウリュ",
-    "images": [],
+    "images": [
+      "/facilities/132-0.webp",
+      "/facilities/132-1.webp",
+      "/facilities/132-2.webp",
+      "/facilities/132-3.webp"
+    ],
     "lat": 33.5925,
     "lng": 130.394,
     "description": "天神の平和台ホテル9Fにあるプライベートサウナ。サウナ温度80〜100度で調節可能、12種類のアロマでセルフロウリュ。氷で水風呂温度を調整でき、屋上外気浴スペースあり。同性もしくは家族（夫婦）のみ利用可能。",
@@ -10772,7 +10822,12 @@
       "歯ブラシ"
     ],
     "note": "共用サウナ併設。個室はTV・冷蔵庫・個室トイレ完備",
-    "images": [],
+    "images": [
+      "/facilities/133-0.webp",
+      "/facilities/133-1.webp",
+      "/facilities/133-2.webp",
+      "/facilities/133-3.webp"
+    ],
     "lat": 33.8826,
     "lng": 130.879,
     "description": "小倉駅近くの個室サウナ。デジタル温度管理の水風呂、セルフロウリュ、ととのいベッド完備。個室にはTV・冷蔵庫・Bluetooth・Wi-Fi・個室トイレも。金土は24時間営業。",
@@ -10830,7 +10885,12 @@
       "スキンケア"
     ],
     "note": "タオルは有料。駐車場あり",
-    "images": [],
+    "images": [
+      "/facilities/134-0.webp",
+      "/facilities/134-1.webp",
+      "/facilities/134-2.webp",
+      "/facilities/134-3.webp"
+    ],
     "lat": 33.296,
     "lng": 130.506,
     "description": "久留米市にある完全個室サウナ。サウナ92度、水風呂20度。セルフロウリュ対応でインフィニティチェアあり。60分4,000円からと手頃な価格設定。駐車場完備。",
@@ -10890,7 +10950,12 @@
       "タオル"
     ],
     "note": "海が見える立地。レストラン・BBQ併設",
-    "images": [],
+    "images": [
+      "/facilities/135-0.webp",
+      "/facilities/135-1.webp",
+      "/facilities/135-2.webp",
+      "/facilities/135-3.webp"
+    ],
     "lat": 33.767,
     "lng": 130.483,
     "description": "福津市の海が見える立地にある完全個室サウナ。檜サウナ室にHARVIA電気ストーブ、地下水使用の水風呂。インフィニティチェアから海を眺めながら外気浴できる。レストラン・BBQ併設。",
@@ -10948,7 +11013,12 @@
       "タオル"
     ],
     "note": "日帰り温泉「筑紫の湯」併設。入館料別途（平日1,100円/土日祝1,380円）。TV（Netflix/YouTube）あり",
-    "images": [],
+    "images": [
+      "/facilities/136-0.webp",
+      "/facilities/136-1.webp",
+      "/facilities/136-2.webp",
+      "/facilities/136-3.webp"
+    ],
     "lat": 33.477,
     "lng": 130.514,
     "description": "筑紫野市の日帰り温泉施設内にある個室サウナ。セルフロウリュ対応で、Netflix/YouTube視聴可能なTVとサウナ関連書籍を完備。温泉も利用可能。入館料別途。",
