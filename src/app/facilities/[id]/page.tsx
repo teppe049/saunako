@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   // SEO: 検索意図に合う詳細なdescriptionを構築
   const descParts: string[] = [];
-  descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ`);
+  descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ（プライベートサウナ）`);
   if (facility.nearestStation && facility.walkMinutes > 0) {
     descParts.push(`${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`);
   }
@@ -54,13 +54,13 @@ export async function generateMetadata({ params }: PageProps) {
   const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。';
 
   return {
-    title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室サウナ | サウナ子`,
+    title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室・プライベートサウナ | サウナ子`,
     description,
     alternates: {
       canonical: `https://www.saunako.jp/facilities/${facility.id}`,
     },
     openGraph: {
-      title: `${facility.name}の料金・プラン｜${facility.prefectureLabel}の個室サウナ`,
+      title: `${facility.name}の料金・プラン｜${facility.prefectureLabel}の個室・プライベートサウナ`,
       description,
       images: facility.images.length > 0 ? [facility.images[0]] : [],
     },
