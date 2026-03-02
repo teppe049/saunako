@@ -17489,5 +17489,2671 @@
     "closedAt": null,
     "plans": null,
     "timeSlots": null
+  },
+  {
+    "id": 243,
+    "slug": "sauna-kumori",
+    "name": "古町サウナ SAUNA KUMORI",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "新潟市中央区",
+    "area": "新潟市",
+    "address": "新潟県新潟市中央区西堀前通8番町1527 2F",
+    "nearestStation": "新潟駅",
+    "walkMinutes": 20,
+    "priceMin": 2400,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜26:00",
+    "holidays": "不定休",
+    "website": "https://hijilijapan.com/",
+    "phone": "070-2213-4435",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "日本一小さいパブリックサウナ。魚沼杉と安田瓦を使用。毎月第1土曜日はレディースデー。水風呂はなく冷水バケツシャワー",
+    "images": [],
+    "lat": 37.9196,
+    "lng": 139.0425,
+    "description": "新潟市古町エリアにある日本一小さいパブリックサウナ。魚沼産の杉材と安田瓦を使用した新潟らしさ溢れるサウナ室で、セルフロウリュとウォーリュ（壁面ロウリュ）が楽しめる。水風呂はなく冷水バケツシャワーで冷却するスタイル。",
+    "saunakoCommentShort": "古町の超コンパクトサウナ、魚沼杉の香りがたまらない！",
+    "saunakoCommentLong": "新潟の古町にある日本一小さいって言われてるパブリックサウナだよ！魚沼杉と安田瓦で作られた空間はすごく新潟らしくて素敵。セルフロウリュできるし、壁面にお湯をかけるウォーリュっていう独自のスタイルもあるの。水風呂はないけどバケツシャワーでしっかり冷やせるよ！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 90分 1名",
+        "price": 2400,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "1名貸切 90分",
+        "price": 4800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名貸切 90分",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "貸切部屋 90分 4名",
+        "price": 8800,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 244,
+    "slug": "benten-stand",
+    "name": "弁天スタンド",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "新潟市中央区",
+    "area": "新潟市",
+    "address": "新潟県新潟市中央区弁天1丁目2-12",
+    "nearestStation": "新潟駅",
+    "walkMinutes": 3,
+    "priceMin": 1800,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12-15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "14:00〜23:30",
+    "holidays": "無休",
+    "website": "https://bentenstand-sauna.com/",
+    "phone": "025-290-7166",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "サウナ＆酒場の複合施設。立ち飲み居酒屋併設。貸切サウナは予約制",
+    "images": [],
+    "lat": 37.9131,
+    "lng": 139.0637,
+    "description": "新潟駅から徒歩3分、立ち飲み居酒屋の中に予約制貸切サウナが併設されたユニークな施設。サウナ室は90℃でセルフロウリュ対応、水風呂は冬場12℃・夏場15℃。外気浴スペースに椅子3脚を備え、サウナ後は併設の酒場で一杯楽しめる。",
+    "saunakoCommentShort": "サウナ後に立ち飲み！新潟駅前の粋なサウナバー",
+    "saunakoCommentLong": "新潟駅から歩いて3分の超好立地にあるサウナ＆酒場だよ！貸切サウナでセルフロウリュして、水風呂は冬だと12℃でキンキンに冷えてるの。外気浴もできて、整ったあとはそのまま併設の居酒屋でお酒が飲めちゃうっていう最高の動線かも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "1名利用 90分",
+        "price": 2800,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2〜3名利用 90分（1名あたり）",
+        "price": 1800,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 245,
+    "slug": "sauna100",
+    "name": "sauna100",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "新潟市中央区",
+    "area": "新潟市",
+    "address": "新潟県新潟市中央区南万代町1-6 南万代テラスB棟 2F",
+    "nearestStation": "新潟駅",
+    "walkMinutes": 5,
+    "priceMin": 2500,
+    "duration": 100,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15.5",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（最終受付21:00）",
+    "holidays": "不定休",
+    "website": "https://sauna100.jp/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "基本男性専用。毎月10日・20日はレディースデー。個室貸切は女性も利用可。駐車場2時間無料",
+    "images": [],
+    "lat": 37.9133,
+    "lng": 139.0608,
+    "description": "新潟駅から徒歩5分の万代エリアに2025年オープンしたサウナ施設。大サウナ室は10分ごとのオートロウリュ、小サウナ室はセルフロウリュ対応の貸切プライベートルーム。水風呂は15.5℃、外気浴スペースも完備。",
+    "saunakoCommentShort": "新潟駅前の本格サウナ、プライベートルームもあり！",
+    "saunakoCommentLong": "新潟駅から歩いて5分のところにある新しめのサウナだよ！大サウナ室は10分ごとにオートロウリュが来るし、プライベートルームならセルフロウリュもできるの。水風呂は15.5℃でちょうどいい冷たさ。外気浴もできるから整い環境はバッチリかも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "フリーパス",
+        "price": 2500,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "プライベートルーム貸切 100分",
+        "price": 22000,
+        "duration": 100,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 246,
+    "slug": "private-sauna-art",
+    "name": "プライベートサウナ ART",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "長岡市",
+    "area": "長岡",
+    "address": "新潟県長岡市寺泊大町7745",
+    "nearestStation": "寺泊駅",
+    "walkMinutes": null,
+    "priceMin": 4000,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:30",
+    "holidays": "不定休",
+    "website": "http://www.h-sumiyoshiya.net/",
+    "phone": "0258-75-3228",
+    "bookingUrl": "https://www.jalan.net/kankou/spt_guide000000219706/",
+    "amenities": [
+      "タオル",
+      "館内着",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "寺泊海岸つわぶき温泉 住吉屋内に併設。サウナ室5室あり。日本海を望む外気浴スペース。駐車場44台",
+    "images": [],
+    "lat": 37.6358,
+    "lng": 138.7661,
+    "description": "長岡市寺泊の温泉旅館「住吉屋」に併設されたプライベートサウナ。全5室の個室サウナで着替えからサウナ・水風呂・外気浴まですべて個室内で完結する。日本海を望む外気浴スペースが魅力で、セルフロウリュにも対応。",
+    "saunakoCommentShort": "寺泊の旅館併設、日本海を望む個室サウナ！",
+    "saunakoCommentLong": "長岡市寺泊の旅館に併設されたプライベートサウナだよ！全5室あって着替えからサウナ、水風呂、外気浴まで全部個室で完結するのが嬉しい。セルフロウリュもできるし、外気浴スペースからは日本海が見えるんだって。2名利用だと1人4,000円で結構お得かも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "1名利用 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名利用 90分（1名あたり）",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 247,
+    "slug": "shiiya-village",
+    "name": "SHIIYA VILLAGE stay&sauna",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "柏崎市",
+    "area": "柏崎",
+    "address": "新潟県柏崎市椎谷1839",
+    "nearestStation": "柏崎駅",
+    "walkMinutes": null,
+    "priceMin": 2200,
+    "duration": 150,
+    "capacity": 10,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:30（完全予約制）",
+    "holidays": "不定休（予約がない日は休業）",
+    "website": "https://shiiyavillage.com/",
+    "phone": "090-6333-1839",
+    "bookingUrl": "https://shiiyavillage.com/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "サンダル"
+    ],
+    "note": "築100年の古民家をリノベーション。薪サウナ。井戸水のまろやかな水風呂。海岸での外気浴。宿泊も可能。柏崎駅から車20分",
+    "images": [],
+    "lat": 37.5186,
+    "lng": 138.6214,
+    "description": "柏崎市椎谷の築100年の古民家をリノベーションした薪サウナ施設。タイル貼りの趣あるサウナ室でセルフロウリュが楽しめ、復活させた井戸のまろやかな水風呂が特徴。目の前に広がる日本海と椎谷海浜公園での外気浴は開放感抜群。",
+    "saunakoCommentShort": "築100年の古民家薪サウナ、海の外気浴が最高！",
+    "saunakoCommentLong": "柏崎の海沿いにある築100年の古民家を改装した薪サウナだよ！タイル貼りの独特なサウナ室がすごく雰囲気あるの。井戸を復活させて作った水風呂はまろやかで気持ちいいし、海岸に出ての外気浴は開放感ハンパないかも。サンセットの時間帯は特におすすめ！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 150分",
+        "price": 2200,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 150分 最大10名",
+        "price": 17600,
+        "duration": 150,
+        "capacity": 10
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 248,
+    "slug": "sauna-horizon",
+    "name": "サウナ宝来洲（ホライズン）",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "柏崎市",
+    "area": "柏崎",
+    "address": "新潟県柏崎市鯨波2丁目3-6",
+    "nearestStation": "鯨波駅",
+    "walkMinutes": null,
+    "priceMin": 3500,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "営業日・時間は予約サイトで確認（枠制）",
+    "holidays": "火・水・木曜定休（祝日は営業）",
+    "website": "https://www.odakeya.com/sauna/",
+    "phone": "0257-41-6270",
+    "bookingUrl": "https://www.odakeya.com/sauna/",
+    "amenities": [
+      "サウナマット兼バスタオル",
+      "サンダル",
+      "ドライヤー"
+    ],
+    "note": "小竹屋旅館併設。地下水かけ流しプール水風呂。海や川にも入れる（自己責任）。屋上とビーチの外気浴。冬季・サマータイム営業あり",
+    "images": [],
+    "lat": 37.3683,
+    "lng": 138.6494,
+    "description": "柏崎市鯨波の旅館「小竹屋」に併設されたアウトドアサウナ。地下水かけ流しのプール水風呂が特徴で、屋上やビーチでの外気浴は異次元の開放感。海や川に飛び込むことも可能。サンセットタイム枠は特に人気。",
+    "saunakoCommentShort": "地下水かけ流し水風呂と海の外気浴が圧巻！",
+    "saunakoCommentLong": "柏崎の鯨波海岸にあるアウトドアサウナだよ！地下水かけ流しのプール水風呂が気持ちよくて、なんと海や川にも飛び込めちゃうの。屋上とビーチでの外気浴は開放感がすごいかも。サンセットタイムは海に沈む夕日を見ながら整えるからめっちゃおすすめ！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 120分",
+        "price": 3500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "パブリック サンセットタイム 120分",
+        "price": 4500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 120分",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "貸切 サンセットタイム 120分",
+        "price": 23000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 249,
+    "slug": "nanahoshi-sauna",
+    "name": "ななほしサウナ",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "五泉市",
+    "area": "新潟市",
+    "address": "新潟県五泉市中川新1680-1",
+    "nearestStation": "五泉駅",
+    "walkMinutes": null,
+    "priceMin": 3850,
+    "duration": 180,
+    "capacity": 7,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "11",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜14:00 / 16:00〜19:00（金・土・祝前日は20:00〜23:00も営業）",
+    "holidays": "不定休（完全予約制）",
+    "website": "https://www.nanahoshisauna.com/",
+    "phone": "070-8908-6589",
+    "bookingUrl": "https://tabichat.jp/engine/hotels/nanahoshisauna/dayuse",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "古民家リノベーションの完全予約制サウナ。1号棟nauna（約100℃・4名）と2号棟dubhe（約80℃・7名）の2棟。五泉の名水「吉清水」の湧水かけ流し水風呂（約11℃）。白樺水でセルフロウリュ",
+    "images": [],
+    "lat": 37.7071,
+    "lng": 139.1682,
+    "description": "五泉市の山の麓にある古民家をリノベーションした完全予約制プライベートサウナ。2棟のフィンランドサウナ小屋を備え、五泉の名水「吉清水」の湧水をかけ流した水風呂は通年約11℃。白樺を煮出した水でのセルフロウリュと森の外気浴が楽しめる。",
+    "saunakoCommentShort": "名水「吉清水」の11℃水風呂が最高に気持ちいい！",
+    "saunakoCommentLong": "五泉の山の麓にある古民家サウナだよ！2つのサウナ小屋があって、1号棟は約100℃、2号棟は約80℃で好みに合わせて選べるの。水風呂は五泉の名水「吉清水」の湧水かけ流しで通年約11℃、めちゃくちゃキンキンで気持ちいいかも。白樺水でのセルフロウリュも本格的！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 150分",
+        "price": 3850,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "1号棟nauna 貸切 180分（3名まで）",
+        "price": 17000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "2号棟dubhe 貸切 180分（3名まで）",
+        "price": 22500,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "Wサウナ（2棟セット）貸切 180分（3名まで）",
+        "price": 27000,
+        "duration": 180,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 250,
+    "slug": "barrel-sauna-sui",
+    "name": "バレルサウナ sui",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "新発田市",
+    "area": "新潟市",
+    "address": "新潟県新発田市石喜180",
+    "nearestStation": "新発田駅",
+    "walkMinutes": null,
+    "priceMin": 2200,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜20:00（完全予約制）",
+    "holidays": "月・火曜定休（祝日の場合は営業、翌日休み）",
+    "website": "https://sui-kwhgs.jp/",
+    "phone": null,
+    "bookingUrl": "https://www.chillnn.com/192d3a509c089",
+    "amenities": [
+      "タオルセット（有料330円）",
+      "水着レンタル（有料550円）"
+    ],
+    "note": "2024年11月オープン。古民家リノベーションの完全予約制バレルサウナ。男女共用・水着着用。井戸水の水風呂（約15℃）",
+    "images": [],
+    "lat": 37.9234,
+    "lng": 139.3206,
+    "description": "新発田市の森に囲まれた古民家をリノベーションした完全予約制バレルサウナ。2024年11月オープン。最大110℃のバレルサウナでセルフロウリュが楽しめ、井戸水を使った水風呂は通年約15℃。森林浴を兼ねた外気浴スペースも充実。男女共用・水着着用スタイル。",
+    "saunakoCommentShort": "森の中の古民家バレルサウナ、井戸水が爽快！",
+    "saunakoCommentLong": "新発田の森の中にある古民家バレルサウナだよ！2024年にオープンしたばかりの新しい施設で、最大110℃まで上がるバレルサウナはかなり本格的。井戸水の水風呂は通年約15℃で爽快だし、森に囲まれた外気浴はめちゃくちゃ気持ちいいかも。水着着用だからカップルで来るのもおすすめ！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 平日 150分",
+        "price": 2200,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "パブリック 土日祝 150分",
+        "price": 3300,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 平日 150分（最大6名）",
+        "price": 13200,
+        "duration": 150,
+        "capacity": 6
+      },
+      {
+        "name": "貸切 土日祝 150分（最大6名）",
+        "price": 16500,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 251,
+    "slug": "blue-base-senami",
+    "name": "BLUE BASE SENAMI",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "村上市",
+    "area": "村上",
+    "address": "新潟県村上市瀬波温泉2丁目10-7-6",
+    "nearestStation": "村上駅",
+    "walkMinutes": null,
+    "priceMin": 2200,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "サウナ 10:00〜20:00",
+    "holidays": "不定休",
+    "website": "https://www.bluebase-senami.com/",
+    "phone": "090-7266-8275",
+    "bookingUrl": "https://www.chillnn.com/1981ae1dce22fe",
+    "amenities": [
+      "タオル",
+      "水着レンタル"
+    ],
+    "note": "瀬波温泉エリアのサウナ＆スパ貸切コテージ。源泉かけ流し温泉付き。バレルサウナ。海まで30秒。併設カフェあり。村上駅から車10分",
+    "images": [],
+    "lat": 38.2467,
+    "lng": 139.4649,
+    "description": "村上市瀬波温泉に位置するサウナ＆スパ貸切コテージ。本格フィンランド式バレルサウナでセルフロウリュが楽しめ、17℃の水風呂と海まで30秒の立地を活かしたオーシャンビュー外気浴が魅力。源泉かけ流し温泉も併設し、宿泊利用も可能。",
+    "saunakoCommentShort": "瀬波温泉のオーシャンビューバレルサウナ！",
+    "saunakoCommentLong": "村上の瀬波温泉にあるバレルサウナだよ！海まで30秒っていう最高のロケーションで、外気浴しながら日本海が一望できるの。17℃の水風呂もしっかりあるし、源泉かけ流しの温泉にも入れちゃう贅沢さ。コテージに泊まれるから、ゆっくりサウナ三昧の休日を過ごすのもいいかも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "90分貸切サウナ",
+        "price": 2200,
+        "duration": 90,
+        "capacity": 6
+      },
+      {
+        "name": "4時間貸切サウナ",
+        "price": 3300,
+        "duration": 240,
+        "capacity": 6
+      },
+      {
+        "name": "コテージ宿泊（サウナ・温泉付き）",
+        "price": 12100,
+        "duration": 1440,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 252,
+    "slug": "rakuda-to-penguin",
+    "name": "らくだとぺんぎん",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "甲府市",
+    "area": "甲府",
+    "address": "山梨県甲府市中央2丁目9-23 WIビル2F",
+    "nearestStation": "甲府駅",
+    "walkMinutes": 10,
+    "priceMin": 3500,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:00",
+    "holidays": "不定休",
+    "website": "https://sauna-rakudatopenguin.com/",
+    "phone": "055-225-3840",
+    "bookingUrl": "https://sauna-rakudatopenguin.com/",
+    "amenities": [
+      "ダイソンドライヤー",
+      "サウナハット（有料貸出）",
+      "富士山シリカ水"
+    ],
+    "note": "完全予約制。北欧産木材使用。全室水風呂専用製氷機完備。3つのコンセプトルーム（砂漠・南極・深海）。土日祝は+500円",
+    "images": [],
+    "lat": 35.6616,
+    "lng": 138.5691,
+    "description": "甲府駅南口から徒歩10分、北欧産木材を使用した完全予約制プライベートサウナ。「砂漠」「南極」「深海」の3つのコンセプトルームがあり、全室に水風呂専用製氷機を完備。セルフロウリュ対応で、ダイソンドライヤーなどアメニティも充実。",
+    "saunakoCommentShort": "3つのコンセプトルーム、製氷機完備の水風呂！",
+    "saunakoCommentLong": "甲府にある完全予約制のプライベートサウナだよ！「砂漠」「南極」「深海」っていう3つのコンセプトルームがあってどれも気になるの。全室に水風呂専用の製氷機がついてるからキンキンに冷えた水風呂が楽しめるかも。北欧産木材の香りも最高で、アメニティもダイソンドライヤーとか充実してるよ！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "砂漠のお部屋 60分 1名",
+        "price": 3500,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "砂漠のお部屋 90分 1名",
+        "price": 4500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "南極のお部屋 90分 1名",
+        "price": 4500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "南極のお部屋 120分 1名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "深海のお部屋 90分 1名",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "深海のお部屋 120分 1名",
+        "price": 6500,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 253,
+    "slug": "matka-sauna",
+    "name": "MATKA private outdoor sauna",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "笛吹市",
+    "area": "石和",
+    "address": "山梨県笛吹市石和町川中島192（ホテルふじ内）",
+    "nearestStation": "石和温泉駅",
+    "walkMinutes": null,
+    "priceMin": 13200,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "6:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://matka-sauna.com/",
+    "phone": "055-262-4524",
+    "bookingUrl": "https://matka-sauna.com/",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "ポンチョ",
+      "サウナマット",
+      "サンダル",
+      "ミネラルウォーター"
+    ],
+    "note": "ホテルふじ併設のアウトドアサウナ。国産ヒノキのバレルサウナ4基。天然地下水の水風呂。水着着用（レンタル・販売あり）。石和温泉駅から車5分",
+    "images": [],
+    "lat": 35.6543,
+    "lng": 138.6398,
+    "description": "笛吹市石和温泉のホテルふじ内に併設されたプライベートアウトドアサウナ。国産ヒノキ材のバレルサウナ4基を備え、天然地下水をかけ流した水風呂とセルフロウリュが楽しめる。緑に囲まれた外気浴スペースで自然を感じながらリラックスできる。",
+    "saunakoCommentShort": "石和温泉のアウトドアサウナ、天然地下水の水風呂！",
+    "saunakoCommentLong": "石和温泉のホテルふじに併設されたアウトドアサウナだよ！国産ヒノキのバレルサウナが4基もあって、天然地下水かけ流しの水風呂はすごく気持ちいいの。セルフロウリュもできるし、緑に囲まれた外気浴は癒されるかも。水着着用だから男女一緒に楽しめるのもポイント！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "4名ブース 120分（平日）",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "4名ブース 120分（土日祝）",
+        "price": 15400,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "6名ブース（Liekki） 120分",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 254,
+    "slug": "fujisauna",
+    "name": "FujiSauna",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "南都留郡富士河口湖町",
+    "area": "富士五湖",
+    "address": "山梨県南都留郡富士河口湖町船津5812",
+    "nearestStation": "河口湖駅",
+    "walkMinutes": null,
+    "priceMin": 16500,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:30（枠制）",
+    "holidays": "不定休",
+    "website": "https://fujisauna.com/",
+    "phone": "080-1570-6804",
+    "bookingUrl": "https://fujisauna.com/",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "化粧水",
+      "乳液",
+      "洗顔",
+      "クレンジング",
+      "綿棒",
+      "コットン"
+    ],
+    "note": "2エリア（TUULI・TAIVAS）各150分枠制。河口湖駅から車10分。冬季一部枠休み。駐車場あり",
+    "images": [],
+    "lat": 35.4962,
+    "lng": 138.7582,
+    "description": "富士河口湖町にある富士山を望むプライベートサウナ。TUULI・TAIVASの2つのエリアで各150分の貸切利用が可能。セルフロウリュ対応で、水風呂と外気浴も完備。スキンケアまで揃った充実のアメニティが女性にも好評。",
+    "saunakoCommentShort": "富士山の麓で最高の「ととのい」体験！",
+    "saunakoCommentLong": "河口湖エリアにある富士山を望めるプライベートサウナだよ！TUULIとTAIVASっていう2つのエリアがあって、それぞれ150分の貸切。セルフロウリュもできるし、外気浴は富士山が見えて本当に贅沢な気分になれるの。化粧水やクレンジングまでアメニティ完備だから女子にもおすすめかも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "平日 150分（1〜3名）",
+        "price": 16500,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "土日祝 150分（1〜3名）",
+        "price": 19800,
+        "duration": 150,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 255,
+    "slug": "88peaks-sauna",
+    "name": "88PEAKS SAUNA",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "北杜市",
+    "area": "北杜",
+    "address": "山梨県北杜市高根町清里3545-5521",
+    "nearestStation": "清里駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18-20",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:00（完全予約制）",
+    "holidays": "水曜定休",
+    "website": "https://88peaks.com/",
+    "phone": "070-1511-1616",
+    "bookingUrl": "https://88peaks.com/reserve/",
+    "amenities": [
+      "ガウン",
+      "タオルセット"
+    ],
+    "note": "八ヶ岳の湧水を使った飲める水風呂。白樺に囲まれた外気浴。宿泊プランあり。シーシャ・CBD取り扱いあり。小淵沢駅から車15分",
+    "images": [],
+    "lat": 35.8583,
+    "lng": 138.4317,
+    "description": "北杜市清里にある八ヶ岳の自然に囲まれたプライベートサウナ。完全貸切制で、セルフロウリュ対応のサウナと八ヶ岳の湧水を使った18〜20℃の水風呂を備える。白樺の森に囲まれた外気浴は至高の時間。宿泊プランも用意されている。",
+    "saunakoCommentShort": "八ヶ岳の湧水風呂と白樺の外気浴が極上！",
+    "saunakoCommentLong": "清里の八ヶ岳エリアにあるプライベートサウナだよ！八ヶ岳の湧水を使った水風呂は18〜20℃で飲めるくらいキレイなの。セルフロウリュでしっかり温まったあと、白樺に囲まれた外気浴は本当に最高かも。夜サウナの枠もあるから、星空を見ながら整えるのも素敵！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "1名利用 150分",
+        "price": 11000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "2名利用 150分（1名あたり）",
+        "price": 7150,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "3名利用 150分（1名あたり）",
+        "price": 6050,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "4〜6名利用 150分（1名あたり）",
+        "price": 5500,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 256,
+    "slug": "cycl",
+    "name": "CYCL",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "南都留郡山中湖村",
+    "area": "富士五湖",
+    "address": "山梨県南都留郡山中湖村平野479-107",
+    "nearestStation": "富士山駅",
+    "walkMinutes": null,
+    "priceMin": 4290,
+    "duration": 150,
+    "capacity": 10,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "月〜金 11:00〜18:00（最終入館15:30） / 土日祝 10:00〜21:30（最終入館19:00）",
+    "holidays": "不定休",
+    "website": "https://cycl.co.jp/",
+    "phone": "0555-28-7224",
+    "bookingUrl": "https://coubic.com/cycl/1283765",
+    "amenities": [
+      "タオルセット",
+      "フリードリンク",
+      "スイーツ1品"
+    ],
+    "note": "富士山と山中湖を一望する絶景湖畔サウナ。水着着用・男女共用。毎分90Lの富士山系天然地下水かけ流し飲める水風呂。360度展望ラウンジ。水着レンタルあり。予約優先",
+    "images": [],
+    "lat": 35.4136,
+    "lng": 138.8734,
+    "description": "山中湖畔に位置する富士山と山中湖を360度一望できる絶景サウナ。毎分90L湧き出る富士山系の天然地下水をかけ流した「飲める水風呂」が最大の特徴。水着着用の男女共用スタイルで、フリードリンクとスイーツ付き。展望ラウンジでの外気浴は圧巻。",
+    "saunakoCommentShort": "富士山×山中湖の360度絶景サウナ！",
+    "saunakoCommentLong": "山中湖のほとりにある絶景サウナだよ！富士山と山中湖を360度見渡せるロケーションはホントにすごい。毎分90Lも湧き出る富士山の天然地下水を使った「飲める水風呂」は格別の気持ちよさかも。フリードリンクとスイーツ付きだし、水着で男女一緒に楽しめるのも嬉しいね！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "入浴 150分",
+        "price": 4290,
+        "duration": 150,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 257,
+    "slug": "luont-sauna-fuji",
+    "name": "Luont SAUNA FUJI",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "富士吉田市",
+    "area": "富士五湖",
+    "address": "山梨県富士吉田市大明見3335",
+    "nearestStation": "富士山駅",
+    "walkMinutes": null,
+    "priceMin": 16000,
+    "duration": 180,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜19:00",
+    "holidays": "無休",
+    "website": "https://www.luont.com",
+    "phone": null,
+    "bookingUrl": "https://coubic.com/luont0716",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "「湧き水と森林浴でととのう」がコンセプト。バレルサウナとサウナ小屋の2タイプ。飲める湧水の水風呂。森林の中での外気浴。web予約のみ（電話不可）",
+    "images": [],
+    "lat": 35.4844,
+    "lng": 138.7857,
+    "description": "富士吉田市の森の中にある「湧き水と森林浴でととのう」がコンセプトのプライベートサウナ。バレルサウナ（最大8名）とサウナ小屋（最大5名）の2タイプがあり、飲めるほど清らかな湧水の水風呂と森林に囲まれた外気浴が楽しめる。",
+    "saunakoCommentShort": "森の湧水で整う、富士吉田のプライベートサウナ！",
+    "saunakoCommentLong": "富士吉田の森の中にあるプライベートサウナだよ！バレルサウナとサウナ小屋の2タイプから選べて、飲めるくらいキレイな湧水の水風呂はすごく気持ちいいの。森に囲まれた外気浴は鳥のさえずりも聞こえて癒されるかも。自然の中でゆっくり過ごしたい人にはぴったり！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "サウナ小屋 平日 180分（最大5名）",
+        "price": 16000,
+        "duration": 180,
+        "capacity": 5
+      },
+      {
+        "name": "サウナ小屋 休日 180分（最大5名）",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 5
+      },
+      {
+        "name": "バレルサウナ 平日 180分（最大8名）",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 8
+      },
+      {
+        "name": "バレルサウナ 休日 180分（最大8名）",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 258,
+    "slug": "folkwood-village",
+    "name": "FOLKWOOD VILLAGE 八ヶ岳",
+    "prefecture": "yamanashi",
+    "prefectureLabel": "山梨県",
+    "city": "北杜市",
+    "area": "北杜",
+    "address": "山梨県北杜市小淵沢町3900-2",
+    "nearestStation": "小淵沢駅",
+    "walkMinutes": null,
+    "priceMin": 2500,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "予約サイトで確認",
+    "holidays": "不定休",
+    "website": "https://folkwood-camp.com/",
+    "phone": "0551-37-4130",
+    "bookingUrl": "https://folkwood.stores.jp/",
+    "amenities": [
+      "バスタオル（有料300円）",
+      "フェイスタオル（有料200円）",
+      "ポンチョ（有料500円）",
+      "水着レンタル（有料300円）"
+    ],
+    "note": "アウトドア複合施設内のティピテント型薪火サウナ。男女混浴・水着着用必須。キャンプ場・カフェ・ショップ併設。甲斐大泉駅から車5分",
+    "images": [],
+    "lat": 35.8672,
+    "lng": 138.3258,
+    "description": "北杜市小淵沢にあるアウトドア複合施設内のティピテント型本格薪火サウナ。四季折々の八ヶ岳の大自然の中で、焚火を囲みながら外気浴が楽しめる。キャンプ場やカフェ、ショップも併設されており、一日中アウトドアを満喫できる。水着着用の男女共用スタイル。",
+    "saunakoCommentShort": "八ヶ岳の大自然で薪火サウナ＆焚火の外気浴！",
+    "saunakoCommentLong": "八ヶ岳の麓にあるアウトドア複合施設の中にある薪火サウナだよ！ティピテント型のサウナは焚火の香りがして雰囲気抜群。四季で景色が変わる外気浴は何度来ても飽きないかも。キャンプやカフェも一緒に楽しめるから、サウナ好きなアウトドア派にはたまらない場所だね！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 平日 90分",
+        "price": 2500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "パブリック 休日 90分",
+        "price": 3000,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 259,
+    "slug": "hitorijime-sauna",
+    "name": "ひとり占めサウナ",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "長野市",
+    "area": "長野市",
+    "address": "長野県長野市西尾張部236",
+    "nearestStation": "長野駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 90,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "6:00〜24:00",
+    "holidays": "不定休",
+    "website": "https://hitorijimesauna.jp/",
+    "phone": "080-4161-5643",
+    "bookingUrl": "https://coubic.com/hitorijime-sauna",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドリンク"
+    ],
+    "note": "完全個室・完全予約制。VIPサウナルームは120分12,750円。回数券あり。",
+    "images": [],
+    "lat": 36.6556,
+    "lng": 138.1928,
+    "description": "長野市にある完全個室のプライベートサウナ。脱衣場から浴室・サウナまですべて個室で、バスタオルとフェイスタオル付きで手ぶら利用が可能。通常個室は90分5,500円、VIPルームは120分12,750円。早朝6時から深夜まで営業しており、完全予約制で他のお客さんを気にせずリラックスできる。",
+    "saunakoCommentShort": "完全個室で手ぶらOK！長野駅近のひとりサウナ",
+    "saunakoCommentLong": "名前のとおり、サウナを丸ごとひとり占めできる完全個室だよ！脱衣場からサウナ、水風呂まで全部プライベート空間で、タオルもアメニティも揃ってるから手ぶらで行けちゃう。朝6時からやってるのも嬉しいポイントかも。VIPルームは120分でさらにゆったりできるよ！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "通常個室 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "VIPサウナルーム 120分",
+        "price": 12750,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 260,
+    "slug": "tabi-shiro-sauna",
+    "name": "tabi-shiro SAUNA",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "松本市",
+    "area": "松本",
+    "address": "長野県松本市城西1-3-6",
+    "nearestStation": "松本駅",
+    "walkMinutes": 11,
+    "priceMin": 6600,
+    "duration": 100,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（最終枠20:00）",
+    "holidays": "不定休",
+    "website": "https://tabi-shiro.com/sauna/",
+    "phone": "0263-88-3453",
+    "bookingUrl": "https://coubic.com/tabishirosauna/booking_pages",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "ゲストハウス併設。4名利用は3名料金+1,500円。PayPay利用可。スピーカーレンタル300円。",
+    "images": [],
+    "lat": 36.2365,
+    "lng": 137.9614,
+    "description": "松本駅から徒歩11分、ゲストハウス併設の貸切プライベートサウナ。フィンランド式薪ストーブでセルフロウリュが楽しめ、サウナ室から5歩で水風呂、1歩でリクライニングチェアという動線が魅力。屋外の外気浴スペースも2か所あり、100分間じっくりととのえる。",
+    "saunakoCommentShort": "松本駅徒歩11分！動線完璧なフィンランド式サウナ",
+    "saunakoCommentLong": "松本のゲストハウスに併設された貸切サウナだよ！サウナ室→水風呂→休憩の動線がめちゃくちゃコンパクトで、5歩で水風呂、1歩でチェアって最高の設計。セルフロウリュもできるし、外気浴スペースも2か所あるの。松本の水はモンドセレクション金賞の天然水だから水風呂も気持ちいいかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "1名利用 100分",
+        "price": 6600,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "2名利用 100分",
+        "price": 7700,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "3名利用 100分",
+        "price": 8800,
+        "duration": 100,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 261,
+    "slug": "sauna-muku",
+    "name": "Sauna muku",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "茅野市",
+    "area": "蓼科",
+    "address": "長野県茅野市豊平7794-1",
+    "nearestStation": "茅野駅",
+    "walkMinutes": null,
+    "priceMin": 8450,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "5:30〜22:00（最終受付19:30）",
+    "holidays": "不定休（完全予約制）",
+    "website": "https://saunamuku.com/",
+    "phone": "090-9354-8947",
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "八ヶ岳山麓のプライベートサウナ。薪ストーブ式フィンランドサウナ。オプションでドラム缶風呂(3,500円)、シーシャ(2,500円)、焚き火(3,000円)あり。手ぶらセット1,200円。",
+    "images": [],
+    "lat": 35.9802,
+    "lng": 138.2306,
+    "description": "八ヶ岳山麓に位置するプライベートサウナ施設。土壁と羊毛断熱材を使った自然素材の「呼吸するサウナ」が特徴で、薪ストーブによるフィンランド式セルフロウリュが楽しめる。150分貸切で最大6名まで利用可能。オプションでドラム缶風呂やシーシャ、焚き火体験も。",
+    "saunakoCommentShort": "八ヶ岳山麓で自然素材の呼吸するサウナ！",
+    "saunakoCommentLong": "八ヶ岳の麓にある、自然素材にこだわったプライベートサウナだよ！土壁と羊毛断熱材で作られた「呼吸するサウナ」っていうコンセプトがユニーク。薪ストーブのセルフロウリュでしっかり蒸されたあとは、大自然の中で外気浴が最高かも。ドラム缶風呂とか焚き火のオプションも楽しそう！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "1名利用 150分",
+        "price": 8450,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "2名利用 150分",
+        "price": 12700,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "3名利用 150分",
+        "price": 17400,
+        "duration": 150,
+        "capacity": 3
+      },
+      {
+        "name": "4名利用 150分",
+        "price": 21600,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 262,
+    "slug": "sauna-cafe-en",
+    "name": "サウナ☆カフェえん",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "茅野市",
+    "area": "蓼科",
+    "address": "長野県茅野市玉川4545-1",
+    "nearestStation": "茅野駅",
+    "walkMinutes": null,
+    "priceMin": 3500,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00",
+    "holidays": "無休（完全予約制）",
+    "website": "https://sauna-cafe-en.com/",
+    "phone": "0266-75-1113",
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "完全個室のプラズマミストサウナとバレルサウナを完備。カフェメニューも楽しめる。レプトンウォーター飲み放題。",
+    "images": [],
+    "lat": 35.9875,
+    "lng": 138.1684,
+    "description": "茅野市にある完全個室のプライベートサウナ＆カフェ。プラズマミストサウナとバレルサウナの2種類を備え、美容と健康を意識した空間で自分だけの「ととのい」時間を過ごせる。レプトンウォーター飲み放題で、カフェメニューも充実。完全予約制で年中無休。",
+    "saunakoCommentShort": "プラズマミストサウナ×カフェの個室空間！",
+    "saunakoCommentLong": "プラズマミストサウナとバレルサウナの2種類が楽しめる個室サウナだよ！美容にも良さそうなミストサウナは女性にも人気かも。サウナ後にカフェでまったりできるのも嬉しいポイント。レプトンウォーターが飲み放題で、しっかり水分補給もできちゃうね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "スタンダード",
+        "price": 3500,
+        "duration": 60,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 263,
+    "slug": "hyva-sauna",
+    "name": "hyvä sauna（ヒュバサウナ）",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "上田市",
+    "area": "上田",
+    "address": "長野県上田市秋和1110-8",
+    "nearestStation": "上田駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "12:00〜21:30",
+    "holidays": "不定休（木曜はレディースデー）",
+    "website": "https://www.hyva-sauna.com/",
+    "phone": null,
+    "bookingUrl": "https://select-type.com/rsv/?id=c2r4ZuPITyo",
+    "amenities": [],
+    "note": "フィンランド製サウナストーブ使用。アロマウォーターでセルフロウリュ。1日4枠の完全予約制。木曜日は終日レディースデー。",
+    "images": [],
+    "lat": 36.3876,
+    "lng": 138.2142,
+    "description": "上田市にあるフィンランド式プライベートサウナ。95度のサウナ室にフィンランド製ストーブを備え、アロマウォーターを使ったセルフロウリュが楽しめる。15度の水風呂と屋内外の休憩スペースで本格的なととのい体験。1日4枠の完全予約制で、木曜日はレディースデーを実施。",
+    "saunakoCommentShort": "上田のフィンランド式サウナ！水風呂15度でしっかり冷える",
+    "saunakoCommentLong": "フィンランド製のストーブで95度まで上がるサウナに、アロマウォーターのセルフロウリュが気持ちいいよ！水風呂は15度でキリッと冷えるし、外気浴スペースもあるから本格的にととのえるかも。木曜はレディースデーだから、女性も安心して楽しめるね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切 120分",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 264,
+    "slug": "hotel-kazenoyama-sauna",
+    "name": "ホテル風の山 サウナ",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "飯田市",
+    "area": "その他",
+    "address": "長野県飯田市追手町7462-49",
+    "nearestStation": "飯田駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 110,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16-17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:00〜21:00（最終受付19:00）",
+    "holidays": "不定休",
+    "website": "https://kazenoyama.jp/sauna/",
+    "phone": null,
+    "bookingUrl": "https://select-type.com/rsv/?id=E-HA2MYjy64&w_flg=1",
+    "amenities": [
+      "タオル（レンタル）",
+      "サウナハット（レンタル）",
+      "ポンチョ（レンタル）",
+      "水着（レンタル）"
+    ],
+    "note": "ホテル併設の貸切バレルサウナ。中央アルプス南部山麓の地下160m天然水をかけ流し。水着着用必須。追加1名1,000円。休日は7,000円。",
+    "images": [],
+    "lat": 35.5105,
+    "lng": 137.8221,
+    "description": "飯田市のホテル風の山に併設された貸切バレルサウナ。中央アルプス南部山麓の地下160mから湧くミネラル豊富な天然水を水風呂にかけ流しで使用し、水温は16〜17度。セルフロウリュ対応で、テラスの外気浴スペースでは川のせせらぎや鳥のさえずりを聞きながらリラックスできる。",
+    "saunakoCommentShort": "天然水かけ流しの水風呂が最高！山間の貸切バレルサウナ",
+    "saunakoCommentLong": "ホテル併設のバレルサウナで、地下160mから湧く天然水の水風呂がすごく気持ちいいよ！16〜17度のかけ流しでミネラルたっぷり。セルフロウリュでしっかり蒸されたあと、テラスで川の音を聞きながら外気浴するのが最高かも。ジャグジーもあるから、ゆったり過ごせるね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日 貸切110分",
+        "price": 5000,
+        "duration": 110,
+        "capacity": 4
+      },
+      {
+        "name": "休日 貸切110分",
+        "price": 7000,
+        "duration": 110,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 265,
+    "slug": "chillsheep-sauna",
+    "name": "ChillSheep SAUNA",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "須坂市",
+    "area": "その他",
+    "address": "長野県須坂市大字仁礼峰の原3153-576",
+    "nearestStation": "須坂駅",
+    "walkMinutes": null,
+    "priceMin": 4000,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:00〜20:00",
+    "holidays": "不定休",
+    "website": "https://chillsheep.jp/",
+    "phone": "0268-71-6940",
+    "bookingUrl": null,
+    "amenities": [
+      "シャンプー"
+    ],
+    "note": "ペンション併設の貸切アウトドアサウナ。須坂長野東IC・上田菅平ICから車で約40分。標高の高い森林の中でサウナ体験。宿泊も可能。",
+    "images": [],
+    "lat": 36.6262,
+    "lng": 138.3842,
+    "description": "須坂市の峰の原高原に位置するペンション併設の貸切アウトドアサウナ。標高の高い森林に囲まれた自然の中でセルフロウリュと外気浴が楽しめる。1名90分4,000円からで、宿泊と合わせての利用も可能。須坂長野東ICまたは上田菅平ICから車で約40分。",
+    "saunakoCommentShort": "高原の森に囲まれた貸切アウトドアサウナ！",
+    "saunakoCommentLong": "峰の原高原のペンションに併設された貸切サウナだよ！森林に囲まれた自然の中でのセルフロウリュは格別。外気浴では高原の澄んだ空気を吸いながらととのえるの。宿泊もできるから、泊まりがけでサウナ三昧するのもアリかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "1名 90分",
+        "price": 4000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名 90分",
+        "price": 7000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 266,
+    "slug": "sauna-stand-kokage",
+    "name": "SAUNA STAND KOKAGE.",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "大町市",
+    "area": "白馬",
+    "address": "長野県大町市平9707-1 木崎湖キャンプ場",
+    "nearestStation": "信濃木崎駅",
+    "walkMinutes": null,
+    "priceMin": 10000,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜17:00",
+    "holidays": "水曜定休",
+    "website": "https://saunastandkokage.com/",
+    "phone": null,
+    "bookingUrl": "https://sauna-stand-kokage.square.site/",
+    "amenities": [],
+    "note": "木崎湖畔のプライベートサウナビレッジ。湖で水風呂代わりにダイブ可能。北アルプスの眺望。冬季営業は要確認。",
+    "images": [],
+    "lat": 36.5532,
+    "lng": 137.8476,
+    "description": "大町市の木崎湖畔に位置するプライベートサウナビレッジ。ヒノキのバレルサウナでセルフロウリュを楽しんだあと、湧き水の湖にそのままダイブできるのが最大の魅力。北アルプスの絶景を眺めながらの外気浴は格別。2時間貸切制で最大8名まで利用可能。",
+    "saunakoCommentShort": "木崎湖にダイブ！北アルプスの絶景サウナ",
+    "saunakoCommentLong": "木崎湖のほとりにあるバレルサウナで、サウナ後に湖にそのままダイブできるのが最高だよ！北アルプスの山々を眺めながらの外気浴は言葉にならない気持ちよさかも。セルフロウリュもできて、湖畔レストランでご飯も食べられるの。自然のなかでとことんととのえる場所だね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "2名 貸切120分",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "4名 貸切120分",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "8名 貸切120分",
+        "price": 32000,
+        "duration": 120,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 267,
+    "slug": "baco-resort-sauna",
+    "name": "BaCo Resort 長野 サウナ",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "上田市",
+    "area": "上田",
+    "address": "長野県上田市武石小沢根608-7",
+    "nearestStation": "上田駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 80,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:30〜21:20（80分制・6枠）",
+    "holidays": "冬季休業（4月〜11月営業）",
+    "website": "https://bacoresort.com/",
+    "phone": null,
+    "bookingUrl": "https://jubilant-s.com/baco-resort/",
+    "amenities": [],
+    "note": "グランピング施設併設の「川ダイブサウナ」。バレルサウナで蒸されたあと清流にダイブ。リクライニングチェア付き川辺の整いスペース。上田駅からシャトルバスあり。",
+    "images": [],
+    "lat": 36.3015,
+    "lng": 138.1342,
+    "description": "上田市のグランピング施設に併設された「川ダイブサウナ」。バレルサウナでセルフロウリュを楽しんだあと、目の前の清流にそのままダイブできるのが特徴。川辺にはリクライニングチェア付きの整いスペースがあり、せせらぎを聞きながら外気浴が楽しめる。80分制の完全予約制。",
+    "saunakoCommentShort": "清流にダイブ！グランピング×サウナ体験",
+    "saunakoCommentLong": "グランピング施設に併設された「川ダイブサウナ」がめちゃくちゃ気持ちよさそう！バレルサウナでしっかり蒸されてから目の前の清流にドボンって、サウナーの夢だよね。川辺のリクライニングチェアで外気浴しながら水の音を聞くのが最高かも。BBQとセットで楽しめるのも魅力だね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "サウナ 80分",
+        "price": 5500,
+        "duration": 80,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 268,
+    "slug": "shimashima-sauna",
+    "name": "シマシマサウナ",
+    "prefecture": "nagano",
+    "prefectureLabel": "長野県",
+    "city": "松本市",
+    "area": "松本",
+    "address": "長野県松本市島立860-1",
+    "nearestStation": "松本駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00",
+    "holidays": "不定休（完全予約制）",
+    "website": "https://en.shimashimahouse.com/sauna",
+    "phone": null,
+    "bookingUrl": "https://coubic.com/shimashima-sauna",
+    "amenities": [],
+    "note": "ゲストハウスしましま併設の貸切サウナ。上高地への玄関口に位置。フィンランド式薪ストーブ使用。",
+    "images": [],
+    "lat": 36.2432,
+    "lng": 137.9398,
+    "description": "松本市のゲストハウスに併設された完全予約制の貸切サウナ。上高地への玄関口に位置し、フィンランド式薪ストーブによるセルフロウリュが楽しめる。水風呂と外気浴スペースも備え、最大4名まで利用可能。宿泊と合わせての利用もおすすめ。",
+    "saunakoCommentShort": "上高地の入口！フィンランド式薪ストーブサウナ",
+    "saunakoCommentLong": "上高地への玄関口、松本のゲストハウスに併設された貸切サウナだよ！フィンランド式の薪ストーブでしっかり熱くなるし、セルフロウリュもできるの。旅の途中に立ち寄ってととのうのもアリかも。宿泊できるゲストハウスだから、泊まりがけサウナも楽しそうだね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "1-2名 90分",
+        "price": 5000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "3-4名 90分",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 269,
+    "slug": "i3u7-immersive-sauna",
+    "name": "i3U7 IMMERSIVE SAUNA",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "富山市",
+    "area": "富山市",
+    "address": "富山県富山市桜町1-4-10 パティオさくら2F",
+    "nearestStation": "富山駅",
+    "walkMinutes": 3,
+    "priceMin": 11000,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "6:00〜27:30",
+    "holidays": "不定休",
+    "website": "https://i3u7.com/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "スキンケア",
+      "デンタルキット",
+      "ドライヤー",
+      "天然水・炭酸水"
+    ],
+    "note": "完全個室のラグジュアリーサウナ。LINE会員登録・予約制。3タイプの部屋（S/M/L）あり。QRコードで入退室。メンバーシップで料金変動。",
+    "images": [],
+    "lat": 36.6927,
+    "lng": 137.2121,
+    "description": "富山駅前徒歩3分の完全個室ラグジュアリーサウナ。3タイプの部屋を備え、最大6名のRoom Lは140cm深さの「イマーシブ水風呂」が体験できる。METOSサウナストーブでセルフロウリュ対応。アメニティ・スキンケア・天然水飲み放題と設備が充実。LINE予約でQRコード入退室のスマートな仕組み。",
+    "saunakoCommentShort": "富山駅前3分！ラグジュアリーな完全個室サウナ",
+    "saunakoCommentLong": "富山駅から徒歩3分のラグジュアリーな完全個室サウナだよ！Room Lの140cm深さの「イマーシブ水風呂」は全身浸かれてすごそう。METOSのストーブでセルフロウリュもできるし、アメニティもスキンケアも全部揃ってる。LINE予約でスマートに入退室できるのもカッコいいかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "Room S スタンダード 120分",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Room M スタンダード 120分",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "Room L スタンダード 120分",
+        "price": 19800,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 270,
+    "slug": "furobakka",
+    "name": "湯屋 FUROBAKKA",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "黒部市",
+    "area": "その他",
+    "address": "富山県黒部市堀切951-1",
+    "nearestStation": "黒部駅",
+    "walkMinutes": null,
+    "priceMin": 6000,
+    "duration": 150,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://furobakka.com/",
+    "phone": null,
+    "bookingUrl": "https://coubic.com/furobakka2023/booking_pages",
+    "amenities": [],
+    "note": "道の駅KOKOくろべ隣接の温浴テーマパーク。黒部名水使用。貸切サウナは7棟（バレル4・コンテナ3）。薪ストーブ。大浴場もあり。季節により料金変動。",
+    "images": [],
+    "lat": 36.8612,
+    "lng": 137.4287,
+    "description": "黒部市の道の駅KOKOくろべ隣接の温浴テーマパーク。日本名水百選にも選ばれた黒部の水を使用し、貸切サウナは7棟（バレルサウナ4棟・コンテナサウナ3棟）を完備。すべて薪ストーブでセルフロウリュ対応。大浴場や家族風呂もあり、幅広い楽しみ方ができる。",
+    "saunakoCommentShort": "名水の町・黒部の貸切サウナパーク！7棟から選べる",
+    "saunakoCommentLong": "道の駅の隣にある温浴テーマパークで、貸切サウナが7棟もあるよ！バレルサウナとコンテナサウナから選べて、全部薪ストーブでセルフロウリュができるの。黒部名水を使ってるから水風呂も気持ちいいかも。大浴場もあるし、焚き火エリアもあって一日中楽しめそうだね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "バレルサウナ 150分",
+        "price": 6000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "コンテナサウナ 150分",
+        "price": 5000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 271,
+    "slug": "tateyama-sauna",
+    "name": "TATEYAMA SAUNA",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "中新川郡立山町",
+    "area": "立山",
+    "address": "富山県中新川郡立山町吉峰野開21-6",
+    "nearestStation": "立山駅",
+    "walkMinutes": null,
+    "priceMin": 14000,
+    "duration": 150,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜16:00（日帰り2枠）",
+    "holidays": "水曜定休",
+    "website": "https://www.tateyamasauna.com/",
+    "phone": "090-8264-7120",
+    "bookingUrl": "https://coubic.com/tateyama-sauna",
+    "amenities": [],
+    "note": "崖の上の絶景アウトドアサウナ。1日3組限定の完全貸切。立山連峰の雪解け水を水風呂に使用。宿泊プランあり(45,000円〜)。冬季は雪ダイブも。",
+    "images": [],
+    "lat": 36.6084,
+    "lng": 137.3048,
+    "description": "立山町の崖の上に位置する絶景アウトドアサウナ。富山平野を一望できる開放感あふれるロケーションで、立山連峰の雪解け軟水を水風呂にかけ流し使用。1日3組限定の完全貸切制で最大8名まで利用可能。鳥のさえずりだけが聞こえる静寂のなか、本格的なととのい体験ができる。",
+    "saunakoCommentShort": "崖の上から富山平野を一望！1日3組の絶景サウナ",
+    "saunakoCommentLong": "崖の上に建つ絶景サウナで、富山平野を見下ろしながらの外気浴が圧巻だよ！立山の雪解け軟水を使った水風呂もめちゃくちゃ気持ちいいかも。1日3組限定の完全貸切だから、鳥の声しか聞こえない静かな空間でゆったりととのえるの。冬は雪ダイブもできるんだって！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "日帰り 平日 150分",
+        "price": 14000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "日帰り 休日 150分",
+        "price": 18000,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 272,
+    "slug": "tsuji-wakuwaku-land-sauna",
+    "name": "辻わくわくランド 貸切サウナ",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "魚津市",
+    "area": "その他",
+    "address": "富山県魚津市青島63-1",
+    "nearestStation": "魚津駅",
+    "walkMinutes": null,
+    "priceMin": 3200,
+    "duration": 110,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "11",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "12:30〜22:00（110分制・5枠）",
+    "holidays": "偶数月の第2火〜翌水曜",
+    "website": "https://sauna.tuji-waku.com/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "スーパー銭湯併設の完全貸切サウナ。立山連峰の伏流水を使った11度の水風呂が自慢。3名まで推奨。大浴場入浴料(500円)別途。冬季休業の場合あり。",
+    "images": [],
+    "lat": 36.8256,
+    "lng": 137.4015,
+    "description": "魚津市のスーパー銭湯に併設された完全貸切サウナ「プライベートととのいエリア」。立山連峰の伏流水をくみ上げた水風呂は11度と冷たく、セルフロウリュ対応のサウナと外気浴スペースをすべて貸切で利用できる。110分3,200円とコスパに優れた価格設定が魅力。",
+    "saunakoCommentShort": "水風呂11度！コスパ最強の貸切サウナ",
+    "saunakoCommentLong": "スーパー銭湯に併設された貸切サウナで、なんと110分3,200円っていうコスパの良さ！しかも水風呂は立山連峰の伏流水で11度ってかなり冷えるよ。セルフロウリュも外気浴もできて、これで3,200円はすごいかも。大浴場も利用できるから、サウナ後にゆっくり温泉も楽しめるね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切サウナ 110分",
+        "price": 3200,
+        "duration": 110,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 273,
+    "slug": "sauna-cnoc",
+    "name": "SAUNA CNOC（サウナクノック）",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "魚津市",
+    "area": "その他",
+    "address": "富山県魚津市島尻999-1",
+    "nearestStation": "魚津駅",
+    "walkMinutes": null,
+    "priceMin": 1970,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00（金曜12:00〜）",
+    "holidays": "火曜・水曜定休",
+    "website": "https://saunacnoc.com/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "シャンプー",
+      "スキンケア"
+    ],
+    "note": "一般利用と貸切利用の2種類。一般は1,970円、貸切は6名まで平日11,980円/休日13,980円。月1-2回レディースデーあり。女性は水着必要（レンタルあり）。タオルレンタル300円。フード提供あり。",
+    "images": [],
+    "lat": 36.8085,
+    "lng": 137.3865,
+    "description": "魚津市にある予約制の貸切サウナ施設。地下水を使用した水風呂と自然素材にこだわった空間で、一般利用（1,970円）と貸切利用（最大12名）の2つのスタイルが選べる。オリジナルカレーなどフードメニューも提供。月1〜2回のレディースデーも開催している。",
+    "saunakoCommentShort": "一般1,970円から！魚津の一軒家サウナ",
+    "saunakoCommentLong": "一軒家を改装した予約制のサウナで、一般利用なら1,970円から楽しめるのが嬉しいよね！地下水の水風呂と自然素材の空間がこだわってて、ゆったりした時間を過ごせるかも。貸切にすれば最大12名までOKだからグループ利用にもぴったり。オリジナルカレーも美味しそう！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "一般利用 120分",
+        "price": 1970,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 平日 120分",
+        "price": 11980,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "貸切 休日 120分",
+        "price": 13980,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 274,
+    "slug": "sauna-da-sauna",
+    "name": "SAUNA da SAUNA",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "高岡市",
+    "area": "高岡",
+    "address": "富山県高岡市御旅屋町89 二口ビル",
+    "nearestStation": "高岡駅",
+    "walkMinutes": 5,
+    "priceMin": 10000,
+    "duration": 180,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14-19",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:30",
+    "holidays": "火曜定休",
+    "website": "https://otayatomos.jp/sauna-da-sauna/",
+    "phone": "0766-24-9229",
+    "bookingUrl": "https://coubic.com/saunadasauna",
+    "amenities": [
+      "シャワー",
+      "パウダールーム"
+    ],
+    "note": "複合施設OTAYA TOMOS屋上の貸切サウナ&BBQ施設。完全予約制。テラスで外気浴・BBQ可能。水風呂は冷水(14-19度)と温水(25-35度)の2種類。5名以上は1名あたり3,800円追加。",
+    "images": [],
+    "lat": 36.7534,
+    "lng": 137.0236,
+    "description": "高岡市の複合施設OTAYA TOMOS屋上に位置する貸切サウナ＆BBQ施設。3時間の貸切制で、セルフロウリュ対応のサウナに加え、冷水（14〜19度）と温水（25〜35度）の2種類の水風呂を完備。テラスでは外気浴のほかBBQも楽しめる。完全予約制で最大5名以上も対応。",
+    "saunakoCommentShort": "屋上で貸切サウナ×BBQ！高岡の人気スポット",
+    "saunakoCommentLong": "高岡の複合施設の屋上にある貸切サウナで、BBQもセットで楽しめちゃうよ！水風呂が冷水と温水の2種類あるのが珍しくて、好みで選べるのがいいかも。テラスで外気浴しながらBBQっていう贅沢な過ごし方もできるの。3時間たっぷりだから、みんなでワイワイ楽しめるね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "2名 180分",
+        "price": 10000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "3名 180分",
+        "price": 13000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "4名 180分",
+        "price": 16000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 275,
+    "slug": "namerikawa-granvilla-grappa",
+    "name": "Namerikawa Granvilla Grappa",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "滑川市",
+    "area": "その他",
+    "address": "富山県滑川市大林81-1",
+    "nearestStation": "滑川駅",
+    "walkMinutes": null,
+    "priceMin": 13800,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜14:00（日帰り）",
+    "holidays": "不定休",
+    "website": "https://en.toyama-glamping.com/",
+    "phone": "076-474-0081",
+    "bookingUrl": "https://onedive.jp/sauna/",
+    "amenities": [],
+    "note": "グランピング施設併設のプライベートサウナ。フィンランドHARVIA薪ストーブのバレルサウナ。富山湾を望む絶景デッキで外気浴。宿泊プランもあり(24,800円〜/名)。日帰りは11:00-14:00の1枠。",
+    "images": [],
+    "lat": 36.7498,
+    "lng": 137.3462,
+    "description": "滑川市の里山に位置するグランピング施設併設のプライベートサウナ。フィンランドHARVIA薪ストーブを搭載したバレルサウナでセルフロウリュが楽しめる。各ヴィラにサウナ・水風呂・インフィニティチェアを完備し、富山湾と田園風景を望むデッキで至極の外気浴体験ができる。",
+    "saunakoCommentShort": "富山湾ビュー！グランピング×バレルサウナの贅沢体験",
+    "saunakoCommentLong": "滑川の里山にあるグランピング施設で、ヴィラごとにバレルサウナが付いてるの！フィンランドHARVIAの薪ストーブでセルフロウリュを楽しんだあと、デッキから富山湾と田んぼの絶景を眺めながら外気浴…最高すぎるかも。日帰りプランもあるけど、泊まりでゆっくりするのがおすすめだよ！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "日帰りサウナ 180分",
+        "price": 13800,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 276,
+    "slug": "effect-kanazawa",
+    "name": "effect ～趣～",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "金沢市",
+    "area": "金沢",
+    "address": "石川県金沢市北安江2丁目11-26 2F",
+    "nearestStation": "金沢駅",
+    "walkMinutes": 15,
+    "priceMin": 13200,
+    "duration": 120,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:15〜21:45（120分完全入替制）",
+    "holidays": "月曜定休",
+    "website": "https://effect.ssscorporation.jp/",
+    "phone": null,
+    "bookingUrl": "https://effect.hacomono.jp",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "洗顔料",
+      "クレンジング",
+      "化粧水",
+      "ボディクリーム",
+      "ヘアオイル",
+      "ヘアドライヤー"
+    ],
+    "note": "完全無人受付（QRコード入室）。4Kプロジェクター完備でNetflix等視聴可。酸素カプセル付き。カード決済のみ",
+    "images": [],
+    "lat": 36.586837,
+    "lng": 136.65042,
+    "description": "金沢駅から徒歩15分、完全無人受付のプライベートサウナ。エストニア産最高級Aグレードのサウナウッドを使用し、最大110度まで調整可能。鋳物ホーロー浴槽の水風呂や酸素カプセル、4Kプロジェクターを完備した贅沢な個室空間。",
+    "saunakoCommentShort": "無人受付でプライベート感MAXなサウナ！",
+    "saunakoCommentLong": "金沢駅から歩ける距離にある完全無人のプライベートサウナだよ！サウナはエストニア産の最高級木材で110度まで上げられるし、水風呂は高級ホテルにも採用されてる鋳物ホーロー浴槽なの。プロジェクターでNetflixも観れちゃうから、カップルで来ても最高に楽しめるかも！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "スタンダード 120分 2名",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 277,
+    "slug": "totonou-kanazawa",
+    "name": "プライベートサウナ部 ととのう",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "金沢市",
+    "area": "金沢",
+    "address": "石川県金沢市城南2丁目42-8 坂ビル2F",
+    "nearestStation": "金沢駅",
+    "walkMinutes": null,
+    "priceMin": 2780,
+    "duration": 100,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18-25",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "平日 18:30〜24:00 / 土日祝 9:00〜25:00",
+    "holidays": "月曜定休（祝日・大型連休は営業）",
+    "website": "https://private-saunabu-totonou.jp/",
+    "phone": "076-200-8709",
+    "bookingUrl": "https://select-type.com/rsv/?id=jWHrB2o9-KA&c_id=314436",
+    "amenities": [
+      "タオル",
+      "ドライヤー",
+      "ヘアアイロン",
+      "カミソリ",
+      "くし",
+      "ティッシュ",
+      "綿棒",
+      "水素水"
+    ],
+    "note": "北陸初のプロジェクションマッピング付き個室サウナ。6〜9月限定で15-18度の氷風呂あり。加賀棒茶・ヒノキアロマのセルフロウリュ",
+    "images": [],
+    "lat": 36.551072,
+    "lng": 136.666646,
+    "description": "金沢市城南にある完全個室のプライベートサウナ。北陸初のプロジェクションマッピングを導入し、トントゥの世界観を床一面に投影する独特な体験が楽しめる。加賀棒茶やヒノキのアロマでセルフロウリュが可能で、男女混浴にも対応。",
+    "saunakoCommentShort": "北陸初のプロジェクションマッピングサウナ！",
+    "saunakoCommentLong": "金沢で個室サウナならここ！床一面にプロジェクションマッピングが投影されるの、すごく幻想的だよ。加賀棒茶のアロマでロウリュできるのが金沢らしくて素敵。水風呂は18-25度で、夏は氷風呂で15度まで下がるんだって。男女一緒に入れるからカップルにもおすすめかも！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "新規会員 100分 1名",
+        "price": 2780,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "一般 100分 1名",
+        "price": 3480,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "一般 100分 2名",
+        "price": 5960,
+        "duration": 100,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 278,
+    "slug": "sauna-lohas",
+    "name": "sauna LOHAS",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "野々市市",
+    "area": "金沢",
+    "address": "石川県野々市市本町6丁目22-1 2F",
+    "nearestStation": "野々市駅",
+    "walkMinutes": null,
+    "priceMin": 6000,
+    "duration": 80,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "9-20",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:40",
+    "holidays": "不定休",
+    "website": "https://sauna-lohas.com/",
+    "phone": "080-4572-0389",
+    "bookingUrl": "https://sauna-lohas.com/user/login",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "クレンジング",
+      "洗顔料",
+      "スキンケア",
+      "ヘアゴム",
+      "綿棒",
+      "ヘアワックス",
+      "ウォーターサーバー",
+      "Refaドライヤー",
+      "充電器"
+    ],
+    "note": "全室水風呂付き個室サウナ。サウナ温度80-110度、水風呂9-20度を予約時に選択可。6種類のアロマ貸出あり。女性限定パウダールーム完備",
+    "images": [],
+    "lat": 36.533406,
+    "lng": 136.607588,
+    "description": "野々市市にある全室水風呂付きの完全個室サウナ。サウナ温度は80〜110度、水風呂は9〜20度まで予約時に自由に選択できる。6種類のサウナ専用アロマの貸し出しやRefaドライヤーなど充実のアメニティで、手ぶらで立ち寄れる。",
+    "saunakoCommentShort": "温度も水風呂もカスタム自在な個室サウナ！",
+    "saunakoCommentLong": "サウナ80-110度、水風呂9-20度まで予約時に選べるのがすごいよね！全室に水風呂付きだから、シャワーだけってことがないの。6種類のアロマも選べてセルフロウリュもできるし、Refaのドライヤーまであるから仕事帰りでも安心。パウダールームも充実してて女性にやさしいサウナだよ！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "80分コース 2名",
+        "price": 6000,
+        "duration": 80,
+        "capacity": 2
+      },
+      {
+        "name": "120分コース 2名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "180分コース 2名",
+        "price": 12000,
+        "duration": 180,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 279,
+    "slug": "roku-private-sauna-kanazawa",
+    "name": "ROKU 金沢駅 private sauna",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "金沢市",
+    "area": "金沢",
+    "address": "石川県金沢市六枚町2-2 スクエアコート2階",
+    "nearestStation": "金沢駅",
+    "walkMinutes": 8,
+    "priceMin": 8800,
+    "duration": 130,
+    "capacity": 3,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "10:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://coubic.com/roku_sauna",
+    "phone": "076-221-0069",
+    "bookingUrl": "https://coubic.com/roku_sauna",
+    "amenities": [
+      "タオル",
+      "アメニティ",
+      "ヨガマット"
+    ],
+    "note": "ヒノキの円形サウナが特徴。水風呂なし（シャワーのみ）。同性利用のみ（男女混合不可）。Bluetooth・WiFi・TV完備でワークスペースとしても利用可",
+    "images": [],
+    "lat": 36.573555,
+    "lng": 136.647447,
+    "description": "金沢駅から徒歩8分のプライベートサウナ。ヒノキを使用した円形サウナが特徴で、温度は100度まで調整可能。セルフロウリュに対応し、Bluetooth・WiFi・TVを完備。同性のみの利用で最大3名まで。",
+    "saunakoCommentShort": "金沢駅近のヒノキ円形プライベートサウナ！",
+    "saunakoCommentLong": "金沢駅から歩いて8分で着くプライベートサウナだよ！ヒノキの円形サウナがとっても気持ちいいの。100度まで上げられてロウリュもできるから本格的。水風呂はなくてシャワーだけなのが惜しいけど、WiFiもあってテレビも見れるからゆったり過ごせるよ！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "130分コース 1-3名",
+        "price": 8800,
+        "duration": 130,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 280,
+    "slug": "korinkyo-sauna",
+    "name": "香林居",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "金沢市",
+    "area": "金沢",
+    "address": "石川県金沢市片町1-1-31",
+    "nearestStation": "金沢駅",
+    "walkMinutes": null,
+    "priceMin": 9600,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜22:30（最終受付21:00）",
+    "holidays": "不定休",
+    "website": "https://www.korinkyo.com/sauna-bath-jp",
+    "phone": null,
+    "bookingUrl": "https://www.chillnn.com/17a33622a636d/plan/180f4f0f45b107",
+    "amenities": [
+      "バスタオル",
+      "サウナタオル",
+      "サウナマット",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "飲料水",
+      "ウォータースーツ（無料レンタル）"
+    ],
+    "note": "ブティックホテル併設のルーフトップサウナ。自家蒸留アロマ水でロウリュ可能。露天風呂・水風呂付きのプライベートテラス。日帰り利用可",
+    "images": [],
+    "lat": 36.56189,
+    "lng": 136.654474,
+    "description": "金沢・香林坊にあるブティックホテル併設のルーフトップサウナ。白山の森林素材から自家蒸留したアロマ水でロウリュが楽しめる。フィンランド式サウナに加え、プライベートテラスには露天風呂と水風呂を備え、日帰り90分から利用可能。",
+    "saunakoCommentShort": "自家蒸留アロマのルーフトップサウナ！",
+    "saunakoCommentLong": "金沢の香林坊にあるおしゃれなホテルのルーフトップサウナだよ！白山の森から蒸留したアロマ水でロウリュできるのが特別感あるよね。テラスに露天風呂と水風呂があって外気浴も最高。ウォータースーツの無料レンタルがあるからカップルでも気軽に楽しめるかも！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "日帰りルーフトップサウナ 90分 4名",
+        "price": 9600,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 281,
+    "slug": "kuro-sauna",
+    "name": "あたらしや くろサウナ",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "金沢市",
+    "area": "金沢",
+    "address": "石川県金沢市湯涌荒屋町89-2",
+    "nearestStation": "湯涌温泉バス停",
+    "walkMinutes": 4,
+    "priceMin": 2500,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜16:00",
+    "holidays": "不定休",
+    "website": "https://www.kurosauna.com/",
+    "phone": "076-235-1011",
+    "bookingUrl": "https://reserva.be/atarashiya/about",
+    "amenities": [
+      "バスタオル（無料）",
+      "フェイスタオル（プレゼント）",
+      "シャンプー",
+      "リンス"
+    ],
+    "note": "創業250年の老舗旅館に併設。HARVIA製タワー型ストーブ、3段サウナ室。15度と28度の2種類の水風呂あり。天然温泉露天風呂付き。月曜はレディースデー（通常は男性のみ）。貸切は6名分15,000円",
+    "images": [],
+    "lat": 36.48972,
+    "lng": 136.7565,
+    "description": "金沢市湯涌温泉にある創業250年の老舗旅館「あたらしや」に併設されたサウナ施設。HARVIA製タワー型ストーブの3段サウナ室で80〜100度を体感でき、15度と28度の2種類の温泉水風呂と天然温泉露天風呂を備える。",
+    "saunakoCommentShort": "温泉地の本格サウナ、水風呂2種が贅沢！",
+    "saunakoCommentLong": "金沢の奥座敷・湯涌温泉にある250年続く旅館のサウナだよ！HARVIA製ストーブでロウリュもバッチリ。水風呂が15度のキンキンと28度のぬるめの2種類あるのが嬉しいよね。天然温泉の露天風呂で外気浴もできるから、ととのい度がすごいの！貸切もできるよ！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "通常利用 120分 1名",
+        "price": 2500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切利用 120分 6名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 282,
+    "slug": "takigahara-sauna",
+    "name": "TAKIGAHARA SAUNA",
+    "prefecture": "ishikawa",
+    "prefectureLabel": "石川県",
+    "city": "小松市",
+    "area": "小松",
+    "address": "石川県小松市滝ヶ原町タ1",
+    "nearestStation": "加賀温泉駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "午前の部 9:00〜11:30 / 午後の部 14:00〜16:30",
+    "holidays": "火曜定休",
+    "website": "https://takigahara.com/sauna/",
+    "phone": "0761-46-5621",
+    "bookingUrl": "https://takigahara.com/sauna/",
+    "amenities": [
+      "タオル"
+    ],
+    "note": "隈研吾建築都市設計事務所×サウナイデアによる設計。能登ヒバと地元石を使った地産地消のフィンランド式サウナ。土管水風呂、温石風呂、テラスでの外気浴あり。TAKIGAHARA CAFEも併設",
+    "images": [],
+    "lat": 36.27753,
+    "lng": 136.431818,
+    "description": "小松市滝ヶ原にある隈研吾建築都市設計事務所とサウナイデアが手がけた完全貸切制フィンランド式サウナ。能登ヒバや地元の石をふんだんに使い、地産地消を体現。土管水風呂や温石風呂、鞍掛山を望むテラスでの外気浴が楽しめる。",
+    "saunakoCommentShort": "隈研吾デザインの里山サウナが最高！",
+    "saunakoCommentLong": "小松の里山にある、あの隈研吾さんがデザインしたサウナだよ！能登ヒバの香りに包まれながらロウリュできて、めちゃくちゃ贅沢。水風呂は「土管風呂」っていうユニークなスタイルで、テラスからは鞍掛山が見えるの。150分の貸切で最大6人だから、仲間と来ても楽しいかも！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切サウナ 150分 1名",
+        "price": 5500,
+        "duration": 150,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 283,
+    "slug": "totonoi-fukui",
+    "name": "古民家サウナ ととの居",
+    "prefecture": "fukui",
+    "prefectureLabel": "福井県",
+    "city": "福井市",
+    "area": "福井市",
+    "address": "福井県福井市清水畑町34-6",
+    "nearestStation": "福井駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 150,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:30〜22:00",
+    "holidays": "不定休",
+    "website": "https://totonoi-fukui.com/",
+    "phone": "090-8703-4430",
+    "bookingUrl": "https://select-type.com/rsv/?id=TzozE9jTDK0&c_id=322835",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "ウォーターサーバー"
+    ],
+    "note": "15年間空き家だった古民家をリノベーション。バレルサウナ＋蔵を改装したチルアウト空間。地下水かけ流し水風呂。BBQスペースあり（別料金）。駐車場7台。福井駅から車約20分",
+    "images": [],
+    "lat": 36.032536,
+    "lng": 136.105463,
+    "description": "福井市郊外にある古民家をリノベーションした貸切制サウナ。15年間空き家だった民家に設置されたバレルサウナと、蔵を改装した静寂のチルアウト空間が特徴。地下水かけ流しの水風呂と星空を望む外気浴が楽しめる。",
+    "saunakoCommentShort": "古民家×バレルサウナの非日常空間！",
+    "saunakoCommentLong": "福井の古民家をまるごとリノベしたサウナだよ！バレルサウナで蒸されたあと、蔵を改装したチルアウト空間で休むのが最高にエモい。水風呂は地下水かけ流しで年間通して冷たいし、外気浴で星空が見えるの。最大8人までOKだからグループで来ても楽しめるかも！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日 150分 1-2名",
+        "price": 6000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "休日 150分 1-2名",
+        "price": 7000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "平日 150分 3名以上（1人あたり）",
+        "price": 2500,
+        "duration": 150,
+        "capacity": 8
+      },
+      {
+        "name": "休日 150分 3名以上（1人あたり）",
+        "price": 3000,
+        "duration": 150,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 284,
+    "slug": "sauna-kotona",
+    "name": "sauna kotona",
+    "prefecture": "fukui",
+    "prefectureLabel": "福井県",
+    "city": "福井市",
+    "area": "福井市",
+    "address": "福井県福井市高木中央1丁目406",
+    "nearestStation": "福井駅",
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 110,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "10",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "要問合せ",
+    "holidays": "要問合せ",
+    "website": "https://sauna-mizumoto-koumuten.jp/",
+    "phone": "0120-502-711",
+    "bookingUrl": "https://select-type.com/rsv/?id=XNTpTDJSlPo&c_id=375485",
+    "amenities": [
+      "タオル"
+    ],
+    "note": "一級建築士事務所・水元工務店が手がけたプライベートサウナ。バレルサウナ（屋外）と室内サウナ（60-110度調整可）を同時に楽しめる。フィンランド産アロマオイルでセルフロウリュ",
+    "images": [],
+    "lat": 36.092185,
+    "lng": 136.230852,
+    "description": "福井市にある一級建築士事務所が手がけたプライベートサウナ。屋外のバレルサウナと60〜110度に調整可能な室内サウナを同時に楽しめる。10度の水風呂とフィンランド産アロマオイルのセルフロウリュ、外気浴も完備した本格的な施設。",
+    "saunakoCommentShort": "バレルと室内サウナのダブル体験！",
+    "saunakoCommentLong": "建築士さんがこだわって作ったプライベートサウナだよ！屋外のバレルサウナと室内サウナの2種類を同時に楽しめるのがすごい。室内は60-110度まで自由に調整できるし、水風呂は10度でキンキン！フィンランド産のアロマでロウリュもできて、外気浴スペースもあるからしっかりととのえるよ！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "110分 4名以下",
+        "price": 5500,
+        "duration": 110,
+        "capacity": 4
+      },
+      {
+        "name": "110分 5名",
+        "price": 6850,
+        "duration": 110,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 285,
+    "slug": "sanku-sauna",
+    "name": "さんくさうな",
+    "prefecture": "fukui",
+    "prefectureLabel": "福井県",
+    "city": "越前市",
+    "area": "越前",
+    "address": "福井県越前市国府1丁目124-3",
+    "nearestStation": "武生駅",
+    "walkMinutes": null,
+    "priceMin": 1500,
+    "duration": 90,
+    "capacity": 10,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "土日 10:00〜23:00（最終受付22:00）",
+    "holidays": "平日休み（土日のみ営業）",
+    "website": "https://sankusauna.com/",
+    "phone": "0778-67-7371",
+    "bookingUrl": "https://coubic.com/sankusauna/booking_pages#pageContent",
+    "amenities": [
+      "タオル（無料レンタル）",
+      "ポンチョ（無料レンタル）",
+      "ドリンクバー（無料）"
+    ],
+    "note": "福井県初のサウナ専門店。フィンランド式バレルサウナ（室内設置）。着衣のまま利用可。女性は前日までに要予約。月額5,000円のサブスクプランあり",
+    "images": [],
+    "lat": 35.905254,
+    "lng": 136.16705,
+    "description": "越前市にある福井県初のサウナ専門店。室内に設置されたフィンランド式バレルサウナは最大10名収容で、着衣のまま利用できる。ドリンクバー無料、タオル・ポンチョの無料レンタルも充実しており、手ぶらで気軽に楽しめる。",
+    "saunakoCommentShort": "福井初のサウナ専門店、手ぶらでOK！",
+    "saunakoCommentLong": "越前市にある福井県初のサウナ専門店だよ！室内にバレルサウナがあって、着たまま入れるのが気楽でいいよね。タオルもポンチョも無料レンタルで、ドリンクバーまで無料なの。90分1,500円からっていうコスパの良さもすごい！土日のみ営業だから注意してね！",
+    "updatedAt": "2026-02-28",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "90分コース",
+        "price": 1500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分コース",
+        "price": 2000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "180分コース",
+        "price": 3000,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 180分 2名以上（1人あたり）",
+        "price": 3500,
+        "duration": 180,
+        "capacity": 10
+      }
+    ],
+    "timeSlots": null
   }
 ]
