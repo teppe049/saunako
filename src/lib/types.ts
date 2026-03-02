@@ -104,6 +104,9 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'toyama', label: '富山県' },
   { code: 'ishikawa', label: '石川県' },
   { code: 'fukui', label: '福井県' },
+  { code: 'shizuoka', label: '静岡県' },
+  { code: 'gifu', label: '岐阜県' },
+  { code: 'mie', label: '三重県' },
   { code: 'aichi', label: '愛知県' },
   { code: 'kyoto', label: '京都府' },
   { code: 'osaka', label: '大阪府' },
@@ -159,6 +162,9 @@ export const REGION_GROUPS: RegionGroup[] = [
   {
     label: '東海',
     prefectures: [
+      { code: 'shizuoka', label: '静岡県' },
+      { code: 'gifu', label: '岐阜県' },
+      { code: 'mie', label: '三重県' },
       { code: 'aichi', label: '愛知県' },
     ],
   },
@@ -310,6 +316,20 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   fukui: [
     { slug: 'fukui-city', label: '福井市', cities: ['福井市'] },
     { slug: 'echizen', label: '越前', cities: ['越前市'] },
+  ],
+  shizuoka: [
+    { slug: 'shizuoka-city', label: '静岡市', cities: ['静岡市駿河区', '静岡市葵区', '静岡市清水区'] },
+    { slug: 'fuji', label: '富士', cities: ['富士市'] },
+    { slug: 'hamamatsu', label: '浜松', cities: ['浜松市中央区'] },
+    { slug: 'numazu', label: '沼津', cities: ['沼津市'] },
+  ],
+  gifu: [
+    { slug: 'gifu-city', label: '岐阜市', cities: ['岐阜市'] },
+    { slug: 'yoro', label: '養老', cities: ['養老郡養老町'] },
+    { slug: 'other', label: 'その他', cities: ['山県市'] },
+  ],
+  mie: [
+    { slug: 'komono', label: '菰野', cities: ['三重郡菰野町'] },
   ],
   aichi: [
     { slug: 'nagoya', label: '名古屋', cities: ['名古屋市'] },
