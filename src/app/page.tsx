@@ -32,7 +32,7 @@ export default function Home() {
               あなたの「整い」を、私が見つける
             </h1>
             <p className="text-text-tertiary md:text-text-secondary text-sm md:text-base">
-              プライベートサウナ専門の比較・検索サービス
+              全国47都道府県・{allFacilities.length}施設以上を掲載中
             </p>
           </div>
 
