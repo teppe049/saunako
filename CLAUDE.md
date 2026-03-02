@@ -8,7 +8,7 @@
 - **言語**: TypeScript (strict)
 - **スタイル**: Tailwind CSS v4 + CSS Variables (`globals.css`)
 - **地図**: Google Maps API (`@react-google-maps/api`)
-- **データ**: 静的JSON (`data/facilities.json`, 38施設)
+- **データ**: 静的JSON (`data/facilities.json`, 393施設・47都道府県)
 - **デザイン**: Pencil MCP (`.pen`ファイル)
 - **デプロイ**: Vercel
 
