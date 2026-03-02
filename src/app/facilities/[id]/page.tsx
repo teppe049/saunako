@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps) {
   const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。';
 
   return {
-    title: `${facility.name}の料金・プラン・口コミ｜${facility.prefectureLabel}の個室サウナ | サウナ子`,
+    title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室サウナ | サウナ子`,
     description,
     alternates: {
       canonical: `https://www.saunako.jp/facilities/${facility.id}`,
