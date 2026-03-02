@@ -114,6 +114,11 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'hyogo', label: '兵庫県' },
   { code: 'nara', label: '奈良県' },
   { code: 'wakayama', label: '和歌山県' },
+  { code: 'tottori', label: '鳥取県' },
+  { code: 'shimane', label: '島根県' },
+  { code: 'okayama', label: '岡山県' },
+  { code: 'hiroshima', label: '広島県' },
+  { code: 'yamaguchi', label: '山口県' },
   { code: 'fukuoka', label: '福岡県' },
 ];
 
@@ -181,6 +186,16 @@ export const REGION_GROUPS: RegionGroup[] = [
       { code: 'hyogo', label: '兵庫県' },
       { code: 'nara', label: '奈良県' },
       { code: 'wakayama', label: '和歌山県' },
+    ],
+  },
+  {
+    label: '中国',
+    prefectures: [
+      { code: 'tottori', label: '鳥取県' },
+      { code: 'shimane', label: '島根県' },
+      { code: 'okayama', label: '岡山県' },
+      { code: 'hiroshima', label: '広島県' },
+      { code: 'yamaguchi', label: '山口県' },
     ],
   },
   {
@@ -364,6 +379,29 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'wakayama-city', label: '和歌山市', cities: ['和歌山市'] },
     { slug: 'arida', label: '有田', cities: ['有田郡湯浅町'] },
     { slug: 'nanki', label: '南紀', cities: ['田辺市'] },
+  ],
+  tottori: [
+    { slug: 'tottori-city', label: '鳥取市', cities: ['鳥取市'] },
+    { slug: 'daisen', label: '大山', cities: ['西伯郡大山町'] },
+    { slug: 'iwami', label: '岩美', cities: ['岩美郡岩美町'] },
+  ],
+  shimane: [
+    { slug: 'matsue', label: '松江', cities: ['松江市'] },
+    { slug: 'izumo', label: '出雲', cities: ['出雲市'] },
+    { slug: 'iwami', label: '石見', cities: ['益田市', '浜田市'] },
+  ],
+  okayama: [
+    { slug: 'okayama-city', label: '岡山市', cities: ['岡山市'] },
+    { slug: 'kurashiki', label: '倉敷', cities: ['倉敷市'] },
+    { slug: 'other', label: 'その他', cities: ['久米郡久米南町'] },
+  ],
+  hiroshima: [
+    { slug: 'hiroshima-city', label: '広島市', cities: ['広島市'] },
+    { slug: 'kure', label: '呉', cities: ['呉市'] },
+  ],
+  yamaguchi: [
+    { slug: 'yamaguchi-city', label: '山口市', cities: ['山口市'] },
+    { slug: 'other', label: 'その他', cities: ['熊毛郡平生町', '山陽小野田市', '周南市'] },
   ],
   fukuoka: [
     { slug: 'fukuoka-city', label: '福岡市', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
