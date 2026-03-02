@@ -119,7 +119,18 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'okayama', label: '岡山県' },
   { code: 'hiroshima', label: '広島県' },
   { code: 'yamaguchi', label: '山口県' },
+  { code: 'tokushima', label: '徳島県' },
+  { code: 'kagawa', label: '香川県' },
+  { code: 'ehime', label: '愛媛県' },
+  { code: 'kochi', label: '高知県' },
   { code: 'fukuoka', label: '福岡県' },
+  { code: 'saga', label: '佐賀県' },
+  { code: 'nagasaki', label: '長崎県' },
+  { code: 'kumamoto', label: '熊本県' },
+  { code: 'oita', label: '大分県' },
+  { code: 'miyazaki', label: '宮崎県' },
+  { code: 'kagoshima', label: '鹿児島県' },
+  { code: 'okinawa', label: '沖縄県' },
 ];
 
 export interface RegionGroup {
@@ -199,9 +210,25 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
-    label: '九州',
+    label: '四国',
+    prefectures: [
+      { code: 'tokushima', label: '徳島県' },
+      { code: 'kagawa', label: '香川県' },
+      { code: 'ehime', label: '愛媛県' },
+      { code: 'kochi', label: '高知県' },
+    ],
+  },
+  {
+    label: '九州・沖縄',
     prefectures: [
       { code: 'fukuoka', label: '福岡県' },
+      { code: 'saga', label: '佐賀県' },
+      { code: 'nagasaki', label: '長崎県' },
+      { code: 'kumamoto', label: '熊本県' },
+      { code: 'oita', label: '大分県' },
+      { code: 'miyazaki', label: '宮崎県' },
+      { code: 'kagoshima', label: '鹿児島県' },
+      { code: 'okinawa', label: '沖縄県' },
     ],
   },
 ];
@@ -403,9 +430,52 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'yamaguchi-city', label: '山口市', cities: ['山口市'] },
     { slug: 'other', label: 'その他', cities: ['熊毛郡平生町', '山陽小野田市', '周南市'] },
   ],
+  tokushima: [
+    { slug: 'other', label: 'その他', cities: ['名西郡神山町', '三好市'] },
+  ],
+  kagawa: [
+    { slug: 'seisan', label: '西讃', cities: ['観音寺市', '三豊市'] },
+    { slug: 'shodoshima', label: '小豆島', cities: ['小豆郡土庄町'] },
+  ],
+  ehime: [
+    { slug: 'matsuyama', label: '松山', cities: ['松山市', '東温市'] },
+  ],
+  kochi: [
+    { slug: 'kochi-city', label: '高知市', cities: ['高知市'] },
+    { slug: 'niyodogawa', label: '仁淀川', cities: ['吾川郡仁淀川町', '吾川郡いの町'] },
+  ],
   fukuoka: [
     { slug: 'fukuoka-city', label: '福岡市', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
     { slug: 'kitakyushu', label: '北九州', cities: ['北九州市小倉北区'] },
     { slug: 'other', label: 'その他', cities: ['久留米市', '福津市', '筑紫野市'] },
+  ],
+  saga: [
+    { slug: 'saga-city', label: '佐賀市', cities: ['佐賀市'] },
+  ],
+  nagasaki: [
+    { slug: 'nagasaki-city', label: '長崎市', cities: ['長崎市'] },
+    { slug: 'shimabara', label: '島原', cities: ['南島原市'] },
+    { slug: 'sasebo', label: '佐世保', cities: ['佐世保市'] },
+  ],
+  kumamoto: [
+    { slug: 'kumamoto-city', label: '熊本市', cities: ['熊本市'] },
+    { slug: 'other', label: 'その他', cities: ['上益城郡益城町'] },
+  ],
+  oita: [
+    { slug: 'oita-city', label: '大分市', cities: ['大分市'] },
+    { slug: 'yufuin', label: '湯布院', cities: ['由布市'] },
+  ],
+  miyazaki: [
+    { slug: 'miyazaki-city', label: '宮崎市', cities: ['宮崎市'] },
+  ],
+  kagoshima: [
+    { slug: 'kagoshima-city', label: '鹿児島市', cities: ['鹿児島市'] },
+    { slug: 'osumi', label: '大隅', cities: ['鹿屋市'] },
+    { slug: 'kirishima', label: '霧島', cities: ['霧島市'] },
+    { slug: 'other', label: 'その他', cities: ['薩摩川内市'] },
+  ],
+  okinawa: [
+    { slug: 'naha', label: '那覇', cities: ['那覇市'] },
+    { slug: 'yanbaru', label: 'やんばる', cities: ['国頭郡大宜味村'] },
   ],
 };
