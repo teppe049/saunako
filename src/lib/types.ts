@@ -108,8 +108,12 @@ export const PREFECTURES: Prefecture[] = [
   { code: 'gifu', label: '岐阜県' },
   { code: 'mie', label: '三重県' },
   { code: 'aichi', label: '愛知県' },
+  { code: 'shiga', label: '滋賀県' },
   { code: 'kyoto', label: '京都府' },
   { code: 'osaka', label: '大阪府' },
+  { code: 'hyogo', label: '兵庫県' },
+  { code: 'nara', label: '奈良県' },
+  { code: 'wakayama', label: '和歌山県' },
   { code: 'fukuoka', label: '福岡県' },
 ];
 
@@ -171,8 +175,12 @@ export const REGION_GROUPS: RegionGroup[] = [
   {
     label: '関西',
     prefectures: [
+      { code: 'shiga', label: '滋賀県' },
       { code: 'kyoto', label: '京都府' },
       { code: 'osaka', label: '大阪府' },
+      { code: 'hyogo', label: '兵庫県' },
+      { code: 'nara', label: '奈良県' },
+      { code: 'wakayama', label: '和歌山県' },
     ],
   },
   {
@@ -334,6 +342,28 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   aichi: [
     { slug: 'nagoya', label: '名古屋', cities: ['名古屋市'] },
     { slug: 'other', label: 'その他', cities: ['刈谷市', '岡崎市', '岩倉市', '常滑市'] },
+  ],
+  shiga: [
+    { slug: 'otsu', label: '大津', cities: ['大津市'] },
+    { slug: 'nagahama', label: '長浜', cities: ['長浜市'] },
+    { slug: 'other', label: 'その他', cities: ['蒲生郡日野町', '犬上郡多賀町', '甲賀市'] },
+  ],
+  hyogo: [
+    { slug: 'kobe', label: '神戸', cities: ['神戸市中央区', '神戸市東灘区', '神戸市西区'] },
+    { slug: 'hanshin', label: '阪神', cities: ['西宮市', '宝塚市'] },
+    { slug: 'sanda', label: '三田', cities: ['三田市'] },
+    { slug: 'kakogawa', label: '加古川', cities: ['加古川市'] },
+    { slug: 'himeji', label: '姫路', cities: ['姫路市'] },
+    { slug: 'tajima-tanba', label: '但馬・丹波', cities: ['養父市', '丹波篠山市'] },
+  ],
+  nara: [
+    { slug: 'nara-city', label: '奈良市', cities: ['奈良市'] },
+    { slug: 'other', label: 'その他', cities: ['山辺郡山添村'] },
+  ],
+  wakayama: [
+    { slug: 'wakayama-city', label: '和歌山市', cities: ['和歌山市'] },
+    { slug: 'arida', label: '有田', cities: ['有田郡湯浅町'] },
+    { slug: 'nanki', label: '南紀', cities: ['田辺市'] },
   ],
   fukuoka: [
     { slug: 'fukuoka-city', label: '福岡市', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },

@@ -21524,5 +21524,2004 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 302,
+    "slug": "minimal-sauna",
+    "name": "minimal SAUNA",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市中央区",
+    "area": "神戸",
+    "address": "兵庫県神戸市中央区山本通1丁目3-1 ペアレンガーデン2F",
+    "nearestStation": "三宮駅",
+    "walkMinutes": 10,
+    "priceMin": 4400,
+    "duration": 60,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://minimal-sauna.com/",
+    "phone": "078-862-3540",
+    "bookingUrl": "https://order.minimal-sauna.com/sauna/booking",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "スキンケア"
+    ],
+    "note": "完全個室2室（檜/ヴィヒタ）。瞑想空間あり。毎利用後に水入替え。9KWストーブ搭載。",
+    "images": [],
+    "lat": 34.6969,
+    "lng": 135.1878,
+    "description": "三宮駅から徒歩10分、北野坂エリアにある完全個室プライベートサウナ。檜の部屋とヴィヒタの部屋の2室を備え、9KWストーブによるセルフロウリュが楽しめる。木の香り・蒸気の音・柔らかな灯りで心身をリセットできる瞑想空間が特徴。",
+    "saunakoCommentShort": "神戸北野の隠れ家で心も体もリセットできるよ！",
+    "saunakoCommentLong": "三宮から歩いて10分、北野エリアにひっそりある個室サウナだよ。檜とヴィヒタの2部屋があって、どっちも9KWのパワフルストーブでセルフロウリュできるの。水風呂は毎回入替えだから清潔感もバッチリ。瞑想空間で静かにととのいたい人にぴったりかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "60分コース",
+        "price": 4400,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "虚空 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "神楽 120分",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 303,
+    "slug": "kobe-sauna-spa-plus",
+    "name": "神戸サウナ&スパ プラス",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市中央区",
+    "area": "神戸",
+    "address": "兵庫県神戸市中央区下山手通2丁目2-10",
+    "nearestStation": "三宮駅",
+    "walkMinutes": 5,
+    "priceMin": 7900,
+    "duration": 90,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "要問合せ",
+    "holidays": "要問合せ",
+    "website": "https://www.kobe-sauna.co.jp/private/",
+    "phone": "078-322-1126",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "ReFaドライヤー",
+      "ヘアアイロン",
+      "Bluetoothスピーカー"
+    ],
+    "note": "電話予約制。男女利用時は水着着用必須。入館料込み。軽食・アイスクリーム別売あり。",
+    "images": [],
+    "lat": 34.6946,
+    "lng": 135.1905,
+    "description": "老舗「神戸サウナ&スパ」が手がけるプライベートサウナ。北欧の「Hygge」をコンセプトに、リビングルーム付きの贅沢空間でセルフロウリュや氷で水温調整可能な水風呂を楽しめる。最大8名利用可のRoomB+は大人数にも対応。",
+    "saunakoCommentShort": "北欧リビング風の空間がおしゃれすぎる！",
+    "saunakoCommentLong": "神戸サウナ&スパのプライベート版だよ！北欧のHyggeがコンセプトで、リビングルームみたいな空間でくつろげるの。水風呂は氷で温度調整できるし、Bluetooth・Wi-Fi完備でBGMも自由。ReFaのドライヤーやヘアアイロンもあるから女子にもうれしいかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "RoomA+ 平日 90分",
+        "price": 7900,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "RoomA+ 土日祝 90分",
+        "price": 9900,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "RoomB+ 平日 90分",
+        "price": 10900,
+        "duration": 90,
+        "capacity": 8
+      },
+      {
+        "name": "RoomB+ 土日祝 90分",
+        "price": 12900,
+        "duration": 90,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 304,
+    "slug": "xg-sauna-kobe",
+    "name": "XG SAUNA by re:sauna",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市中央区",
+    "area": "神戸",
+    "address": "兵庫県神戸市中央区加納町4丁目8-9",
+    "nearestStation": "三宮駅",
+    "walkMinutes": 7,
+    "priceMin": 15000,
+    "duration": 180,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "15:00〜翌5:00",
+    "holidays": "基本無休",
+    "website": "https://resauna.jp/kobe/",
+    "phone": "080-3368-1836",
+    "bookingUrl": "https://select-type.com/rsv/?id=Y6k9gjlBpaA",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "スキンケア",
+      "ポンチョ"
+    ],
+    "note": "深夜利用可。3F屋上で外気浴・シーシャ可（着衣）。タトゥーOK。宿泊プランあり。水着レンタル500円。",
+    "images": [],
+    "lat": 34.6962,
+    "lng": 135.1943,
+    "description": "三宮駅徒歩7分、北野坂エリアの完全貸切プライベートサウナ。チラー付き水風呂やセルフロウリュに加え、3F屋上での外気浴やプレミアムシーシャも楽しめる。深夜帯の利用も可能で、宿泊プランも用意されている。",
+    "saunakoCommentShort": "屋上外気浴×シーシャが神戸ならではだね！",
+    "saunakoCommentLong": "三宮の北野坂にある完全貸切サウナだよ。チラー付き水風呂でキリッと冷やしたあと、屋上で外気浴できるのが最高なの！深夜まで営業してるから仕事終わりでも余裕で行けるし、シーシャラウンジもあってちょっと大人な雰囲気。タトゥーOKなのもポイントかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "2F 平日 3時間",
+        "price": 15000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "2F 土日祝 3時間",
+        "price": 16000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "3F 平日 3時間",
+        "price": 17000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "3F 土日祝 3時間",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "2F 深夜 3時間",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "3F 深夜 3時間",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 305,
+    "slug": "oden-sauna",
+    "name": "おでんサウナ",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市中央区",
+    "area": "神戸",
+    "address": "兵庫県神戸市中央区元町通3丁目11-10",
+    "nearestStation": "元町駅",
+    "walkMinutes": 5,
+    "priceMin": 10000,
+    "duration": 90,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "月〜金 10:00〜22:00 / 土日 8:00〜22:00",
+    "holidays": "年末年始",
+    "website": "https://www.instagram.com/oden.sauna",
+    "phone": null,
+    "bookingUrl": "https://coubic.com/oden_sauna",
+    "amenities": [
+      "水着レンタル",
+      "シャワー",
+      "女性用アメニティ"
+    ],
+    "note": "水着着用必須。1階おでん屋の無料おでん盛り合わせ付き（ワンドリンク制）。ネット予約のみ。サウナ90℃。",
+    "images": [],
+    "lat": 34.688,
+    "lng": 135.1825,
+    "description": "元町駅徒歩5分、最大8名で利用できる完全貸切プライベートサウナ。90℃のサウナと14℃の水風呂に加え、外気浴スペースも完備。サウナ後は1階「おでん屋うず」の無料おでん盛り合わせが楽しめるユニークな体験が人気。",
+    "saunakoCommentShort": "サウナ後の無料おでんが最高すぎる！",
+    "saunakoCommentLong": "元町にある個室サウナなんだけど、なんとサウナ後に1階のおでん屋さんで無料おでんが食べられるの！最大8人までOKだからグループでワイワイ楽しめるよ。水風呂14℃でしっかり冷えるし、外気浴スペースもあるからととのい環境はバッチリ。サ飯込みって考えるとかなりお得かも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日 1名 90分",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日 2名 90分",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "平日 4名 90分",
+        "price": 13000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "平日 8名 90分",
+        "price": 17000,
+        "duration": 90,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 306,
+    "slug": "high-balance",
+    "name": "HIGH BALANCE",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市東灘区",
+    "area": "神戸",
+    "address": "兵庫県神戸市東灘区御影1丁目1-1",
+    "nearestStation": "御影駅",
+    "walkMinutes": 5,
+    "priceMin": 1550,
+    "duration": 120,
+    "capacity": 1,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16-17",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "8:30〜22:00（最終受付21:30）",
+    "holidays": "不定休",
+    "website": "https://highbalance.jp/",
+    "phone": "078-414-7616",
+    "bookingUrl": "https://highbalance.hacomono.jp/reserve/schedule/1/1/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "スキンケア",
+      "ドライヤー"
+    ],
+    "note": "会員制男性専用（女性は毎月15日のみ電話予約制）。入会金3,300円。国産檜サウナ。タトゥー不可。ドロップイン1,800円/120分あり。",
+    "images": [],
+    "lat": 34.7163,
+    "lng": 135.2352,
+    "description": "御影駅近くの会員制プライベートサウナ。国産檜の個室で温冷交代浴を楽しめる。水風呂は16〜17℃でセルフロウリュも可能。月5回7,750円からの会員プランのほか、1,800円のドロップイン利用もあり、サウナ習慣を手軽に始められる。",
+    "saunakoCommentShort": "月額制だから通えば通うほどお得だよ！",
+    "saunakoCommentLong": "御影にある会員制の個室サウナだよ。国産檜の贅沢な空間でセルフロウリュできて、水風呂は16-17℃でちょうどいい感じ。月5回7,750円だと1回1,550円でめちゃお得なの！ドロップイン1,800円もあるから、まずはお試しで行ってみるのもありかも。男性専用だけどね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "月5回プラン",
+        "price": 7750,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "月10回プラン",
+        "price": 14500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "通い放題プラン",
+        "price": 26500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ドロップイン",
+        "price": 1800,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 307,
+    "slug": "kumihimo-kobe",
+    "name": "組紐KOBE",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "神戸市西区",
+    "area": "神戸",
+    "address": "兵庫県神戸市西区櫨谷町福谷661-1",
+    "nearestStation": "西神中央駅",
+    "walkMinutes": null,
+    "priceMin": 22000,
+    "duration": 150,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜20:00",
+    "holidays": "不定休",
+    "website": "https://kumihimo-kobe.jp/",
+    "phone": "090-9860-0807",
+    "bookingUrl": "https://www.jalan.net/kankou/spt_guide000000225392/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "インフィニティチェア"
+    ],
+    "note": "築120年古民家（神戸市指定景観資源・旧池本邸）。日本庭園の巨匠・斉藤勝雄氏作庭。サウナ75-80℃。自家製よもぎロウリュ。宿泊プランあり。",
+    "images": [],
+    "lat": 34.7268,
+    "lng": 135.0517,
+    "description": "西神中央エリアにある築120年の古民家を改装した1組限定の完全貸切サウナ。日本庭園の巨匠・斉藤勝雄氏が手がけた庭園を眺めながら外気浴を楽しめる。自家製よもぎハーブのロウリュやオーナー特製パエリアも魅力。",
+    "saunakoCommentShort": "築120年の古民家×日本庭園が圧巻だよ！",
+    "saunakoCommentLong": "神戸の西にある築120年の古民家サウナだよ。日本庭園の巨匠が手がけた庭を眺めながら外気浴できるのがほんとに贅沢なの！自家製よもぎのロウリュも香りがよくて癒されるし、オーナーが世界大会出場のパエリア職人だからサ飯も期待大。1組限定だからプライベート感も最高かも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切サウナ 150分（1-4名）",
+        "price": 22000,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 308,
+    "slug": "private-sauna-kurakuen",
+    "name": "private sauna 苦楽園",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "西宮市",
+    "area": "阪神",
+    "address": "兵庫県西宮市名次町5-7 1F",
+    "nearestStation": "苦楽園口駅",
+    "walkMinutes": 5,
+    "priceMin": 6000,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "基本無休",
+    "website": "https://beauty.hotpepper.jp/kr/slnH000706247/",
+    "phone": "080-7110-8998",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000706247/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ReFaシャワーヘッド",
+      "ReFaドライヤー",
+      "ミネラルウォーター"
+    ],
+    "note": "全3室（うち2室に水風呂あり）。150cm深水風呂あり。水着着用制。キャッシュレス決済のみ。駐車場3台。",
+    "images": [],
+    "lat": 34.759,
+    "lng": 135.3165,
+    "description": "苦楽園口駅徒歩5分、3つのコンセプトの異なる個室を備えたプライベートサウナ。目玉は水深150cmの深水風呂で、全身をしっかり冷やせる。ReFaのシャワーヘッドやドライヤーも完備し、男女ペアでの利用にも対応。",
+    "saunakoCommentShort": "水深150cmの深〜い水風呂がたまらないよ！",
+    "saunakoCommentLong": "苦楽園にある個室サウナで、3部屋あるから好みで選べるのがいいの！特に150cm深水風呂は頭までどっぷり浸かれて衝撃的だよ。ReFaのシャワーヘッドとドライヤー完備で美容面もバッチリ。男女OKだからデートにもおすすめかも！1人なら90分6,000円の部屋もあるよ。",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "Room1 1名 90分",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "Room2/3 1名 90分",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "Room2/3 2名 90分",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Room2/3 3名 90分",
+        "price": 18000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "Room2/3 4名 90分",
+        "price": 20000,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 309,
+    "slug": "hotters24-nishinomiya",
+    "name": "HOTTERS24 西宮上ヶ原",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "西宮市",
+    "area": "阪神",
+    "address": "兵庫県西宮市上ケ原九番町2-102",
+    "nearestStation": "甲東園駅",
+    "walkMinutes": 10,
+    "priceMin": 10890,
+    "duration": 120,
+    "capacity": 1,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "24時間（スタッフ対応13:00〜22:00）",
+    "holidays": "基本無休",
+    "website": "https://hotters24.com/nishinomiyauegahara/",
+    "phone": "0798-78-2216",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "会員制男性専用。入会金4,400円。個室5室。水風呂なし（フリーザーサウナ-5〜5℃で代用）。80〜100℃調整可。ドロップイン990円/回。",
+    "images": [],
+    "lat": 34.7688,
+    "lng": 135.342,
+    "description": "甲東園駅から徒歩圏内の会員制24時間プライベートサウナ。個室5室で80〜100℃のセルフロウリュが楽しめる。水風呂の代わりにフリーザーサウナ（-5〜5℃）を完備し、独自の冷却体験が特徴。月額10,890円で通い放題。",
+    "saunakoCommentShort": "24時間いつでもサウナに入れるのがすごい！",
+    "saunakoCommentLong": "24時間営業の会員制サウナだよ！水風呂の代わりにフリーザーサウナっていう-5℃の極寒部屋があって、風速10mの強風が吹く中で冷やされる体験がすごいの。月額10,890円で使い放題だから、サウナ習慣つけたい人にぴったりかも。深夜でも早朝でもOKなのがうれしいね！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "月額会員",
+        "price": 10890,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ドロップイン",
+        "price": 990,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 310,
+    "slug": "itadaki-sauna19",
+    "name": "itadaki Sauna19",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "宝塚市",
+    "area": "阪神",
+    "address": "兵庫県宝塚市雲雀丘山手2丁目（HIBARI GOLF内）",
+    "nearestStation": "雲雀丘花屋敷駅",
+    "walkMinutes": 10,
+    "priceMin": 10000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "19",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜23:30",
+    "holidays": "不定休",
+    "website": "https://sauna19.com/",
+    "phone": "072-758-3333",
+    "bookingUrl": "https://sauna19.com/",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "サウナポンチョ",
+      "ドライヤー",
+      "シャンプー",
+      "リンス",
+      "ボディソープ"
+    ],
+    "note": "ゴルフ場内の絶景サウナ。100℃サウナ。Web予約のみ。18歳未満不可。禁煙。併設レストラン「明月記」でサ飯セット（2,500円〜）あり。",
+    "images": [],
+    "lat": 34.8115,
+    "lng": 135.374,
+    "description": "宝塚市のゴルフ場「HIBARI GOLF」内にある絶景プライベートサウナ。100℃のサウナと19℃の水風呂に加え、丘の上からの夜景を眺められる外気浴が魅力。併設の懐石レストラン「明月記」でサウナ飯も楽しめる。",
+    "saunakoCommentShort": "ゴルフ場の丘から眺める夜景が最高だよ！",
+    "saunakoCommentLong": "宝塚のゴルフ場の中にあるサウナで、丘の上からの景色がほんとにきれいなの！100℃のサウナでしっかり蒸されたあと、19℃の水風呂で冷やして外気浴…夜景を見ながらのととのいは格別だよ。併設の懐石レストランでサ飯もできるし、デートにもぴったりかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日 120分（1-2名）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 120分（1-2名）",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "平日ナイト 150分（1-2名）",
+        "price": 14000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝ナイト 150分（1-2名）",
+        "price": 16000,
+        "duration": 150,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 311,
+    "slug": "re-nolla",
+    "name": "Re:NOLLA",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "三田市",
+    "area": "三田",
+    "address": "兵庫県三田市中町4-17 1F",
+    "nearestStation": "三田駅",
+    "walkMinutes": 5,
+    "priceMin": 4400,
+    "duration": 60,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00",
+    "holidays": "火曜・木曜",
+    "website": "https://renolla.hp.peraichi.com/privateSAUNA/",
+    "phone": "079-558-8806",
+    "bookingUrl": "https://squareup.com/appointments/book/nt8ajf3yr0g3f2/LFES4ZDV1HKGY/start",
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "サウナハット",
+      "ドライヤー",
+      "ヘアアイロン",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "三田初の個室サウナ。2室（暁：シャワー・TV付/最大3名、宵：水風呂付/最大2名）。キャッシュレス決済のみ。駐車場2台。アロマ・ほうじ茶ロウリュオプションあり。",
+    "images": [],
+    "lat": 34.8895,
+    "lng": 135.2242,
+    "description": "三田駅徒歩5分、三田初のプライベートサウナ。檜製サウナ2室を備え、「暁」はシャワー・TV付き最大3名、「宵」は水風呂付き最大2名で利用可能。セルフロウリュのほか、アロマやほうじ茶ロウリュのオプションも楽しめる。",
+    "saunakoCommentShort": "三田エリア初の個室サウナだよ！",
+    "saunakoCommentLong": "三田に待望の個室サウナができたの！檜の2部屋から選べて、「宵」は水風呂付き、「暁」はTV付きでそれぞれ違う雰囲気。アロマロウリュやほうじ茶ロウリュのオプションもあって楽しいよ。60分4,400円からとお手頃だし、サウナハットのレンタルもあるから手ぶらでOKかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "30分コース",
+        "price": 2750,
+        "duration": 30,
+        "capacity": 3
+      },
+      {
+        "name": "60分コース",
+        "price": 4400,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "90分コース",
+        "price": 6600,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "120分コース",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 312,
+    "slug": "sauna-belle",
+    "name": "Relaxation Sauna Belle",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "加古川市",
+    "area": "加古川",
+    "address": "兵庫県加古川市加古川町寺家町655",
+    "nearestStation": "加古川駅",
+    "walkMinutes": 5,
+    "priceMin": 5500,
+    "duration": 90,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "火曜",
+    "website": "https://sauna-belle.com/",
+    "phone": "0794-58-4080",
+    "bookingUrl": "http://b.hpr.jp/kr/sd/H000702266",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "アロマ",
+      "美容機器"
+    ],
+    "note": "地域初の完全個室サウナ。女性向け美容・ヒーリング特化。カウンセリング付き。初心者ガイドあり。LINE予約可。",
+    "images": [],
+    "lat": 34.7568,
+    "lng": 134.8388,
+    "description": "加古川駅近くの地域初となる完全個室プライベートサウナ。美容・健康・癒しをコンセプトに、アロマやプレミアム美容機器を備えた贅沢な空間を提供。初心者向けのカウンセリング付きで、サウナデビューにもおすすめ。",
+    "saunakoCommentShort": "美容特化で女性にうれしい個室サウナだよ！",
+    "saunakoCommentLong": "加古川にある美容特化の個室サウナだよ！アロマや美容機器が充実してて、まるでエステみたいな体験ができるの。初回はカウンセリングしてくれるからサウナ初心者でも安心だし、ガイド付きで入り方も教えてくれるよ。1人5,500円からで、お友達と2人でも行けるのがいいかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "1名 90分",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名 90分",
+        "price": 7160,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "3名 90分",
+        "price": 9900,
+        "duration": 90,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 313,
+    "slug": "prus-sauna-himeji",
+    "name": "Prus Sauna 姫路",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "姫路市",
+    "area": "姫路",
+    "address": "兵庫県姫路市岡田",
+    "nearestStation": "姫路駅",
+    "walkMinutes": null,
+    "priceMin": 9000,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "14:00〜翌2:00（金土祝前日〜翌5:00）",
+    "holidays": "基本無休",
+    "website": "https://www.prussauna.com/himeji",
+    "phone": "079-227-0050",
+    "bookingUrl": "https://prussauna.hacomono.jp/reserve/schedule/5/21",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "サウナハット",
+      "水着レンタル"
+    ],
+    "note": "国産檜フィンランド式サウナ。90℃サウナ。姫路駅から車8分。5名以上は1名+5,000円。",
+    "images": [],
+    "lat": 34.8138,
+    "lng": 134.6715,
+    "description": "姫路市岡田にある国産檜を贅沢に使った完全個室フィンランド式サウナ。90℃のサウナと15℃の水風呂、外気浴スペースを備え、最大6名までの貸切利用が可能。深夜2時まで営業で、金土祝前は朝5時まで。",
+    "saunakoCommentShort": "国産檜の香りに包まれる贅沢サウナだよ！",
+    "saunakoCommentLong": "姫路にあるPrus Saunaは国産檜をふんだんに使ったフィンランド式サウナだよ。15℃の水風呂と外気浴もあって、ととのい環境はしっかり整ってるの。深夜2時まで営業してるから仕事終わりでも行けるし、金土は朝5時まで！最大6人入れるからグループでも楽しめるかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "90分（1-4名）",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "120分（1-4名）",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "180分（1-4名）",
+        "price": 18000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 314,
+    "slug": "reset-sauna-himeji",
+    "name": "Re:set",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "姫路市",
+    "area": "姫路",
+    "address": "兵庫県姫路市野里304",
+    "nearestStation": "野里駅",
+    "walkMinutes": 10,
+    "priceMin": 3500,
+    "duration": 60,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "9:00〜23:00",
+    "holidays": "基本無休",
+    "website": "https://reset-sauna.com/",
+    "phone": "079-255-5420",
+    "bookingUrl": "https://private-sauna-reset.square.site/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "クレンジング",
+      "洗顔",
+      "スキンケア",
+      "ドライヤー",
+      "ストレートアイロン"
+    ],
+    "note": "姫路初の完全プライベートサウナ。2室（黒壁/白壁）。100kgサウナストーン搭載大型ストーブ。アロマ水でセルフロウリュ。パウダールーム完備。",
+    "images": [],
+    "lat": 34.8488,
+    "lng": 134.683,
+    "description": "姫路初の完全プライベートサウナ。黒壁と白壁の2室を備え、各室に100kgのサウナストーンを搭載した大型ストーブでセルフロウリュが楽しめる。パウダールームにはスキンケア・ヘアケア用品も充実し、女性にもうれしい設備。",
+    "saunakoCommentShort": "姫路初の個室サウナで1人3,500円〜はお得！",
+    "saunakoCommentLong": "姫路で初めてできた完全プライベートサウナだよ！黒壁と白壁の2部屋があって、どっちも100kgのサウナストーンでパワフルなセルフロウリュができるの。4人で行けば1人2,000円とめちゃお得だし、パウダールームにスキンケアもヘアアイロンもあるから女子にもおすすめかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "60分 1名",
+        "price": 3500,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "60分 2名",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "60分 3名",
+        "price": 7500,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "60分 4名",
+        "price": 8000,
+        "duration": 60,
+        "capacity": 4
+      },
+      {
+        "name": "90分 1名",
+        "price": 5250,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 315,
+    "slug": "the-park-sauna",
+    "name": "THE PARK SAUNA",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "養父市",
+    "area": "但馬・丹波",
+    "address": "兵庫県養父市丹戸字越中904",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 16000,
+    "duration": 150,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "要問合せ",
+    "holidays": "不定休",
+    "website": "https://hachi-theparksauna.com/",
+    "phone": "090-8208-1062",
+    "bookingUrl": "https://coubic.com/thepark-sauna",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "ハチ高原の関西最高標高アウトドアサウナ。完全予約制貸切。川の水を使った天然水風呂。2名以上で利用可。車でのアクセス推奨。",
+    "images": [],
+    "lat": 35.3803,
+    "lng": 134.5948,
+    "description": "ハチ高原に位置する関西最高標高のアウトドアサウナリゾート。完全予約制の貸切で、川の水を使った天然水風呂と大自然の中での外気浴が楽しめる。四季折々の景色を眺めながら、究極のととのい体験ができる。",
+    "saunakoCommentShort": "関西最高標高の絶景サウナは必見だよ！",
+    "saunakoCommentLong": "ハチ高原にある関西で一番標高が高いアウトドアサウナだよ！川の水をそのまま使った天然水風呂が最高に気持ちいいの。大自然の中で外気浴できて、四季で全然違う景色が楽しめるから何度行っても飽きないかも。車じゃないと行けないけど、それだけの価値がある場所だよ！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日（1-4名）2.5時間",
+        "price": 16000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "土日祝（1-4名）2.5時間",
+        "price": 19000,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 316,
+    "slug": "kominka-sauna-saezuri",
+    "name": "古民家サウナ さえずり",
+    "prefecture": "hyogo",
+    "prefectureLabel": "兵庫県",
+    "city": "丹波篠山市",
+    "area": "但馬・丹波",
+    "address": "兵庫県丹波篠山市大谷77",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 8000,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "9:00〜20:30（2.5時間制）",
+    "holidays": "不定休",
+    "website": "https://newgate.girly.jp/sauna/",
+    "phone": "079-555-6974",
+    "bookingUrl": null,
+    "amenities": [
+      "シャンプー",
+      "ボディソープ",
+      "コインロッカー",
+      "充電",
+      "Bluetoothスピーカー"
+    ],
+    "note": "北欧フィンランド式バレルサウナ。100℃。地下水水風呂（チラー完備）。BBQ持込可（炭500-1,000円）。ドッグラン・遊具あり。水着着用必須。タトゥーOK。JR篠山口駅から送迎あり。",
+    "images": [],
+    "lat": 35.0762,
+    "lng": 135.2152,
+    "description": "丹波篠山の自然豊かな環境にある北欧フィンランド式バレルサウナ。100℃のサウナと15℃の地下水水風呂、森の中での外気浴が楽しめる。BBQ持込やドッグラン、キッズ遊具も併設し、ファミリーやグループで一日中楽しめる。",
+    "saunakoCommentShort": "バレルサウナ×BBQ×ドッグランが全部揃ってる！",
+    "saunakoCommentLong": "丹波篠山の古民家にあるバレルサウナだよ！100℃のフィンランド式で地下水15℃の水風呂もキリッと冷えてて最高なの。森の中でハンモックに揺られながら外気浴…もう夢みたいでしょ？BBQ持込OKだしドッグランもあるから、わんこ連れファミリーにもぴったりかも！",
+    "updatedAt": "2026-03-02",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "平日 2名 150分",
+        "price": 8000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 2名 150分",
+        "price": 9000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "平日 4名 150分",
+        "price": 12000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "土日祝 4名 150分",
+        "price": 14000,
+        "duration": 150,
+        "capacity": 4
+      },
+      {
+        "name": "平日 6名 150分",
+        "price": 15000,
+        "duration": 150,
+        "capacity": 6
+      },
+      {
+        "name": "土日祝 6名 150分",
+        "price": 18000,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 317,
+    "slug": "mother-haus",
+    "name": "MOTHER HAUS",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "大津市",
+    "area": "大津",
+    "address": "滋賀県大津市伊香立南庄町1348",
+    "nearestStation": "堅田駅",
+    "walkMinutes": null,
+    "priceMin": 45000,
+    "duration": 480,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜18:00",
+    "holidays": "不定休",
+    "website": "https://motherhaus-sauna.com/",
+    "phone": "077-526-1000",
+    "bookingUrl": "https://motherhaus.booking.chillnn.com/",
+    "amenities": [
+      "タオル",
+      "サウナガウン",
+      "サンダル",
+      "レンタル水着",
+      "ドライヤー",
+      "シャンプー",
+      "アメニティ"
+    ],
+    "note": "1日1組限定・水着着用・キッチン/BBQスペースあり",
+    "images": [],
+    "lat": 35.127,
+    "lng": 135.882,
+    "description": "大津市の田園風景に佇む関西初のコンクリートサウナ「CUBERU」を備えた一棟貸切施設。HARVIAストーブでセルフロウリュを楽しめ、水風呂は2基完備。1日1組限定で8時間たっぷり滞在でき、キッチンやBBQスペースも充実している。",
+    "saunakoCommentShort": "関西初コンクリートサウナで1日まるごと貸切！",
+    "saunakoCommentLong": "田んぼと山に囲まれた最高のロケーションで、1日1組だけの贅沢空間だよ。HARVIAストーブのセルフロウリュがめちゃくちゃ気持ちいいし、水風呂も2つあるの！キッチンやBBQもできるから、仲間とワイワイ過ごすのに最高かも。8時間あるからほんと急がなくていいよね。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "平日 2名",
+        "price": 45000,
+        "duration": 480,
+        "capacity": 2
+      },
+      {
+        "name": "休日 2名",
+        "price": 50000,
+        "duration": 480,
+        "capacity": 2
+      },
+      {
+        "name": "平日 5名",
+        "price": 60000,
+        "duration": 480,
+        "capacity": 5
+      },
+      {
+        "name": "休日 5名",
+        "price": 65000,
+        "duration": 480,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 318,
+    "slug": "biwako-sauna",
+    "name": "BIWAKO SAUNA",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "蒲生郡日野町",
+    "area": "その他",
+    "address": "滋賀県蒲生郡日野町西大路2168",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 2000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00",
+    "holidays": "不定休",
+    "website": "https://biwako-sauna.com/",
+    "phone": "070-9179-4137",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル"
+    ],
+    "note": "築140年古民家リノベ・完全予約制・謎解きゲーム体験あり",
+    "images": [],
+    "lat": 35.014,
+    "lng": 136.245,
+    "description": "蒲生郡日野町の築140年古民家をリノベーションしたプライベートサウナ。HUUMストーブの約75度マイルドサウナで15〜20分じっくり温まるスタイル。天然地下水かけ流しの超軟水水風呂が自慢で、初心者にもやさしい設計になっている。",
+    "saunakoCommentShort": "超軟水の地下水かけ流しで羽衣体験！",
+    "saunakoCommentLong": "築140年の古民家サウナってだけでテンション上がるよね！75度のマイルドサウナだから、サウナ初心者でもじっくり楽しめるのがいいところ。天然地下水の超軟水水風呂はほんとに肌がトゥルトゥルになるよ。謎解きゲームもあるから、友達と来ると盛り上がりそう！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "平日 120分",
+        "price": 2000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "土日祝 120分",
+        "price": 2500,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 319,
+    "slug": "doga-sauna",
+    "name": "DOGA SAUNA",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "犬上郡多賀町",
+    "area": "その他",
+    "address": "滋賀県犬上郡多賀町藤瀬424",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 2420,
+    "duration": 120,
+    "capacity": 12,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00（最終受付20:00）",
+    "holidays": "木曜",
+    "website": "https://doga-sauna.com/",
+    "phone": "0749-47-1655",
+    "bookingUrl": "https://reserva.be/dogasauna",
+    "amenities": [
+      "レンタルサウナローブ",
+      "レンタル水着"
+    ],
+    "note": "蔵リノベ・薪ストーブ・パブリック利用あり・水着着用男女共用",
+    "images": [],
+    "lat": 35.196,
+    "lng": 136.325,
+    "description": "犬上郡多賀町の蔵をリノベーションした薪ストーブサウナ。パブリック利用（平日2,420円〜）と貸切利用（3時間28,600円〜）の2パターンで楽しめる。地下湧水かけ流しの水風呂とオリジナル「エアチェア」での外気浴が特徴。BBQプランも充実。",
+    "saunakoCommentShort": "パブリックも貸切もOKの蔵サウナ！",
+    "saunakoCommentLong": "蔵をリノベした空間がめちゃくちゃカッコいいの！薪ストーブの熱がじんわり来て最高だよ。パブリック利用なら2,420円〜で気軽に入れるし、仲間と貸切BBQプランも楽しそう。オリジナルの「エアチェア」での外気浴はここでしか味わえない体験かもね。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "パブリック 平日",
+        "price": 2420,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "パブリック 土日祝",
+        "price": 3300,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 平日 3時間",
+        "price": 28600,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "貸切 土日祝 3時間",
+        "price": 44000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "BBQスタンダード 平日 4時間",
+        "price": 82500,
+        "duration": 240,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 320,
+    "slug": "wano-retreat-hitoiki",
+    "name": "和乃リトリート ひといき",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "長浜市",
+    "area": "長浜",
+    "address": "滋賀県長浜市元浜町17-2",
+    "nearestStation": "長浜駅",
+    "walkMinutes": 8,
+    "priceMin": 6980,
+    "duration": 80,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "日〜木 9:30〜21:00 / 金土 11:00〜14:20（2部制）",
+    "holidays": "不定休",
+    "website": "https://cafe-inn-hitoiki.com/",
+    "phone": "0749-56-1174",
+    "bookingUrl": "https://tabichat.jp/engine/hotels/hitoiki",
+    "amenities": [
+      "タオル",
+      "アメニティ"
+    ],
+    "note": "町家蔵サウナ・日帰り利用可（じゃらん遊び体験から予約）・伊吹薬草ロウリュ",
+    "images": [],
+    "lat": 35.378,
+    "lng": 136.269,
+    "description": "長浜城下の町家ホテルに併設された貸切蔵サウナ。伊吹山の薬草を使ったハーブロウリュが特徴で、セルフロウリュを楽しめる。日帰り利用も可能で、「薬草蔵サウナ」と「茶香サウナ」の2種類を用意。最大4名まで利用可能。",
+    "saunakoCommentShort": "長浜の町家蔵で薬草ロウリュ体験！",
+    "saunakoCommentLong": "長浜の趣ある町家に蔵サウナがあるなんて素敵だよね！伊吹薬草のロウリュは香りがすっごく癒されるの。日帰りでも使えるから、長浜観光のついでに立ち寄るのもアリかも。「薬草」と「茶香」の2種類あるから、どっちも試してみたいな。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "日帰りサウナ 80分 4名",
+        "price": 6980,
+        "duration": 80,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 321,
+    "slug": "shigaraki-sauna",
+    "name": "SHIGARAKI SAUNA",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "甲賀市",
+    "area": "その他",
+    "address": "滋賀県甲賀市信楽町下朝宮457",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 28000,
+    "duration": 1140,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "チェックイン15:00 / チェックアウト10:00",
+    "holidays": "不定休",
+    "website": "https://shigaraki37.jp/",
+    "phone": "077-564-3133",
+    "bookingUrl": "https://shigaraki37.jp/?tripla_booking_widget_open=search",
+    "amenities": [
+      "タオル",
+      "アメニティ"
+    ],
+    "note": "関西初アースバッグサウナ・一棟貸切宿泊施設・朝宮茶ロウリュ",
+    "images": [],
+    "lat": 34.916,
+    "lng": 136.058,
+    "description": "甲賀市信楽町にある一棟貸切のサウナ付き宿泊施設。関西初のアースバッグ工法「土のサウナ」と1,200年の歴史を持つ朝宮茶を使った「茶サウナ」の2種類を備える。薪ストーブの遠赤外線でじっくり温まり、山の外気浴でととのえる。",
+    "saunakoCommentShort": "信楽焼の里で土と茶の2種サウナ！",
+    "saunakoCommentLong": "関西初のアースバッグサウナってだけで気になるよね！土と自然素材だけで作られたサウナは遠赤外線でじんわり温まる感じがたまらないの。朝宮茶のロウリュも香りが上品でリラックスできるよ。信楽の山に囲まれた外気浴は開放感バツグンかも。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "素泊まり 1泊 2名",
+        "price": 56000,
+        "duration": 1140,
+        "capacity": 2
+      },
+      {
+        "name": "BBQ付き 1泊 2名",
+        "price": 72000,
+        "duration": 1140,
+        "capacity": 2
+      },
+      {
+        "name": "サウナ使い放題 1泊 2名",
+        "price": 86000,
+        "duration": 1140,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": "2025-02-06",
+    "closedAt": null
+  },
+  {
+    "id": 322,
+    "slug": "8seas-sauna-hira",
+    "name": "8Seas Sauna HIRA",
+    "prefecture": "shiga",
+    "prefectureLabel": "滋賀県",
+    "city": "大津市",
+    "area": "大津",
+    "address": "滋賀県大津市南小松1695-1",
+    "nearestStation": "近江舞子駅",
+    "walkMinutes": 10,
+    "priceMin": 1980,
+    "duration": 120,
+    "capacity": 10,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00（最終受付20:00）",
+    "holidays": "金曜",
+    "website": "https://8sauna.jp/",
+    "phone": "077-507-0372",
+    "bookingUrl": "https://8seas-sauna-hira.rsvsys.jp/",
+    "amenities": [
+      "タオル",
+      "レンタル水着"
+    ],
+    "note": "薪ストーブ3台・琵琶湖至近・水着着用男女共用・冬季平日に貸切プランあり",
+    "images": [],
+    "lat": 35.188,
+    "lng": 135.953,
+    "description": "大津市の琵琶湖畔に位置する本格フィンランド式サウナ。薪ストーブ3台でじっくり温まり、比良山系の地下水（約15度）の水風呂でクールダウン。森に囲まれた広々とした外気浴スペースから琵琶湖を望める。平日120分1,980円〜とリーズナブル。",
+    "saunakoCommentShort": "薪3台×琵琶湖ビューの外気浴が最高！",
+    "saunakoCommentLong": "薪ストーブが3台もあるフィンランド式サウナだよ！比良山の地下水は年間通して約15度で、キリッと冷たくて気持ちいいの。外気浴スペースから琵琶湖が見えるのもポイント高いよね。平日なら1,980円〜で入れるから、お財布にもやさしいかも。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "平日 120分",
+        "price": 1980,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "平日 180分",
+        "price": 2640,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 120分",
+        "price": 2750,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 180分",
+        "price": 3960,
+        "duration": 180,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 323,
+    "slug": "good-sauna",
+    "name": "グッドサウナ",
+    "prefecture": "nara",
+    "prefectureLabel": "奈良県",
+    "city": "奈良市",
+    "area": "奈良市",
+    "address": "奈良県奈良市右京1-5-1 高の原テラス内",
+    "nearestStation": "高の原駅",
+    "walkMinutes": 3,
+    "priceMin": 10000,
+    "duration": 150,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "完全予約制（3部制・各150分）",
+    "holidays": "不定休",
+    "website": "https://reserva.be/goodsauna",
+    "phone": null,
+    "bookingUrl": "https://reserva.be/goodsauna",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "レンタルサウナポンチョ",
+      "レンタル水着"
+    ],
+    "note": "完全貸切テントサウナ・プール水風呂・BBQオプション（5,000円/人）・タトゥーOK",
+    "images": [],
+    "lat": 34.729,
+    "lng": 135.782,
+    "description": "高の原テラス内にある完全貸切のテントサウナ。4名収容のテントサウナ、広々としたプール水風呂、ととのいスペースをすべてプライベートで利用できる。150分制の3部制で、タオル・水着レンタルも無料。BBQオプションもあり。",
+    "saunakoCommentShort": "プール水風呂付き貸切テントサウナ！",
+    "saunakoCommentLong": "高の原駅から徒歩3分でテントサウナが楽しめるのは嬉しいよね！プール水風呂が広々してて開放感バツグンだよ。タオルも水着も無料レンタルだから手ぶらでOK。BBQオプションもあるから、友達とわいわい楽しむのに最高かも！",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "貸切サウナ 150分 4名",
+        "price": 10000,
+        "duration": 150,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 324,
+    "slug": "konjakuso-naramachi-mushiroburo",
+    "name": "今昔荘 ならまち 蒸風呂邸",
+    "prefecture": "nara",
+    "prefectureLabel": "奈良県",
+    "city": "奈良市",
+    "area": "奈良市",
+    "address": "奈良県奈良市福智院町17-1",
+    "nearestStation": "近鉄奈良駅",
+    "walkMinutes": 15,
+    "priceMin": 158400,
+    "duration": 1140,
+    "capacity": 16,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "チェックイン15:00 / チェックアウト10:00",
+    "holidays": "不定休",
+    "website": "https://konjakuso.jp/site/4663",
+    "phone": null,
+    "bookingUrl": "https://konjakuso.airhost.co/ja/houses/524171",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー",
+      "アメニティ"
+    ],
+    "note": "一棟貸切宿（200㎡・2階建）・蒸風呂＆ヒノキ半露天風呂・地酒飲み比べ体験付き",
+    "images": [],
+    "lat": 34.677,
+    "lng": 135.834,
+    "description": "ならまちの町家を一棟貸切にした宿泊施設。200㎡の2階建てに蒸風呂サウナとヒノキの半露天風呂を完備し、奈良町の地下水で体を冷やせる。庭のリラックスチェアでの外気浴も可能。最大16名収容で、地酒飲み比べ体験も楽しめる。",
+    "saunakoCommentShort": "ならまちの町家で蒸風呂×地酒体験！",
+    "saunakoCommentLong": "ならまちの趣ある町家を丸ごと貸切って、蒸風呂とヒノキ風呂を楽しめるなんて贅沢だよね！奈良の地下水で体を冷やした後は、庭のチェアでぼーっとするのが最高。地酒の飲み比べも付いてるから、大人数で泊まりに行くのがおすすめかも。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "一棟貸切 1泊（〜16名）",
+        "price": 158400,
+        "duration": 1140,
+        "capacity": 16
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 325,
+    "slug": "ume-sauna",
+    "name": "ume, sauna",
+    "prefecture": "nara",
+    "prefectureLabel": "奈良県",
+    "city": "山辺郡山添村",
+    "area": "その他",
+    "address": "奈良県山辺郡山添村片平452",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 9800,
+    "duration": 150,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "3-25",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "7:00〜19:00（完全予約制）",
+    "holidays": "不定休",
+    "website": "https://www.ume-yamazoe.com/sauna",
+    "phone": "0743-89-1875",
+    "bookingUrl": "https://www.chillnn.com/171a996ef0d213/plan/175534b36612f",
+    "amenities": [
+      "レンタル水着",
+      "タオル"
+    ],
+    "note": "サウナシュラン2020選出・薪サウナ・大和茶ロウリュ・屋上デッキチェア",
+    "images": [],
+    "lat": 34.638,
+    "lng": 136.026,
+    "description": "奈良県山添村の里山に佇むサウナシュラン2020選出の本格アウトドアフィンランド式サウナ。薪ストーブで60〜80度に温まり、水風呂は季節により3〜25度と変化する。屋上デッキチェアでの外気浴や大和茶ロウリュが特徴。日帰りサウナ＆BBQプランも用意。",
+    "saunakoCommentShort": "サウナシュラン選出の里山サウナ！",
+    "saunakoCommentLong": "サウナシュラン2020に選ばれた実力派だよ！里山の自然に囲まれた薪サウナは本当に贅沢な空間。水風呂は季節で3〜25度まで変わるから、冬はかなりスリリングかも。屋上デッキでの外気浴は雲海が見えることもあるらしいよ。大和茶ロウリュの香りも上品で好き。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "日帰りサウナ＆BBQ 150分",
+        "price": 9800,
+        "duration": 150,
+        "capacity": 8
+      },
+      {
+        "name": "宿泊＋サウナ（2食付）",
+        "price": 34650,
+        "duration": 1440,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 326,
+    "slug": "nara-royal-hotel-sauna",
+    "name": "奈良ロイヤルホテル サウナ貸切",
+    "prefecture": "nara",
+    "prefectureLabel": "奈良県",
+    "city": "奈良市",
+    "area": "奈良市",
+    "address": "奈良県奈良市法華寺町254",
+    "nearestStation": "新大宮駅",
+    "walkMinutes": 10,
+    "priceMin": 10000,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:30〜13:00（90分制）",
+    "holidays": "不定休",
+    "website": "https://nara-royal.co.jp/",
+    "phone": null,
+    "bookingUrl": "https://www.jalan.net/kankou/spt_29201cd2110152281/activity/l00005AF04/",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー",
+      "セルフロウリュ用アロマ水"
+    ],
+    "note": "1日1組限定・天然温泉大浴場付き・駐車場4時間無料",
+    "images": [],
+    "lat": 34.694,
+    "lng": 135.805,
+    "description": "奈良ロイヤルホテルの天然温泉大浴場を1日1組限定で貸切できるサウナプラン。90分10,000円で6名まで利用可能。セルフロウリュ用アロマ水付きで、天然温泉・水風呂・休憩室もすべて独占できる。ホテルならではの充実したアメニティも魅力。",
+    "saunakoCommentShort": "天然温泉大浴場まるごと貸切！",
+    "saunakoCommentLong": "ホテルの大浴場をまるごと貸切ってサウナできるなんて贅沢すぎない？天然温泉も水風呂も休憩室も全部独占だよ。セルフロウリュ用のアロマ水も付いてるし、6名で10,000円だから一人あたりで考えるとかなりお得かも。駐車場4時間無料なのも嬉しいね。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "サウナ貸切 90分 6名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 327,
+    "slug": "ele-sauna-and-coffee",
+    "name": "ele.sauna&coffee",
+    "prefecture": "wakayama",
+    "prefectureLabel": "和歌山県",
+    "city": "和歌山市",
+    "area": "和歌山市",
+    "address": "和歌山県和歌山市湊紺屋町2丁目11 1F",
+    "nearestStation": "和歌山市駅",
+    "walkMinutes": 5,
+    "priceMin": 8000,
+    "duration": 120,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "サウナ 9:00〜22:00 / カフェ 11:00〜18:00",
+    "holidays": "火曜・不定休",
+    "website": "https://elesauna-coffee.com/",
+    "phone": "070-8957-9882",
+    "bookingUrl": "https://select-type.com/rsv/?id=dmW7lPspII4",
+    "amenities": [
+      "レンタルタオルセット"
+    ],
+    "note": "完全個室・カフェ併設・3種のアロマからロウリュ選択可・水温指定可・水着着用でカップルOK",
+    "images": [],
+    "lat": 34.228,
+    "lng": 135.168,
+    "description": "和歌山市駅から徒歩5分の完全個室プライベートサウナ。天然木の個室空間でセルフロウリュ（3種のアロマから選択）を楽しめる。120分8,000円〜で水風呂の温度指定も可能。水着着用でカップル利用にも対応。1Fにはカフェも併設。",
+    "saunakoCommentShort": "カフェ併設の完全個室サウナ！",
+    "saunakoCommentLong": "和歌山市駅から歩いてすぐの個室サウナだよ！3種類のアロマからロウリュを選べるのが楽しいし、水風呂の温度まで指定できるのは珍しいよね。サウナ後は1Fのカフェでまったりできるから、デートにもぴったりかも。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "120分コース",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 328,
+    "slug": "nagomi-sauna",
+    "name": "和みサウナ（NAGOMI）",
+    "prefecture": "wakayama",
+    "prefectureLabel": "和歌山県",
+    "city": "和歌山市",
+    "area": "和歌山市",
+    "address": "和歌山県和歌山市美園町4丁目31-7 2F",
+    "nearestStation": "和歌山駅",
+    "walkMinutes": 3,
+    "priceMin": 2500,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "完全予約制",
+    "holidays": "不定休（月別カレンダー参照）",
+    "website": "https://nagomi-sauna-20240901.com/",
+    "phone": "073-488-4372",
+    "bookingUrl": "https://airrsv.net/sauna-nagomi/calendar",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー",
+      "アメニティ"
+    ],
+    "note": "フィンランド式・ミント水風呂・プロジェクター完備・手ぶらOK・2024年9月オープン",
+    "images": [],
+    "lat": 34.23,
+    "lng": 135.194,
+    "description": "和歌山駅から徒歩3分の本格フィンランド式プライベートサウナ。90分2,500円〜とリーズナブルで、ミント水風呂とアロマロウリュが特徴。プロジェクターでサブスク動画見放題。無料アメニティ充実で手ぶら利用が可能。",
+    "saunakoCommentShort": "駅チカ3分で手ぶらサウナ2,500円！",
+    "saunakoCommentLong": "和歌山駅から歩いて3分、しかも90分2,500円ってコスパ良すぎない？ミント水風呂はスーッと爽快で癖になるよ。プロジェクターで動画見放題だから、ととのいながら映画タイムもできちゃう。アメニティ全部揃ってるから手ぶらでフラッと行けるのが嬉しいね。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "90分コース",
+        "price": 2500,
+        "duration": 90,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": "2024-09-01",
+    "closedAt": null
+  },
+  {
+    "id": 329,
+    "slug": "wood-high-sauna",
+    "name": "Wood High SAUNA",
+    "prefecture": "wakayama",
+    "prefectureLabel": "和歌山県",
+    "city": "和歌山市",
+    "area": "和歌山市",
+    "address": "和歌山県和歌山市吉田386",
+    "nearestStation": "和歌山駅",
+    "walkMinutes": 12,
+    "priceMin": 15000,
+    "duration": 90,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜23:30（最終予約21:00）",
+    "holidays": "祝日・年末年始",
+    "website": "https://wood-high.com/sauna",
+    "phone": null,
+    "bookingUrl": "https://wood-high.com/sauna",
+    "amenities": [
+      "タオル",
+      "アメニティ"
+    ],
+    "note": "ヘンプクリート壁材・みかんアロマ・着替え〜休憩まで1室完結・宿泊ルームあり",
+    "images": [],
+    "lat": 34.233,
+    "lng": 135.186,
+    "description": "和歌山市のヘンプクリート（麻と石灰の混合素材）を壁材に使用したプライベートサウナ。肌や髪に低刺激で呼吸がしやすいのが特徴。みかんアロマのロウリュも楽しめる。90分15,000円〜で5名まで一律料金。宿泊ルームも併設。",
+    "saunakoCommentShort": "ヘンプクリートの呼吸しやすいサウナ！",
+    "saunakoCommentLong": "麻と石灰で作られたヘンプクリートの壁がすごく珍しいの！普通のサウナより呼吸がラクで、肌にもやさしいんだって。和歌山らしいみかんアロマのロウリュもいい香りだよ。着替えから休憩まで1つの部屋で完結するからプライベート感バッチリかも。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "90分 5名まで一律",
+        "price": 15000,
+        "duration": 90,
+        "capacity": 5
+      },
+      {
+        "name": "120分 5名まで一律",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 330,
+    "slug": "ninomaru-onsen-sauna",
+    "name": "二ノ丸温泉 サウナ小屋",
+    "prefecture": "wakayama",
+    "prefectureLabel": "和歌山県",
+    "city": "有田郡湯浅町",
+    "area": "有田",
+    "address": "和歌山県有田郡湯浅町山田1638-1",
+    "nearestStation": "湯浅駅",
+    "walkMinutes": null,
+    "priceMin": 8000,
+    "duration": 50,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "瀧のサウナ: 平日11:00〜18:30, 土日祝9:00〜18:30 / 森のサウナ: 平日10:00〜21:30, 土日祝8:00〜21:30",
+    "holidays": "木曜（祝日の場合は営業）",
+    "website": "https://ninomaru-onsen.jp/sauna/",
+    "phone": "0737-64-1826",
+    "bookingUrl": "https://travel.rakuten.co.jp/HOTEL/50108/50108.html",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ"
+    ],
+    "note": "「瀧のサウナ」と「森のサウナ」2種類・薪ストーブ・天然温泉併設・滝ダイブ可",
+    "images": [],
+    "lat": 33.94,
+    "lng": 135.173,
+    "description": "有田郡湯浅町の二ノ丸温泉に併設された2種類の貸切サウナ小屋。「瀧のサウナ」は山の渓流水風呂と滝ダイブが楽しめ、「森のサウナ」はAesopアメニティ完備のラグジュアリー空間。どちらも薪ストーブでセルフロウリュ可能。大自然に囲まれた外気浴が最高。",
+    "saunakoCommentShort": "滝ダイブ×薪サウナの大自然体験！",
+    "saunakoCommentLong": "サウナ小屋が2種類あるのが贅沢だよね！「瀧のサウナ」では渓流の水風呂に入れるし、なんと滝ダイブもできちゃうの。「森のサウナ」はAesopのアメニティが揃ったラグジュアリー仕様。大自然に囲まれた外気浴は格別だよ。温泉も一緒に楽しめるのがいいよね。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "森のサウナ 貸切 平日 50分",
+        "price": 8000,
+        "duration": 50,
+        "capacity": 6
+      },
+      {
+        "name": "森のサウナ 貸切 土日祝 50分",
+        "price": 10000,
+        "duration": 50,
+        "capacity": 6
+      },
+      {
+        "name": "瀧のサウナ 貸切 平日 90分",
+        "price": 18000,
+        "duration": 90,
+        "capacity": 8
+      },
+      {
+        "name": "瀧のサウナ 貸切 土日祝 90分",
+        "price": 23000,
+        "duration": 90,
+        "capacity": 8
+      },
+      {
+        "name": "瀧のサウナ 相乗り 土日祝 90分",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": null,
+    "closedAt": null
+  },
+  {
+    "id": 331,
+    "slug": "kumanoko-sauna",
+    "name": "Kumanoko Sauna",
+    "prefecture": "wakayama",
+    "prefectureLabel": "和歌山県",
+    "city": "田辺市",
+    "area": "南紀",
+    "address": "和歌山県田辺市中辺路町高原1966",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 19000,
+    "duration": 1440,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "宿泊プランのみ（チェックイン15:00 / チェックアウト翌10:00）",
+    "holidays": "不定休",
+    "website": "https://sen-retreat.com/stay/takahara/",
+    "phone": "0739-64-0556",
+    "bookingUrl": "https://sen-retreat.com/stay/takahara/",
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "入浴セット",
+      "煎茶・ほうじ茶"
+    ],
+    "note": "熊野古道沿い・薪割り体験付き・100年紀州杉製サウナ・地元果実アロマ・SEN.RETREAT TAKAHARA併設",
+    "images": [],
+    "lat": 33.87,
+    "lng": 135.585,
+    "description": "世界遺産・熊野古道沿いの一棟貸し宿「SEN.RETREAT TAKAHARA」に併設された薪サウナ。100年紀州杉を使った手作りサウナで、薪割りから火入れまで自分で行う本格体験。地元果実のアロマロウリュと紀州杉の水風呂、標高300mの森での外気浴が楽しめる。",
+    "saunakoCommentShort": "熊野古道で薪割りサウナ体験！",
+    "saunakoCommentLong": "熊野古道のど真ん中で薪割りから始めるサウナなんて、他ではなかなかできない体験だよね！100年紀州杉のサウナ小屋は木の香りが最高だし、標高300mの森での外気浴は別世界。地元の果実アロマも贅沢だな〜。熊野古道トレッキングの後に入ったら、もう言葉にならないくらいととのいそう。",
+    "updatedAt": "2026-03-02",
+    "plans": [
+      {
+        "name": "1泊2食＋サウナ付 2名（平日）",
+        "price": 37000,
+        "duration": 1440,
+        "capacity": 2
+      },
+      {
+        "name": "1泊2食＋サウナ付 2名（休日）",
+        "price": 42000,
+        "duration": 1440,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": "2023-01-28",
+    "closedAt": null
   }
 ]
