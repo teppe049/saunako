@@ -65,7 +65,7 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
 
   const description = hasFilters
     ? `${filterParts.join('・')}の条件で個室・プライベートサウナを検索。料金・設備・アクセス情報を比較して、あなたにぴったりの施設を見つけよう。`
-    : '全国の個室・プライベートサウナを料金・エリア・設備で検索・比較。水風呂・ロウリュ・外気浴などこだわり条件で、あなたにぴったりの施設を見つけよう。';
+    : '全国の個室・プライベートサウナを料金・エリア・設備で検索・比較。貸切サウナも多数掲載。水風呂・ロウリュ・外気浴などこだわり条件で、あなたにぴったりの施設を見つけよう。';
 
   return {
     title,

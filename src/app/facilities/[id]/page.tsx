@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps) {
   if (facility.features.outdoorAir) featureTags.push('外気浴');
   if (facility.features.coupleOk) featureTags.push('カップルOK');
   if (featureTags.length > 0) descParts.push(featureTags.join('・'));
-  const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。';
+  const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。貸切・個室サウナの比較ならサウナ子。';
 
   return {
     title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室・プライベートサウナ | サウナ子`,
@@ -77,6 +77,64 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   const { sameArea, similarPrice } = getRelatedFacilities(facility, 3);
   const relatedArticles = getArticlesByFacilityId(Number(id));
+
+  // FAQ 構造化データ
+  const faqItems: { '@type': string; name: string; acceptedAnswer: { '@type': string; text: string } }[] = [];
+  if (facility.priceMin > 0) {
+    faqItems.push({
+      '@type': 'Question',
+      name: `${facility.name}の料金はいくらですか？`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${facility.name}は${facility.priceMin.toLocaleString()}円〜/${facility.duration}分から利用できます。`,
+      },
+    });
+  }
+  if (facility.nearestStation) {
+    faqItems.push({
+      '@type': 'Question',
+      name: `${facility.name}の最寄り駅はどこですか？`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分です。`,
+      },
+    });
+  }
+  faqItems.push({
+    '@type': 'Question',
+    name: `${facility.name}はカップルで利用できますか？`,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: facility.features.coupleOk
+        ? 'はい、カップルでのご利用が可能です。'
+        : 'カップル利用については施設に直接お問い合わせください。',
+    },
+  });
+  if (facility.businessHours && facility.businessHours !== '不明') {
+    faqItems.push({
+      '@type': 'Question',
+      name: `${facility.name}の営業時間は？`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `営業時間は${facility.businessHours}です。${facility.holidays && facility.holidays !== '不明' ? `定休日は${facility.holidays}です。` : ''}`,
+      },
+    });
+  }
+  if (facility.capacity > 0) {
+    faqItems.push({
+      '@type': 'Question',
+      name: `${facility.name}の最大利用人数は？`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `最大${facility.capacity}名まで利用できます。`,
+      },
+    });
+  }
+  const faqJsonLd = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems,
+  } : null;
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -169,6 +227,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <RecordVisit facilityId={facility.id} />
       <TrackFacilityView facilityId={facility.id} facilityName={facility.name} area={facility.prefectureLabel} />
       {/* 専用ヘッダー */}

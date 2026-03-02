@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   const customMeta = AREA_META[prefecture];
   const title = customMeta?.title ?? `${prefData.label}の個室・プライベートサウナ一覧 | サウナ子`;
-  const description = customMeta?.description ?? `${prefData.label}の個室・プライベートサウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
+  const description = customMeta?.description ?? `${prefData.label}の個室・プライベートサウナ・貸切サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
 
   return {
     title,
