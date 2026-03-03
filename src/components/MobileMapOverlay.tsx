@@ -146,7 +146,7 @@ function BottomSheetCard({
         <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
           <div>
             <h3 className="font-bold text-sm text-text-primary truncate">{facility.name}</h3>
-            {facility.nearestStation && facility.walkMinutes > 0 && (
+            {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
               <p className="text-[11px] text-text-tertiary mt-0.5">
                 {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
               </p>

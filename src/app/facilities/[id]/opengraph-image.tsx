@@ -38,7 +38,7 @@ export default async function OGImage({ params }: { params: Promise<{ id: string
   }
 
   const stationText =
-    facility.nearestStation && facility.walkMinutes > 0
+    facility.nearestStation && (facility.walkMinutes ?? 0) > 0
       ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`
       : null;
 

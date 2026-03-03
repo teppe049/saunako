@@ -369,7 +369,7 @@ function OverlayCard({ facility, onClose }: { facility: Facility; onClose: () =>
         <div className="p-3">
           <h3 className="font-bold text-sm text-text-primary mb-1 line-clamp-1">{facility.name}</h3>
 
-          {facility.nearestStation && facility.walkMinutes > 0 && (
+          {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
             <p className="text-xs text-text-tertiary mb-1.5">
               {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
             </p>

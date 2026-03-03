@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps) {
   // SEO: 検索意図に合う詳細なdescriptionを構築
   const descParts: string[] = [];
   descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ（プライベートサウナ）`);
-  if (facility.nearestStation && facility.walkMinutes > 0) {
+  if (facility.nearestStation && (facility.walkMinutes ?? 0) > 0) {
     descParts.push(`${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`);
   }
   if (facility.priceMin > 0) {
@@ -299,7 +299,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <h1 className="text-text-primary text-[22px] md:text-2xl font-bold">
                       {facility.name}
                     </h1>
-                    {facility.nearestStation && facility.walkMinutes > 0 && (
+                    {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
                       <p className="text-text-secondary mt-1 text-sm">
                         {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
                       </p>
@@ -557,7 +557,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <div className="flex">
                       <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">アクセス</dt>
                       <dd className="text-text-primary text-sm">
-                        {facility.nearestStation && facility.walkMinutes > 0
+                        {facility.nearestStation && (facility.walkMinutes ?? 0) > 0
                           ? `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`
                           : '詳細は公式サイトをご確認ください'}
                       </dd>

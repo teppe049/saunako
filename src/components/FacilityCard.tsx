@@ -38,7 +38,7 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
       <div className="p-4">
         <h3 className="font-bold text-text-primary mb-1">{facility.name}</h3>
 
-        {facility.nearestStation && facility.walkMinutes > 0 && (
+        {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
           <p className="text-sm text-text-secondary mb-2">
             {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
           </p>

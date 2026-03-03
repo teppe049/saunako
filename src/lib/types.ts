@@ -44,8 +44,8 @@ export interface Facility {
   city: string;
   area: string;
   address: string;
-  nearestStation: string;
-  walkMinutes: number;
+  nearestStation: string | null;
+  walkMinutes: number | null;
   priceMin: number;
   duration: number;
   capacity: number;
@@ -299,6 +299,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'ueno-asakusa', label: '上野・浅草', cities: ['台東区', '墨田区', '文京区', '江東区'] },
     { slug: 'ikebukuro', label: '池袋・赤羽', cities: ['北区', '豊島区'] },
     { slug: 'shinagawa', label: '品川', cities: ['品川区'] },
+    { slug: 'tama', label: '多摩', cities: ['小金井市'] },
   ],
   osaka: [
     { slug: 'kita', label: 'キタ', cities: ['大阪市北区', '大阪市福島区'] },
@@ -307,6 +308,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ],
   kyoto: [
     { slug: 'kyoto-city', label: '京都市内', cities: ['京都市左京区', '京都市北区', '京都市中京区', '京都市下京区', '京都市東山区'] },
+    { slug: 'other', label: 'その他', cities: ['京田辺市', '京丹後市'] },
   ],
   kanagawa: [
     { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区', '横浜市港北区'] },

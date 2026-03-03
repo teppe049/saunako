@@ -24,7 +24,7 @@ function FacilityCard({ id }: { id: number }) {
         </div>
         <div className="p-4">
           <h4 className="font-bold text-text-primary mb-1">{facility.name}</h4>
-          {facility.nearestStation && facility.walkMinutes > 0 && (
+          {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
             <p className="text-sm text-text-secondary mb-1">
               {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
             </p>
