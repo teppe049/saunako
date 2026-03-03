@@ -51,7 +51,7 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
       </div>
       {/* サムネイル: 画像が1枚以下の場合は非表示 */}
       {images.length > 1 && (
-        <div className="flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
+        <div className="hidden md:flex gap-1 md:gap-2 overflow-x-auto py-1 px-0 md:pb-2 md:pt-2">
           {images.map((img, i) => (
             <div
               key={i}

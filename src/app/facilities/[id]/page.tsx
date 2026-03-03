@@ -285,7 +285,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             <div className="flex flex-col">
               {/* a. Image Gallery */}
               <ImageGallery images={facility.images} facilityName={facility.name} />
-              <p className="text-xs text-gray-400 px-4 pt-2 md:px-0">
+              <p className="hidden md:block text-xs text-gray-400 px-4 pt-2 md:px-0">
                 ※ 画像は各施設の公式サイトより引用しています。掲載に問題がある場合はお問い合わせください。
               </p>
 
