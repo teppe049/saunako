@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useMemo, useSyncExternalStore } from 'react';
+import { useState, useRef, useCallback, useMemo, useEffect, useSyncExternalStore } from 'react';
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
@@ -28,6 +28,7 @@ export default function SearchInteractivePanel({ facilities }: Props) {
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [pendingBounds, setPendingBounds] = useState<MapBounds | null>(null);
   const [mobileMapOpen, setMobileMapOpen] = useState(false);
+  const [displayCount, setDisplayCount] = useState(20);
   const isInitialBounds = useRef(true);
   const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
@@ -47,6 +48,13 @@ export default function SearchInteractivePanel({ facilities }: Props) {
     if (!isMapVisible || !mapBounds) return facilities;
     return facilities.filter((f) => isInBounds(f, mapBounds));
   }, [facilities, mapBounds, isMapVisible]);
+
+  const PAGE_SIZE = 20;
+  // Reset pagination when filter/map bounds change the visible set
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { setDisplayCount(PAGE_SIZE); }, [visibleFacilities]);
+  const displayedFacilities = visibleFacilities.slice(0, displayCount);
+  const remainingCount = visibleFacilities.length - displayCount;
 
   const handleMapSelect = useCallback((facility: Facility) => {
     setSelectedId(facility.id);
@@ -98,7 +106,7 @@ export default function SearchInteractivePanel({ facilities }: Props) {
         )}
 
         <div className="px-4 md:px-0 py-2 md:py-0 flex flex-col gap-3 md:gap-0">
-          {visibleFacilities.map((facility, index) => (
+          {displayedFacilities.map((facility, index) => (
             <FacilityListCard
               key={facility.id}
               ref={(el) => setCardRef(facility.id, el)}
@@ -110,6 +118,18 @@ export default function SearchInteractivePanel({ facilities }: Props) {
             />
           ))}
         </div>
+
+        {/* もっと見るボタン */}
+        {remainingCount > 0 && (
+          <div className="px-4 md:px-5 py-4 flex justify-center">
+            <button
+              onClick={() => setDisplayCount((prev) => prev + PAGE_SIZE)}
+              className="w-full max-w-md py-3 rounded-lg border border-border text-sm font-medium text-text-secondary hover:border-primary hover:text-primary transition-colors bg-white"
+            >
+              もっと見る（残り{remainingCount}件）
+            </button>
+          </div>
+        )}
 
         {/* 広告ユニット: リスト下部 */}
         {visibleFacilities.length > 0 && (

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
+import { AREA_GROUPS, REGION_GROUPS } from '@/lib/types';
 import { getAreaFacilityCounts } from '@/lib/facilities';
 import { trackSearch, trackFilterChange } from '@/lib/analytics';
 
@@ -55,8 +55,8 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
   const [showFilterSheet, setShowFilterSheet] = useState(false);
 
-  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]);
-  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length;
+  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax');
+  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0);
 
   // 検索結果表示時にsearchイベントを送信
   const hasTrackedSearch = useRef(false);
@@ -100,8 +100,6 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     if (area) params.set('area', area);
     const sort = searchParams.get('sort');
     if (sort) params.set('sort', sort);
-    const duration = searchParams.get('duration');
-    if (duration) params.set('duration', duration);
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -150,6 +148,17 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
+  const handlePriceMaxChange = (value: string) => {
+    trackFilterChange('priceMax', value || 'all');
+    const params = new URLSearchParams(searchParams.toString());
+    if (value) {
+      params.set('priceMax', value);
+    } else {
+      params.delete('priceMax');
+    }
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
+
   const showAreaRow = prefectureCode && AREA_GROUPS[prefectureCode];
   const areaCounts = prefectureCode ? getAreaFacilityCounts(prefectureCode) : {};
   const areas = prefectureCode ? AREA_GROUPS[prefectureCode] : undefined;
@@ -189,8 +198,12 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
             data-track-click="prefecture_select"
           >
             <option value="">全国</option>
-            {PREFECTURES.map((p) => (
-              <option key={p.code} value={p.code}>{p.label}</option>
+            {REGION_GROUPS.map((region) => (
+              <optgroup key={region.label} label={region.label}>
+                {region.prefectures.map((p) => (
+                  <option key={p.code} value={p.code}>{p.label}</option>
+                ))}
+              </optgroup>
             ))}
           </select>
           {CHEVRON_SVG}
@@ -317,6 +330,23 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
             </select>
             {CHEVRON_SVG}
           </div>
+
+          <div className="relative inline-flex items-center">
+            <select
+              aria-label="予算"
+              value={searchParams.get('priceMax') || ''}
+              onChange={(e) => handlePriceMaxChange(e.target.value)}
+              className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
+            >
+              <option value="">予算</option>
+              <option value="3000">〜3,000円</option>
+              <option value="5000">〜5,000円</option>
+              <option value="10000">〜10,000円</option>
+              <option value="15000">〜15,000円</option>
+              <option value="20000">〜20,000円</option>
+            </select>
+            {CHEVRON_SVG}
+          </div>
         </div>
       </div>
 
@@ -373,7 +403,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
                 </div>
               </div>
 
-              {/* Sort + Duration */}
+              {/* Sort + Duration + Price */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <p className="text-[13px] font-medium text-text-tertiary mb-2" id="sort-label-mobile">並び順</p>
@@ -407,6 +437,25 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
                       <option value="90">90分〜</option>
                       <option value="120">120分〜</option>
                       <option value="180">180分〜</option>
+                    </select>
+                    {CHEVRON_SVG}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[13px] font-medium text-text-tertiary mb-2" id="price-label-mobile">予算</p>
+                  <div className="relative">
+                    <select
+                      aria-labelledby="price-label-mobile"
+                      value={searchParams.get('priceMax') || ''}
+                      onChange={(e) => handlePriceMaxChange(e.target.value)}
+                      className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
+                    >
+                      <option value="">すべて</option>
+                      <option value="3000">〜3,000円</option>
+                      <option value="5000">〜5,000円</option>
+                      <option value="10000">〜10,000円</option>
+                      <option value="15000">〜15,000円</option>
+                      <option value="20000">〜20,000円</option>
                     </select>
                     {CHEVRON_SVG}
                   </div>
