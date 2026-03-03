@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Users, Banknote, MapPin, User, Search, Clock } from 'lucide-react';
-import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
+import { AREA_GROUPS, REGION_GROUPS, getRegionByCode } from '@/lib/types';
 
 const PRICE_MIN = 0;
 const PRICE_MAX = 30000;
@@ -19,7 +19,9 @@ export default function HeroSearchForm() {
   const router = useRouter();
   const [coupleOk, setCoupleOk] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
-  const [selectedLocation, setSelectedLocation] = useState('tokyo');
+  const [selectedRegion, setSelectedRegion] = useState('kanto');
+  const [selectedPrefecture, setSelectedPrefecture] = useState('tokyo');
+  const [selectedArea, setSelectedArea] = useState('');
   const [guests, setGuests] = useState('2');
   const [duration, setDuration] = useState('');
 
@@ -33,13 +35,25 @@ export default function HeroSearchForm() {
     setPriceRange(([min]) => [min, Math.max(val, min + PRICE_STEP)]);
   }, []);
 
+  const handleRegionChange = (value: string) => {
+    setSelectedRegion(value);
+    setSelectedPrefecture('');
+    setSelectedArea('');
+  };
+
+  const handlePrefectureChange = (value: string) => {
+    setSelectedPrefecture(value);
+    setSelectedArea('');
+  };
+
+  const currentRegion = selectedRegion ? getRegionByCode(selectedRegion) : undefined;
+  const currentAreas = selectedPrefecture ? AREA_GROUPS[selectedPrefecture] : undefined;
+
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (selectedLocation) {
-      const [pref, area] = selectedLocation.split(':');
-      if (pref) params.set('prefecture', pref);
-      if (area) params.set('area', area);
-    }
+    if (selectedRegion) params.set('region', selectedRegion);
+    if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
+    if (selectedArea) params.set('area', selectedArea);
     if (guests) params.set('capacity', guests);
     if (coupleOk) params.set('coupleOk', 'true');
     if (duration) params.set('duration', duration);
@@ -59,30 +73,51 @@ export default function HeroSearchForm() {
   return (
     <div className="bg-surface rounded-2xl border border-border shadow-lg px-4 py-5 md:px-10 md:py-8 max-w-3xl mx-auto">
       <div className="grid grid-cols-3 md:grid-cols-2 gap-2.5 md:gap-4">
-        {/* Area - full width */}
+        {/* Area - region + prefecture + area selects */}
         <div className="col-span-3 md:col-span-1 flex flex-col gap-1.5">
-          <label htmlFor="hero-area" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
+          <label htmlFor="hero-region" className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
             <MapPin size={12} />
             エリア
           </label>
-          <select
-            id="hero-area"
-            value={selectedLocation}
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 text-text-primary text-sm"
-          >
-            <option value="">全国</option>
-            {PREFECTURES.map((pref) => (
-              <optgroup key={pref.code} label={pref.label}>
-                <option value={pref.code}>{pref.label} すべて</option>
-                {(AREA_GROUPS[pref.code] || []).map((group) => (
-                  <option key={group.slug} value={`${pref.code}:${group.slug}`}>
-                    {group.label}
-                  </option>
+          <div className="flex gap-2">
+            <select
+              id="hero-region"
+              value={selectedRegion}
+              onChange={(e) => handleRegionChange(e.target.value)}
+              className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-3 text-text-primary text-sm flex-1 min-w-0"
+            >
+              <option value="">全国</option>
+              {REGION_GROUPS.map((r) => (
+                <option key={r.code} value={r.code}>{r.label}</option>
+              ))}
+            </select>
+            {currentRegion && (
+              <select
+                aria-label="都道府県"
+                value={selectedPrefecture}
+                onChange={(e) => handlePrefectureChange(e.target.value)}
+                className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-3 text-text-primary text-sm flex-1 min-w-0"
+              >
+                <option value="">すべて</option>
+                {currentRegion.prefectures.map((p) => (
+                  <option key={p.code} value={p.code}>{p.label}</option>
                 ))}
-              </optgroup>
-            ))}
-          </select>
+              </select>
+            )}
+            {currentAreas && currentAreas.length > 0 && (
+              <select
+                aria-label="エリア"
+                value={selectedArea}
+                onChange={(e) => setSelectedArea(e.target.value)}
+                className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-3 text-text-primary text-sm flex-1 min-w-0"
+              >
+                <option value="">すべて</option>
+                {currentAreas.map((a) => (
+                  <option key={a.slug} value={a.slug}>{a.label}</option>
+                ))}
+              </select>
+            )}
+          </div>
         </div>
 
         {/* Price Range - full width */}
