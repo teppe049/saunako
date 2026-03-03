@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Users, Banknote, MapPin, User, Search, Clock } from 'lucide-react';
-import { AREA_GROUPS, REGION_GROUPS, getRegionByCode } from '@/lib/types';
+import { REGION_GROUPS, getRegionByCode } from '@/lib/types';
 
 const PRICE_MIN = 0;
 const PRICE_MAX = 30000;
@@ -21,7 +21,6 @@ export default function HeroSearchForm() {
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
   const [selectedRegion, setSelectedRegion] = useState('kanto');
   const [selectedPrefecture, setSelectedPrefecture] = useState('tokyo');
-  const [selectedArea, setSelectedArea] = useState('');
   const [guests, setGuests] = useState('2');
   const [duration, setDuration] = useState('');
 
@@ -38,22 +37,14 @@ export default function HeroSearchForm() {
   const handleRegionChange = (value: string) => {
     setSelectedRegion(value);
     setSelectedPrefecture('');
-    setSelectedArea('');
-  };
-
-  const handlePrefectureChange = (value: string) => {
-    setSelectedPrefecture(value);
-    setSelectedArea('');
   };
 
   const currentRegion = selectedRegion ? getRegionByCode(selectedRegion) : undefined;
-  const currentAreas = selectedPrefecture ? AREA_GROUPS[selectedPrefecture] : undefined;
 
   const handleSearch = () => {
     const params = new URLSearchParams();
     if (selectedRegion) params.set('region', selectedRegion);
     if (selectedPrefecture) params.set('prefecture', selectedPrefecture);
-    if (selectedArea) params.set('area', selectedArea);
     if (guests) params.set('capacity', guests);
     if (coupleOk) params.set('coupleOk', 'true');
     if (duration) params.set('duration', duration);
@@ -95,25 +86,12 @@ export default function HeroSearchForm() {
               <select
                 aria-label="都道府県"
                 value={selectedPrefecture}
-                onChange={(e) => handlePrefectureChange(e.target.value)}
+                onChange={(e) => setSelectedPrefecture(e.target.value)}
                 className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-3 text-text-primary text-sm flex-1 min-w-0"
               >
                 <option value="">すべて</option>
                 {currentRegion.prefectures.map((p) => (
                   <option key={p.code} value={p.code}>{p.label}</option>
-                ))}
-              </select>
-            )}
-            {currentAreas && currentAreas.length > 0 && (
-              <select
-                aria-label="エリア"
-                value={selectedArea}
-                onChange={(e) => setSelectedArea(e.target.value)}
-                className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-3 text-text-primary text-sm flex-1 min-w-0"
-              >
-                <option value="">すべて</option>
-                {currentAreas.map((a) => (
-                  <option key={a.slug} value={a.slug}>{a.label}</option>
                 ))}
               </select>
             )}
