@@ -13,8 +13,21 @@ type AreaOption = {
   label: string;
   subtitle: string;
   reading: string;
+  cities: string;
+  weight: number;
   prefecture: string;
   area?: string;
+};
+
+// 施設数ベースの都道府県重み（多い順）
+const PREF_WEIGHTS: Record<string, number> = {
+  tokyo: 50, osaka: 25, kanagawa: 20, saitama: 18, chiba: 16,
+  aichi: 16, fukuoka: 15, hokkaido: 14, kyoto: 14, hyogo: 13,
+  shizuoka: 12, nagano: 12, gunma: 11, tochigi: 11, ibaraki: 10,
+  miyagi: 10, yamanashi: 10, niigata: 9, hiroshima: 8, okinawa: 8,
+  fukushima: 8, yamagata: 8, nagasaki: 7, kagoshima: 7, kumamoto: 7,
+  oita: 7, shiga: 6, toyama: 6, ishikawa: 6, mie: 5,
+  wakayama: 5, okayama: 5, shimane: 5, tottori: 5,
 };
 
 // 都道府県・エリア名 → ひらがな読み
@@ -92,10 +105,17 @@ const READINGS: Record<string, string> = {
 const AREA_OPTIONS: AreaOption[] = (() => {
   const options: AreaOption[] = [];
   for (const pref of PREFECTURES) {
+    const prefWeight = PREF_WEIGHTS[pref.code] ?? 3;
+    // 都道府県オプション: 配下の全citiesを検索キーワードに
+    const allCities = (AREA_GROUPS[pref.code] ?? [])
+      .flatMap((a) => a.cities)
+      .join(' ');
     options.push({
       label: pref.label,
       subtitle: '',
       reading: READINGS[pref.label] ?? '',
+      cities: allCities,
+      weight: prefWeight,
       prefecture: pref.code,
     });
     const areas = AREA_GROUPS[pref.code];
@@ -105,6 +125,8 @@ const AREA_OPTIONS: AreaOption[] = (() => {
           label: area.label,
           subtitle: pref.label,
           reading: READINGS[area.label] ?? '',
+          cities: area.cities.join(' '),
+          weight: prefWeight + (area.cities.length > 2 ? 2 : 0),
           prefecture: pref.code,
           area: area.slug,
         });
@@ -140,8 +162,18 @@ export default function HeroSearchForm() {
         (o) =>
           o.label.includes(query) ||
           o.subtitle.includes(query) ||
-          o.reading.includes(query)
-      ).slice(0, 10)
+          o.reading.includes(query) ||
+          o.cities.includes(query)
+      )
+      .sort((a, b) => {
+        // 前方一致を優先（label or reading）
+        const aPrefix = a.label.startsWith(query) || a.reading.startsWith(query) ? 1 : 0;
+        const bPrefix = b.label.startsWith(query) || b.reading.startsWith(query) ? 1 : 0;
+        if (aPrefix !== bPrefix) return bPrefix - aPrefix;
+        // 同じなら重みで
+        return b.weight - a.weight;
+      })
+      .slice(0, 10)
     : [];
 
   // Close on outside click
