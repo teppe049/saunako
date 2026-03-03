@@ -1999,7 +1999,18 @@
     "website": "https://s3cgrs.jp/",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "綿棒"
+    ],
     "note": "都内最安級",
     "images": [
       "/facilities/25-0.webp",
@@ -2289,7 +2300,16 @@
     "website": "https://mente-salon.com/",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "Bluetooth"
+    ],
     "note": "男性専用ラグジュアリー",
     "images": [
       "/facilities/28-0.webp",
@@ -2431,7 +2451,10 @@
     "website": "https://hotters24.com/",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "会員制/ビジター可",
     "images": [
       "/facilities/30-0.webp",
@@ -2485,7 +2508,14 @@
     "website": "https://www.prussauna.com/umedakitashinchi",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "サウナハット貸出"
+    ],
     "note": "2025年9月OPEN",
     "images": [
       "/facilities/31-0.webp",
@@ -2545,7 +2575,9 @@
     "website": "https://haaave.net/",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "テレビ"
+    ],
     "note": "会員制/和モダン",
     "images": [
       "/facilities/32-0.webp",
@@ -12867,7 +12899,11 @@
     "website": "https://www.instagram.com/quietstormnasu/",
     "phone": "090-6455-1185",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ"
+    ],
     "note": "タオル・サンダル・飲み物は持参推奨。予約はInstagram DMまたは電話",
     "images": [
       "/facilities/150-0.webp",
@@ -15786,7 +15822,13 @@
     "website": "https://karankoron.denen.biz/",
     "phone": "0172-44-4210",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "テレビ",
+      "Bluetooth"
+    ],
     "note": "半露天風呂付き、4名以上は追加料金、岩木山ビュー",
     "images": [
       "/facilities/206-0.webp",
@@ -15833,7 +15875,10 @@
     "website": "https://www.sarukurasauna.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "元湯 猿倉温泉内。サウナ2.5h+休憩1.5hの計4h。天然湧水水風呂、硫黄泉露天風呂付き",
     "images": [
       "/facilities/207-0.webp",
@@ -15880,7 +15925,11 @@
     "website": "https://towadasauna.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "サウナハット貸出"
+    ],
     "note": "バレルサウナ、十和田湖ダイブが水風呂代わり、土日祝26,000円、5名以上追加料金",
     "images": [
       "/facilities/208-0.webp",
@@ -15927,7 +15976,11 @@
     "website": "https://unitedaomori.site/",
     "phone": null,
     "bookingUrl": "https://unitedaomori.rezio.shop/ja-JP/product/8I3HBD",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ"
+    ],
     "note": "サウナカー（青森ヒバ製）、地下水水風呂、水着着用必須",
     "images": [
       "/facilities/209-0.webp",
@@ -16116,7 +16169,11 @@
     "website": "https://www.the-campus.info/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "ポンチョ"
+    ],
     "note": "テントサウナ1人1,500円/2h。水風呂（深さ120cm）、薪サウナもあり",
     "images": [
       "/facilities/213-0.webp",
@@ -16163,7 +16220,17 @@
     "website": "https://www.lastsauna.com/",
     "phone": "022-263-2220",
     "bookingUrl": "https://coubic.com/lastsauna/booking_pages",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
     "note": "完全個室5部屋、全室水風呂完備、アロマロウリュ対応、男女同室OK",
     "images": [
       "/facilities/214-0.webp",
@@ -16210,7 +16277,9 @@
     "website": "https://www.sauna-kuro.com/",
     "phone": "022-290-0866",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "ボディソープ"
+    ],
     "note": "完全個室4部屋、チラー15℃水風呂、照明調整可能、イオンモール新利府内",
     "images": [
       "/facilities/215-0.webp",
@@ -16305,7 +16374,10 @@
     "website": "https://l-p-design.com/news/sauna",
     "phone": "0223-29-4830",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "メゾネット型、焚火・ピザ窯あり、チラー水風呂、2名〜利用",
     "images": [
       "/facilities/217-0.webp",
@@ -16402,7 +16474,9 @@
     "website": "https://www.sportsplus.net.in/sauna",
     "phone": "080-2389-3818",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー"
+    ],
     "note": "90℃サウナ、15℃水風呂、セルフロウリュ、インフィニティチェア",
     "images": [
       "/facilities/219-0.webp",
@@ -16496,7 +16570,11 @@
     "website": "https://crands-sauna.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "ポンチョ"
+    ],
     "note": "フィンランド式低温高湿60-70℃、コテージ併設、1日2組限定、妊婦利用可",
     "images": [
       "/facilities/221-0.webp",
@@ -16543,7 +16621,17 @@
     "website": "http://camosiba.com/musiro-sauna",
     "phone": "0182-23-5336",
     "bookingUrl": "https://www.asoview.com/item/activity/pln3000041469/",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "Bluetooth"
+    ],
     "note": "蔵リノベーション、スウェーデン製Tyloストーブ、味噌樽水風呂、クラフトサイダー醸造所併設",
     "images": [
       "/facilities/222-0.webp",
@@ -16590,7 +16678,10 @@
     "website": "https://regionshostel.com/",
     "phone": "0182-35-5539",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "100℃サウナ、ラジウム鉱石、ルーフトップ外気浴、1日1組限定",
     "images": [
       "/facilities/223-0.webp",
@@ -16637,7 +16728,14 @@
     "website": "https://solena-sauna.com/",
     "phone": "023-609-9549",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー"
+    ],
     "note": "同性同士のみ利用可。LED15色切替・風景映像ディスプレイ・アロマ水完備",
     "images": [
       "/facilities/224-0.webp",
@@ -16684,7 +16782,9 @@
     "website": "https://www.trip-orks.jp/",
     "phone": "023-673-0221",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー"
+    ],
     "note": "薪サウナ・ドライサウナ・スチームサウナの3種完備。水着着用で男女一緒に利用可。壺風呂水風呂あり",
     "images": [
       "/facilities/225-0.webp",
@@ -16731,7 +16831,14 @@
     "website": "https://www.hakkosauna.jp/",
     "phone": "023-616-4528",
     "bookingUrl": "https://coubic.com/hakko-satoyama/593481",
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "サウナマット",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
     "note": "薪ストーブ使用のバレル型サウナ。天然地下水かけ流し水風呂",
     "images": [
       "/facilities/226-0.webp",
@@ -16778,7 +16885,14 @@
     "website": "https://zaospa.co.jp/sauna",
     "phone": "023-693-1212",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー"
+    ],
     "note": "新左衛門の湯内。1名専用。最高120℃サウナ、アロマロウリュ4種、冷やし温泉の水風呂、外気浴テラス",
     "images": [
       "/facilities/227-0.webp",
@@ -16825,7 +16939,18 @@
     "website": "https://kiitos-village.jp/",
     "phone": "023-676-5529",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "綿棒"
+    ],
     "note": "2名以上から利用可。ドライサウナ・テントサウナ・湧き水水風呂・75インチTV完備。カフェ併設",
     "images": [
       "/facilities/228-0.webp",
@@ -16872,7 +16997,18 @@
     "website": "https://sauna-tsukiakari.itiraku.com/",
     "phone": "023-654-3311",
     "bookingUrl": "https://reserva.be/sauna_tsukiakari",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔料",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液",
+      "綿棒"
+    ],
     "note": "湯坊いちらく内。フィンランド式85-90℃、露天風呂（温泉42℃）付き",
     "images": [
       "/facilities/229-0.webp",
@@ -16919,7 +17055,14 @@
     "website": "https://onogawa-sauna.jp/",
     "phone": "0238-32-2611",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "化粧水"
+    ],
     "note": "温度調整可能なサウナ＆水風呂。源泉100%かけ流し温泉付き。カップルOK",
     "images": [
       "/facilities/230-0.webp",
@@ -16966,7 +17109,9 @@
     "website": "https://kogenyu.com/",
     "phone": "023-616-3717",
     "bookingUrl": "https://coubic.com/kogenyu",
-    "amenities": [],
+    "amenities": [
+      "シャンプー"
+    ],
     "note": "標高1,000m。入浴+サウナ2h 1,600円。アロマ数十種類、プール・酸素カプセル併設",
     "images": [
       "/facilities/231-0.webp",
@@ -17059,7 +17204,14 @@
     "website": "https://f-tuuli.jp/",
     "phone": "024-572-3588",
     "bookingUrl": "https://iareserve01.i-asp.ne.jp/reservle/Ftuuli.html",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー"
+    ],
     "note": "個室サウナ3部屋（ホワイトバーチ/ストーン/フレイム）＋大部屋サウナ。Bluetooth対応",
     "images": [
       "/facilities/233-0.webp",
@@ -17106,7 +17258,14 @@
     "website": "https://www.instagram.com/bunkado.sauna/",
     "phone": "024-573-1590",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
     "note": "バレルサウナ、屋上外気浴、水着着用で男女利用可。ベーグルカフェ併設",
     "images": [
       "/facilities/234-0.webp",
@@ -17151,7 +17310,11 @@
     "website": "https://hokushin1987.com/sauna/",
     "phone": "080-2802-0138",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "サウナハット貸出"
+    ],
     "note": "福島産アロマ使用。2種水風呂（極冷・ぬるめ）。水着着用で男女利用可",
     "images": [
       "/facilities/235-0.webp",
@@ -17196,7 +17359,11 @@
     "website": "https://hace.jp/private-sauna-sahakomae/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ"
+    ],
     "note": "無人営業。桶型水風呂。水着持参必須。LINE予約",
     "images": [
       "/facilities/236-0.webp",
@@ -17332,7 +17499,9 @@
     "website": "https://aire-caliente.com/sauna",
     "phone": "090-6628-1359",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー"
+    ],
     "note": "テラヘルツ鉱石使用。最高105℃。屋外プール水風呂18℃",
     "images": [
       "/facilities/239-0.webp",
@@ -17471,7 +17640,10 @@
     "website": "https://www.sauna9.com/shirakawa-opening",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "古民家一棟貸し。江戸時代の蔵をリノベーションした蔵サウナ。2025年12月3日開業。宿泊プランあり",
     "images": [
       "/facilities/242-0.webp",
@@ -18793,7 +18965,9 @@
     "website": "https://saunamuku.com/",
     "phone": "090-9354-8947",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー"
+    ],
     "note": "八ヶ岳山麓のプライベートサウナ。薪ストーブ式フィンランドサウナ。オプションでドラム缶風呂(3,500円)、シーシャ(2,500円)、焚き火(3,000円)あり。手ぶらセット1,200円。",
     "images": [
       "/facilities/261-0.webp",
@@ -18865,7 +19039,16 @@
     "website": "https://sauna-cafe-en.com/",
     "phone": "0266-75-1113",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "化粧水",
+      "乳液"
+    ],
     "note": "完全個室のプラズマミストサウナとバレルサウナを完備。カフェメニューも楽しめる。レプトンウォーター飲み放題。",
     "images": [
       "/facilities/262-0.webp",
@@ -18919,7 +19102,13 @@
     "website": "https://www.hyva-sauna.com/",
     "phone": null,
     "bookingUrl": "https://select-type.com/rsv/?id=c2r4ZuPITyo",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "フィンランド製サウナストーブ使用。アロマウォーターでセルフロウリュ。1日4枠の完全予約制。木曜日は終日レディースデー。",
     "images": [
       "/facilities/263-0.webp",
@@ -19166,7 +19355,14 @@
     "website": "https://bacoresort.com/",
     "phone": null,
     "bookingUrl": "https://jubilant-s.com/baco-resort/",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー"
+    ],
     "note": "グランピング施設併設の「川ダイブサウナ」。バレルサウナで蒸されたあと清流にダイブ。リクライニングチェア付き川辺の整いスペース。上田駅からシャトルバスあり。",
     "images": [
       "/facilities/267-0.webp",
@@ -19220,7 +19416,11 @@
     "website": "https://en.shimashimahouse.com/sauna",
     "phone": null,
     "bookingUrl": "https://coubic.com/shimashima-sauna",
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "水・ミネラルウォーター"
+    ],
     "note": "ゲストハウスしましま併設の貸切サウナ。上高地への玄関口に位置。フィンランド式薪ストーブ使用。",
     "images": [
       "/facilities/268-0.webp",
@@ -19355,7 +19555,12 @@
     "website": "https://furobakka.com/",
     "phone": null,
     "bookingUrl": "https://coubic.com/furobakka2023/booking_pages",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "ボディソープ",
+      "ドライヤー",
+      "サウナマット"
+    ],
     "note": "道の駅KOKOくろべ隣接の温浴テーマパーク。黒部名水使用。貸切サウナは7棟（バレル4・コンテナ3）。薪ストーブ。大浴場もあり。季節により料金変動。",
     "images": [
       "/facilities/270-0.webp",
@@ -19415,7 +19620,11 @@
     "website": "https://www.tateyamasauna.com/",
     "phone": "090-8264-7120",
     "bookingUrl": "https://coubic.com/tateyama-sauna",
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "サウナマット",
+      "フェイスタオル"
+    ],
     "note": "崖の上の絶景アウトドアサウナ。1日3組限定の完全貸切。立山連峰の雪解け水を水風呂に使用。宿泊プランあり(45,000円〜)。冬季は雪ダイブも。",
     "images": [
       "/facilities/271-0.webp",
@@ -19475,7 +19684,11 @@
     "website": "https://sauna.tuji-waku.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "サウナマット"
+    ],
     "note": "スーパー銭湯併設の完全貸切サウナ。立山連峰の伏流水を使った11度の水風呂が自慢。3名まで推奨。大浴場入浴料(500円)別途。冬季休業の場合あり。",
     "images": [
       "/facilities/272-0.webp",
@@ -19667,7 +19880,12 @@
     "website": "https://en.toyama-glamping.com/",
     "phone": "076-474-0081",
     "bookingUrl": "https://onedive.jp/sauna/",
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル",
+      "ポンチョ",
+      "サウナハット貸出"
+    ],
     "note": "グランピング施設併設のプライベートサウナ。フィンランドHARVIA薪ストーブのバレルサウナ。富山湾を望む絶景デッキで外気浴。宿泊プランもあり(24,800円〜/名)。日帰りは11:00-14:00の1枠。",
     "images": [
       "/facilities/275-0.webp",
@@ -25283,7 +25501,14 @@
     "website": "https://www.instagram.com/tassauna/",
     "phone": "080-4030-3078",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "フェイスタオル",
+      "バスタオル",
+      "サウナハット貸出",
+      "水・ミネラルウォーター"
+    ],
     "note": "観音寺駅から車約15分。HARVIA製ストーブ2基搭載。貸切プランあり。水着持参推奨（レンタル550円）。要予約",
     "images": [
       "/facilities/355-0.webp",
@@ -25773,7 +25998,10 @@
     "website": "https://www.saunagrempia.com/",
     "phone": "088-802-5895",
     "bookingUrl": "https://coubic.com/saunagrempia/985394",
-    "amenities": [],
+    "amenities": [
+      "フェイスタオル",
+      "バスタオル"
+    ],
     "note": "高知駅から車約10分。サウナシュラン2021選出。ヒノキ個室サウナは完全予約制。ソロ利用で2,500円キャッシュバックあり。パブリックサウナ（2,500円）も併設",
     "images": [
       "/facilities/363-0.webp",
