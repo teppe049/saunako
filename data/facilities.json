@@ -16024,7 +16024,7 @@
     },
     "businessHours": "月-金9:00〜20:00／土9:00〜18:00／日9:00〜14:00",
     "holidays": "不定休",
-    "website": "https://www.instagram.com/saunakenkyujo/",
+    "website": "https://medifitusui.com/sauna/",
     "phone": null,
     "bookingUrl": "https://reserva.be/medifitusui/about",
     "amenities": [
@@ -16033,7 +16033,8 @@
     "note": "メディフィットクラブうすい内。水温調整機能付き水風呂、照明・音楽カスタマイズ可能、医師監修",
     "images": [
       "/facilities/210-0.webp",
-      "/facilities/210-1.webp"
+      "/facilities/210-1.webp",
+      "/facilities/210-2.webp"
     ],
     "lat": 39.747686,
     "lng": 141.165268,
@@ -17318,7 +17319,8 @@
     "note": "福島産アロマ使用。2種水風呂（極冷・ぬるめ）。水着着用で男女利用可",
     "images": [
       "/facilities/235-0.webp",
-      "/facilities/235-1.webp"
+      "/facilities/235-1.webp",
+      "/facilities/235-2.webp"
     ],
     "lat": 36.98577,
     "lng": 140.901413,
