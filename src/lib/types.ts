@@ -134,18 +134,25 @@ export const PREFECTURES: Prefecture[] = [
 ];
 
 export interface RegionGroup {
+  code: string;
   label: string;
   prefectures: Prefecture[];
 }
 
+export function getRegionByCode(code: string): RegionGroup | undefined {
+  return REGION_GROUPS.find((r) => r.code === code);
+}
+
 export const REGION_GROUPS: RegionGroup[] = [
   {
+    code: 'hokkaido',
     label: '北海道',
     prefectures: [
       { code: 'hokkaido', label: '北海道' },
     ],
   },
   {
+    code: 'tohoku',
     label: '東北',
     prefectures: [
       { code: 'aomori', label: '青森県' },
@@ -157,6 +164,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'koshinetsu-hokuriku',
     label: '甲信越・北陸',
     prefectures: [
       { code: 'niigata', label: '新潟県' },
@@ -168,6 +176,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'kanto',
     label: '関東',
     prefectures: [
       { code: 'tokyo', label: '東京都' },
@@ -180,6 +189,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'tokai',
     label: '東海',
     prefectures: [
       { code: 'shizuoka', label: '静岡県' },
@@ -189,6 +199,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'kansai',
     label: '関西',
     prefectures: [
       { code: 'shiga', label: '滋賀県' },
@@ -200,6 +211,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'chugoku',
     label: '中国',
     prefectures: [
       { code: 'tottori', label: '鳥取県' },
@@ -210,6 +222,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'shikoku',
     label: '四国',
     prefectures: [
       { code: 'tokushima', label: '徳島県' },
@@ -219,6 +232,7 @@ export const REGION_GROUPS: RegionGroup[] = [
     ],
   },
   {
+    code: 'kyushu-okinawa',
     label: '九州・沖縄',
     prefectures: [
       { code: 'fukuoka', label: '福岡県' },

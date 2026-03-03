@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AREA_GROUPS, REGION_GROUPS } from '@/lib/types';
+import { AREA_GROUPS, REGION_GROUPS, getRegionByCode } from '@/lib/types';
 import { getAreaFacilityCounts } from '@/lib/facilities';
 import { trackSearch, trackFilterChange } from '@/lib/analytics';
 
@@ -13,6 +13,7 @@ interface SearchHeaderBarProps {
   filteredCount: number;
   prefectureLabel?: string;
   prefectureCode?: string;
+  regionCode?: string;
   areaSlug?: string;
 }
 
@@ -39,7 +40,7 @@ const CHEVRON_SVG = (
   </svg>
 );
 
-export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, areaSlug }: SearchHeaderBarProps) {
+export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug }: SearchHeaderBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -94,12 +95,27 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     });
 
     const params = new URLSearchParams();
+    const region = searchParams.get('region');
+    if (region) params.set('region', region);
     const prefecture = searchParams.get('prefecture');
     if (prefecture) params.set('prefecture', prefecture);
     const area = searchParams.get('area');
     if (area) params.set('area', area);
     const sort = searchParams.get('sort');
     if (sort) params.set('sort', sort);
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
+
+  const handleRegionChange = (value: string) => {
+    trackFilterChange('region', value || 'all');
+    const params = new URLSearchParams(searchParams.toString());
+    if (value) {
+      params.set('region', value);
+    } else {
+      params.delete('region');
+    }
+    params.delete('prefecture');
+    params.delete('area');
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -112,6 +128,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
       params.delete('prefecture');
     }
     params.delete('area');
+    // Keep region in URL
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -188,26 +205,45 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           <span className="hidden md:inline font-bold text-lg text-text-primary">サウナ子</span>
         </Link>
 
-        {/* Prefecture Select */}
+        {/* Region Select */}
         <div className="relative inline-flex items-center flex-shrink-0">
           <select
-            aria-label="エリア選択"
-            value={prefectureCode || ''}
-            onChange={(e) => handlePrefectureChange(e.target.value)}
+            aria-label="地方選択"
+            value={regionCode || ''}
+            onChange={(e) => handleRegionChange(e.target.value)}
             className="appearance-none pl-3 pr-7 py-1.5 rounded-full text-[13px] font-medium bg-bg border border-border text-text-primary cursor-pointer"
-            data-track-click="prefecture_select"
+            data-track-click="region_select"
           >
             <option value="">全国</option>
             {REGION_GROUPS.map((region) => (
-              <optgroup key={region.label} label={region.label}>
-                {region.prefectures.map((p) => (
-                  <option key={p.code} value={p.code}>{p.label}</option>
-                ))}
-              </optgroup>
+              <option key={region.code} value={region.code}>{region.label}</option>
             ))}
           </select>
           {CHEVRON_SVG}
         </div>
+
+        {/* Prefecture Select (shown when region is selected) */}
+        {regionCode && (() => {
+          const currentRegion = getRegionByCode(regionCode);
+          if (!currentRegion) return null;
+          return (
+            <div className="relative inline-flex items-center flex-shrink-0">
+              <select
+                aria-label="都道府県選択"
+                value={prefectureCode || ''}
+                onChange={(e) => handlePrefectureChange(e.target.value)}
+                className="appearance-none pl-3 pr-7 py-1.5 rounded-full text-[13px] font-medium bg-bg border border-border text-text-primary cursor-pointer"
+                data-track-click="prefecture_select"
+              >
+                <option value="">すべて</option>
+                {currentRegion.prefectures.map((p) => (
+                  <option key={p.code} value={p.code}>{p.label}</option>
+                ))}
+              </select>
+              {CHEVRON_SVG}
+            </div>
+          );
+        })()}
 
         {/* Filter Chips - desktop only */}
         <div className="hidden md:flex items-center gap-1.5 flex-1 min-w-0 flex-wrap">

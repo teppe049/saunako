@@ -88,7 +88,7 @@ export function getAreaFacilityCounts(prefectureCode: string): Record<string, nu
 }
 
 export function searchFacilities(params: {
-  prefecture?: string;
+  prefecture?: string | string[];
   area?: string;
   priceMin?: number;
   priceMax?: number;
@@ -105,7 +105,12 @@ export function searchFacilities(params: {
   let result = facilities.filter(isOpen);
 
   if (params.prefecture) {
-    result = result.filter((f) => f.prefecture === params.prefecture);
+    if (Array.isArray(params.prefecture)) {
+      const prefSet = new Set(params.prefecture);
+      result = result.filter((f) => prefSet.has(f.prefecture));
+    } else {
+      result = result.filter((f) => f.prefecture === params.prefecture);
+    }
   }
   if (params.area) {
     result = result.filter((f) => f.area === params.area);

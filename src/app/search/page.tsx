@@ -4,10 +4,11 @@ import SearchHeaderBar from '@/components/SearchHeaderBar';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
 import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
 import type { SortKey } from '@/lib/facilities';
-import { PREFECTURES } from '@/lib/types';
+import { PREFECTURES, getRegionByCode } from '@/lib/types';
 
 interface SearchPageProps {
   searchParams: Promise<{
+    region?: string;
     prefecture?: string;
     priceMin?: string;
     priceMax?: string;
@@ -27,6 +28,8 @@ interface SearchPageProps {
 
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
   const params = await searchParams;
+  const regionCode = params.region || '';
+  const regionData = regionCode ? getRegionByCode(regionCode) : undefined;
   const prefecture = params.prefecture || '';
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
   const areaSlug = params.area || '';
@@ -38,13 +41,15 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     title = `${prefData.label} ${areaData.label}の個室・プライベートサウナ検索結果`;
   } else if (prefData) {
     title = `${prefData.label}の個室・プライベートサウナ検索結果`;
+  } else if (regionData) {
+    title = `${regionData.label}の個室・プライベートサウナ検索結果`;
   } else {
     title = '個室・プライベートサウナを条件で検索・比較 | サウナ子';
   }
 
   // Build description with active filters
   const filterParts: string[] = [];
-  const areaLabel = areaData ? `${prefData!.label} ${areaData.label}` : prefData?.label || '全国';
+  const areaLabel = areaData ? `${prefData!.label} ${areaData.label}` : prefData?.label || regionData?.label || '全国';
   filterParts.push(areaLabel);
   if (params.priceMin || params.priceMax) {
     const min = params.priceMin ? `${Number(params.priceMin).toLocaleString()}円` : '';
@@ -82,6 +87,8 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
 
 async function SearchContent({ searchParams }: SearchPageProps) {
   const params = await searchParams;
+  const regionCode = params.region || '';
+  const regionData = regionCode ? getRegionByCode(regionCode) : undefined;
   const prefecture = params.prefecture || '';
   const prefData = PREFECTURES.find((p) => p.code === prefecture);
   const areaSlug = params.area || '';
@@ -91,9 +98,16 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     ? params.sort
     : 'recommend') as SortKey;
 
+  // Resolve prefecture filter: specific prefecture > region's prefectures > undefined
+  const prefectureFilter = prefecture
+    ? prefecture
+    : regionData
+      ? regionData.prefectures.map((p) => p.code)
+      : undefined;
+
   const allFacilities = getAllFacilities();
   const filtered = searchFacilities({
-    prefecture: prefecture || undefined,
+    prefecture: prefectureFilter,
     area: areaData?.label,
     priceMin: params.priceMin ? Number(params.priceMin) : undefined,
     priceMax: params.priceMax ? Number(params.priceMax) : undefined,
@@ -111,7 +125,9 @@ async function SearchContent({ searchParams }: SearchPageProps) {
 
   const baseCount = prefecture
     ? allFacilities.filter((f) => f.prefecture === prefecture).length
-    : allFacilities.length;
+    : regionData
+      ? allFacilities.filter((f) => regionData.prefectures.some((p) => p.code === f.prefecture)).length
+      : allFacilities.length;
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -136,7 +152,9 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     ? `${prefData.label} ${areaData.label}の個室サウナ検索結果`
     : prefData
       ? `${prefData.label}の個室サウナ検索結果`
-      : '個室サウナ検索';
+      : regionData
+        ? `${regionData.label}の個室サウナ検索結果`
+        : '個室サウナ検索';
 
   return (
     <div className="flex flex-col h-screen bg-bg">
@@ -150,6 +168,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         filteredCount={facilities.length}
         prefectureLabel={prefData?.label}
         prefectureCode={prefecture}
+        regionCode={regionCode}
         areaSlug={areaSlug}
       />
       <div className="flex flex-col flex-1 min-h-0">
