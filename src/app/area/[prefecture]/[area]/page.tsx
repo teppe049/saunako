@@ -49,6 +49,10 @@ const SUB_AREA_META: Record<string, { title: string; description: string }> = {
     title: 'つくばの個室・プライベートサウナ一覧｜つむぎ（紡）など人気施設を比較 | サウナ子',
     description: 'つくば市の個室サウナ・プライベートサウナを探すならサウナ子。プライベートサウナつむぎ（紡）をはじめ、カップル利用OK・料金比較・アクセス情報を掲載。つくばエリアで人気の貸切サウナが見つかる。',
   },
+  'tochigi/utsunomiya': {
+    title: '宇都宮の個室サウナ一覧｜カップルOK・貸切プライベートサウナを比較 | サウナ子',
+    description: '宇都宮の個室サウナ・プライベートサウナを探すならサウナ子。蔵サウナやウツノミヤサウナクラブなど人気施設を厳選。カップル利用OK・貸切プランありの施設を料金・設備・アクセスで比較。',
+  },
 };
 
 export async function generateStaticParams() {
