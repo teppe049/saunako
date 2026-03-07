@@ -43,6 +43,14 @@ const SAUNAKO_SUB_AREA_COMMENTS: Record<string, string> = {
 
 const DEFAULT_SUB_AREA_COMMENT = 'このエリアのおすすめ個室サウナを紹介するわね。';
 
+// サブエリアごとのカスタム title / description（SEO最適化）
+const SUB_AREA_META: Record<string, { title: string; description: string }> = {
+  'ibaraki/tsukuba': {
+    title: 'つくばの個室・プライベートサウナ一覧｜つむぎ（紡）など人気施設を比較 | サウナ子',
+    description: 'つくば市の個室サウナ・プライベートサウナを探すならサウナ子。プライベートサウナつむぎ（紡）をはじめ、カップル利用OK・料金比較・アクセス情報を掲載。つくばエリアで人気の貸切サウナが見つかる。',
+  },
+};
+
 export async function generateStaticParams() {
   const prefectures = getAllPrefectures();
   const params: { prefecture: string; area: string }[] = [];
@@ -68,8 +76,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const areaLabel = areaData.label;
   const cities = areaData.cities;
 
-  const title = `${prefLabel} ${areaLabel}の個室サウナ一覧`;
-  const description = `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
+  const customMeta = SUB_AREA_META[`${prefecture}/${areaSlug}`];
+  const title = customMeta?.title ?? `${prefLabel} ${areaLabel}の個室サウナ一覧`;
+  const description = customMeta?.description ?? `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
 
   return {
     title,
