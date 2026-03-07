@@ -26,6 +26,23 @@ export default function Footer() {
             <Link href="/faq" className="text-xs text-[#757575] hover:text-white transition-colors">よくある質問</Link>
             <Link href="/for-owners" className="text-xs text-[#757575] hover:text-white transition-colors">施設掲載のご案内</Link>
           </div>
+          {/* Area links */}
+          <div className="w-full border-t border-[#333333] pt-4">
+            <p className="text-[11px] font-semibold text-[#9CA3AF] mb-3 text-center">エリアから探す</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+              {REGION_GROUPS.map((region) => (
+                <div key={region.label}>
+                  <p className="text-[10px] text-[#6B7280] mb-1">{region.label}</p>
+                  <div className="flex flex-wrap gap-x-2 gap-y-0.5">
+                    {region.prefectures.map((pref) => (
+                      <Link key={pref.code} href={`/area/${pref.code}`} className="text-[11px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <p className="text-xs text-[#757575]">
             © 2026 サウナ子 All rights reserved.
           </p>

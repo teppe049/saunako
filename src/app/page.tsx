@@ -4,8 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import dynamic from 'next/dynamic';
-import { getPopularFacilities, getAllFacilities, getNewFacilities, getPrefectureFacilityCounts } from '@/lib/facilities';
-import AreaExplorer from '@/components/AreaExplorer';
+import { getPopularFacilities, getAllFacilities, getNewFacilities } from '@/lib/facilities';
 import type { Metadata } from 'next';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
@@ -20,7 +19,6 @@ export default function Home() {
   const popularFacilities = getPopularFacilities(3);
   const newFacilities = getNewFacilities(3);
   const allFacilities = getAllFacilities();
-  const prefectureCounts = getPrefectureFacilityCounts();
 
   return (
     <div className="min-h-screen bg-bg">
@@ -59,9 +57,6 @@ export default function Home() {
           <HeroSearchForm />
         </div>
       </section>
-
-      {/* Area Explorer */}
-      <AreaExplorer counts={prefectureCounts} />
 
       {/* Popular Facilities Section */}
       <section className="bg-bg py-6 md:py-12">
