@@ -23,9 +23,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    remotePatterns: [],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 31536000,
+    unoptimized: true,
   },
   async redirects() {
     return [

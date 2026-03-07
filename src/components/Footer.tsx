@@ -17,18 +17,6 @@ export default function Footer() {
           <p className="text-xs text-[#757575] text-center leading-relaxed">
             当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
           </p>
-          <div className="flex gap-6 text-left w-full justify-center">
-            {REGION_GROUPS.map((region) => (
-              <div key={region.label}>
-                <p className="text-[10px] text-[#6B7280] mb-1">{region.label}</p>
-                <ul className="space-y-1">
-                  {region.prefectures.map((pref) => (
-                    <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-xs text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link href="/search" className="text-xs text-[#757575] hover:text-white transition-colors">施設を探す</Link>
             <Link href="/articles" className="text-xs text-[#757575] hover:text-white transition-colors">記事</Link>
