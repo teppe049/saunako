@@ -33,7 +33,8 @@ export default function Footer() {
 
         {/* PC: 3-column grid */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-4 gap-12 mb-10">
+          {/* Upper: Brand / Service / Disclaimer */}
+          <div className="grid grid-cols-3 gap-12 mb-10">
             {/* Brand Column */}
             <div className="max-w-[320px]">
               <div className="flex items-center gap-2 mb-4">
@@ -66,29 +67,29 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Area Column */}
-            <div>
-              <h3 className="text-[13px] font-semibold text-white mb-4">エリアから探す</h3>
-              <div className="flex gap-8">
-                {REGION_GROUPS.map((region) => (
-                  <div key={region.label}>
-                    <p className="text-[12px] text-[#6B7280] mb-2">{region.label}</p>
-                    <ul className="space-y-2">
-                      {region.prefectures.map((pref) => (
-                        <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Disclaimer Column */}
             <div>
               <h3 className="text-[13px] font-semibold text-white mb-4">ご注意</h3>
               <p className="text-[12px] text-[#9CA3AF] leading-relaxed">
                 当サイトは個室サウナの情報をまとめた非公式の検索サービスです。掲載情報は正確性を保証するものではありません。最新の料金・営業時間は各施設の公式サイトをご確認ください。掲載画像の著作権は各施設に帰属します。
               </p>
+            </div>
+          </div>
+
+          {/* Lower: Area full-width */}
+          <div className="mb-10">
+            <h3 className="text-[13px] font-semibold text-white mb-4">エリアから探す</h3>
+            <div className="flex justify-between">
+              {REGION_GROUPS.map((region) => (
+                <div key={region.label}>
+                  <p className="text-[12px] text-[#6B7280] mb-2">{region.label}</p>
+                  <ul className="space-y-2">
+                    {region.prefectures.map((pref) => (
+                      <li key={pref.code}><Link href={`/area/${pref.code}`} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{pref.label}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
