@@ -223,3 +223,11 @@ export function getAllPrefectures(): string[] {
   return [...new Set(facilities.filter(isOpen).map((f) => f.prefecture))];
 }
 
+export function getPrefectureFacilityCounts(): Record<string, number> {
+  const counts: Record<string, number> = {};
+  for (const f of facilities.filter(isOpen)) {
+    counts[f.prefecture] = (counts[f.prefecture] || 0) + 1;
+  }
+  return counts;
+}
+
