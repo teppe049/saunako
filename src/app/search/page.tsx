@@ -197,7 +197,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         hasOrigin={!!origin}
       />
       <div className="flex flex-col flex-1 min-h-0">
-        <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} />
+        <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} origin={origin} />
       </div>
     </div>
   );

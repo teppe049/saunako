@@ -15,6 +15,7 @@ interface FacilityWithDistance extends Facility {
 interface Props {
   facilities: FacilityWithDistance[];
   hasOrigin?: boolean;
+  origin?: { lat: number; lng: number };
 }
 
 function isInBounds(facility: Facility, bounds: MapBounds): boolean {
@@ -27,7 +28,7 @@ function isInBounds(facility: Facility, bounds: MapBounds): boolean {
   );
 }
 
-export default function SearchInteractivePanel({ facilities, hasOrigin }: Props) {
+export default function SearchInteractivePanel({ facilities, hasOrigin, origin }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
@@ -169,6 +170,7 @@ export default function SearchInteractivePanel({ facilities, hasOrigin }: Props)
           onBoundsChange={handleBoundsChange}
           showSearchAreaButton
           onSearchArea={handleSearchArea}
+          origin={origin}
         />
       </div>
 

@@ -25,6 +25,7 @@ interface FacilityMapProps {
   showSearchAreaButton?: boolean;
   onSearchArea?: () => void;
   hideOverlayCard?: boolean;
+  origin?: { lat: number; lng: number };
 }
 
 type MarkerState = 'default' | 'hovered' | 'selected' | 'visited';
@@ -103,7 +104,7 @@ function findDensestCluster(facilities: Facility[]): Facility[] {
   );
 }
 
-function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facilities: Facility[] }) {
+function MapPanHandler({ selectedId, facilities, origin }: { selectedId?: number; facilities: Facility[]; origin?: { lat: number; lng: number } }) {
   const map = useMap();
   const prevFacilityIdsRef = useRef<string>('');
 
@@ -115,11 +116,32 @@ function MapPanHandler({ selectedId, facilities }: { selectedId?: number; facili
     if (currentIds === prevFacilityIdsRef.current) return;
     prevFacilityIdsRef.current = currentIds;
 
+    // When origin (current location / station) is set, fit to nearby facilities
+    if (origin) {
+      const nearby = facilities.filter((f) => {
+        if (!f.lat || !f.lng) return false;
+        const dLat = Math.abs(f.lat - origin.lat);
+        const dLng = Math.abs(f.lng - origin.lng);
+        return dLat < 0.3 && dLng < 0.3; // ~30km radius
+      });
+
+      if (nearby.length > 0) {
+        const points: [number, number][] = nearby.map((f) => [f.lat!, f.lng!]);
+        points.push([origin.lat, origin.lng]);
+        const bounds = L.latLngBounds(points);
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 });
+      } else {
+        // No nearby facilities — center on origin at city zoom level
+        map.setView([origin.lat, origin.lng], 11);
+      }
+      return;
+    }
+
     // Find the densest cluster to avoid centering between distant groups (e.g. Tokyo + Osaka)
     const targetFacilities = findDensestCluster(facilities);
     const bounds = L.latLngBounds(targetFacilities.map((f) => [f.lat!, f.lng!]));
     map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
-  }, [facilities, map]);
+  }, [facilities, map, origin]);
 
   useEffect(() => {
     if (selectedId) {
@@ -239,6 +261,7 @@ export default function FacilityMap({
   showSearchAreaButton,
   onSearchArea,
   hideOverlayCard,
+  origin,
 }: FacilityMapProps) {
   const [activeMarker, setActiveMarker] = useState<number | null>(selectedId || null);
   const [visitedIds] = useState<Set<number>>(() => getVisitedIds());
@@ -292,7 +315,7 @@ export default function FacilityMap({
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://tile.openstreetmap.jp/styles/osm-bright-ja/{z}/{x}/{y}.png"
         />
-        <MapPanHandler selectedId={selectedId} facilities={validFacilities} />
+        <MapPanHandler selectedId={selectedId} facilities={validFacilities} origin={origin} />
         <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
         <MapClickHandler onMapClick={handleMapClick} />
         <LocateButton />

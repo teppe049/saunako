@@ -21,6 +21,7 @@ interface Props {
   onBoundsChange?: (bounds: MapBounds) => void;
   showSearchAreaButton?: boolean;
   onSearchArea?: () => void;
+  origin?: { lat: number; lng: number };
 }
 
 export default function FacilityMapWrapper(props: Props) {
