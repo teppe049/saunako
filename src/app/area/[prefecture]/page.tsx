@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
+import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getPrefectureFacilityCounts } from '@/lib/facilities';
 import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
@@ -16,30 +16,99 @@ interface PageProps {
 
 // 都道府県ごとのサウナ子コメント
 const SAUNAKO_AREA_COMMENTS: Record<string, string> = {
-  tokyo: '東京は個室サウナの激戦区! 新宿・渋谷・池袋を中心に、こだわりの施設がたくさんあるわ。駅チカで仕事帰りにサクッと整えるのがおすすめよ。',
-  osaka: '大阪は東京に負けないくらい個室サウナが充実してきてるわ! 梅田・心斎橋エリアを中心に、コスパ抜群の施設が多いのが特徴ね。',
-  kanagawa: '神奈川は横浜・川崎を中心に個室サウナが増えてきてるわ！都内からのアクセスも良いから、休日にゆっくり整うのにぴったりよ。',
+  hokkaido: '北海道は札幌を中心に、大自然の中で整える個室サウナがそろってるわ！冬は雪景色を眺めながらの外気浴が最高よ。',
+  aomori: '青森は八戸・青森市を中心に、温泉文化と融合した個性的な個室サウナが点在してるわ。りんごのロウリュが体験できる施設もあるのよ！',
+  iwate: '岩手は盛岡を中心に、自然豊かな環境で贅沢にととのえる施設がそろってるわ。東北の隠れたサウナスポットよ！',
+  miyagi: '宮城は仙台を中心に個室サウナが増えてきてるわ！牛タンの後にサウナ、なんて仙台ならではの楽しみ方もおすすめよ。',
+  akita: '秋田は温泉大国ならではの、お湯とサウナを両方楽しめる施設が魅力よ。自然の中でゆっくり整うのにぴったりね。',
+  yamagata: '山形は温泉文化が根付いた土地ならではの、サウナと温泉を同時に楽しめる施設があるわ。蔵王や月山の大自然も魅力よ！',
+  fukushima: '福島は会津・磐梯エリアの自然豊かなサウナから、郡山・いわきの街なかサウナまで幅広い選択肢があるのよ。',
+  ibaraki: '茨城はつくば・水戸を中心に、個性的な個室サウナが増えてきてるよ! 大子や高萩など自然豊かなエリアのサウナも注目だね。',
+  tochigi: '栃木は那須・日光エリアを中心に、自然に囲まれた贅沢なプライベートサウナがそろってるよ! 旅行ついでにサウナも楽しめるのが魅力だね。',
+  gunma: '群馬は高崎・前橋の街なかサウナから、みなかみ・赤城山の大自然サウナまで個性派ぞろいだよ! 渓流で冷水浴できる施設もあって、自然好きにはたまらないかも!',
   saitama: '埼玉は大宮・浦和エリアを中心に、コスパ抜群の個室サウナがそろってるわ。都心より広々とした施設が多いのが魅力ね！',
   chiba: '千葉は船橋・浦安エリアを中心に、個性豊かな個室サウナが点在してるの。東京のベッドタウンだからアクセスも便利よ。',
-  gunma: '群馬は高崎・前橋の街なかサウナから、みなかみ・赤城山の大自然サウナまで個性派ぞろいだよ! 渓流で冷水浴できる施設もあって、自然好きにはたまらないかも!',
-  tochigi: '栃木は那須・日光エリアを中心に、自然に囲まれた贅沢なプライベートサウナがそろってるよ! 旅行ついでにサウナも楽しめるのが魅力だね。',
-  ibaraki: '茨城はつくば・水戸を中心に、個性的な個室サウナが増えてきてるよ! 大子や高萩など自然豊かなエリアのサウナも注目だね。',
+  tokyo: '東京は個室サウナの激戦区! 新宿・渋谷・池袋を中心に、こだわりの施設がたくさんあるわ。駅チカで仕事帰りにサクッと整えるのがおすすめよ。',
+  kanagawa: '神奈川は横浜・川崎を中心に個室サウナが増えてきてるわ！都内からのアクセスも良いから、休日にゆっくり整うのにぴったりよ。',
+  niigata: '新潟は日本海側ならではの風情ある施設が魅力的よ。お米どころの食事と合わせて、サウナ旅を楽しむのもおすすめ！',
+  yamanashi: '山梨は富士山を望むロケーション抜群の個室サウナが人気よ！都心から日帰りで行けるサウナ旅におすすめだわ。',
+  nagano: '長野は軽井沢や蓼科など、リゾートエリアに上質な個室サウナが点在してるわ。高原の澄んだ空気での外気浴は格別よ！',
+  toyama: '富山は立山連峰の絶景を楽しめるサウナや、富山湾の新鮮な海の幸とセットで楽しめる施設があるわ。',
+  ishikawa: '石川は金沢の情緒ある街並みの中に、おしゃれな個室サウナが登場してきてるわ。加賀温泉郷のサウナも注目よ！',
+  fukui: '福井は日本海の絶景を楽しめるサウナ施設が魅力的よ。恐竜博物館とサウナの合わせ技もおすすめだわ！',
+  shizuoka: '静岡は伊豆や熱海のリゾートサウナから、浜松の街なかサウナまで幅広い選択肢があるわ。富士山ビューの施設も要チェックよ！',
+  gifu: '岐阜は飛騨高山の自然に囲まれたサウナから、岐阜市街の便利な施設まで、バリエーション豊かなラインナップがそろってるわ。',
+  mie: '三重は伊勢志摩の海を感じられるサウナや、自然豊かなロケーションの施設が魅力よ。お伊勢参りの後にサウナも最高ね！',
   aichi: '愛知は名古屋を中心に個室サウナが充実してるよ! サウナの聖地・名古屋ならではのこだわり施設が多いのが特徴だね。',
+  shiga: '滋賀は琵琶湖を望むロケーション抜群のサウナが魅力よ。京都からのアクセスも良くて、穴場的な存在ね！',
+  kyoto: '京都は町家を改装した風情ある個室サウナが人気よ。和の空間でととのう贅沢、京都ならではの体験ができるわ。',
+  osaka: '大阪は東京に負けないくらい個室サウナが充実してきてるわ! 梅田・心斎橋エリアを中心に、コスパ抜群の施設が多いのが特徴ね。',
+  hyogo: '兵庫は神戸・三宮を中心におしゃれな個室サウナが増えてきてるわ。有馬温泉エリアのサウナも見逃せないわよ！',
+  nara: '奈良は歴史ある街並みの中に、こだわりの個室サウナが点在してるわ。古都の雰囲気とサウナの組み合わせが新鮮よ！',
+  wakayama: '和歌山は白浜や熊野の大自然の中で楽しめるサウナが魅力よ。温泉文化が根付いた土地だからこそのクオリティがあるわ。',
+  tottori: '鳥取は砂丘や日本海の絶景を楽しめるサウナが魅力的よ。自然の中で心からリフレッシュできるわ！',
+  shimane: '島根は出雲や松江の歴史ある街並みの中に、こだわりのサウナ施設が点在してるわ。縁結びの後にサウナも素敵ね！',
+  okayama: '岡山は倉敷の美しい街並みや、瀬戸内海を感じられるサウナが魅力よ。晴れの国ならではの爽快な外気浴を楽しめるわ！',
+  hiroshima: '広島は瀬戸内海のおだやかな風景を楽しめるサウナが魅力的よ。牡蠣とサウナの組み合わせ、広島ならではのぜいたくね！',
+  yamaguchi: '山口は下関・山口市を中心に、自然豊かな環境でととのえる施設がそろってるわ。関門海峡の絶景サウナも注目よ！',
+  tokushima: '徳島は大自然の中でととのえる施設が魅力的よ。渓谷や吉野川沿いのサウナは開放感抜群だわ！',
+  kagawa: '香川はうどん県ならではの食とサウナの組み合わせが最高よ。瀬戸内海の穏やかな景色を眺めながらの外気浴もおすすめ！',
+  ehime: '愛媛は道後温泉で有名な温泉文化と融合した個室サウナが魅力よ。みかんのロウリュが体験できる施設もあるわ！',
+  kochi: '高知は太平洋を望むダイナミックなロケーションのサウナが魅力的よ。カツオのたたきとサウナ、高知ならではの楽しみ方ね！',
   fukuoka: '福岡は博多・天神エリアを中心に個室サウナが急増中だよ! 九州のサウナシーンを引っ張る勢いがあるね。',
+  saga: '佐賀は嬉野温泉や武雄温泉など、温泉地ならではのサウナ体験ができるのが魅力よ。のどかな環境でゆっくり整えるわ！',
+  nagasaki: '長崎は異国情緒あふれる街並みの中に、個性的な個室サウナが点在してるわ。島々を望むサウナも魅力的よ！',
+  kumamoto: '熊本は阿蘇の大自然や天草の海を感じられるサウナが魅力的よ。雄大な景色の中でととのう体験は格別だわ！',
+  oita: '大分は「おんせん県」ならではの温泉×サウナの組み合わせが最高よ！別府・湯布院エリアの施設は見逃せないわ。',
+  miyazaki: '宮崎は南国の温暖な気候の中で、一年中快適にサウナを楽しめるのが魅力よ。サーフィンとサウナの組み合わせも人気ね！',
+  kagoshima: '鹿児島は桜島を望むロケーション抜群のサウナが魅力よ。温泉大国ならではのクオリティの高い施設がそろってるわ！',
+  okinawa: '沖縄は美しい海を眺めながらサウナを楽しめる施設が増えてきてるわ。リゾート気分で整う、南国ならではのサウナ体験ができるのよ！',
 };
 
-// デフォルトのサウナ子コメント
+// デフォルトのサウナ子コメント（フォールバック用）
 const DEFAULT_SAUNAKO_COMMENT = 'このエリアの個室サウナをまとめてみたわ! 気になる施設があったらチェックしてみてね。';
 
 // 都道府県ごとのカスタム title / description（SEO最適化）
 const AREA_META: Record<string, { title: string; description: string }> = {
-  tokyo: {
-    title: '東京の個室・プライベートサウナ一覧｜新宿・渋谷・池袋の駅チカ施設を比較 | サウナ子',
-    description: '東京の個室・プライベートサウナを探すならサウナ子。新宿・渋谷・池袋など駅チカで仕事帰りに寄れる施設を厳選。料金・設備・アクセスを比較して、あなたにぴったりの個室・プライベートサウナが見つかる。',
+  hokkaido: {
+    title: '北海道の個室・プライベートサウナ一覧｜札幌・千歳の貸切施設を比較 | サウナ子',
+    description: '北海道の個室・プライベートサウナを探すならサウナ子。札幌・千歳・函館エリアを中心に、大自然の中で整える施設を厳選。料金・設備・アクセスを比較して、あなたにぴったりの個室サウナが見つかる。',
   },
-  kanagawa: {
-    title: '神奈川の個室・プライベートサウナ一覧｜横浜・川崎エリアの施設を比較 | サウナ子',
-    description: '神奈川の個室・プライベートサウナを探すならサウナ子。横浜・川崎エリアを中心に、カップル利用OK・料金比較・アクセス情報を掲載。あなたにぴったりの個室・プライベートサウナが見つかる。',
+  aomori: {
+    title: '青森の個室・プライベートサウナ一覧｜青森市・八戸の施設を比較 | サウナ子',
+    description: '青森の個室・プライベートサウナを探すならサウナ子。青森市・八戸エリアを中心に、温泉文化と融合した個室サウナを掲載。料金・設備・アクセスを比較。',
+  },
+  iwate: {
+    title: '岩手の個室・プライベートサウナ一覧｜盛岡エリアの施設を比較 | サウナ子',
+    description: '岩手の個室・プライベートサウナを探すならサウナ子。盛岡を中心に、自然豊かな環境の個室サウナを掲載。料金・設備・アクセスを比較。',
+  },
+  miyagi: {
+    title: '宮城の個室・プライベートサウナ一覧｜仙台エリアの施設を比較 | サウナ子',
+    description: '宮城・仙台の個室・プライベートサウナを探すならサウナ子。仙台市を中心に、駅チカの個室サウナを厳選。料金・設備・アクセスを比較。',
+  },
+  akita: {
+    title: '秋田の個室・プライベートサウナ一覧｜温泉大国のサウナ施設を比較 | サウナ子',
+    description: '秋田の個室・プライベートサウナを探すならサウナ子。温泉大国・秋田ならではのサウナ施設を掲載。料金・設備・アクセスを比較。',
+  },
+  yamagata: {
+    title: '山形の個室・プライベートサウナ一覧｜温泉×サウナ施設を比較 | サウナ子',
+    description: '山形の個室・プライベートサウナを探すならサウナ子。蔵王・月山エリアの自然豊かなサウナ施設を掲載。料金・設備・アクセスを比較。',
+  },
+  fukushima: {
+    title: '福島の個室・プライベートサウナ一覧｜会津・郡山の施設を比較 | サウナ子',
+    description: '福島の個室・プライベートサウナを探すならサウナ子。会津・磐梯・郡山・いわきエリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  ibaraki: {
+    title: '茨城の個室・プライベートサウナ一覧｜つくば・水戸エリアの施設を比較 | サウナ子',
+    description: '茨城の個室サウナ・プライベートサウナを探すならサウナ子。つくば・水戸を中心に、料金・設備・アクセスを比較。あなたにぴったりの個室・プライベートサウナが見つかる。',
+  },
+  tochigi: {
+    title: '栃木の個室・プライベートサウナ一覧｜那須・日光の貸切サウナを比較 | サウナ子',
+    description: '栃木の個室サウナ・プライベートサウナを探すならサウナ子。那須・日光エリアを中心に自然に囲まれた施設を厳選。料金・設備・アクセスを比較。',
+  },
+  gunma: {
+    title: '群馬の個室・プライベートサウナ一覧｜高崎・みなかみの貸切サウナを比較 | サウナ子',
+    description: '群馬の個室サウナ・プライベートサウナを探すならサウナ子。高崎・前橋の街なかサウナからみなかみ・赤城山の大自然サウナまで厳選。料金・設備・アクセスを比較。',
   },
   saitama: {
     title: '埼玉の個室・プライベートサウナ一覧｜カップルOK・大宮・浦和の貸切施設を比較 | サウナ子',
@@ -49,35 +118,192 @@ const AREA_META: Record<string, { title: string; description: string }> = {
     title: '千葉の個室・プライベートサウナ一覧｜船橋エリアの施設を比較 | サウナ子',
     description: '千葉の個室・プライベートサウナを探すならサウナ子。船橋・浦安エリアを中心に、料金・設備・アクセスを比較。都心からのアクセスも便利な個室・プライベートサウナが見つかる。',
   },
-  osaka: {
-    title: '大阪の個室・プライベートサウナ一覧｜梅田・心斎橋のコスパ抜群施設を比較 | サウナ子',
-    description: '大阪の個室・プライベートサウナを探すならサウナ子。梅田・心斎橋エリアを中心に、コスパ抜群の施設を厳選。料金比較・カップル利用OK・設備情報を掲載。',
+  tokyo: {
+    title: '東京の個室・プライベートサウナ一覧｜新宿・渋谷・池袋の駅チカ施設を比較 | サウナ子',
+    description: '東京の個室・プライベートサウナを探すならサウナ子。新宿・渋谷・池袋など駅チカで仕事帰りに寄れる施設を厳選。料金・設備・アクセスを比較して、あなたにぴったりの個室・プライベートサウナが見つかる。',
   },
-  kyoto: {
-    title: '京都の個室・プライベートサウナ一覧｜京都らしい上質な貸切サウナを比較 | サウナ子',
-    description: '京都の個室サウナ・貸切サウナを探すならサウナ子。京都ならではの上質な空間で整う、料金・設備・アクセスを比較。あなたにぴったりの個室・プライベートサウナが見つかる。',
+  kanagawa: {
+    title: '神奈川の個室・プライベートサウナ一覧｜横浜・川崎エリアの施設を比較 | サウナ子',
+    description: '神奈川の個室・プライベートサウナを探すならサウナ子。横浜・川崎エリアを中心に、カップル利用OK・料金比較・アクセス情報を掲載。あなたにぴったりの個室・プライベートサウナが見つかる。',
   },
-  gunma: {
-    title: '群馬の個室・プライベートサウナ一覧｜高崎・みなかみの貸切サウナを比較 | サウナ子',
-    description: '群馬の個室サウナ・プライベートサウナを探すならサウナ子。高崎・前橋の街なかサウナからみなかみ・赤城山の大自然サウナまで厳選。料金・設備・アクセスを比較。',
+  niigata: {
+    title: '新潟の個室・プライベートサウナ一覧｜新潟市・湯沢の施設を比較 | サウナ子',
+    description: '新潟の個室・プライベートサウナを探すならサウナ子。新潟市・湯沢エリアを中心に、日本海側ならではの施設を掲載。料金・設備・アクセスを比較。',
   },
-  tochigi: {
-    title: '栃木の個室・プライベートサウナ一覧｜那須・日光の貸切サウナを比較 | サウナ子',
-    description: '栃木の個室サウナ・プライベートサウナを探すならサウナ子。那須・日光エリアを中心に自然に囲まれた施設を厳選。料金・設備・アクセスを比較。',
+  yamanashi: {
+    title: '山梨の個室・プライベートサウナ一覧｜富士山ビューの貸切サウナを比較 | サウナ子',
+    description: '山梨の個室・プライベートサウナを探すならサウナ子。富士山を望むロケーション抜群の施設を厳選。都心から日帰りで行ける個室サウナの料金・設備を比較。',
   },
-  ibaraki: {
-    title: '茨城の個室・プライベートサウナ一覧｜つくば・水戸エリアの施設を比較 | サウナ子',
-    description: '茨城の個室サウナ・プライベートサウナを探すならサウナ子。つくば・水戸を中心に、料金・設備・アクセスを比較。あなたにぴったりの個室・プライベートサウナが見つかる。',
+  nagano: {
+    title: '長野の個室・プライベートサウナ一覧｜軽井沢・蓼科の貸切サウナを比較 | サウナ子',
+    description: '長野の個室・プライベートサウナを探すならサウナ子。軽井沢・蓼科・白馬エリアのリゾートサウナを厳選。高原の外気浴を楽しめる施設の料金・設備を比較。',
+  },
+  toyama: {
+    title: '富山の個室・プライベートサウナ一覧｜立山連峰ビューの施設を比較 | サウナ子',
+    description: '富山の個室・プライベートサウナを探すならサウナ子。立山連峰を望む絶景サウナや富山市街の施設を掲載。料金・設備・アクセスを比較。',
+  },
+  ishikawa: {
+    title: '石川の個室・プライベートサウナ一覧｜金沢・加賀の施設を比較 | サウナ子',
+    description: '石川の個室・プライベートサウナを探すならサウナ子。金沢市街や加賀温泉郷エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  fukui: {
+    title: '福井の個室・プライベートサウナ一覧｜日本海沿いの施設を比較 | サウナ子',
+    description: '福井の個室・プライベートサウナを探すならサウナ子。日本海の絶景を楽しめる施設を掲載。料金・設備・アクセスを比較。',
+  },
+  shizuoka: {
+    title: '静岡の個室・プライベートサウナ一覧｜伊豆・熱海のリゾートサウナを比較 | サウナ子',
+    description: '静岡の個室・プライベートサウナを探すならサウナ子。伊豆・熱海のリゾートサウナから浜松の街なか施設まで厳選。料金・設備・アクセスを比較。',
+  },
+  gifu: {
+    title: '岐阜の個室・プライベートサウナ一覧｜飛騨高山・岐阜市の施設を比較 | サウナ子',
+    description: '岐阜の個室・プライベートサウナを探すならサウナ子。飛騨高山の自然豊かなサウナや岐阜市街の施設を掲載。料金・設備・アクセスを比較。',
+  },
+  mie: {
+    title: '三重の個室・プライベートサウナ一覧｜伊勢志摩エリアの施設を比較 | サウナ子',
+    description: '三重の個室・プライベートサウナを探すならサウナ子。伊勢志摩の海を感じるサウナ施設を掲載。料金・設備・アクセスを比較。',
   },
   aichi: {
     title: '愛知の個室・プライベートサウナ一覧｜名古屋のプライベートサウナを比較 | サウナ子',
     description: '愛知・名古屋の個室・プライベートサウナを探すならサウナ子。サウナの聖地・名古屋のこだわり施設を厳選。料金・設備・アクセスを比較して、あなたにぴったりの施設が見つかる。',
   },
+  shiga: {
+    title: '滋賀の個室・プライベートサウナ一覧｜琵琶湖ビューの施設を比較 | サウナ子',
+    description: '滋賀の個室・プライベートサウナを探すならサウナ子。琵琶湖を望むロケーション抜群の施設を掲載。料金・設備・アクセスを比較。',
+  },
+  kyoto: {
+    title: '京都の個室・プライベートサウナ一覧｜京都らしい上質な貸切サウナを比較 | サウナ子',
+    description: '京都の個室サウナ・貸切サウナを探すならサウナ子。京都ならではの上質な空間で整う、料金・設備・アクセスを比較。あなたにぴったりの個室・プライベートサウナが見つかる。',
+  },
+  osaka: {
+    title: '大阪の個室・プライベートサウナ一覧｜梅田・心斎橋のコスパ抜群施設を比較 | サウナ子',
+    description: '大阪の個室・プライベートサウナを探すならサウナ子。梅田・心斎橋エリアを中心に、コスパ抜群の施設を厳選。料金比較・カップル利用OK・設備情報を掲載。',
+  },
+  hyogo: {
+    title: '兵庫の個室・プライベートサウナ一覧｜神戸・三宮の施設を比較 | サウナ子',
+    description: '兵庫の個室・プライベートサウナを探すならサウナ子。神戸・三宮・有馬温泉エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  nara: {
+    title: '奈良の個室・プライベートサウナ一覧｜古都の個室サウナを比較 | サウナ子',
+    description: '奈良の個室・プライベートサウナを探すならサウナ子。歴史ある街並みの中の個室サウナを掲載。料金・設備・アクセスを比較。',
+  },
+  wakayama: {
+    title: '和歌山の個室・プライベートサウナ一覧｜白浜・熊野の施設を比較 | サウナ子',
+    description: '和歌山の個室・プライベートサウナを探すならサウナ子。白浜・熊野エリアの自然豊かな施設を掲載。料金・設備・アクセスを比較。',
+  },
+  tottori: {
+    title: '鳥取の個室・プライベートサウナ一覧｜砂丘エリアの施設を比較 | サウナ子',
+    description: '鳥取の個室・プライベートサウナを探すならサウナ子。日本海の絶景と砂丘エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  shimane: {
+    title: '島根の個室・プライベートサウナ一覧｜出雲・松江の施設を比較 | サウナ子',
+    description: '島根の個室・プライベートサウナを探すならサウナ子。出雲・松江エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  okayama: {
+    title: '岡山の個室・プライベートサウナ一覧｜倉敷・岡山市の施設を比較 | サウナ子',
+    description: '岡山の個室・プライベートサウナを探すならサウナ子。倉敷・岡山市の施設を掲載。料金・設備・アクセスを比較。',
+  },
+  hiroshima: {
+    title: '広島の個室・プライベートサウナ一覧｜広島市・尾道の施設を比較 | サウナ子',
+    description: '広島の個室・プライベートサウナを探すならサウナ子。広島市・尾道エリアの瀬戸内海を感じる施設を掲載。料金・設備・アクセスを比較。',
+  },
+  yamaguchi: {
+    title: '山口の個室・プライベートサウナ一覧｜下関・山口市の施設を比較 | サウナ子',
+    description: '山口の個室・プライベートサウナを探すならサウナ子。下関・山口市エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  tokushima: {
+    title: '徳島の個室・プライベートサウナ一覧｜渓谷の自然派サウナを比較 | サウナ子',
+    description: '徳島の個室・プライベートサウナを探すならサウナ子。大自然の中のサウナ施設を掲載。料金・設備・アクセスを比較。',
+  },
+  kagawa: {
+    title: '香川の個室・プライベートサウナ一覧｜瀬戸内海ビューの施設を比較 | サウナ子',
+    description: '香川の個室・プライベートサウナを探すならサウナ子。瀬戸内海を望む施設を掲載。料金・設備・アクセスを比較。',
+  },
+  ehime: {
+    title: '愛媛の個室・プライベートサウナ一覧｜道後温泉エリアの施設を比較 | サウナ子',
+    description: '愛媛の個室・プライベートサウナを探すならサウナ子。道後温泉エリアの温泉×サウナ施設を掲載。料金・設備・アクセスを比較。',
+  },
+  kochi: {
+    title: '高知の個室・プライベートサウナ一覧｜太平洋を望む施設を比較 | サウナ子',
+    description: '高知の個室・プライベートサウナを探すならサウナ子。太平洋を望む開放感抜群の施設を掲載。料金・設備・アクセスを比較。',
+  },
   fukuoka: {
     title: '福岡の個室・プライベートサウナ一覧｜博多・天神のプライベートサウナを比較 | サウナ子',
     description: '福岡の個室サウナ・プライベートサウナを探すならサウナ子。博多・天神・小倉エリアを中心に、カップル利用OK・貸切プランありの施設を厳選。料金・設備・アクセスを比較して、九州で人気の個室サウナが見つかる。',
   },
+  saga: {
+    title: '佐賀の個室・プライベートサウナ一覧｜嬉野温泉エリアの施設を比較 | サウナ子',
+    description: '佐賀の個室・プライベートサウナを探すならサウナ子。嬉野温泉・武雄温泉エリアの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  nagasaki: {
+    title: '長崎の個室・プライベートサウナ一覧｜異国情緒ある施設を比較 | サウナ子',
+    description: '長崎の個室・プライベートサウナを探すならサウナ子。異国情緒あふれる街並みの個室サウナを掲載。料金・設備・アクセスを比較。',
+  },
+  kumamoto: {
+    title: '熊本の個室・プライベートサウナ一覧｜阿蘇・天草の施設を比較 | サウナ子',
+    description: '熊本の個室・プライベートサウナを探すならサウナ子。阿蘇・天草エリアの自然豊かな施設を掲載。料金・設備・アクセスを比較。',
+  },
+  oita: {
+    title: '大分の個室・プライベートサウナ一覧｜別府・湯布院の温泉×サウナを比較 | サウナ子',
+    description: '大分の個室・プライベートサウナを探すならサウナ子。おんせん県・大分の別府・湯布院エリアの施設を厳選。料金・設備・アクセスを比較。',
+  },
+  miyazaki: {
+    title: '宮崎の個室・プライベートサウナ一覧｜南国リゾートサウナを比較 | サウナ子',
+    description: '宮崎の個室・プライベートサウナを探すならサウナ子。南国の温暖な気候で楽しめるサウナ施設を掲載。料金・設備・アクセスを比較。',
+  },
+  kagoshima: {
+    title: '鹿児島の個室・プライベートサウナ一覧｜桜島ビューの施設を比較 | サウナ子',
+    description: '鹿児島の個室・プライベートサウナを探すならサウナ子。桜島を望む温泉大国ならではの施設を掲載。料金・設備・アクセスを比較。',
+  },
+  okinawa: {
+    title: '沖縄の個室・プライベートサウナ一覧｜リゾートサウナを比較 | サウナ子',
+    description: '沖縄の個室・プライベートサウナを探すならサウナ子。美しい海を眺めながら整えるリゾートサウナを掲載。料金・設備・アクセスを比較。',
+  },
 };
+
+function generateAreaStats(facilities: Facility[]) {
+  const total = facilities.length;
+  if (total === 0) return null;
+
+  const pricedFacilities = facilities.filter(f => f.priceMin > 0);
+  const avgPrice = pricedFacilities.length > 0
+    ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
+    : null;
+  const minPrice = pricedFacilities.length > 0 ? Math.min(...pricedFacilities.map(f => f.priceMin)) : null;
+
+  const waterBathCount = facilities.filter(f => f.features.waterBath).length;
+  const selfLoylyCount = facilities.filter(f => f.features.selfLoyly).length;
+  const outdoorAirCount = facilities.filter(f => f.features.outdoorAir).length;
+  const coupleOkCount = facilities.filter(f => f.features.coupleOk).length;
+
+  const stationFacilities = facilities.filter(f => f.nearestStation && (f.walkMinutes ?? 0) > 0);
+  const avgWalkMinutes = stationFacilities.length > 0
+    ? Math.round(stationFacilities.reduce((sum, f) => sum + (f.walkMinutes ?? 0), 0) / stationFacilities.length)
+    : null;
+
+  return {
+    total,
+    avgPrice,
+    minPrice,
+    waterBathCount,
+    selfLoylyCount,
+    outdoorAirCount,
+    coupleOkCount,
+    avgWalkMinutes,
+    waterBathRate: Math.round((waterBathCount / total) * 100),
+    selfLoylyRate: Math.round((selfLoylyCount / total) * 100),
+    coupleOkRate: Math.round((coupleOkCount / total) * 100),
+  };
+}
+
+function getNeighborPrefectures(currentCode: string): { code: string; label: string }[] {
+  // Find the region that contains the current prefecture
+  const currentRegion = REGION_GROUPS.find(r => r.prefectures.some(p => p.code === currentCode));
+  if (!currentRegion) return [];
+
+  // Get other prefectures from the same region
+  const neighbors = currentRegion.prefectures.filter(p => p.code !== currentCode);
+  return neighbors;
+}
 
 export async function generateStaticParams() {
   const prefectures = getAllPrefectures();
@@ -160,6 +386,10 @@ export default async function AreaPage({ params }: PageProps) {
   const saunakoComment = SAUNAKO_AREA_COMMENTS[prefecture] || DEFAULT_SAUNAKO_COMMENT;
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const areaCounts = getAreaFacilityCounts(prefecture);
+
+  const areaStats = generateAreaStats(facilities);
+  const neighborPrefectures = getNeighborPrefectures(prefecture);
+  const prefCounts = getPrefectureFacilityCounts();
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -360,6 +590,92 @@ export default async function AreaPage({ params }: PageProps) {
             prefectureLabel={prefData.label}
           />
         </Suspense>
+
+        {/* Area Stats Section */}
+        {areaStats && (
+          <section className="mt-12 mb-8">
+            <h2 className="text-xl font-bold text-text-primary mb-4">{prefData.label}の個室サウナまとめ</h2>
+            <div className="bg-surface border border-border rounded-xl p-5 md:p-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div className="text-center">
+                  <p className="text-2xl md:text-3xl font-bold text-primary">{areaStats.total}</p>
+                  <p className="text-xs text-text-tertiary mt-1">掲載施設数</p>
+                </div>
+                {areaStats.minPrice && (
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-primary">{areaStats.minPrice.toLocaleString()}<span className="text-sm font-normal">円〜</span></p>
+                    <p className="text-xs text-text-tertiary mt-1">最安料金 / 1時間</p>
+                  </div>
+                )}
+                {areaStats.avgPrice && (
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-text-primary">{areaStats.avgPrice.toLocaleString()}<span className="text-sm font-normal">円</span></p>
+                    <p className="text-xs text-text-tertiary mt-1">平均料金 / 1時間</p>
+                  </div>
+                )}
+                {areaStats.avgWalkMinutes && (
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-text-primary">{areaStats.avgWalkMinutes}<span className="text-sm font-normal">分</span></p>
+                    <p className="text-xs text-text-tertiary mt-1">駅からの平均徒歩</p>
+                  </div>
+                )}
+              </div>
+              <div className="border-t border-border mt-5 pt-5">
+                <h3 className="text-sm font-semibold text-text-secondary mb-3">設備の充実度</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{ width: `${areaStats.waterBathRate}%` }}></div>
+                    </div>
+                    <span className="text-xs text-text-tertiary whitespace-nowrap">水風呂 {areaStats.waterBathRate}%</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{ width: `${areaStats.selfLoylyRate}%` }}></div>
+                    </div>
+                    <span className="text-xs text-text-tertiary whitespace-nowrap">ロウリュ {areaStats.selfLoylyRate}%</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{ width: `${areaStats.coupleOkRate}%` }}></div>
+                    </div>
+                    <span className="text-xs text-text-tertiary whitespace-nowrap">カップル {areaStats.coupleOkRate}%</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-text-tertiary whitespace-nowrap">外気浴 {areaStats.outdoorAirCount}施設</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm text-text-secondary mt-5 leading-relaxed">
+                {prefData.label}には現在{areaStats.total}件の個室サウナが掲載されています。
+                {areaStats.avgPrice && `料金の相場は1時間あたり約${areaStats.avgPrice.toLocaleString()}円で、最安${areaStats.minPrice?.toLocaleString()}円から利用できます。`}
+                {areaStats.coupleOkCount > 0 && `カップルで利用できる施設は${areaStats.coupleOkCount}件あります。`}
+                {areaStats.waterBathCount > 0 && `水風呂を完備している施設は${areaStats.waterBathCount}件（${areaStats.waterBathRate}%）です。`}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Nearby Area Links */}
+        {neighborPrefectures.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl font-bold text-text-primary mb-4">近くのエリアの個室サウナ</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {neighborPrefectures.map((pref) => (
+                <Link
+                  key={pref.code}
+                  href={`/area/${pref.code}`}
+                  className="bg-surface border border-border rounded-xl p-4 hover:border-primary hover:shadow-sm transition-all text-center"
+                >
+                  <span className="text-sm font-medium text-text-primary">{pref.label}</span>
+                  <span className="block text-xs text-text-tertiary mt-1">
+                    {prefCounts[pref.code] || 0}件の施設
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
       <ScrollToTop />
