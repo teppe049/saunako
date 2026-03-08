@@ -122,7 +122,7 @@ function MapPanHandler({ selectedId, facilities, origin }: { selectedId?: number
         if (!f.lat || !f.lng) return false;
         const dLat = Math.abs(f.lat - origin.lat);
         const dLng = Math.abs(f.lng - origin.lng);
-        return dLat < 0.3 && dLng < 0.3; // ~30km radius
+        return dLat < 0.1 && dLng < 0.1; // ~10km radius
       });
 
       if (nearby.length > 0) {
@@ -131,8 +131,8 @@ function MapPanHandler({ selectedId, facilities, origin }: { selectedId?: number
         const bounds = L.latLngBounds(points);
         map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 });
       } else {
-        // No nearby facilities — center on origin at city zoom level
-        map.setView([origin.lat, origin.lng], 11);
+        // No nearby facilities — center on origin at neighborhood zoom level
+        map.setView([origin.lat, origin.lng], 13);
       }
       return;
     }
