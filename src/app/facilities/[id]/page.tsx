@@ -33,25 +33,30 @@ export async function generateMetadata({ params }: PageProps) {
   const facility = getFacilityById(Number(id));
   if (!facility) return { title: 'Not Found' };
 
-  // SEO: 検索意図に合う詳細なdescriptionを構築
-  const descParts: string[] = [];
-  descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ（プライベートサウナ）`);
-  if (facility.nearestStation && (facility.walkMinutes ?? 0) > 0) {
-    descParts.push(`${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`);
+  // SEO: seoDescription があればそれを使い、なければテンプレートで生成
+  let description: string;
+  if (facility.seoDescription) {
+    description = facility.seoDescription;
+  } else {
+    const descParts: string[] = [];
+    descParts.push(`${facility.name}は${facility.prefectureLabel}${facility.city}の個室サウナ（プライベートサウナ）`);
+    if (facility.nearestStation && (facility.walkMinutes ?? 0) > 0) {
+      descParts.push(`${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分`);
+    }
+    if (facility.priceMin > 0) {
+      descParts.push(`${facility.priceMin.toLocaleString()}円〜/${facility.duration}分`);
+    }
+    if (facility.capacity > 0) {
+      descParts.push(`最大${facility.capacity}名`);
+    }
+    const featureTags: string[] = [];
+    if (facility.features.waterBath) featureTags.push('水風呂あり');
+    if (facility.features.selfLoyly) featureTags.push('セルフロウリュ');
+    if (facility.features.outdoorAir) featureTags.push('外気浴');
+    if (facility.features.coupleOk) featureTags.push('カップルOK');
+    if (featureTags.length > 0) descParts.push(featureTags.join('・'));
+    description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。貸切・個室サウナの比較ならサウナ子。';
   }
-  if (facility.priceMin > 0) {
-    descParts.push(`${facility.priceMin.toLocaleString()}円〜/${facility.duration}分`);
-  }
-  if (facility.capacity > 0) {
-    descParts.push(`最大${facility.capacity}名`);
-  }
-  const featureTags: string[] = [];
-  if (facility.features.waterBath) featureTags.push('水風呂あり');
-  if (facility.features.selfLoyly) featureTags.push('セルフロウリュ');
-  if (facility.features.outdoorAir) featureTags.push('外気浴');
-  if (facility.features.coupleOk) featureTags.push('カップルOK');
-  if (featureTags.length > 0) descParts.push(featureTags.join('・'));
-  const description = descParts.join('。') + '。料金プラン・設備・予約方法を詳しく紹介。貸切・個室サウナの比較ならサウナ子。';
 
   return {
     title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室・プライベートサウナ | サウナ子`,

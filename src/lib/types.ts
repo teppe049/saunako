@@ -69,6 +69,7 @@ export interface Facility {
   lat: number | null;
   lng: number | null;
   description: string;
+  seoDescription: string | null;
   saunakoCommentShort: string;
   saunakoCommentLong: string;
   updatedAt: string;
