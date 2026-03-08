@@ -15,6 +15,8 @@ interface SearchHeaderBarProps {
   prefectureCode?: string;
   regionCode?: string;
   areaSlug?: string;
+  locationName?: string;
+  hasOrigin?: boolean;
 }
 
 type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
@@ -40,7 +42,7 @@ const CHEVRON_SVG = (
   </svg>
 );
 
-export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug }: SearchHeaderBarProps) {
+export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug, locationName, hasOrigin }: SearchHeaderBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -103,6 +105,13 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     if (area) params.set('area', area);
     const sort = searchParams.get('sort');
     if (sort) params.set('sort', sort);
+    // Preserve location params
+    const latParam = searchParams.get('lat');
+    if (latParam) params.set('lat', latParam);
+    const lngParam = searchParams.get('lng');
+    if (lngParam) params.set('lng', lngParam);
+    const locName = searchParams.get('locationName');
+    if (locName) params.set('locationName', locName);
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -204,6 +213,17 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           />
           <span className="hidden md:inline font-bold text-lg text-text-primary">サウナ子</span>
         </Link>
+
+        {/* Location Name Badge (when searching near a location) */}
+        {locationName && (
+          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[12px] md:text-[13px] font-medium bg-primary/10 text-primary border border-primary/20 flex-shrink-0 truncate max-w-[140px] md:max-w-none">
+            <svg className="w-3 h-3 md:w-3.5 md:h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            {locationName} 周辺
+          </span>
+        )}
 
         {/* Region Select */}
         <div className="relative inline-flex items-center flex-shrink-0">
@@ -343,6 +363,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
               className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
             >
               <option value="recommend">掲載順</option>
+              {hasOrigin && <option value="distance">距離順</option>}
               <option value="newest">新着順</option>
               <option value="price_asc">価格が安い順</option>
               <option value="price_desc">価格が高い順</option>
@@ -451,6 +472,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
                       className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
                     >
                       <option value="recommend">掲載順</option>
+                      {hasOrigin && <option value="distance">距離順</option>}
                       <option value="newest">新着順</option>
                       <option value="price_asc">価格が安い順</option>
                       <option value="price_desc">価格が高い順</option>

@@ -1,4 +1,5 @@
 import { Facility, AreaGroup, AREA_GROUPS } from './types';
+import { getDistanceKm } from './distance';
 import facilitiesData from '../../data/facilities.json';
 
 const facilities: Facility[] = facilitiesData as Facility[];
@@ -151,9 +152,9 @@ export function searchFacilities(params: {
   return result;
 }
 
-export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc' | 'newest';
+export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc' | 'newest' | 'distance';
 
-export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[] {
+export function sortFacilities(facilities: Facility[], sort: SortKey, origin?: { lat: number; lng: number }): Facility[] {
   if (sort === 'recommend') return facilities;
 
   return [...facilities].sort((a, b) => {
@@ -182,6 +183,17 @@ export function sortFacilities(facilities: Facility[], sort: SortKey): Facility[
       }
       case 'newest': {
         return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+      }
+      case 'distance': {
+        if (!origin) return 0;
+        const aHasCoords = a.lat != null && a.lng != null;
+        const bHasCoords = b.lat != null && b.lng != null;
+        if (!aHasCoords && !bHasCoords) return 0;
+        if (!aHasCoords) return 1;
+        if (!bHasCoords) return -1;
+        const aDist = getDistanceKm(origin.lat, origin.lng, a.lat!, a.lng!);
+        const bDist = getDistanceKm(origin.lat, origin.lng, b.lat!, b.lng!);
+        return aDist - bDist;
       }
       default:
         return 0;

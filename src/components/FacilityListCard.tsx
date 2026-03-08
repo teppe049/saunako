@@ -14,10 +14,11 @@ interface FacilityListCardProps {
   isHovered?: boolean;
   isSelected?: boolean;
   onHover?: (id: number | null) => void;
+  distanceLabel?: string;
 }
 
 const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
-  ({ facility, index, isHovered, isSelected, onHover }, ref) => {
+  ({ facility, index, isHovered, isSelected, onHover, distanceLabel }, ref) => {
     const handleMouseEnter = useCallback(() => {
       onHover?.(facility.id);
     }, [onHover, facility.id]);
@@ -109,12 +110,19 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
             </div>
 
-            {/* Location */}
-            {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
-              <p className="text-xs md:text-sm text-text-tertiary">
-                {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
-              </p>
-            )}
+            {/* Location + Distance badge */}
+            <div className="flex items-center gap-2 flex-wrap">
+              {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
+                <p className="text-xs md:text-sm text-text-tertiary">
+                  {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
+                </p>
+              )}
+              {distanceLabel && (
+                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[11px] md:text-xs font-medium text-text-secondary bg-bg border border-border rounded">
+                  {distanceLabel}
+                </span>
+              )}
+            </div>
 
             {/* Website link */}
             {facility.website && (

@@ -5,6 +5,7 @@ import SearchInteractivePanel from '@/components/SearchInteractivePanel';
 import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES, getRegionByCode } from '@/lib/types';
+import { getDistanceKm, formatDistance } from '@/lib/distance';
 
 interface SearchPageProps {
   searchParams: Promise<{
@@ -23,6 +24,9 @@ interface SearchPageProps {
     earlyMorning?: string;
     sort?: string;
     area?: string;
+    lat?: string;
+    lng?: string;
+    locationName?: string;
   }>;
 }
 
@@ -94,9 +98,18 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   const areaSlug = params.area || '';
   const areaData = areaSlug && prefecture ? getAreaBySlug(prefecture, areaSlug) : undefined;
 
-  const sortKey = (['recommend', 'price_asc', 'price_desc', 'station_asc', 'newest'].includes(params.sort || '')
+  const lat = params.lat ? Number(params.lat) : undefined;
+  const lng = params.lng ? Number(params.lng) : undefined;
+  const origin = lat != null && lng != null && !isNaN(lat) && !isNaN(lng)
+    ? { lat, lng }
+    : undefined;
+  const locationName = params.locationName || undefined;
+
+  const validSortKeys = ['recommend', 'price_asc', 'price_desc', 'station_asc', 'newest', 'distance'];
+  const defaultSort = origin ? 'distance' : 'recommend';
+  const sortKey = (validSortKeys.includes(params.sort || '')
     ? params.sort
-    : 'recommend') as SortKey;
+    : defaultSort) as SortKey;
 
   // Resolve prefecture filter: specific prefecture > region's prefectures > undefined
   const prefectureFilter = prefecture
@@ -121,7 +134,17 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     lateNight: params.lateNight === 'true',
     earlyMorning: params.earlyMorning === 'true',
   });
-  const facilities = sortFacilities(filtered, sortKey);
+  const sorted = sortFacilities(filtered, sortKey, origin);
+
+  // Attach _distance to each facility for client-side display
+  const facilities = origin
+    ? sorted.map((f) => ({
+        ...f,
+        _distance: f.lat != null && f.lng != null
+          ? formatDistance(getDistanceKm(origin.lat, origin.lng, f.lat, f.lng))
+          : undefined,
+      }))
+    : sorted;
 
   const baseCount = prefecture
     ? allFacilities.filter((f) => f.prefecture === prefecture).length
@@ -170,9 +193,11 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         prefectureCode={prefecture}
         regionCode={regionCode}
         areaSlug={areaSlug}
+        locationName={locationName}
+        hasOrigin={!!origin}
       />
       <div className="flex flex-col flex-1 min-h-0">
-        <SearchInteractivePanel facilities={facilities} />
+        <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} />
       </div>
     </div>
   );

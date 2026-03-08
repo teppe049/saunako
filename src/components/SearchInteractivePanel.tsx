@@ -8,8 +8,13 @@ import AdUnit from './AdUnit';
 import type { MapBounds } from './FacilityMap';
 import { Facility } from '@/lib/types';
 
+interface FacilityWithDistance extends Facility {
+  _distance?: string;
+}
+
 interface Props {
-  facilities: Facility[];
+  facilities: FacilityWithDistance[];
+  hasOrigin?: boolean;
 }
 
 function isInBounds(facility: Facility, bounds: MapBounds): boolean {
@@ -22,7 +27,7 @@ function isInBounds(facility: Facility, bounds: MapBounds): boolean {
   );
 }
 
-export default function SearchInteractivePanel({ facilities }: Props) {
+export default function SearchInteractivePanel({ facilities, hasOrigin }: Props) {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
@@ -115,6 +120,7 @@ export default function SearchInteractivePanel({ facilities }: Props) {
               isHovered={hoveredId === facility.id}
               isSelected={selectedId === facility.id}
               onHover={handleCardHover}
+              distanceLabel={hasOrigin ? facility._distance : undefined}
             />
           ))}
         </div>
