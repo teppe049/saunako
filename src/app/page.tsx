@@ -4,8 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSearchForm from '@/components/HeroSearchForm';
 import dynamic from 'next/dynamic';
-import { getPopularFacilities, getAllFacilities, getNewFacilities, getPrefectureFacilityCounts } from '@/lib/facilities';
-import { REGION_GROUPS } from '@/lib/types';
+import { getPopularFacilities, getAllFacilities, getNewFacilities } from '@/lib/facilities';
 import type { Metadata } from 'next';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
@@ -178,35 +177,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
-      {/* Area Section */}
-      <section className="bg-bg py-6 md:py-12">
-        <div className="max-w-7xl mx-auto px-5 md:px-20">
-          <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-8">エリアから探す</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {(() => {
-              const counts = getPrefectureFacilityCounts();
-              return REGION_GROUPS.map((region) => (
-                <div key={region.code} className="bg-surface border border-border rounded-xl p-4 md:p-5">
-                  <h3 className="text-sm font-semibold text-text-secondary mb-3">{region.label}</h3>
-                  <div className="flex flex-wrap gap-x-3 gap-y-2">
-                    {region.prefectures.map((pref) => (
-                      <Link
-                        key={pref.code}
-                        href={`/area/${pref.code}`}
-                        className="text-sm text-text-primary hover:text-primary transition-colors"
-                      >
-                        {pref.label}
-                        <span className="text-xs text-text-tertiary ml-0.5">({counts[pref.code] || 0})</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ));
-            })()}
-          </div>
-        </div>
-      </section>
 
       {/* Recently Viewed */}
       <RecentlyViewed allFacilities={allFacilities} />
