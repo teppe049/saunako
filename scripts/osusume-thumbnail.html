@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
+.container {
+  width: 1200px;
+  height: 630px;
+  background: linear-gradient(135deg, #1a0a00 0%, #4a1a00 30%, #8B4513 60%, #C2621A 85%, #E87957 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decorative steam particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+.p1 { width: 300px; height: 300px; top: -80px; right: -60px; }
+.p2 { width: 200px; height: 200px; bottom: -40px; left: -30px; }
+.p3 { width: 150px; height: 150px; top: 60px; left: 180px; background: rgba(255, 255, 255, 0.025); }
+.p4 { width: 100px; height: 100px; bottom: 100px; right: 200px; background: rgba(255, 255, 255, 0.03); }
+.p5 { width: 250px; height: 250px; top: 200px; right: 100px; background: rgba(232, 121, 87, 0.08); }
+
+/* Orange accent circles */
+.accent1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(232, 121, 87, 0.12);
+  top: -150px;
+  left: -100px;
+}
+.accent2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(232, 121, 87, 0.08);
+  bottom: -120px;
+  right: -80px;
+}
+
+/* Bottom accent bar */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, transparent 0%, #E87957 20%, #D4634A 50%, #E87957 80%, transparent 100%);
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.badge {
+  background: rgba(232, 121, 87, 0.25);
+  border: 1px solid rgba(232, 121, 87, 0.5);
+  color: #FFD4C2;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 28px;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.site-info {
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+}
+.site-info img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.site-info span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Character */
+.character {
+  position: absolute;
+  left: 40px;
+  bottom: 16px;
+  z-index: 2;
+}
+.character img {
+  height: 160px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+  <div class="accent1"></div>
+  <div class="accent2"></div>
+
+  <div class="content">
+    <div class="badge">2026年最新</div>
+    <div class="main-title">個室サウナ<br>おすすめ10選</div>
+    <div class="subtitle">全国393施設から厳選</div>
+  </div>
+
+  <div class="character">
+    <img src="guide-transparent.png" alt="">
+  </div>
+
+  <div class="site-info">
+    <img src="../public/saunako-avatar.webp" alt="">
+    <span>saunako.jp</span>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>

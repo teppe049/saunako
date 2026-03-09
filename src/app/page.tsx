@@ -3,22 +3,74 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSearchForm from '@/components/HeroSearchForm';
+import ArticleCard from '@/components/ArticleCard';
 import dynamic from 'next/dynamic';
 import { getPopularFacilities, getAllFacilities, getNewFacilities } from '@/lib/facilities';
+import { getAllArticles } from '@/lib/articles';
 import type { Metadata } from 'next';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
 
 export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.saunako.jp/',
-  },
+  title: '個室サウナ・プライベートサウナの比較・検索サイト｜全国393施設 | サウナ子',
+  description: '全国47都道府県393施設以上の個室サウナ・プライベートサウナを料金・設備・エリアで比較検索。東京・大阪・名古屋・福岡のおすすめ施設から、カップルOK・24時間営業・セルフロウリュ付きまで。あなたにぴったりの個室サウナが見つかるポータルサイト。',
+  alternates: { canonical: 'https://www.saunako.jp/' },
+};
+
+const FEATURED_ARTICLE_SLUGS = [
+  'private-sauna-beginners-guide',
+  'couple-private-sauna',
+  'cheap-private-sauna',
+  'osusume-private-sauna',
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '個室サウナの料金相場はいくらですか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '個室サウナの料金は1時間あたり1,000円〜8,000円程度が相場です。平日・オフピークは割安になる施設が多く、2人以上で割り勘すればさらにお得に利用できます。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '個室サウナはカップルで利用できますか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'はい、全国の個室サウナの約8割が男女一緒に利用可能です。完全貸切のプライベート空間なので、カップルのサウナデートにも人気です。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '個室サウナと普通のサウナの違いは何ですか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '個室サウナは完全貸切のプライベート空間で、サウナ・水風呂・休憩スペースを独占できます。他のお客さんを気にせず、自分のペースでロウリュや温度調整ができるのが最大の魅力です。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '個室サウナに必要な持ち物はありますか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '多くの個室サウナではタオル・シャンプー・ドライヤーなどのアメニティが用意されています。手ぶらで利用できる施設がほとんどですが、予約時に確認すると安心です。',
+      },
+    },
+  ],
 };
 
 export default function Home() {
   const popularFacilities = getPopularFacilities(3);
   const newFacilities = getNewFacilities(3);
   const allFacilities = getAllFacilities();
+  const allArticles = getAllArticles();
+  const featuredArticles = FEATURED_ARTICLE_SLUGS
+    .map((slug) => allArticles.find((a) => a.slug === slug))
+    .filter((a): a is NonNullable<typeof a> => a != null);
 
   return (
     <div className="min-h-screen bg-bg">
@@ -29,7 +81,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5 md:px-20">
           <div className="text-center mb-6 md:mb-10">
             <h1 className="text-[28px] leading-[1.3] md:text-[40px] md:leading-tight font-bold text-text-primary mb-4">
-              あなたの「整い」を、私が見つける
+              全国の個室サウナを比較・検索
             </h1>
             <p className="text-text-tertiary md:text-text-secondary text-sm md:text-base">
               全国47都道府県・{allFacilities.length}施設以上を掲載中
@@ -55,6 +107,18 @@ export default function Home() {
 
           {/* Search Form */}
           <HeroSearchForm />
+        </div>
+      </section>
+
+      {/* About Private Sauna Section */}
+      <section className="bg-muted/50 py-6 md:py-10">
+        <div className="max-w-3xl mx-auto px-5 md:px-20">
+          <h2 className="text-lg md:text-xl font-bold text-text-primary mb-3">個室サウナとは？</h2>
+          <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+            個室サウナは、サウナ・水風呂・外気浴スペースを完全貸切で楽しめるプライベートサウナです。
+            自分だけの空間でセルフロウリュや温度調整ができ、カップルや友人同士でも気兼ねなく利用できます。
+            サウナ子では全国47都道府県・{allFacilities.length}施設以上の個室サウナを、料金・設備・エリアで比較検索できます。
+          </p>
         </div>
       </section>
 
@@ -178,8 +242,33 @@ export default function Home() {
         </section>
       )}
 
+      {/* Featured Articles Section */}
+      {featuredArticles.length > 0 && (
+        <section className="bg-bg py-6 md:py-12">
+          <div className="max-w-7xl mx-auto px-5 md:px-20">
+            <div className="flex items-center justify-between mb-4 md:mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-text-primary">おすすめ記事</h2>
+              <Link href="/articles" className="text-primary text-sm font-medium hover:opacity-80 transition-opacity">
+                すべて見る →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {featuredArticles.map((article) => (
+                <ArticleCard key={article.slug} article={article} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Recently Viewed */}
       <RecentlyViewed allFacilities={allFacilities} />
+
+      {/* FAQ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       <Footer />
       <ScrollToTop />
