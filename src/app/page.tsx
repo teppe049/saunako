@@ -60,6 +60,38 @@ const faqJsonLd = {
         text: '多くの個室サウナではタオル・シャンプー・ドライヤーなどのアメニティが用意されています。手ぶらで利用できる施設がほとんどですが、予約時に確認すると安心です。',
       },
     },
+    {
+      '@type': 'Question',
+      name: '駅近の個室サウナはありますか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'はい、サウナ子に掲載されている多くの施設が駅から徒歩10分以内です。高輪SAUNAS（高輪ゲートウェイ駅直結）など、アクセス抜群の個室サウナを検索条件で絞り込めます。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '個室サウナの料金相場はいくらですか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '1時間あたり3,000円〜6,000円が一般的な料金相場です。平日割引やショートプランなど、施設によってお得なプランもあります。サウナ子で料金を比較して、予算に合った施設を見つけましょう。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '24時間営業の個室サウナはありますか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'はい、24時間営業やほぼ24時間利用可能な個室サウナもあります。深夜や早朝にサウナを楽しみたい方は、サウナ子の検索で営業時間を確認できます。',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '個室サウナは予約なしでも利用できますか？',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '多くの個室サウナは完全予約制です。当日予約OKの施設もありますが、特に週末は混雑するため事前予約がおすすめです。各施設の予約方法はサウナ子の施設ページで確認できます。',
+      },
+    },
   ],
 };
 
@@ -260,6 +292,33 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Area Links Section */}
+      <section className="bg-muted/50 py-6 md:py-12">
+        <div className="max-w-7xl mx-auto px-5 md:px-20">
+          <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-8">エリアから個室サウナを探す</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {[
+              { label: '東京の個室サウナ', href: '/area/tokyo' },
+              { label: '大阪の個室サウナ', href: '/area/osaka' },
+              { label: '福岡の個室サウナ', href: '/area/fukuoka' },
+              { label: '北海道(札幌)の個室サウナ', href: '/area/hokkaido' },
+              { label: '愛知(名古屋)の個室サウナ', href: '/area/aichi' },
+              { label: '神奈川(横浜)の個室サウナ', href: '/area/kanagawa' },
+              { label: '埼玉の個室サウナ', href: '/area/saitama' },
+              { label: '栃木(宇都宮)の個室サウナ', href: '/area/tochigi' },
+            ].map((area) => (
+              <Link
+                key={area.href}
+                href={area.href}
+                className="text-sm md:text-base text-primary hover:opacity-80 transition-opacity"
+              >
+                {area.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Recently Viewed */}
       <RecentlyViewed allFacilities={allFacilities} />
