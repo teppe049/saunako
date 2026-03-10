@@ -15796,7 +15796,8 @@
     "openedAt": null,
     "closedAt": null,
     "plans": null,
-    "timeSlots": null
+    "timeSlots": null,
+    "seoDescription": "プライベートサウナ りらちる は青森県八戸市の完全個室サウナ。八戸市初のプライベートサウナで、小中野駅からアクセス可能。90分4,400円〜。セルフロウリュ・インフィニティチェア完備。カップルOK・子供連れOK。女性目線のおしゃれな空間で、八戸・青森で個室サウナをお探しの方におすすめ。"
   },
   {
     "id": 206,
@@ -26229,7 +26230,7 @@
   {
     "id": 367,
     "slug": "private-sauna-raku-saga",
-    "name": "Private Sauna RAKU 佐賀八戸溝店",
+    "name": "Private Sauna RAKU（ラク）佐賀八戸溝店",
     "prefecture": "saga",
     "prefectureLabel": "佐賀県",
     "city": "佐賀市",
