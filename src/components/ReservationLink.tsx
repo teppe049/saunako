@@ -19,7 +19,7 @@ export default function ReservationLink({
 
   return (
     <a
-      href={website}
+      href={`/go/${facilityId}?dest=booking`}
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}

@@ -39,12 +39,14 @@ export function sendGAEvent(
 export function trackReservationClick(
   facilityId: number,
   facilityName: string,
-  destinationUrl: string
+  destinationUrl: string,
+  dest: 'booking' | 'website' = 'booking'
 ): void {
   sendGAEvent('click_reservation_link', {
     facility_id: facilityId,
     facility_name: facilityName,
     destination_url: destinationUrl,
+    destination_type: dest,
   });
 }
 
