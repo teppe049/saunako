@@ -67,6 +67,24 @@
 | **施設名** | 名称変更がないか |
 | **閉店** | 閉店・休業情報がないか |
 | **電話番号** | phone が正しいか |
+| **画像** | `public/facilities/{id}-{0,1,2,3}.webp` が4枚揃っているか |
+
+#### 画像が4枚未満の場合
+
+`public/facilities/{id}-*.webp` を確認し、4枚に満たない場合は不足分を取得する。
+
+1. DeepResearch（Step 3）で取得済みの公式サイト・予約サイトから施設写真のURLを収集
+2. 人物が写っていない画像のみ選定（サウナ室・水風呂・外気浴・休憩スペース等）
+3. ダウンロード → webp 変換: `cwebp -q 80 -resize 800 0 /tmp/input.jpg -o public/facilities/{id}-{index}.webp`
+4. `data/facilities.json` の `images` 配列を更新
+5. サイトにも反映されるため、QA Agent でビルド確認
+
+画像ソースの優先順位:
+1. 公式HP の `<img>` タグ / CSS `background-image`
+2. PR Times プレスリリース画像
+3. Coubic/STORES 予約ページの施設写真
+
+**注意**: sauna-ikitai.com の画像は使用禁止。SPA サイトは Playwright でDOM抽出。
 
 #### 差異が見つかった場合
 
