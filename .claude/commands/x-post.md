@@ -135,8 +135,9 @@ saunako.jp/facilities/{id}
 
 #### 画像ソース
 - `public/facilities/{id}-0.webp` （メイン画像）
-- `public/facilities/{id}-1.webp` （サブ画像1）
-- `public/facilities/{id}-2.webp` （サブ画像2）
+- `public/facilities/{id}-1.webp` （サブ画像2）
+- `public/facilities/{id}-2.webp` （サブ画像3）
+- `public/facilities/{id}-3.webp` （サブ画像4）
 
 #### 手順
 1. 上記3枚を Read ツールで読み込み（バイナリ → base64）
@@ -144,8 +145,8 @@ saunako.jp/facilities/{id}
    - `media_data`: base64エンコードされた画像データ
    - `mime_type`: `"image/webp"`
    - `media_category`: `"tweet_image"`
-3. 返却された `media_id` を3つ収集
-4. 投稿時に `media_ids: [id1, id2, id3]` として `post_tweet` に渡す
+3. 返却された `media_id` を4つ収集
+4. 投稿時に `media_ids: [id1, id2, id3, id4]` として `post_tweet` に渡す
 
 #### MCP 401エラー時のフォールバック
 MCP の `post_tweet` が401になる場合は、直接 X API v1.1 で画像アップロード + v2 で投稿する:
