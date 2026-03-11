@@ -115,7 +115,7 @@ WebSearch で「{施設名} {住所} 緯度 経度」から lat/lng を取得。
 }
 ```
 
-- `images` は空配列 `[]` で初期化
+- `images` は Phase 7 で取得するため空配列 `[]` で初期化
 - `priceMin` / `duration` / `capacity` はプランの中で最も基本的なものの値を使う
 - `area` は既存施設の同一 prefecture のものを参照して設定
 - `updatedAt` は実行日の日付
@@ -133,3 +133,56 @@ WebSearch で「{施設名} {住所} 緯度 経度」から lat/lng を取得。
 1. `data/facilities.json` の配列末尾にエントリを追加
 2. QA Agent（`npm run build && npm run lint`）でビルドが通ることを確認
 3. ビルド成功したら main にコミット & プッシュ
+
+### Phase 7: 施設画像の取得
+
+データ追加後、各施設の画像を3枚取得する。
+
+#### 画像取得ルール
+- **公式HPのみ使用**（sauna-ikitai.com は使用禁止）
+- **人物が写っていない画像のみ**（施設内観・設備のみ）
+- PR Times のプレスリリースは公式の補助ソースとして利用可
+- Coubic/STORES 予約ページの施設写真も利用可
+
+#### 変換仕様
+```bash
+cwebp -q 80 -resize 800 0 /tmp/input.jpg -o public/facilities/{id}-{index}.webp
+```
+- 形式: webp、幅800px、品質80
+- ファイル名: `{id}-{0,1,2,3}.webp`（0 はサムネイル）
+
+#### 画像取得Tips（実績ベース）
+
+**SPA/JS レンダリングサイト対応:**
+- Bubble.io, Nuxt.js, Wix, Studio Design, Framer, Laravel/Vue 等のSPA は WebFetch で画像URLが取れない
+- → Playwright でDOMから直接画像URLを抽出する
+- CSS `background-image` で画像を配置しているサイトも多い（特に Framer, WordPress テーマ）
+
+**画像ソースの優先順位:**
+1. 公式HP の `<img>` タグ
+2. 公式HP の CSS `background-image`
+3. PR Times プレスリリース画像
+4. Coubic/STORES 予約ページの施設写真
+5. atpress.ne.jp 等の公式プレスリリース
+
+**よくある問題と対処:**
+| 問題 | 対処 |
+|------|------|
+| ロゴ画像を誤取得 | ファイルサイズが小さい（<10KB）場合はロゴの可能性あり。必ず目視確認 |
+| 人物が写っている | Read で webp を目視確認。手・足だけでも除外が安全 |
+| SSL証明書エラー | PR Times やプレスリリースサイトから代替取得 |
+| WordPress サムネイル（320x320等） | `-1024x768` 等のサフィックスを試してフルサイズ取得 |
+| cwebp が CMYK JPEG を処理できない | 別の画像を選ぶか、ImageMagick で RGB 変換してから cwebp |
+| 画像に透過(alpha)がある | webp 変換後に黒背景になることがある。PNG→JPG 変換してから cwebp |
+| ウォーターマーク付き画像 | メーカーロゴ（「出典：○○HPより」等）がある場合は別画像を選ぶ |
+
+**バッチ処理のコツ:**
+- 10施設ずつ3並列のサブエージェントで処理（3-4施設/エージェント）
+- 各エージェントに画像の目視確認まで含めて委任する
+- facilities.json の更新は全画像取得後にまとめて行う
+- エージェントのコンテキストサイズ制限に注意（大きい画像を多数 Read するとオーバーする）
+
+#### 画像取得後の処理
+1. `data/facilities.json` の `images` 配列にパスを追加
+2. QA Agent でビルド確認
+3. コミット & プッシュ
