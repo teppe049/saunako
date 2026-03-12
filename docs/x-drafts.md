@@ -4,104 +4,96 @@
 
 ---
 
-## 3/12 — S+（エスプラス） (id=147)
+## 3/13 — sauna KUVETA (id=88)
 
 ### 本文（リンクなし）
 ```
-1部屋5,000円で最大4人使えるって
-コスパ良すぎない…？
+武蔵小金井駅から徒歩2分の個室サウナ「KUVETA」
 
-岡崎のプライベートサウナ「S+」は
-HARVIAストーブでセルフロウリュができて
-照明もBGMも自分好みにカスタマイズ可能🔥
+名前の由来は小金井の「黄金の水が湧く地」から
+ベランダ付きの部屋なら外気浴もできるし
+氷で水風呂の温度を自分好みに調整できるのが楽しいよ
 
-水着レンタルありでカップルにもおすすめだよ
+サウナ後のジェラートが隠れた名物らしい🍨
 
-📍愛知県岡崎市
+📍東京都小金井市
 #個室サウナ #サウナ子
 ```
 
 ### リプライ（リンク付き）
 ```
-S+（エスプラス）の詳細はここからチェックしてみてね👇
-saunako.jp/facilities/147
+sauna KUVETAの詳細はここからチェックしてみてね👇
+saunako.jp/facilities/88
 ```
 
 ### 画像
-- public/facilities/147-0.webp
-- public/facilities/147-1.webp
-- public/facilities/147-2.webp
-- public/facilities/147-3.webp
+- public/facilities/88-0.webp
+- public/facilities/88-1.webp
+- public/facilities/88-2.webp
 
 ### データ差異
-- plans: 「2名」→「1室」（1〜4名同額）に修正済み
+- openedAt: 「2026-02-21」→「2023-09-28」に修正済み（誤記）
 
 ---
 
-## 3/12 — プライベートサウナ&ラウンジ くつろぎ (id=156)
+## 3/13 — XG SAUNA by re:sauna (id=304)
 
 ### 本文（リンクなし）
 ```
-百貨店の4階に隠れ家サウナがあるの知ってた？
+三宮の北野坂に隠れ家サウナがあるの知ってた？
 
-高崎のスズラン百貨店にある「くつろぎ」は
-二十四節気をテーマにした8つの個室サウナ✨
-部屋ごとに雰囲気が全然違うんだよ
+「XG SAUNA」は完全貸切で屋上外気浴ができて
+なんとシーシャも楽しめちゃうんだよ🌿
+翌5時まで営業してるから深夜サウナもアリ
 
-ReFa完備で深夜24時まで営業してるから
-仕事帰りにも寄れるかも
+カップルにもおすすめ！
 
-📍群馬県高崎市
+📍兵庫県神戸市三宮
 #個室サウナ #サウナ子
 ```
 
 ### リプライ（リンク付き）
 ```
-くつろぎの詳細はここからチェックしてみてね👇
-saunako.jp/facilities/156
+XG SAUNAの詳細はここからチェックしてみてね👇
+saunako.jp/facilities/304
 ```
 
 ### 画像
-- public/facilities/156-0.webp
-- public/facilities/156-1.webp
-- public/facilities/156-2.webp
-- public/facilities/156-3.webp
+- public/facilities/304-0.webp
+- public/facilities/304-1.webp
+- public/facilities/304-2.webp
 
 ### データ差異
-なし
+- waterBathTemp: null→「16」に修正済み
 
 ---
 
-## 3/12 — タノサウナ (id=385)
+## 3/13 — Private Sauna RAKU (id=367)
 
 ### 本文（リンクなし）
 ```
-宮崎初の完全予約制個室サウナ🌴
+水風呂10℃まで冷やせる個室サウナがあるって🥶
 
-「タノサウナ」は個室3つ+宮崎県産ヒノキの
-バレルサウナがあって、サウナの温度も水風呂も
-好みに合わせて調整してくれるんだよ
+佐賀の「RAKU」はサウナも水風呂も温度を
+自分好みに調整できるのがすごいんだよ
+アメニティはReFa完備だし
+ほぼ24時間営業だから深夜もOK
 
-屋根付き外気浴で雨の日でも安心だし
-1人3,700円からで当日予約もOK！
-
-📍宮崎県宮崎市
+📍佐賀県佐賀市
 #個室サウナ #サウナ子
 ```
 
 ### リプライ（リンク付き）
 ```
-タノサウナの詳細はここからチェックしてみてね👇
-saunako.jp/facilities/385
+RAKUの詳細はここからチェックしてみてね👇
+saunako.jp/facilities/367
 ```
 
 ### 画像
-- public/facilities/385-0.webp
-- public/facilities/385-1.webp
-- public/facilities/385-2.webp
-- public/facilities/385-3.webp
+- public/facilities/367-0.webp
+- public/facilities/367-1.webp
+- public/facilities/367-2.webp
 
 ### データ差異
-- businessHours: 「要確認」→「9:00〜21:00」に修正済み
-- waterBathTemp: null→「15」に修正済み
-- openedAt: null→「2025-07-15」に追加済み
+- phone: null→「0952-20-6699」に修正済み
+- openedAt: null→「2025-12-21」に修正済み

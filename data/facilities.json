@@ -7374,7 +7374,7 @@
     "description": "JR武蔵小金井駅南口から徒歩2分のプライベートサウナ。2タイプの個室があり、Vettaルームはベランダ付きで外気浴も可能。セルフアロマロウリュ無料、スマートロックで完全セルフチェックイン。",
     "saunakoCommentShort": "駅徒歩2分で外気浴もできる個室サウナ!",
     "saunakoCommentLong": "武蔵小金井の駅チカ個室サウナだよ! Vettaルームにはベランダがあって外気浴もできるのが嬉しいポイント。アロマロウリュも無料で使えるし、Bluetoothスピーカーで好きな音楽かけながら整えるのも最高かも!",
-    "updatedAt": "2026-02-21",
+    "updatedAt": "2026-03-12",
     "plans": [
       {
         "name": "Kulta 60分 1名",
@@ -7402,7 +7402,7 @@
       }
     ],
     "timeSlots": null,
-    "openedAt": "2026-02-21",
+    "openedAt": "2023-09-28",
     "closedAt": null
   },
   {
@@ -22001,7 +22001,7 @@
     "capacity": 2,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "16",
       "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": true,
@@ -22031,7 +22031,7 @@
     "seoDescription": "XG SAUNA（XGサウナ）は兵庫県神戸市・三宮の完全貸切プライベートサウナ。三宮駅から徒歩7分。15,000円〜/3時間。チラー付き水風呂・セルフロウリュ・屋上外気浴・シーシャ完備。カップルOK・深夜営業・宿泊プランあり。神戸の個室サウナ。",
     "saunakoCommentShort": "屋上外気浴×シーシャが神戸ならではだね！",
     "saunakoCommentLong": "三宮の北野坂にある完全貸切サウナだよ。チラー付き水風呂でキリッと冷やしたあと、屋上で外気浴できるのが最高なの！深夜まで営業してるから仕事終わりでも余裕で行けるし、シーシャラウンジもあってちょっと大人な雰囲気。タトゥーOKなのもポイントかも！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-03-12",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -26254,7 +26254,7 @@
     "businessHours": "8:30〜翌8:10",
     "holidays": "基本無休",
     "website": "https://raku-sauna.com/",
-    "phone": null,
+    "phone": "0952-20-6699",
     "bookingUrl": "https://raku-sauna.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "シャンプー",
@@ -26280,8 +26280,8 @@
     "seoDescription": "プライベートサウナRAKU（Private Sauna RAKU・ラク）佐賀八戸溝店の料金・口コミ・レビュー情報。佐賀県佐賀市の完全個室サウナ、全3室。平日6,100円〜/90分。サウナ75〜95℃・水風呂10〜20℃で温度調整自由。ReFaアメニティ・Bluetoothスピーカー完備。カップルOK・ほぼ24時間営業・ナイトパックあり。佐賀駅から車6分。",
     "saunakoCommentShort": "温度自由自在で自分好みに整える！",
     "saunakoCommentLong": "水風呂が10℃まで冷やせるのすごくない？サウナも95℃まで上げられるから、自分好みの温度にカスタムし放題だよ。アメニティがReFaだったり化粧水・乳液まで揃ってるのが女子的にポイント高いかも。ほぼ24時間営業だから深夜サウナもできちゃうね！",
-    "updatedAt": "2026-03-02",
-    "openedAt": null,
+    "updatedAt": "2026-03-12",
+    "openedAt": "2025-12-21",
     "closedAt": null,
     "plans": [
       {
