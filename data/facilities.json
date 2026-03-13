@@ -28454,5 +28454,82 @@
     "plans": null,
     "timeSlots": null,
     "seoTitle": "SAUNA汽汽｜中目黒の濃霧スチーム個室サウナ 口コミ・予約 | サウナ子"
+  },
+  {
+    "id": 396,
+    "slug": "quintessa-hotel-sapporo",
+    "name": "クインテッサホテル札幌（個室サウナ）",
+    "prefecture": "hokkaido",
+    "prefectureLabel": "北海道",
+    "city": "札幌市中央区",
+    "area": "札幌",
+    "address": "北海道札幌市中央区南8条西5-289-103",
+    "nearestStation": "中島公園駅",
+    "walkMinutes": 4,
+    "priceMin": 3000,
+    "duration": 60,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "9:00〜22:30（最終入場21:30）",
+    "holidays": "なし",
+    "website": "https://quintessahotels.com/sapporo/en/",
+    "phone": "011-512-8500",
+    "bookingUrl": "https://www.tablecheck.com/shops/quintessa-hotels-sapporo/reserve",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "バスマット",
+      "ボディソープ",
+      "シャンプー",
+      "コンディショナー"
+    ],
+    "note": "⚠️ 宿泊者限定（日帰り利用不可）。ホテル客室をサウナ室に改装した完全個室。温度は60〜90℃でセルフ調整可能。予約はTableCheckまたはチェックイン時フロントにて。12歳未満利用不可。",
+    "images": [
+      "/facilities/396-0.webp",
+      "/facilities/396-1.webp",
+      "/facilities/396-2.webp"
+    ],
+    "lat": 43.050191,
+    "lng": 141.352115,
+    "description": "中島公園駅から徒歩4分、クインテッサホテル札幌内にある完全個室サウナ。ホテル客室をサウナ室に改装した空間で、セルフロウリュや温度調整が自由にできる。Bluetooth対応スピーカー完備で、好みの音楽を楽しみながらプライベートなサウナ体験が可能。カップルや友人同士での利用にもおすすめ。",
+    "seoTitle": "クインテッサホテル札幌｜中島公園の個室サウナ 3,000円〜 | サウナ子",
+    "saunakoCommentShort": "ホテル内の隠れ家個室サウナ、Bluetooth対応で推し活もできちゃうよ!",
+    "saunakoCommentLong": "中島公園すぐのホテル内にある完全個室サウナだよ! セルフロウリュで好みの温度に調整できるし、スピーカー付きだから推しの音楽聴きながら整えるのが最高かも。カップルや友達と一緒に入れるのも嬉しいポイントだね!",
+    "updatedAt": "2026-03-13",
+    "plans": [
+      {
+        "name": "1名プラン",
+        "price": 3000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "2名プラン",
+        "price": 4000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "3名プラン",
+        "price": 5000,
+        "duration": 60,
+        "capacity": 3
+      },
+      {
+        "name": "4名プラン",
+        "price": 6000,
+        "duration": 60,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
   }
 ]
