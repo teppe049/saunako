@@ -70,6 +70,7 @@ export interface Facility {
   lng: number | null;
   description: string;
   seoDescription: string | null;
+  seoTitle?: string | null;
   saunakoCommentShort: string;
   saunakoCommentLong: string;
   updatedAt: string;

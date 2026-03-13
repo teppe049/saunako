@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室・プライベートサウナ | サウナ子`,
+    title: facility.seoTitle || `${facility.name}の料金・プラン・口コミ｜${facility.nearestStation ? (facility.nearestStation.includes('駅') ? facility.nearestStation : facility.nearestStation + '駅') : facility.city}（${facility.prefectureLabel}）の個室・プライベートサウナ | サウナ子`,
     description,
     alternates: {
       canonical: `https://www.saunako.jp/facilities/${facility.id}`,
