@@ -30,6 +30,7 @@ saunako.jp/facilities/88
 - public/facilities/88-0.webp
 - public/facilities/88-1.webp
 - public/facilities/88-2.webp
+- public/facilities/88-3.webp
 
 ### データ差異
 - openedAt: 「2026-02-21」→「2023-09-28」に修正済み（誤記）
