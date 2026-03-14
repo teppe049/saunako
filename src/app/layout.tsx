@@ -87,8 +87,13 @@ const siteJsonLd = {
     {
       '@type': 'Organization',
       name: 'サウナ子',
+      alternateName: 'saunako',
       url: 'https://www.saunako.jp',
       logo: 'https://www.saunako.jp/saunako-avatar.webp',
+      sameAs: [
+        'https://x.com/saunako_jp',
+        'https://www.instagram.com/saunako_jp/',
+      ],
     },
   ],
 };
