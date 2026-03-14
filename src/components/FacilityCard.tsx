@@ -23,7 +23,7 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
       <div className="relative h-40 bg-gray-200 rounded-t-xl flex items-center justify-center overflow-hidden">
         <Image
           src={facility.images.length > 0 ? facility.images[0] : '/placeholder-facility.svg'}
-          alt={facility.name}
+          alt={`${facility.name} 個室サウナ`}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}

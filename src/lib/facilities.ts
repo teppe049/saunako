@@ -243,3 +243,40 @@ export function getPrefectureFacilityCounts(): Record<string, number> {
   return counts;
 }
 
+export function generateImageAlt(facility: Facility): string {
+  const parts = [facility.name, '個室サウナ'];
+  if (facility.features.waterBath) parts.push('水風呂あり');
+  else if (facility.features.selfLoyly) parts.push('セルフロウリュ');
+  else if (facility.features.outdoorAir) parts.push('外気浴');
+  else if (facility.features.coupleOk) parts.push('カップルOK');
+  return parts.join(' ');
+}
+
+/** エリアラベルからslugを逆引き（パンくず4階層化用） */
+export function getAreaSlugByLabel(prefectureCode: string, areaLabel: string): string | undefined {
+  const areas = AREA_GROUPS[prefectureCode];
+  if (!areas) return undefined;
+  const area = areas.find((a) => a.label === areaLabel);
+  return area?.slug;
+}
+
+/** businessHours文字列をOpeningHoursSpecification JSON-LDにパース */
+export function parseBusinessHoursToSchema(businessHours: string): object[] | null {
+  if (!businessHours || businessHours === '不明') return null;
+
+  // "10:00〜22:00" or "10:00-22:00" パターン
+  const simpleMatch = businessHours.match(/(\d{1,2}:\d{2})\s*[〜\-～]\s*(\d{1,2}:\d{2})/);
+  if (!simpleMatch) return null;
+
+  const opens = simpleMatch[1];
+  const closes = simpleMatch[2];
+  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  return [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: dayNames,
+    opens,
+    closes,
+  }];
+}
+

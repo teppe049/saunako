@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/go/',
     },
-    sitemap: 'https://www.saunako.jp/sitemap.xml',
+    sitemap: ['https://www.saunako.jp/sitemap.xml', 'https://www.saunako.jp/sitemap-images.xml'],
   }
 }

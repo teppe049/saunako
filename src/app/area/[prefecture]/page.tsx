@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getPrefectureFacilityCounts } from '@/lib/facilities';
+import { getArticlesByFacilityId } from '@/lib/articles';
+import ArticleCard from '@/components/ArticleCard';
 import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
@@ -676,6 +678,23 @@ export default async function AreaPage({ params }: PageProps) {
             </div>
           </section>
         )}
+        {/* エリア関連記事 */}
+        {(() => {
+          const areaArticles = [...new Map(
+            facilities.flatMap((f) => getArticlesByFacilityId(f.id)).map((a) => [a.slug, a])
+          ).values()].slice(0, 3);
+          if (areaArticles.length === 0) return null;
+          return (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-text-primary mb-4">{prefData.label}の個室サウナに関する記事</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {areaArticles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} />
+                ))}
+              </div>
+            </section>
+          );
+        })()}
       </main>
       <Footer />
       <ScrollToTop />

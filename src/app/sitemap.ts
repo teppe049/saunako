@@ -118,5 +118,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     }))
 
-  return [...staticPages, ...areaPages, ...subAreaPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
+  // 条件別ランディングページ
+  const conditionPages: MetadataRoute.Sitemap = [
+    'couple-ok', 'water-bath', 'self-loyly', 'outdoor-air', 'under-3000', 'under-5000',
+  ].map((condition) => ({
+    url: `${baseUrl}/search/${condition}`,
+    lastModified: latestFacilityUpdate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...areaPages, ...subAreaPages, ...conditionPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
 }

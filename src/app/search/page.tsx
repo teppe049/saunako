@@ -179,12 +179,29 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         ? `${regionData.label}の個室サウナ検索結果`
         : '個室サウナ検索';
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${h1Text}`,
+    numberOfItems: facilities.length,
+    itemListElement: facilities.slice(0, 10).map((f, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: f.name,
+      url: `https://www.saunako.jp/facilities/${f.id}`,
+    })),
+  };
+
   return (
     <div className="flex flex-col h-screen bg-bg">
       <h1 className="sr-only">{h1Text}</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <SearchHeaderBar
         totalCount={baseCount}

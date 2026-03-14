@@ -6,9 +6,10 @@ import Image from 'next/image';
 interface ImageGalleryProps {
   images: string[];
   facilityName: string;
+  altPrefix?: string;
 }
 
-export default function ImageGallery({ images, facilityName }: ImageGalleryProps) {
+export default function ImageGallery({ images, facilityName, altPrefix }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -43,7 +44,7 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
       >
         <Image
           src={images.length > 0 ? images[selectedIndex] : '/placeholder-facility.svg'}
-          alt={facilityName}
+          alt={altPrefix || facilityName}
           fill
           sizes="(max-width: 768px) 100vw, 880px"
           className={images.length > 0 ? 'object-cover' : 'object-contain p-8'}
@@ -64,7 +65,7 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
             >
               <Image
                 src={img}
-                alt={`${facilityName} ${i + 1}`}
+                alt={`${altPrefix || facilityName} ${i + 1}`}
                 fill
                 sizes="64px"
                 className="object-cover"
@@ -109,7 +110,7 @@ export default function ImageGallery({ images, facilityName }: ImageGalleryProps
           <div className="relative w-full h-full max-w-4xl max-h-[80vh] mx-16" onClick={(e) => e.stopPropagation()}>
             <Image
               src={images[selectedIndex]}
-              alt={`${facilityName} ${selectedIndex + 1}`}
+              alt={`${altPrefix || facilityName} ${selectedIndex + 1}`}
               fill
               sizes="100vw"
               className="object-contain"

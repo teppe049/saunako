@@ -2,6 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { REGION_GROUPS } from '@/lib/types';
 
+const CONDITION_LINKS = [
+  { label: 'カップルOK', href: '/search?coupleOk=true' },
+  { label: '水風呂あり', href: '/search?waterBath=true' },
+  { label: 'セルフロウリュ', href: '/search?selfLoyly=true' },
+  { label: '外気浴あり', href: '/search?outdoorAir=true' },
+  { label: '3,000円以下', href: '/search?priceMax=3000' },
+  { label: '5,000円以下', href: '/search?priceMax=5000' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white py-8 md:pt-12 md:pb-8">
@@ -39,6 +48,14 @@ export default function Footer() {
                     ))}
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-full border-t border-[#333333] pt-4">
+            <p className="text-[11px] font-semibold text-[#9CA3AF] mb-3 text-center">条件から探す</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+              {CONDITION_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="text-[11px] text-[#9CA3AF] hover:text-white transition-colors">{link.label}</Link>
               ))}
             </div>
           </div>
@@ -106,6 +123,16 @@ export default function Footer() {
                     ))}
                   </ul>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Condition links */}
+          <div className="mb-10">
+            <h3 className="text-[13px] font-semibold text-white mb-4">条件から探す</h3>
+            <div className="flex gap-4">
+              {CONDITION_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{link.label}</Link>
               ))}
             </div>
           </div>

@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed } from '@/lib/facilities';
+import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed, getAreaSlugByLabel, parseBusinessHoursToSchema, generateImageAlt } from '@/lib/facilities';
+import { getDistanceKm, formatDistance } from '@/lib/distance';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import FacilityDetailMapWrapper from '@/components/FacilityDetailMapWrapper';
@@ -141,29 +142,47 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     mainEntity: faqItems,
   } : null;
 
+  // パンくず: エリア（サブエリア）がある場合は4階層
+  const areaSlug = getAreaSlugByLabel(facility.prefecture, facility.area);
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'TOP',
+      item: 'https://www.saunako.jp/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: facility.prefectureLabel,
+      item: `https://www.saunako.jp/area/${facility.prefecture}`,
+    },
+  ];
+  if (areaSlug) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: facility.area,
+      item: `https://www.saunako.jp/area/${facility.prefecture}/${areaSlug}`,
+    });
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 4,
+      name: facility.name,
+      item: `https://www.saunako.jp/facilities/${facility.id}`,
+    });
+  } else {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: facility.name,
+      item: `https://www.saunako.jp/facilities/${facility.id}`,
+    });
+  }
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'TOP',
-        item: 'https://www.saunako.jp/',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: facility.prefectureLabel,
-        item: `https://www.saunako.jp/area/${facility.prefecture}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: facility.name,
-        item: `https://www.saunako.jp/facilities/${facility.id}`,
-      },
-    ],
+    itemListElement: breadcrumbItems,
   };
 
   const jsonLd = {
@@ -181,6 +200,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           url: 'https://www.saunako.jp',
         },
         about: { '@id': `https://www.saunako.jp/facilities/${facility.id}#localbusiness` },
+        dateModified: facility.updatedAt,
+        author: {
+          '@type': 'Organization',
+          name: 'サウナ子',
+          url: 'https://www.saunako.jp',
+        },
       },
       {
         '@type': 'LocalBusiness',
@@ -207,9 +232,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         }),
         ...(facility.businessHours && facility.businessHours !== '不明' && {
           openingHours: facility.businessHours,
+          ...(parseBusinessHoursToSchema(facility.businessHours) && {
+            openingHoursSpecification: parseBusinessHoursToSchema(facility.businessHours),
+          }),
         }),
         ...(facility.priceMin > 0 && {
-          priceRange: `¥${facility.priceMin.toLocaleString()}〜`,
+          priceRange: `1名${facility.duration}分 ¥${facility.priceMin.toLocaleString()}〜`,
         }),
         ...(facility.amenities.length > 0 && {
           amenityFeature: facility.amenities.map(amenity => ({
@@ -273,6 +301,12 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <Link href="/" className="hover:text-primary transition-colors">TOP</Link>
           <span className="mx-2">{'>'}</span>
           <Link href={`/area/${facility.prefecture}`} className="hover:text-primary transition-colors">{facility.prefectureLabel}</Link>
+          {areaSlug && (
+            <>
+              <span className="mx-2">{'>'}</span>
+              <Link href={`/area/${facility.prefecture}/${areaSlug}`} className="hover:text-primary transition-colors">{facility.area}</Link>
+            </>
+          )}
           <span className="mx-2">{'>'}</span>
           <span className="text-text-primary">{facility.name}</span>
         </nav>
@@ -289,7 +323,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <div className="w-full md:w-[880px] md:flex-shrink-0">
             <div className="flex flex-col">
               {/* a. Image Gallery */}
-              <ImageGallery images={facility.images} facilityName={facility.name} />
+              <ImageGallery images={facility.images} facilityName={facility.name} altPrefix={generateImageAlt(facility)} />
               <p className="hidden md:block text-xs text-gray-400 px-4 pt-2 md:px-0">
                 ※ 画像は各施設の公式サイトより引用しています。掲載に問題がある場合はお問い合わせください。
               </p>
@@ -304,11 +338,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <h1 className="text-text-primary text-[22px] md:text-2xl font-bold">
                       {facility.name}
                     </h1>
-                    {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
-                      <p className="text-text-secondary mt-1 text-sm">
-                        {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩{facility.walkMinutes}分
-                      </p>
-                    )}
+                    <p className="text-text-secondary mt-1 text-sm">
+                      {facility.prefectureLabel}{facility.city}にある個室サウナ。
+                      {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分。`}
+                      {facility.priceMin > 0 && `料金${facility.priceMin.toLocaleString()}円〜。`}
+                    </p>
                     <div className="flex items-baseline gap-1 mt-2">
                       {facility.priceMin > 0 ? (
                         <>
@@ -604,7 +638,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 {facility.area}エリアの個室サウナ
               </h2>
               <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 scrollbar-hide">
-                {sameArea.map((f) => (
+                {sameArea.map((f) => {
+                  const dist = facility.lat && facility.lng && f.lat && f.lng
+                    ? formatDistance(getDistanceKm(facility.lat, facility.lng, f.lat, f.lng))
+                    : null;
+                  return (
                   <Link
                     key={f.id}
                     href={`/facilities/${f.id}`}
@@ -613,7 +651,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <div className="relative h-[140px] md:h-[160px] bg-gray-200 flex items-center justify-center overflow-hidden">
                       <Image
                         src={f.images.length > 0 ? f.images[0] : '/placeholder-facility.svg'}
-                        alt={f.name}
+                        alt={`${f.name} 個室サウナ`}
                         fill
                         sizes="(max-width: 768px) 220px, 33vw"
                         className={f.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
@@ -621,12 +659,14 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     </div>
                     <div className="p-3 md:p-4">
                       <h3 className="text-sm md:text-base font-semibold text-text-primary mb-1 truncate">{f.name}</h3>
+                      {dist && <p className="text-text-tertiary text-xs mb-1">ここから{dist}</p>}
                       <p className="text-saunako text-sm font-bold">
                         {f.priceMin > 0 ? `¥${f.priceMin.toLocaleString()}〜` : '要問合せ'}
                       </p>
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </>
           )}
@@ -637,7 +677,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 似た価格帯の個室サウナ
               </h2>
               <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 scrollbar-hide">
-                {similarPrice.map((f) => (
+                {similarPrice.map((f) => {
+                  const dist = facility.lat && facility.lng && f.lat && f.lng
+                    ? formatDistance(getDistanceKm(facility.lat, facility.lng, f.lat, f.lng))
+                    : null;
+                  return (
                   <Link
                     key={f.id}
                     href={`/facilities/${f.id}`}
@@ -646,7 +690,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <div className="relative h-[140px] md:h-[160px] bg-gray-200 flex items-center justify-center overflow-hidden">
                       <Image
                         src={f.images.length > 0 ? f.images[0] : '/placeholder-facility.svg'}
-                        alt={f.name}
+                        alt={`${f.name} 個室サウナ`}
                         fill
                         sizes="(max-width: 768px) 220px, 33vw"
                         className={f.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
@@ -654,18 +698,37 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     </div>
                     <div className="p-3 md:p-4">
                       <h3 className="text-sm md:text-base font-semibold text-text-primary mb-1 truncate">{f.name}</h3>
-                      <p className="text-text-secondary text-xs mb-1">{f.prefectureLabel} {f.area}</p>
+                      <p className="text-text-secondary text-xs mb-1">
+                        {f.prefectureLabel} {f.area}
+                        {dist && <span className="text-text-tertiary ml-1">（{dist}）</span>}
+                      </p>
                       <p className="text-saunako text-sm font-bold">
                         {f.priceMin > 0 ? `¥${f.priceMin.toLocaleString()}〜` : '要問合せ'}
                       </p>
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
         </div>
       </section>
+
+      {/* エリアリンク + 最終更新日 */}
+      <div className="bg-bg pb-2 md:pb-4">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex items-center justify-between">
+          <Link
+            href={`/area/${facility.prefecture}`}
+            className="text-sm text-primary hover:underline font-medium"
+          >
+            {facility.prefectureLabel}の個室サウナをもっと見る →
+          </Link>
+          <p className="text-xs text-text-tertiary">
+            最終更新: {new Date(facility.updatedAt).toLocaleDateString('ja-JP')}
+          </p>
+        </div>
+      </div>
 
       {/* この施設が紹介されている記事 */}
       {relatedArticles.length > 0 && (
