@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
 import { getAllArticles, getAllTags, getArticlesByTag, getArticlesByCategory } from '@/lib/articles'
+import { searchFacilities } from '@/lib/facilities'
 
 const activeFacilities = facilities.filter((f) => !f.closedAt)
 
@@ -119,14 +120,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   // 条件別ランディングページ
-  const conditionPages: MetadataRoute.Sitemap = [
+  const conditionSlugs = [
     'couple-ok', 'water-bath', 'self-loyly', 'outdoor-air', 'under-3000', 'under-5000',
-  ].map((condition) => ({
+    'late-night', '24h', 'group', 'solo',
+  ]
+  const conditionPages: MetadataRoute.Sitemap = conditionSlugs.map((condition) => ({
     url: `${baseUrl}/search/${condition}`,
     lastModified: latestFacilityUpdate,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  return [...staticPages, ...areaPages, ...subAreaPages, ...conditionPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
+  // エリア×条件クロスLP（施設3件以上のペアのみ）
+  const conditionFilters: Record<string, Record<string, unknown>> = {
+    'couple-ok': { coupleOk: true },
+    'water-bath': { waterBath: true },
+    'self-loyly': { selfLoyly: true },
+    'outdoor-air': { outdoorAir: true },
+    'under-3000': { priceMax: 3000 },
+    'under-5000': { priceMax: 5000 },
+    'late-night': { lateNight: true },
+    '24h': { open24h: true },
+    'group': { capacity: 4 },
+    'solo': {},
+  }
+  const crossPages: MetadataRoute.Sitemap = []
+  for (const cond of conditionSlugs) {
+    for (const pref of PREFECTURES) {
+      const count = searchFacilities({
+        ...conditionFilters[cond],
+        prefecture: pref.code,
+      } as Parameters<typeof searchFacilities>[0]).length
+      if (count >= 3) {
+        crossPages.push({
+          url: `${baseUrl}/search/${cond}/${pref.code}`,
+          lastModified: latestFacilityUpdate,
+          changeFrequency: 'weekly' as const,
+          priority: 0.7,
+        })
+      }
+    }
+  }
+
+  return [...staticPages, ...areaPages, ...subAreaPages, ...conditionPages, ...crossPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
 }

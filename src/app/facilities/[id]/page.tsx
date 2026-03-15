@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed, getAreaSlugByLabel, parseBusinessHoursToSchema, generateImageAlt } from '@/lib/facilities';
+import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed, getAreaSlugByLabel, parseBusinessHoursToSchema, generateImageAlt, parseBusinessHoursTags } from '@/lib/facilities';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
@@ -714,6 +714,63 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           )}
         </div>
       </section>
+
+      {/* 条件別リンク */}
+      <div className="bg-bg py-4 md:py-6">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <h2 className="text-base font-bold text-text-primary mb-3">条件で個室サウナを探す</h2>
+          <div className="flex flex-wrap gap-2">
+            {facility.features.coupleOk && (
+              <Link href="/search/couple-ok" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                カップルOK
+              </Link>
+            )}
+            {facility.features.waterBath && (
+              <Link href="/search/water-bath" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                水風呂あり
+              </Link>
+            )}
+            {facility.features.selfLoyly && (
+              <Link href="/search/self-loyly" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                セルフロウリュ可
+              </Link>
+            )}
+            {facility.features.outdoorAir && (
+              <Link href="/search/outdoor-air" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                外気浴あり
+              </Link>
+            )}
+            {facility.priceMin > 0 && facility.priceMin <= 3000 && (
+              <Link href="/search/under-3000" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                3,000円以下
+              </Link>
+            )}
+            {facility.priceMin > 0 && facility.priceMin <= 5000 && (
+              <Link href="/search/under-5000" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                5,000円以下
+              </Link>
+            )}
+            {parseBusinessHoursTags(facility.businessHours).lateNight && (
+              <Link href="/search/late-night" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                深夜営業
+              </Link>
+            )}
+            {parseBusinessHoursTags(facility.businessHours).is24h && (
+              <Link href="/search/24h" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                24時間営業
+              </Link>
+            )}
+            {facility.capacity >= 4 && (
+              <Link href="/search/group" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+                グループ利用（4人以上）
+              </Link>
+            )}
+            <Link href="/search/solo" className="px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors">
+              一人利用OK
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* エリアリンク + 最終更新日 */}
       <div className="bg-bg pb-2 md:pb-4">
