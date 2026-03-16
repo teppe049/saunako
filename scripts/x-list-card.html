@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    background: linear-gradient(165deg, #0f1724 0%, #162033 50%, #1a2844 100%);
+    padding: 60px 56px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 40px;
+  }
+  .category {
+    font-size: 20px;
+    color: #E87957;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .title {
+    font-size: 46px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.35;
+    letter-spacing: 1px;
+  }
+  .criteria {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .criteria-tag {
+    background: rgba(232, 121, 87, 0.15);
+    color: #E8A080;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #E87957 0%, rgba(232,121,87,0.1) 100%);
+    margin: 28px 0;
+  }
+
+  /* Facility list */
+  .facility-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .facility {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .facility-num {
+    font-size: 32px;
+    font-weight: 900;
+    color: #E87957;
+    min-width: 36px;
+    line-height: 1.2;
+  }
+  .facility-info {
+    flex: 1;
+  }
+  .facility-name {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+  .facility-meta {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 6px;
+    display: flex;
+    gap: 12px;
+  }
+  .facility-meta .station {
+    color: rgba(232, 121, 87, 0.8);
+  }
+  .facility-point {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-text {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 1px;
+  }
+  .footer-brand {
+    font-size: 20px;
+    color: rgba(232, 121, 87, 0.6);
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="category">PRIVATE SAUNA × 60MIN</div>
+      <div class="title">60分でサクッと行ける<br>個室サウナ 5選</div>
+      <div class="criteria">
+        <span class="criteria-tag">全国5エリア</span>
+        <span class="criteria-tag">駅チカ5分以内</span>
+        <span class="criteria-tag">¥2,000〜</span>
+        <span class="criteria-tag">60分から</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="facility-list">
+      <div class="facility">
+        <div class="facility-num">1</div>
+        <div class="facility-info">
+          <div class="facility-name">Private Sauna EXIT</div>
+          <div class="facility-meta">
+            <span class="station">栄駅 徒歩1分</span>
+            <span>¥2,000〜 / 60分</span>
+          </div>
+          <div class="facility-point">名古屋で60分2,000円は破格！屋上の外気浴で観覧車見えるよ</div>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-num">2</div>
+        <div class="facility-info">
+          <div class="facility-name">テンジンサウナ</div>
+          <div class="facility-meta">
+            <span class="station">天神駅 徒歩4分</span>
+            <span>¥2,090〜 / 60分</span>
+          </div>
+          <div class="facility-point">製氷機で水風呂の温度を自分好みに調整できるのが最高</div>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-num">3</div>
+        <div class="facility-info">
+          <div class="facility-name">サウナ族</div>
+          <div class="facility-meta">
+            <span class="station">赤坂駅 徒歩1分</span>
+            <span>¥2,500〜 / 55分</span>
+          </div>
+          <div class="facility-point">赤坂駅から徒歩1分！仕事帰りにふらっと寄れる立地がずるい</div>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-num">4</div>
+        <div class="facility-info">
+          <div class="facility-name">KUUMA by NEXT SAUNA</div>
+          <div class="facility-meta">
+            <span class="station">大宮駅 徒歩2分</span>
+            <span>¥2,980〜 / 60分</span>
+          </div>
+          <div class="facility-point">大宮駅2分でアクセス抜群！VIPルームもあるよ</div>
+        </div>
+      </div>
+
+      <div class="facility">
+        <div class="facility-num">5</div>
+        <div class="facility-info">
+          <div class="facility-name">PRIVATE SAUNA maa</div>
+          <div class="facility-meta">
+            <span class="station">王子駅 徒歩2分</span>
+            <span>¥3,300〜 / 60分</span>
+          </div>
+          <div class="facility-point">3種のフィンランド式アロマでロウリュできるよ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-text">2026年3月時点の情報です</div>
+      <div class="footer-brand">saunako.jp</div>
+    </div>
+  </div>
+</body>
+</html>
