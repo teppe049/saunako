@@ -151,7 +151,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...conditionFilters[cond],
         prefecture: pref.code,
       } as Parameters<typeof searchFacilities>[0]).length
-      if (count >= 3) {
+      // 5件未満はリストとして薄いコンテンツになるためサイトマップから除外
+      if (count >= 5) {
         crossPages.push({
           url: `${baseUrl}/search/${cond}/${pref.code}`,
           lastModified: latestFacilityUpdate,
