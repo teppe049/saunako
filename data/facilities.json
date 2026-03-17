@@ -3872,12 +3872,12 @@
     "address": "東京都台東区上野5-10-6",
     "nearestStation": "御徒町駅",
     "walkMinutes": 3,
-    "priceMin": 5000,
+    "priceMin": 8000,
     "duration": 90,
-    "capacity": 6,
+    "capacity": 5,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": 15,
       "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": true,
@@ -3887,8 +3887,8 @@
     "businessHours": "10:00〜23:00",
     "holidays": "不定休",
     "website": "https://hubhub.jp/facility/okachimachi",
-    "phone": "",
-    "bookingUrl": null,
+    "phone": "080-4743-7523",
+    "bookingUrl": "https://sauna.travel/products/hubhub-okachimachi",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -3908,12 +3908,6 @@
     "saunakoCommentLong": "御徒町にある貸切サウナで外気浴スペース完備なのが嬉しい！2種類のフィンランドサウナが楽しめるよ。飲み放題付きBBQプランもあるから、仲間とのパーティーにも最適。6名まで入れるからグループ利用におすすめかも！",
     "updatedAt": "2026-02-08",
     "plans": [
-      {
-        "name": "ウーラッコ 90分 1名",
-        "price": 5000,
-        "duration": 90,
-        "capacity": 1
-      },
       {
         "name": "ウーラッコ 90分 2名",
         "price": 8000,
@@ -3937,12 +3931,6 @@
         "price": 17000,
         "duration": 90,
         "capacity": 5
-      },
-      {
-        "name": "ポルタ 90分 1名",
-        "price": 7000,
-        "duration": 90,
-        "capacity": 1
       },
       {
         "name": "ポルタ 90分 2名",
@@ -3972,7 +3960,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "HUBHUB御徒町｜御徒町の外気浴付き貸切サウナ 5,000円〜 口コミ | サウナ子"
+    "seoTitle": "HUBHUB御徒町｜御徒町の外気浴付き貸切サウナ 8,000円〜 口コミ | サウナ子"
   },
   {
     "id": 47,
@@ -6212,7 +6200,7 @@
     "address": "東京都豊島区池袋2-16-4",
     "nearestStation": "池袋駅",
     "walkMinutes": 2,
-    "priceMin": 4800,
+    "priceMin": 5800,
     "duration": 120,
     "capacity": 2,
     "features": {
@@ -6875,8 +6863,8 @@
     "area": "渋谷・世田谷",
     "address": "東京都渋谷区代官山町13-6",
     "nearestStation": "代官山駅",
-    "walkMinutes": 2,
-    "priceMin": 3000,
+    "walkMinutes": 4,
+    "priceMin": 20000,
     "duration": 75,
     "capacity": 6,
     "features": {
@@ -6888,7 +6876,7 @@
       "bluetooth": null,
       "wifi": true
     },
-    "businessHours": "月-木・日 13:00-翌5:00 / 金-土 13:00-翌7:00",
+    "businessHours": "24時間営業",
     "holidays": "なし",
     "website": "https://www.prussauna.com/shoplist-daikanyama",
     "phone": "03-6416-0867",
@@ -12376,8 +12364,8 @@
     "area": "名古屋",
     "address": "愛知県名古屋市中区錦3-16-5 SLOW ART CENTER NAGOYA",
     "nearestStation": "栄駅",
-    "walkMinutes": 2,
-    "priceMin": 3500,
+    "walkMinutes": 1,
+    "priceMin": 3000,
     "duration": 90,
     "capacity": 4,
     "features": {
@@ -12389,7 +12377,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "11:30〜23:00（個室最終受付 21:00）",
+    "businessHours": "11:00〜23:00（個室最終受付 21:00）",
     "holidays": "第4月曜日",
     "website": "https://www.credspasauna.com/",
     "phone": "052-228-1201",

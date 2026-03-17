@@ -6,12 +6,13 @@
  *   node scripts/indexnow.mjs /articles/new-post  # 特定URLのみ通知
  */
 
-const SITE_URL = 'https://saunako.jp';
+const SITE_URL = 'https://www.saunako.jp';
+const HOST = 'www.saunako.jp';
 const API_KEY = '4ea9e7ee1a314dfea2b69dbd063b5875';
 
 async function submitToIndexNow(urlList) {
   const body = {
-    host: 'saunako.jp',
+    host: HOST,
     key: API_KEY,
     keyLocation: `${SITE_URL}/${API_KEY}.txt`,
     urlList: urlList.map((path) => `${SITE_URL}${path}`),
