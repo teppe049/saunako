@@ -24823,14 +24823,14 @@
     "capacity": 4,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "12",
       "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": true,
       "wifi": true
     },
-    "businessHours": "デイユース 11:00〜14:00 / 宿泊チェックイン 15:00〜18:00",
+    "businessHours": "デイユース 11:00〜14:00 / 15:00〜17:00 / 宿泊チェックイン 15:00〜18:00",
     "holidays": "火・水曜",
     "website": "https://www.tanadasauna.jp/",
     "phone": "086-728-0120",
@@ -24850,7 +24850,8 @@
     "images": [
       "/facilities/343-0.webp",
       "/facilities/343-1.webp",
-      "/facilities/343-2.webp"
+      "/facilities/343-2.webp",
+      "/facilities/343-3.webp"
     ],
     "lat": 34.9295,
     "lng": 133.9469,
@@ -24858,7 +24859,7 @@
     "saunakoCommentShort": "棚田百選の絶景×和サウナ第1号！",
     "saunakoCommentLong": "棚田百選に選ばれた絶景を眺めながらサウナに入れるって贅沢すぎない？和サウナ第1号で、地元のヒノキや柚子でロウリュできるの。水風呂から見える棚田の景色は一生モノかも。ドリンク飲み放題でBluetoothスピーカーも使えるから至れり尽くせりだよ！",
     "updatedAt": "2026-03-02",
-    "openedAt": null,
+    "openedAt": "2024-07-01",
     "closedAt": null,
     "plans": [
       {
@@ -24868,9 +24869,21 @@
         "capacity": 4
       },
       {
-        "name": "デイユース 180分",
-        "price": 28000,
+        "name": "デイユース 3時間",
+        "price": 7500,
         "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "デイユース 2時間（15時枠）",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "宿泊 VILLA（1名）",
+        "price": 10000,
+        "duration": 1140,
         "capacity": 4
       },
       {
