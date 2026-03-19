@@ -21437,7 +21437,7 @@
     "walkMinutes": 1,
     "priceMin": 6000,
     "duration": 120,
-    "capacity": 3,
+    "capacity": 6,
     "features": {
       "waterBath": true,
       "waterBathTemp": null,
@@ -21462,7 +21462,7 @@
       "スキンケア",
       "ReFaドライヤー"
     ],
-    "note": "2025年11月開業。JR東海グループ初の駅直結プライベートサウナ。宮崎産木材バレルサウナ3室（ウッドブラウン/ストーンブラック/プラントホワイト）。水着着用制。オリジナルアロマロウリュ。併設カフェ（TOTONOBA CAFE）あり。飲料持込OK・食事不可。",
+    "note": "2025年11月開業。JR東海グループ初の駅直結プライベートサウナ。宮崎産木材バレルサウナ3室（ウッドブラウン/ストーンブラック/プラントホワイト）。水着着用制。オリジナルアロマロウリュ。併設カフェ（TOTONOBA CAFE）あり。飲料持込OK・食事不可。キャッシュレス決済のみ。",
     "images": [
       "/facilities/295-0.webp",
       "/facilities/295-1.webp",
@@ -21478,36 +21478,33 @@
     "openedAt": "2025-11-16",
     "closedAt": null,
     "plans": [
-      {
-        "name": "120分 1名",
-        "price": 6000,
-        "duration": 120,
-        "capacity": 3
-      },
-      {
-        "name": "120分 2名",
-        "price": 8000,
-        "duration": 120,
-        "capacity": 3
-      },
-      {
-        "name": "120分 3名",
-        "price": 11000,
-        "duration": 120,
-        "capacity": 3
-      },
-      {
-        "name": "180分 1名",
-        "price": 7000,
-        "duration": 180,
-        "capacity": 3
-      },
-      {
-        "name": "180分 2名",
-        "price": 9000,
-        "duration": 180,
-        "capacity": 3
-      }
+      { "name": "平日 120分 1名", "price": 6000, "duration": 120, "capacity": 6 },
+      { "name": "平日 120分 2名", "price": 8000, "duration": 120, "capacity": 6 },
+      { "name": "平日 120分 3名", "price": 11000, "duration": 120, "capacity": 6 },
+      { "name": "平日 120分 4名", "price": 13500, "duration": 120, "capacity": 6 },
+      { "name": "平日 120分 5名", "price": 16500, "duration": 120, "capacity": 6 },
+      { "name": "平日 120分 6名", "price": 19500, "duration": 120, "capacity": 6 },
+      { "name": "平日 180分 1名", "price": 7000, "duration": 180, "capacity": 6 },
+      { "name": "平日 180分 2名", "price": 9000, "duration": 180, "capacity": 6 },
+      { "name": "平日 180分 3名", "price": 12500, "duration": 180, "capacity": 6 },
+      { "name": "平日 180分 4名", "price": 15500, "duration": 180, "capacity": 6 },
+      { "name": "平日 180分 5名", "price": 19000, "duration": 180, "capacity": 6 },
+      { "name": "平日 180分 6名", "price": 22500, "duration": 180, "capacity": 6 },
+      { "name": "土日 120分 1名", "price": 6000, "duration": 120, "capacity": 6 },
+      { "name": "土日 120分 2名", "price": 9000, "duration": 120, "capacity": 6 },
+      { "name": "土日 120分 3名", "price": 12500, "duration": 120, "capacity": 6 },
+      { "name": "土日 120分 4名", "price": 15500, "duration": 120, "capacity": 6 },
+      { "name": "土日 120分 5名", "price": 19000, "duration": 120, "capacity": 6 },
+      { "name": "土日 120分 6名", "price": 22500, "duration": 120, "capacity": 6 },
+      { "name": "土日 180分 1名", "price": 7000, "duration": 180, "capacity": 6 },
+      { "name": "土日 180分 2名", "price": 10000, "duration": 180, "capacity": 6 },
+      { "name": "土日 180分 3名", "price": 14000, "duration": 180, "capacity": 6 },
+      { "name": "土日 180分 4名", "price": 17500, "duration": 180, "capacity": 6 },
+      { "name": "土日 180分 5名", "price": 21500, "duration": 180, "capacity": 6 },
+      { "name": "土日 180分 6名", "price": 25500, "duration": 180, "capacity": 6 },
+      { "name": "朝イチ 60分（平日7-10時）", "price": 2500, "duration": 60, "capacity": 6 },
+      { "name": "朝イチ 120分（平日7-10時）", "price": 3000, "duration": 120, "capacity": 6 },
+      { "name": "朝イチ 180分（平日7-10時）", "price": 3500, "duration": 180, "capacity": 6 }
     ],
     "timeSlots": null
   },
