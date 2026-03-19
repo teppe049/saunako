@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import { readFileSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // --- 引数パース ---
 const args = process.argv.slice(2);
@@ -19,8 +22,8 @@ for (let i = 0; i < args.length; i++) {
 }
 
 // --- データ読み込み ---
-const dataPath = path.resolve(__dirname, '..', 'data', 'facilities.json');
-const facilities = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const dataPath = resolve(__dirname, '..', 'data', 'facilities.json');
+const facilities = JSON.parse(readFileSync(dataPath, 'utf-8'));
 
 // --- エリア名からハッシュタグ用テキスト生成 ---
 function areaHashtag(prefectureLabel) {
