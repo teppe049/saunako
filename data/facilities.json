@@ -4316,7 +4316,7 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "ホームシアター・ベランダハンモック",
+    "note": "ホームシアター・ベランダハンモック。※サウナ撮影スタジオのため実際のサウナ利用不可。サイト掲載終了。",
     "images": [
       "/facilities/50-0.webp",
       "/facilities/50-1.webp",
@@ -4339,7 +4339,7 @@
     ],
     "timeSlots": null,
     "openedAt": null,
-    "closedAt": null,
+    "closedAt": "2026-03-19",
     "seoTitle": "TOTONOUCHI｜大森のハンモック外気浴個室サウナ 3,400円〜 | サウナ子"
   },
   {
@@ -16767,8 +16767,8 @@
     ],
     "note": "蔵リノベーション、スウェーデン製Tyloストーブ、味噌樽水風呂、クラフトサイダー醸造所併設",
     "images": [
-      "/facilities/222-0.webp",
       "/facilities/222-1.webp",
+      "/facilities/222-0.webp",
       "/facilities/222-2.webp",
       "/facilities/222-3.webp"
     ],
@@ -26487,7 +26487,7 @@
     "address": "佐賀県佐賀市大和町川上986-3",
     "nearestStation": "佐賀駅",
     "walkMinutes": null,
-    "priceMin": 9000,
+    "priceMin": 11000,
     "duration": 120,
     "capacity": 4,
     "features": {
@@ -26509,42 +26509,43 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "茅葺き一棟貸切。川への入水可能。会員制あり（120分7,500円〜）。1名追加+1,000円。佐賀駅から車20分。宿泊利用も可能。",
+    "note": "茅葺き一棟貸切。川への入水可能。会員制あり（年会費1,000円、120分9,000円〜）。1名追加+1,000円。佐賀駅から車20分。宿泊利用も可能。",
     "images": [
       "/facilities/368-0.webp",
       "/facilities/368-1.webp",
-      "/facilities/368-2.webp"
+      "/facilities/368-2.webp",
+      "/facilities/368-3.webp"
     ],
     "lat": 33.3096,
     "lng": 130.2683,
     "description": "佐賀市大和町の茅葺き古民家を一棟貸切にしたプライベートサウナ。地下水掛け流しの水風呂に加え、目の前の川に入水して天然のクールダウンが楽しめる。セルフロウリュと開放感抜群の外気浴で、自然に囲まれた極上のととのい体験ができる。",
     "saunakoCommentShort": "茅葺き古民家で川ダイブ！最高すぎ",
     "saunakoCommentLong": "茅葺き屋根の古民家を丸ごと貸し切ってサウナできるって贅沢すぎるよね！サウナで蒸されたあと、目の前の川にそのままドボンできるの、これぞ本物の外気浴って感じ。地下水かけ流しの水風呂もあるから川が苦手でも大丈夫。自然の中で整いたい人にはたまらないスポットだね！",
-    "updatedAt": "2026-03-02",
-    "openedAt": null,
+    "updatedAt": "2026-03-19",
+    "openedAt": "2023-12-01",
     "closedAt": null,
     "plans": [
       {
         "name": "非会員120分（4名まで）",
-        "price": 9000,
+        "price": 11000,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "非会員180分（4名まで）",
-        "price": 11000,
+        "price": 14000,
         "duration": 180,
         "capacity": 4
       },
       {
         "name": "会員120分（6名まで）",
-        "price": 7500,
+        "price": 9000,
         "duration": 120,
         "capacity": 6
       },
       {
         "name": "会員180分（6名まで）",
-        "price": 9500,
+        "price": 12000,
         "duration": 180,
         "capacity": 6
       }
@@ -26884,7 +26885,8 @@
     "images": [
       "/facilities/373-0.webp",
       "/facilities/373-1.webp",
-      "/facilities/373-2.webp"
+      "/facilities/373-2.webp",
+      "/facilities/373-3.webp"
     ],
     "lat": 32.7988,
     "lng": 130.7079,
@@ -26892,7 +26894,7 @@
     "saunakoCommentShort": "月テーマの和モダンサウナがおしゃれ！",
     "saunakoCommentLong": "熊本城のすぐ近くにある「月」がテーマのおしゃれサウナだよ！三日月・上弦・満月の3部屋があって、和モダンな雰囲気がすごく素敵なの。100分3,000円〜ってコスパもいいし、満月の部屋なら6人まで入れるからグループでもOK。外気浴は水着でね！",
     "updatedAt": "2026-03-02",
-    "openedAt": null,
+    "openedAt": "2025-04-21",
     "closedAt": null,
     "plans": [
       {
