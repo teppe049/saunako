@@ -21478,33 +21478,168 @@
     "openedAt": "2025-11-16",
     "closedAt": null,
     "plans": [
-      { "name": "平日 120分 1名", "price": 6000, "duration": 120, "capacity": 6 },
-      { "name": "平日 120分 2名", "price": 8000, "duration": 120, "capacity": 6 },
-      { "name": "平日 120分 3名", "price": 11000, "duration": 120, "capacity": 6 },
-      { "name": "平日 120分 4名", "price": 13500, "duration": 120, "capacity": 6 },
-      { "name": "平日 120分 5名", "price": 16500, "duration": 120, "capacity": 6 },
-      { "name": "平日 120分 6名", "price": 19500, "duration": 120, "capacity": 6 },
-      { "name": "平日 180分 1名", "price": 7000, "duration": 180, "capacity": 6 },
-      { "name": "平日 180分 2名", "price": 9000, "duration": 180, "capacity": 6 },
-      { "name": "平日 180分 3名", "price": 12500, "duration": 180, "capacity": 6 },
-      { "name": "平日 180分 4名", "price": 15500, "duration": 180, "capacity": 6 },
-      { "name": "平日 180分 5名", "price": 19000, "duration": 180, "capacity": 6 },
-      { "name": "平日 180分 6名", "price": 22500, "duration": 180, "capacity": 6 },
-      { "name": "土日 120分 1名", "price": 6000, "duration": 120, "capacity": 6 },
-      { "name": "土日 120分 2名", "price": 9000, "duration": 120, "capacity": 6 },
-      { "name": "土日 120分 3名", "price": 12500, "duration": 120, "capacity": 6 },
-      { "name": "土日 120分 4名", "price": 15500, "duration": 120, "capacity": 6 },
-      { "name": "土日 120分 5名", "price": 19000, "duration": 120, "capacity": 6 },
-      { "name": "土日 120分 6名", "price": 22500, "duration": 120, "capacity": 6 },
-      { "name": "土日 180分 1名", "price": 7000, "duration": 180, "capacity": 6 },
-      { "name": "土日 180分 2名", "price": 10000, "duration": 180, "capacity": 6 },
-      { "name": "土日 180分 3名", "price": 14000, "duration": 180, "capacity": 6 },
-      { "name": "土日 180分 4名", "price": 17500, "duration": 180, "capacity": 6 },
-      { "name": "土日 180分 5名", "price": 21500, "duration": 180, "capacity": 6 },
-      { "name": "土日 180分 6名", "price": 25500, "duration": 180, "capacity": 6 },
-      { "name": "朝イチ 60分（平日7-10時）", "price": 2500, "duration": 60, "capacity": 6 },
-      { "name": "朝イチ 120分（平日7-10時）", "price": 3000, "duration": 120, "capacity": 6 },
-      { "name": "朝イチ 180分（平日7-10時）", "price": 3500, "duration": 180, "capacity": 6 }
+      {
+        "name": "平日 120分 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 120分 2名",
+        "price": 8000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 120分 3名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 120分 4名",
+        "price": 13500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 120分 5名",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 120分 6名",
+        "price": 19500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 1名",
+        "price": 7000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 2名",
+        "price": 9000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 3名",
+        "price": 12500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 4名",
+        "price": 15500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 5名",
+        "price": 19000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "平日 180分 6名",
+        "price": 22500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 2名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 3名",
+        "price": 12500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 4名",
+        "price": 15500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 5名",
+        "price": 19000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 120分 6名",
+        "price": 22500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 1名",
+        "price": 7000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 2名",
+        "price": 10000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 3名",
+        "price": 14000,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 4名",
+        "price": 17500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 5名",
+        "price": 21500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "土日 180分 6名",
+        "price": 25500,
+        "duration": 180,
+        "capacity": 6
+      },
+      {
+        "name": "朝イチ 60分（平日7-10時）",
+        "price": 2500,
+        "duration": 60,
+        "capacity": 6
+      },
+      {
+        "name": "朝イチ 120分（平日7-10時）",
+        "price": 3000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "朝イチ 180分（平日7-10時）",
+        "price": 3500,
+        "duration": 180,
+        "capacity": 6
+      }
     ],
     "timeSlots": null
   },
@@ -25773,7 +25908,7 @@
     "address": "香川県小豆郡土庄町甲2473",
     "nearestStation": "土庄港",
     "walkMinutes": null,
-    "priceMin": 30000,
+    "priceMin": 38000,
     "duration": null,
     "capacity": 3,
     "features": {
@@ -25786,7 +25921,7 @@
       "wifi": true
     },
     "businessHours": "チェックイン 15:00 / チェックアウト 11:00",
-    "holidays": "不定休",
+    "holidays": "水・木曜",
     "website": "https://sauna-tou.com/",
     "phone": "0879-62-8989",
     "bookingUrl": "https://1000olive-terrace.com/?tripla_booking_widget_open=search",
@@ -25812,8 +25947,8 @@
     "closedAt": null,
     "plans": [
       {
-        "name": "1棟貸し 宿泊プラン（1泊・定員3名）",
-        "price": 30000,
+        "name": "1棟貸し 宿泊プラン（朝食付き・定員3名）",
+        "price": 38000,
         "duration": null,
         "capacity": 3
       }
