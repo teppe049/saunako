@@ -23630,7 +23630,8 @@
     "images": [
       "/facilities/322-0.webp",
       "/facilities/322-1.webp",
-      "/facilities/322-2.webp"
+      "/facilities/322-2.webp",
+      "/facilities/322-3.webp"
     ],
     "lat": 35.188,
     "lng": 135.953,
@@ -25852,7 +25853,7 @@
     "address": "香川県三豊市仁尾町仁尾乙203-3",
     "nearestStation": "詫間駅",
     "walkMinutes": null,
-    "priceMin": 3000,
+    "priceMin": 4500,
     "duration": 120,
     "capacity": 4,
     "features": {
@@ -25873,26 +25874,45 @@
       "タオル",
       "水着レンタル"
     ],
-    "note": "詫間駅から車約15分。父母ヶ浜ビーチ前のバレルサウナ。地下水水風呂あり",
+    "note": "詫間駅から車約15分。父母ヶ浜ビーチ前のバレルサウナ。地下水チラー付き水風呂あり。グループ貸切制（2名以下9,000円〜）。ドリンクチケット1杯込み。",
     "images": [
       "/facilities/356-0.webp",
       "/facilities/356-1.webp",
-      "/facilities/356-2.webp"
+      "/facilities/356-2.webp",
+      "/facilities/356-3.webp"
     ],
     "lat": 34.2267,
     "lng": 133.6769,
     "description": "日本のウユニ塩湖と称される父母ヶ浜のビーチ前に設置されたバレルサウナ。瀬戸内海の絶景を眺めながらのサウナ体験と、地下水を利用した水風呂が楽しめる。タオル・水着レンタル付きで手ぶら利用も可能。",
     "saunakoCommentShort": "日本のウユニ塩湖でととのう！",
     "saunakoCommentLong": "あの父母ヶ浜のビーチ目の前でサウナに入れるんだよ！夕暮れ時の絶景は本当にすごくて、水風呂は地下水でキリッと冷たいの。サウナ後にビーチで外気浴したら、もう言葉にならないくらいととのうかも。タオルも水着も借りられるから手ぶらでOKだよ。",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-03-22",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "絶景浴サウナ 1名 2時間",
-        "price": 3000,
+        "name": "2名以下 2時間",
+        "price": 9000,
         "duration": 120,
-        "capacity": 1
+        "capacity": 2
+      },
+      {
+        "name": "3名 2時間",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "4名 2時間",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "5名 2時間",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 5
       }
     ],
     "timeSlots": null
