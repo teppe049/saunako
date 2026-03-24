@@ -57,6 +57,14 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   });
 
   const [showFilterSheet, setShowFilterSheet] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax');
   const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0);
@@ -317,6 +325,30 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         <p className="text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
           {filteredCount !== totalCount ? `${filteredCount}/${totalCount}` : filteredCount}件
         </p>
+
+        {/* Share Button */}
+        <button
+          onClick={handleShare}
+          className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-[12px] font-medium border border-border bg-white text-text-secondary hover:border-primary hover:text-primary transition-colors flex-shrink-0"
+          aria-label="この条件でシェア"
+          data-track-click="share_url"
+        >
+          {copied ? (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="hidden md:inline">コピーしました！</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <span className="hidden md:inline">シェア</span>
+            </>
+          )}
+        </button>
       </div>
 
       {/* === Row 2: Area chips + Sort/Duration === */}

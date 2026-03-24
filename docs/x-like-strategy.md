@@ -200,7 +200,6 @@
 |--------|--------|---------|
 | @TAKANAWA_SAUNAS | 高輪SAUNAS | ✅ 毎日複数投稿 |
 | @SHIBUYA_SAUNAS | 渋谷SAUNAS | ✅ 毎日複数投稿 |
-| @RED_ESAUNA | RED° E-SAUNA | ✅ 2026/2活動中 |
 
 ### 休眠（いいね不要）
 

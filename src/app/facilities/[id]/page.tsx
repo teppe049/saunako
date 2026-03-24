@@ -525,12 +525,21 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
                   {/* 料金情報 */}
                   {facility.priceMin > 0 ? (
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-text-secondary text-sm">料金:</span>
-                      <span className="text-saunako text-2xl font-bold">
-                        ¥{facility.priceMin.toLocaleString()}
-                      </span>
-                      <span className="text-text-secondary text-sm">〜 / {facility.duration}分</span>
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-text-secondary text-sm">料金:</span>
+                        <span className="text-saunako text-2xl font-bold">
+                          ¥{facility.priceMin.toLocaleString()}
+                        </span>
+                        <span className="text-text-secondary text-sm">〜 / {facility.duration}分</span>
+                      </div>
+                      <p className="text-text-secondary text-sm">
+                        1人あたり ¥{(
+                          facility.plans && facility.plans.length > 0
+                            ? Math.min(...facility.plans.map((p) => Math.floor(p.price / p.capacity)))
+                            : facility.priceMin
+                        ).toLocaleString()}〜
+                      </p>
                     </div>
                   ) : (
                     <p className="text-text-secondary text-sm">料金は公式サイトをご確認ください</p>
