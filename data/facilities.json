@@ -28700,5 +28700,74 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 397,
+    "slug": "savannah-hakone",
+    "name": "サバンナ箱根",
+    "prefecture": "kanagawa",
+    "prefectureLabel": "神奈川県",
+    "city": "小田原市",
+    "area": "小田原・西湘",
+    "address": "神奈川県小田原市飯田岡字鷹打場660-1",
+    "nearestStation": "穴部駅（伊豆箱根鉄道大雄山線）",
+    "walkMinutes": 20,
+    "priceMin": 15000,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜18:30（土曜ナイトプランは〜21:00）",
+    "holidays": "要確認",
+    "website": "https://landroots.net/",
+    "phone": null,
+    "bookingUrl": "https://www.chillnn.com/19c78547c62362",
+    "amenities": [
+      "手ぶらセット（有料）",
+      "タオル（有料）",
+      "水着（有料）",
+      "サウナハット（有料）",
+      "BBQスペース（有料）"
+    ],
+    "note": "完全貸切・完全予約制。JR小田原駅から有料送迎あり（要予約）。BBQオプション2,500円/人。【土曜限定】ナイトプランあり（19:00〜21:00）。",
+    "images": [
+      "/facilities/397-0.webp",
+      "/facilities/397-1.webp",
+      "/facilities/397-2.webp"
+    ],
+    "lat": 35.289651,
+    "lng": 139.14616,
+    "description": "神奈川県小田原市の高台に位置する完全貸切・完全予約制のプライベートテントサウナ。都心から約60分、箱根の自然に囲まれた展望デッキから空と山・夜には小田原の街明かりを望む絶景が楽しめる。薪火サウナとセルフロウリュ、井上酒造提供の天然地下水風呂を完備し、BBQオプションも利用可能。カップルや友人グループの特別なサウナ体験に。",
+    "saunakoCommentShort": "箱根の絶景展望デッキで薪火サウナを独り占め!",
+    "saunakoCommentLong": "小田原の高台にある完全貸切テントサウナだよ! 薪の熱でじっくり蒸されたあとは、箱根の山々や小田原の街明かりを望む展望デッキで外気浴できるの最高すぎる。セルフロウリュもできるし、水風呂は井上酒造提供の天然地下水で気持ちいいかも。土曜の夜はナイトプランで夜景を眺めながら整えるのもアリだよ!",
+    "updatedAt": "2026-03-25",
+    "plans": [
+      {
+        "name": "ペアプラン",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "グループプラン",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 8
+      },
+      {
+        "name": "【土曜限定】ナイトプラン",
+        "price": 0,
+        "duration": 120,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
   }
 ]
