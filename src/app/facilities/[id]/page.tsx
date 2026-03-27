@@ -239,6 +239,20 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         ...(facility.priceMin > 0 && {
           priceRange: `1名${facility.duration}分 ¥${facility.priceMin.toLocaleString()}〜`,
         }),
+        ...(facility.plans && facility.plans.length > 0 && {
+          makesOffer: facility.plans.slice(0, 5).map((plan) => ({
+            '@type': 'Offer',
+            name: plan.name,
+            price: plan.price,
+            priceCurrency: 'JPY',
+            availability: 'https://schema.org/InStock',
+            eligibleDuration: {
+              '@type': 'QuantitativeValue',
+              value: plan.duration,
+              unitCode: 'MIN',
+            },
+          })),
+        }),
         ...(facility.amenities.length > 0 && {
           amenityFeature: facility.amenities.map(amenity => ({
             '@type': 'LocationFeatureSpecification',

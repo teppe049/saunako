@@ -22,6 +22,10 @@ const FEATURED_ARTICLE_SLUGS = [
   'couple-private-sauna',
   'cheap-private-sauna',
   'osusume-private-sauna',
+  'tokyo-private-sauna-guide',
+  'osaka-private-sauna-guide',
+  '24h-private-sauna',
+  'outdoor-air-private-sauna',
 ];
 
 const faqJsonLd = {

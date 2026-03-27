@@ -17,6 +17,8 @@ $ARGUMENTS - 分析対象期間（例: "先週", "2/1-2/28"）、フォーカス
 - チャネル別: PV / UU（dimensions: sessionDefaultChannelGroup）
 - ページ別: PV（dimensions: pagePath）
 - デバイス別: sessions（dimensions: deviceCategory）
+- **検索エンジン別**: Organic Search の PV を sessionSource 別に分解（google / bing / ecosia.org 等）
+  - dimensionFilter で sessionDefaultChannelGroup = "Organic Search" に絞り、dimensions: sessionSource で取得
 
 **Search Console（mcp__search-console__search_analytics / enhanced）:**
 - クエリ別: clicks / impressions / ctr / position（dimensions: query）
@@ -25,6 +27,8 @@ $ARGUMENTS - 分析対象期間（例: "先週", "2/1-2/28"）、フォーカス
 
 **siteUrl**: `sc-domain:saunako.jp`
 
+**重要**: Search Console は Google 検索のみ計測。サウナ子のOrganic Searchの約90%はBing経由（3/27発見）のため、SC のデータだけで判断しないこと。GA4 の検索エンジン別内訳を必ず確認する。
+
 ### 2. 現状分析（Check）
 
 取得データから以下の観点で分析:
@@ -32,6 +36,7 @@ $ARGUMENTS - 分析対象期間（例: "先週", "2/1-2/28"）、フォーカス
 #### 2-1. トラフィック概況
 - 週間 PV / UU / セッション数を前週・ベースラインと比較
 - チャネル別比率（Organic / Direct / Social / Referral）の推移
+- **検索エンジン別内訳**（Google / Bing / Ecosia）— Organic Search の中身を分解
 - デバイス比率（Mobile / Desktop）
 
 #### 2-2. SEO パフォーマンス（GA4 × Search Console 突き合わせ）
