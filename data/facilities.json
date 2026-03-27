@@ -28775,5 +28775,62 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 398,
+    "slug": "totonou-bluesky-gyoda",
+    "name": "TOTONOU private sauna&O2 Capsule Bluesky",
+    "prefecture": "saitama",
+    "prefectureLabel": "埼玉県",
+    "city": "行田市",
+    "area": "その他",
+    "address": "埼玉県行田市中央19-16",
+    "nearestStation": "行田市駅（秩父鉄道秩父本線）",
+    "walkMinutes": 1,
+    "priceMin": 2500,
+    "duration": 60,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": null,
+      "outdoorAir": null,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜22:00",
+    "holidays": "要確認",
+    "website": "https://www.instagram.com/bluesky_totonou",
+    "phone": "048-580-6602",
+    "bookingUrl": null,
+    "amenities": [
+      "ReFaシャワー",
+      "プロジェクター（一部客室）",
+      "インフィニティチェア"
+    ],
+    "note": "バレルサウナ×2・スクエア型×1の個室3室。高濃度酸素ボックス（O2カプセル）完備。木製一人用水風呂。完全予約制。男女利用対応。",
+    "images": [
+      "/facilities/398-0.webp",
+      "/facilities/398-1.webp",
+      "/facilities/398-2.webp"
+    ],
+    "lat": 36.1363,
+    "lng": 139.4552,
+    "description": "埼玉県行田市の行田市駅から徒歩10秒という抜群のアクセスにある個室サウナ。バレルサウナ2室とスクエア型1室の計3室を完備し、各室3名まで利用可能。通常のサウナ体験に加え、高濃度酸素ボックス（O2カプセル）も設置された他にない整い体験が可能。木製一人用水風呂とReFaシャワーで高品質なリカバリーをサポート。一部客室にはプロジェクター完備で映像を楽しみながら整える新感覚スタイル。2026年3月26日オープン。",
+    "saunakoCommentShort": "駅から10秒！O2カプセルで整いを最大化！",
+    "saunakoCommentLong": "行田市駅から徒歩10秒って、もはやホームから直結レベルの近さだよ！バレルサウナ2室とスクエア型1室で好みに合わせて選べるの嬉しい。しかも高濃度酸素ボックス（O2カプセル）まであるって、整いのレベルが他のサウナと全然違う！ReFaシャワーで上質なケアもできるし、プロジェクター付きの部屋では映像見ながらゆっくり過ごせるよ。埼玉で新感覚サウナ体験したいなら要チェック！",
+    "updatedAt": "2026-03-27",
+    "openedAt": "2026-03-26",
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "60分 1名",
+        "price": 2500,
+        "duration": 60,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
   }
 ]
