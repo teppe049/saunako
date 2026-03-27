@@ -78,6 +78,15 @@ export const mdxComponents: MDXComponents = {
       </h3>
     );
   },
+  h4: ({ children, ...props }) => {
+    const text = typeof children === 'string' ? children : '';
+    const id = slugify(text);
+    return (
+      <h4 id={id} className="text-base md:text-lg font-semibold text-text-primary mt-6 mb-2 scroll-mt-20" {...props}>
+        {children}
+      </h4>
+    );
+  },
   p: ({ children, ...props }) => (
     <p className="text-text-secondary text-[15px] leading-[1.8] mb-4" {...props}>{children}</p>
   ),
