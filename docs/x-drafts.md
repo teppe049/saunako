@@ -4,6 +4,170 @@
 
 ---
 
+## 2026-03-27 午前 — 古民家サウナ ととの居 (id=283) 価格フック
+
+### 本文（リンクなし）
+```
+古民家×サウナが福井にある。
+
+15年間空き家だった古民家をまるごとリノベしたバレルサウナで、地下水かけ流しの水風呂と星空外気浴が楽しめるの。蔵を改装したチルアウト空間もあって、整ったあとの休憩がまた最高なんだよね🌿
+
+3名以上なら1人2,500円〜とコスパもいいし、BBQスペース（別料金）もあるから、グループ旅行の目的地にするのもアリかも。
+
+📍福井市（福井駅から車20分）
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+古民家サウナ ととの居の詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/283
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/283-0.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/283-1.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/283-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/283-3.webp
+
+---
+
+## 2026-03-27 午後 — Sauna muku (id=261) 知ってた？
+
+### 本文（リンクなし）
+```
+知ってた？八ヶ岳山麓に「呼吸するサウナ」があるって。
+
+長野・茅野市の Sauna muku は土壁と羊毛断熱材の自然素材サウナ。薪ロウリュで蒸されたら大自然で外気浴🌲
+
+ドラム缶風呂や焚き火もあって、八ヶ岳旅行のついでに行きたい。
+
+📍茅野市（茅野駅からタクシー）
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+Sauna mukuの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/261
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/261-0.webp（外観全景）
+- /Users/teppei0409/Projects/saunako/public/facilities/261-1.webp（サウナ室内・薪ストーブ）
+- /Users/teppei0409/Projects/saunako/public/facilities/261-2.webp（陶器製水風呂）
+- /Users/teppei0409/Projects/saunako/public/facilities/261-3.webp（ドラム缶五右衛門風呂）
+- /Users/teppei0409/Projects/saunako/public/facilities/261-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/261-3.webp
+
+---
+
+## 2026-03-26 午後 — おでんサウナ (id=305) 知ってた？
+
+### 本文（リンクなし）
+```
+知ってた？神戸元町のサウナ、整ったあとに無料おでんが食べられるって。
+
+セルフロウリュで蒸されて、14℃の水風呂でしっかり冷えて、外気浴でととのったら、1階の「おでん屋うず」でおでん盛り合わせが無料でついてくるんだよ🍢
+
+最大8名まで入れるから、友達グループでワイワイ使うのにもぴったりかも。
+
+📍兵庫・神戸元町（元町駅5分）
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+おでんサウナの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/305
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/305-0.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/305-1.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/305-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/305-3.webp
+
+---
+
+## 2026-03-26 午前 — 川吉 プライベートサウナ (id=64) 価格フック
+
+### 本文（リンクなし）
+```
+実は松戸に3,400円の個室サウナがある。
+
+千葉・上本郷駅徒歩1分、チラー付き水風呂（18〜20℃）とセルフロウリュはもちろん、BOSEスピーカーとプロジェクターまで完備してるのが面白いかも。友達と映像流しながら整えるのって、なかなかないよ🎬
+
+最大4名までOKだから、グループ利用にもぴったりだよ。
+
+📍千葉・松戸（上本郷駅1分）
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+川吉 プライベートサウナの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/64
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/64-0.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/64-1.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/64-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/64-3.webp
+
+---
+
+## 2026-03-25 午前 — sauna KURO (id=215) 価格フック
+
+### 本文（リンクなし）
+```
+実はイオンモールの中に個室サウナがある。
+
+宮城・イオンモール新利府の北館1Fに、本格チラー水風呂とセルフロウリュを備えた完全個室サウナ「KURO」があるよ。朝7:50から深夜24:30まで営業してて、買い物ついでに整えるってのが実は最高かも😊
+
+📍宮城・利府
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+sauna KUROの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/215
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/215-0.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/215-1.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/215-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/215-3.webp
+
+---
+
+## 2026-03-25 午後 — kasika 京都北山 (id=91) 知ってた？
+
+### 本文（リンクなし）
+```
+知ってた？京都・北山に、心拍数でととのいを可視化できる個室サウナがあるって。光学式センサーで「ととのい度」をリアルタイムに数値確認できるの、これは面白すぎ。アロマロウリュ×温水ジャグジー×エアベッドで、整い環境もバッチリだよ🌿
+
+📍京都・北山駅徒歩3分
+#個室サウナ #サウナ
+```
+
+### リプライ（リンク付き）
+```
+kasika 京都北山の詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/91
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/91-0.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/91-1.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/91-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/91-3.webp
+
+---
+
 ## ~~3/21 — 88℃（ハチジュウハチド）(id=144)~~ ✅投稿済み
 
 ### 本文（リンクなし）
