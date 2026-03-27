@@ -17329,7 +17329,7 @@
     "capacity": 3,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "15",
       "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": false,

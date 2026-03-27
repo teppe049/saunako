@@ -520,6 +520,71 @@ saunako.jp/facilities/133
 
 
 
+## 2026-03-28 午前 — 88℃（ハチジュウハチド） (id=144)
+
+### 本文（リンクなし）
+```
+実は愛知に30分1,300円の個室サウナがある。
+
+88℃（ハチジュウハチド）。
+Harvia製ストーブでセルフロウリュ、水風呂は氷を入れて好みの冷たさに調整できる。サウナ室でNetflixも見れちゃうよ🔥
+
+📍愛知・岩倉
+#個室サウナ #サウナ子
+料金・アクセスの詳細はこっち👇
+```
+248 weight
+
+### リプライ
+```
+88℃（ハチジュウハチド）
+saunako.jp/facilities/144
+```
+
+### 画像
+- public/facilities/144-0.webp（サウナ室内部・ロゴ）
+- public/facilities/144-1.webp
+- public/facilities/144-2.webp
+- public/facilities/144-3.webp
+
+### データ差異
+なし
+
+---
+
+## 2026-03-28 午後 — SAUNA F-tuuli (id=233)
+
+### 本文（リンクなし）
+```
+知ってた？福島駅徒歩1分のビル5Fに個室サウナが3部屋ある。
+
+SAUNA F-tuuli。フィンランド式ロウリュを個室で独り占め。水風呂15℃、Bluetoothで好きな音楽かけながら105分ゆったりできるよ。
+
+3周年でイベントもやってるみたい✨
+
+📍福島市
+#個室サウナ #サウナ子
+料金・アクセスの詳細はこっち👇
+```
+277 weight
+
+### リプライ
+```
+SAUNA F-tuuli
+saunako.jp/facilities/233
+```
+
+### 画像
+- public/facilities/233-0.webp（水風呂エリア）
+- public/facilities/233-1.webp
+- public/facilities/233-2.webp
+- public/facilities/233-3.webp
+
+### データ差異
+- waterBathTemp: null → "15" に修正済み
+
+---
+
 ## ~~2026-03-20 — 小豆島メディテーションサウナヴィラ tou (id=357)~~ ✅投稿済み
 
 ### 本文（リンクなし）
