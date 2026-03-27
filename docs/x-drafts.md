@@ -22,7 +22,7 @@
 
 ### リプライ（リンク付き）
 ```
-SAUNA F-tuuliの詳細はここからチェックしてみてね👇
+SAUNA F-tuuli
 https://www.saunako.jp/facilities/233
 ```
 
@@ -50,7 +50,7 @@ https://www.saunako.jp/facilities/233
 
 ### リプライ（リンク付き）
 ```
-BLUE BASE SENAMIの詳細はここからチェックしてみてね👇
+BLUE BASE SENAMI
 https://www.saunako.jp/facilities/251
 ```
 
