@@ -4,6 +4,87 @@
 
 ---
 
+## 2026-03-28 午前 — SAUNA F-tuuli (id=233) 価格フック
+
+### 本文（リンクなし）
+```
+実は福島駅から徒歩1分に個室サウナがある。
+
+「SAUNA F-tuuli」は白樺・石・炎の3部屋から選べて、フィンランド式ロウリュ×水風呂×外気浴がフルセット。
+好きな音楽をBluetoothで流しながら整えるの、これが最高。
+
+深夜24:30まで営業。新幹線帰りにも使えるよ。
+
+📍福島市（福島駅1分）
+#個室サウナ #サウナ子
+```
+
+### リプライ（リンク付き）
+```
+SAUNA F-tuuliの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/233
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/233-0.webp（水風呂+浴室）
+- /Users/teppei0409/Projects/saunako/public/facilities/233-2.webp（サウナ室内 優先）
+- /Users/teppei0409/Projects/saunako/public/facilities/233-3.webp（薪の壁）
+- /Users/teppei0409/Projects/saunako/public/facilities/233-1.webp（エントランス）
+
+---
+
+## 2026-03-28 午後 — BLUE BASE SENAMI (id=251) 知ってた？
+
+### 本文（リンクなし）
+```
+知ってた？新潟の瀬波温泉に、日本海に沈む夕日を眺めながら入れるバレルサウナがあるって。
+
+源泉かけ流し温泉付きのコテージで、海まで徒歩30秒。水風呂×外気浴で整えた後、温泉にそのまま入れるって最高じゃない🌊
+
+カップルや友達旅行の目的地にぴったりだよ。
+
+📍新潟・村上市（瀬波温泉）
+#個室サウナ #サウナ子
+```
+
+### リプライ（リンク付き）
+```
+BLUE BASE SENAMIの詳細はここからチェックしてみてね👇
+https://www.saunako.jp/facilities/251
+```
+
+### 画像
+- /Users/teppei0409/Projects/saunako/public/facilities/251-0.webp（夕焼け×バレルサウナ×日本海 優先）
+- /Users/teppei0409/Projects/saunako/public/facilities/251-1.webp（夕暮れ×バレルサウナ外観）
+- /Users/teppei0409/Projects/saunako/public/facilities/251-2.webp
+- /Users/teppei0409/Projects/saunako/public/facilities/251-3.webp
+
+---
+
+## ピン投稿 差し替え（Week4〜）
+
+### 本文
+```
+個室サウナ、高い・マニア向けってイメージない？
+
+実は全国に393施設もあって
+・5,000円以下 → 176施設
+・カップルOK → 319施設
+・駅チカ（徒歩5分以内）もけっこうある
+
+「エリア」「予算」「人数」で絞って探せるサイト作ったよ
+デートにも、ひとり時間にも、友達とも◎
+
+プロフのリンクから探してみてね🔗
+```
+
+### 差し替え手順
+1. 現在のピン投稿（「個室サウナ全国393施設を見てわかったこと」）のピンを外す
+2. 上記を新規投稿
+3. 新投稿をピン留め
+
+---
+
 ## 2026-03-27 午前 — 古民家サウナ ととの居 (id=283) 価格フック
 
 ### 本文（リンクなし）
