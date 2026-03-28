@@ -28834,5 +28834,77 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 399,
+    "slug": "tanaka-sauna-kyoto",
+    "name": "TANAKA.SAUNA",
+    "prefecture": "kyoto",
+    "prefectureLabel": "京都府",
+    "city": "京都市伏見区",
+    "area": "京都市内",
+    "address": "京都府京都市伏見区向島庚申町121-1",
+    "nearestStation": "観月橋（京阪宇治線）",
+    "walkMinutes": 10,
+    "priceMin": 5000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜20:15（4枠制: 10:00-12:00、12:45-14:45、15:30-17:30、18:15-20:15）",
+    "holidays": "不定休",
+    "website": "https://tanakasauna.com/",
+    "phone": null,
+    "bookingUrl": "https://reserva.be/tanakasauna",
+    "amenities": [
+      "整い水"
+    ],
+    "note": "水着着用必須。スタッフによるゲリラ熱波（アウフグース）あり。民泊事業に基づく運営。",
+    "images": [
+      "/facilities/399-0.webp",
+      "/facilities/399-1.webp",
+      "/facilities/399-2.webp",
+      "/facilities/399-3.webp"
+    ],
+    "lat": 34.922741,
+    "lng": 135.773132,
+    "description": "京都市伏見区の住宅街にある完全貸切個室サウナ。医療従事者チームが運営し、スタッフによるゲリラ熱波が体験できる。水着着用OKでカップルや友人グループにも対応。JBLスピーカー完備、整い水付きの2時間貸切プラン。京阪宇治線 観月橋駅から徒歩10分。",
+    "saunakoCommentShort": "医療従事者が作った京都の貸切サウナ!",
+    "saunakoCommentLong": "スタッフによるゲリラ熱波が体験できるのが珍しいポイントだよ。京都・伏見区の住宅街にある完全貸切サウナで、水着着用OKだからカップルや友達でも気軽に行けるかも。JBLスピーカーで好きな音楽もかけられるし、整い水も完備。観月橋駅から徒歩10分だよ。",
+    "updatedAt": "2026-03-28",
+    "plans": [
+      {
+        "name": "1名",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "2名",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "3名",
+        "price": 10500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "4名",
+        "price": 14000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
   }
 ]
