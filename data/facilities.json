@@ -16009,7 +16009,7 @@
       "フェイスタオル",
       "バスタオル"
     ],
-    "note": "元湯 猿倉温泉内。サウナ2.5h+休憩1.5hの計4h。天然湧水水風呂、硫黄泉露天風呂付き",
+    "note": "元湯 猿倉温泉内。サウナ2.5h+休憩1.5hの計4h。天然湧水水風呂、硫黄泉露天風呂付き。※2026年度は敷地内工事のため年間休業（新規予約停止中）。再開時期は公式サイトで告知予定。",
     "images": [
       "/facilities/207-0.webp",
       "/facilities/207-1.webp",
@@ -29847,7 +29847,8 @@
     "note": "手作りサウナ小屋。日曜限定5時間貸切。1〜3名5,000円。薪ストーブ90℃。屋外水風呂（氷入り14℃）。",
     "images": [
       "/facilities/417-0.webp",
-      "/facilities/417-1.webp"
+      "/facilities/417-1.webp",
+      "/facilities/417-2.webp"
     ],
     "lat": 38.512,
     "lng": 141.05,
@@ -30113,6 +30114,869 @@
         "name": "日帰りサウナ 3名〜",
         "price": 23400,
         "duration": 180,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 424,
+    "slug": "mizuho-highland-sauna",
+    "name": "瑞穂ハイランド",
+    "prefecture": "shimane",
+    "prefectureLabel": "島根県",
+    "city": "邑智郡邑南町",
+    "area": "その他",
+    "address": "島根県邑智郡邑南町市木6242-19",
+    "nearestStation": "石見川本駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜16:00（ナイト 土日祝17:00〜20:00）",
+    "holidays": "水曜・木曜",
+    "website": "https://www.mizuhohighland.com/price/sauna/",
+    "phone": "0855-85-1111",
+    "bookingUrl": "https://coubic.com/mizuho-reserve/490311#pageContent",
+    "amenities": [
+      "水着着用",
+      "アロマオイル（rento）",
+      "ミネラルウォーター"
+    ],
+    "note": "イグルーサウナ3棟（Kanayago・Genryuu・Minamoto）。定員4名、追加料金で最大6名。水着着用必須。1dayコースはBBQ利用可（機材レンタル別途¥5,000）",
+    "images": [],
+    "lat": 34.8142,
+    "lng": 132.399,
+    "description": "島根県邑南町の瑞穂ハイランド内にあるアウトドアサウナ施設。森の中に3棟のイグルーサウナ（Kanayago・Genryuu・Minamoto）を備え、フィンランド式ロウリュを楽しめる。フィンランドのサウナブランド「rento」のアロマオイルを好みで選べるのが特徴。半日・1日・ナイトの3プランから選択可能。",
+    "saunakoCommentShort": "森の中のイグルーサウナで大自然ロウリュ！",
+    "saunakoCommentLong": "スキー場の大自然の中にイグルーサウナが3棟もあるんだよ！フィンランドの「rento」のアロマで好きな香りを選んでロウリュできるの。Genryuuは100℃のガチ熱系、KanayagoとMinamotoは70℃でまったり系。外気浴は森林の中だから開放感がすごいかも！",
+    "updatedAt": "2026-03-29",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "半日コース AM（9:00〜12:00）",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "半日コース PM（13:00〜16:00）",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "1dayコース（9:00〜16:00）",
+        "price": 35000,
+        "duration": 420,
+        "capacity": 4
+      },
+      {
+        "name": "ナイトコース（土日祝 17:00〜20:00）",
+        "price": 20000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 422,
+    "slug": "kai-takaoka",
+    "name": "回-kai-",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "高岡市",
+    "area": "高岡",
+    "address": "富山県高岡市駅南1丁目11-20 穴田ビル4F",
+    "nearestStation": "高岡駅",
+    "walkMinutes": 10,
+    "priceMin": 6000,
+    "duration": 120,
+    "capacity": 3,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "9:00〜18:00",
+    "holidays": "木曜日",
+    "website": "https://kai-resorts.com/",
+    "phone": "080-3740-9192",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "ガウン",
+      "ヘアバンド",
+      "デトックスウォーター",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ボディスポンジ",
+      "化粧水",
+      "ヘアオイル",
+      "綿棒",
+      "ドライヤー"
+    ],
+    "note": "完全予約制（電話・SMS・Instagram DMで予約）。同性同士のみ利用可。スチームサウナ「KUNPOO」とドライサウナ「うつろ」の2室あり。利用後ラウンジでアフターティーサービス付き。18歳未満利用不可。",
+    "images": [],
+    "lat": 36.738931,
+    "lng": 137.016308,
+    "description": "富山県高岡市の完全予約制貸切サウナ。スチームサウナ「KUNPOO-薫風-」とドライサウナ「うつろ-uturo-」の2室を備え、それぞれ異なるサウナ体験を提供。ドライサウナではセルフロウリュや水風呂も楽しめる。利用後はラウンジでアフターティーサービス付き。",
+    "saunakoCommentShort": "スチームとドライ、2つのサウナを選べるのが楽しい!",
+    "saunakoCommentLong": "高岡駅から歩けるビル4Fに隠れ家みたいな貸切サウナがあるよ! スチームの「KUNPOO」はハーブの香りで癒し系、ドライの「うつろ」はセルフロウリュ＆水風呂でしっかり整える系。気分で選べるのが嬉しいポイントだね。サウナ後のアフターティーでまったりできるのも最高かも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "KUNPOO-薫風-（スチームサウナ）",
+        "price": 7000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "うつろ-uturo-（ドライサウナ）",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 423,
+    "slug": "gyu-ya-villa-sauna",
+    "name": "GYU-YA VILLA SAUNA",
+    "prefecture": "toyama",
+    "prefectureLabel": "富山県",
+    "city": "氷見市",
+    "area": "その他",
+    "address": "富山県氷見市朝日丘1-41",
+    "nearestStation": "氷見駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 180,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:30〜14:30",
+    "holidays": null,
+    "website": "https://sauna.gyuya-villa.com/",
+    "phone": "0766-30-9008",
+    "bookingUrl": "https://select-type.com/rsv/?id=V61wVMlDxfQ&c_id=414945&w_flg=1",
+    "amenities": [
+      "シャワー",
+      "更衣室",
+      "貴重品ロッカー"
+    ],
+    "note": "精肉店「牛屋」プロデュース。薪焚きHARVIA製ストーブ。水風呂は2種3槽（木製浴槽＋バスタブ型、天然地下水使用）。ナイトサウナは水曜15:00-20:00限定。",
+    "images": [],
+    "lat": 36.850012,
+    "lng": 136.985336,
+    "description": "富山県氷見市の精肉店「牛屋」がプロデュースするプライベートサウナ施設。フィンランドHARVIA社製薪ストーブのサウナ室に、天然地下水を使った2種3槽の水風呂、広々とした外気浴スペースを完備。日帰りプランでは氷見牛のサウナ飯も楽しめる。",
+    "saunakoCommentShort": "薪サウナの後に氷見牛サウナ飯って最高の組み合わせ!",
+    "saunakoCommentLong": "氷見の精肉店がプロデュースしたサウナって聞いただけでワクワクしない? 薪焚きHARVIAでセルフロウリュして、天然地下水の水風呂が2種類もあるんだよ! 外気浴スペースも広々してて開放感バッチリ。サウナ後に氷見牛ランチが食べられるプランもあるから、ご褒美サウナにぴったりかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "サウナ＋ランチ付き",
+        "price": 5000,
+        "duration": 180,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 424,
+    "slug": "hotel-soboku",
+    "name": "HOTEL SOBOKU",
+    "prefecture": "niigata",
+    "prefectureLabel": "新潟県",
+    "city": "妙高市",
+    "area": "その他",
+    "address": "新潟県妙高市長森1555-1",
+    "nearestStation": "上越妙高駅",
+    "walkMinutes": null,
+    "priceMin": 3300,
+    "duration": 120,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "8:00〜24:00",
+    "holidays": null,
+    "website": "https://hotel-soboku.com/",
+    "phone": "0255-77-4556",
+    "bookingUrl": "https://www.chillnn.com/18c05aee3041c4/plan/18f761d5d54173",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディーソープ",
+      "フェイスソープ",
+      "化粧水",
+      "乳液",
+      "メイク落とし",
+      "ドライヤー（ReFa）",
+      "シャワーヘッド（ReFa）"
+    ],
+    "note": "全9棟コテージ型ホテル。HARVIA社製ヒーター（Spirit/Kip 2種）。温度40〜110℃カスタマイズ可。セルフロウリュはよもぎ・ミカン・ショウガのアロマパック付き。タオル持参必須（レンタル: タオルセット550円）。冬季は雪ダイブ可。当日予約は電話のみ。",
+    "images": [],
+    "lat": 37.024076,
+    "lng": 138.228378,
+    "description": "新潟県妙高市のコテージ型ホテル。全9棟にプライベートサウナを完備し、日帰りサウナプランも提供。HARVIA社製ヒーターでセルフロウリュが楽しめ、よもぎ・ミカン・ショウガのアロマパックも用意。水風呂は客室浴槽にブロック氷を入れるスタイルで約13℃。テラスでの外気浴も可能。",
+    "saunakoCommentShort": "コテージ丸ごと貸切でアロマロウリュが楽しめるよ!",
+    "saunakoCommentLong": "妙高のコテージでプライベートサウナって贅沢すぎない? HARVIAヒーターでセルフロウリュできて、よもぎやミカンのアロマパックも付いてくるんだよ! 水風呂はブロック氷を入れて13℃くらいまで冷やせるし、テラスで外気浴もできる。日帰り2時間プランがあるから気軽に行けるのも嬉しいポイントだね!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "日帰りサウナ 1名",
+        "price": 4950,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "日帰りサウナ 2〜5名",
+        "price": 3300,
+        "duration": 120,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 425,
+    "slug": "pension-asuka",
+    "name": "ペンションあすか",
+    "prefecture": "tottori",
+    "prefectureLabel": "鳥取県",
+    "city": "西伯郡伯耆町",
+    "area": "大山",
+    "address": "鳥取県西伯郡伯耆町金屋谷1692-4",
+    "nearestStation": "岸本駅",
+    "walkMinutes": null,
+    "priceMin": 3300,
+    "duration": 120,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30 / 13:00 / 15:30 / 18:00（2時間制・4部）",
+    "holidays": "不定休（要問い合わせ）",
+    "website": "https://daisen-asuka.com/",
+    "phone": "0859-52-3900",
+    "bookingUrl": null,
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "フェイスタオル",
+      "バスタオル",
+      "サウナハット貸出",
+      "ドライヤー",
+      "アロマロウリュ",
+      "飲料水"
+    ],
+    "note": "大山の麓にある完全貸切サウナ。フィンランド式80℃。大山伏流水の水風呂16℃。大型ジャグジー（大人5人）併設。外気浴はリクライニングチェア3脚。宿泊も可能（1泊9,900円〜）。前日までに要予約。岸本駅からタクシー約10分。",
+    "images": [],
+    "lat": 35.371881,
+    "lng": 133.483295,
+    "description": "鳥取県伯耆町、大山の麓にある完全貸切セルフロウリュサウナ。フィンランド式80℃のサウナ室と、大山伏流水を使った16℃の水風呂、大人5人が入れる大型ジャグジーを備える。外気浴では大山を望むリクライニングチェアでくつろげる。1日4組限定の予約制。",
+    "saunakoCommentShort": "大山の伏流水16℃水風呂が贅沢すぎる！",
+    "saunakoCommentLong": "大山のふもとにある隠れ家ペンションの貸切サウナだよ。フィンランド式80℃でセルフロウリュし放題、しかも水風呂は大山の伏流水で年中16℃！肌あたりがめちゃくちゃ柔らかくて気持ちいいの。外気浴は大山を眺めながらリクライニングチェアでぼーっとできるし、大型ジャグジーまであるから最高。2名以上なら3,300円/人とコスパもいいね！",
+    "updatedAt": "2026-03-29",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切サウナ 2名以上",
+        "price": 3300,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "貸切サウナ 1名",
+        "price": 4400,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 426,
+    "slug": "taguri-no-mori-no-sauna",
+    "name": "たぐりの森のサウナ",
+    "prefecture": "tottori",
+    "prefectureLabel": "鳥取県",
+    "city": "鳥取市",
+    "area": "鳥取市",
+    "address": "鳥取県鳥取市用瀬町赤波2729",
+    "nearestStation": "用瀬駅",
+    "walkMinutes": null,
+    "priceMin": 13000,
+    "duration": 120,
+    "capacity": 5,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "貸切: 平日8:30〜13:00 / 土日祝8:30〜15:30",
+    "holidays": "不定休（要問い合わせ）",
+    "website": "https://taguri-tottori.com/sauna/",
+    "phone": null,
+    "bookingUrl": null,
+    "amenities": [
+      "タオルレンタル（200円）",
+      "サンダルレンタル",
+      "サウナマットレンタル",
+      "更衣室",
+      "ロッカー",
+      "駐車場"
+    ],
+    "note": "リバートリップオートキャンプ場内のバレルサウナ。山の天然水を使った水風呂。定員4〜5名の貸切利用。キャンプ利用者は割引あり。予約はInstagram DM・公式LINE・電話にて3時間前まで受付。鳥取駅から車で約32分。",
+    "images": [],
+    "lat": 35.341252,
+    "lng": 134.230755,
+    "description": "鳥取市用瀬町の山間にあるバレルサウナ。リバートリップオートキャンプ場内に位置し、山の天然水を使った水風呂と豊かな自然の中での外気浴が楽しめる。定員4〜5名の完全貸切で、平日2時間13,000円から利用可能。",
+    "saunakoCommentShort": "山の天然水風呂×バレルサウナの大自然体験！",
+    "saunakoCommentLong": "鳥取の山奥、キャンプ場の中にあるバレルサウナだよ。山から流れてくる天然水の水風呂がワイルドで最高！外気浴も森の中だから、鳥のさえずりとか川の音を聞きながらととのえるの。4〜5人で貸切できるからグループで行くのがおすすめかも。キャンプと組み合わせたら割引もあるし、一日中自然を満喫できちゃうね！",
+    "updatedAt": "2026-03-29",
+    "openedAt": null,
+    "closedAt": null,
+    "plans": [
+      {
+        "name": "貸切 平日2時間",
+        "price": 13000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "貸切 土日祝2時間",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 5
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 425,
+    "slug": "sauna-402",
+    "name": "SAUNA402",
+    "prefecture": "okayama",
+    "prefectureLabel": "岡山県",
+    "city": "岡山市",
+    "area": "岡山市",
+    "address": "岡山県岡山市北区駅元町21-1 MAISON fossette 2F",
+    "nearestStation": "岡山駅",
+    "walkMinutes": 3,
+    "priceMin": 3500,
+    "duration": 90,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:30〜21:30",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/sauna_402/",
+    "phone": "080-7552-7897",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "ボディソープ",
+      "スキンケア用品"
+    ],
+    "note": "ピラティススタジオ「Plus One Okayama」併設・完全予約制・公式LINEで予約・水着レンタルあり・サウナハットレンタルあり",
+    "images": [],
+    "lat": 34.6673,
+    "lng": 133.91643,
+    "description": "岡山駅西口徒歩3分、マンション一室を改装した完全プライベートサウナ。ピラティススタジオ「Plus One Okayama」に併設され、1〜2名で利用可能。セルフロウリュと水風呂を備え、手ぶらで気軽に立ち寄れる。公式LINEから予約する完全予約制。",
+    "saunakoCommentShort": "岡山駅3分のマンション一室サウナ!",
+    "saunakoCommentLong": "岡山駅から歩いてすぐのマンションの一室がサウナになってるの、秘密基地感あって面白いよね! セルフロウリュも水風呂もあって、タオルやスキンケアも完備だから手ぶらでOK。1〜2名のプライベート空間だから周りを気にせずととのえるかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "1名プラン 90分",
+        "price": 3500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "2名プラン 90分",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 426,
+    "slug": "sauna-kolme-kyla",
+    "name": "sauna kolme kylä",
+    "prefecture": "okayama",
+    "prefectureLabel": "岡山県",
+    "city": "岡山市",
+    "area": "岡山市",
+    "address": "岡山県岡山市南区豊成1-182-3",
+    "nearestStation": "清輝橋駅",
+    "walkMinutes": null,
+    "priceMin": 3000,
+    "duration": 120,
+    "capacity": 20,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "月火木金 11:00〜22:00 / 土日 9:00〜22:00",
+    "holidays": "水曜",
+    "website": "https://sauna-kolme-kyla.jp/",
+    "phone": "090-3374-1137",
+    "bookingUrl": "https://miniapp.line.me/2006604744-Np0elKg0",
+    "amenities": [
+      "バスタオル",
+      "フェイスタオル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "乳液",
+      "メイク落とし",
+      "ドライヤー",
+      "ウォーターサーバー"
+    ],
+    "note": "メインサウナ（HARVIA・HUUM 2種ストーブ・16名）+小サウナ（ペレットストーブ・4名）・ウィスキング導入・700年超オリーブの木がシンボル・水着着用・LINE予約・駐車場20台",
+    "images": [],
+    "lat": 34.63268,
+    "lng": 133.92821,
+    "description": "岡山市南区の本格アウトドアサウナ施設。HARVIA・HUUMの2種ストーブを備えたメインサウナ（16名）とペレットストーブの小サウナ（4名）を擁し、岡山県初のウィスキングサービスも導入。水風呂・内気浴・外気浴スペースを完備し、貸切利用にも対応。築700年超のオリーブの木がシンボル。",
+    "saunakoCommentShort": "2種ストーブ×ウィスキングの本格派!",
+    "saunakoCommentLong": "HARVIAとHUUMの2種類のストーブがあるサウナって珍しいよね! メインサウナの波状ベンチが体にフィットして気持ちいいの。岡山県初のウィスキングも体験できるし、外気浴スペースのインフィニティチェアも最高。貸切もできるからグループで行くのもおすすめかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "通常プラン 120分",
+        "price": 3000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝プラン 120分",
+        "price": 3500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "レディースDAY 150分",
+        "price": 3000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "ペアDAY 150分（2名1組）",
+        "price": 7000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "貸切プラン 180分（〜20名）",
+        "price": 60000,
+        "duration": 180,
+        "capacity": 20
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 427,
+    "slug": "ushimado-tari",
+    "name": "牛窓TARI",
+    "prefecture": "okayama",
+    "prefectureLabel": "岡山県",
+    "city": "瀬戸内市",
+    "area": "その他",
+    "address": "岡山県瀬戸内市牛窓町鹿忍6129",
+    "nearestStation": "邑久駅",
+    "walkMinutes": null,
+    "priceMin": 3300,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜16:00",
+    "holidays": "不定休",
+    "website": "https://ushimado-tari.com/sea/sauna/",
+    "phone": "0869-34-5551",
+    "bookingUrl": "https://ushimado-tari.com/sea/sauna/reserve/",
+    "amenities": [
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "ドライヤー"
+    ],
+    "note": "バレルサウナ完全貸切・檜露天風呂＆ドラム缶風呂付き・シークレットビーチ隣接・2日前まで要予約・レンタル（水着500円・ビーチタオル500円・サウナセット800円）・駐車場無料",
+    "images": [],
+    "lat": 34.60312,
+    "lng": 134.12942,
+    "description": "瀬戸内海を望むバレルサウナ施設。2〜6名で完全貸切利用でき、セルフロウリュが楽しめる。温度調整可能な檜露天風呂とドラム缶風呂を備え、ビーチベンチでの外気浴では瀬戸内の海風を感じられる。グランピング施設に併設され、BBQやカフェも利用可能。",
+    "saunakoCommentShort": "瀬戸内海×バレルサウナの贅沢貸切!",
+    "saunakoCommentLong": "目の前にシークレットビーチが広がるバレルサウナって最高じゃない? セルフロウリュでしっかり蒸されたあと、檜露天風呂やドラム缶風呂でクールダウンできるの。ビーチベンチで瀬戸内の海風を浴びながらの外気浴は格別だよ! 2〜6名貸切だからグループでわいわい楽しめるね!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "日帰りサウナ 90分（大人1名）",
+        "price": 3300,
+        "duration": 90,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 428,
+    "slug": "hiki-stargazing-sauna",
+    "name": "Hiki stargazing sauna",
+    "prefecture": "hiroshima",
+    "prefectureLabel": "広島県",
+    "city": "広島市",
+    "area": "広島市",
+    "address": "広島県広島市中区猫屋町8-17 猫屋町ビルヂング5F",
+    "nearestStation": "土橋電停",
+    "walkMinutes": 2,
+    "priceMin": 2420,
+    "duration": 60,
+    "capacity": 9,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:30〜23:00（水曜21:00まで、日曜9:00〜20:00）",
+    "holidays": "不定休",
+    "website": "https://www.nekoya-cho.jp/5f/",
+    "phone": "050-8890-3747",
+    "bookingUrl": "https://coubic.com/hiki_sauna",
+    "amenities": [
+      "フェイスタオル",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "クレンジング",
+      "化粧水",
+      "乳液",
+      "ドライヤー",
+      "ウォーターサーバー"
+    ],
+    "note": "SUPPOSE DESIGN OFFICE設計。ハルビアストーブ2台。中庭を望む坪庭付きサウナで、整いスペースは半屋外で雨天時も星空を眺められる。タトゥーOK、1名時撮影OK。会員制プランあり（月額16,500円）",
+    "images": [],
+    "lat": 34.395,
+    "lng": 132.4475,
+    "description": "広島市中区の猫屋町ビルヂング5Fにある個室サウナ。SUPPOSE DESIGN OFFICE設計の空間にハルビアストーブを2台備え、セルフロウリュが楽しめる。中庭を望む坪庭付きで、整いスペースは天井が空に開く半屋外仕様。オーバーヘッドシャワーも完備。",
+    "saunakoCommentShort": "星空を見ながら整える半屋外の整いスペースが最高！",
+    "saunakoCommentLong": "広島の猫屋町ビルヂング5Fにある、おしゃれすぎる個室サウナだよ！ハルビアストーブが2台もあってセルフロウリュし放題。一番の推しポイントは天井が開いた半屋外の整いスペースで、雨の日も星の日も空を感じながら整えるの。坪庭を眺めながらのサウナも風情があって、ここでしか味わえない体験かも！",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "非会員 60分",
+        "price": 2420,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "非会員 90分",
+        "price": 2640,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "貸切 2.5時間（最大9名）",
+        "price": 50000,
+        "duration": 150,
+        "capacity": 9
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 429,
+    "slug": "kokoro-no-yu",
+    "name": "心乃癒",
+    "prefecture": "hiroshima",
+    "prefectureLabel": "広島県",
+    "city": "呉市",
+    "area": "呉",
+    "address": "広島県呉市中央6-3-20",
+    "nearestStation": "呉駅",
+    "walkMinutes": 10,
+    "priceMin": 2000,
+    "duration": 90,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:00（最終受付22:30）",
+    "holidays": "不定休",
+    "website": null,
+    "phone": "0120-88-3277",
+    "bookingUrl": null,
+    "amenities": [
+      "メイク落とし",
+      "化粧水",
+      "乳液",
+      "綿棒",
+      "ドライヤー"
+    ],
+    "note": "1〜2名用個室2室＋最大6名大部屋2室の計4室。サウナ約90℃、アイスサウナ（-3℃）あり。大部屋には簡易水風呂・リクライニングチェア・ロッカー・化粧台あり。駐車場なし（近隣コインパーキング利用）。要予約",
+    "images": [],
+    "lat": 34.2505,
+    "lng": 132.567,
+    "description": "呉市中央にある完全個室サウナ。1〜2名用の個室2室と最大6名の大部屋2室を備え、全室セルフロウリュ対応で約90℃のサウナが楽しめる。アイスサウナ（-3℃）も設置。大部屋には簡易水風呂やリクライニングチェアも完備し、グループ利用にも最適。",
+    "saunakoCommentShort": "90℃サウナにアイスサウナ-3℃の温冷ギャップ！",
+    "saunakoCommentLong": "呉にある個室サウナで、90分2,000円っていうコスパの良さが魅力だよ！セルフロウリュで90℃まで上がるサウナと、マイナス3℃のアイスサウナの温冷差がたまらない。大部屋なら簡易水風呂もあるし、友達やカップルでワイワイ楽しめるね。Bluetoothスピーカーで好きな音楽も流せるから、自分だけの空間を作れちゃうよ！",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "個室 90分 1名",
+        "price": 2000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "個室 90分 2名",
+        "price": 2000,
+        "duration": 90,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 430,
+    "slug": "morino-sauna-osorakan",
+    "name": "もりのさうな in 恐羅漢",
+    "prefecture": "hiroshima",
+    "prefectureLabel": "広島県",
+    "city": "山県郡安芸太田町",
+    "area": "その他",
+    "address": "広島県山県郡安芸太田町横川740-1",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 16500,
+    "duration": 150,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18℃以下",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "季節により変動（要予約）",
+    "holidays": "冬季・悪天候時は休業あり",
+    "website": "https://morinosauna.net/",
+    "phone": null,
+    "bookingUrl": "https://reserva.be/morinosauna_rv",
+    "amenities": [],
+    "note": "日本初のエストニア製薪サウナストーブ。天然水かけ流し水風呂（夏季18℃以下）。森林の中のインフィニティチェアで外気浴。水着着用・男女共用。予約は5日前までWebで受付、4日以内はメール（morinosauna@gmail.com）。冬季スタッドレスタイヤ必須",
+    "images": [],
+    "lat": 34.5953,
+    "lng": 132.1457,
+    "description": "恐羅漢エコロジーキャンプ場に隣接するサウナ小屋。日本初のエストニア製薪サウナストーブを採用し、セルフロウリュが楽しめる。天然水かけ流しの水風呂は夏でも18℃以下を維持。森林に囲まれたインフィニティチェアでの外気浴は格別。一棟貸切で最大6名利用可能。",
+    "saunakoCommentShort": "天然水かけ流し水風呂と森林外気浴が贅沢すぎる！",
+    "saunakoCommentLong": "恐羅漢の森の中にあるサウナ小屋で、日本初のエストニア製薪ストーブがめちゃくちゃ本格的だよ！セルフロウリュでガツンと蒸されたあとの天然水かけ流し水風呂が冷たくて気持ちいい。森の中のインフィニティチェアで外気浴すると、鳥のさえずりしか聞こえなくて最高に整うかも。自然好きには絶対行ってほしい場所だね！",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "一棟貸切 150分（最大6名）",
+        "price": 16500,
+        "duration": 150,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 431,
+    "slug": "tramonto-barrel-sauna",
+    "name": "山の中のバレルサウナ Tramonto",
+    "prefecture": "hiroshima",
+    "prefectureLabel": "広島県",
+    "city": "福山市",
+    "area": "福山",
+    "address": "広島県福山市駅家町服部本郷241",
+    "nearestStation": "駅家駅",
+    "walkMinutes": null,
+    "priceMin": 2500,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "9:00〜18:00",
+    "holidays": "火曜定休",
+    "website": "https://www.tramonto-barrelsauna.com/",
+    "phone": "070-1870-8277",
+    "bookingUrl": "https://www.tramonto-barrelsauna.com/",
+    "amenities": [],
+    "note": "HATTORI FIELD内に併設されたフィンランド式バレルサウナ。天然地下水水風呂、セルフロウリュ可。貸切プランは1〜6名対応。キャンプ場併設。支払いはクレジットカード・デビットカードのみ",
+    "images": [],
+    "lat": 34.5925,
+    "lng": 133.3119,
+    "description": "福山市の山の中にあるフィンランド式バレルサウナ。HATTORI FIELDのキャンプ場内に併設され、天然地下水の水風呂とセルフロウリュが楽しめる。森に囲まれた環境で外気浴も可能。混浴タイムと貸切プランの2種類から選べる。",
+    "saunakoCommentShort": "山の中のバレルサウナで天然地下水の水風呂！",
+    "saunakoCommentLong": "福山の山奥にあるバレルサウナで、フィンランドの本場感がすごいよ！セルフロウリュでしっかり蒸されたあとの天然地下水水風呂がキンキンで気持ちいい。森の中だから外気浴も自然たっぷりで、鳥の声を聞きながら整えるのが最高。貸切にすれば仲間だけのプライベート空間になるから、グループで行くのもおすすめだね！",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "混浴サウナ 120分 1名",
+        "price": 2500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切サウナ 120分（平日・最大6名）",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "貸切サウナ 90分（土日祝・最大6名）",
+        "price": 8800,
+        "duration": 90,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 432,
+    "slug": "honokanoyu-kitahiroshima",
+    "name": "ほのかの湯 北広島店（プレミアム個室）",
+    "prefecture": "hiroshima",
+    "prefectureLabel": "広島県",
+    "city": "山県郡北広島町",
+    "area": "その他",
+    "address": "広島県山県郡北広島町南方7036",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 6600,
+    "duration": 55,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日10:00〜22:00、土日祝9:00〜22:00",
+    "holidays": "不定休（年末年始休業あり）",
+    "website": "https://honokanoyu-hiroshima.jp/",
+    "phone": "0826-75-3619",
+    "bookingUrl": "https://airrsv.net/honokanoyu-hrsm-poka2-485/calendar",
+    "amenities": [],
+    "note": "完全貸切天然温泉施設。プレミアム個室のみサウナ・水風呂付き（スタンダード・セミプレミアムにはサウナなし）。内湯・露天風呂・マッサージチェアも完備。土日祝・繁忙期は+1,100円。入湯税50円/人別途。中国自動車道千代田ICから車約5分。天然鉄泉（にごり湯）",
+    "images": [],
+    "lat": 34.6638,
+    "lng": 132.5469,
+    "description": "広島県北広島町の完全個室貸切天然温泉施設。プレミアム個室にはサウナ・水風呂・内湯・露天風呂・マッサージチェアを完備し、最大8名で利用可能。天然鉄泉のにごり湯が自慢。中国自動車道千代田ICから車約5分のアクセス。",
+    "saunakoCommentShort": "天然温泉×サウナ×露天風呂が個室で全部揃う！",
+    "saunakoCommentLong": "北広島町にある貸切温泉で、プレミアム個室ならサウナも水風呂も露天風呂も全部プライベートで楽しめるよ！天然鉄泉のにごり湯がめちゃくちゃ良くて、温泉好きにもサウナ好きにも刺さる施設だと思う。最大8名で使えるから家族やグループにもぴったり。マッサージチェアまであるから、帰りたくなくなるかも！",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "プレミアム個室 55分",
+        "price": 6600,
+        "duration": 55,
+        "capacity": 8
+      },
+      {
+        "name": "プレミアム個室 85分",
+        "price": 9900,
+        "duration": 85,
+        "capacity": 8
+      },
+      {
+        "name": "プレミアム個室 115分",
+        "price": 12500,
+        "duration": 115,
         "capacity": 8
       }
     ],
