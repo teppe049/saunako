@@ -22065,9 +22065,9 @@
     "bookingUrl": "https://leo.gflow.cloud/aounomori/calendar_open",
     "amenities": [
       "タオル",
-      "シャンプー",
-      "コンディショナー",
-      "ボディソープ",
+      "Aesopシャンプー",
+      "Aesopコンディショナー",
+      "Aesopボディソープ",
       "サウナハット（有料）",
       "ポンチョ（有料）",
       "水着（有料）"
@@ -22105,6 +22105,12 @@
         "price": 55000,
         "duration": 960,
         "capacity": 6
+      },
+      {
+        "name": "MORI 日帰り 1日利用 6時間 2-4名",
+        "price": 66000,
+        "duration": 360,
+        "capacity": 4
       }
     ],
     "timeSlots": null
