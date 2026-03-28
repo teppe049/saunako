@@ -5,9 +5,17 @@ import { useRouter } from 'next/navigation';
 export default function BackButton() {
   const router = useRouter();
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/search');
+    }
+  };
+
   return (
     <button
-      onClick={() => router.back()}
+      onClick={handleBack}
       className="flex items-center gap-1 text-text-secondary hover:text-text-primary rounded-lg p-2.5 md:px-3"
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

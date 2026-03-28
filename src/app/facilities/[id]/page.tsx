@@ -288,7 +288,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           {/* 左: 戻るボタン + ロゴ */}
           <div className="flex items-center gap-2 md:gap-4">
             <BackButton />
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/saunako-avatar.webp"
                 alt="サウナ子"
@@ -297,7 +297,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                 className="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover"
               />
               <span className="text-lg md:text-xl font-bold text-text-primary">サウナ子</span>
-            </div>
+            </Link>
           </div>
 
           {/* 右: 共有ボタン + お気に入り */}
