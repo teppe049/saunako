@@ -31065,7 +31065,11 @@
       "コンディショナー"
     ],
     "note": "水着着用・混浴スタイル。タトゥーOK。ドリンク持ち込みOK。ゲストハウスPise併設。",
-    "images": [],
+    "images": [
+      "/facilities/433-0.webp",
+      "/facilities/433-1.webp",
+      "/facilities/433-2.webp"
+    ],
     "lat": 36.654053,
     "lng": 138.187596,
     "description": "長野駅徒歩13分、ゲストハウスPise併設の土造りかまくら型サウナ。井戸水を汲み上げた14℃の水風呂とセルフロウリュを備え、最大6名で3時間の貸切利用が可能。バルコニーでの焚き火や外気浴も楽しめる。",
@@ -31126,7 +31130,11 @@
       "電子レンジ"
     ],
     "note": "コンテナホテル併設。1日1組限定。宿泊プランあり。駐車場3台。",
-    "images": [],
+    "images": [
+      "/facilities/434-0.webp",
+      "/facilities/434-1.webp",
+      "/facilities/434-2.webp"
+    ],
     "lat": 36.649306,
     "lng": 138.190876,
     "description": "長野市街地のコンテナホテル併設プライベートサウナ。1日1組限定で70℃調整可能なサウナと16℃の水風呂を完備。ととのいチェアでの街中外気浴が特徴。平日日帰りプランは1名5,000円から。",
@@ -31185,7 +31193,11 @@
       "アロマオイル（10種類）"
     ],
     "note": "戸隠高原ホテル併設。標高1,300m。1号（松）定員4名、2号（杉）定員8名。完全予約制。宿泊＋サウナのセットプランあり。",
-    "images": [],
+    "images": [
+      "/facilities/435-0.webp",
+      "/facilities/435-1.webp",
+      "/facilities/435-2.webp"
+    ],
     "lat": 36.753255,
     "lng": 138.092894,
     "description": "標高1,300mの戸隠高原ホテル併設の完全貸切ログサウナ。フィンランド産木材を使用した本格サウナで、地下天然水かけ流しの水風呂は10〜13℃。大自然に囲まれた外気浴と10種のアロマロウリュが楽しめる。",
@@ -32071,58 +32083,6 @@
         "capacity": 5
       }
     ],
-    "timeSlots": null,
-    "seoTitle": null,
-    "seoDescription": null
-  },
-  {
-    "id": 448,
-    "slug": "kominka-sauna-koroku",
-    "name": "古民家サウナ コロク",
-    "prefecture": "nagano",
-    "prefectureLabel": "長野県",
-    "city": "諏訪郡富士見町",
-    "area": "蓼科",
-    "address": "長野県諏訪郡富士見町境11184",
-    "nearestStation": "信濃境駅",
-    "walkMinutes": 38,
-    "priceMin": null,
-    "duration": 120,
-    "capacity": 3,
-    "features": {
-      "waterBath": true,
-      "waterBathTemp": null,
-      "selfLoyly": true,
-      "outdoorAir": true,
-      "coupleOk": true,
-      "bluetooth": null,
-      "wifi": null
-    },
-    "businessHours": "6:00〜9:00 / 16:00〜21:00",
-    "holidays": "要確認（予約システムにて）",
-    "website": "https://nennen-koroku.com/",
-    "phone": "050-1809-4114",
-    "bookingUrl": "https://nennen-koroku.booking.chillnn.com",
-    "amenities": [
-      "バスタオル",
-      "コーヒー",
-      "お茶"
-    ],
-    "note": "宿泊者向けサウナ（日帰り利用の可否は要確認）。ヒノキ箱型サウナ（65〜75℃の低温サウナ）、HUUM HIVE HEAT 12ストーブ使用。五右衛門風呂スタイルの水風呂。ガゼボから甲斐駒ヶ岳を望む外気浴。定員3名（2名推奨）。ペレットストーブ暖房。セルフチェックイン。",
-    "images": [
-      "/facilities/448-0.webp",
-      "/facilities/448-1.webp",
-      "/facilities/448-2.webp"
-    ],
-    "lat": 35.9087,
-    "lng": 138.2458,
-    "description": "富士見町の古民家を改装した宿泊＆サウナ施設。ヒノキ箱型サウナは65〜75℃の低温設定でHUUM HIVE HEAT 12ストーブを使用、セルフロウリュで湿度を調整できる。水風呂は五右衛門風呂スタイル。ガゼボでの外気浴からは甲斐駒ヶ岳を望める。定員3名（2名推奨）で、朝と夕方の2つの時間帯から選択する2時間制。",
-    "saunakoCommentShort": "古民家×五右衛門風呂の水風呂！甲斐駒の絶景付き",
-    "saunakoCommentLong": "古民家に泊まってサウナって、もうそれだけでワクワクしない？ヒノキの箱型サウナは65〜75℃の低温タイプで、じっくりゆっくり温まるスタイル。水風呂がまさかの五右衛門風呂なの面白い！外気浴はガゼボから甲斐駒ヶ岳が見えて、朝サウナと夕方サウナどっちも選べるのが贅沢だよね。2名でのんびり過ごすのがおすすめかも。",
-    "updatedAt": "2026-03-29",
-    "openedAt": null,
-    "closedAt": null,
-    "plans": [],
     "timeSlots": null,
     "seoTitle": null,
     "seoDescription": null
