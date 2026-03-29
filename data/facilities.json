@@ -34001,7 +34001,7 @@
     "address": "山口県下関市垢田町2-6-8",
     "nearestStation": "JR幡生駅",
     "walkMinutes": null,
-    "priceMin": 5000,
+    "priceMin": 6600,
     "duration": 120,
     "capacity": 4,
     "features": {
@@ -34019,7 +34019,7 @@
     "phone": "080-2670-4179",
     "bookingUrl": null,
     "amenities": [],
-    "note": "完全予約制。サウナが温まるまで約1.5時間かかるため早めの予約推奨。各部屋に専用バレルサウナ・露天風呂・水風呂完備。アウフグース・ウィスキング対応。料金は要問い合わせ",
+    "note": "完全予約制。サウナが温まるまで約1.5時間かかるため早めの予約推奨。各部屋に専用バレルサウナ・露天風呂・水風呂完備。アウフグース・ウィスキング対応。4名以上は1名追加ごとに+1,500円。延長30分1,500円",
     "images": [
       "/facilities/478-0.webp",
       "/facilities/478-1.webp",
@@ -34033,10 +34033,10 @@
     "updatedAt": "2026-03-29",
     "plans": [
       {
-        "name": "日帰りプライベートサウナ（1室・要問い合わせ）",
-        "price": 5000,
+        "name": "日帰りプライベートサウナ（1室2〜3名）",
+        "price": 6600,
         "duration": 120,
-        "capacity": 4
+        "capacity": 3
       }
     ],
     "timeSlots": null
