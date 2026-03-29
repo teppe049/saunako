@@ -31195,7 +31195,11 @@
       "乳液"
     ],
     "note": "YUDANAKA BREWERY COMPLEX U 2F。全室露天風呂付き。サウナ付き客室は3室（E〜G）。Netflix・YouTube視聴可。クラフトビールスパプランあり。",
-    "images": [],
+    "images": [
+      "/facilities/436-0.webp",
+      "/facilities/436-1.webp",
+      "/facilities/436-2.webp"
+    ],
     "lat": 36.737453,
     "lng": 138.41556,
     "description": "湯田中温泉のクラフトビール複合施設2Fにある完全個室サウナ。全室に天然温泉露天風呂を備え、Metosサウナでセルフロウリュが楽しめる。3時間4,400円〜。クラフトビールスパなどユニークなプランも。",
@@ -31261,7 +31265,11 @@
       "ドライヤー"
     ],
     "note": "LAMP野尻湖併設。全5棟のフィンランド式サウナ。貸切はコルメ・ネリャ・ヴィーシの3棟（3時間制・最大6名）。公共サウナ（ユクシ・カクシ）は平日3,500円/休日4,500円。黒姫駅からタクシー約10分。",
-    "images": [],
+    "images": [
+      "/facilities/437-0.webp",
+      "/facilities/437-1.webp",
+      "/facilities/437-2.webp"
+    ],
     "lat": 36.825437,
     "lng": 138.204653,
     "description": "野尻湖畔のLAMP併設、全5棟のフィンランド式アウトドアサウナ。貸切サウナは3時間制で地下湧水の水風呂（10〜12℃）付き。薪ストーブによる本格ロウリュと野尻湖を望む外気浴が楽しめる、サウナーの聖地。",
@@ -31330,7 +31338,11 @@
     "bookingUrl": "https://coubic.com/sherokumasauna/booking_pages",
     "amenities": [],
     "note": "SAUUU（エストニア式・定員6名・2名まで16,500円）とDEW（フィンランド式・定員8名・6名まで33,000円）の2棟。水風呂は川の超軟水で季節により1〜18℃。宿泊プランあり。黒姫駅から約6km。",
-    "images": [],
+    "images": [
+      "/facilities/438-0.webp",
+      "/facilities/438-1.webp",
+      "/facilities/438-2.webp"
+    ],
     "lat": 36.841739,
     "lng": 138.165219,
     "description": "信濃町の自然に囲まれた貸切アウトドアサウナ。エストニア式のSAUUU（定員6名）とフィンランド式のDEW（定員8名）の2棟を完備。川の超軟水を使った水風呂は季節により1〜18℃。セルフロウリュと大自然の外気浴が楽しめる。",
@@ -31396,7 +31408,11 @@
       "ボディローション"
     ],
     "note": "still内。talvi（電気・4名）、käpy（薪・6名）、valko（薪・6名）の3棟。浅間山麓の天然地下水水風呂。水着着用で男女利用可。15歳以下不可。信濃追分駅からタクシー約5分。",
-    "images": [],
+    "images": [
+      "/facilities/439-0.webp",
+      "/facilities/439-1.webp",
+      "/facilities/439-2.webp"
+    ],
     "lat": 36.33398,
     "lng": 138.525993,
     "description": "軽井沢の森に佇む3棟のプライベートアウトドアサウナ。浅間山麓の天然地下水を軟水処理したトロトロの水風呂と、小川のせせらぎが聞こえるウッドデッキでの外気浴が特徴。1名2時間3,850円〜。Wi-Fi完備。",
@@ -31462,7 +31478,11 @@
       "バスタオル"
     ],
     "note": "白馬ハイランドホテル屋上のRooftop。北アルプスを一望する絶景貸切サウナ。信楽焼の水風呂。10種のアロマオイルあり。現在設備メンテナンスのため臨時休業中（要確認）。別施設「ao」（大町市・青木湖畔）もあり。",
-    "images": [],
+    "images": [
+      "/facilities/440-0.webp",
+      "/facilities/440-1.webp",
+      "/facilities/440-2.webp"
+    ],
     "lat": 36.690752,
     "lng": 137.866749,
     "description": "白馬ハイランドホテル屋上の展望貸切サウナ。北アルプスの大パノラマを眺めながらセルフロウリュと外気浴が楽しめる。信楽焼の水風呂に白馬の天然水を使用。2時間貸切20,000円〜、最大5名。",
@@ -31517,7 +31537,11 @@
       "水着"
     ],
     "note": "男女混浴スタイル。薪サウナ（MOKI製薪ストーブ）と電気サウナあり。敷地内の井戸水を使用。駐車場15台。貸切プランは要問合せ。",
-    "images": [],
+    "images": [
+      "/facilities/441-0.webp",
+      "/facilities/441-1.webp",
+      "/facilities/441-2.webp"
+    ],
     "lat": 36.688988,
     "lng": 137.843262,
     "description": "白馬村みそら野にあるフィンランド式アウトドアサウナ。「スタイリッシュ廃屋風」をコンセプトにスタッフが手作りした独自の空間で、MOKI製薪ストーブによる本格薪サウナを体験できる。水風呂は敷地内の井戸から汲み上げた天然水を使用し、約11℃と冷たい。外気浴エリアは再生木材のデッキで白馬の山々を望める。",
@@ -31568,7 +31592,11 @@
     "bookingUrl": "https://coubic.com/shiroumasauna",
     "amenities": [],
     "note": "パブリックサウナ（1人3,300円）と貸切サウナ3棟あり。白馬村民割引500円、長野県民割引300円、リピーター割引300円。薪ストーブで4時間炊き上げる本格フィンランドログサウナ。",
-    "images": [],
+    "images": [
+      "/facilities/442-0.webp",
+      "/facilities/442-1.webp",
+      "/facilities/442-2.webp"
+    ],
     "lat": 36.6983,
     "lng": 137.8617,
     "description": "白馬村にある屋外フィンランドサウナ施設。本格フィンランドログサウナのパブリックサウナ1棟と、バレルサウナ・小屋型の貸切サウナ3棟を備える。薪ストーブで4時間かけて炊き上げるサウナは95〜110℃。水風呂は井戸水を使用し約18℃。白馬の山並みや八方尾根を望む外気浴が楽しめる。",
@@ -31644,7 +31672,11 @@
       "館内着"
     ],
     "note": "2024年8月オープン。サウナ温度・水風呂温度をお好みで設定可能。HARVIAストーブ使用。軽食メニューあり。1名利用は6,000円、2名以上は1人3,000円。",
-    "images": [],
+    "images": [
+      "/facilities/443-0.webp",
+      "/facilities/443-1.webp",
+      "/facilities/443-2.webp"
+    ],
     "lat": 36.3945,
     "lng": 138.238,
     "description": "2024年8月に上田市にオープンした完全貸切プライベートサウナ。サウナ温度・水風呂温度をすべて好みに設定できるのが最大の特徴。HARVIAストーブによるセルフロウリュが可能で、サウナ室は一面ヒノキ空間。水風呂は13〜15℃、夏場はチラーで7℃台のシングルにも対応。ウッドデッキでの外気浴も楽しめる。",
@@ -31725,7 +31757,11 @@
     "bookingUrl": "https://select-type.com/rsv/?id=8HCJTsxu6QM",
     "amenities": [],
     "note": "2024年7月オープン。カフェ Smooth & Living の庭に併設。サウナ利用には前後1時間のカフェ利用付き（コーヒーフリードリンク）。水着550円・バスタオル220円・タオル110円・Bluetoothスピーカー550円はレンタル。サブスク会員-1000円、宿泊者・上田市民-500円割引あり。",
-    "images": [],
+    "images": [
+      "/facilities/444-0.webp",
+      "/facilities/444-1.webp",
+      "/facilities/444-2.webp"
+    ],
     "lat": 36.3486,
     "lng": 138.1457,
     "description": "別所温泉にある上田地域初のアウトドア型バレルサウナ。カフェ Smooth & Living の庭に併設され、竹林に囲まれた空間でセルフロウリュ対応の92℃バレルサウナを楽しめる。1回1組の完全貸切で1〜4名まで同一料金。サウナ前後にはカフェでコーヒーフリードリンク付き。近隣に外湯「石湯」もあり温泉とのハシゴも可能。",
@@ -31779,7 +31815,11 @@
       "タオル"
     ],
     "note": "2024年6月オープン。旧旅館の大浴場をリノベーション。基本は女性専用で、4と8のつく日が「メンズday」。ヒノキのサウナ室は地元メーカー製ストーブ。地元蒸留所のオーガニックアロマ水でロウリュ可能。サウナ後にかき氷（自家製シロップ）が楽しめる。貸切プラン（6名まで）もあり。",
-    "images": [],
+    "images": [
+      "/facilities/445-0.webp",
+      "/facilities/445-1.webp",
+      "/facilities/445-2.webp"
+    ],
     "lat": 36.3478,
     "lng": 138.147,
     "description": "別所温泉の旧旅館大浴場をリノベーションしたプライベートサウナ。ヒノキのサウナ室は地元長野のストーブメーカー製で、地元蒸留所のオーガニックアロマ水によるセルフロウリュが可能。水風呂には氷を入れて冷やすオプションもあり。外気浴スペースでは四季折々の景色を楽しめる。サウナ後の自家製シロップかき氷が名物。",
@@ -33679,5 +33719,211 @@
     "closedAt": null,
     "seoTitle": null,
     "seoDescription": null
+  },
+  {
+    "id": 476,
+    "slug": "shiokatsu-barrel-sauna",
+    "name": "しお活バレルサウナ",
+    "prefecture": "yamaguchi",
+    "prefectureLabel": "山口県",
+    "city": "光市",
+    "area": "その他",
+    "address": "山口県光市室積8-2-10",
+    "nearestStation": "JR光駅",
+    "walkMinutes": null,
+    "priceMin": 2500,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "夏季10:00〜21:00（受付終了19:00）/ 冬季10:00〜19:00（受付終了17:00）",
+    "holidays": "木曜（要予約で利用可）",
+    "website": "https://www.shiokatsu.com",
+    "phone": "",
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "予約はInstagram DMから。海底湧水を使った天然冷水の水風呂あり",
+    "images": [],
+    "lat": 33.922504,
+    "lng": 131.969219,
+    "description": "山口県光市室積の御手洗湾を一望できるバレルサウナ。110度のサウナと海底から汲み上げた天然湧海水の水風呂で、海を眺めながら整える。景色が見えるタイプ・集中型・おにぎり型の3種のバレルサウナを備え、1〜4名で貸切利用が可能。",
+    "saunakoCommentShort": "御手洗湾を一望しながら整うバレルサウナ!",
+    "saunakoCommentLong": "海底から湧く天然の冷水で水風呂に入れるって、それだけでもう特別だよね。110度のバレルサウナで温まったあと、目の前に広がる御手洗湾を眺めながらの外気浴は最高かも。90分2,500円でこのロケーションはかなりお得だと思う!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "バレルサウナ90分（1〜4名）",
+        "price": 2500,
+        "duration": 90,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 477,
+    "slug": "koukasha",
+    "name": "紅花舎 koukasha",
+    "prefecture": "yamaguchi",
+    "prefectureLabel": "山口県",
+    "city": "山口市",
+    "area": "山口市",
+    "address": "山口県山口市宮野上801",
+    "nearestStation": "宮野温泉バス停",
+    "walkMinutes": 5,
+    "priceMin": 3500,
+    "duration": 120,
+    "capacity": 6,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "13:00〜20:00（土日祝13:00〜 / 月火金15:30〜）",
+    "holidays": "水曜・木曜",
+    "website": "https://www.koukasha.com",
+    "phone": "083-928-0057",
+    "bookingUrl": "https://tol-app.jp/s/koukasha",
+    "amenities": [],
+    "note": "水着着用制。レンタル水着500円・バスタオル300円・フェイスタオル200円あり。3名以上のグループは貸切のみ。小学生以下利用不可",
+    "images": [],
+    "lat": 34.222828,
+    "lng": 131.512177,
+    "description": "1974年創業のユースホステルを2023年にリニューアルした薪サウナ付き宿泊施設。川沿いの自然豊かなロケーションで、パブリックサウナと貸切サウナの2形態を提供。日帰り利用可能で、カフェ・ショップも併設。",
+    "saunakoCommentShort": "川沿いの元ユースホステルで薪サウナ体験!",
+    "saunakoCommentLong": "薪で焚くサウナってやっぱり熱の質が違うんだよね。川沿いの自然に囲まれた外気浴がすごく気持ちいいかも。パブリックは3,500円、貸切だと1人4,500円で最大6名まで使えるよ。カフェも併設してるから、整ったあとにゆっくりできるのも嬉しいね!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "パブリックサウナ（1名）",
+        "price": 3500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切サウナ（1名あたり・最大6名）",
+        "price": 4500,
+        "duration": 120,
+        "capacity": 6
+      },
+      {
+        "name": "貸切サウナ 1名1室利用",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 478,
+    "slug": "akadanomori-keigetsu",
+    "name": "プライベートサウナ 垢田の杜 桂月",
+    "prefecture": "yamaguchi",
+    "prefectureLabel": "山口県",
+    "city": "下関市",
+    "area": "下関",
+    "address": "山口県下関市垢田町2-6-8",
+    "nearestStation": "JR幡生駅",
+    "walkMinutes": null,
+    "priceMin": 5000,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "13:00〜20:00（日帰り13:30〜20:00最終退室）",
+    "holidays": "水曜＋不定休",
+    "website": "https://akada-keigetsu.com",
+    "phone": "080-2670-4179",
+    "bookingUrl": null,
+    "amenities": [],
+    "note": "完全予約制。サウナが温まるまで約1.5時間かかるため早めの予約推奨。各部屋に専用バレルサウナ・露天風呂・水風呂完備。アウフグース・ウィスキング対応。料金は要問い合わせ",
+    "images": [],
+    "lat": 33.991464,
+    "lng": 130.925339,
+    "description": "下関市の会席料理店「桂月」が手がけるプライベートサウナ。全2部屋にそれぞれ専用のバレルサウナ・露天風呂・18度の水風呂を完備。90度のサウナとセルフロウリュ、アウフグースやウィスキングも楽しめる。完全予約制で日帰り利用可能。",
+    "saunakoCommentShort": "会席料理店が手がける本格バレルサウナ!",
+    "saunakoCommentLong": "料理店が運営してるから、サウナ後にお料理も楽しめるのがポイントだよね。各部屋に専用のバレルサウナと露天風呂、18度の水風呂まで全部揃ってるのは贅沢だね。アウフグースやウィスキングもできるから、サウナ好きにはたまらないかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "日帰りプライベートサウナ（1室・要問い合わせ）",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 479,
+    "slug": "ube-sauna-center",
+    "name": "宇部サウナセンター（ボクらの泳ぎかた）",
+    "prefecture": "yamaguchi",
+    "prefectureLabel": "山口県",
+    "city": "宇部市",
+    "area": "その他",
+    "address": "山口県宇部市小野7887",
+    "nearestStation": "花香バス停",
+    "walkMinutes": 5,
+    "priceMin": 3000,
+    "duration": 120,
+    "capacity": 8,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "17",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜18:00（3部制：11:00-13:00 / 13:30-15:30 / 16:00-18:00）",
+    "holidays": "不定休（公式HPカレンダー参照・土日月中心の営業）",
+    "website": "https://bokuoyo.com",
+    "phone": "090-5262-7174",
+    "bookingUrl": "https://select-type.com/rsv/?id=OdgFChrk_SU&c_id=421819",
+    "amenities": [],
+    "note": "水着着用の男女混浴スタイル。地下120mの自噴冷鉱泉（pH9.6アルカリ性・硫黄成分含有）を水風呂に使用。薪ストーブ式サウナでお茶・漢方・薬草のロウリュ。石鹸・シャンプー使用不可。レンタル水着・タオル少量あり",
+    "images": [],
+    "lat": 34.102909,
+    "lng": 131.310165,
+    "description": "宇部市の小野湖畔にあるアウトドア貸切サウナ。薪ストーブ式のドーム型サウナでお茶や漢方のセルフロウリュが楽しめる。地下120mから自噴する17度のアルカリ冷鉱泉を水風呂に使用。通常利用3,000円/2h、貸切15,000円/2h（最大8名）。",
+    "saunakoCommentShort": "湖畔で薪サウナ×天然冷鉱泉の外気浴!",
+    "saunakoCommentLong": "地下120mから湧き出るアルカリ冷鉱泉の水風呂がすごいんだよ。pH9.6で硫黄成分も入ってるから、お肌つるつるになるかも。薪ストーブで温まって、お茶や漢方のロウリュで蒸されて、17度の天然水に飛び込む…贅沢すぎるよね。お好み焼きも食べられるのが面白い!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "通常利用（2時間）",
+        "price": 3000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "貸切（2時間・最大8名）",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 8
+      }
+    ],
+    "timeSlots": null
   }
 ]
