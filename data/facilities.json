@@ -16345,7 +16345,7 @@
     "capacity": 4,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "8",
       "selfLoyly": true,
       "outdoorAir": false,
       "coupleOk": true,
