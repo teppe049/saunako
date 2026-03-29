@@ -34354,5 +34354,424 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 485,
+    "slug": "amenochihare",
+    "name": "プライベートサウナ アメノチハレ",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "久留米市",
+    "area": "その他",
+    "address": "福岡県久留米市御井旗崎3丁目1-5",
+    "nearestStation": "西鉄久留米駅",
+    "walkMinutes": 3,
+    "priceMin": 2800,
+    "duration": 100,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "約16℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": null
+    },
+    "businessHours": "6:30〜24:10",
+    "holidays": "基本無休",
+    "website": "https://fg.gflow.cloud/amenochihare/",
+    "phone": "0942-35-3050",
+    "bookingUrl": "https://fg.gflow.cloud/amenochihare/calendar_open",
+    "amenities": [
+      "タオル",
+      "シャンプー",
+      "リンス",
+      "ボディーソープ",
+      "スキンケア用品",
+      "スティックドライヤー",
+      "Refa ヘアアイロン",
+      "インフィニティチェア",
+      "ウォーターサーバー",
+      "Bluetoothスピーカー"
+    ],
+    "note": "無人受付（パスコード入館）。ほうじ茶・アロマ水の2種セルフロウリュ。月額13,800円サブスクあり（60名限定）。",
+    "images": [],
+    "lat": 33.318797,
+    "lng": 130.559595,
+    "description": "西鉄久留米駅近くの完全個室プライベートサウナ。茶室をイメージした「アメの部屋」（1〜4名・100分）と広々とした「ハレの部屋」（1〜6名・120分）の2室。HARVIAストーブ・チラー冷却の水風呂（約16℃）・外気浴スペース完備。ほうじ茶とアロマ水の2種セルフロウリュが楽しめる。",
+    "saunakoCommentShort": "ほうじ茶ロウリュと畳敷き茶室サウナが新しい!",
+    "saunakoCommentLong": "西鉄久留米駅からすぐなのに、完全プライベートで誰にも会わずに整えるのが最高だよ! 水風呂はチラーで約16℃にキンキンだし、ほうじ茶アロマのロウリュは他ではなかなか体験できないかも。畳敷きの茶室イメージのサウナ室もこだわりが感じられるよね!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "アメの部屋（1名）",
+        "price": 2800,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "アメの部屋（2名）",
+        "price": 5800,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "アメの部屋（3名）",
+        "price": 8800,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "アメの部屋（4名）",
+        "price": 11800,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "ハレの部屋（1名）",
+        "price": 9800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ハレの部屋（2名）",
+        "price": 12800,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 486,
+    "slug": "ond-hotel-private-sauna",
+    "name": "OND HOTEL プライベートサウナ",
+    "prefecture": "saga",
+    "prefectureLabel": "佐賀県",
+    "city": "武雄市",
+    "area": "その他",
+    "address": "佐賀県武雄市武雄町大字永島18091",
+    "nearestStation": "武雄温泉駅",
+    "walkMinutes": null,
+    "priceMin": 11000,
+    "duration": 120,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "14:00〜23:30（最終受付21:30）",
+    "holidays": "毎週水曜日",
+    "website": "https://www.ondhotel.jp/private_sauna/",
+    "phone": "0954-27-8588",
+    "bookingUrl": "https://reserva.be/ondhotelsaunum",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "ポンチョ",
+      "シャンプー",
+      "コンディショナー",
+      "ボディソープ",
+      "洗顔ソープ",
+      "ハミガキセット",
+      "カミソリ",
+      "ブラシ",
+      "インフィニティチェア"
+    ],
+    "note": "武雄温泉保養村内。和（JAPANESE）・北欧（NORDIC）の2室。地下水チラー冷却水風呂。武雄温泉駅から無料シャトルバスあり。小学生以下利用不可。",
+    "images": [],
+    "lat": 33.173519,
+    "lng": 130.021743,
+    "description": "武雄温泉保養村内のホテル併設プライベートサウナ。「和」と「北欧」の2室を展開。和室はサウナ・水風呂・外気浴が独立した空間設計で深さ90cmの地下水水風呂。北欧室はSaunum社製全空間空気調整システム採用。日帰り利用可。",
+    "saunakoCommentShort": "和と北欧、2つの世界観から選べる贅沢!",
+    "saunakoCommentLong": "武雄温泉の自然に囲まれた完全個室サウナだよ! 「和」はサウナ・水風呂・外気浴が全部独立してて導線が最高。「北欧」はSaunum製の空気循環システムで足元までじんわり温まるのが新体験かも。地下水のチラー水風呂もキンキンで気持ちいいよ!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "平日（1室120分）",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝（1室120分）",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 487,
+    "slug": "kominka-307",
+    "name": "古民家三〇七",
+    "prefecture": "nagasaki",
+    "prefectureLabel": "長崎県",
+    "city": "諫早市",
+    "area": "その他",
+    "address": "長崎県諫早市赤崎町655-1",
+    "nearestStation": "森山駅（島原鉄道）",
+    "walkMinutes": 10,
+    "priceMin": 10000,
+    "duration": 180,
+    "capacity": 2,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "日帰りサウナ: 月〜木 12:00〜15:00（3時間）",
+    "holidays": "日帰りサウナは金・土・日・祝は不可（宿泊のみ）",
+    "website": "https://kominka307.com/sauna/",
+    "phone": "090-1363-2286",
+    "bookingUrl": "https://www.jalan.net/yad346728/dayuse/",
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "リンス",
+      "ボディーソープ",
+      "ドライヤー",
+      "歯ブラシ",
+      "髭剃り",
+      "くし",
+      "綿棒",
+      "ヴィヒタ"
+    ],
+    "note": "築60年の農舎を改装した一棟貸切施設。日帰りサウナは月〜木限定（12:00〜15:00）。フィンランド製ストーブ95℃。雲仙自然石ロウリュ。ジャグジー付き水風呂・露天風呂あり。",
+    "images": [],
+    "lat": 32.853,
+    "lng": 130.175,
+    "description": "築60年の農舎を改装した一棟貸切の古民家プライベートサウナ。フィンランド製ストーブ（95℃）・雲仙自然石ロウリュ・ジャグジー付き水風呂・露天風呂・外気浴スペースを完備。日帰りサウナは月〜木曜限定で最大3時間利用可能。",
+    "saunakoCommentShort": "築60年の古民家で雲仙自然石ロウリュ!",
+    "saunakoCommentLong": "農舎をリノベした一棟貸切サウナ、雰囲気が最高だよ! フィンランド製ストーブに雲仙の自然石でロウリュできて、ヴィヒタも使えるのが本格的。ジャグジー付き水風呂に露天風呂まであるから、サウナ以外も楽しめちゃうかも。日帰りは月〜木限定だから予約はお早めにね!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "日帰りサウナ（1〜2名）",
+        "price": 10000,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "日帰りサウナ（3名）",
+        "price": 12000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "日帰りサウナ（4名）",
+        "price": 14000,
+        "duration": 180,
+        "capacity": 4
+      },
+      {
+        "name": "日帰りサウナ（5名）",
+        "price": 17500,
+        "duration": 180,
+        "capacity": 5
+      },
+      {
+        "name": "日帰りサウナ（6名以上）",
+        "price": 21000,
+        "duration": 180,
+        "capacity": 6
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 488,
+    "slug": "oita-sauna",
+    "name": "OITA SAUNA",
+    "prefecture": "oita",
+    "prefectureLabel": "大分県",
+    "city": "大分市",
+    "area": "大分市",
+    "address": "大分県大分市南春日町11-7",
+    "nearestStation": "大分駅",
+    "walkMinutes": 16,
+    "priceMin": 18700,
+    "duration": 120,
+    "capacity": 9,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": false,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "11:00〜翌1:00",
+    "holidays": "不定休",
+    "website": "https://oitasauna.com/",
+    "phone": "0975-45-2331",
+    "bookingUrl": "https://oitasauna.hacomono.jp/",
+    "amenities": [
+      "サウナマット",
+      "タオル（バスタオル含む）",
+      "シャンプー",
+      "リンス",
+      "ボディソープ",
+      "ウォーターサーバー"
+    ],
+    "note": "サウナ×ジム×家族風呂の複合施設。貸切プランのみ掲載（通常利用は共用）。完全予約制・QRコードセルフチェックイン。ほうじ茶ロウリュ。月曜13:00〜は女性限定営業。源泉かけ流し温泉あり。",
+    "images": [],
+    "lat": 33.2359,
+    "lng": 131.5862,
+    "description": "サウナ・ジム・家族風呂を備えた複合施設。サウナ室は85〜90℃、チラー冷却の水風呂13℃、屋根付き空調付き半露天の外気浴スペース完備。貸切プラン（¥18,700/最大9名）で施設を1グループで独占利用可能。",
+    "saunakoCommentShort": "貸切で最大9名！ほうじ茶ロウリュが香る",
+    "saunakoCommentLong": "最大9名で貸切れるから、仲間とのサウナ会にぴったりだよ! 水風呂は13℃でしっかり冷えてるし、ほうじ茶のセルフロウリュはいい香りに包まれて幸せかも。屋根付きで空調も効いた半露天の外気浴スペースも快適。源泉かけ流しの温泉もあるよ!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "サウナ貸切プラン（最大9名）",
+        "price": 18700,
+        "duration": 120,
+        "capacity": 9
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 489,
+    "slug": "nanasegawa-sauna",
+    "name": "七瀬川せせらぎガーデン サウナ",
+    "prefecture": "oita",
+    "prefectureLabel": "大分県",
+    "city": "大分市",
+    "area": "大分市",
+    "address": "大分県大分市野津原2856",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 2000,
+    "duration": 90,
+    "capacity": null,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜21:00",
+    "holidays": "毎週木曜日（祝日の場合は営業）",
+    "website": "https://nanasegawa-garden.com/sauna/",
+    "phone": "097-529-7776",
+    "bookingUrl": null,
+    "amenities": [
+      "シャワー",
+      "脱衣所"
+    ],
+    "note": "スパ＆レストラン七瀬川せせらぎガーデン内。貸切個室90分¥2,000。天然水セルフロウリュ。七瀬川沿いの自然環境。車でのアクセス推奨（大分市街から約30分）。電話予約のみ。",
+    "images": [],
+    "lat": 33.160566,
+    "lng": 131.52258,
+    "description": "七瀬川沿いの自然に囲まれた貸切個室サウナ。天然水を使ったセルフロウリュが特徴。90分¥2,000のリーズナブルな価格で完全貸切利用可能。レストラン併設。",
+    "saunakoCommentShort": "90分2,000円！七瀬川の自然に癒される",
+    "saunakoCommentLong": "2,000円で貸切サウナって、コスパ最強じゃない!? 七瀬川のそばで自然に囲まれてて、天然水のセルフロウリュが気持ちいいよ。サウナ後はレストランでごはんも食べられるから、1日のんびりできちゃうかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "貸切個室サウナ（90分）",
+        "price": 2000,
+        "duration": 90,
+        "capacity": null
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 490,
+    "slug": "bayberry",
+    "name": "PRIVATE SAUNA & SPA BAYBERRY",
+    "prefecture": "kagoshima",
+    "prefectureLabel": "鹿児島県",
+    "city": "出水市",
+    "area": "その他",
+    "address": "鹿児島県出水市野田町下名2664-2",
+    "nearestStation": "野田郷駅（肥薩おれんじ鉄道）",
+    "walkMinutes": null,
+    "priceMin": 3800,
+    "duration": 105,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "12〜18℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "9:30〜22:00（火・木は17:00まで）",
+    "holidays": "不定休",
+    "website": "https://bayberry-sauna.my.canva.site/",
+    "phone": "090-2902-1884",
+    "bookingUrl": "https://reserva.be/bayberry",
+    "amenities": [
+      "タオル",
+      "ポンチョ",
+      "サウナハット",
+      "水着（レンタル）",
+      "シャンプー",
+      "トリートメント",
+      "ボディソープ",
+      "クレンジング",
+      "洗顔料",
+      "化粧水",
+      "ドライヤー",
+      "アロマオイル4種",
+      "製氷機"
+    ],
+    "note": "全2棟の完全予約制。天然冷鉱泉（シリカ含有）の水風呂。サウナ室100℃。アロマ4種のセルフロウリュ。ペット同伴可。BBQ可（持ち込み自由）。ふるさと納税返礼品対応。",
+    "images": [],
+    "lat": 32.08135,
+    "lng": 130.268306,
+    "description": "出水市の自然に囲まれた完全予約制プライベートサウナ&スパ。全2棟のコンテナ棟で、天然冷鉱泉（シリカ含有）の水風呂12〜18℃とフィンランド式サウナ100℃を完備。アロマ4種のセルフロウリュ、ペット同伴可、BBQスペースも。",
+    "saunakoCommentShort": "天然冷鉱泉の水風呂が贅沢すぎる!",
+    "saunakoCommentLong": "シリカ含有の天然冷鉱泉を水風呂に使ってるなんて贅沢だよね! サウナは100℃でしっかり熱いし、アロマ4種からロウリュを選べるのも楽しいかも。ペットOKだからワンちゃん連れでも安心。鶴の町・出水の自然の中でととのえるのは最高!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "平日プラン（1名）",
+        "price": 3800,
+        "duration": 105,
+        "capacity": 1
+      },
+      {
+        "name": "平日プラン（2名）",
+        "price": 5000,
+        "duration": 105,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝・夜間プラン（1名）",
+        "price": 5500,
+        "duration": 105,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝・夜間プラン（2名）",
+        "price": 6000,
+        "duration": 105,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
   }
 ]
