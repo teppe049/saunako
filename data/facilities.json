@@ -34797,5 +34797,234 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 491,
+    "slug": "sauna-tamayu",
+    "name": "サウナの珠湯",
+    "prefecture": "okinawa",
+    "prefectureLabel": "沖縄県",
+    "city": "那覇市",
+    "area": "那覇",
+    "address": "沖縄県那覇市松尾2丁目11-1 大衆キッチンたまや 2F",
+    "nearestStation": "ゆいレール牧志駅",
+    "walkMinutes": 11,
+    "priceMin": 2200,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "8〜13℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜22:00",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/sauna_tamayu69/",
+    "phone": "098-943-4815",
+    "bookingUrl": null,
+    "amenities": [
+      "タオル",
+      "バスタオル",
+      "シャンプー",
+      "ドライヤー"
+    ],
+    "note": "牧志公設市場近く。個室サウナ2室（NIGHT・SUN）。NIGHTは水風呂8〜9℃の超低温。SUNは最大4名対応。4種のアロマから選べるセルフロウリュ。延長30分500円。Instagram経由で予約。",
+    "images": [],
+    "lat": 26.214144,
+    "lng": 127.687731,
+    "description": "那覇市松尾の牧志公設市場近くにオープンした個室サウナ。「NIGHT」「SUN」の2室を展開し、4種のアロマから選べるセルフロウリュが特徴。NIGHTの水風呂は8〜9℃の超低温設定。外気浴スペースにはソファ・ヨギボーを完備。",
+    "saunakoCommentShort": "那覇の街中で水風呂8℃のシングル体験!",
+    "saunakoCommentLong": "牧志のど真ん中で個室サウナに入れるって最高だよね! NIGHTの水風呂は8℃台のシングルでキンキン、SUNは4人まで入れるからグループにもおすすめ。4種のアロマロウリュも楽しいし、外気浴はヨギボーでゴロンとできちゃうかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "個室サウナ 平日90分",
+        "price": 2200,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "個室サウナ 平日120分",
+        "price": 2800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "個室サウナ 土日祝90分",
+        "price": 2800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "個室サウナ 土日祝120分",
+        "price": 3400,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 492,
+    "slug": "morinosubako",
+    "name": "サウナ 森の巣箱",
+    "prefecture": "okinawa",
+    "prefectureLabel": "沖縄県",
+    "city": "国頭郡今帰仁村",
+    "area": "やんばる",
+    "address": "沖縄県国頭郡今帰仁村湧川699",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 12000,
+    "duration": 180,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "13℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": false,
+      "wifi": false
+    },
+    "businessHours": "12:00〜19:00（昼の部12:00-15:00 / 夕の部16:00-19:00）",
+    "holidays": "毎週水曜日",
+    "website": "https://www.sauna.morinos.okinawa/",
+    "phone": "0980-56-1570",
+    "bookingUrl": "https://coubic.com/morinosubako",
+    "amenities": [
+      "バスタオル（レンタル¥200）",
+      "ポンチョ（レンタル¥500）"
+    ],
+    "note": "完全貸切バレルサウナ。1日2枠限定。フィンランドMISAストーブ。水着着用。やんばるの森から羽地内海を一望。ツリーハウスホテル併設。那覇から車約90分。",
+    "images": [],
+    "lat": 26.6614,
+    "lng": 127.9868,
+    "description": "やんばるの森の高台に位置する完全貸切バレルサウナ。フィンランドMISAストーブのセルフロウリュ、13℃の水風呂、羽地内海を一望する屋外デッキでの外気浴が楽しめる。1日2枠限定の3時間貸切制。",
+    "saunakoCommentShort": "やんばるの森で海を見ながらととのう絶景!",
+    "saunakoCommentLong": "高台から羽地内海を見下ろしながらの外気浴、これは沖縄でしか味わえない体験だよ! MISAストーブのロウリュでしっかり蒸されたあと、13℃の水風呂がキンキンで最高。3時間貸切だから焦らずゆったり楽しめるのも嬉しいポイント!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "絶景サウナ 3時間貸切（最大4名）",
+        "price": 12000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 493,
+    "slug": "the-zen-gome",
+    "name": "THE ZEN（GoMe）",
+    "prefecture": "okinawa",
+    "prefectureLabel": "沖縄県",
+    "city": "国頭郡恩納村",
+    "area": "恩納村",
+    "address": "沖縄県国頭郡恩納村山田2816",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 12000,
+    "duration": 60,
+    "capacity": 7,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "16:00〜21:00",
+    "holidays": "毎週火曜日",
+    "website": "https://www.go-me53.com/",
+    "phone": "098-989-6953",
+    "bookingUrl": "https://coubic.com/gome53",
+    "amenities": [
+      "タオル",
+      "アロマ（複数種）",
+      "クラッシュアイス（水風呂用）"
+    ],
+    "note": "世界初のアースバッグ工法サウナ。薪ストーブ（檜）使用。ロウリュ用水は湧き水。水風呂はクラッシュアイスで温度調整可。高台テラスでサンセット・星空外気浴。カフェ・バー併設。那覇から車約1時間。",
+    "images": [],
+    "lat": 26.431845,
+    "lng": 127.782204,
+    "description": "袋に混合土を詰めて積み上げる「アースバッグ工法」で建てられた世界初のサウナ。恩納村の高台から海を眺めながら整えるロケーション。檜の薪ストーブ、湧き水のセルフロウリュ、クラッシュアイスで温度調整できる水風呂を完備。",
+    "saunakoCommentShort": "世界初のアースバッグサウナ、唯一無二の体験!",
+    "saunakoCommentLong": "アースバッグ工法で作られたサウナなんて世界でここだけだよ! 檜の薪ストーブに湧き水ロウリュ、自然の素材にこだわってるのが伝わってくるかも。水風呂はクラッシュアイスで好みの温度に調整できるし、高台テラスからのサンセット外気浴は感動もの!",
+    "updatedAt": "2026-03-29",
+    "plans": [
+      {
+        "name": "1時間完全貸切（最大7名）",
+        "price": 12000,
+        "duration": 60,
+        "capacity": 7
+      },
+      {
+        "name": "2時間完全貸切（最大7名）",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 7
+      }
+    ],
+    "timeSlots": null
+  },
+  {
+    "id": 494,
+    "slug": "sauna-ni-thankyou",
+    "name": "サウナにサンキュー",
+    "prefecture": "okinawa",
+    "prefectureLabel": "沖縄県",
+    "city": "国頭郡今帰仁村",
+    "area": "やんばる",
+    "address": "沖縄県国頭郡今帰仁村運天408-16",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": null,
+    "duration": null,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "18〜19℃",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "事前予約制（1日1組限定）",
+    "holidays": "不定休",
+    "website": "https://www.instagram.com/saunanithankyou/",
+    "phone": "0980-56-5900",
+    "bookingUrl": "https://lin.ee/ScEBqQH",
+    "amenities": [
+      "ポンチョ",
+      "サウナハット",
+      "タオル",
+      "サンダル",
+      "シャンプー",
+      "コンディショナー",
+      "ボディーソープ",
+      "ドライヤー",
+      "化粧水",
+      "綿棒",
+      "ウェルカムドリンク"
+    ],
+    "note": "TWIN HOUSE うみぐくる敷地内。1日1組限定・完全貸切。Harvia CILINDRO 10ストーブ。寝サウナ対応。古宇利大橋を望む2階外気浴テラス。水着着用で男女混浴可。LINE予約のみ。料金は要問い合わせ。",
+    "images": [],
+    "lat": 26.685876,
+    "lng": 128.004896,
+    "description": "今帰仁村の宿「TWIN HOUSE うみぐくる」敷地内にある1日1組限定の完全貸切サウナ。Harvia製ストーブのセルフロウリュ、チラー完備の水風呂18〜19℃、古宇利大橋を望む2階テラスでの絶景外気浴が魅力。寝サウナにも対応。",
+    "saunakoCommentShort": "古宇利大橋を眺めながら1日1組の贅沢!",
+    "saunakoCommentLong": "1日1組限定だから、完全に自分たちだけの空間で整えるのが最高だよ! 2階テラスから古宇利大橋と青い海を眺めながらの外気浴は沖縄ならではの贅沢。寝サウナもできるし、水風呂もチラーで18℃にキープされてて気持ちいいかも!",
+    "updatedAt": "2026-03-29",
+    "plans": [],
+    "timeSlots": null
   }
 ]
