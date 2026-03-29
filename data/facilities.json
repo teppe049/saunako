@@ -10263,7 +10263,7 @@
       },
       {
         "name": "150分 2名",
-        "price": 7000,
+        "price": 7500,
         "duration": 150,
         "capacity": 2
       }
@@ -26799,7 +26799,7 @@
     "address": "長崎県南島原市深江町甲5292-2",
     "nearestStation": "島原鉄道",
     "walkMinutes": null,
-    "priceMin": 5000,
+    "priceMin": 5500,
     "duration": 120,
     "capacity": 5,
     "features": {
@@ -26824,7 +26824,7 @@
       "POLA化粧品セット",
       "ドライヤー"
     ],
-    "note": "雲仙みかどホテル内。3種のプライベートサウナ（くすのき・あこう・やまぼうし）。水着着用可。駐車場200台無料。有明海一望。",
+    "note": "雲仙みかどホテル内。3種のプライベートサウナ（くすのき・あこう・やまぼうし）。水着着用可。駐車場200台無料。有明海一望。（税込価格）",
     "images": [
       "/facilities/370-0.webp",
       "/facilities/370-1.webp",
@@ -26841,31 +26841,31 @@
     "plans": [
       {
         "name": "くすのき/あこう（1名）",
-        "price": 5000,
+        "price": 5500,
         "duration": 120,
         "capacity": 1
       },
       {
         "name": "くすのき/あこう（2名）",
-        "price": 6000,
+        "price": 6600,
         "duration": 120,
         "capacity": 2
       },
       {
         "name": "やまぼうし（1名）",
-        "price": 6000,
+        "price": 6600,
         "duration": 120,
         "capacity": 1
       },
       {
         "name": "やまぼうし（2名）",
-        "price": 7000,
+        "price": 7700,
         "duration": 120,
         "capacity": 2
       },
       {
         "name": "やまぼうし（5名）",
-        "price": 10000,
+        "price": 11000,
         "duration": 120,
         "capacity": 5
       }
