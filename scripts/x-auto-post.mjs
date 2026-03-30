@@ -7,13 +7,14 @@
    * Pay-per-use プラン: v1.1 uploadMedia + v2 POST /2/tweets
    *
    * Usage:
-   *    node scripts/x-auto-post.mjs 午前
-   *    node scripts/x-auto-post.mjs 午後
-   *    node scripts/x-auto-post.mjs 午前 --dry-run
+   *   node scripts/x-auto-post.mjs 午前
+   *   node scripts/x-auto-post.mjs 午後
+   *   node scripts/x-auto-post.mjs 午前 --dry-run
    *
    * Environment variables:
-   *    X_API_KEY, X_API_SECRET_KEY, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET
+   *   X_API_KEY, X_API_SECRET_KEY, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET
    */
+
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -108,7 +109,7 @@ for (const imgPath of imageLines) {
     console.log(`Converting: ${imgPath}`);
     const buf = await sharp(imgPath).png().toBuffer();
     pngBuffers.push(buf);
-    console.log(`  → ${(buf.length / 1024).toFixed(0)} KB`);
+    console.log(` → ${(buf.length / 1024).toFixed(0)} KB`);
 }
 
 if (dryRun) {
@@ -134,10 +135,13 @@ const client = new TwitterApi({
     accessSecret: X_ACCESS_TOKEN_SECRET,
 });
 
+// readWrite クライアントを明示的に使用
+const rwClient = client.readWrite;
+
 // 画像アップロード (v1.1 - Pay-per-use で許可されているエンドポイント)
 const mediaIds = [];
 for (const buf of pngBuffers) {
-    const mediaId = await client.v1.uploadMedia(buf, { mimeType: "image/png" });
+    const mediaId = await rwClient.v1.uploadMedia(buf, { mimeType: "image/png" });
     console.log(`Uploaded media: ${mediaId}`);
     mediaIds.push(mediaId);
 }
@@ -149,7 +153,7 @@ if (mediaIds.length > 0) {
     tweetPayload.media = { media_ids: mediaIds.map(String) };
 }
 
-const { data: tweet } = await client.v2.tweet(tweetPayload);
+const { data: tweet } = await rwClient.v2.tweet(tweetPayload);
 const tweetId = tweet.id;
 console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
 
@@ -157,7 +161,7 @@ console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
 if (reply) {
     console.log("Waiting 5s before reply...");
     await new Promise((r) => setTimeout(r, 5_000));
-    const { data: replyTweet } = await client.v2.tweet({
+    const { data: replyTweet } = await rwClient.v2.tweet({
           text: reply,
           reply: { in_reply_to_tweet_id: tweetId },
     });
