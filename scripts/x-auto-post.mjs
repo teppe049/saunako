@@ -2,9 +2,9 @@
 /**
    * X (Twitter) 自動投稿スクリプト
    *
-   * docs/x-drafts.md から当日分のドラフトを取得し、X API v2 で投稿する。
+   * docs/x-drafts.md から当日分のドラフトを取得し、X API で投稿する。
    * GitHub Actions の cron から実行される想定。
-   * Pay-per-use プラン: v1.1 uploadMedia + v2 POST /2/tweets
+   * Pay-per-use プラン: v1.1 uploadMedia + v1.1 statuses/update
    * すべて自前 OAuth 1.0a 署名（twitter-api-v2 ライブラリ不使用）
    *
    * Usage:
@@ -48,6 +48,7 @@ const drafts = readFileSync(DRAFTS_PATH, "utf-8");
 const sections = drafts.split(/^---$/m);
 let targetSection = null;
 let targetHeading = null;
+
 const headingRegex = new RegExp(
     `^## (${today.replace(/-/g, "-")} ${slot} — .+)$`,
     "m"
@@ -67,12 +68,13 @@ if (!targetSection) {
     console.log(`No draft found for ${today} ${slot}. Exiting.`);
     process.exit(0);
 }
+
 console.log(`Found draft: ${targetHeading}`);
 
 // コードブロックの中身を抽出
 function extractCodeBlock(section, heading) {
     const regex = new RegExp(
-          `### ${heading}[^\\n]*\\n\`\`\`\\n([\\s\\S]*?)\`\`\``,
+          `### ${heading}[^\\n]*\\n\`\`\`\\n([\\s\\S]*?)\`\`\``
         );
     const m = section.match(regex);
     return m ? m[1].trim() : null;
@@ -85,8 +87,7 @@ const reply = extractCodeBlock(targetSection, "リプライ");
 const imageLines = [...targetSection.matchAll(/^- (.+\.webp)/gm)]
   .map((m) => {
         let p = m[1].replace(/（.+?）$/, "").trim();
-        // 古いエントリの絶対パスを正規化
-           p = p.replace(/^\/Users\/.*?\/saunako\//, "");
+        p = p.replace(/^\/Users\/.*?\/saunako\//, "");
         return resolve(ROOT, p);
   })
   .slice(0, 4);
@@ -157,10 +158,13 @@ function buildOAuthHeader(method, url, extraParams = {}) {
           oauth_version: "1.0",
     };
 
-  // Merge extra params for signature (needed for form-encoded body params)
   const allParams = { ...oauthParams, ...extraParams };
     const signature = generateOAuthSignature(
-          method, url, allParams, X_API_SECRET_KEY, X_ACCESS_TOKEN_SECRET
+          method,
+          url,
+          allParams,
+          X_API_SECRET_KEY,
+          X_ACCESS_TOKEN_SECRET
         );
     oauthParams.oauth_signature = signature;
 
@@ -171,17 +175,12 @@ function buildOAuthHeader(method, url, extraParams = {}) {
     return `OAuth ${header}`;
 }
 
-// --- v1.1 Media Upload (自前 OAuth 1.0a + multipart/form-data) ---
+// --- v1.1 Media Upload ---
 async function uploadMediaV1(imageBuffer) {
     const url = "https://upload.twitter.com/1.1/media/upload.json";
     const base64Data = imageBuffer.toString("base64");
-
-  // For media upload, we use media_data parameter in form body
-  // OAuth signature should NOT include multipart body params
-  const authHeader = buildOAuthHeader("POST", url);
-
-  // Build multipart/form-data manually
-  const boundary = `----FormBoundary${randomBytes(16).toString("hex")}`;
+    const authHeader = buildOAuthHeader("POST", url);
+    const boundary = `----FormBoundary${randomBytes(16).toString("hex")}`;
     const bodyParts = [
           `--${boundary}\r\nContent-Disposition: form-data; name="media_data"\r\n\r\n${base64Data}\r\n`,
           `--${boundary}--\r\n`,
@@ -199,21 +198,66 @@ async function uploadMediaV1(imageBuffer) {
 
   const text = await res.text();
     console.log(`Media upload status: ${res.status}`);
-
-  if (!res.ok) {
-        console.error(`Media upload error: ${text}`);
-        throw new Error(`Media upload failed with ${res.status}: ${text}`);
-  }
-
-  const data = JSON.parse(text);
+    if (!res.ok) {
+          console.error(`Media upload error: ${text}`);
+          throw new Error(`Media upload failed with ${res.status}: ${text}`);
+    }
+    const data = JSON.parse(text);
     return data.media_id_string;
 }
 
-// --- v2 Tweet Posting (自前 OAuth 1.0a + JSON body) ---
-async function postTweetV2(payload) {
+// --- v1.1 Tweet Posting (statuses/update) ---
+async function postTweetV1(status, mediaIds = [], inReplyToId = null) {
+    const url = "https://api.twitter.com/1.1/statuses/update.json";
+
+  const bodyParams = { status };
+    if (mediaIds.length > 0) {
+          bodyParams.media_ids = mediaIds.join(",");
+    }
+    if (inReplyToId) {
+          bodyParams.in_reply_to_status_id = inReplyToId;
+          bodyParams.auto_populate_reply_metadata = "true";
+    }
+
+  const authHeader = buildOAuthHeader("POST", url, bodyParams);
+
+  const formBody = Object.keys(bodyParams)
+      .map((k) => `${percentEncode(k)}=${percentEncode(bodyParams[k])}`)
+      .join("&");
+
+  console.log(`Posting to: ${url}`);
+    const res = await fetch(url, {
+          method: "POST",
+          headers: {
+                  Authorization: authHeader,
+                  "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formBody,
+    });
+
+  const text = await res.text();
+    console.log(`Response status: ${res.status}`);
+    if (!res.ok) {
+          console.error(`Response body: ${text}`);
+          // v1.1 が失敗したら v2 にフォールバック
+      console.log("v1.1 failed, trying v2 API...");
+          return postTweetV2(status, mediaIds, inReplyToId);
+    }
+    return JSON.parse(text);
+}
+
+// --- v2 Tweet Posting (fallback) ---
+async function postTweetV2(status, mediaIds = [], inReplyToId = null) {
     const url = "https://api.twitter.com/2/tweets";
-    // JSON body params are NOT included in OAuth signature
-  const authHeader = buildOAuthHeader("POST", url);
+    const authHeader = buildOAuthHeader("POST", url);
+
+  const payload = { text: status };
+    if (mediaIds.length > 0) {
+          payload.media = { media_ids: mediaIds.map(String) };
+    }
+    if (inReplyToId) {
+          payload.reply = { in_reply_to_tweet_id: inReplyToId };
+    }
 
   console.log(`Posting to: ${url}`);
     const res = await fetch(url, {
@@ -226,18 +270,15 @@ async function postTweetV2(payload) {
     });
 
   const text = await res.text();
-    console.log(`Response status: ${res.status}`);
-    console.log(`Response headers x-access-level: ${res.headers.get("x-access-level")}`);
-
-  if (!res.ok) {
-        console.error(`Response body: ${text}`);
-        throw new Error(`POST /2/tweets failed with ${res.status}: ${text}`);
-  }
-
-  return JSON.parse(text);
+    console.log(`v2 Response status: ${res.status}`);
+    if (!res.ok) {
+          console.error(`v2 Response body: ${text}`);
+          throw new Error(`Tweet posting failed: ${text}`);
+    }
+    return JSON.parse(text);
 }
 
-// 画像アップロード (v1.1 自前 OAuth 1.0a)
+// 画像アップロード
 const mediaIds = [];
 for (const buf of pngBuffers) {
     const mediaId = await uploadMediaV1(buf);
@@ -245,35 +286,29 @@ for (const buf of pngBuffers) {
     mediaIds.push(mediaId);
 }
 
-// 本文投稿 (v2 POST /2/tweets)
-console.log("Posting tweet via v2 API...");
-const tweetPayload = { text: body };
-if (mediaIds.length > 0) {
-    tweetPayload.media = { media_ids: mediaIds.map(String) };
-}
-console.log("Tweet payload:", JSON.stringify(tweetPayload));
+// 本文投稿 (v1.1 → v2 fallback)
+console.log("Posting tweet...");
+console.log(`Tweet text length: ${body.length}`);
 
 try {
-    const result = await postTweetV2(tweetPayload);
-    const tweetId = result.data.id;
+    const result = await postTweetV1(body, mediaIds);
+    // v1.1 returns id_str, v2 returns data.id
+  const tweetId = result.id_str || (result.data && result.data.id);
     console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
 
-  // リプライ投稿 (v2)
+  // リプライ投稿
   if (reply) {
         console.log("Waiting 5s before reply...");
         await new Promise((r) => setTimeout(r, 5_000));
-
-      const replyResult = await postTweetV2({
-              text: reply,
-              reply: { in_reply_to_tweet_id: tweetId },
-      });
-        console.log(`Reply posted: https://x.com/i/status/${replyResult.data.id}`);
+        const replyResult = await postTweetV1(reply, [], tweetId);
+        const replyId = replyResult.id_str || (replyResult.data && replyResult.data.id);
+        console.log(`Reply posted: https://x.com/i/status/${replyId}`);
   }
 
   // --- Phase D: Update x-drafts.md ---
   const updated = drafts.replace(
         `## ${targetHeading}`,
-        `## ~~${targetHeading}~~ ✅投稿済み`,
+        `## ~~${targetHeading}~~ ✅投稿済み`
       );
     writeFileSync(DRAFTS_PATH, updated, "utf-8");
     console.log("Draft marked as posted.");
