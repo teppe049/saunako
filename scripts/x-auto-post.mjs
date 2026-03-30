@@ -160,7 +160,7 @@ function buildOAuthHeader(method, url, consumerKey, consumerSecret, accessToken,
 }
 
 async function postTweetV2(payload) {
-      const url = "https://api.x.com/2/tweets";
+      const url = "https://api.twitter.com/2/tweets";
       const authHeader = buildOAuthHeader("POST", url, X_API_KEY, X_API_SECRET_KEY, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET);
       console.log(`Posting to: ${url}`);
       console.log(`Auth header prefix: ${authHeader.slice(0, 60)}...`);
