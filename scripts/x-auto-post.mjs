@@ -2,8 +2,9 @@
 /**
    * X (Twitter) 自動投稿スクリプト
    *
-   * docs/x-drafts.md から当日分のドラフトを取得し、X API v1.1 で投稿する。
+   * docs/x-drafts.md から当日分のドラフトを取得し、X API v2 で投稿する。
    * GitHub Actions の cron から実行される想定。
+   * Pay-per-use プラン: v1.1 uploadMedia + v2 POST /2/tweets
    *
    * Usage:
    *    node scripts/x-auto-post.mjs 午前
@@ -133,7 +134,7 @@ const client = new TwitterApi({
     accessSecret: X_ACCESS_TOKEN_SECRET,
 });
 
-// 画像アップロード (v1.1)
+// 画像アップロード (v1.1 - Pay-per-use で許可されているエンドポイント)
 const mediaIds = [];
 for (const buf of pngBuffers) {
     const mediaId = await client.v1.uploadMedia(buf, { mimeType: "image/png" });
@@ -141,28 +142,26 @@ for (const buf of pngBuffers) {
     mediaIds.push(mediaId);
 }
 
-// 本文投稿 (v1.1 statuses/update)
-console.log("Posting tweet via v1.1 API...");
-const tweetParams = { status: body };
+// 本文投稿 (v2 POST /2/tweets)
+console.log("Posting tweet via v2 API...");
+const tweetPayload = { text: body };
 if (mediaIds.length > 0) {
-    tweetParams.media_ids = mediaIds.join(",");
+    tweetPayload.media = { media_ids: mediaIds.map(String) };
 }
 
-const tweet = await client.v1.tweet(body, {
-    ...(mediaIds.length > 0 && { media_ids: mediaIds.join(",") }),
-});
-const tweetId = tweet.id_str;
+const { data: tweet } = await client.v2.tweet(tweetPayload);
+const tweetId = tweet.id;
 console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
 
-// リプライ投稿 (v1.1)
+// リプライ投稿 (v2)
 if (reply) {
     console.log("Waiting 5s before reply...");
     await new Promise((r) => setTimeout(r, 5_000));
-    const replyTweet = await client.v1.tweet(reply, {
-          in_reply_to_status_id: tweetId,
-          auto_populate_reply_metadata: true,
+    const { data: replyTweet } = await client.v2.tweet({
+          text: reply,
+          reply: { in_reply_to_tweet_id: tweetId },
     });
-    console.log(`Reply posted: https://x.com/i/status/${replyTweet.id_str}`);
+    console.log(`Reply posted: https://x.com/i/status/${replyTweet.id}`);
 }
 
 // --- Phase D: Update x-drafts.md ---
