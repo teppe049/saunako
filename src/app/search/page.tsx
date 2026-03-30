@@ -79,6 +79,7 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: 'https://www.saunako.jp/search',
     },
