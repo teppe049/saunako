@@ -130,6 +130,8 @@ if (!X_API_KEY || !X_API_SECRET_KEY || !X_ACCESS_TOKEN || !X_ACCESS_TOKEN_SECRET
 }
 
 console.log(`API Key prefix: ${X_API_KEY.slice(0, 8)}...`);
+console.log(`API Secret Key length: ${X_API_SECRET_KEY.length}, prefix: ${X_API_SECRET_KEY.slice(0, 8)}...`);
+console.log(`Access Token Secret length: ${X_ACCESS_TOKEN_SECRET.length}, prefix: ${X_ACCESS_TOKEN_SECRET.slice(0, 8)}...`);
 console.log(`Access Token prefix: ${X_ACCESS_TOKEN.slice(0, 20)}...`);
 
 // --- OAuth 1.0a 署名ヘルパー ---
