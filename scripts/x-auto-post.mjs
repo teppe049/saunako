@@ -143,25 +143,49 @@ for (const buf of pngBuffers) {
   mediaIds.push(mediaId);
 }
 
-// 本文投稿
-const tweetPayload = { text: body };
-if (mediaIds.length > 0) {
-  tweetPayload.media = { media_ids: mediaIds };
-}
+// 本文投稿（v1.1 を優先、403なら v2 にフォールバック）
+let tweetId;
 
-const { data: tweet } = await client.v2.tweet(tweetPayload);
-console.log(`Tweet posted: https://x.com/i/status/${tweet.id}`);
+try {
+  // v1.1 POST statuses/update
+  const v1Params = { status: body };
+  if (mediaIds.length > 0) {
+    v1Params.media_ids = mediaIds.join(",");
+  }
+  const tweet = await client.v1.post("statuses/update.json", v1Params);
+  tweetId = tweet.id_str;
+  console.log(`Tweet posted (v1.1): https://x.com/i/status/${tweetId}`);
+} catch (e) {
+  console.log(`v1.1 failed (${e.code}), trying v2...`);
+  const tweetPayload = { text: body };
+  if (mediaIds.length > 0) {
+    tweetPayload.media = { media_ids: mediaIds };
+  }
+  const { data: tweet } = await client.v2.tweet(tweetPayload);
+  tweetId = tweet.id;
+  console.log(`Tweet posted (v2): https://x.com/i/status/${tweetId}`);
+}
 
 // リプライ投稿
 if (reply) {
   console.log("Waiting 120s before reply (rate limit)...");
   await new Promise((r) => setTimeout(r, 120_000));
 
-  const { data: replyTweet } = await client.v2.tweet({
-    text: reply,
-    reply: { in_reply_to_tweet_id: tweet.id },
-  });
-  console.log(`Reply posted: https://x.com/i/status/${replyTweet.id}`);
+  try {
+    // v1.1 reply
+    const replyTweet = await client.v1.post("statuses/update.json", {
+      status: reply,
+      in_reply_to_status_id: tweetId,
+    });
+    console.log(`Reply posted (v1.1): https://x.com/i/status/${replyTweet.id_str}`);
+  } catch (e) {
+    console.log(`v1.1 reply failed (${e.code}), trying v2...`);
+    const { data: replyTweet } = await client.v2.tweet({
+      text: reply,
+      reply: { in_reply_to_tweet_id: tweetId },
+    });
+    console.log(`Reply posted (v2): https://x.com/i/status/${replyTweet.id}`);
+  }
 }
 
 // --- Phase D: Update x-drafts.md ---
