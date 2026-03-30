@@ -128,6 +128,9 @@ if (!X_API_KEY || !X_API_SECRET_KEY || !X_ACCESS_TOKEN || !X_ACCESS_TOKEN_SECRET
     process.exit(1);
 }
 
+console.log(`API Key prefix: ${X_API_KEY.slice(0, 8)}...`);
+console.log(`Access Token prefix: ${X_ACCESS_TOKEN.slice(0, 20)}...`);
+
 const client = new TwitterApi({
     appKey: X_API_KEY,
     appSecret: X_API_SECRET_KEY,
@@ -153,25 +156,39 @@ if (mediaIds.length > 0) {
     tweetPayload.media = { media_ids: mediaIds.map(String) };
 }
 
-const { data: tweet } = await rwClient.v2.tweet(tweetPayload);
-const tweetId = tweet.id;
-console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
+console.log("Tweet payload:", JSON.stringify(tweetPayload));
 
-// リプライ投稿 (v2)
-if (reply) {
-    console.log("Waiting 5s before reply...");
-    await new Promise((r) => setTimeout(r, 5_000));
-    const { data: replyTweet } = await rwClient.v2.tweet({
-          text: reply,
-          reply: { in_reply_to_tweet_id: tweetId },
-    });
-    console.log(`Reply posted: https://x.com/i/status/${replyTweet.id}`);
+try {
+    const { data: tweet } = await rwClient.v2.tweet(tweetPayload);
+    const tweetId = tweet.id;
+    console.log(`Tweet posted: https://x.com/i/status/${tweetId}`);
+
+  // リプライ投稿 (v2)
+  if (reply) {
+        console.log("Waiting 5s before reply...");
+        await new Promise((r) => setTimeout(r, 5_000));
+        const { data: replyTweet } = await rwClient.v2.tweet({
+                text: reply,
+                reply: { in_reply_to_tweet_id: tweetId },
+        });
+        console.log(`Reply posted: https://x.com/i/status/${replyTweet.id}`);
+  }
+
+  // --- Phase D: Update x-drafts.md ---
+  const updated = drafts.replace(
+        `## ${targetHeading}`,
+        `## ~~${targetHeading}~~ ✅投稿済み`,
+      );
+    writeFileSync(DRAFTS_PATH, updated, "utf-8");
+    console.log("Draft marked as posted.");
+} catch (err) {
+    console.error("Tweet failed:", err.message);
+    if (err.data) {
+          console.error("Error data:", JSON.stringify(err.data, null, 2));
+    }
+    if (err.request) {
+          console.error("Request URL:", err.request.url || "unknown");
+          console.error("Request method:", err.request.method || "unknown");
+    }
+    process.exit(1);
 }
-
-// --- Phase D: Update x-drafts.md ---
-const updated = drafts.replace(
-    `## ${targetHeading}`,
-    `## ~~${targetHeading}~~ ✅投稿済み`,
-  );
-writeFileSync(DRAFTS_PATH, updated, "utf-8");
-console.log("Draft marked as posted.");
