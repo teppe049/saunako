@@ -15742,7 +15742,8 @@
         "capacity": 5
       }
     ],
-    "timeSlots": null
+    "timeSlots": null,
+    "closedAt": "2026-03-31"
   },
   {
     "id": 203,
@@ -25296,15 +25297,15 @@
     "capacity": 4,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "約5",
       "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "月水木12:00〜19:30 / 金12:00〜21:30 / 土日10:00〜21:30",
-    "holidays": "火曜",
+    "businessHours": "平日11:00〜21:00 / 土日祝11:00〜22:00",
+    "holidays": "水曜・木曜",
     "website": "https://shiokatsu-hirao.jp/",
     "phone": null,
     "bookingUrl": "https://shiokatsu-hirao.jp/sauna",
