@@ -37,7 +37,7 @@ https://www.saunako.jp/facilities/3?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-03-31 午後 — sauna 海 (id=344)「知ってた？」
+## ~~2026-03-31 午後 — sauna 海 (id=344)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
