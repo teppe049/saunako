@@ -121,18 +121,19 @@ export function extractHeadings(raw: string): { id: string; text: string; level:
 
 export function getRelatedArticles(
   currentSlug: string,
-  currentMeta: { category: string; facilityIds: number[] },
+  currentMeta: { category: string; facilityIds: number[]; tags?: string[] },
   limit = 6
 ): ArticleMeta[] {
   const all = getAllArticles().filter((a) => a.slug !== currentSlug);
   const currentFacilityIds = new Set(currentMeta.facilityIds);
+  const currentTags = new Set(currentMeta.tags || []);
 
-  // Score each article: shared facilities count as relevance
   const scored = all.map((article) => {
-    const sharedCount = article.facilityIds.filter((id) => currentFacilityIds.has(id)).length;
+    const sharedFacilities = article.facilityIds.filter((id) => currentFacilityIds.has(id)).length;
+    const sharedTags = article.tags.filter((t) => currentTags.has(t)).length;
     const sameCategory = article.category === currentMeta.category;
-    // Priority: shared facilities (x100) > same category (x10) > recency (base)
-    const score = sharedCount * 100 + (sameCategory ? 10 : 0);
+    // Priority: shared facilities (x100) > shared tags (x20) > same category (x10)
+    const score = sharedFacilities * 100 + sharedTags * 20 + (sameCategory ? 10 : 0);
     return { article, score };
   });
 
@@ -147,4 +148,17 @@ export function getRawContent(slug: string): string | null {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const { content } = matter(raw);
   return content;
+}
+
+export function extractPlainText(rawMdx: string): string {
+  return rawMdx
+    .replace(/<[^>]+>/g, '')               // HTMLタグ除去
+    .replace(/<FacilityCard[^/]*\/>/g, '')  // MDXコンポーネント除去
+    .replace(/!\[.*?\]\(.*?\)/g, '')        // 画像除去
+    .replace(/\[([^\]]+)\]\(.*?\)/g, '$1')  // リンクをテキストのみに
+    .replace(/^#{1,6}\s+/gm, '')            // heading記号除去
+    .replace(/[*_~`>|]/g, '')               // マークダウン装飾除去
+    .replace(/^-{3,}$/gm, '')              // 水平線除去
+    .replace(/\n{2,}/g, '\n')              // 連続改行を1つに
+    .trim();
 }

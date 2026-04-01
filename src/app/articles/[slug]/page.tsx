@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getArticleBySlug, getAllSlugs, getRelatedArticles, extractHeadings, getRawContent } from '@/lib/articles';
+import { getArticleBySlug, getAllSlugs, getRelatedArticles, extractHeadings, getRawContent, extractPlainText } from '@/lib/articles';
 import { getFacilityById } from '@/lib/facilities';
 import { ARTICLE_CATEGORIES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
@@ -69,6 +69,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   const rawContent = getRawContent(slug);
   const headings = rawContent ? extractHeadings(rawContent) : [];
+  const plainText = rawContent ? extractPlainText(rawContent) : '';
 
   const relatedFacilities = (meta.facilityIds || [])
     .map((id) => getFacilityById(id))
@@ -77,6 +78,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
   const relatedArticles = getRelatedArticles(meta.slug, {
     category: meta.category,
     facilityIds: meta.facilityIds,
+    tags: meta.tags,
   });
 
   const breadcrumbJsonLd = {
@@ -97,17 +99,24 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     '@type': 'BlogPosting',
     headline: meta.title,
     description: meta.description,
+    articleBody: plainText.slice(0, 5000),
     datePublished: toISOWithTZ(meta.publishedAt),
     dateModified: toISOWithTZ(meta.updatedAt),
+    timeRequired: `PT${meta.readingTime}M`,
     author: {
       '@type': 'Person',
       name: meta.author,
       url: 'https://www.saunako.jp',
+      image: 'https://www.saunako.jp/saunako-avatar.webp',
     },
     publisher: {
       '@type': 'Organization',
       name: 'サウナ子',
       url: 'https://www.saunako.jp',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.saunako.jp/saunako-avatar.webp',
+      },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
