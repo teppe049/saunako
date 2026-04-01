@@ -849,3 +849,171 @@ https://www.saunako.jp/facilities/27?utm_source=x&utm_medium=social
 - public/facilities/27-3.webp（サウナ室＋水風呂）
 
 ---
+
+## 2026-04-03 午前 — UUSIN by NEXT SAUNA (id=60) ターゲット型【平日サウナ】
+
+### 本文（リンクなし）
+```
+平日のサウナを知ってる人にこそ行ってほしい個室サウナが関東にある。
+
+サウナ温度を90・100・110度から選べて、デカ氷を水風呂に投入してキンキンにできる。朝6時から営業してるから出勤前にも寄れるよ🧖‍♂️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+UUSIN by NEXT SAUNA
+💰 4,400円〜/70分（1名）
+📍 浦和駅 徒歩7分（ロイヤルパインズホテル内）
+https://www.saunako.jp/facilities/60?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/60-0.webp（サウナ室＋水風呂）
+- public/facilities/60-1.webp
+- public/facilities/60-2.webp
+- public/facilities/60-3.webp
+
+---
+
+## 2026-04-03 午後 — ロウリューランド関内馬車道 (id=54)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？関東に、水風呂に氷を入れて4度まで冷やせる個室サウナがあるって。
+
+国産ヒノキのお座舗サウナでセルフロウリュ。しかも「騒いでOK」がコンセプトだから友達と盛り上がれる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+ロウリューランド関内馬車道
+💰 3,600円〜/70分（1名・月額会員）
+📍 関内駅 徒歩3分
+https://www.saunako.jp/facilities/54?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/54-0.webp（サウナ室内部）
+- public/facilities/54-1.webp
+- public/facilities/54-2.webp
+- public/facilities/54-3.webp
+
+---
+
+## 2026-04-04 午前 — sauna & cafe tere saun (id=93) ターゲット型【友達とサウナ】
+
+### 本文（リンクなし）
+```
+友達とサウナに行きたい人にこそ行ってほしい個室サウナが関東にある。
+
+屋上テラスで外気浴、14度の水風呂、150分の完全貸切。最大8名まで入れて、サウナ後は併設カフェでサ飯も楽しめる🧖‍♂️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+sauna & cafe tere saun
+💰 7,000円〜/150分（平日1名）
+📍 東川口駅 徒歩3分
+https://www.saunako.jp/facilities/93?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/93-0.webp（屋上テラス）
+- public/facilities/93-1.webp
+- public/facilities/93-2.webp
+- public/facilities/93-3.webp
+
+---
+
+## 2026-04-04 午後 — 発酵サウナ (id=226)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？東北に、薪ストーブで焚くバレルサウナがあるって。
+
+天然地下水かけ流しの水風呂に、開放的な外気浴スペース。自然の中で薪の香りに包まれながら整う贅沢、一度味わったらやみつきだよ🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+発酵サウナ
+💰 10,000円〜/120分（2名）
+📍 山形市（完全予約制）
+https://www.saunako.jp/facilities/226?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/226-0.webp（バレルサウナ空撮）
+- public/facilities/226-1.webp
+- public/facilities/226-2.webp
+- public/facilities/226-3.webp
+
+---
+
+## 2026-04-05 午前 — Re: PRIVATE SAUNA (id=65) ターゲット型【首都圏穴場】
+
+### 本文（リンクなし）
+```
+首都圏で穴場のサウナを探してる人にこそ行ってほしい個室サウナがある。
+
+駅徒歩1分で朝7時台からオープン。セルフロウリュ完備で、VIPルームなら水風呂付き。朝活サウナにもぴったり🧖‍♂️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+Re: PRIVATE SAUNA
+💰 3,600円〜/60分（1名）
+📍 京成船橋駅 徒歩1分
+https://www.saunako.jp/facilities/65?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/65-0.webp（サウナ室内部）
+- public/facilities/65-1.webp
+- public/facilities/65-2.webp
+- public/facilities/65-3.webp
+
+---
+
+## 2026-04-05 午後 — i3U7 IMMERSIVE SAUNA (id=269)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、水深140cmの「イマーシブ水風呂」がある個室サウナがあるって。
+
+全身が沈む没入型の水風呂にMETOSストーブのセルフロウリュ。駅徒歩3分でアメニティも全部揃ってる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+#個室サウナ #サウナ
+```
+
+### リプライ
+```
+i3U7 IMMERSIVE SAUNA
+💰 11,000円〜/120分（Room S・2名）
+📍 富山駅 徒歩3分
+https://www.saunako.jp/facilities/269?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/269-0.webp（サウナストーン）
+- public/facilities/269-1.webp
+- public/facilities/269-2.webp
+- public/facilities/269-3.webp
+
+---
