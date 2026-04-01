@@ -837,7 +837,7 @@ https://www.saunako.jp/facilities/4?utm_source=x&utm_medium=social
 ### リプライ
 ```
 TAKENO-YA
-💰 15,000円〜/90分（1名）
+💰 13,000円〜/120分（1名）
 📍 日本橋駅（大阪）徒歩2分
 https://www.saunako.jp/facilities/27?utm_source=x&utm_medium=social
 ```

@@ -2232,7 +2232,7 @@
     "address": "大阪府大阪市中央区日本橋",
     "nearestStation": "日本橋駅",
     "walkMinutes": 2,
-    "priceMin": 15000,
+    "priceMin": 13000,
     "duration": 120,
     "capacity": 3,
     "features": {
@@ -2266,29 +2266,17 @@
     "description": "日本橋駅から徒歩2分、ドリンク無料サービスが付いた24時間営業のプライベートサウナ。水風呂・セルフロウリュ完備で、2時間13,000円から3名まで利用可能。大阪ミナミで本格的な貸切サウナを楽しめる。",
     "saunakoCommentShort": "ドリンク無料！24時間営業が嬉しい",
     "saunakoCommentLong": "日本橋駅から徒歩2分でアクセス抜群！ドリンクが無料でついてくるからお得感満載だよ。24時間営業で2時間たっぷり楽しめるし、水風呂もセルフロウリュも完備。大阪で本格プライベートサウナを楽しみたい人におすすめ！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-04-01",
     "plans": [
       {
-        "name": "銀の竹 90分 1名",
-        "price": 15000,
-        "duration": 90,
-        "capacity": 1
-      },
-      {
         "name": "銀の竹 120分 1名",
-        "price": 15000,
+        "price": 13000,
         "duration": 120,
         "capacity": 1
       },
       {
-        "name": "金の竹 90分 2名",
-        "price": 18000,
-        "duration": 90,
-        "capacity": 2
-      },
-      {
         "name": "金の竹 120分 2名",
-        "price": 24000,
+        "price": 18000,
         "duration": 120,
         "capacity": 2
       }
