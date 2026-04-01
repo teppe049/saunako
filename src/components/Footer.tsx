@@ -35,6 +35,7 @@ export default function Footer() {
             <Link href="/terms" className="text-xs text-[#757575] hover:text-white transition-colors">利用規約</Link>
             <Link href="/privacy" className="text-xs text-[#757575] hover:text-white transition-colors">プライバシーポリシー</Link>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-xs text-[#757575] hover:text-white transition-colors">お問い合わせ</a>
+            <Link href="/about" className="text-xs text-[#757575] hover:text-white transition-colors">サウナ子について</Link>
             <Link href="/faq" className="text-xs text-[#757575] hover:text-white transition-colors">よくある質問</Link>
             <Link href="/for-owners" className="text-xs text-[#757575] hover:text-white transition-colors">施設掲載のご案内</Link>
           </div>
@@ -104,6 +105,7 @@ export default function Footer() {
                 <li><Link href="/search" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">施設を探す</Link></li>
                 <li><Link href="/articles" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">記事</Link></li>
                 <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
+                <li><Link href="/about" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">サウナ子について</Link></li>
               </ul>
             </div>
 

@@ -93,10 +93,13 @@ const siteJsonLd = {
       alternateName: 'saunako',
       url: 'https://www.saunako.jp',
       logo: 'https://www.saunako.jp/saunako-avatar.webp',
+      description: '全国47都道府県の個室・プライベートサウナを網羅する比較・検索サービス',
+      foundingDate: '2026-01',
       sameAs: [
         'https://x.com/saunako_jp',
         'https://www.instagram.com/saunako_jp/',
       ],
+      knowsAbout: ['個室サウナ', 'プライベートサウナ', '貸切サウナ'],
     },
   ],
 };

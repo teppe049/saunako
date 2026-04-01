@@ -106,8 +106,13 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     author: {
       '@type': 'Person',
       name: meta.author,
-      url: 'https://www.saunako.jp',
+      url: 'https://www.saunako.jp/about',
       image: 'https://www.saunako.jp/saunako-avatar.webp',
+      jobTitle: '個室サウナリサーチャー',
+      sameAs: [
+        'https://x.com/saunako_jp',
+        'https://www.instagram.com/saunako_jp/',
+      ],
     },
     publisher: {
       '@type': 'Organization',
