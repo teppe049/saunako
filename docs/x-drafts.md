@@ -816,7 +816,7 @@ https://www.saunako.jp/facilities/4?utm_source=x&utm_medium=social
 
 ### 画像
 - public/facilities/4-0.webp（サウナ室内部・間接照明）
-- public/facilities/4-1.webp（サウナ室・別角度）
+- public/facilities/4-1.webp（水風呂・整い椅子）
 - public/facilities/4-2.webp（サウナ室・木壁）
 - public/facilities/4-3.webp（ラウンジスペース）
 
@@ -843,7 +843,7 @@ https://www.saunako.jp/facilities/27?utm_source=x&utm_medium=social
 ```
 
 ### 画像
-- public/facilities/27-0.webp（和風エントランス・ロゴ）
+- public/facilities/27-0.webp（岩風呂）
 - public/facilities/27-1.webp（畳の休憩室）
 - public/facilities/27-2.webp（藍色の陶器水風呂）
 - public/facilities/27-3.webp（休憩スペース）
