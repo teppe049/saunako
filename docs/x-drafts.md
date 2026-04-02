@@ -822,7 +822,7 @@ https://www.saunako.jp/facilities/4?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-02 午後 — TAKENO-YA (id=27)「知ってた？」
+## ~~2026-04-02 午後 — TAKENO-YA (id=27)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
