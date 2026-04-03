@@ -850,7 +850,7 @@ https://www.saunako.jp/facilities/27?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-03 午前 — UUSIN by NEXT SAUNA (id=60) ターゲット型【平日サウナ】
+## ~~2026-04-03 午前 — UUSIN by NEXT SAUNA (id=60) ターゲット型【平日サウナ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
