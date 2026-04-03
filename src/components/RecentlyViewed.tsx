@@ -1,8 +1,9 @@
 'use client';
 
-import { useSyncExternalStore, useMemo } from 'react';
+import { useSyncExternalStore, useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getFavoriteFacilities } from '@/app/favorites/actions';
 import type { Facility } from '@/lib/types';
 
 const STORAGE_KEY = 'saunako_recent';
@@ -31,16 +32,24 @@ function getServerSnapshot() {
   return EMPTY;
 }
 
-export default function RecentlyViewed({ allFacilities }: { allFacilities: Facility[] }) {
+export default function RecentlyViewed() {
   const recentIds = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const [facilities, setFacilities] = useState<Facility[]>([]);
+  const [, startTransition] = useTransition();
 
-  const recentFacilities = useMemo(() => {
-    if (recentIds.length === 0) return [];
-    const facilityMap = new Map(allFacilities.map((f) => [f.id, f]));
-    return recentIds.map((id) => facilityMap.get(id)).filter((f): f is Facility => !!f);
-  }, [recentIds, allFacilities]);
+  useEffect(() => {
+    const ids = recentIds.slice(0, 6);
+    startTransition(async () => {
+      if (ids.length === 0) {
+        setFacilities([]);
+      } else {
+        const data = await getFavoriteFacilities(ids);
+        setFacilities(data);
+      }
+    });
+  }, [recentIds]);
 
-  if (recentFacilities.length === 0) return null;
+  if (facilities.length === 0) return null;
 
   return (
     <section className="bg-bg py-6 md:py-12">
@@ -50,7 +59,7 @@ export default function RecentlyViewed({ allFacilities }: { allFacilities: Facil
         </div>
 
         <div className="flex gap-3 overflow-x-auto pb-2 pr-5 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 md:pr-0 scrollbar-hide">
-          {recentFacilities.slice(0, 6).map((facility) => (
+          {facilities.map((facility) => (
             <Link
               key={facility.id}
               href={`/facilities/${facility.id}`}

@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AREA_GROUPS, REGION_GROUPS, getRegionByCode } from '@/lib/types';
-import { getAreaFacilityCounts } from '@/lib/facilities';
 import { trackSearch, trackFilterChange } from '@/lib/analytics';
 
 interface SearchHeaderBarProps {
@@ -17,6 +16,7 @@ interface SearchHeaderBarProps {
   areaSlug?: string;
   locationName?: string;
   hasOrigin?: boolean;
+  areaCounts?: Record<string, number>;
 }
 
 type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
@@ -42,7 +42,7 @@ const CHEVRON_SVG = (
   </svg>
 );
 
-export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug, locationName, hasOrigin }: SearchHeaderBarProps) {
+export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug, locationName, hasOrigin, areaCounts = {} }: SearchHeaderBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -194,7 +194,6 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   };
 
   const showAreaRow = prefectureCode && AREA_GROUPS[prefectureCode];
-  const areaCounts = prefectureCode ? getAreaFacilityCounts(prefectureCode) : {};
   const areas = prefectureCode ? AREA_GROUPS[prefectureCode] : undefined;
 
   return (

@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import SearchHeaderBar from '@/components/SearchHeaderBar';
 import SearchInteractivePanel from '@/components/SearchInteractivePanel';
-import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug } from '@/lib/facilities';
+import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug, getAreaFacilityCounts } from '@/lib/facilities';
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES, getRegionByCode } from '@/lib/types';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
@@ -213,6 +213,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         areaSlug={areaSlug}
         locationName={locationName}
         hasOrigin={!!origin}
+        areaCounts={prefecture ? getAreaFacilityCounts(prefecture) : {}}
       />
       <div className="flex flex-col flex-1 min-h-0">
         <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} origin={origin} />

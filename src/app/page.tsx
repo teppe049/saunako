@@ -357,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Recently Viewed */}
-      <RecentlyViewed allFacilities={allFacilities} />
+      <RecentlyViewed />
 
       {/* FAQ JSON-LD */}
       <script

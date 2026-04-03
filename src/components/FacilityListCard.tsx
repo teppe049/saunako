@@ -3,7 +3,7 @@
 import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
-import { getTimeSlotTags, isFacilityClosed } from '@/lib/facilities';
+import { getTimeSlotTags, isFacilityClosed } from '@/lib/facility-utils';
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
