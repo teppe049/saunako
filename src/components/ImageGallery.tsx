@@ -7,9 +7,10 @@ interface ImageGalleryProps {
   images: string[];
   facilityName: string;
   altPrefix?: string;
+  priority?: boolean;
 }
 
-export default function ImageGallery({ images, facilityName, altPrefix }: ImageGalleryProps) {
+export default function ImageGallery({ images, facilityName, altPrefix, priority = false }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -48,6 +49,7 @@ export default function ImageGallery({ images, facilityName, altPrefix }: ImageG
           fill
           sizes="(max-width: 768px) 100vw, 880px"
           className={images.length > 0 ? 'object-cover' : 'object-contain p-8'}
+          priority={priority && selectedIndex === 0}
         />
       </div>
       {/* サムネイル: 画像が1枚以下の場合は非表示 */}

@@ -201,7 +201,7 @@ export default function Home() {
 
           {/* Mobile: horizontal scroll, PC: 3-column grid */}
           <div className="flex gap-3 overflow-x-auto pb-2 pr-5 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 md:pr-0 scrollbar-hide">
-            {popularFacilities.map((facility) => (
+            {popularFacilities.map((facility, i) => (
               <Link
                 key={facility.id}
                 href={`/facilities/${facility.id}`}
@@ -215,6 +215,7 @@ export default function Home() {
                     fill
                     sizes="(max-width: 768px) 72vw, 33vw"
                     className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
+                    priority={i === 0}
                   />
                 </div>
 

@@ -337,7 +337,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           <div className="w-full md:w-[880px] md:flex-shrink-0">
             <div className="flex flex-col">
               {/* a. Image Gallery */}
-              <ImageGallery images={facility.images} facilityName={facility.name} altPrefix={generateImageAlt(facility)} />
+              <ImageGallery images={facility.images} facilityName={facility.name} altPrefix={generateImageAlt(facility)} priority />
               <p className="hidden md:block text-xs text-gray-400 px-4 pt-2 md:px-0">
                 ※ 画像は各施設の公式サイトより引用しています。掲載に問題がある場合はお問い合わせください。
               </p>

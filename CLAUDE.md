@@ -3,6 +3,18 @@
 個室サウナ検索プラットフォーム。Next.js 16 + React 19 + TypeScript + Tailwind CSS v4。
 デプロイ先: Vercel / ドメイン: www.saunako.jp
 
+## 「個室サウナ」の定義と掲載基準
+
+**「他のグループと共有がない状態で使えるサウナ」= 個室サウナ**
+
+### 掲載対象
+- 屋内個室サウナ / グループ貸切サウナ → **掲載**
+- バレルサウナ・サウナ小屋（常設・貸切）→ **掲載**（タグで区別）
+- 宿泊施設のサウナ（日帰りプランあり）→ **掲載**（サウナ単体で予約・利用できる場合のみ）
+- 宿泊施設のサウナ（宿泊者専用）→ **掲載しない**
+- テントサウナ・キャンプ場 → **掲載しない**
+- 大型スパ・スーパー銭湯の共用サウナ → **掲載しない**
+
 ## コマンド
 
 | Command | Description |
@@ -21,6 +33,8 @@
 | `node scripts/download-images.mjs` | 施設画像ダウンロード |
 | `node scripts/check-articles.mjs` | 記事データの整合性チェック |
 | `node scripts/capture-x-header.mjs` | Xヘッダー画像キャプチャ |
+| `node scripts/preview-images.mjs` | X投稿プレビュー（week/日付/施設ID指定可） |
+| `node scripts/check-x-weight.js` | X投稿ウェイトチェック（hook用） |
 
 ## 環境変数
 
@@ -92,6 +106,50 @@ Skills/                       # Claude Code カスタムスキル
 - **画像は未最適化**: `images.unoptimized: true` 設定（Vercelの画像最適化を使わない）
 - **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` への301リダイレクトが `next.config.ts` に設定済み
 - **analyticsトラッキング**: `data-track-*` 属性 + `AnalyticsTracker`（グローバルイベントデリゲーション）を使う。トラッキングのためだけにコンポーネントをクライアント化しない
+
+## SEO運用ルール
+
+### 一括変更の禁止（3/27策定）
+3/10に128施設のseoTitleを一括変更した結果、Googleの品質フィルターが発動し検索トラフィックが完全消滅した（3/11以降 imp=0）。
+
+- **seoTitle / seoDescription の変更は1回のデプロイにつき最大10施設**
+- 変更後は **1〜2週間あけてから** 次のバッチを実施
+- `/analytics-pdca` で Google SC の imp/clicks を確認してから次に進む
+- 記事タイトル（MDX frontmatter の title）も同様に段階的に変更
+
+### E-E-A-T を意識したコンテンツ作成
+Googleは E-E-A-T（Experience, Expertise, Authoritativeness, Trustworthiness）を重視。特に「Experience（実体験）」が鍵。
+
+- **施設説明・記事は「AIが書いただけ」にしない** — Teppeiの実体験や具体的なエピソードを含める
+- 記事に「サウナ子が実際に取材しました」等の一次情報感を出す
+- 施設データは公式サイトや実地確認で裏取りし、情報の正確性を担保
+- サウナ子のキャラクターを活かした独自の切り口・感想を付加（テンプレ感を避ける）
+
+## X投稿フォーマット（3/30〜計測中）
+
+**本文の情報ギャップルール:**
+- **料金（具体額）を本文に書かない**
+- **具体的なエリア名（銀座・広島・三軒茶屋等）を本文に書かない** → 「都内」「中国地方」「関西」等でぼかす
+- 末尾の「で、肝心の料金とエリアなんだけど——」がリプへの引きになるため、本文で出すと矛盾する
+
+**本文構成:**
+```
+{フック（知ってた？/ターゲット型等）— エリアはぼかす}
+
+{施設の特徴・設備の紹介 — 料金は書かない}
+
+で、肝心の料金とエリアなんだけど——
+```
+
+**リプライ構成:**
+```
+{施設名}
+💰 {料金}
+📍 {具体エリア・最寄り駅} 徒歩○分
+https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
+```
+
+**判定:** 4/5 Week4レビューでリプ到達率・Organic Social PVを確認
 
 ## MCP 接続
 

@@ -23,7 +23,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    unoptimized: true,
+    // Vercel Hobby: 月5,000 transformations 無料枠
+    formats: ['image/avif', 'image/webp'],
   },
   async redirects() {
     return [

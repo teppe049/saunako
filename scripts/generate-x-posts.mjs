@@ -64,7 +64,6 @@ function generatePost(facility) {
   lines.push('');
   lines.push('※画像は公式サイトよりお借りしています');
   lines.push('');
-  lines.push('#個室サウナ #サウナ #サ活 #' + area + 'サウナ');
 
   return lines.join('\n');
 }
