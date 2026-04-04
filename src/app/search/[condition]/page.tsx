@@ -99,6 +99,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${config.h1} | サウナ子`,
     description: config.description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.saunako.jp/search/${condition}`,
     },

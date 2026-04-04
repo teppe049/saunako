@@ -125,6 +125,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.saunako.jp/search/${condition}/${prefecture}`,
     },
