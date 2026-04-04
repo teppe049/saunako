@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/go/', '/*/opengraph-image', '/opengraph-image'],
+      disallow: ['/go/', '/search', '/*/opengraph-image', '/opengraph-image'],
     },
     sitemap: ['https://www.saunako.jp/sitemap.xml'],
   }

@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.saunako.jp/articles/tag/${encodeURIComponent(tag)}`,
     },
