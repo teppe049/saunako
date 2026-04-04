@@ -28,7 +28,11 @@ export async function GET(
     targetUrlString = facility.website;
   }
 
-  if (!targetUrlString) {
+  if (
+    !targetUrlString ||
+    (!targetUrlString.startsWith('https://') &&
+      !targetUrlString.startsWith('http://'))
+  ) {
     return NextResponse.redirect(
       new URL(`/facilities/${id}`, request.url)
     );
