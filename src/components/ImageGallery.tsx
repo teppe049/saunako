@@ -116,6 +116,7 @@ export default function ImageGallery({ images, facilityName, altPrefix, priority
               fill
               sizes="100vw"
               className="object-contain"
+              loading="lazy"
             />
           </div>
 
