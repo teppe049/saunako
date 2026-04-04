@@ -932,7 +932,7 @@ https://www.saunako.jp/facilities/93?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-04 午後 — 発酵サウナ (id=226)「知ってた？」
+## ~~2026-04-04 午後 — 発酵サウナ (id=226)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
