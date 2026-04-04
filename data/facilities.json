@@ -16205,7 +16205,11 @@
     "website": "http://gravity-iwate.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "テレビ・モニター",
+      "アロマ水",
+      "ととのい椅子"
+    ],
     "note": "水風呂なし（水シャワーあり）、温度調整60-110℃、タイマッサージオプションあり、水着着用で男女利用可",
     "images": [
       "/facilities/211-0.webp",
@@ -17690,7 +17694,10 @@
     "website": "https://www.mihota.jp/sauna",
     "phone": "024-954-2626",
     "bookingUrl": "https://coubic.com/mihota_sauna",
-    "amenities": [],
+    "amenities": [
+      "ととのい椅子",
+      "ポンチョ"
+    ],
     "note": "HARVIA電気ストーブ。フィンランド式ロウリュ。天然温泉入浴料込み。2024年11月オープン",
     "images": [
       "/facilities/240-0.webp",
@@ -31344,7 +31351,11 @@
     "website": "https://coubic.com/sherokumasauna",
     "phone": "026-219-6644",
     "bookingUrl": "https://coubic.com/sherokumasauna/booking_pages",
-    "amenities": [],
+    "amenities": [
+      "アロマ水",
+      "食事提供",
+      "アルコール提供"
+    ],
     "note": "SAUUU（エストニア式・定員6名・2名まで16,500円）とDEW（フィンランド式・定員8名・6名まで33,000円）の2棟。水風呂は川の超軟水で季節により1〜18℃。宿泊プランあり。黒姫駅から約6km。",
     "images": [
       "/facilities/438-0.webp",
