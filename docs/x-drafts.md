@@ -904,7 +904,7 @@ https://www.saunako.jp/facilities/54?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-04 午前 — sauna & cafe tere saun (id=93) ターゲット型【友達とサウナ】
+## ~~2026-04-04 午前 — sauna & cafe tere saun (id=93) ターゲット型【友達とサウナ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
