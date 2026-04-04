@@ -81,6 +81,9 @@ export default function ImageGallery({ images, facilityName, altPrefix, priority
       {/* Lightbox */}
       {lightboxOpen && images.length > 0 && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="画像ギャラリー"
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setLightboxOpen(false)}
         >

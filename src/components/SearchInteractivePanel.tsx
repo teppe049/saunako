@@ -111,6 +111,10 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
           </div>
         )}
 
+        <p className="px-4 md:px-5 py-2 text-sm text-text-secondary">
+          <span className="font-bold text-text-primary">{facilities.length}件</span>の個室サウナが見つかりました
+        </p>
+
         <div className="px-4 md:px-0 py-2 md:py-0 flex flex-col gap-3 md:gap-0">
           {displayedFacilities.map((facility, index) => (
             <FacilityListCard

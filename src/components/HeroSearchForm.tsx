@@ -159,6 +159,7 @@ export default function HeroSearchForm() {
             </label>
             <button
               type="button"
+              aria-pressed={coupleOk}
               onClick={() => setCoupleOk(!coupleOk)}
               className={`h-11 md:h-12 rounded-lg px-2 md:px-4 text-sm font-medium transition-colors border ${
                 coupleOk

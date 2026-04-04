@@ -44,6 +44,8 @@ export default function SearchSortBar({
       {showAreaRow && areas ? (
         <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide flex-1 min-w-0 md:flex-wrap">
           <button
+            aria-label="すべてのエリアを表示"
+            aria-pressed={!areaSlug}
             onClick={() => onAreaChange('')}
             className={`px-2.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
               !areaSlug
@@ -56,6 +58,8 @@ export default function SearchSortBar({
           {areas.map((area) => (
             <button
               key={area.slug}
+              aria-label={`${area.label}エリアで絞り込み`}
+              aria-pressed={areaSlug === area.slug}
               onClick={() => onAreaChange(area.slug)}
               className={`px-2.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium transition-colors border flex-shrink-0 ${
                 areaSlug === area.slug
