@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
-import { getAllArticles, getAllTags, getArticlesByTag, getArticlesByCategory } from '@/lib/articles'
+import { getAllArticles, getArticlesByCategory } from '@/lib/articles'
 import { searchFacilities } from '@/lib/facilities'
 
 const activeFacilities = facilities.filter((f) => !f.closedAt)
@@ -108,16 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }))
 
-  // タグページ（記事3件以上のタグのみ — 薄いコンテンツページを除外）
-  const tags = getAllTags()
-  const tagPages: MetadataRoute.Sitemap = tags
-    .filter((tag) => getArticlesByTag(tag).length >= 3)
-    .map((tag) => ({
-      url: `${baseUrl}/articles/tag/${encodeURIComponent(tag)}`,
-      lastModified: latestArticleDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    }))
+  // タグページ — noindex に設定済みのためサイトマップからも除外
 
   // 条件別ランディングページ
   const conditionSlugs = [
@@ -163,5 +154,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...staticPages, ...areaPages, ...subAreaPages, ...conditionPages, ...crossPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages, ...tagPages]
+  return [...staticPages, ...areaPages, ...subAreaPages, ...conditionPages, ...crossPages, ...facilityPages, ...articlesListPage, ...articlePages, ...categoryPages]
 }
