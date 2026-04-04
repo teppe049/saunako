@@ -51,7 +51,7 @@ export default function MobileFilterSheet({
   const searchParams = useSearchParams();
 
   return (
-    <div className="md:hidden fixed inset-0 z-50">
+    <div role="dialog" aria-modal="true" aria-label="フィルター" className="md:hidden fixed inset-0 z-50">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/40"

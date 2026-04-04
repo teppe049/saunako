@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Users, Banknote, User, Search, Clock } from 'lucide-react';
 import {
@@ -18,15 +18,15 @@ export default function HeroSearchForm() {
   const [duration, setDuration] = useState('');
   const [selected, setSelected] = useState<SearchOption | null>(null);
 
-  const handleMinChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = Number(e.target.value);
     setPriceRange(([, max]) => [Math.min(val, max - PRICE_STEP), max]);
-  }, []);
+  };
 
-  const handleMaxChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = Number(e.target.value);
     setPriceRange(([min]) => [min, Math.max(val, min + PRICE_STEP)]);
-  }, []);
+  };
 
   const handleSearch = () => {
     const params = new URLSearchParams();

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { MapPin, Search, X, LocateFixed } from 'lucide-react';
 import {
   AREA_OPTIONS, LOCATION_OPTIONS,
@@ -20,7 +20,7 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
   const comboRef = useRef<HTMLDivElement>(null);
   const listboxId = 'hero-area-listbox';
 
-  const filtered = useMemo(() => {
+  const filtered = (() => {
     if (!query) return [];
     const queryLower = query.toLowerCase();
 
@@ -53,7 +53,7 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
       .map((o) => ({ type: 'location' as const, data: o }));
 
     return [...areaResults, ...locationResults].slice(0, 10);
-  }, [query]);
+  })();
 
   useEffect(() => {
     function handleMouseDown(e: MouseEvent) {

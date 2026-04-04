@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface ImageGalleryProps {
@@ -14,17 +14,16 @@ export default function ImageGallery({ images, facilityName, altPrefix, priority
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (!lightboxOpen) return;
-    if (e.key === 'Escape') setLightboxOpen(false);
-    if (e.key === 'ArrowLeft') setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
-    if (e.key === 'ArrowRight') setSelectedIndex((prev) => (prev + 1) % images.length);
-  }, [lightboxOpen, images.length]);
-
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!lightboxOpen) return;
+      if (e.key === 'Escape') setLightboxOpen(false);
+      if (e.key === 'ArrowLeft') setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
+      if (e.key === 'ArrowRight') setSelectedIndex((prev) => (prev + 1) % images.length);
+    };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
+  }, [lightboxOpen, images.length]);
 
   // Body scroll lock
   useEffect(() => {

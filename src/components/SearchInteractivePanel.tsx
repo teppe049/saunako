@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useMemo, useEffect, useSyncExternalStore } from 'react';
+import { useState, useRef, useEffect, useSyncExternalStore } from 'react';
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
@@ -49,11 +49,10 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
     () => false, // SSR snapshot: assume mobile (map hidden)
   );
 
-  const visibleFacilities = useMemo(() => {
-    // Skip bounds filtering when the map is not visible (mobile)
-    if (!isMapVisible || !mapBounds) return facilities;
-    return facilities.filter((f) => isInBounds(f, mapBounds));
-  }, [facilities, mapBounds, isMapVisible]);
+  // Skip bounds filtering when the map is not visible (mobile)
+  const visibleFacilities = (!isMapVisible || !mapBounds)
+    ? facilities
+    : facilities.filter((f) => isInBounds(f, mapBounds));
 
   const PAGE_SIZE = 20;
   // Reset pagination when filter/map bounds change the visible set
@@ -62,19 +61,19 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
   const displayedFacilities = visibleFacilities.slice(0, displayCount);
   const remainingCount = visibleFacilities.length - displayCount;
 
-  const handleMapSelect = useCallback((facility: Facility) => {
+  const handleMapSelect = (facility: Facility) => {
     setSelectedId(facility.id);
     const cardEl = cardRefs.current.get(facility.id);
     if (cardEl) {
       cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  }, []);
+  };
 
-  const handleCardHover = useCallback((id: number | null) => {
+  const handleCardHover = (id: number | null) => {
     setHoveredId(id);
-  }, []);
+  };
 
-  const handleBoundsChange = useCallback((bounds: MapBounds) => {
+  const handleBoundsChange = (bounds: MapBounds) => {
     // On initial load, apply bounds immediately
     if (isInitialBounds.current) {
       setMapBounds(bounds);
@@ -83,22 +82,22 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
       // Store pending bounds — user needs to click "Search this area" to apply
       setPendingBounds(bounds);
     }
-  }, []);
+  };
 
-  const handleSearchArea = useCallback(() => {
+  const handleSearchArea = () => {
     if (pendingBounds) {
       setMapBounds(pendingBounds);
       setPendingBounds(null);
     }
-  }, [pendingBounds]);
+  };
 
-  const setCardRef = useCallback((id: number, el: HTMLDivElement | null) => {
+  const setCardRef = (id: number, el: HTMLDivElement | null) => {
     if (el) {
       cardRefs.current.set(id, el);
     } else {
       cardRefs.current.delete(id);
     }
-  }, []);
+  };
 
   return (
     <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
