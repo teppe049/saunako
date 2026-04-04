@@ -2915,7 +2915,12 @@
     "website": "https://totonouto.com/",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "化粧水・乳液",
+      "アロマ水"
+    ],
     "note": "8種のロウリュ水",
     "images": [
       "/facilities/35-0.webp",
@@ -16649,7 +16654,13 @@
     "website": "https://www.kutamarusauna.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "サウナハット貸出",
+      "ポンチョ"
+    ],
     "note": "コンテナハウス、プライベートビーチ、インフィニティチェア",
     "images": [
       "/facilities/220-0.webp",
@@ -17537,7 +17548,9 @@
     "website": "https://kobitonomori-iwaki.com/",
     "phone": null,
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "駐車場あり"
+    ],
     "note": "ヒノキ材バレルサウナ。水風呂は浴槽＋川の2種。山の伏流水使用。自然体験施設内",
     "images": [
       "/facilities/237-0.webp",
@@ -17723,7 +17736,9 @@
     "website": "https://lakearea.roots.jp/",
     "phone": "0120-01-9555",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "駐車場あり"
+    ],
     "note": "ドライ・スチーム・バレルの3種サウナ。猪苗代湖ビュー。グランピング併設",
     "images": [
       "/facilities/241-0.webp",
@@ -28497,7 +28512,7 @@
     "address": "東京都目黒区中目黒1-9-18",
     "nearestStation": "中目黒駅",
     "walkMinutes": 6,
-    "priceMin": 0,
+    "priceMin": 12000,
     "duration": 90,
     "capacity": 3,
     "features": {
@@ -28509,7 +28524,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "",
+    "businessHours": "8:30〜25:00",
     "holidays": "",
     "website": "https://sauna-kiki.jp/",
     "phone": "",
@@ -28543,7 +28558,8 @@
     "closedAt": null,
     "plans": null,
     "timeSlots": null,
-    "seoTitle": "SAUNA汽汽｜中目黒の濃霧スチーム個室サウナ 口コミ・予約 | サウナ子"
+    "seoTitle": "SAUNA汽汽｜中目黒の濃霧スチーム個室サウナ 口コミ・予約 | サウナ子",
+    "priceNote": "朝割90分/1〜2名・完全個室"
   },
   {
     "id": 396,
@@ -28978,7 +28994,12 @@
     "website": "https://kabuku-co.jp/sauna/",
     "phone": "0599-77-7369",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "飲料水",
+      "アロマ水",
+      "ポンチョ"
+    ],
     "note": "5名以上はヒノキサウナ+2,500円/人、山サウナ+3,500円/人。山サウナは「曙」（展望）と「波音」（畳敷き茶室風）の2室。水風呂はドラム缶風呂（山サウナ）/プール（ヒノキサウナ）。",
     "images": [
       "/facilities/402-0.webp",
@@ -30796,7 +30817,9 @@
     "website": "https://morinosauna.net/",
     "phone": null,
     "bookingUrl": "https://reserva.be/morinosauna_rv",
-    "amenities": [],
+    "amenities": [
+      "ととのい椅子"
+    ],
     "note": "日本初のエストニア製薪サウナストーブ。天然水かけ流し水風呂（夏季18℃以下）。森林の中のインフィニティチェアで外気浴。水着着用・男女共用。予約は5日前までWebで受付、4日以内はメール（morinosauna@gmail.com）。冬季スタッドレスタイヤ必須",
     "images": [
       "/facilities/430-0.webp",
@@ -30847,7 +30870,13 @@
     "website": "https://www.tramonto-barrelsauna.com/",
     "phone": "070-1870-8277",
     "bookingUrl": "https://www.tramonto-barrelsauna.com/",
-    "amenities": [],
+    "amenities": [
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "サウナハット貸出",
+      "水着レンタル",
+      "ポンチョ"
+    ],
     "note": "HATTORI FIELD内に併設されたフィンランド式バレルサウナ。天然地下水水風呂、セルフロウリュ可。貸切プランは1〜6名対応。キャンプ場併設。支払いはクレジットカード・デビットカードのみ",
     "images": [
       "/facilities/431-0.webp",
@@ -30910,7 +30939,11 @@
     "website": "https://honokanoyu-hiroshima.jp/",
     "phone": "0826-75-3619",
     "bookingUrl": "https://airrsv.net/honokanoyu-hrsm-poka2-485/calendar",
-    "amenities": [],
+    "amenities": [
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "Wi-Fi"
+    ],
     "note": "完全貸切天然温泉施設。プレミアム個室のみサウナ・水風呂付き（スタンダード・セミプレミアムにはサウナなし）。内湯・露天風呂・マッサージチェアも完備。土日祝・繁忙期は+1,100円。入湯税50円/人別途。中国自動車道千代田ICから車約5分。天然鉄泉（にごり湯）",
     "images": [
       "/facilities/432-0.webp",
@@ -31730,7 +31763,12 @@
     "website": "https://www.smoothandliving.com/bessho-sauna",
     "phone": "070-8557-9269",
     "bookingUrl": "https://select-type.com/rsv/?id=8HCJTsxu6QM",
-    "amenities": [],
+    "amenities": [
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "Bluetooth スピーカー",
+      "水着レンタル"
+    ],
     "note": "2024年7月オープン。カフェ Smooth & Living の庭に併設。サウナ利用には前後1時間のカフェ利用付き（コーヒーフリードリンク）。水着550円・バスタオル220円・タオル110円・Bluetoothスピーカー550円はレンタル。サブスク会員-1000円、宿泊者・上田市民-500円割引あり。",
     "images": [
       "/facilities/444-0.webp",
@@ -31861,7 +31899,10 @@
     "website": "https://idemaru.com/",
     "phone": "090-1433-2539",
     "bookingUrl": "https://coubic.com/idemarutei",
-    "amenities": [],
+    "amenities": [
+      "Bluetooth スピーカー",
+      "館内着"
+    ],
     "note": "築100年の蚕室造り古民家。水着またはゆあみ着着用必須。タオルレンタル500円、Bluetoothスピーカーレンタル500円、フェイスタオル300円。宿泊者は1,000円割引。宿泊（1名9,500円）・RVパークも併設。田んぼと浅間山を望むロケーション。",
     "images": [
       "/facilities/446-0.webp",
@@ -33166,7 +33207,7 @@
     "address": "岐阜県岐阜市殿町1-10",
     "nearestStation": "名鉄岐阜駅",
     "walkMinutes": 13,
-    "priceMin": null,
+    "priceMin": 5000,
     "duration": null,
     "capacity": 2,
     "features": {
@@ -33207,7 +33248,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": null,
-    "seoDescription": null
+    "seoDescription": null,
+    "priceNote": "日帰り2時間/1名（日〜木のみ・電話予約）"
   },
   {
     "id": 465,
@@ -33232,7 +33274,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": null,
+    "businessHours": "9:30〜21:00",
     "holidays": null,
     "website": "https://tsuzuya-village.com/",
     "phone": "0574-50-6435",
@@ -33593,7 +33635,16 @@
     "website": "https://sauna-hakusan.com/",
     "phone": "076-273-4646",
     "bookingUrl": "https://saunahakusan.booking.chillnn.com/",
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "シャンプー・ボディソープ",
+      "ドライヤー",
+      "サウナマット",
+      "水着レンタル",
+      "食事提供",
+      "アルコール提供",
+      "持ち込みOK"
+    ],
     "note": "ペンシオーネセイモア内。県産杉のオリジナルログサウナ2棟（ケルタイネン定員8名・ムスタ定員6名）。薪ストーブのセルフロウリュ。天然湧水の水風呂。天然温泉・露天風呂あり。貸切プラン12,000円〜。宿泊も可能（チェックイン15:00/アウト10:00）。金沢駅から車で約50分。アメニティ要確認。",
     "images": [
       "/facilities/471-0.webp",
@@ -33724,7 +33775,11 @@
     "website": "https://www.shiokatsu.com",
     "phone": "",
     "bookingUrl": null,
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "水着レンタル",
+      "食事提供"
+    ],
     "note": "予約はInstagram DMから。海底湧水を使った天然冷水の水風呂あり",
     "images": [
       "/facilities/476-0.webp",
@@ -33775,7 +33830,10 @@
     "website": "https://www.koukasha.com",
     "phone": "083-928-0057",
     "bookingUrl": "https://tol-app.jp/s/koukasha",
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "水着レンタル"
+    ],
     "note": "水着着用制。レンタル水着500円・バスタオル300円・フェイスタオル200円あり。3名以上のグループは貸切のみ。小学生以下利用不可",
     "images": [
       "/facilities/477-0.webp",
@@ -33889,7 +33947,10 @@
     "website": "https://bokuoyo.com",
     "phone": "090-5262-7174",
     "bookingUrl": "https://select-type.com/rsv/?id=OdgFChrk_SU&c_id=421819",
-    "amenities": [],
+    "amenities": [
+      "タオルセット",
+      "水着レンタル"
+    ],
     "note": "水着着用の男女混浴スタイル。地下120mの自噴冷鉱泉（pH9.6アルカリ性・硫黄成分含有）を水風呂に使用。薪ストーブ式サウナでお茶・漢方・薬草のロウリュ。石鹸・シャンプー使用不可。レンタル水着・タオル少量あり",
     "images": [
       "/facilities/479-0.webp",
