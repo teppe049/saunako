@@ -10,6 +10,10 @@ interface FacilityCardProps {
 }
 
 export default function FacilityCard({ facility, index = 0, showComment = true }: FacilityCardProps) {
+  const cheapestPlan = facility.plans?.length
+    ? facility.plans.reduce((a, b) => (b.price < a.price ? b : a))
+    : null;
+
   return (
     <Link
       href={`/facilities/${facility.id}`}
@@ -38,6 +42,13 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
       <div className="p-4">
         <h3 className="font-bold text-text-primary mb-1">{facility.name}</h3>
 
+        {/* Saunako comment — 施設名直下で目立たせる */}
+        {showComment && facility.saunakoCommentShort && (
+          <p className="text-sm text-saunako mb-2 line-clamp-2">
+            「{facility.saunakoCommentShort}」
+          </p>
+        )}
+
         {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
           <p className="text-sm text-text-secondary mb-2">
             {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
@@ -48,7 +59,9 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
           {facility.priceMin > 0 ? (
             <>
               <span className="font-bold">{facility.priceMin.toLocaleString()}円</span>
-              <span className="text-text-secondary">〜 / {facility.duration}分</span>
+              <span className="text-text-secondary">
+                〜 / {facility.duration}分{cheapestPlan ? ` / ${cheapestPlan.capacity}名` : ''}
+              </span>
               {facility.plans && facility.plans.length > 1 && (
                 <span className="text-text-tertiary text-xs ml-1.5">({facility.plans.length}プラン)</span>
               )}
@@ -58,14 +71,8 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
           )}
         </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1 mb-3">
-          {facility.features.waterBath && (
-            <span className="tag tag-primary">水風呂</span>
-          )}
-          {facility.features.selfLoyly && (
-            <span className="tag tag-primary">ロウリュ可</span>
-          )}
+        {/* Tags — 水風呂・ロウリュは大多数が対応済みのため非表示 */}
+        <div className="flex flex-wrap gap-1 mb-2">
           {facility.features.outdoorAir && (
             <span className="tag tag-primary">外気浴</span>
           )}
@@ -74,12 +81,9 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
           )}
         </div>
 
-        {/* Saunako comment */}
-        {showComment && facility.saunakoCommentShort && (
-          <div className="saunako-comment text-sm">
-            <span className="text-saunako font-bold">サウナ子</span>
-            <span className="text-text-secondary ml-1">「{facility.saunakoCommentShort}」</span>
-          </div>
+        {/* Note — 施設の特記事項 */}
+        {facility.note && (
+          <p className="text-xs text-text-tertiary line-clamp-1 mb-2">{facility.note}</p>
         )}
 
         {/* Website link */}
