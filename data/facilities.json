@@ -24110,7 +24110,7 @@
     "address": "滋賀県長浜市元浜町17-2",
     "nearestStation": "長浜駅",
     "walkMinutes": 8,
-    "priceMin": 7980,
+    "priceMin": 9980,
     "duration": 80,
     "capacity": 4,
     "features": {
@@ -24131,7 +24131,7 @@
       "タオル",
       "アメニティ"
     ],
-    "note": "町家蔵サウナ・日帰り利用可（じゃらん遊び体験から予約）・伊吹薬草ロウリュ。平日¥7,980/土日¥9,980（じゃらん価格）。",
+    "note": "町家蔵サウナ・日帰り利用可（じゃらん遊び体験から予約）・伊吹薬草ロウリュ。¥9,980/組（じゃらん経由）。",
     "images": [
       "/facilities/320-0.webp",
       "/facilities/320-1.webp",
@@ -24145,13 +24145,7 @@
     "updatedAt": "2026-04-05",
     "plans": [
       {
-        "name": "日帰りサウナ 80分（平日）",
-        "price": 7980,
-        "duration": 80,
-        "capacity": 4
-      },
-      {
-        "name": "日帰りサウナ 80分（土日）",
+        "name": "日帰りサウナ 80分",
         "price": 9980,
         "duration": 80,
         "capacity": 4
@@ -26334,7 +26328,7 @@
     "walkMinutes": null,
     "priceMin": 3500,
     "duration": 120,
-    "capacity": 6,
+    "capacity": 4,
     "features": {
       "waterBath": true,
       "waterBathTemp": null,
@@ -26372,13 +26366,13 @@
         "name": "蔵スモークサウナ 2時間制",
         "price": 3500,
         "duration": 120,
-        "capacity": 6
+        "capacity": 4
       },
       {
         "name": "蔵スモークサウナ 3時間制",
         "price": 5000,
         "duration": 180,
-        "capacity": 6
+        "capacity": 4
       }
     ],
     "timeSlots": [
