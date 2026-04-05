@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed, getAreaSlugByLabel, parseBusinessHoursToSchema, generateImageAlt, parseBusinessHoursTags } from '@/lib/facilities';
+import { getFacilityById, getAllIds, getRelatedFacilities, isFacilityClosed, getAreaSlugByLabel, parseBusinessHoursToSchema, generateImageAlt, parseBusinessHoursTags, generateFeatureText } from '@/lib/facilities';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
@@ -141,6 +141,8 @@ export default async function FacilityDetailPage({ params }: PageProps) {
     '@type': 'FAQPage',
     mainEntity: faqItems,
   } : null;
+
+  const featureText = generateFeatureText(facility);
 
   // パンくず: エリア（サブエリア）がある場合は4階層
   const areaSlug = getAreaSlugByLabel(facility.prefecture, facility.area);
@@ -414,6 +416,11 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   <h2 className="text-text-primary text-base md:text-lg font-semibold">
                     設備・サービス
                   </h2>
+                  {featureText && (
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {featureText}
+                    </p>
+                  )}
                   {(facility.features.waterBath || facility.features.selfLoyly || facility.features.outdoorAir || facility.amenities.length > 0) ? (
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       {facility.features.waterBath && (
@@ -451,6 +458,31 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   )}
                 </div>
               </div>
+
+              {/* セクション区切り (モバイルのみ) */}
+              <div className="h-2 bg-bg md:hidden" />
+
+              {/* FAQ Section */}
+              {faqItems.length > 0 && (
+                <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
+                  <h2 className="text-text-primary text-base md:text-lg font-semibold mb-3">
+                    {facility.name}のよくある質問
+                  </h2>
+                  <div className="divide-y divide-border">
+                    {faqItems.map((item, i) => (
+                      <details key={i} className="py-3 group">
+                        <summary className="cursor-pointer font-medium text-sm md:text-base text-text-primary flex items-center justify-between gap-2">
+                          <span>{item.name}</span>
+                          <svg className="w-4 h-4 text-text-tertiary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                        </summary>
+                        <p className="mt-2 text-sm text-text-secondary leading-relaxed pl-0.5">
+                          {item.acceptedAnswer.text}
+                        </p>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
@@ -658,7 +690,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           {sameArea.length > 0 && (
             <>
               <h2 className="text-lg md:text-xl font-bold text-text-primary mb-4 md:mb-6">
-                {facility.area}エリアの個室サウナ
+                近くの個室サウナ
               </h2>
               <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 md:overflow-x-visible md:pb-0 scrollbar-hide">
                 {sameArea.map((f) => {

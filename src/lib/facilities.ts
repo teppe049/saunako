@@ -176,9 +176,17 @@ export function getNewFacilities(limit: number = 6, days: number = 30): Facility
 }
 
 export function getRelatedFacilities(facility: Facility, limit: number = 6): { sameArea: Facility[]; similarPrice: Facility[] } {
-  const sameArea = facilities
-    .filter((f) => isOpen(f) && f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area)
-    .slice(0, limit);
+  // 同一エリア → 同一都道府県の順にフォールバックして最大5件
+  let sameArea = facilities
+    .filter((f) => isOpen(f) && f.id !== facility.id && f.prefecture === facility.prefecture && f.area === facility.area);
+  if (sameArea.length < 5) {
+    const areaIds = new Set(sameArea.map((f) => f.id));
+    const samePref = facilities
+      .filter((f) => isOpen(f) && f.id !== facility.id && !areaIds.has(f.id) && f.prefecture === facility.prefecture);
+    sameArea = [...sameArea, ...samePref].slice(0, 5);
+  } else {
+    sameArea = sameArea.slice(0, 5);
+  }
 
   const priceRange = facility.priceMin > 0 ? facility.priceMin * 0.5 : 0;
   const priceMax = facility.priceMin > 0 ? facility.priceMin * 1.5 : 0;
@@ -223,6 +231,40 @@ export function getAreaSlugByLabel(prefectureCode: string, areaLabel: string): s
   if (!areas) return undefined;
   const area = areas.find((a) => a.label === areaLabel);
   return area?.slug;
+}
+
+/** 施設の特徴からサウナ子口調の紹介テキストを自動生成 */
+export function generateFeatureText(facility: Facility): string {
+  const points: string[] = [];
+
+  // サウナ設備
+  if (facility.features.selfLoyly) points.push('セルフロウリュで自分好みの蒸気を楽しめる');
+  if (facility.features.waterBath) {
+    const temp = facility.features.waterBathTemp;
+    if (temp && Number(temp) <= 15) points.push(`水風呂は${temp}℃とキンキンに冷えてる`);
+    else if (temp) points.push(`${temp}℃の水風呂でしっかりクールダウンできる`);
+    else points.push('水風呂も完備してる');
+  }
+  if (facility.features.outdoorAir) points.push('外気浴スペースで整える環境もバッチリ');
+
+  // ターゲット
+  if (facility.features.coupleOk) points.push('カップルでの利用もOK');
+  if (facility.capacity >= 4) points.push(`最大${facility.capacity}名でグループ利用にもぴったり`);
+
+  // アクセス
+  if (facility.walkMinutes != null && facility.walkMinutes <= 3) points.push('駅チカで通いやすい');
+
+  // 営業時間
+  const bhTags = parseBusinessHoursTags(facility.businessHours);
+  if (bhTags.is24h) points.push('24時間営業だからいつでも利用できる');
+  else if (bhTags.lateNight) points.push('深夜営業で仕事帰りにも立ち寄れる');
+
+  if (points.length === 0) return '';
+
+  // サウナ子口調で自然に連結
+  if (points.length === 1) return `${facility.name}は${points[0]}よ!`;
+  const last = points.pop()!;
+  return `${facility.name}は${points.join('し、')}し、${last}よ!`;
 }
 
 /** businessHours文字列をOpeningHoursSpecification JSON-LDにパース */
