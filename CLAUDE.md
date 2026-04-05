@@ -159,6 +159,25 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 - Issue作成前に `search_issues` で重複チェック
 - PR作成時は `.github/PULL_REQUEST_TEMPLATE.md` を確認
 
+### Issue 作成ルール
+
+**優先度ラベル（必須・1つ）:**
+
+| ラベル | 基準 |
+|--------|------|
+| `P0` | 今すぐ対応。売上・UXに直結する問題 |
+| `P1` | 今月中に着手。SEO回復・主要機能 |
+| `P2` | 四半期内。改善・中期施策 |
+| `P3` | いつか。将来構想・Nice to have |
+
+**カテゴリラベル（1〜2個）:**
+`enhancement` `SEO` `performance` `content` `data` `ux` `monetization` `branding` `growth`
+
+**禁止:**
+- `phase-*` ラベルは使わない（タイトルに "Phase N:" と書く）
+- `monetize` は使わない（`monetization` に統一）
+- 優先度ラベルなしのIssueを作らない
+
 ### Pencil MCP
 - `.pen` ファイルは Read/Grep 禁止 → 必ず Pencil MCP ツールを使う
 - UI変更時は `get_screenshot` で視覚的に検証

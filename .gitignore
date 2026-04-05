@@ -42,3 +42,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temp files (screenshots, work images, logs)
+/*.png
+/*.jpg
+/*.html
+/logs/
+/tmp_images/
+/facilities-snapshot.md
+/org-detail-snapshot.md
+/psi-result.md
+/*-snapshot.md
+/*-images.json
+/facility-page-images.json
+
+# playwright MCP
+.playwright-mcp/

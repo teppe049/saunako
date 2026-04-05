@@ -1015,3 +1015,389 @@ https://www.saunako.jp/facilities/269?utm_source=x&utm_medium=social
 - public/facilities/269-3.webp
 
 ---
+
+## 2026-04-06 午前 — 十和田サウナ (id=208) No.1型【日本一スケールの水風呂】
+
+### 本文（リンクなし）
+```
+水風呂が「湖」っていうサウナがある。しかも透明度トップクラスの。
+
+東北の湖畔にあるバレルサウナで蒸されて、そのまま湖にダイブ。水風呂のスケールが桁違い。森の中で外気浴しながら湖面を眺める時間、たぶん人生で一番ぼーっとできる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+十和田サウナ
+💰 24,000円〜/120分（4名まで同額）
+📍 青森・十和田湖畔（グリーンシーズン限定）
+https://www.saunako.jp/facilities/208?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/208-0.webp
+- public/facilities/208-1.webp
+- public/facilities/208-2.webp
+- public/facilities/208-3.webp
+
+---
+
+## 2026-04-06 午後 — ワンノサウナ (id=393)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？沖縄に、テーマの異なる6室を持つ個室サウナがあるって。
+
+カリフォルニア風、北欧風、和モダン…部屋ごとに雰囲気がガラッと変わる。月替わりアロマのセルフロウリュにチラー水風呂、しかも深夜4時まで営業してるから観光帰りでも間に合う🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+ワンノサウナ
+💰 2,400円〜/60分
+📍 沖縄・那覇 旭橋駅 徒歩5分
+https://www.saunako.jp/facilities/393?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/393-0.webp（カリフォルニア風・水風呂）
+- public/facilities/393-1.webp（別部屋・港ビュー）
+- public/facilities/393-2.webp（和モダン・石水風呂）
+- public/facilities/393-3.webp（バスルーム・タイル）
+
+---
+
+## 2026-04-07 午前 — 滝つぼサウナ (id=162) No.1型【天然の滝つぼ水風呂】
+
+### 本文（リンクなし）
+```
+水風呂が天然の滝つぼ。こんなサウナが日本にあった。
+
+薪ストーブの貸切トレーラーサウナで蒸されたあと、そのまま渓流の滝つぼに飛び込む。水温は季節で3〜17℃まで変わるし、冬は雪ダイブもできる。谷川連峰を眺めながらの外気浴がまた最高🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+滝つぼサウナ
+💰 11,000円〜/120分（6名まで同額）
+📍 群馬・みなかみ町（ホテルサンバード内）
+https://www.saunako.jp/facilities/162?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/162-0.webp
+- public/facilities/162-1.webp
+- public/facilities/162-2.webp
+- public/facilities/162-3.webp
+
+---
+
+## 2026-04-07 午後 — プライベートサウナ Vihta (id=204)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？青森に、完全個室のフィンランド式サウナがあるって。
+
+1名用と2名用の2タイプがあって、2名部屋は水風呂も完備。タオルもドリンクも込みの手ぶらOKスタイルだから、旅行中にふらっと立ち寄れるのがいい🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+プライベートサウナ Vihta
+💰 2,640円〜/60分
+📍 青森市 油川エリア
+https://www.saunako.jp/facilities/204?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/204-0.webp
+- public/facilities/204-1.webp
+- public/facilities/204-2.webp
+- public/facilities/204-3.webp
+
+---
+
+## 2026-04-08 午前 — Prus Sauna 歌舞伎町タワー (id=18) No.1型【夜景×サウナ】
+
+### 本文（リンクなし）
+```
+歌舞伎町タワーで夜景を見ながらサウナに入れるって知ってた？
+
+外気浴スペースから新宿の街を一望できて、サウナの温度は自分で指定できる。しかも深夜5時まで営業してるから、飲みのあとに「ちょっとサウナ行かない？」ができる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+Prus Sauna 歌舞伎町タワー
+💰 6,000円〜/60分（2名）
+📍 新宿・歌舞伎町タワー内 新宿駅 徒歩10分
+https://www.saunako.jp/facilities/18?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/18-0.webp
+- public/facilities/18-1.webp
+- public/facilities/18-2.webp
+- public/facilities/18-3.webp
+
+---
+
+## 2026-04-08 午後 — Lampo. (id=387)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？鹿児島の大隅半島に、北欧スタイルの完全個室サウナがあるって。
+
+セルフロウリュにチラー水風呂、アメニティ完備で手ぶらOK。学生と65歳以上は15%OFFっていう珍しい割引もある。エステ付きコースまであるから、サウナ初心者にも◎🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+Lampo.（ランポ）
+💰 2,200円〜/70分
+📍 鹿児島・鹿屋市（鹿屋バスターミナルすぐ）
+https://www.saunako.jp/facilities/387?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/387-0.webp
+- public/facilities/387-1.webp
+- public/facilities/387-2.webp
+
+---
+
+## 2026-04-09 午前 — MITO SAUNA KOTO (id=115) No.1型【水戸No.1】
+
+### 本文（リンクなし）
+```
+水戸にNo.1の個室サウナがあるのを知ってほしい。
+
+12〜13℃のキンキンの水風呂に、屋上でインフィニティチェアに寝転んで空を見上げる外気浴。しかもサウナ後はそのまま併設のBARで一杯飲める。「サウナ→ビール」が同じ建物で完結する贅沢🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+MITO SAUNA KOTO
+💰 4,500円〜/90分（1名）
+📍 茨城・水戸駅 徒歩10分
+https://www.saunako.jp/facilities/115?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/115-0.webp
+- public/facilities/115-1.webp
+- public/facilities/115-2.webp
+- public/facilities/115-3.webp
+
+---
+
+## 2026-04-09 午後 — VIEHÄttÄVÄ (id=350)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？山口の山奥に、川がそのまま水風呂になる個室サウナがあるって。
+
+20代夫婦が営む薪式サウナ小屋で蒸されて、目の前の清流にダイブ。カフェも併設されてて、サウナ後にのんびりできる。店名はフィンランド語で「魅力」って意味なんだって🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+VIEHÄttÄVÄ（ヴィエハッタヴァ）
+💰 15,000円〜/120分（4名まで同額）
+📍 山口市徳地（JR徳地駅）
+https://www.saunako.jp/facilities/350?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/350-0.webp（サウナ室内部・薪ストーブ）
+- public/facilities/350-1.webp（清流の水面）
+- public/facilities/350-2.webp（川辺の外気浴チェア）
+- public/facilities/350-3.webp（川辺の外気浴・緑）
+
+---
+
+## 2026-04-10 午前 — Roots猪苗代 THE LAKE (id=241) No.1型【最コスパ湖畔サウナ】
+
+### 本文（リンクなし）
+```
+1人2,200円で3種のサウナに入れる湖畔サウナがある。
+
+ドライ・スチーム・バレルの3タイプが揃ってて、目の前は猪苗代湖。湖を眺めながらの外気浴がとにかく贅沢なのに、この値段はバグってる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+Roots猪苗代 THE LAKE
+💰 2,200円〜/120分
+📍 福島・猪苗代湖畔
+https://www.saunako.jp/facilities/241?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/241-0.webp
+- public/facilities/241-1.webp
+- public/facilities/241-2.webp
+- public/facilities/241-3.webp
+
+---
+
+## 2026-04-10 午後 — HARIO BEACHWALK (id=371)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？長崎に、海を眺めながら外気浴できる個室サウナがあるって。
+
+熊本県産ヒノキのサウナ室で110℃まで温度調整できて、水風呂は10℃までチラーで冷却可能。複数アロマのセルフロウリュ付き。グランピングとセットで泊まれるのもいい🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+HARIO BEACHWALK
+💰 4,400円〜/120分（1名）
+📍 長崎・佐世保（佐世保駅）
+https://www.saunako.jp/facilities/371?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/371-0.webp
+- public/facilities/371-1.webp
+- public/facilities/371-2.webp
+
+---
+
+## 2026-04-11 午前 — サウナイン中山店 (id=103) No.1型【コスパ最強】
+
+### 本文（リンクなし）
+```
+駅徒歩1分。予約不要。1,100円。地下100mの天然水かけ流し水風呂。
+
+この条件が全部揃ってる個室サウナが関東にある。全9室あるから待ちも少ないし、ふらっと思い立って行けるのが最高。「今日サウナ行きたい」って思った30分後にはもう入ってる🧖‍♂️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+サウナイン中山店
+💰 1,100円〜/90分
+📍 千葉・下総中山駅 徒歩1分
+https://www.saunako.jp/facilities/103?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/103-0.webp
+- public/facilities/103-1.webp
+- public/facilities/103-2.webp
+- public/facilities/103-3.webp
+
+---
+
+## 2026-04-11 午後 — 紫波サウナ GRAVITY (id=211)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？岩手に、温度を60〜110℃まで自分で調整できる個室サウナがあるって。
+
+熱いのが好きな人も苦手な人も、自分好みでじっくり蒸される。朝8時から営業で朝活にもぴったり。オプションでタイマッサージまで受けられる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+紫波サウナ GRAVITY
+💰 3,850円〜/60分
+📍 岩手・紫波中央駅
+https://www.saunako.jp/facilities/211?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/211-0.webp
+- public/facilities/211-1.webp
+- public/facilities/211-2.webp
+- public/facilities/211-3.webp
+
+---
+
+## 2026-04-12 午前 — HOSTEL Perch 蔵サウナ (id=469) No.1型【日本最安級】
+
+### 本文（リンクなし）
+```
+1人900円で入れる本格薪サウナがある。しかも佐渡島に。
+
+明治時代の蔵をリノベした空間に薪ストーブで110℃超え。水風呂はなんと「たらい舟」。予約不要でふらっと入れるし、併設のゲストハウスに泊まれば佐渡旅ごと楽しめる🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+HOSTEL Perch 蔵サウナ
+💰 900円〜/90分（個人利用・予約不要）
+📍 新潟・佐渡島
+https://www.saunako.jp/facilities/469?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/469-0.webp
+- public/facilities/469-1.webp
+- public/facilities/469-2.webp
+
+---
+
+## 2026-04-12 午後 — 近藤家 別邸 花澄 (id=359)「知ってた？」
+
+### 本文（リンクなし）
+```
+知ってた？愛媛に、自分で薪をくべて火加減を操る個室サウナがあるって。
+
+薪焚きサウナで好みの温度に仕上げたら、屋外デッキのドラム缶水風呂へ。ハンモックに揺られながらの外気浴は、もはやキャンプとサウナのいいとこ取り🧖‍♀️
+
+で、肝心の料金とエリアなんだけど——
+
+```
+
+### リプライ
+```
+近藤家 別邸 花澄（SAUNA 494）
+💰 11,000円〜/150分（4名まで同額）
+📍 愛媛・東温市（横河原駅から車10分）
+https://www.saunako.jp/facilities/359?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/359-0.webp
+- public/facilities/359-1.webp
+- public/facilities/359-2.webp

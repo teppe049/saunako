@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    background: linear-gradient(165deg, #0f1724 0%, #162033 50%, #1a2844 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Decorative elements */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232, 121, 87, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(232, 121, 87, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    z-index: 1;
+    padding: 0 80px;
+  }
+
+  /* Character */
+  .character-img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+  }
+
+  /* CTA text */
+  .cta-heading {
+    font-size: 42px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  /* URL box */
+  .url-box {
+    background: rgba(232, 121, 87, 0.15);
+    border: 2px solid rgba(232, 121, 87, 0.3);
+    border-radius: 20px;
+    padding: 24px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .url-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #E87957;
+    letter-spacing: 2px;
+  }
+  .handle-text {
+    font-size: 22px;
+    color: rgba(232, 160, 128, 0.7);
+    letter-spacing: 1px;
+  }
+
+  /* Save message */
+  .save-message {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+  }
+  .save-icon {
+    font-size: 28px;
+  }
+
+  /* Bottom accent bar */
+  .accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #E87957 0%, rgba(232, 121, 87, 0.3) 100%);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <img class="character-img" src="../public/saunako/smile.webp" alt="サウナ子">
+      <div class="cta-heading">もっと探したい人は<br>プロフのリンクからどうぞ!</div>
+      <div class="url-box">
+        <div class="url-text">saunako.jp</div>
+        <div class="handle-text">@saunako_jp</div>
+      </div>
+      <div class="save-message">
+        <span class="save-icon">🔖</span> 保存して次のお出かけの参考にしてね
+      </div>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+</body>
+</html>

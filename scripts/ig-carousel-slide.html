@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  }
+  .card {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background facility photo */
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Dark gradient overlay for text readability */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(15, 23, 36, 0.1) 0%,
+      rgba(15, 23, 36, 0.15) 40%,
+      rgba(15, 23, 36, 0.7) 65%,
+      rgba(15, 23, 36, 0.92) 80%,
+      rgba(15, 23, 36, 0.98) 100%
+    );
+  }
+
+  /* Number badge */
+  .number-badge {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    width: 72px;
+    height: 72px;
+    background: #E87957;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(232, 121, 87, 0.4);
+  }
+
+  /* Content area (bottom) */
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 64px 80px;
+  }
+
+  /* Facility name */
+  .facility-name {
+    font-size: 44px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Meta info (access + price) */
+  .facility-meta {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .meta-icon {
+    font-size: 20px;
+  }
+  .meta-accent {
+    color: #E8A080;
+  }
+
+  /* Feature point */
+  .facility-point {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    padding: 20px 24px;
+    background: rgba(232, 121, 87, 0.12);
+    border-radius: 16px;
+    border-left: 4px solid #E87957;
+    margin-top: 16px;
+  }
+
+  /* Watermark */
+  .watermark {
+    position: absolute;
+    bottom: 28px;
+    right: 48px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="bg-image" src="{{IMAGE_PATH}}" alt="{{NAME}}">
+    <div class="overlay"></div>
+    <div class="number-badge">{{NUM}}</div>
+    <div class="content">
+      <div class="facility-name">{{NAME}}</div>
+      <div class="facility-meta">
+        <span class="meta-item">
+          <span class="meta-icon">📍</span>
+          <span class="meta-accent">{{ACCESS}}</span>
+        </span>
+        <span class="meta-item">
+          <span class="meta-icon">💰</span>
+          <span>{{PRICE}}</span>
+        </span>
+      </div>
+      <div class="facility-point">{{POINT}}</div>
+    </div>
+    <div class="watermark">saunako.jp</div>
+  </div>
+</body>
+</html>

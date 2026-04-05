@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google SC 回復ロードマップ — saunako.jp</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Hiragino Sans', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; padding: 40px 20px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 48px; }
+  .header h1 { font-size: 28px; color: #f8fafc; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #94a3b8; }
+  .header .status-badge { display: inline-block; margin-top: 12px; background: #7f1d1d; color: #fca5a5; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+
+  /* Diagnosis */
+  .diagnosis { background: #1e293b; border-radius: 16px; padding: 28px; margin-bottom: 40px; border: 1px solid #334155; }
+  .diagnosis h2 { font-size: 18px; color: #f8fafc; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .diag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .diag-grid { grid-template-columns: 1fr; } }
+  .diag-card { background: #0f172a; border-radius: 12px; padding: 16px; border: 1px solid #334155; }
+  .diag-card .label { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .diag-card .value { font-size: 22px; font-weight: 700; }
+  .diag-card .value.red { color: #f87171; }
+  .diag-card .value.green { color: #4ade80; }
+  .diag-card .value.yellow { color: #fbbf24; }
+  .diag-card .note { font-size: 12px; color: #64748b; margin-top: 4px; }
+
+  /* Timeline */
+  .timeline { position: relative; margin-bottom: 40px; }
+  .timeline h2 { font-size: 20px; color: #f8fafc; margin-bottom: 24px; text-align: center; }
+  .tl-track { position: relative; padding-left: 40px; }
+  .tl-track::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #4ade80, #fbbf24, #38bdf8, #a78bfa); }
+
+  .tl-phase { position: relative; margin-bottom: 32px; }
+  .tl-phase:last-child { margin-bottom: 0; }
+  .tl-dot { position: absolute; left: -33px; top: 4px; width: 20px; height: 20px; border-radius: 50%; border: 3px solid #0f172a; }
+  .tl-dot.done { background: #4ade80; }
+  .tl-dot.now { background: #fbbf24; box-shadow: 0 0 12px rgba(251, 191, 36, 0.5); }
+  .tl-dot.next { background: #38bdf8; }
+  .tl-dot.future { background: #a78bfa; }
+
+  .phase-card { background: #1e293b; border-radius: 14px; padding: 20px 24px; border: 1px solid #334155; transition: transform 0.2s; }
+  .phase-card:hover { transform: translateX(4px); }
+  .phase-card.active { border-color: #fbbf24; box-shadow: 0 0 20px rgba(251, 191, 36, 0.1); }
+
+  .phase-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .phase-title { font-size: 16px; font-weight: 700; color: #f8fafc; }
+  .phase-date { font-size: 12px; color: #94a3b8; background: #0f172a; padding: 3px 10px; border-radius: 8px; }
+
+  .task-list { list-style: none; }
+  .task-list li { padding: 6px 0; font-size: 14px; color: #cbd5e1; display: flex; align-items: flex-start; gap: 8px; }
+  .task-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .task-list li.done::before { background: #4ade80; }
+  .task-list li.todo::before { background: #64748b; }
+  .task-list li.done { color: #64748b; text-decoration: line-through; }
+  .task-list .impact { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; margin-left: 4px; font-weight: 600; }
+  .impact.high { background: #7f1d1d; color: #fca5a5; }
+  .impact.mid { background: #78350f; color: #fcd34d; }
+  .impact.low { background: #1e3a5f; color: #93c5fd; }
+
+  /* Scenario */
+  .scenarios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+  @media (max-width: 700px) { .scenarios { grid-template-columns: 1fr; } }
+  .scenarios h2 { grid-column: 1 / -1; font-size: 20px; color: #f8fafc; text-align: center; margin-bottom: 8px; }
+  .sc-card { background: #1e293b; border-radius: 14px; padding: 20px; border: 1px solid #334155; text-align: center; }
+  .sc-card .sc-icon { font-size: 32px; margin-bottom: 8px; }
+  .sc-card .sc-label { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .sc-card .sc-period { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+  .sc-card .sc-period.green { color: #4ade80; }
+  .sc-card .sc-period.yellow { color: #fbbf24; }
+  .sc-card .sc-period.red { color: #f87171; }
+  .sc-card .sc-desc { font-size: 12px; color: #94a3b8; }
+  .sc-card.highlight { border-color: #fbbf24; }
+
+  /* KPI */
+  .kpi-section { background: #1e293b; border-radius: 16px; padding: 28px; margin-bottom: 40px; border: 1px solid #334155; }
+  .kpi-section h2 { font-size: 18px; color: #f8fafc; margin-bottom: 16px; }
+  .kpi-table { width: 100%; border-collapse: collapse; }
+  .kpi-table th { text-align: left; font-size: 12px; color: #94a3b8; padding: 8px 12px; border-bottom: 1px solid #334155; text-transform: uppercase; letter-spacing: 0.5px; }
+  .kpi-table td { padding: 10px 12px; font-size: 14px; border-bottom: 1px solid #1e293b; }
+  .kpi-table tr:hover { background: #0f172a; }
+  .kpi-table .metric { color: #f8fafc; font-weight: 600; }
+
+  /* Chart placeholder */
+  .chart-area { background: #0f172a; border-radius: 12px; padding: 24px; margin-top: 16px; position: relative; height: 200px; overflow: hidden; }
+  .chart-bar { position: absolute; bottom: 24px; width: 30px; border-radius: 4px 4px 0 0; transition: height 0.3s; }
+  .chart-label { position: absolute; bottom: 4px; font-size: 10px; color: #64748b; text-align: center; width: 30px; }
+  .chart-line { position: absolute; left: 0; right: 0; border-top: 1px dashed #334155; }
+  .chart-line-label { position: absolute; right: 4px; font-size: 10px; color: #475569; transform: translateY(-14px); }
+  .chart-title { font-size: 13px; color: #94a3b8; margin-bottom: 12px; }
+
+  /* Today marker */
+  .today-marker { display: inline-block; background: #fbbf24; color: #0f172a; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+
+  /* Footer */
+  .footer { text-align: center; color: #475569; font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Google Search Console 回復ロードマップ</h1>
+    <p class="subtitle">saunako.jp — 2026年3月30日時点</p>
+    <div class="status-badge">Google imp 完全ゼロ: 20日目（3/11〜）</div>
+  </div>
+
+  <!-- Diagnosis -->
+  <div class="diagnosis">
+    <h2>現状診断</h2>
+    <div class="diag-grid">
+      <div class="diag-card">
+        <div class="label">原因</div>
+        <div class="value yellow">品質フィルター</div>
+        <div class="note">128施設 seoTitle 一括変更 → Google が品質再評価中</div>
+      </div>
+      <div class="diag-card">
+        <div class="label">手動ペナルティ</div>
+        <div class="value green">なし</div>
+        <div class="note">GSC「手動による対策」確認済み</div>
+      </div>
+      <div class="diag-card">
+        <div class="label">インデックス状態</div>
+        <div class="value yellow">686件 登録済 / 206件 未登録</div>
+        <div class="note">クロールは継続中（TOP: 3/29）。デインデックスではない</div>
+      </div>
+      <div class="diag-card">
+        <div class="label">技術的問題</div>
+        <div class="value green">問題なし</div>
+        <div class="note">robots.txt / noindex / canonical / JSON-LD すべて正常</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h2>回復アクションタイムライン</h2>
+    <div class="tl-track">
+
+      <!-- Phase 0: Done -->
+      <div class="tl-phase">
+        <div class="tl-dot done"></div>
+        <div class="phase-card">
+          <div class="phase-header">
+            <span class="phase-title">Phase 0 — 技術調査 & 即時修正</span>
+            <span class="phase-date">3/30 完了</span>
+          </div>
+          <ul class="task-list">
+            <li class="done">GSC「手動による対策」確認 → ペナルティなし</li>
+            <li class="done">URL検査（3URL）→ 全てインデックス登録済み</li>
+            <li class="done">robots.txt / noindex / canonical / JSON-LD 確認 → 技術的問題なし</li>
+            <li class="done">robots.txt に OGP画像URLブロック追加 <span class="impact high">高</span></li>
+            <li class="done">/search ベースページに noindex 追加 <span class="impact mid">中</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 1: Now -->
+      <div class="tl-phase">
+        <div class="tl-dot now"></div>
+        <div class="phase-card active">
+          <div class="phase-header">
+            <span class="phase-title">Phase 1 — 静観 & 監視 <span class="today-marker">NOW</span></span>
+            <span class="phase-date">3/30 〜 4/10</span>
+          </div>
+          <ul class="task-list">
+            <li class="todo">SEO関連の大量変更を一切しない（Core Update 完了待ち）<span class="impact high">高</span></li>
+            <li class="todo">毎週 SC の日別データを監視（imp 1件でも出れば回復の兆候）</li>
+            <li class="todo">GA4 の Bing / Organic Social トラフィックに注力</li>
+            <li class="todo">X投稿・Instagram 継続（Google以外の流入確保）</li>
+            <li class="todo">「クロール済み・インデックス未登録」件数を週次で追跡</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="tl-phase">
+        <div class="tl-dot next"></div>
+        <div class="phase-card">
+          <div class="phase-header">
+            <span class="phase-title">Phase 2 — E-E-A-T 強化 & 段階的改善</span>
+            <span class="phase-date">4/10 〜 5月</span>
+          </div>
+          <ul class="task-list">
+            <li class="todo">著者情報（サウナ子 + Teppei監修）を施設・記事ページに追加 <span class="impact high">高</span></li>
+            <li class="todo">施設ページに実体験コンテンツ追加（5施設/週ペース）<span class="impact high">高</span></li>
+            <li class="todo">3/25-27 SEO施策の効果測定（SC回復後）</li>
+            <li class="todo">seoTitle/Desc 再最適化（10施設/回、2週間間隔）<span class="impact mid">中</span></li>
+            <li class="todo">/facilities/90, /facilities/367 の改善 <span class="impact mid">中</span></li>
+            <li class="todo">「クロール済み・インデックス未登録」の施設ページを個別改善</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="tl-phase">
+        <div class="tl-dot future"></div>
+        <div class="phase-card">
+          <div class="phase-header">
+            <span class="phase-title">Phase 3 — ドメイン権威の構築</span>
+            <span class="phase-date">5月〜</span>
+          </div>
+          <ul class="task-list">
+            <li class="todo">バックリンク獲得（サウナメディア寄稿・被リンク）<span class="impact high">高</span></li>
+            <li class="todo">コンテンツ独自性強化（Teppei実体験レビュー、独自データ）<span class="impact high">高</span></li>
+            <li class="todo">類似ページのカニバリ整理（エリア×条件クロスLP）<span class="impact mid">中</span></li>
+            <li class="todo">Google SC imp → 3/10以前の水準（600+ imp/日）を目指す</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 4: Contingency -->
+      <div class="tl-phase">
+        <div class="tl-dot future"></div>
+        <div class="phase-card">
+          <div class="phase-header">
+            <span class="phase-title">Phase 4 — 未回復時の判断</span>
+            <span class="phase-date">6月（3ヶ月経過）</span>
+          </div>
+          <ul class="task-list">
+            <li class="todo">3ヶ月経過で回復なし → 抜本的対策を検討</li>
+            <li class="todo">サイト構造の大幅変更、ドメイン移行の検討</li>
+            <li class="todo">Google Search Central フォーラムへの相談</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenarios -->
+  <div class="scenarios">
+    <h2>回復シナリオ</h2>
+    <div class="sc-card">
+      <div class="sc-icon">&#9728;&#65039;</div>
+      <div class="sc-label">楽観シナリオ</div>
+      <div class="sc-period green">4-6週</div>
+      <div class="sc-desc">Core Update完了後に自然回復。<br>技術修正（OGPブロック等）が効いて<br>品質再評価がクリアされる</div>
+    </div>
+    <div class="sc-card highlight">
+      <div class="sc-icon">&#9729;&#65039;</div>
+      <div class="sc-label">標準シナリオ（想定）</div>
+      <div class="sc-period yellow">2-3ヶ月</div>
+      <div class="sc-desc">E-E-AT強化 + 段階的改善で<br>次のCore Updateまでに<br>評価回復を目指す</div>
+    </div>
+    <div class="sc-card">
+      <div class="sc-icon">&#9888;&#65039;</div>
+      <div class="sc-label">悲観シナリオ</div>
+      <div class="sc-period red">6ヶ月+</div>
+      <div class="sc-desc">ドメイン権威の根本的な<br>構築が必要。バックリンク獲得・<br>コンテンツ大幅強化を実施</div>
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpi-section">
+    <h2>監視KPI</h2>
+    <table class="kpi-table">
+      <thead>
+        <tr>
+          <th>指標</th>
+          <th>現在値</th>
+          <th>回復目標</th>
+          <th>計測方法</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric">Google SC imp/日</td>
+          <td style="color:#f87171;font-weight:700">0</td>
+          <td>600+（3/10以前水準）</td>
+          <td>Search Console 日別</td>
+        </tr>
+        <tr>
+          <td class="metric">Google SC clicks/日</td>
+          <td style="color:#f87171;font-weight:700">0</td>
+          <td>10+</td>
+          <td>Search Console 日別</td>
+        </tr>
+        <tr>
+          <td class="metric">GA4 Google Organic PV/週</td>
+          <td style="color:#f87171;font-weight:700">1</td>
+          <td>50+</td>
+          <td>GA4 sessionSource=google</td>
+        </tr>
+        <tr>
+          <td class="metric">クロール済み・未登録</td>
+          <td style="color:#fbbf24;font-weight:700">206件</td>
+          <td>100件以下</td>
+          <td>GSC インデックスカバレッジ</td>
+        </tr>
+        <tr>
+          <td class="metric">インデックス登録済み</td>
+          <td style="color:#4ade80;font-weight:700">686件</td>
+          <td>750+</td>
+          <td>GSC インデックスカバレッジ</td>
+        </tr>
+        <tr>
+          <td class="metric">Bing Organic PV/週</td>
+          <td style="color:#4ade80;font-weight:700">51</td>
+          <td>60+（維持・成長）</td>
+          <td>GA4 sessionSource=bing</td>
+        </tr>
+        <tr>
+          <td class="metric">Organic Social PV/週</td>
+          <td style="color:#fbbf24;font-weight:700">18</td>
+          <td>30</td>
+          <td>GA4 channelGroup</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mini chart -->
+    <div class="chart-title">Google SC impressions/日 推移（3月）</div>
+    <div class="chart-area">
+      <div class="chart-line" style="bottom:170px"><span class="chart-line-label">900</span></div>
+      <div class="chart-line" style="bottom:113px"><span class="chart-line-label">600</span></div>
+      <div class="chart-line" style="bottom:57px"><span class="chart-line-label">300</span></div>
+
+      <div class="chart-bar" style="left:20px; height:72px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:20px;">3/1</div>
+
+      <div class="chart-bar" style="left:55px; height:90px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:55px;">3/2</div>
+
+      <div class="chart-bar" style="left:90px; height:110px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:90px;">3/3</div>
+
+      <div class="chart-bar" style="left:125px; height:145px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:125px;">3/4</div>
+
+      <div class="chart-bar" style="left:160px; height:160px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:160px;">3/5</div>
+
+      <div class="chart-bar" style="left:195px; height:155px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:195px;">3/6</div>
+
+      <div class="chart-bar" style="left:230px; height:170px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:230px;">3/7</div>
+
+      <div class="chart-bar" style="left:265px; height:140px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:265px;">3/8</div>
+
+      <div class="chart-bar" style="left:300px; height:133px; background:#38bdf8;"></div>
+      <div class="chart-label" style="left:300px;">3/9</div>
+
+      <div class="chart-bar" style="left:335px; height:47px; background:#fbbf24;"></div>
+      <div class="chart-label" style="left:335px;">3/10</div>
+
+      <!-- Zero bars 3/11-3/28 -->
+      <div class="chart-bar" style="left:370px; height:2px; background:#f87171;"></div>
+      <div class="chart-label" style="left:362px; width:50px;">3/11〜</div>
+
+      <div class="chart-bar" style="left:420px; height:2px; background:#f87171;"></div>
+      <div class="chart-label" style="left:420px;">3/15</div>
+
+      <div class="chart-bar" style="left:470px; height:2px; background:#f87171;"></div>
+      <div class="chart-label" style="left:470px;">3/20</div>
+
+      <div class="chart-bar" style="left:520px; height:2px; background:#f87171;"></div>
+      <div class="chart-label" style="left:520px;">3/25</div>
+
+      <div class="chart-bar" style="left:570px; height:2px; background:#f87171;"></div>
+      <div class="chart-label" style="left:570px;">3/28</div>
+
+      <div style="position:absolute; left:355px; top:20px; background:#7f1d1d; color:#fca5a5; font-size:11px; padding:3px 8px; border-radius:4px; white-space:nowrap;">
+        128施設 seoTitle 一括変更
+      </div>
+      <div style="position:absolute; left:355px; top:40px; width:1px; height:100px; background:#f87171; opacity:0.5;"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Generated: 2026-03-30 | Next review: 4/7（weekly /analytics-pdca）
+  </div>
+
+</div>
+</body>
+</html>
