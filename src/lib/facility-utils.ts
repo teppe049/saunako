@@ -19,6 +19,25 @@ export function parseBusinessHoursTags(bh: string): { is24h: boolean; lateNight:
   return { is24h, lateNight, earlyMorning };
 }
 
+/**
+ * 指定時刻（hour）に営業中かどうか判定。
+ * パースできない場合は true を返す（除外しない方針）。
+ */
+export function isOpenAtHour(bh: string, hour: number): boolean {
+  if (!bh || bh === '不明' || bh.includes('予約') || bh.includes('要問') || bh.includes('要確認') || bh.includes('確認')) return true;
+  if (bh.includes('24時間')) return true;
+
+  // "HH:MM-HH:MM" or "HH:MM〜HH:MM" パターンを抽出
+  const m = bh.match(/(\d{1,2}):(\d{2})\s*[〜\-−～]\s*(?:翌)?(\d{1,2}):(\d{2})/);
+  if (!m) return true; // パース不可 → 除外しない
+
+  const openH = parseInt(m[1], 10);
+  const closeH = parseInt(m[3], 10) + (bh.includes('翌') ? 24 : 0);
+  const checkH = hour < openH ? hour + 24 : hour; // 深夜帯の補正
+
+  return checkH >= openH && checkH < closeH;
+}
+
 export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
   if (facility.timeSlots && facility.timeSlots.length > 0) {
     const allTimes = facility.timeSlots.flatMap(g => g.startTimes);

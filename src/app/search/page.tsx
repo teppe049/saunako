@@ -6,6 +6,7 @@ import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug, getA
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES, getRegionByCode } from '@/lib/types';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
+import { isOpenAtHour } from '@/lib/facility-utils';
 
 interface SearchPageProps {
   searchParams: Promise<{
@@ -28,6 +29,7 @@ interface SearchPageProps {
     lng?: string;
     locationName?: string;
     radius?: string;
+    openAt?: string;
   }>;
 }
 
@@ -136,7 +138,14 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     lateNight: params.lateNight === 'true',
     earlyMorning: params.earlyMorning === 'true',
   });
-  const sorted = sortFacilities(filtered, sortKey, origin);
+
+  // 「何時から」フィルタ: 営業時間ベースで指定時刻に営業中の施設を絞り込み
+  const openAt = params.openAt ? Number(params.openAt) : undefined;
+  const timeFiltered = openAt != null && !isNaN(openAt)
+    ? filtered.filter((f) => isOpenAtHour(f.businessHours, openAt))
+    : filtered;
+
+  const sorted = sortFacilities(timeFiltered, sortKey, origin);
 
   // 現在地検索: 距離制限（デフォルト10km、段階的に拡大可能）
   const DEFAULT_RADIUS_KM = 10;
