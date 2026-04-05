@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Claude Code worktree build artifacts:
+    ".claude/worktrees/**",
+    // Operational scripts (use CommonJS/Node.js natively):
+    "scripts/**",
   ]),
 ]);
 

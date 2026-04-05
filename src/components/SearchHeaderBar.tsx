@@ -106,7 +106,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   const handleRegionChange = (value: string) => {
     trackFilterChange('region', value || 'all');
     updateParams((p) => {
-      value ? p.set('region', value) : p.delete('region');
+      if (value) { p.set('region', value); } else { p.delete('region'); }
       p.delete('prefecture');
       p.delete('area');
     });
@@ -115,7 +115,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   const handlePrefectureChange = (value: string) => {
     trackFilterChange('prefecture', value || 'all');
     updateParams((p) => {
-      value ? p.set('prefecture', value) : p.delete('prefecture');
+      if (value) { p.set('prefecture', value); } else { p.delete('prefecture'); }
       p.delete('area');
     });
   };

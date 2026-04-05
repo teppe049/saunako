@@ -7564,9 +7564,9 @@
     "address": "東京都港区高輪2-21-21 ニュウマン高輪 North 5F",
     "nearestStation": "高輪ゲートウェイ駅",
     "walkMinutes": 1,
-    "priceMin": 2800,
-    "duration": 80,
-    "capacity": 4,
+    "priceMin": 19000,
+    "duration": 90,
+    "capacity": 5,
     "features": {
       "waterBath": true,
       "waterBathTemp": "15-16",
@@ -7580,7 +7580,7 @@
     "holidays": "不定休",
     "website": "https://saunas-saunas.com/takanawa/",
     "phone": "",
-    "bookingUrl": null,
+    "bookingUrl": "https://coubic.com/takanawa/4053505",
     "amenities": [
       "タオル",
       "バスタオル",
@@ -7591,7 +7591,7 @@
       "ドライヤー",
       "イオンウォーター"
     ],
-    "note": "プライベートサウナ「Huone」は4名まで利用可（料金・予約方法は後日公開予定）。共用サウナ9室を備える大型施設",
+    "note": "プライベートサウナ「Huone」は最大5名、90分貸切。共用サウナ9室を備える大型施設",
     "images": [
       "/facilities/90-0.webp",
       "/facilities/90-1.webp",
@@ -7599,48 +7599,72 @@
     ],
     "lat": 35.6361074,
     "lng": 139.7400215,
-    "description": "高輪ゲートウェイ駅直結のニュウマン高輪にオープンした都市型サウナリトリート。男女合計9室のサウナに加え、プライベートサウナ室「Huone」も完備。レストラン・ワークスペース・仮眠スペース併設。",
-    "seoDescription": "高輪SAUNAS（サウナス高輪・高輪サウナ）の料金・プラン情報。東京都港区・高輪ゲートウェイ駅直結。料金は平日男性2,800円〜/80分、女性2,500円〜/80分。スタンダード男性3,700円〜/4h、女性3,200円〜/4h。土日祝は男性4,400円〜、女性3,900円〜。男女合計9室の共用サウナ+プライベートサウナ「Huone」（4名まで）。水風呂15〜16℃・セルフロウリュ対応。",
-    "seoTitle": "高輪SAUNAS｜高輪ゲートウェイ駅直結 個室サウナ 2,500円〜 料金・予約 | サウナ子",
+    "description": "高輪ゲートウェイ駅直結のニュウマン高輪にオープンした都市型サウナリトリート。男女合計9室のサウナに加え、プライベートサウナ室「Huone」（最大5名・90分貸切）も完備。レストラン・ワークスペース・仮眠スペース併設。",
+    "seoDescription": "高輪SAUNAS（サウナス高輪・高輪サウナ）の料金・プラン情報。東京都港区・高輪ゲートウェイ駅直結。プライベートサウナ「Huone」は平日1名19,000円〜/90分、土日祝1名24,500円〜/90分。最大5名まで貸切可能。水風呂15〜16℃・セルフロウリュ対応。",
+    "seoTitle": "高輪SAUNAS｜高輪ゲートウェイ駅直結 個室サウナ 19,000円〜 料金・予約 | サウナ子",
     "saunakoCommentShort": "高輪ゲートウェイ駅直結の9室サウナリトリート!",
     "saunakoCommentLong": "高輪ゲートウェイ駅から直結で雨に濡れずに行けるのが最高! 9室もサウナがあるから混雑しにくいし、プライベートサウナ「Huone」ならグループ貸切もできるよ。レストランや仮眠スペースも併設されてるから、一日中ゆっくり過ごせるかも!",
     "updatedAt": "2026-02-21",
     "plans": [
       {
-        "name": "平日ショートプラン（男性）",
-        "price": 2800,
-        "duration": 80,
+        "name": "Huone 平日1名",
+        "price": 19000,
+        "duration": 90,
         "capacity": 1
       },
       {
-        "name": "平日スタンダード（男性）",
-        "price": 3700,
-        "duration": 240,
+        "name": "Huone 平日2名",
+        "price": 22500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Huone 平日3名",
+        "price": 26000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "Huone 平日4名",
+        "price": 30000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "Huone 平日5名",
+        "price": 33500,
+        "duration": 90,
+        "capacity": 5
+      },
+      {
+        "name": "Huone 土日祝1名",
+        "price": 24500,
+        "duration": 90,
         "capacity": 1
       },
       {
-        "name": "平日ショートプラン（女性）",
-        "price": 2500,
-        "duration": 80,
-        "capacity": 1
+        "name": "Huone 土日祝2名",
+        "price": 29000,
+        "duration": 90,
+        "capacity": 2
       },
       {
-        "name": "平日スタンダード（女性）",
-        "price": 3200,
-        "duration": 240,
-        "capacity": 1
+        "name": "Huone 土日祝3名",
+        "price": 33000,
+        "duration": 90,
+        "capacity": 3
       },
       {
-        "name": "土日祝スタンダード（男性）",
-        "price": 4400,
-        "duration": 240,
-        "capacity": 1
+        "name": "Huone 土日祝4名",
+        "price": 37500,
+        "duration": 90,
+        "capacity": 4
       },
       {
-        "name": "土日祝スタンダード（女性）",
-        "price": 3900,
-        "duration": 240,
-        "capacity": 1
+        "name": "Huone 土日祝5名",
+        "price": 42000,
+        "duration": 90,
+        "capacity": 5
       }
     ],
     "timeSlots": null,
@@ -25392,7 +25416,8 @@
     "images": [
       "/facilities/350-0.webp",
       "/facilities/350-1.webp",
-      "/facilities/350-2.webp"
+      "/facilities/350-2.webp",
+      "/facilities/350-3.webp"
     ],
     "lat": 34.2388,
     "lng": 131.6992,
@@ -26833,7 +26858,8 @@
     "images": [
       "/facilities/371-0.webp",
       "/facilities/371-1.webp",
-      "/facilities/371-2.webp"
+      "/facilities/371-2.webp",
+      "/facilities/371-3.webp"
     ],
     "lat": 33.1672,
     "lng": 129.662,
@@ -27976,7 +28002,8 @@
     "images": [
       "/facilities/387-0.webp",
       "/facilities/387-1.webp",
-      "/facilities/387-2.webp"
+      "/facilities/387-2.webp",
+      "/facilities/387-3.webp"
     ],
     "lat": 31.3783,
     "lng": 130.8517,
@@ -28390,7 +28417,8 @@
     "images": [
       "/facilities/393-0.webp",
       "/facilities/393-1.webp",
-      "/facilities/393-2.webp"
+      "/facilities/393-2.webp",
+      "/facilities/393-3.webp"
     ],
     "lat": 26.2133,
     "lng": 127.67,
@@ -33516,7 +33544,8 @@
     "images": [
       "/facilities/469-0.webp",
       "/facilities/469-1.webp",
-      "/facilities/469-2.webp"
+      "/facilities/469-2.webp",
+      "/facilities/469-3.webp"
     ],
     "lat": 38.002129,
     "lng": 138.318736,
