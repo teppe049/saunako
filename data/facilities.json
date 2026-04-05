@@ -86,7 +86,7 @@
     "holidays": "基本無休",
     "website": "https://kudochi-sauna.com/",
     "phone": "03-6447-2129",
-    "bookingUrl": null,
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -135,7 +135,10 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "KUDOCHI銀座｜銀座の24時間個室サウナ 6,000円〜 口コミ・予約 | サウナ子",
-    "slotType": "free"
+    "slotType": "fixed",
+    "priceMax": 38000,
+    "coupleOk": true,
+    "comment": "全6室の完全個室ラグジュアリーサウナ。通常室（90分¥6,000〜）とVIP室（120分¥15,000〜）があり、5時間パックも選べるよ。24時間営業・無人受付だから、深夜でも好きなタイミングでととのえる♨"
   },
   {
     "id": 3,
@@ -7648,7 +7651,8 @@
     "timeSlots": null,
     "openedAt": "2026-02-21",
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 12000
   },
   {
     "id": 90,
@@ -7796,7 +7800,7 @@
     "holidays": "年中無休",
     "website": "https://www.kasika-sauna.jp/",
     "phone": "",
-    "bookingUrl": "https://kasika-sauna.hacomono.jp/home",
+    "bookingUrl": "https://kasika-sauna.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "バスローブ",
       "水着",
@@ -7834,8 +7838,14 @@
         "capacity": 6
       }
     ],
-    "timeSlots": null,
-    "slotType": "free"
+    "timeSlots": [
+      "10:00~13:00",
+      "14:00~17:00",
+      "18:00~21:00",
+      "22:00~25:00"
+    ],
+    "slotType": "fixed",
+    "priceMax": 24000
   },
   {
     "id": 92,
@@ -8204,7 +8214,7 @@
     "holidays": "なし",
     "website": "https://kudochi-sauna.com/uenoyushima/",
     "phone": "",
-    "bookingUrl": "https://kudochi-sauna.hacomono.jp/",
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/reserve/schedule/3/13",
     "amenities": [
       "シャンプー",
       "コンディショナー",
@@ -8258,7 +8268,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "KUDOCHI湯島｜上野の和テーマ個室サウナ 15,000円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 32000
   },
   {
     "id": 97,
@@ -8287,7 +8298,7 @@
     "holidays": "LaQua休館日に準ずる",
     "website": "https://www.laqua.jp/sauna_rentola/",
     "phone": "03-3817-4173",
-    "bookingUrl": "https://sauna-rentola.hacomono.jp/",
+    "bookingUrl": "https://sauna-rentola.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "フェイスタオル",
       "バスタオル",
@@ -8451,7 +8462,7 @@
     "holidays": "不定休",
     "website": "https://jingumaesauna.com/",
     "phone": "",
-    "bookingUrl": "https://jingumaesauna.hacomono.jp/home",
+    "bookingUrl": "https://jingumaesauna.hacomono.jp/reserve/schedule/1/16",
     "amenities": [
       "シャンプー",
       "コンディショナー",
@@ -8504,7 +8515,9 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "ジングウマエサウナ｜原宿の完全貸切個室サウナ 18,000円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 21000,
+    "coupleOk": true
   },
   {
     "id": 100,
@@ -9062,7 +9075,7 @@
     "address": "神奈川県横浜市中区羽衣町1-2-8 銀泉関内ビル4F",
     "nearestStation": "関内駅",
     "walkMinutes": 1,
-    "priceMin": 3600,
+    "priceMin": 2520,
     "duration": 60,
     "capacity": 1,
     "features": {
@@ -9078,7 +9091,7 @@
     "holidays": "要確認",
     "website": "https://oneperson.jp/",
     "phone": "080-5774-5934",
-    "bookingUrl": "https://onepersonkhd.hacomono.jp/home",
+    "bookingUrl": "https://onepersonkhd.hacomono.jp/reserve/schedule/4/13",
     "amenities": [
       "シャンプー",
       "リンス",
@@ -9151,7 +9164,8 @@
     ],
     "timeSlots": null,
     "seoTitle": "ONEPERSON関内｜横浜の完全個室プライベートサウナ 3,600円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 5200
   },
   {
     "id": 108,
@@ -9164,7 +9178,7 @@
     "address": "神奈川県川崎市多摩区登戸3465 いろはビル3F",
     "nearestStation": "登戸駅",
     "walkMinutes": 1,
-    "priceMin": 3900,
+    "priceMin": 2730,
     "duration": 60,
     "capacity": 1,
     "features": {
@@ -9180,7 +9194,7 @@
     "holidays": "要確認",
     "website": "https://oneperson.jp/",
     "phone": "080-5774-5964",
-    "bookingUrl": "https://onepersonkhd.hacomono.jp/home",
+    "bookingUrl": "https://onepersonkhd.hacomono.jp/reserve/schedule/1/1",
     "amenities": [
       "シャンプー",
       "リンス",
@@ -9247,7 +9261,8 @@
     ],
     "timeSlots": null,
     "seoTitle": "ONEPERSON登戸｜川崎の水風呂付き完全個室サウナ 3,900円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 5900
   },
   {
     "id": 109,
@@ -10641,7 +10656,7 @@
     "holidays": "なし",
     "website": "https://kudochi-sauna.com/fukuoka/",
     "phone": "",
-    "bookingUrl": "https://kudochi-sauna.hacomono.jp/",
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/reserve/schedule/6/25",
     "amenities": [
       "タオル",
       "アメニティ完備"
@@ -10694,7 +10709,8 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 12000
   },
   {
     "id": 127,
@@ -12619,7 +12635,8 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 18000
   },
   {
     "id": 141,
@@ -13059,11 +13076,11 @@
     "prefecture": "aichi",
     "prefectureLabel": "愛知県",
     "city": "岡崎市",
-    "area": "三河・知多",
+    "area": "三河",
     "address": "愛知県岡崎市昭和町神郷8-2",
     "nearestStation": "西岡崎駅",
     "walkMinutes": 3,
-    "priceMin": 5000,
+    "priceMin": 5800,
     "duration": 120,
     "capacity": 4,
     "features": {
@@ -13075,11 +13092,11 @@
       "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "6:00〜24:00（最終受付 22:00）",
+    "businessHours": "6:00〜24:00（2時間枠制）",
     "holidays": "不定休",
     "website": "https://www.instagram.com/splus.splus/",
     "phone": null,
-    "bookingUrl": null,
+    "bookingUrl": "https://s-plus.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "タオル",
       "バスタオル",
@@ -13128,9 +13145,32 @@
         "capacity": 4
       }
     ],
-    "timeSlots": null,
+    "timeSlots": {
+      "GRAY": [
+        "6:00〜8:00",
+        "9:00〜11:00",
+        "12:00〜14:00",
+        "15:00〜17:00",
+        "18:00〜20:00",
+        "21:00〜23:00"
+      ],
+      "SHIRO": [
+        "6:00〜8:00",
+        "10:00〜12:00",
+        "13:00〜15:00",
+        "16:00〜18:00",
+        "19:00〜21:00",
+        "22:00〜24:00"
+      ]
+    },
     "seoDesc": "愛知・岡崎の完全個室サウナ「エスプラス（S+）」。全4室、水風呂15℃・セルフロウリュ・Bluetooth完備。5,000円〜カップル利用OK。西岡崎駅から徒歩圏内。",
-    "slotType": "free"
+    "slotType": "fixed",
+    "priceMax": 12100,
+    "waterBath": true,
+    "selfLoyly": true,
+    "outdoorAir": false,
+    "coupleOk": true,
+    "comment": "三河地区で唯一、男女混浴OKの個室サウナ。GRAYとSHIROの2部屋があり、どちらも2時間枠制。18時以降は料金アップするけど、夜サウナの雰囲気も格別だよ〜♨"
   },
   {
     "id": 148,
@@ -14427,7 +14467,7 @@
     "holidays": "基本無休",
     "website": "https://kudochi-sauna.com/kyotokawaramachi/",
     "phone": null,
-    "bookingUrl": "https://kudochi-sauna.hacomono.jp/",
+    "bookingUrl": "https://kudochi-sauna.hacomono.jp/reserve/schedule/8/38",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -14474,7 +14514,8 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 38000
   },
   {
     "id": 182,
@@ -14860,7 +14901,7 @@
     "holidays": "不定休",
     "website": "https://www.sayu-spa.jp/",
     "phone": "090-1816-8427",
-    "bookingUrl": "https://sayu-sauna.hacomono.jp",
+    "bookingUrl": "https://sayu-sauna.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "バスタオル",
       "フェイスタオル",
@@ -14895,18 +14936,14 @@
       }
     ],
     "timeSlots": [
-      {
-        "label": "2時間20分5部制",
-        "startTimes": [
-          "8:00",
-          "11:00",
-          "14:00",
-          "17:00",
-          "20:00"
-        ]
-      }
+      "8:00~10:20",
+      "11:00~13:20",
+      "14:00~16:20",
+      "17:00~19:20",
+      "20:00~22:20"
     ],
-    "slotType": "fixed"
+    "slotType": "fixed",
+    "coupleOk": true
   },
   {
     "id": 164,
@@ -20718,7 +20755,7 @@
     "holidays": "月曜定休",
     "website": "https://effect.ssscorporation.jp/",
     "phone": null,
-    "bookingUrl": "https://effect.hacomono.jp",
+    "bookingUrl": "https://effect.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -22889,7 +22926,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "15:00〜翌5:00",
+    "businessHours": "15:00〜翌5:00（3時間枠制）",
     "holidays": "基本無休",
     "website": "https://resauna.jp/kobe/",
     "phone": "080-3368-1836",
@@ -22955,8 +22992,25 @@
         "capacity": 2
       }
     ],
-    "timeSlots": null,
-    "slotType": "free"
+    "timeSlots": {
+      "2F": [
+        "00:00〜05:00",
+        "15:00〜18:00",
+        "19:30〜22:30"
+      ],
+      "3F": [
+        "00:00〜05:00",
+        "15:00〜18:00",
+        "19:30〜22:30"
+      ]
+    },
+    "slotType": "fixed",
+    "priceMax": 21000,
+    "waterBath": true,
+    "selfLoyly": true,
+    "outdoorAir": true,
+    "coupleOk": true,
+    "comment": "チラー入りのキンキン水風呂が自慢！3Fならシーシャも楽しめる贅沢空間。外気浴スペースもあって、神戸の夜景を眺めながらととのえるよ〜♨"
   },
   {
     "id": 305,
@@ -23583,7 +23637,7 @@
     "holidays": "基本無休",
     "website": "https://www.prussauna.com/himeji",
     "phone": "079-227-0050",
-    "bookingUrl": "https://prussauna.hacomono.jp/reserve/schedule/5/21",
+    "bookingUrl": "https://prussaunahimeji.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -26869,8 +26923,12 @@
         "capacity": 4
       }
     ],
-    "timeSlots": null,
-    "slotType": "free"
+    "timeSlots": [
+      "10:00~15:00",
+      "17:00~23:00"
+    ],
+    "slotType": "fixed",
+    "priceMax": 5500
   },
   {
     "id": 361,
@@ -27345,7 +27403,8 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 9800
   },
   {
     "id": 368,
@@ -28777,7 +28836,7 @@
     "holidays": "火曜",
     "website": "https://sauna-lampo.com/",
     "phone": "0994-36-8904",
-    "bookingUrl": "https://sauna-lampo.hacomono.jp/",
+    "bookingUrl": "https://sauna-lampo.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "タオル",
       "サウナポンチョ",
@@ -28831,7 +28890,8 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 4400
   },
   {
     "id": 388,
@@ -29374,7 +29434,7 @@
     "holidays": "",
     "website": "https://sauna-kiki.jp/",
     "phone": "",
-    "bookingUrl": "https://sauna-playandco.hacomono.jp/home",
+    "bookingUrl": "https://sauna-playandco.hacomono.jp/reserve/schedule/4/8",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -29406,7 +29466,8 @@
     "timeSlots": null,
     "seoTitle": "SAUNA汽汽｜中目黒の濃霧スチーム個室サウナ 口コミ・予約 | サウナ子",
     "priceNote": "朝割90分/1〜2名・完全個室",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 20000
   },
   {
     "id": 396,
@@ -33821,7 +33882,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "6:00〜26:00（木曜 10:00〜26:00）",
+    "businessHours": "6:00~26:00（15分刻み予約）",
     "holidays": "年中無休",
     "website": "https://sauna-routine.com/",
     "phone": "052-253-5777",
@@ -33882,7 +33943,8 @@
     "closedAt": null,
     "seoTitle": null,
     "seoDescription": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 10000
   },
   {
     "id": 460,
@@ -35638,7 +35700,8 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "closedAt": "2026-04-06"
   },
   {
     "id": 489,
