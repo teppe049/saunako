@@ -109,16 +109,13 @@ export default function MobileFilterSheet({
               <div className="relative">
                 <select
                   aria-labelledby="sort-label-mobile"
-                  value={searchParams.get('sort') || 'recommend'}
+                  value={searchParams.get('sort') || 'price_asc'}
                   onChange={(e) => onSortChange(e.target.value)}
                   className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
                 >
-                  <option value="recommend">掲載順</option>
-                  {hasOrigin && <option value="distance">距離順</option>}
-                  <option value="newest">新着順</option>
-                  <option value="price_asc">価格が安い順</option>
-                  <option value="price_desc">価格が高い順</option>
-                  <option value="station_asc">駅から近い順</option>
+                  <option value="price_asc">安い順</option>
+                  <option value="price_desc">高い順</option>
+                  {hasOrigin && <option value="distance">近い順</option>}
                 </select>
                 {CHEVRON_SVG}
               </div>

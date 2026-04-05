@@ -27,6 +27,7 @@ interface SearchPageProps {
     lat?: string;
     lng?: string;
     locationName?: string;
+    radius?: string;
   }>;
 }
 
@@ -106,8 +107,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     : undefined;
   const locationName = params.locationName || undefined;
 
-  const validSortKeys = ['recommend', 'price_asc', 'price_desc', 'station_asc', 'newest', 'distance'];
-  const defaultSort = origin ? 'distance' : 'recommend';
+  const validSortKeys = ['price_asc', 'price_desc', 'distance'];
+  const defaultSort = origin ? 'distance' : 'price_asc';
   const sortKey = (validSortKeys.includes(params.sort || '')
     ? params.sort
     : defaultSort) as SortKey;
@@ -137,15 +138,28 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   });
   const sorted = sortFacilities(filtered, sortKey, origin);
 
+  // 現在地検索: 距離制限（デフォルト10km、段階的に拡大可能）
+  const DEFAULT_RADIUS_KM = 10;
+  const radiusKm = origin
+    ? (params.radius ? Number(params.radius) : DEFAULT_RADIUS_KM)
+    : undefined;
+
+  const distanceFiltered = origin && radiusKm
+    ? sorted.filter((f) => {
+        if (f.lat == null || f.lng == null) return false;
+        return getDistanceKm(origin.lat, origin.lng, f.lat, f.lng) <= radiusKm;
+      })
+    : sorted;
+
   // Attach _distance to each facility for client-side display
   const facilities = origin
-    ? sorted.map((f) => ({
+    ? distanceFiltered.map((f) => ({
         ...f,
         _distance: f.lat != null && f.lng != null
           ? formatDistance(getDistanceKm(origin.lat, origin.lng, f.lat, f.lng))
           : undefined,
       }))
-    : sorted;
+    : distanceFiltered;
 
   const baseCount = prefecture
     ? allFacilities.filter((f) => f.prefecture === prefecture).length
@@ -216,7 +230,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         areaCounts={prefecture ? getAreaFacilityCounts(prefecture) : {}}
       />
       <div className="flex flex-col flex-1 min-h-0">
-        <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} origin={origin} />
+        <SearchInteractivePanel facilities={facilities} hasOrigin={!!origin} origin={origin} radiusKm={radiusKm} />
       </div>
     </div>
   );

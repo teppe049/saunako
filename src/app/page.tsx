@@ -144,36 +144,6 @@ export default function Home() {
           {/* Search Form */}
           <HeroSearchForm />
 
-          {/* Quick Scene Buttons */}
-          <div className="max-w-3xl mx-auto mt-5">
-            <p className="text-xs text-text-secondary text-center mb-3">シーンから探す</p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <Link
-                href="/search?coupleOk=true"
-                className="flex items-center gap-1.5 px-4 py-2 bg-white border border-border rounded-full text-sm text-text-primary hover:border-primary hover:text-primary transition-colors"
-              >
-                💑 デートで
-              </Link>
-              <Link
-                href="/search?capacity=2"
-                className="flex items-center gap-1.5 px-4 py-2 bg-white border border-border rounded-full text-sm text-text-primary hover:border-primary hover:text-primary transition-colors"
-              >
-                👫 友達と
-              </Link>
-              <Link
-                href="/search?capacity=1"
-                className="flex items-center gap-1.5 px-4 py-2 bg-white border border-border rounded-full text-sm text-text-primary hover:border-primary hover:text-primary transition-colors"
-              >
-                🧖 一人でリフレッシュ
-              </Link>
-              <Link
-                href="/search?coupleOk=true&priceMin=8000"
-                className="flex items-center gap-1.5 px-4 py-2 bg-white border border-border rounded-full text-sm text-text-primary hover:border-primary hover:text-primary transition-colors"
-              >
-                🎉 記念日に
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 

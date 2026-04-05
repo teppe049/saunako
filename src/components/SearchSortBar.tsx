@@ -79,16 +79,13 @@ export default function SearchSortBar({
         <div className="relative inline-flex items-center">
           <select
             aria-label="並び順"
-            value={searchParams.get('sort') || 'recommend'}
+            value={searchParams.get('sort') || 'price_asc'}
             onChange={(e) => onSortChange(e.target.value)}
             className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
           >
-            <option value="recommend">掲載順</option>
-            {hasOrigin && <option value="distance">距離順</option>}
-            <option value="newest">新着順</option>
-            <option value="price_asc">価格が安い順</option>
-            <option value="price_desc">価格が高い順</option>
-            <option value="station_asc">駅から近い順</option>
+            <option value="price_asc">安い順</option>
+            <option value="price_desc">高い順</option>
+            {hasOrigin && <option value="distance">近い順</option>}
           </select>
           {CHEVRON_SVG}
         </div>

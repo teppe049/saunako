@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect, useSyncExternalStore } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
@@ -16,6 +18,7 @@ interface Props {
   facilities: FacilityWithDistance[];
   hasOrigin?: boolean;
   origin?: { lat: number; lng: number };
+  radiusKm?: number;
 }
 
 function isInBounds(facility: Facility, bounds: MapBounds): boolean {
@@ -28,7 +31,11 @@ function isInBounds(facility: Facility, bounds: MapBounds): boolean {
   );
 }
 
-export default function SearchInteractivePanel({ facilities, hasOrigin, origin }: Props) {
+const RADIUS_STEPS = [10, 30, 50]; // km
+
+export default function SearchInteractivePanel({ facilities, hasOrigin, origin, radiusKm }: Props) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
@@ -141,6 +148,27 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
           </div>
         )}
 
+        {/* 距離制限時: 範囲拡大ボタン */}
+        {hasOrigin && radiusKm && (() => {
+          const nextRadius = RADIUS_STEPS.find((r) => r > radiusKm);
+          if (!nextRadius) return null;
+          const handleExpand = () => {
+            const params = new URLSearchParams(searchParams.toString());
+            params.set('radius', String(nextRadius));
+            router.push(`?${params.toString()}`, { scroll: false });
+          };
+          return (
+            <div className="px-4 md:px-5 py-3 flex justify-center">
+              <button
+                onClick={handleExpand}
+                className="w-full max-w-md py-2.5 rounded-lg border border-primary/30 text-sm font-medium text-primary hover:bg-primary/5 transition-colors"
+              >
+                もっと広い範囲で探す（{nextRadius}km圏内）
+              </button>
+            </div>
+          );
+        })()}
+
         {/* 広告ユニット: リスト下部 */}
         {visibleFacilities.length > 0 && (
           <AdUnit
@@ -156,9 +184,23 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
             <p className="text-text-secondary mb-2">
               {isMapVisible && mapBounds ? 'この範囲に施設がありません' : 'この条件に合う施設が見つかりませんでした'}
             </p>
-            <p className="text-sm text-text-tertiary">
+            <p className="text-sm text-text-tertiary mb-4">
               {isMapVisible && mapBounds ? '地図を移動・縮小して範囲を広げてみてください' : '条件を変更して再検索してみてください'}
             </p>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <Link
+                href="/search"
+                className="px-4 py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:border-primary hover:text-primary transition-colors"
+              >
+                条件をリセットして再検索
+              </Link>
+              <Link
+                href="/"
+                className="px-4 py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:border-primary hover:text-primary transition-colors"
+              >
+                トップから探し直す
+              </Link>
+            </div>
           </div>
         )}
       </div>
@@ -181,7 +223,7 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin }
       {!isMapVisible && facilities.length > 0 && (
         <button
           onClick={() => setMobileMapOpen(true)}
-          className="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
           aria-label="地図で見る"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

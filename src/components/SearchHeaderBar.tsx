@@ -127,7 +127,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
   const handleSortChange = (value: string) => {
     trackFilterChange('sort', value);
-    updateParams((p) => value === 'recommend' ? p.delete('sort') : p.set('sort', value));
+    updateParams((p) => value === 'price_asc' ? p.delete('sort') : p.set('sort', value));
   };
 
   const handleDurationChange = (value: string) => {
@@ -142,7 +142,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
   return (
     <div className="bg-surface border-b border-border flex-shrink-0">
-      <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center gap-2 md:gap-3">
+      <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center gap-2 md:gap-3 overflow-hidden">
         <Link href="/" aria-label="トップページに戻る" className="md:hidden flex items-center justify-center w-10 h-10 -ml-1 flex-shrink-0" data-track-click="search_back">
           <svg className="w-5 h-5 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -155,7 +155,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         </Link>
 
         {locationName && (
-          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[12px] md:text-[13px] font-medium bg-primary/10 text-primary border border-primary/20 flex-shrink-0 truncate max-w-[140px] md:max-w-none">
+          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[12px] md:text-[13px] font-medium bg-primary/10 text-primary border border-primary/20 truncate max-w-[120px] md:max-w-none min-w-0">
             <svg className="w-3 h-3 md:w-3.5 md:h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
