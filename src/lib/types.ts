@@ -256,13 +256,7 @@ export interface AreaGroup {
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
-  hokkaido: [
-    { slug: 'sapporo', label: '札幌', cities: ['札幌市中央区', '札幌市東区', '札幌市白石区'] },
-    { slug: 'douo', label: '道央', cities: ['千歳市', '室蘭市'] },
-    { slug: 'donan', label: '道南', cities: ['函館市'] },
-    { slug: 'dohoku', label: '道北', cities: ['旭川市', '上川郡当麻町'] },
-    { slug: 'dotou', label: '道東', cities: ['帯広市', '北見市'] },
-  ],
+  // 北海道: 県単位（16施設、道央/道北等は旅行者に通じないため）
   aomori: [
     { slug: 'aomori-city', label: '青森市', cities: ['青森市'] },
     { slug: 'hachinohe', label: '八戸', cities: ['八戸市'] },
@@ -273,10 +267,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'morioka', label: '盛岡', cities: ['盛岡市'] },
     { slug: 'other', label: 'その他', cities: ['紫波郡紫波町', '岩手郡岩手町', '北上市'] },
   ],
-  miyagi: [
-    { slug: 'sendai', label: '仙台', cities: ['仙台市青葉区'] },
-    { slug: 'other', label: 'その他', cities: ['宮城郡利府町', '柴田郡柴田町', '岩沼市', '牡鹿郡女川町', '大崎市', '気仙沼市'] },
-  ],
+  // 宮城: 県単位（12施設、仙台2+分散10）
   akita: [
     { slug: 'yokote', label: '横手', cities: ['横手市'] },
     { slug: 'other', label: 'その他', cities: ['山本郡八峰町'] },
@@ -290,28 +281,28 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ],
   fukushima: [
     { slug: 'fukushima-city', label: '福島市', cities: ['福島市'] },
-    { slug: 'koriyama', label: '郡山', cities: ['郡山市'] },
     { slug: 'iwaki', label: 'いわき', cities: ['いわき市'] },
-    { slug: 'aizu', label: '会津', cities: ['耶麻郡猪苗代町'] },
+    { slug: 'koriyama', label: '郡山', cities: ['郡山市'] },
+    { slug: 'aizu-hamadori', label: '会津・浜通り', cities: ['耶麻郡猪苗代町', '二本松市', '南相馬市'] },
     { slug: 'shirakawa', label: '白河', cities: ['白河市'] },
   ],
   tokyo: [
-    { slug: 'shinjuku-minato', label: '新宿・港・銀座', cities: ['千代田区', '中央区', '港区', '新宿区'] },
-    { slug: 'shibuya-setagaya', label: '渋谷・世田谷', cities: ['世田谷区', '渋谷区', '中野区', '杉並区', '目黒区'] },
+    { slug: 'roppongi-azabu', label: '六本木・麻布', cities: ['港区'] },
+    { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', cities: ['新宿区', '千代田区'] },
+    { slug: 'ginza-tsukiji', label: '銀座・築地', cities: ['中央区'] },
+    { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', cities: ['渋谷区', '目黒区'] },
+    { slug: 'shimokitazawa-setagaya', label: '下北沢・世田谷', cities: ['世田谷区', '杉並区', '中野区'] },
     { slug: 'ueno-asakusa', label: '上野・浅草', cities: ['台東区', '墨田区', '文京区', '江東区'] },
     { slug: 'ikebukuro', label: '池袋・赤羽', cities: ['北区', '豊島区'] },
     { slug: 'shinagawa', label: '品川', cities: ['品川区'] },
     { slug: 'tama', label: '多摩', cities: ['小金井市'] },
   ],
   osaka: [
-    { slug: 'kita', label: 'キタ', cities: ['大阪市北区', '大阪市福島区'] },
-    { slug: 'minami', label: 'ミナミ', cities: ['大阪市中央区', '大阪市西区'] },
-    { slug: 'other', label: 'その他', cities: ['八尾市', '枚方市', '茨木市'] },
+    { slug: 'minami', label: 'ミナミ（心斎橋・難波）', cities: ['大阪市中央区', '大阪市西区', '大阪市'] },
+    { slug: 'kita', label: 'キタ（梅田・北新地）', cities: ['大阪市北区', '大阪市福島区'] },
+    { slug: 'yao-hirakata', label: '八尾・枚方', cities: ['八尾市', '枚方市', '茨木市'] },
   ],
-  kyoto: [
-    { slug: 'kyoto-city', label: '京都市内', cities: ['京都市左京区', '京都市北区', '京都市中京区', '京都市下京区', '京都市東山区'] },
-    { slug: 'other', label: 'その他', cities: ['京田辺市', '京丹後市'] },
-  ],
+  // 京都: 県単位（13施設、京都市内11+離れた2施設）
   kanagawa: [
     { slug: 'yokohama', label: '横浜', cities: ['横浜市中区', '横浜市青葉区', '横浜市港北区'] },
     { slug: 'kawasaki', label: '川崎', cities: ['川崎市川崎区', '川崎市多摩区'] },
@@ -333,30 +324,22 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'other', label: 'その他', cities: ['安房郡鋸南町'] },
   ],
   gunma: [
-    { slug: 'takasaki', label: '高崎', cities: ['高崎市'] },
-    { slug: 'maebashi', label: '前橋', cities: ['前橋市'] },
     { slug: 'ota-kiryu', label: '太田・桐生', cities: ['太田市', '桐生市'] },
+    { slug: 'takasaki-maebashi', label: '高崎・前橋', cities: ['高崎市', '前橋市'] },
     { slug: 'minakami-numata', label: 'みなかみ・沼田', cities: ['利根郡みなかみ町', '沼田市'] },
-    { slug: 'other', label: 'その他', cities: ['甘楽郡甘楽町'] },
+    { slug: 'kanra', label: '甘楽', cities: ['甘楽郡甘楽町'] },
   ],
   tochigi: [
-    { slug: 'utsunomiya', label: '宇都宮', cities: ['宇都宮市'] },
-    { slug: 'nasu', label: '那須・塩原', cities: ['那須郡那須町', '那須塩原市', '塩谷郡塩谷町'] },
-    { slug: 'nikko', label: '日光', cities: ['日光市'] },
-    { slug: 'other', label: 'その他', cities: ['小山市', '芳賀郡茂木町'] },
+    { slug: 'nasu-shiobara', label: '那須・塩原', cities: ['那須郡那須町', '那須塩原市'] },
+    { slug: 'utsunomiya-oyama', label: '宇都宮・小山', cities: ['宇都宮市', '小山市'] },
+    { slug: 'nikko-kenoh', label: '日光・県央', cities: ['日光市', '塩谷郡塩谷町', '芳賀郡茂木町'] },
   ],
   ibaraki: [
     { slug: 'mito', label: '水戸・笠間', cities: ['水戸市', '笠間市'] },
     { slug: 'tsukuba', label: 'つくば', cities: ['つくば市'] },
     { slug: 'other', label: 'その他', cities: ['古河市', '久慈郡大子町', '高萩市', '鹿嶋市'] },
   ],
-  niigata: [
-    { slug: 'niigata-city', label: '新潟市', cities: ['新潟市中央区'] },
-    { slug: 'nagaoka', label: '長岡', cities: ['長岡市'] },
-    { slug: 'kashiwazaki', label: '柏崎', cities: ['柏崎市'] },
-    { slug: 'murakami', label: '村上', cities: ['村上市'] },
-    { slug: 'other', label: 'その他', cities: ['五泉市', '新発田市'] },
-  ],
+  // 新潟: 県単位（11施設、新潟市5+分散6）
   yamanashi: [
     { slug: 'kofu', label: '甲府', cities: ['甲府市'] },
     { slug: 'fujigoko', label: '富士五湖', cities: ['南都留郡富士河口湖町', '南都留郡山中湖村', '富士吉田市'] },
@@ -364,12 +347,11 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'isawa', label: '石和', cities: ['笛吹市'] },
   ],
   nagano: [
-    { slug: 'nagano-city', label: '長野市', cities: ['長野市'] },
-    { slug: 'matsumoto', label: '松本', cities: ['松本市'] },
-    { slug: 'tateshina', label: '蓼科', cities: ['茅野市'] },
-    { slug: 'ueda', label: '上田', cities: ['上田市'] },
-    { slug: 'hakuba', label: '白馬', cities: ['大町市'] },
-    { slug: 'other', label: 'その他', cities: ['須坂市', '飯田市'] },
+    { slug: 'ueda-bessho', label: '上田・別所温泉', cities: ['上田市'] },
+    { slug: 'nagano-shinano', label: '長野市・信濃町', cities: ['長野市', '信濃町'] },
+    { slug: 'karuizawa-nanshin', label: '軽井沢・南信', cities: ['軽井沢町', '飯田市', '伊那市', '山ノ内町', '須坂市'] },
+    { slug: 'matsumoto-tateshina', label: '松本・蓼科', cities: ['松本市', '茅野市'] },
+    { slug: 'hakuba', label: '白馬', cities: ['白馬村', '北安曇郡白馬村'] },
   ],
   toyama: [
     { slug: 'toyama-city', label: '富山市', cities: ['富山市'] },
@@ -386,10 +368,10 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'echizen', label: '越前', cities: ['越前市'] },
   ],
   shizuoka: [
+    { slug: 'hamamatsu-kakegawa', label: '浜松・掛川', cities: ['浜松市中央区', '袋井市', '御前崎市', '島田市', '榛原郡川根本町', '沼津市'] },
     { slug: 'shizuoka-city', label: '静岡市', cities: ['静岡市駿河区', '静岡市葵区', '静岡市清水区'] },
-    { slug: 'fuji', label: '富士', cities: ['富士市'] },
-    { slug: 'hamamatsu', label: '浜松', cities: ['浜松市中央区'] },
-    { slug: 'numazu', label: '沼津', cities: ['沼津市'] },
+    { slug: 'fuji-gotemba', label: '富士・御殿場', cities: ['富士市', '御殿場市'] },
+    { slug: 'izu', label: '伊豆', cities: ['伊豆の国市', '下田市'] },
   ],
   gifu: [
     { slug: 'gifu-city', label: '岐阜市', cities: ['岐阜市'] },
@@ -403,8 +385,9 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'higashi-kishu', label: '東紀州', cities: ['北牟婁郡紀北町'] },
   ],
   aichi: [
-    { slug: 'nagoya', label: '名古屋', cities: ['名古屋市'] },
-    { slug: 'other', label: 'その他', cities: ['刈谷市', '岡崎市', '岩倉市', '常滑市'] },
+    { slug: 'nagoya-sakae', label: '名古屋・栄', cities: ['名古屋市', '名古屋市中村区', '名古屋市中区', '名古屋市港区'] },
+    { slug: 'mikawa-chita', label: '三河・知多', cities: ['刈谷市', '岡崎市', '常滑市', '蒲郡市'] },
+    { slug: 'owari', label: '尾張', cities: ['岩倉市', '一宮市'] },
   ],
   shiga: [
     { slug: 'otsu', label: '大津', cities: ['大津市'] },
@@ -466,9 +449,9 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'niyodogawa', label: '仁淀川', cities: ['吾川郡仁淀川町', '吾川郡いの町'] },
   ],
   fukuoka: [
-    { slug: 'fukuoka-city', label: '福岡市', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
-    { slug: 'kitakyushu', label: '北九州', cities: ['北九州市小倉北区'] },
-    { slug: 'other', label: 'その他', cities: ['久留米市', '福津市', '筑紫野市'] },
+    { slug: 'fukuoka-city', label: '福岡市（天神・中洲）', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
+    { slug: 'chikuho-kitakyushu', label: '筑豊・北九州', cities: ['北九州市小倉北区', '福津市', '筑紫野市'] },
+    { slug: 'kurume', label: '久留米', cities: ['久留米市'] },
   ],
   saga: [
     { slug: 'saga-city', label: '佐賀市', cities: ['佐賀市'] },
