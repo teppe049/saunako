@@ -28951,13 +28951,13 @@
     "address": "三重県三重郡菰野町菰野4838-1",
     "nearestStation": null,
     "walkMinutes": null,
-    "priceMin": 2000,
-    "duration": 120,
+    "priceMin": 3000,
+    "duration": 100,
     "capacity": 4,
     "features": {
       "waterBath": false,
       "waterBathTemp": null,
-      "selfLoyly": false,
+      "selfLoyly": true,
       "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": null,
@@ -28969,7 +28969,7 @@
     "phone": "059-391-6363",
     "bookingUrl": null,
     "amenities": [],
-    "note": "料金は1人あたり（高校生以上）。小中学生1,000円。ポンチョレンタル500円、タオルレンタル500円。水着またはポンチョ着用必須。前日23:59までに要予約。アクアイグニス隣接。",
+    "note": "料金は1人あたり（高校生以上）。日帰り利用は大人3,000円、宿泊/デイキャン利用は大人2,000円。小中学生は半額。100分制。ポンチョレンタル500円、タオルレンタル500円。水着またはポンチョ着用必須。前日23:59までに要予約。アクアイグニス隣接。",
     "images": [
       "/facilities/401-0.webp",
       "/facilities/401-1.webp",
@@ -28977,25 +28977,37 @@
     ],
     "lat": 35.0124,
     "lng": 136.4799,
-    "description": "菰野町のキャンプリゾートに設置されたバレルサウナ。4名用のバレルサウナ2基を2時間2,000円で利用可能。アクアイグニス隣接、新名神菰野ICから約5分のアクセス。",
+    "description": "菰野町のキャンプリゾートに設置されたバレルサウナ。4名用のバレルサウナ2基を日帰り3,000円/人・100分で利用可能。ロウリュ付き。アクアイグニス隣接、新名神菰野ICから約5分のアクセス。",
     "seoDescription": null,
     "seoTitle": null,
     "saunakoCommentShort": "菰野でお手軽バレルサウナ体験！",
     "saunakoCommentLong": "菰野町のキャンプリゾートにあるバレルサウナだよ！2,000円で2時間楽しめるお手軽さが嬉しいポイント。アクアイグニスの隣にあるから、サウナのあとに温泉や食事も楽しめるの。鈴鹿山脈の自然の中でととのう開放感は最高だよ！",
-    "updatedAt": "2026-03-29",
+    "updatedAt": "2026-04-05",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "バレルサウナ 2時間（一般）",
-        "price": 2000,
-        "duration": 120,
+        "name": "バレルサウナ 日帰り利用（大人）",
+        "price": 3000,
+        "duration": 100,
         "capacity": 4
       },
       {
-        "name": "バレルサウナ 2時間（小中学生）",
+        "name": "バレルサウナ 日帰り利用（小中学生）",
+        "price": 1500,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "バレルサウナ 宿泊/デイキャン利用（大人）",
+        "price": 2000,
+        "duration": 100,
+        "capacity": 4
+      },
+      {
+        "name": "バレルサウナ 宿泊/デイキャン利用（小中学生）",
         "price": 1000,
-        "duration": 120,
+        "duration": 100,
         "capacity": 4
       }
     ],
