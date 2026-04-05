@@ -16522,11 +16522,11 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "9:00〜18:30（2時間枠制）",
+    "businessHours": "9:00〜18:30（2時間・4枠制）",
     "holidays": "不定休",
     "website": "https://unitedaomori.site/",
     "phone": null,
-    "bookingUrl": "https://unitedaomori.rezio.shop/ja-JP/product/8I3HBD",
+    "bookingUrl": "https://unitedaomori.site/united-aomori/experience-sauna-car/united-aomori-base-sauna/",
     "amenities": [
       "シャンプー",
       "コンディショナー",
@@ -16536,28 +16536,45 @@
     "images": [
       "/facilities/209-0.webp",
       "/facilities/209-1.webp",
-      "/facilities/209-2.webp",
-      "/facilities/209-3.webp"
+      "/facilities/209-2.webp"
     ],
     "lat": 40.707701,
     "lng": 140.759284,
     "description": "青森市郊外の自然豊かなロケーションにあるサウナカー体験施設。青森ヒバで内装されたサウナカーでセルフロウリュを楽しみ、地下水の水風呂で冷却、開放的な外気浴で整える。1名3,000円の2時間枠制。",
     "saunakoCommentShort": "青森ヒバ香るサウナカーが新感覚！",
     "saunakoCommentLong": "青森ヒバのサウナカーって聞いただけでワクワクしない？木の香りに包まれながらセルフロウリュして、地下水の水風呂でキュッと冷えて、自然の中で外気浴…最高の流れだよね。1人3,000円で2時間たっぷり楽しめるし、青森ならではのサウナ体験をしたい人にぴったりかも！",
-    "updatedAt": "2026-02-28",
+    "updatedAt": "2026-04-05",
     "openedAt": null,
     "closedAt": null,
-    "plans": null,
+    "plans": [
+      {
+        "name": "サウナカー体験 1名利用",
+        "price": 3000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "サウナカー体験 2名利用",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "サウナカー体験 3名利用",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 3
+      }
+    ],
     "timeSlots": [
       {
-        "label": "2時間枠制",
+        "label": "2時間・4枠制",
         "startTimes": [
           "9:00",
-          "11:00",
-          "13:00",
-          "15:00"
-        ],
-        "note": "最終枠15:00（終了17:00）"
+          "11:30",
+          "14:00",
+          "16:30"
+        ]
       }
     ],
     "slotType": "fixed"
@@ -20083,7 +20100,7 @@
       "バスタオル",
       "ドライヤー"
     ],
-    "note": "グランピング施設併設の「川ダイブサウナ」。バレルサウナで蒸されたあと清流にダイブ。リクライニングチェア付き川辺の整いスペース。上田駅からシャトルバスあり。",
+    "note": "グランピング施設併設の「川ダイブサウナ」。バレルサウナで蒸されたあと清流にダイブ。リクライニングチェア付き川辺の整いスペース。上田駅からシャトルバスあり。※サウナ単体利用不可（宿泊/グランピング利用者専用）のため掲載終了。",
     "images": [
       "/facilities/267-0.webp",
       "/facilities/267-1.webp",
@@ -20097,7 +20114,7 @@
     "saunakoCommentLong": "グランピング施設に併設された「川ダイブサウナ」がめちゃくちゃ気持ちよさそう！バレルサウナでしっかり蒸されてから目の前の清流にドボンって、サウナーの夢だよね。川辺のリクライニングチェアで外気浴しながら水の音を聞くのが最高かも。BBQとセットで楽しめるのも魅力だね！",
     "updatedAt": "2026-03-02",
     "openedAt": null,
-    "closedAt": null,
+    "closedAt": "2026-04-05",
     "plans": [
       {
         "name": "サウナ 80分",
@@ -29763,7 +29780,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "9:30-20:30（2時間枠制）",
+    "businessHours": "11:00〜18:40（100分制・4枠）",
     "holidays": "不定休",
     "website": "https://fecr.jp/plan/barrel_sauna/",
     "phone": "059-391-6363",
@@ -29813,13 +29830,12 @@
     ],
     "timeSlots": [
       {
-        "label": "2時間枠制",
+        "label": "100分制・4枠",
         "startTimes": [
-          "9:30",
-          "11:30",
-          "13:30",
-          "15:30",
-          "17:30"
+          "11:00",
+          "13:00",
+          "15:00",
+          "17:00"
         ]
       }
     ],
