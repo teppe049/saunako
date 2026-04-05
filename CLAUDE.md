@@ -50,7 +50,7 @@
 - **Tailwind CSS v4** + CSS Variables (`globals.css`)
 - **ESLint** (Next.js core-web-vitals + TypeScript rules)
 - **Google Maps** (`@react-google-maps/api`)
-- **データ**: 静的JSON (`data/facilities.json`, 487施設・47都道府県)
+- **データ**: 静的JSON (`data/facilities.json`, 486施設・47都道府県)
 - **デザイン**: Pencil MCP (`.pen`ファイル)
 
 ## ディレクトリ構成

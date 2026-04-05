@@ -7657,7 +7657,7 @@
     "prefecture": "tokyo",
     "prefectureLabel": "東京都",
     "city": "港区",
-    "area": "六本木・麻布",
+    "area": "品川・高輪",
     "address": "東京都港区高輪2-21-21 ニュウマン高輪 North 5F",
     "nearestStation": "高輪ゲートウェイ駅",
     "walkMinutes": 1,
@@ -7673,7 +7673,7 @@
       "bluetooth": null,
       "wifi": true
     },
-    "businessHours": "11:00-26:00",
+    "businessHours": "12:00〜20:00（個室サウナHuone／施設全体は11:00〜翌2:00）",
     "holidays": "不定休",
     "website": "https://saunas-saunas.com/takanawa/",
     "phone": "",
