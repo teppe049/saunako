@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { MapPin, Search, X, LocateFixed } from 'lucide-react';
+import { MapPin, Search, X, LocateFixed, Train, Building2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import {
-  AREA_OPTIONS, LOCATION_OPTIONS,
+  AREA_OPTIONS, STATION_OPTIONS, FACILITY_OPTIONS, POPULAR_SHORTCUTS,
   type SearchOption,
 } from '@/lib/search-options';
 
@@ -12,7 +13,15 @@ interface HeroLocationInputProps {
   onSelect: (option: SearchOption | null) => void;
 }
 
+/** カタカナ��ひらがな変換 */
+function kataToHira(str: string): string {
+  return str.replace(/[\u30A1-\u30F6]/g, (c) =>
+    String.fromCharCode(c.charCodeAt(0) - 0x60)
+  );
+}
+
 export default function HeroLocationInput({ selected, onSelect }: HeroLocationInputProps) {
+  const router = useRouter();
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -22,37 +31,42 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
 
   const filtered = (() => {
     if (!query) return [];
-    const queryLower = query.toLowerCase();
+    const q = query.toLowerCase();
+    const qHira = kataToHira(q);
 
+    // 1. 施設名マッチ
+    const facilityResults: SearchOption[] = FACILITY_OPTIONS.filter(
+      (f) => f.name.toLowerCase().includes(q)
+    )
+      .slice(0, 3)
+      .map((f) => ({ type: 'facility' as const, data: f }));
+
+    // 2. エリア（都道府県+サブエリア）マッチ
     const areaResults: SearchOption[] = AREA_OPTIONS.filter(
       (o) =>
         o.label.includes(query) ||
         o.subtitle.includes(query) ||
-        o.reading.includes(query) ||
+        o.reading.includes(qHira) ||
         o.cities.includes(query)
     )
       .sort((a, b) => {
-        const aPrefix = a.label.startsWith(query) || a.reading.startsWith(query) ? 1 : 0;
-        const bPrefix = b.label.startsWith(query) || b.reading.startsWith(query) ? 1 : 0;
+        const aPrefix = a.label.startsWith(query) || a.reading.startsWith(qHira) ? 1 : 0;
+        const bPrefix = b.label.startsWith(query) || b.reading.startsWith(qHira) ? 1 : 0;
         if (aPrefix !== bPrefix) return bPrefix - aPrefix;
         return b.weight - a.weight;
       })
-      .slice(0, 5)
+      .slice(0, 4)
       .map((o) => ({ type: 'area' as const, data: o }));
 
-    const locationResults: SearchOption[] = LOCATION_OPTIONS.filter(
-      (o) => o.label.includes(query) || o.label.toLowerCase().includes(queryLower)
+    // 3. 駅名マッチ
+    const stationResults: SearchOption[] = STATION_OPTIONS.filter(
+      (s) => s.label.includes(query) || s.label.replace('駅', '').includes(query)
     )
-      .sort((a, b) => {
-        const aPrefix = a.label.startsWith(query) ? 2 : a.label.includes(query) ? 1 : 0;
-        const bPrefix = b.label.startsWith(query) ? 2 : b.label.includes(query) ? 1 : 0;
-        if (aPrefix !== bPrefix) return bPrefix - aPrefix;
-        return a.label.length - b.label.length;
-      })
-      .slice(0, 5)
-      .map((o) => ({ type: 'location' as const, data: o }));
+      .sort((a, b) => b.facilityCount - a.facilityCount)
+      .slice(0, 3)
+      .map((s) => ({ type: 'station' as const, data: s }));
 
-    return [...areaResults, ...locationResults].slice(0, 10);
+    return [...areaResults, ...stationResults, ...facilityResults].slice(0, 8);
   })();
 
   useEffect(() => {
@@ -75,15 +89,36 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
   };
 
   const handleSelect = (option: SearchOption) => {
+    if (option.type === 'facility') {
+      // 施���名選択 → 詳細ページへ直接遷移
+      router.push(`/facilities/${option.data.id}`);
+      return;
+    }
     onSelect(option);
     if (option.type === 'area') {
-      const areaData = option.data;
-      setQuery(areaData.subtitle ? `${areaData.label}（${areaData.subtitle}）` : areaData.label);
+      const d = option.data;
+      setQuery(d.subtitle ? `${d.label}（${d.subtitle}）` : d.label);
+    } else if (option.type === 'station') {
+      setQuery(option.data.label);
     } else {
       setQuery(option.data.label);
     }
     setIsOpen(false);
     setActiveIndex(-1);
+  };
+
+  const handleShortcut = (shortcut: typeof POPULAR_SHORTCUTS[number]) => {
+    const matched = AREA_OPTIONS.find(
+      (o) => o.prefecture === shortcut.prefecture && o.area === shortcut.area
+    ) ?? AREA_OPTIONS.find(
+      (o) => o.prefecture === shortcut.prefecture && !o.area
+    );
+    if (matched) {
+      const option: SearchOption = { type: 'area', data: matched };
+      onSelect(option);
+      setQuery(matched.subtitle ? `${matched.label}（${matched.subtitle}）` : matched.label);
+      setIsOpen(false);
+    }
   };
 
   const handleClear = () => {
@@ -149,6 +184,46 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
     );
   };
 
+  const getOptionIcon = (option: SearchOption) => {
+    switch (option.type) {
+      case 'area': return <MapPin size={12} className="text-text-tertiary flex-shrink-0" />;
+      case 'station': return <Train size={12} className="text-text-tertiary flex-shrink-0" />;
+      case 'facility': return <Building2 size={12} className="text-text-tertiary flex-shrink-0" />;
+      default: return <MapPin size={12} className="text-text-tertiary flex-shrink-0" />;
+    }
+  };
+
+  const getOptionLabel = (option: SearchOption) => {
+    switch (option.type) {
+      case 'area': return option.data.label;
+      case 'station': return `${option.data.label} 周辺`;
+      case 'facility': return option.data.name;
+      default: return option.data.label;
+    }
+  };
+
+  const getOptionSublabel = (option: SearchOption) => {
+    switch (option.type) {
+      case 'area': {
+        const d = option.data;
+        const count = d.facilityCount > 0 ? `${d.facilityCount}施設` : '';
+        return d.subtitle ? `${d.subtitle} ${count}` : count;
+      }
+      case 'station': return `${option.data.facilityCount}施設`;
+      case 'facility': return option.data.city;
+      default: return '';
+    }
+  };
+
+  const getOptionKey = (option: SearchOption) => {
+    switch (option.type) {
+      case 'area': return `area-${option.data.prefecture}-${option.data.area ?? 'all'}`;
+      case 'station': return `st-${option.data.prefecture}-${option.data.label}`;
+      case 'facility': return `fac-${option.data.id}`;
+      default: return `loc-${option.data.label}`;
+    }
+  };
+
   return (
     <div className="flex flex-col gap-2">
       <span className="text-xs font-semibold text-text-tertiary flex items-center gap-1.5">
@@ -168,7 +243,7 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
               aria-controls={listboxId}
               aria-activedescendant={activeIndex >= 0 ? `hero-area-option-${activeIndex}` : undefined}
               autoComplete="off"
-              placeholder="駅名・地名で検索（例: 新橋、渋谷、大阪）"
+              placeholder="エリア・駅名・施設名で検索"
               value={query}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
@@ -190,15 +265,11 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
             <ul
               id={listboxId}
               role="listbox"
-              className="absolute z-50 mt-1 w-full bg-surface border border-border rounded-lg shadow-lg max-h-60 overflow-y-auto"
+              className="absolute z-50 mt-1 w-full bg-surface border border-border rounded-lg shadow-lg max-h-72 overflow-y-auto"
             >
               {filtered.map((option, i) => (
                 <li
-                  key={
-                    option.type === 'area'
-                      ? `area-${option.data.prefecture}-${option.data.area ?? 'all'}`
-                      : `loc-${option.data.label}`
-                  }
+                  key={getOptionKey(option)}
                   id={`hero-area-option-${i}`}
                   role="option"
                   aria-selected={i === activeIndex}
@@ -209,22 +280,32 @@ export default function HeroLocationInput({ selected, onSelect }: HeroLocationIn
                     i === activeIndex ? 'bg-primary/10 text-primary' : 'text-text-primary hover:bg-[#F8F9FA]'
                   }`}
                 >
-                  <span className="flex items-center gap-1.5">
-                    {option.type === 'location' && (
-                      <MapPin size={12} className="text-text-tertiary flex-shrink-0" />
-                    )}
-                    {option.type === 'area' ? option.data.label : option.data.label}
+                  <span className="flex items-center gap-1.5 min-w-0">
+                    {getOptionIcon(option)}
+                    <span className="truncate">{getOptionLabel(option)}</span>
                   </span>
-                  <span className="text-xs text-text-tertiary ml-2">
-                    {option.type === 'area'
-                      ? option.data.subtitle || 'エリア'
-                      : '駅・地名'}
+                  <span className="text-xs text-text-tertiary ml-2 flex-shrink-0">
+                    {getOptionSublabel(option)}
                   </span>
                 </li>
               ))}
             </ul>
           )}
         </div>
+      </div>
+
+      {/* 人気エリアショートカット */}
+      <div className="flex flex-wrap gap-1.5">
+        {POPULAR_SHORTCUTS.map((s) => (
+          <button
+            key={`${s.prefecture}-${s.area ?? 'all'}`}
+            type="button"
+            onClick={() => handleShortcut(s)}
+            className="px-2.5 py-1 text-xs rounded-full border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
+          >
+            {s.label}
+          </button>
+        ))}
       </div>
 
       <button

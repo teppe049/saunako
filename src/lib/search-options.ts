@@ -1,5 +1,5 @@
 import { PREFECTURES, AREA_GROUPS } from '@/lib/types';
-import locationMap from '@/lib/location-map.json';
+import suggestData from '@/lib/suggest-data.json';
 
 export const PRICE_MIN = 0;
 export const PRICE_MAX = 30000;
@@ -13,6 +13,23 @@ export type AreaOption = {
   weight: number;
   prefecture: string;
   area?: string;
+  facilityCount: number;
+};
+
+export type StationOption = {
+  label: string;
+  prefecture: string;
+  facilityCount: number;
+  lat: number;
+  lng: number;
+};
+
+export type FacilityOption = {
+  id: number;
+  name: string;
+  prefecture: string;
+  prefectureLabel: string;
+  city: string;
 };
 
 export type LocationOption = {
@@ -23,7 +40,9 @@ export type LocationOption = {
 
 export type SearchOption =
   | { type: 'area'; data: AreaOption }
-  | { type: 'location'; data: LocationOption };
+  | { type: 'location'; data: LocationOption }
+  | { type: 'station'; data: StationOption }
+  | { type: 'facility'; data: FacilityOption };
 
 // 施設数ベースの都道府県重み（多い順）
 const PREF_WEIGHTS: Record<string, number> = {
@@ -54,10 +73,8 @@ const READINGS: Record<string, string> = {
   '福岡県': 'ふくおかけん', '佐賀県': 'さがけん', '長崎県': 'ながさきけん',
   '熊本県': 'くまもとけん', '大分県': 'おおいたけん', '宮崎県': 'みやざきけん',
   '鹿児島県': 'かごしまけん', '沖縄県': 'おきなわけん',
-  // 北海道: 県単位（サブエリアなし）
   '青森市': 'あおもりし', '八戸': 'はちのへ', '津軽': 'つがる', '十和田': 'とわだ',
   '盛岡': 'もりおか', '横手': 'よこて',
-  // 仙台: 宮城県は県単位
   '山形市': 'やまがたし', '天童': 'てんどう', '米沢': 'よねざわ', '蔵王': 'ざおう', '庄内': 'しょうない',
   '福島市': 'ふくしまし', '郡山': 'こおりやま', 'いわき': 'いわき', '会津・浜通り': 'あいづはまどおり', '白河': 'しらかわ',
   '六本木・麻布': 'ろっぽんぎあざぶ', '新宿・神楽坂': 'しんじゅくかぐらざか', '銀座・築地': 'ぎんざつきじ',
@@ -72,7 +89,6 @@ const READINGS: Record<string, string> = {
   'みなかみ・沼田': 'みなかみぬまた', '甘楽': 'かんら',
   '那須・塩原': 'なすしおばら', '宇都宮・小山': 'うつのみやおやま', '日光・県央': 'にっこうけんおう',
   '水戸・笠間': 'みとかさま', 'つくば': 'つくば',
-  // 新潟: 県単位（サブエリアなし）
   '甲府': 'こうふ', '富士五湖': 'ふじごこ', '北杜': 'ほくと', '石和': 'いさわ',
   '上田・別所温泉': 'うえだべっしょおんせん', '長野市・信濃町': 'ながのししなのまち',
   '軽井沢・南信': 'かるいざわなんしん', '松本・蓼科': 'まつもとたてしな', '白馬': 'はくば',
@@ -84,7 +100,6 @@ const READINGS: Record<string, string> = {
   '菰野': 'こもの',
   '名古屋・栄': 'なごやさかえ', '三河・知多': 'みかわちた', '尾張': 'おわり',
   '大津': 'おおつ', '長浜': 'ながはま',
-  // 京都: 県単位（サブエリアなし）
   'ミナミ（心斎橋・難波）': 'みなみしんさいばしなんば', 'キタ（梅田・北新地）': 'きたうめだきたしんち', '八尾・枚方': 'やおひらかた',
   '神戸': 'こうべ', '阪神': 'はんしん', '三田': 'さんだ', '加古川': 'かこがわ',
   '姫路': 'ひめじ', '但馬・丹波': 'たじまたんば',
@@ -108,10 +123,14 @@ const READINGS: Record<string, string> = {
   '那覇': 'なは', 'やんばる': 'やんばる',
 };
 
+// サジェストデータから施設数を取得
+const areaCounts = suggestData.areaCounts as Record<string, { total: number; areas: Record<string, number> }>;
+
 export const AREA_OPTIONS: AreaOption[] = (() => {
   const options: AreaOption[] = [];
   for (const pref of PREFECTURES) {
     const prefWeight = PREF_WEIGHTS[pref.code] ?? 3;
+    const counts = areaCounts[pref.code];
     const allCities = (AREA_GROUPS[pref.code] ?? [])
       .flatMap((a) => a.cities)
       .join(' ');
@@ -122,6 +141,7 @@ export const AREA_OPTIONS: AreaOption[] = (() => {
       cities: allCities,
       weight: prefWeight,
       prefecture: pref.code,
+      facilityCount: counts?.total ?? 0,
     });
     const areas = AREA_GROUPS[pref.code];
     if (areas) {
@@ -134,6 +154,7 @@ export const AREA_OPTIONS: AreaOption[] = (() => {
           weight: prefWeight + (area.cities.length > 2 ? 2 : 0),
           prefecture: pref.code,
           area: area.slug,
+          facilityCount: counts?.areas[area.label] ?? 0,
         });
       }
     }
@@ -141,13 +162,40 @@ export const AREA_OPTIONS: AreaOption[] = (() => {
   return options;
 })();
 
-export const LOCATION_OPTIONS: LocationOption[] = Object.entries(
-  locationMap as Record<string, { lat: number; lng: number }>
-).map(([name, coords]) => ({
-  label: name,
-  lat: coords.lat,
-  lng: coords.lng,
+// 駅名サジェストデータ（10施設超の16県）
+export const STATION_OPTIONS: StationOption[] = (
+  suggestData.stations as { label: string; pref: string; count: number; lat: number; lng: number }[]
+).map((s) => ({
+  label: s.label,
+  prefecture: s.pref,
+  facilityCount: s.count,
+  lat: s.lat,
+  lng: s.lng,
 }));
+
+// 施設名サジェストデータ
+export const FACILITY_OPTIONS: FacilityOption[] = (
+  suggestData.facilities as { id: number; name: string; pref: string; prefLabel: string; city: string }[]
+).map((f) => ({
+  id: f.id,
+  name: f.name,
+  prefecture: f.pref,
+  prefectureLabel: f.prefLabel,
+  city: f.city,
+}));
+
+// 人気エリアショートカット（モバイル2行に収まる9個）
+export const POPULAR_SHORTCUTS: { label: string; prefecture: string; area?: string }[] = [
+  { label: '六本木・麻布', prefecture: 'tokyo', area: 'roppongi-azabu' },
+  { label: '渋谷・恵比寿', prefecture: 'tokyo', area: 'shibuya-ebisu-daikanyama' },
+  { label: '新宿', prefecture: 'tokyo', area: 'shinjuku-kagurazaka' },
+  { label: '浅草・上野', prefecture: 'tokyo', area: 'ueno-asakusa' },
+  { label: '横浜', prefecture: 'kanagawa', area: 'yokohama' },
+  { label: '名古屋', prefecture: 'aichi', area: 'nagoya-sakae' },
+  { label: '大阪', prefecture: 'osaka' },
+  { label: '福岡', prefecture: 'fukuoka' },
+  { label: '札幌', prefecture: 'hokkaido' },
+];
 
 export function formatPrice(v: number) {
   if (v >= PRICE_MAX) return '¥30,000';

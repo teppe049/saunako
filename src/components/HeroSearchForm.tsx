@@ -34,11 +34,16 @@ export default function HeroSearchForm() {
       if (selected.type === 'area') {
         params.set('prefecture', selected.data.prefecture);
         if (selected.data.area) params.set('area', selected.data.area);
-      } else {
+      } else if (selected.type === 'station') {
+        params.set('lat', String(selected.data.lat));
+        params.set('lng', String(selected.data.lng));
+        params.set('locationName', selected.data.label);
+      } else if (selected.type === 'location') {
         params.set('lat', String(selected.data.lat));
         params.set('lng', String(selected.data.lng));
         params.set('locationName', selected.data.label);
       }
+      // facility type は HeroLocationInput で直接遷移するためここには来ない
     }
     if (guests) params.set('capacity', guests);
     if (coupleOk) params.set('coupleOk', 'true');
