@@ -22,8 +22,21 @@ export function parseBusinessHoursTags(bh: string): { is24h: boolean; lateNight:
 /**
  * 指定時刻（hour）に営業中かどうか判定。
  * パースできない場合は true を返す（除外しない方針）。
+ *
+ * facility を渡すと timeSlots も考慮する:
+ * - slotType: "fixed" で timeSlots あり → その時間帯に開始枠があるか判定
+ * - それ以外 → 従来の businessHours 文字列パース
  */
-export function isOpenAtHour(bh: string, hour: number): boolean {
+export function isOpenAtHour(bh: string, hour: number, facility?: Facility): boolean {
+  // timeSlots による判定（固定枠制施設）
+  if (facility?.slotType === 'fixed' && facility.timeSlots && facility.timeSlots.length > 0) {
+    const allTimes = facility.timeSlots.flatMap(g => g.startTimes);
+    return allTimes.some(t => {
+      const h = parseInt(t.split(':')[0], 10);
+      return h === hour;
+    });
+  }
+
   if (!bh || bh === '不明' || bh.includes('予約') || bh.includes('要問') || bh.includes('要確認') || bh.includes('確認')) return true;
   if (bh.includes('24時間')) return true;
 

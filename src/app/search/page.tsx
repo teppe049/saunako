@@ -142,7 +142,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
   // 「何時から」フィルタ: 営業時間ベースで指定時刻に営業中の施設を絞り込み
   const openAt = params.openAt ? Number(params.openAt) : undefined;
   const timeFiltered = openAt != null && !isNaN(openAt)
-    ? filtered.filter((f) => isOpenAtHour(f.businessHours, openAt))
+    ? filtered.filter((f) => isOpenAtHour(f.businessHours, openAt, f))
     : filtered;
 
   const sorted = sortFacilities(timeFiltered, sortKey, origin);

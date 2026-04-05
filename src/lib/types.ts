@@ -78,6 +78,7 @@ export interface Facility {
   closedAt: string | null;
   plans: Plan[] | null;
   timeSlots: TimeSlotGroup[] | null;
+  slotType: 'fixed' | 'free' | null;
 }
 
 export interface Prefecture {
