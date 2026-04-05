@@ -988,7 +988,7 @@ https://www.saunako.jp/facilities/65?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-05 午後 — i3U7 IMMERSIVE SAUNA (id=269)「知ってた？」
+## ~~2026-04-05 午後 — i3U7 IMMERSIVE SAUNA (id=269)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
