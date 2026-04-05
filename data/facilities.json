@@ -24110,7 +24110,7 @@
     "address": "滋賀県長浜市元浜町17-2",
     "nearestStation": "長浜駅",
     "walkMinutes": 8,
-    "priceMin": 6980,
+    "priceMin": 7980,
     "duration": 80,
     "capacity": 4,
     "features": {
@@ -24122,16 +24122,16 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "日〜木 9:30〜21:00 / 金土 11:00〜14:20（2部制）",
+    "businessHours": "要予約（じゃらんから予約）",
     "holidays": "不定休",
     "website": "https://cafe-inn-hitoiki.com/",
     "phone": "0749-56-1174",
-    "bookingUrl": "https://tabichat.jp/engine/hotels/hitoiki",
+    "bookingUrl": "https://cafe-inn-hitoiki.com/%e8%b2%b8%e5%88%87%e3%82%b5%e3%82%a6%e3%83%8a/",
     "amenities": [
       "タオル",
       "アメニティ"
     ],
-    "note": "町家蔵サウナ・日帰り利用可（じゃらん遊び体験から予約）・伊吹薬草ロウリュ",
+    "note": "町家蔵サウナ・日帰り利用可（じゃらん遊び体験から予約）・伊吹薬草ロウリュ。平日¥7,980/土日¥9,980（じゃらん価格）。",
     "images": [
       "/facilities/320-0.webp",
       "/facilities/320-1.webp",
@@ -24142,11 +24142,17 @@
     "description": "長浜城下の町家ホテルに併設された貸切蔵サウナ。伊吹山の薬草を使ったハーブロウリュが特徴で、セルフロウリュを楽しめる。日帰り利用も可能で、「薬草蔵サウナ」と「茶香サウナ」の2種類を用意。最大4名まで利用可能。",
     "saunakoCommentShort": "長浜の町家蔵で薬草ロウリュ体験！",
     "saunakoCommentLong": "長浜の趣ある町家に蔵サウナがあるなんて素敵だよね！伊吹薬草のロウリュは香りがすっごく癒されるの。日帰りでも使えるから、長浜観光のついでに立ち寄るのもアリかも。「薬草」と「茶香」の2種類あるから、どっちも試してみたいな。",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-04-05",
     "plans": [
       {
-        "name": "日帰りサウナ 80分 4名",
-        "price": 6980,
+        "name": "日帰りサウナ 80分（平日）",
+        "price": 7980,
+        "duration": 80,
+        "capacity": 4
+      },
+      {
+        "name": "日帰りサウナ 80分（土日）",
+        "price": 9980,
         "duration": 80,
         "capacity": 4
       }
@@ -24154,7 +24160,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": null
+    "slotType": "free"
   },
   {
     "id": 321,
@@ -26326,7 +26332,7 @@
     "address": "徳島県名西郡神山町神領字大埜地355-1",
     "nearestStation": "徳島駅",
     "walkMinutes": null,
-    "priceMin": 3000,
+    "priceMin": 3500,
     "duration": 120,
     "capacity": 6,
     "features": {
@@ -26338,7 +26344,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "要予約（時間枠制）",
+    "businessHours": "9:30〜21:30（2時間制5部/3時間制3部）",
     "holidays": "不定休",
     "website": "https://nature-healing.jp/",
     "phone": "080-4226-2714",
@@ -26347,7 +26353,7 @@
       "タオル",
       "ポンチョ"
     ],
-    "note": "徳島駅から車約50分。築100年の蔵を改装したスモークサウナ。川水風呂あり。キャンプ・コテージ宿泊も可能",
+    "note": "徳島駅から車約50分。築100年の蔵を改装したスモークサウナ。川水風呂あり。キャンプ・コテージ宿泊も可能。5部(19:30-21:30)はGW及び6月〜10月のみ。平日1名利用は2時間¥7,000/3時間¥10,000。",
     "images": [
       "/facilities/353-0.webp",
       "/facilities/353-1.webp",
@@ -26358,25 +26364,45 @@
     "description": "神山町の自然豊かな山間に佇む、築100年の蔵を改装した本格フィンランド式スモークサウナ。薪で蒸す伝統的な製法で、川水風呂と外気浴も楽しめる。テントサウナやキャンプ場、コテージ宿泊も備えた複合アウトドア施設。",
     "saunakoCommentShort": "築100年の蔵サウナ、ロマンしかない！",
     "saunakoCommentLong": "築100年の蔵をそのままスモークサウナにしちゃった唯一無二のスポットだよ！薪で焚くフィンランド式で、煙の香りがたまらないの。サウナ後は30秒歩いて川にドボン！夏は川遊びもできるし、キャンプも一緒に楽しめるからアウトドア好きにはたまらないかも。",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-04-05",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "蔵スモークサウナ 2時間",
-        "price": 3000,
+        "name": "蔵スモークサウナ 2時間制",
+        "price": 3500,
         "duration": 120,
         "capacity": 6
       },
       {
-        "name": "テントサウナ 2時間",
-        "price": 1500,
-        "duration": 120,
-        "capacity": 4
+        "name": "蔵スモークサウナ 3時間制",
+        "price": 5000,
+        "duration": 180,
+        "capacity": 6
       }
     ],
-    "timeSlots": null,
-    "slotType": null
+    "timeSlots": [
+      {
+        "label": "2時間制・5部",
+        "startTimes": [
+          "9:30",
+          "12:00",
+          "14:30",
+          "17:00",
+          "19:30"
+        ],
+        "note": "5部(19:30)はGW及び6月〜10月のみ"
+      },
+      {
+        "label": "3時間制・3部",
+        "startTimes": [
+          "10:00",
+          "13:30",
+          "17:00"
+        ]
+      }
+    ],
+    "slotType": "fixed"
   },
   {
     "id": 354,
