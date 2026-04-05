@@ -64,8 +64,8 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     });
   };
 
-  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax');
-  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0);
+  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax') || !!searchParams.get('openAt');
+  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0) + (searchParams.get('openAt') ? 1 : 0);
 
   const hasTrackedSearch = useRef(false);
   useEffect(() => {
@@ -135,6 +135,24 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     trackFilterChange('priceMax', value || 'all');
     updateParams((p) => value ? p.set('priceMax', value) : p.delete('priceMax'));
   };
+
+  const handleOpenAtChange = (value: string) => {
+    trackFilterChange('openAt', value || 'all');
+    updateParams((p) => value ? p.set('openAt', value) : p.delete('openAt'));
+  };
+
+  const toggleNowAvailable = () => {
+    const isActive = !!searchParams.get('openAt');
+    if (isActive) {
+      updateParams((p) => p.delete('openAt'));
+    } else {
+      const currentHour = new Date().getHours();
+      trackFilterChange('openAt', String(currentHour));
+      updateParams((p) => p.set('openAt', String(currentHour)));
+    }
+  };
+
+  const isNowAvailableActive = !!searchParams.get('openAt');
 
   return (
     <div className="bg-surface border-b border-border flex-shrink-0">
@@ -214,6 +232,18 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
               {filterLabels[key]}
             </button>
           ))}
+          <button
+            onClick={toggleNowAvailable}
+            className={`px-2.5 py-1.5 rounded-full text-[13px] font-medium transition-colors border flex-shrink-0 ${
+              isNowAvailableActive
+                ? 'bg-primary text-white border-primary'
+                : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
+            }`}
+            data-track-click="filter_chip"
+            data-track-filter="nowAvailable"
+          >
+            今すぐ入れる
+          </button>
           {hasActiveFilters && (
             <button onClick={clearAllFilters} className="text-[13px] text-text-tertiary hover:text-text-secondary transition-colors flex-shrink-0 ml-0.5">
               クリア
@@ -276,6 +306,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         onSortChange={handleSortChange}
         onDurationChange={handleDurationChange}
         onPriceMaxChange={handlePriceMaxChange}
+        onOpenAtChange={handleOpenAtChange}
       />
 
       {showFilterSheet && (
@@ -287,6 +318,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           onSortChange={handleSortChange}
           onDurationChange={handleDurationChange}
           onPriceMaxChange={handlePriceMaxChange}
+          onOpenAtChange={handleOpenAtChange}
           onClearAll={clearAllFilters}
           onClose={() => setShowFilterSheet(false)}
         />

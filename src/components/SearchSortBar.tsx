@@ -23,6 +23,7 @@ interface SearchSortBarProps {
   onSortChange: (value: string) => void;
   onDurationChange: (value: string) => void;
   onPriceMaxChange: (value: string) => void;
+  onOpenAtChange: (value: string) => void;
 }
 
 export default function SearchSortBar({
@@ -34,6 +35,7 @@ export default function SearchSortBar({
   onSortChange,
   onDurationChange,
   onPriceMaxChange,
+  onOpenAtChange,
 }: SearchSortBarProps) {
   const searchParams = useSearchParams();
   const showAreaRow = prefectureCode && AREA_GROUPS[prefectureCode];
@@ -119,6 +121,21 @@ export default function SearchSortBar({
             <option value="10000">〜10,000円</option>
             <option value="15000">〜15,000円</option>
             <option value="20000">〜20,000円</option>
+          </select>
+          {CHEVRON_SVG}
+        </div>
+
+        <div className="relative inline-flex items-center">
+          <select
+            aria-label="何時から"
+            value={searchParams.get('openAt') || ''}
+            onChange={(e) => onOpenAtChange(e.target.value)}
+            className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
+          >
+            <option value="">何時から</option>
+            {Array.from({ length: 16 }, (_, i) => i + 7).map((h) => (
+              <option key={h} value={String(h)}>{h}:00</option>
+            ))}
           </select>
           {CHEVRON_SVG}
         </div>

@@ -31,6 +31,7 @@ interface MobileFilterSheetProps {
   onSortChange: (value: string) => void;
   onDurationChange: (value: string) => void;
   onPriceMaxChange: (value: string) => void;
+  onOpenAtChange: (value: string) => void;
   onClearAll: () => void;
   onClose: () => void;
 }
@@ -43,6 +44,7 @@ export default function MobileFilterSheet({
   onSortChange,
   onDurationChange,
   onPriceMaxChange,
+  onOpenAtChange,
   onClearAll,
   onClose,
 }: MobileFilterSheetProps) {
@@ -132,6 +134,23 @@ export default function MobileFilterSheet({
                   <option value="90">90分〜</option>
                   <option value="120">120分〜</option>
                   <option value="180">180分〜</option>
+                </select>
+                {CHEVRON_SVG}
+              </div>
+            </div>
+            <div>
+              <p className="text-[13px] font-medium text-text-tertiary mb-2" id="openat-label-mobile">何時から</p>
+              <div className="relative">
+                <select
+                  aria-labelledby="openat-label-mobile"
+                  value={searchParams.get('openAt') || ''}
+                  onChange={(e) => onOpenAtChange(e.target.value)}
+                  className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
+                >
+                  <option value="">指定なし</option>
+                  {Array.from({ length: 16 }, (_, i) => i + 7).map((h) => (
+                    <option key={h} value={String(h)}>{h}:00</option>
+                  ))}
                 </select>
                 {CHEVRON_SVG}
               </div>

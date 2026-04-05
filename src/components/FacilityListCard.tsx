@@ -3,7 +3,7 @@
 import { forwardRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
-import { getTimeSlotTags, isFacilityClosed } from '@/lib/facility-utils';
+import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed } from '@/lib/facility-utils';
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
@@ -38,6 +38,8 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
         : '';
 
     const { hasMorningSlot, hasLateNightSlot } = getTimeSlotTags(facility);
+    const currentHour = new Date().getHours();
+    const nextSlot = getNextAvailableSlot(facility, currentHour);
 
     return (
       <div
@@ -103,6 +105,16 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
                 <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-[#E8F5E9] text-[#4CAF50] rounded">深夜枠あり</span>
               )}
             </div>
+
+            {/* Next available slot */}
+            {nextSlot && (
+              <p className="flex items-center gap-1 text-xs text-text-secondary">
+                <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {nextSlot}
+              </p>
+            )}
 
             {/* Location + Distance badge */}
             <div className="flex items-center gap-2 flex-wrap">

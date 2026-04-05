@@ -33,7 +33,7 @@ export function isOpenAtHour(bh: string, hour: number, facility?: Facility): boo
     const allTimes = facility.timeSlots.flatMap(g => g.startTimes);
     return allTimes.some(t => {
       const h = parseInt(t.split(':')[0], 10);
-      return h === hour;
+      return h >= hour;
     });
   }
 
@@ -49,6 +49,40 @@ export function isOpenAtHour(bh: string, hour: number, facility?: Facility): boo
   const checkH = hour < openH ? hour + 24 : hour; // 深夜帯の補正
 
   return checkH >= openH && checkH < closeH;
+}
+
+/**
+ * 現在時刻以降の次の空き枠を返す。
+ * - fixed施設: timeSlots から currentHour 以降の最も近い開始時刻
+ * - free施設: 営業中なら "営業中"、閉店中なら開始時刻
+ * - 判定不能: null
+ */
+export function getNextAvailableSlot(facility: Facility, currentHour: number): string | null {
+  if (facility.slotType === 'fixed' && facility.timeSlots && facility.timeSlots.length > 0) {
+    const allTimes = facility.timeSlots
+      .flatMap(g => g.startTimes)
+      .sort();
+    const next = allTimes.find(t => {
+      const h = parseInt(t.split(':')[0], 10);
+      return h >= currentHour;
+    });
+    return next ? `${next}〜` : null;
+  }
+
+  const bh = facility.businessHours;
+  if (!bh || bh === '不明' || bh.includes('予約') || bh.includes('要問') || bh.includes('要確認') || bh.includes('確認')) return null;
+  if (bh.includes('24時間')) return '営業中';
+
+  const m = bh.match(/(\d{1,2}):(\d{2})\s*[〜\-−～]\s*(?:翌)?(\d{1,2}):(\d{2})/);
+  if (!m) return null;
+
+  const openH = parseInt(m[1], 10);
+  const closeH = parseInt(m[3], 10) + (bh.includes('翌') ? 24 : 0);
+  const checkH = currentHour < openH ? currentHour + 24 : currentHour;
+
+  if (checkH >= openH && checkH < closeH) return '営業中';
+  if (currentHour < openH) return `${m[1]}:${m[2]} 開始`;
+  return null;
 }
 
 export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
