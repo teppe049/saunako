@@ -15,6 +15,7 @@ type Who = 'solo' | 'couple' | 'group';
 export default function HeroSearchForm() {
   const router = useRouter();
   const [who, setWho] = useState<Who>('couple');
+  const [groupSize, setGroupSize] = useState('2');
   const [priceRange, setPriceRange] = useState<[number, number]>([PRICE_MIN, PRICE_MAX]);
   const [startTime, setStartTime] = useState('');
   const [duration, setDuration] = useState('');
@@ -51,10 +52,10 @@ export default function HeroSearchForm() {
     if (who === 'solo') {
       params.set('capacity', '1');
     } else if (who === 'couple') {
+      params.set('capacity', '2');
       params.set('coupleOk', 'true');
     } else {
-      params.set('capacity', '3');
-      params.set('coupleOk', 'true');
+      params.set('capacity', groupSize);
     }
     if (startTime) params.set('openAt', startTime);
     if (duration) params.set('duration', duration);
@@ -71,9 +72,9 @@ export default function HeroSearchForm() {
   const maxPercent = ((priceRange[1] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) * 100;
 
   const whoOptions: { key: Who; label: string }[] = [
-    { key: 'solo', label: 'ソロ' },
-    { key: 'couple', label: 'カップル・男女' },
-    { key: 'group', label: 'グループ(3人〜)' },
+    { key: 'solo', label: 'ひとりで' },
+    { key: 'couple', label: 'カップルで' },
+    { key: 'group', label: '友達・グループと' },
   ];
 
   return (
@@ -100,6 +101,19 @@ export default function HeroSearchForm() {
             </button>
           ))}
         </div>
+        {who === 'group' && (
+          <select
+            aria-label="人数"
+            value={groupSize}
+            onChange={(e) => setGroupSize(e.target.value)}
+            className="h-11 md:h-12 bg-[#F8F9FA] border border-border rounded-lg px-4 text-text-primary text-sm"
+          >
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+            <option value="4">4人</option>
+            <option value="5">5人以上</option>
+          </select>
+        )}
       </div>
 
       {/* Divider */}

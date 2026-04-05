@@ -93,12 +93,6 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               {facility.features.coupleOk && (
                 <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-warning text-white rounded">男女OK</span>
               )}
-              {facility.features.waterBath && (
-                <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-primary text-white rounded">水風呂</span>
-              )}
-              {facility.features.selfLoyly && (
-                <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-primary text-white rounded">ロウリュ可</span>
-              )}
               {facility.features.outdoorAir && (
                 <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-primary text-white rounded">外気浴</span>
               )}
@@ -126,9 +120,9 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
 
             {/* Website link */}
             {facility.website && (
-              <a
-                href={facility.website}
-                className="inline-flex items-center gap-1 text-[11px] md:text-xs border border-saunako text-saunako rounded-full px-2.5 py-0.5 hover:bg-saunako hover:text-white transition-colors w-fit"
+              <button
+                type="button"
+                className="inline-flex items-center gap-1 text-[11px] md:text-xs border border-saunako text-saunako rounded-full px-2.5 py-0.5 hover:bg-saunako hover:text-white transition-colors w-fit cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
                   e.preventDefault();
@@ -140,7 +134,7 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
                 <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-              </a>
+              </button>
             )}
 
             {/* Saunako comment */}

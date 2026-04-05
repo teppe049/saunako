@@ -147,8 +147,8 @@ async function SearchContent({ searchParams }: SearchPageProps) {
 
   const sorted = sortFacilities(timeFiltered, sortKey, origin);
 
-  // 現在地検索: 距離制限（デフォルト10km、段階的に拡大可能）
-  const DEFAULT_RADIUS_KM = 10;
+  // 現在地検索: 距離制限（デフォルト3km、段階的に拡大可能）
+  const DEFAULT_RADIUS_KM = 3;
   const radiusKm = origin
     ? (params.radius ? Number(params.radius) : DEFAULT_RADIUS_KM)
     : undefined;

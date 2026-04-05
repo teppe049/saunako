@@ -31,7 +31,7 @@ function isInBounds(facility: Facility, bounds: MapBounds): boolean {
   );
 }
 
-const RADIUS_STEPS = [10, 30, 50]; // km
+const RADIUS_STEPS = [3, 5, 10, 30]; // km
 
 export default function SearchInteractivePanel({ facilities, hasOrigin, origin, radiusKm }: Props) {
   const router = useRouter();
