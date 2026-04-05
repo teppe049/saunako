@@ -2,11 +2,9 @@
 
 import { useSearchParams } from 'next/navigation';
 
-type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
+type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
 
 const filterLabels: Record<FilterKey, string> = {
-  waterBath: '水風呂',
-  selfLoyly: 'ロウリュ',
   outdoorAir: '外気浴',
   coupleOk: '男女OK',
   open24h: '24時間',

@@ -21,11 +21,9 @@ interface SearchHeaderBarProps {
   areaCounts?: Record<string, number>;
 }
 
-type FilterKey = 'waterBath' | 'selfLoyly' | 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
+type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
 
 const filterLabels: Record<FilterKey, string> = {
-  waterBath: '水風呂',
-  selfLoyly: 'ロウリュ',
   outdoorAir: '外気浴',
   coupleOk: '男女OK',
   open24h: '24時間',
@@ -49,8 +47,6 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   const searchParams = useSearchParams();
 
   const [filters, setFilters] = useState({
-    waterBath: searchParams.get('waterBath') === 'true',
-    selfLoyly: searchParams.get('selfLoyly') === 'true',
     outdoorAir: searchParams.get('outdoorAir') === 'true',
     coupleOk: searchParams.get('coupleOk') === 'true',
     open24h: searchParams.get('open24h') === 'true',
@@ -94,7 +90,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   };
 
   const clearAllFilters = () => {
-    setFilters({ waterBath: false, selfLoyly: false, outdoorAir: false, coupleOk: false, open24h: false, lateNight: false, earlyMorning: false });
+    setFilters({ outdoorAir: false, coupleOk: false, open24h: false, lateNight: false, earlyMorning: false });
     const params = new URLSearchParams();
     for (const key of ['region', 'prefecture', 'area', 'sort', 'lat', 'lng', 'locationName']) {
       const val = searchParams.get(key);
