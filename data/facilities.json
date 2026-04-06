@@ -6937,7 +6937,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "かなこ｜青物横丁のスナック×プライベートサウナ 16,000円〜 | サウナ子",
-    "slotType": "fixed"
+    "slotType": "fixed",
+    "priceMax": 35000
   },
   {
     "id": 82,
@@ -7771,7 +7772,8 @@
     "timeSlots": null,
     "openedAt": "2026-02-21",
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 42000
   },
   {
     "id": 91,
@@ -8054,7 +8056,8 @@
       }
     ],
     "seoTitle": "tere saun｜川口の韓国カフェ併設150分貸切サウナ 7,000円〜 | サウナ子",
-    "slotType": "fixed"
+    "slotType": "fixed",
+    "priceMax": 18000
   },
   {
     "id": 94,
@@ -8984,7 +8987,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "Sea Sauna Shack｜館山の海と富士山望む薪サウナ 21,000円〜 | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 26000
   },
   {
     "id": 106,
@@ -9062,7 +9066,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "KIZAMI｜館山の1組限定ヒノキ貸切プライベートサウナ 21,000円〜 | サウナ子",
-    "slotType": "fixed"
+    "slotType": "fixed",
+    "priceMax": 21000
   },
   {
     "id": 107,
@@ -9457,7 +9462,8 @@
     ],
     "timeSlots": null,
     "seoTitle": "SAUNA HIDE OUT｜江ノ島の隠れ家貸切サウナ 3,500円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 15000
   },
   {
     "id": 111,
@@ -9993,7 +9999,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "コアミガメ｜高萩の古蔵薪サウナ×大北川 30,000円〜 | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 30000
   },
   {
     "id": 118,
@@ -10490,7 +10497,8 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 12600
   },
   {
     "id": 124,
@@ -11334,7 +11342,8 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 10500
   },
   {
     "id": 136,
@@ -11703,7 +11712,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "MISOGI小山店｜小山の完全個室サウナ 3,800円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 5300
   },
   {
     "id": 171,
@@ -13427,7 +13437,8 @@
     ],
     "timeSlots": null,
     "seoTitle": "那須ユートピア｜那須の廃校リノベサウナリゾート 7,800円〜 | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 55000
   },
   {
     "id": 152,
@@ -32816,7 +32827,8 @@
     "timeSlots": null,
     "seoTitle": null,
     "seoDescription": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 4500
   },
   {
     "id": 445,
@@ -34010,7 +34022,8 @@
     "closedAt": null,
     "seoTitle": null,
     "seoDescription": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceMax": 8000
   },
   {
     "id": 461,
