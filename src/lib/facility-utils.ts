@@ -29,8 +29,9 @@ export function parseBusinessHoursTags(bh: string): { is24h: boolean; lateNight:
  */
 export function isOpenAtHour(bh: string, hour: number, facility?: Facility): boolean {
   // timeSlots による判定（固定枠制施設）
-  if (facility?.slotType === 'fixed' && facility.timeSlots && facility.timeSlots.length > 0) {
-    const allTimes = facility.timeSlots.flatMap(g => g.startTimes);
+  if (facility?.slotType === 'fixed' && Array.isArray(facility.timeSlots) && facility.timeSlots.length > 0) {
+    const allTimes = facility.timeSlots.flatMap(g => g?.startTimes ?? []);
+    if (allTimes.length === 0) return true;
     return allTimes.some(t => {
       const h = parseInt(t.split(':')[0], 10);
       return h >= hour;
@@ -58,9 +59,9 @@ export function isOpenAtHour(bh: string, hour: number, facility?: Facility): boo
  * - 判定不能: null
  */
 export function getNextAvailableSlot(facility: Facility, currentHour: number): string | null {
-  if (facility.slotType === 'fixed' && facility.timeSlots && facility.timeSlots.length > 0) {
+  if (facility.slotType === 'fixed' && Array.isArray(facility.timeSlots) && facility.timeSlots.length > 0) {
     const allTimes = facility.timeSlots
-      .flatMap(g => g.startTimes)
+      .flatMap(g => g?.startTimes ?? [])
       .sort();
     const next = allTimes.find(t => {
       const h = parseInt(t.split(':')[0], 10);
@@ -86,8 +87,8 @@ export function getNextAvailableSlot(facility: Facility, currentHour: number): s
 }
 
 export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
-  if (facility.timeSlots && facility.timeSlots.length > 0) {
-    const allTimes = facility.timeSlots.flatMap(g => g.startTimes);
+  if (Array.isArray(facility.timeSlots) && facility.timeSlots.length > 0) {
+    const allTimes = facility.timeSlots.flatMap(g => g?.startTimes ?? []);
     const hasMorningSlot = allTimes.some(t => {
       const hour = parseInt(t.split(':')[0], 10);
       return hour < 9;

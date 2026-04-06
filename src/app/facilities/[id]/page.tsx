@@ -521,14 +521,14 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               )}
 
               {/* d3. Time Slots Section */}
-              {facility.timeSlots && facility.timeSlots.length > 0 && (
+              {Array.isArray(facility.timeSlots) && facility.timeSlots.filter(g => g?.startTimes).length > 0 && (
                 <>
                   <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
                     <div className="flex flex-col gap-3 md:gap-4">
                       <h2 className="text-text-primary text-base md:text-lg font-semibold">
                         予約枠の目安
                       </h2>
-                      <TimeSlotTable timeSlots={facility.timeSlots} />
+                      <TimeSlotTable timeSlots={facility.timeSlots.filter(g => g?.startTimes)} />
                       <p className="text-xs text-text-tertiary">
                         ※ 実際の空き状況は予約サイトでご確認ください
                       </p>
