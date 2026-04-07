@@ -1100,7 +1100,7 @@ https://www.saunako.jp/facilities/162?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-07 午後 — プライベートサウナ Vihta (id=204)「知ってた？」
+## ~~2026-04-07 午後 — プライベートサウナ Vihta (id=204)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
