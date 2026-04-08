@@ -1156,7 +1156,7 @@ https://www.saunako.jp/facilities/18?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-08 午後 — Lampo. (id=387)「知ってた？」
+## ~~2026-04-08 午後 — Lampo. (id=387)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
