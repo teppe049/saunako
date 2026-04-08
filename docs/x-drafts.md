@@ -1128,7 +1128,7 @@ https://www.saunako.jp/facilities/204?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-08 午前 — Prus Sauna 歌舞伎町タワー (id=18) No.1型【夜景×サウナ】
+## ~~2026-04-08 午前 — Prus Sauna 歌舞伎町タワー (id=18) No.1型【夜景×サウナ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
