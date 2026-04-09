@@ -1183,7 +1183,7 @@ https://www.saunako.jp/facilities/387?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-09 午前 — MITO SAUNA KOTO (id=115) No.1型【水戸No.1】
+## ~~2026-04-09 午前 — MITO SAUNA KOTO (id=115) No.1型【水戸No.1】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
