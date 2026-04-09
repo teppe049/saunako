@@ -5,6 +5,9 @@ import ArticleCard from '@/components/ArticleCard';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+// generateStaticParams に存在しないタグは404を返す
+export const dynamicParams = false;
+
 interface PageProps {
   params: Promise<{ tag: string }>;
 }
