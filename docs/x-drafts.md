@@ -1239,7 +1239,7 @@ https://www.saunako.jp/facilities/350?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-10 午前 — Roots猪苗代 THE LAKE (id=241) No.1型【最コスパ湖畔サウナ】
+## ~~2026-04-10 午前 — Roots猪苗代 THE LAKE (id=241) No.1型【最コスパ湖畔サウナ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
