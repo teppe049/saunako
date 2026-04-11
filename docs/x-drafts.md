@@ -1322,7 +1322,7 @@ https://www.saunako.jp/facilities/103?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-11 午後 — 紫波サウナ GRAVITY (id=211)「知ってた？」
+## ~~2026-04-11 午後 — 紫波サウナ GRAVITY (id=211)「知ってた？」~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
