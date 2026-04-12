@@ -1350,7 +1350,7 @@ https://www.saunako.jp/facilities/211?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-12 午前 — HOSTEL Perch 蔵サウナ (id=469) No.1型【日本最安級】
+## ~~2026-04-12 午前 — HOSTEL Perch 蔵サウナ (id=469) No.1型【日本最安級】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
