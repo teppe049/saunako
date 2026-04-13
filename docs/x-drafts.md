@@ -100,7 +100,7 @@ https://www.saunako.jp/facilities/117?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-14 午前 — SUN EFFECT (id=135)「知ってた？」【海を眺める外気浴×九州】
+## 2026-04-14 午後 — SUN EFFECT (id=135)「知ってた？」【海を眺める外気浴×九州】
 
 ### 本文（リンクなし）
 ```
@@ -132,7 +132,7 @@ https://www.saunako.jp/facilities/135?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-15 午前 — LOCA THE CLASS. NAGOYA (id=142)「知ってた？」【富士山溶岩×マグマスパ】
+## 2026-04-15 午後 — LOCA THE CLASS. NAGOYA (id=142)「知ってた？」【富士山溶岩×マグマスパ】
 
 ### 本文（リンクなし）
 ```
@@ -164,7 +164,7 @@ https://www.saunako.jp/facilities/142?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-16 午前 — 西武秩父駅前温泉 祭の湯 個室サウナ (id=94)「知ってた？」【-20℃アイスルーム×秩父駅直結】
+## 2026-04-16 午後 — 西武秩父駅前温泉 祭の湯 個室サウナ (id=94)「知ってた？」【-20℃アイスルーム×秩父駅直結】
 
 ### 本文（リンクなし）
 ```
@@ -196,7 +196,7 @@ https://www.saunako.jp/facilities/94?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-17 午前 — SAUNA SAKURADO (id=128)「知ってた？」【サウナシュラン受賞×博多×超軟水】
+## 2026-04-17 午後 — SAUNA SAKURADO (id=128)「知ってた？」【サウナシュラン受賞×博多×超軟水】
 
 ### 本文（リンクなし）
 ```
