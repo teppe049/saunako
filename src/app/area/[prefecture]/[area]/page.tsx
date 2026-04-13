@@ -243,7 +243,7 @@ export default async function SubAreaPage({ params }: PageProps) {
         </nav>
 
         {/* Prefecture Navigation - same as prefecture page */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-6">
           {PREFECTURES.map((pref) => (
             <Link
               key={pref.code}

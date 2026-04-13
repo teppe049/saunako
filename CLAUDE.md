@@ -125,7 +125,7 @@ Googleは E-E-A-T（Experience, Expertise, Authoritativeness, Trustworthiness）
 - 施設データは公式サイトや実地確認で裏取りし、情報の正確性を担保
 - サウナ子のキャラクターを活かした独自の切り口・感想を付加（テンプレ感を避ける）
 
-## X投稿フォーマット（3/30〜計測中）
+## X投稿フォーマット（4/11〜改訂）
 
 **本文の情報ギャップルール:**
 - **料金（具体額）を本文に書かない**
@@ -146,10 +146,15 @@ Googleは E-E-A-T（Experience, Expertise, Authoritativeness, Trustworthiness）
 {施設名}
 💰 {料金}
 📍 {具体エリア・最寄り駅} 徒歩○分
+
+↓ 近くの他の個室サウナも比較できるよ
 https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 ```
 
-**判定:** 4/5 Week4レビューでリプ到達率・Organic Social PVを確認
+**投稿比率ルール（4/11〜）:**
+- 「知ってた？×地方×素材ユニーク性」を週5本以上（最優先）
+- 関東・都内ネタは週1〜2本まで
+- ターゲット型は週1本まで
 
 ## MCP 接続
 
