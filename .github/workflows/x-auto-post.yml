@@ -3,9 +3,6 @@ name: X Auto Post
 on:
   repository_dispatch:
     types: [x-post]       # cron-job.org → GitHub API → ここ
-  schedule:
-    - cron: '0 0 * * *'   # UTC 00:00 = JST 09:00 (午前) ※バックアップ
-    - cron: '0 9 * * *'   # UTC 09:00 = JST 18:00 (午後) ※バックアップ
   workflow_dispatch:
     inputs:
       slot:
@@ -39,17 +36,12 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           INPUT_SLOT: ${{ inputs.slot }}
-          SCHEDULE_EXPR: ${{ github.event.schedule }}
           DISPATCH_SLOT: ${{ github.event.client_payload.slot }}
         run: |
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             echo "value=$INPUT_SLOT" >> "$GITHUB_OUTPUT"
           elif [ "$EVENT_NAME" = "repository_dispatch" ]; then
             echo "value=${DISPATCH_SLOT:-午前}" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHEDULE_EXPR" = "0 0 * * *" ]; then
-            echo "value=午前" >> "$GITHUB_OUTPUT"
-          else
-            echo "value=午後" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run X auto post
