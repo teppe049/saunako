@@ -100,7 +100,7 @@ https://www.saunako.jp/facilities/117?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-14 午後 — SUN EFFECT (id=135)「知ってた？」【海を眺める外気浴×九州】
+## ~~2026-04-14 午後 — SUN EFFECT (id=135)「知ってた？」【海を眺める外気浴×九州】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
