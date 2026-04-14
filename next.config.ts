@@ -34,8 +34,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    // Vercel Hobby: 月5,000 transformations 無料枠
-    formats: ['image/avif', 'image/webp'],
+    // 画像はすでにwebp形式で保存済みのため最適化不要
+    // Vercel Hobby の月5,000 transformations 枠を消費しないよう無効化
+    unoptimized: true,
   },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];
