@@ -180,15 +180,31 @@ export default async function ArticleDetailPage({ params }: PageProps) {
               <span>{meta.author}</span>
             </div>
             <time dateTime={meta.publishedAt}>
-              {new Date(meta.publishedAt).toLocaleDateString('ja-JP', {
+              公開: {new Date(meta.publishedAt).toLocaleDateString('ja-JP', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               })}
             </time>
+            {meta.updatedAt && meta.updatedAt !== meta.publishedAt && (
+              <time dateTime={meta.updatedAt} className="text-saunako font-medium">
+                最終更新: {new Date(meta.updatedAt).toLocaleDateString('ja-JP', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+            )}
             <span>{meta.readingTime}分で読める</span>
           </div>
         </div>
+
+        {/* モバイル目次: 記事本文の前に表示 */}
+        {headings.length > 0 && (
+          <div className="md:hidden">
+            <TableOfContents headings={headings} />
+          </div>
+        )}
 
         <div className="flex flex-col md:flex-row gap-6">
           {/* Article Body */}
@@ -198,9 +214,11 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             </div>
           </article>
 
-          {/* Sidebar - TOC */}
+          {/* PC目次: サイドバー */}
           {headings.length > 0 && (
-            <TableOfContents headings={headings} />
+            <div className="hidden md:block">
+              <TableOfContents headings={headings} />
+            </div>
           )}
         </div>
 

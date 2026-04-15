@@ -7,47 +7,81 @@ function FacilityCard({ id }: { id: number }) {
   const facility = getFacilityById(id);
   if (!facility) return null;
 
+  // 最大3枚まで表示（競合サイトは2〜10枚の写真掲載が標準）
+  const galleryImages = facility.images.slice(0, 3);
+
   return (
-    <Link
-      href={`/facilities/${facility.id}`}
-      className="not-prose block bg-surface border border-border rounded-xl hover:shadow-md transition-shadow overflow-hidden my-4"
-    >
-      <div className="flex flex-col sm:flex-row">
-        <div className="relative h-40 sm:h-auto sm:w-48 flex-shrink-0 bg-gray-200">
-          <Image
-            src={facility.images.length > 0 ? facility.images[0] : '/placeholder-facility.svg'}
-            alt={facility.name}
-            fill
-            sizes="(max-width: 640px) 100vw, 192px"
-            className={facility.images.length > 0 ? 'object-cover' : 'object-contain p-4'}
-          />
-        </div>
-        <div className="p-4">
-          <h4 className="font-bold text-text-primary mb-1">{facility.name}</h4>
+    <div className="not-prose block bg-surface border border-border rounded-xl overflow-hidden my-6">
+      {/* 複数画像ギャラリー（横スクロール） */}
+      {galleryImages.length > 0 && (
+        <Link
+          href={`/facilities/${facility.id}`}
+          className="block hover:opacity-95 transition-opacity"
+        >
+          <div className="flex gap-1 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+            {galleryImages.map((img, i) => (
+              <div
+                key={i}
+                className="relative flex-shrink-0 w-full sm:w-1/2 md:w-1/3 aspect-[4/3] bg-gray-200 snap-start"
+              >
+                <Image
+                  src={img}
+                  alt={`${facility.name} ${i + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                />
+              </div>
+            ))}
+          </div>
+        </Link>
+      )}
+
+      {/* 施設情報テーブル（競合共通の情報密度に合わせる） */}
+      <div className="p-4">
+        <Link href={`/facilities/${facility.id}`} className="hover:text-primary transition-colors">
+          <h4 className="font-bold text-text-primary mb-3">{facility.name}</h4>
+        </Link>
+
+        <dl className="text-sm space-y-1.5 mb-3">
           {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
-            <p className="text-sm text-text-secondary mb-1">
-              {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
-            </p>
+            <div className="flex">
+              <dt className="text-text-tertiary w-20 flex-shrink-0">アクセス</dt>
+              <dd className="text-text-primary">
+                {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
+              </dd>
+            </div>
           )}
-          <p className="text-sm text-text-primary mb-2">
-            {facility.priceMin > 0 ? (
-              <>
+          {facility.priceMin > 0 && (
+            <div className="flex">
+              <dt className="text-text-tertiary w-20 flex-shrink-0">料金</dt>
+              <dd className="text-text-primary">
                 <span className="font-bold text-saunako">{facility.priceMin.toLocaleString()}円</span>
                 <span className="text-text-secondary">〜 / {facility.duration}分</span>
-              </>
-            ) : (
-              <span className="text-text-secondary">要問合せ</span>
-            )}
-          </p>
-          <div className="flex flex-wrap gap-1">
-            {facility.features.waterBath && <span className="tag tag-primary">水風呂</span>}
-            {facility.features.selfLoyly && <span className="tag tag-primary">ロウリュ可</span>}
-            {facility.features.outdoorAir && <span className="tag tag-primary">外気浴</span>}
-            {facility.features.coupleOk && <span className="tag tag-available">男女OK</span>}
-          </div>
+              </dd>
+            </div>
+          )}
+        </dl>
+
+        <div className="flex flex-wrap gap-1 mb-3">
+          {facility.features.waterBath && <span className="tag tag-primary">水風呂</span>}
+          {facility.features.selfLoyly && <span className="tag tag-primary">ロウリュ可</span>}
+          {facility.features.outdoorAir && <span className="tag tag-primary">外気浴</span>}
+          {facility.features.coupleOk && <span className="tag tag-available">男女OK</span>}
         </div>
+
+        <Link
+          href={`/facilities/${facility.id}`}
+          className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+        >
+          施設の詳細を見る
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 
