@@ -130,16 +130,44 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     image: meta.thumbnail.startsWith('http') ? meta.thumbnail : `https://www.saunako.jp${meta.thumbnail}`,
   };
 
+  const faqJsonLd = meta.faq && meta.faq.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: meta.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      }
+    : null;
+
+  const itemListJsonLd = relatedFacilities.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: meta.title,
+        numberOfItems: relatedFacilities.length,
+        itemListElement: relatedFacilities.map((f, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://www.saunako.jp/facilities/${f.id}`,
+          name: f.name,
+        })),
+      }
+    : null;
+
+  const jsonLdList = [breadcrumbJsonLd, articleJsonLd, faqJsonLd, itemListJsonLd].filter(Boolean);
+
   return (
     <div className="min-h-screen bg-bg">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      {jsonLdList.map((ld, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
+      ))}
 
       <main className="max-w-6xl mx-auto px-4 py-6 md:py-10">
         {/* Breadcrumb */}

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
-import { ArticleMeta, ARTICLE_CATEGORIES } from './types';
+import { ArticleMeta, ARTICLE_CATEGORIES, FaqEntry } from './types';
 import { mdxComponents } from '@/components/MDXComponents';
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content/articles');
@@ -33,6 +33,7 @@ function parseArticleMeta(slug: string, content: string, data: Record<string, un
     facilityIds: (data.facilityIds as number[]) || [],
     readingTime: Math.ceil(minutes),
     published: data.published !== false,
+    faq: (data.faq as FaqEntry[]) || undefined,
   };
 }
 

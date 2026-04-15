@@ -1,3 +1,8 @@
+export interface FaqEntry {
+  q: string;
+  a: string;
+}
+
 export interface ArticleMeta {
   slug: string;
   title: string;
@@ -11,6 +16,7 @@ export interface ArticleMeta {
   facilityIds: number[];
   readingTime: number;
   published: boolean;
+  faq?: FaqEntry[];
 }
 
 export const ARTICLE_CATEGORIES = [
