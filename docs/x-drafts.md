@@ -132,7 +132,7 @@ https://www.saunako.jp/facilities/135?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-15 午後 — LOCA THE CLASS. NAGOYA (id=142)「知ってた？」【富士山溶岩×マグマスパ】
+## ~~2026-04-15 午後 — LOCA THE CLASS. NAGOYA (id=142)「知ってた？」【富士山溶岩×マグマスパ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
