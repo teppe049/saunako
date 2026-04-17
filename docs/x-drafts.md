@@ -196,7 +196,7 @@ https://www.saunako.jp/facilities/94?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-17 午後 — SAUNA SAKURADO (id=128)「知ってた？」【サウナシュラン受賞×博多×超軟水】
+## ~~2026-04-17 午後 — SAUNA SAKURADO (id=128)「知ってた？」【サウナシュラン受賞×博多×超軟水】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
