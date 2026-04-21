@@ -4,6 +4,383 @@
 
 ---
 
+## 2026-04-20 午前 — SHIIYA VILLAGE stay&sauna (id=247)「知ってた？」【築100年の古民家×日本海外気浴】
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、築100年の古民家をそのまま残したサウナがあるって。
+
+薪ストーブで蒸されたら、復活させた井戸のまろやかな水風呂へ。外気浴スペースの目の前は日本海。波音だけが聞こえるこの感覚、都会じゃ絶対に味わえないやつだよ🌊
+
+で、肝心の料金とエリアなんだけど——
+```
+### リプライ
+```
+SHIIYA VILLAGE stay&sauna
+💰 3,300円〜/150分（最大10名）
+📍 新潟・柏崎市 椎谷
+https://www.saunako.jp/facilities/247?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/247-0.webp
+- public/facilities/247-1.webp
+- public/facilities/247-2.webp
+- public/facilities/247-3.webp
+
+---
+
+## 2026-04-20 午後 — おてらサウナ禅 (id=337)「知ってた？」【お寺×標高200m×天然石水風呂】
+
+### 本文（リンクなし）
+```
+知ってた？中国地方に、お寺の境内に入ったサウナがあるって。
+
+標高200m、天然石に囲まれた瞑想空間で最大95℃のロウリュ。水風呂も天然石。外気浴は森の中。「ととのう」というより「悟る」に近い体験だよ🧘
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+おてらサウナ禅
+💰 5,000円〜/180分（1名〜）
+📍 島根・出雲市 一畑寺境内
+https://www.saunako.jp/facilities/337?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/337-0.webp
+- public/facilities/337-1.webp
+- public/facilities/337-2.webp
+- public/facilities/337-3.webp
+
+---
+
+## 2026-04-21 午前 — Steamers Beach & Sauna (id=145)「知ってた？」【伊勢湾が水風呂×ビーチ常設】
+
+### 本文（リンクなし）
+```
+知ってた？東海に、海が水風呂の個室サウナがあるって。
+
+愛知産ヒノキのサウナキャビンでセルフロウリュを浴びたら、目の前の伊勢湾へダイブ。波に揺られながらの外気浴は、もはや自然そのものがととのいの道具になってる🌊
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+Steamers Beach & Sauna
+💰 1,500円〜/60分
+📍 愛知・常滑市 りんくうビーチ
+https://www.saunako.jp/facilities/145?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/145-0.webp
+- public/facilities/145-1.webp
+- public/facilities/145-2.webp
+- public/facilities/145-3.webp
+
+---
+
+## 2026-04-21 午後 — TATEYAMA SAUNA (id=271)「知ってた？」【崖の上×富山平野一望×1日3組】
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、崖の上に建つ1日3組限定のサウナがあるって。
+
+立山連峰の雪解け水を水風呂にかけ流しで使用。蒸されながら見える景色は富山平野の全景。この「独り占め感」のためだけに行く価値があるやつだよ🏔️
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+TATEYAMA SAUNA
+💰 15,000円〜/150分（最大6名）
+📍 富山・立山町（立山駅から車で数分）
+https://www.saunako.jp/facilities/271?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/271-0.webp
+- public/facilities/271-1.webp
+- public/facilities/271-2.webp
+- public/facilities/271-3.webp
+
+---
+
+## 2026-04-22 午前 — サウナ新地鼻 (id=347)「知ってた？」【重要伝統的建造物×瀬戸内海ダイブ】
+
+### 本文（リンクなし）
+```
+知ってた？中国地方に、明治の古民家から瀬戸内海に飛び込めるサウナがあるって。
+
+国の重要伝統的建造物群保存地区の中にある、2025年2月オープンの新しい施設。天候が合えば目の前の海がそのまま水風呂になる豪快さ🌊
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+サウナ新地鼻
+💰 15,000円〜/120分（最大6名）
+📍 広島・呉市 御手洗
+https://www.saunako.jp/facilities/347?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/347-0.webp
+- public/facilities/347-1.webp
+- public/facilities/347-2.webp
+- public/facilities/347-3.webp
+
+---
+
+## 2026-04-22 午後 — FujiSauna (id=254)「知ってた？」【富士山を望む×完全貸切150分】
+
+### 本文（リンクなし）
+```
+知ってた？中部に、富士山を正面に見ながら整える個室サウナがあるって。
+
+TUULI・TAIVASの2部屋でセルフロウリュ対応。スキンケアまで全部揃ってるから手ぶらでOKで、女性にも人気なのがわかる気がする🗻
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+FujiSauna
+💰 16,500円〜/150分（最大3名）
+📍 山梨・富士河口湖町
+https://www.saunako.jp/facilities/254?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/254-0.webp
+- public/facilities/254-1.webp
+- public/facilities/254-2.webp
+- public/facilities/254-3.webp
+
+---
+
+## 2026-04-23 午前 — GYU-YA VILLA SAUNA (id=423)「知ってた？」【精肉店プロデュース×氷見牛サウナ飯】
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、精肉店がプロデュースした個室サウナがあるって。
+
+HARVIA製薪ストーブで蒸されて、天然地下水の水風呂でととのったら、〆は氷見牛のサウナ飯。サウナで開いた毛穴に肉の旨みが染みる、最高の組み合わせだよ🥩
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+GYU-YA VILLA SAUNA
+💰 5,000円〜/180分
+📍 富山・氷見市
+https://www.saunako.jp/facilities/423?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/423-0.webp
+- public/facilities/423-1.webp
+- public/facilities/423-2.webp
+- public/facilities/423-3.webp
+
+---
+
+## 2026-04-23 午後 — もりのさうな in 恐羅漢 (id=430)「知ってた？」【エストニア薪サウナ×天然水18℃以下】
+
+### 本文（リンクなし）
+```
+知ってた？中国地方の山奥に、日本初のエストニア製薪サウナがあるって。
+
+夏でも18℃以下をキープする天然水かけ流しの水風呂。外気浴はインフィニティチェアで森林の中。山深いキャンプ場に隣接してて、自然に飲み込まれる感覚が半端ないよ🌲
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+もりのさうな in 恐羅漢
+💰 16,500円〜/150分（最大6名）
+📍 広島・安芸太田町 恐羅漢
+https://www.saunako.jp/facilities/430?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/430-0.webp
+- public/facilities/430-1.webp
+- public/facilities/430-2.webp
+- public/facilities/430-3.webp
+
+---
+
+## 2026-04-24 午前 — THE TANADA SAUNA (id=343)「知ってた？」【棚田百選×和サウナ第1号】
+
+### 本文（リンクなし）
+```
+知ってた？中国地方に、棚田百選の絶景の中に建つ和サウナがあるって。
+
+地元のヒノキ・柚子・ヨモギでセルフロウリュ。棚田を眺めながら水風呂に入るって体験、日本でここだけだよ。「和サウナ第1号」の肩書きも伊達じゃない🌾
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+THE TANADA SAUNA
+💰 6,000円〜/75分
+📍 岡山・久米南町 上籾棚田
+https://www.saunako.jp/facilities/343?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/343-0.webp
+- public/facilities/343-1.webp
+- public/facilities/343-2.webp
+- public/facilities/343-3.webp
+
+---
+
+## 2026-04-24 午後 — TAKIGAHARA SAUNA (id=282)「知ってた？」【隈研吾設計×土管水風呂×能登ヒバ】
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、隈研吾事務所が設計した個室サウナがあるって。
+
+能登ヒバと地元の石をふんだんに使ったフィンランド式。水風呂はなんと土管。鞍掛山を望むテラスで外気浴できる、もはや建築体験も含めたサウナだよ🏛️
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+TAKIGAHARA SAUNA
+💰 6,600円〜/120分（平日・1名）
+📍 石川・小松市 滝ヶ原
+https://www.saunako.jp/facilities/282?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/282-0.webp
+- public/facilities/282-1.webp
+- public/facilities/282-2.webp
+- public/facilities/282-3.webp
+
+---
+
+## 2026-04-25 午前 — The Sauna (id=437)「知ってた？」【野尻湖×地下湧水10〜12℃×サウナーの聖地】
+
+### 本文（リンクなし）
+```
+知ってた？長野に、サウナーが「聖地」と呼ぶ場所があるって。
+
+野尻湖のほとりで薪ストーブのロウリュ。地下湧水の水風呂は10〜12℃。湖を望む外気浴。「一度行ったら他のサウナに戻れなくなる」って声が多いのも納得できる🌿
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+The Sauna
+💰 3,500円〜/120分（平日・1名）
+📍 長野・信濃町 野尻湖畔
+https://www.saunako.jp/facilities/437?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/437-0.webp
+- public/facilities/437-1.webp
+- public/facilities/437-2.webp
+- public/facilities/437-3.webp
+
+---
+
+## 2026-04-25 午後 — Sauna M (id=138)「知ってた？」【ととのえ親方監修×名古屋駅5分×外気浴付き】
+
+### 本文（リンクなし）
+```
+知ってた？東海に、「ととのえ親方」松尾大さん監修の完全個室サウナがあるって。
+
+約100℃のサウナ、15〜16℃の水風呂、開放的な外気浴スペースまで完備。180分貸切でカップル利用もOK。監修者の目線で設計された動線は、ととのいの効率がちがうよ🔥
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+Sauna M
+💰 24,200円〜/120分（最大6名）
+📍 愛知・名古屋駅 徒歩5分
+https://www.saunako.jp/facilities/138?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/138-0.webp
+- public/facilities/138-1.webp
+- public/facilities/138-2.webp
+- public/facilities/138-3.webp
+
+---
+
+## 2026-04-26 午前 — FOLKWOOD VILLAGE 八ヶ岳 (id=258)「知ってた？」【ティピテント薪火サウナ×八ヶ岳×焚火外気浴】
+
+### 本文（リンクなし）
+```
+知ってた？中部に、ティピテント型の薪火サウナがある場所があるって。
+
+八ヶ岳の大自然の中、焚火を囲みながらの外気浴は「キャンプとサウナのいいとこ取り」がまさにこれ。カフェやショップも併設されてるから、一日中いられるやつだよ🔥
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+FOLKWOOD VILLAGE 八ヶ岳
+💰 2,500円〜/90分
+📍 山梨・北杜市 小淵沢
+https://www.saunako.jp/facilities/258?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/258-0.webp
+- public/facilities/258-1.webp
+- public/facilities/258-2.webp
+- public/facilities/258-3.webp
+
+---
+
+## 2026-04-26 午後 — BLUE BASE SENAMI (id=251)「知ってた？」【瀬波温泉×バレルサウナ×オーシャンビュー】
+
+### 本文（リンクなし）
+```
+知ってた？北陸に、温泉地の海際に建つバレルサウナがあるって。
+
+フィンランド式セルフロウリュ→17℃の水風呂→海まで徒歩30秒のオーシャンビュー外気浴。〆は源泉かけ流し温泉。この一連の流れが完璧すぎて、泊まりで来る人が多いのも当然だよ🌊
+
+で、肝心の料金とエリアなんだけど——
+```
+
+### リプライ
+```
+BLUE BASE SENAMI
+💰 2,200円〜/90分
+📍 新潟・村上市 瀬波温泉
+https://www.saunako.jp/facilities/251?utm_source=x&utm_medium=social
+```
+
+### 画像
+- public/facilities/251-0.webp
+- public/facilities/251-1.webp
+- public/facilities/251-2.webp
+- public/facilities/251-3.webp
+
+---
+
 ## 2026-04-12 午前 — SAUNA NAYA (id=119)「知ってた？」【茶葉ロウリュ×納屋リノベ】
 
 ### 本文（リンクなし）
@@ -68,7 +445,7 @@ https://www.saunako.jp/facilities/122?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-13 午前 — コアミガメ (id=117)「知ってた？」【築80年の蔵×川が水風呂】
+## ~~2026-04-13 午前 — コアミガメ (id=117)「知ってた？」【築80年の蔵×川が水風呂】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
