@@ -217,9 +217,14 @@ export default async function FacilityDetailPage({ params }: PageProps) {
         ...(facility.phone && { telephone: facility.phone }),
         ...(facility.website && { url: facility.website }),
         ...(facility.website && { sameAs: [facility.website] }),
-        ...(facility.images.length > 0 && { image: facility.images[0] }),
+        ...(facility.images.length > 0 && {
+          image: facility.images.map(img =>
+            img.startsWith('http') ? img : `https://www.saunako.jp${img}`
+          ),
+        }),
         address: {
           '@type': 'PostalAddress',
+          streetAddress: facility.address,
           addressLocality: facility.city,
           addressRegion: facility.prefectureLabel,
           addressCountry: 'JP',
