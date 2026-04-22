@@ -138,7 +138,7 @@ https://www.saunako.jp/facilities/347?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-22 午後 — FujiSauna (id=254)「知ってた？」【富士山を望む×完全貸切150分】
+## ~~2026-04-22 午後 — FujiSauna (id=254)「知ってた？」【富士山を望む×完全貸切150分】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
