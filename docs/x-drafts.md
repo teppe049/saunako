@@ -219,7 +219,7 @@ https://www.saunako.jp/facilities/430?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-24 午前 — THE TANADA SAUNA (id=343)「知ってた？」【棚田百選×和サウナ第1号】
+## ~~2026-04-24 午前 — THE TANADA SAUNA (id=343)「知ってた？」【棚田百選×和サウナ第1号】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
