@@ -246,7 +246,7 @@ https://www.saunako.jp/facilities/343?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-24 午後 — TAKIGAHARA SAUNA (id=282)「知ってた？」【隈研吾設計×土管水風呂×能登ヒバ】
+## ~~2026-04-24 午後 — TAKIGAHARA SAUNA (id=282)「知ってた？」【隈研吾設計×土管水風呂×能登ヒバ】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
