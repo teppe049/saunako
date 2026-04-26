@@ -327,7 +327,7 @@ https://www.saunako.jp/facilities/138?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-26 午前 — FOLKWOOD VILLAGE 八ヶ岳 (id=258)「知ってた？」【ティピテント薪火サウナ×八ヶ岳×焚火外気浴】
+## ~~2026-04-26 午前 — FOLKWOOD VILLAGE 八ヶ岳 (id=258)「知ってた？」【ティピテント薪火サウナ×八ヶ岳×焚火外気浴】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
