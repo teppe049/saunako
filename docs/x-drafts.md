@@ -354,7 +354,7 @@ https://www.saunako.jp/facilities/258?utm_source=x&utm_medium=social
 
 ---
 
-## 2026-04-26 午後 — BLUE BASE SENAMI (id=251)「知ってた？」【瀬波温泉×バレルサウナ×オーシャンビュー】
+## ~~2026-04-26 午後 — BLUE BASE SENAMI (id=251)「知ってた？」【瀬波温泉×バレルサウナ×オーシャンビュー】~~ ✅投稿済み
 
 ### 本文（リンクなし）
 ```
