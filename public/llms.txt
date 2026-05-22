@@ -1,0 +1,110 @@
+# サウナ子（Saunako）
+
+> 全国47都道府県・487施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。料金、水風呂温度、ロウリュ、外気浴、収容人数などの設備情報を一覧で比較可能。カップル・友人同士で楽しめる貸切サウナを多数掲載。「他のグループと共有がない状態で使えるサウナ」を個室サウナと定義し、屋内個室サウナ・グループ貸切サウナ・バレルサウナ・サウナ小屋（常設・貸切）を掲載対象としている。
+
+## サイトの基本情報
+
+- 運営: サウナ子（個室サウナ専門ポータル）
+- ドメイン: https://www.saunako.jp
+- カバー範囲: 日本全国47都道府県
+- 掲載施設数: 487施設以上
+- 公式X: https://x.com/saunako_jp
+- 公式Instagram: https://www.instagram.com/saunako_jp
+
+## 主要ページ
+
+- [トップページ](https://www.saunako.jp/): 全国の個室サウナを地図・エリア・条件から検索
+- [施設検索](https://www.saunako.jp/search): キーワード・エリア・設備で絞り込み検索
+- [記事一覧](https://www.saunako.jp/articles): 個室サウナの選び方、エリア別おすすめ、用途別ガイド
+- [お気に入り](https://www.saunako.jp/favorites): ローカル保存型のブックマーク機能
+- [FAQ](https://www.saunako.jp/faq): よくある質問
+- [施設オーナー向け](https://www.saunako.jp/for-owners): 施設掲載・修正依頼
+
+## エリア別ガイド記事（都道府県別）
+
+### 関東
+- [東京の個室サウナ完全ガイド](https://www.saunako.jp/articles/tokyo-private-sauna-guide)
+- [東京 デートで使える個室サウナ](https://www.saunako.jp/articles/tokyo-date-private-sauna-guide)
+- [神奈川の個室サウナ完全ガイド](https://www.saunako.jp/articles/kanagawa-private-sauna-guide)
+- [千葉の個室サウナ完全ガイド](https://www.saunako.jp/articles/chiba-private-sauna-guide)
+- [埼玉の個室サウナ完全ガイド](https://www.saunako.jp/articles/saitama-private-sauna-guide)
+- [茨城の個室サウナ完全ガイド](https://www.saunako.jp/articles/ibaraki-private-sauna-guide)
+- [栃木の個室サウナ完全ガイド](https://www.saunako.jp/articles/tochigi-private-sauna-guide)
+- [群馬の個室サウナ完全ガイド](https://www.saunako.jp/articles/gunma-private-sauna-guide)
+
+### 関西
+- [大阪の個室サウナ完全ガイド](https://www.saunako.jp/articles/osaka-private-sauna-guide)
+- [京都の個室サウナ完全ガイド](https://www.saunako.jp/articles/kyoto-private-sauna-guide)
+- [兵庫の個室サウナ完全ガイド](https://www.saunako.jp/articles/hyogo-private-sauna-guide)
+- [滋賀の個室サウナ完全ガイド](https://www.saunako.jp/articles/mie-private-sauna-guide)
+
+### 中部・東海
+- [愛知の個室サウナ完全ガイド](https://www.saunako.jp/articles/aichi-private-sauna-guide)
+- [静岡の個室サウナ完全ガイド](https://www.saunako.jp/articles/shizuoka-private-sauna-guide)
+- [岐阜の個室サウナ完全ガイド](https://www.saunako.jp/articles/gifu-private-sauna-guide)
+- [長野の個室サウナ完全ガイド](https://www.saunako.jp/articles/nagano-private-sauna-guide)
+- [山梨の個室サウナ完全ガイド](https://www.saunako.jp/articles/yamanashi-private-sauna-guide)
+- [新潟の個室サウナ完全ガイド](https://www.saunako.jp/articles/niigata-private-sauna-guide)
+- [富山の個室サウナ完全ガイド](https://www.saunako.jp/articles/toyama-private-sauna-guide)
+- [石川の個室サウナ完全ガイド](https://www.saunako.jp/articles/ishikawa-private-sauna-guide)
+- [福井の個室サウナ完全ガイド](https://www.saunako.jp/articles/fukui-private-sauna-guide)
+
+### 中国・四国
+- [広島の個室サウナ完全ガイド](https://www.saunako.jp/articles/hiroshima-private-sauna-guide)
+- [岡山の個室サウナ完全ガイド](https://www.saunako.jp/articles/okayama-private-sauna-guide)
+- [山口の個室サウナ完全ガイド](https://www.saunako.jp/articles/yamaguchi-private-sauna-guide)
+- [島根の個室サウナ完全ガイド](https://www.saunako.jp/articles/shimane-private-sauna-guide)
+- [愛媛の個室サウナ完全ガイド](https://www.saunako.jp/articles/ehime-private-sauna-guide)
+- [香川の個室サウナ完全ガイド](https://www.saunako.jp/articles/kagawa-private-sauna-guide)
+
+### 九州・沖縄
+- [福岡の個室サウナ完全ガイド](https://www.saunako.jp/articles/fukuoka-private-sauna-guide)
+- [熊本の個室サウナ完全ガイド](https://www.saunako.jp/articles/kumamoto-private-sauna-guide)
+- [大分の個室サウナ完全ガイド](https://www.saunako.jp/articles/oita-private-sauna-guide)
+- [長崎の個室サウナ完全ガイド](https://www.saunako.jp/articles/nagasaki-private-sauna-guide)
+- [鹿児島の個室サウナ完全ガイド](https://www.saunako.jp/articles/kagoshima-private-sauna-guide)
+- [沖縄の個室サウナ完全ガイド](https://www.saunako.jp/articles/okinawa-private-sauna-guide)
+
+### 東北・北海道
+- [北海道の個室サウナ完全ガイド](https://www.saunako.jp/articles/hokkaido-private-sauna-guide)
+- [宮城・仙台の個室サウナ完全ガイド](https://www.saunako.jp/articles/miyagi-sendai-private-sauna-guide)
+- [青森の個室サウナ完全ガイド](https://www.saunako.jp/articles/aomori-private-sauna-guide)
+- [秋田の個室サウナ完全ガイド](https://www.saunako.jp/articles/akita-private-sauna-guide)
+- [岩手の個室サウナ完全ガイド](https://www.saunako.jp/articles/iwate-private-sauna-guide)
+- [山形の個室サウナ完全ガイド](https://www.saunako.jp/articles/yamagata-private-sauna-guide)
+- [福島の個室サウナ完全ガイド](https://www.saunako.jp/articles/fukushima-private-sauna-guide)
+
+## 用途・テーマ別ガイド記事
+
+- [カップル向け個室サウナ](https://www.saunako.jp/articles/couple-private-sauna)
+- [カップルのサウナデートガイド](https://www.saunako.jp/articles/couple-sauna-date-guide)
+- [グループで使える貸切サウナ](https://www.saunako.jp/articles/group-private-sauna-guide)
+- [一人でも使える個室サウナ](https://www.saunako.jp/articles/solo-private-sauna-guide)
+- [初心者向け個室サウナガイド](https://www.saunako.jp/articles/private-sauna-beginners-guide)
+- [24時間利用できる個室サウナ](https://www.saunako.jp/articles/24h-private-sauna)
+- [平日に使いたい個室サウナ](https://www.saunako.jp/articles/weekday-private-sauna-guide)
+- [安く使える個室サウナ](https://www.saunako.jp/articles/cheap-private-sauna)
+- [関東の安い個室サウナ](https://www.saunako.jp/articles/kanto-cheap-private-sauna-guide)
+- [高級・ラグジュアリー個室サウナ](https://www.saunako.jp/articles/luxury-private-sauna-guide)
+- [温泉付き個室サウナ](https://www.saunako.jp/articles/onsen-private-sauna)
+- [水着OKの個室サウナ](https://www.saunako.jp/articles/swimsuit-ok-private-sauna)
+- [外気浴できる個室サウナ](https://www.saunako.jp/articles/outdoor-air-private-sauna)
+- [セルフロウリュできる個室サウナ](https://www.saunako.jp/articles/self-loyly-private-sauna)
+- [サウナグルメガイド（食事併設）](https://www.saunako.jp/articles/sauna-gourmet-guide)
+- [おすすめ個室サウナ](https://www.saunako.jp/articles/osusume-private-sauna)
+- [2026年新規オープン個室サウナ](https://www.saunako.jp/articles/new-open-private-sauna-2026)
+- [首都圏の穴場個室サウナ](https://www.saunako.jp/articles/shutoken-anaba-private-sauna-guide)
+
+## データ・フィード
+
+- [サイトマップ](https://www.saunako.jp/sitemap.xml): 全ページの一覧
+- [RSSフィード](https://www.saunako.jp/feed.xml): 新着記事の配信
+
+## 個室サウナの定義（運営方針）
+
+サウナ子では、以下を「個室サウナ」と定義して掲載している:
+
+- **掲載対象**: 屋内個室サウナ、グループ貸切サウナ、バレルサウナ・サウナ小屋（常設・貸切）、宿泊施設のサウナ（日帰り単独予約可能なもの）
+- **掲載対象外**: 宿泊者専用サウナ、テントサウナ、キャンプ場のサウナ、大型スパ・スーパー銭湯の共用サウナ
+
+判定基準: **「他のグループと共有がない状態で使えるサウナ」かどうか**
