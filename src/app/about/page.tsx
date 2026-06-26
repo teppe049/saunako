@@ -75,6 +75,20 @@ export default function AboutPage() {
         '貸切サウナ',
         'サウナ施設比較',
       ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        url: CONTACT_FORM_URL,
+        availableLanguage: 'Japanese',
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Japan',
+      },
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        value: 1,
+      },
     },
   };
 
