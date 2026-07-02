@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getArticleBySlug, getAllSlugs, getRelatedArticles, extractHeadings, getRawContent, extractPlainText } from '@/lib/articles';
 import { getFacilityById } from '@/lib/facilities';
-import { ARTICLE_CATEGORIES } from '@/lib/types';
+import { ARTICLE_CATEGORIES, PREFECTURES } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
 import FacilityCard from '@/components/FacilityCard';
 import ShareButton from '@/components/ShareButton';
@@ -66,6 +66,11 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   const { meta, content } = article;
   const categoryLabel = ARTICLE_CATEGORIES.find((c) => c.slug === meta.category)?.label || meta.category;
+
+  // CTA用の都道府県特定: slug先頭セグメント（例: osaka-private-sauna-guide → osaka）が
+  // 都道府県コードと完全一致する場合のみエリア指定検索へ。一致しなければ全国検索へ。
+  const slugPrefix = meta.slug.split('-')[0];
+  const ctaPrefecture = PREFECTURES.find((p) => p.code === slugPrefix);
 
   const rawContent = getRawContent(slug);
   const headings = rawContent ? extractHeadings(rawContent) : [];
@@ -255,6 +260,30 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           <span className="text-sm font-medium text-text-primary">シェアする</span>
           <ShareButton name={meta.title} url={`/articles/${meta.slug}`} />
         </div>
+
+        {/* エリア検索へのCTA */}
+        <section className="mt-10">
+          <div className="bg-saunako-bg rounded-xl border border-saunako-border p-6 md:p-8 text-center">
+            <h2 className="text-lg md:text-xl font-bold text-text-primary mb-2">
+              {ctaPrefecture
+                ? `${ctaPrefecture.label}の個室サウナをもっと探す`
+                : '全国の個室サウナを探す'}
+            </h2>
+            <p className="text-sm text-text-secondary mb-5">
+              {ctaPrefecture
+                ? `料金・エリア・設備でしぼり込んで、${ctaPrefecture.label}のお気に入りを見つけてね!`
+                : '料金・エリア・設備でしぼり込んで、お気に入りを見つけてね!'}
+            </p>
+            <Link
+              href={ctaPrefecture ? `/search?prefecture=${ctaPrefecture.code}` : '/search'}
+              className="btn-primary inline-block"
+            >
+              {ctaPrefecture
+                ? `${ctaPrefecture.label}の個室サウナを検索する`
+                : '全国の個室サウナを検索する'}
+            </Link>
+          </div>
+        </section>
 
         {/* この記事で紹介した施設 */}
         {relatedFacilities.length > 0 && (
