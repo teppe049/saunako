@@ -40,7 +40,7 @@
 
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID` - Google Analytics 計測ID
 - `NEXT_PUBLIC_ADSENSE_CLIENT_ID` - Google AdSense クライアントID
-- Google Maps API キーは別途必要（`@react-google-maps/api` で使用）
+- 地図はLeaflet + OpenStreetMapのためAPIキー不要
 
 ## テックスタック
 
@@ -49,7 +49,7 @@
 - **TypeScript** (strict)
 - **Tailwind CSS v4** + CSS Variables (`globals.css`)
 - **ESLint** (Next.js core-web-vitals + TypeScript rules)
-- **Google Maps** (`@react-google-maps/api`)
+- **Leaflet + react-leaflet + OSMタイル** (`tile.openstreetmap.jp`、APIキー不要。Google Mapsは未使用)
 - **データ**: 静的JSON (`data/facilities.json`, 486施設・47都道府県)
 - **デザイン**: Pencil MCP (`.pen`ファイル)
 
