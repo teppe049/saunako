@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 
-type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
+type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning' | 'onlineBooking';
 
 const filterLabels: Record<FilterKey, string> = {
   outdoorAir: '外気浴',
@@ -10,6 +10,7 @@ const filterLabels: Record<FilterKey, string> = {
   open24h: '24時間',
   lateNight: '深夜',
   earlyMorning: '早朝',
+  onlineBooking: 'ネット予約可',
 };
 
 const CHEVRON_SVG = (
@@ -27,6 +28,7 @@ interface MobileFilterSheetProps {
   filters: Record<FilterKey, boolean>;
   filteredCount: number;
   hasOrigin?: boolean;
+  defaultSort?: string;
   onToggleFilter: (key: FilterKey) => void;
   onSortChange: (value: string) => void;
   onDurationChange: (value: string) => void;
@@ -40,6 +42,7 @@ export default function MobileFilterSheet({
   filters,
   filteredCount,
   hasOrigin,
+  defaultSort,
   onToggleFilter,
   onSortChange,
   onDurationChange,
@@ -109,11 +112,12 @@ export default function MobileFilterSheet({
               <div className="relative">
                 <select
                   aria-labelledby="sort-label-mobile"
-                  value={searchParams.get('sort') || 'price_asc'}
+                  value={searchParams.get('sort') || defaultSort || 'price_asc'}
                   onChange={(e) => onSortChange(e.target.value)}
                   className="w-full appearance-none pl-3 pr-8 py-2.5 border border-border rounded-lg text-[13px] text-text-primary bg-white cursor-pointer"
                 >
                   <option value="price_asc">安い順</option>
+                  <option value="per_person_asc">1人あたり安い順</option>
                   <option value="price_desc">高い順</option>
                   {hasOrigin && <option value="distance">近い順</option>}
                 </select>

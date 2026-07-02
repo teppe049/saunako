@@ -80,6 +80,8 @@ export interface Facility {
   saunakoCommentShort: string;
   saunakoCommentLong: string;
   updatedAt: string;
+  /** 情報を実地・公式サイトで確認した日（YYYY-MM-DD、任意） */
+  verifiedAt?: string | null;
   openedAt: string | null;
   closedAt: string | null;
   plans: Plan[] | null;

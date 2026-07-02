@@ -23,6 +23,7 @@ interface SearchPageProps {
     open24h?: string;
     lateNight?: string;
     earlyMorning?: string;
+    onlineBooking?: string;
     sort?: string;
     area?: string;
     lat?: string;
@@ -109,8 +110,10 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     : undefined;
   const locationName = params.locationName || undefined;
 
-  const validSortKeys = ['price_asc', 'price_desc', 'distance'];
-  const defaultSort = origin ? 'distance' : 'price_asc';
+  const validSortKeys = ['price_asc', 'price_desc', 'per_person_asc', 'distance'];
+  // カップル・グループ検索は「1人あたり料金」で並べるのがデフォルト
+  const isGroupSearch = (params.capacity != null && Number(params.capacity) >= 2) || params.coupleOk === 'true';
+  const defaultSort = origin ? 'distance' : isGroupSearch ? 'per_person_asc' : 'price_asc';
   const sortKey = (validSortKeys.includes(params.sort || '')
     ? params.sort
     : defaultSort) as SortKey;
@@ -137,6 +140,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
     open24h: params.open24h === 'true',
     lateNight: params.lateNight === 'true',
     earlyMorning: params.earlyMorning === 'true',
+    onlineBooking: params.onlineBooking === 'true',
   });
 
   // 「何時から」フィルタ: 営業時間ベースで指定時刻に営業中の施設を絞り込み
@@ -236,6 +240,7 @@ async function SearchContent({ searchParams }: SearchPageProps) {
         areaSlug={areaSlug}
         locationName={locationName}
         hasOrigin={!!origin}
+        defaultSort={defaultSort}
         areaCounts={prefecture ? getAreaFacilityCounts(prefecture) : {}}
       />
       <div className="flex flex-col flex-1 min-h-0">

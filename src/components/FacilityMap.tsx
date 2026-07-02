@@ -80,6 +80,124 @@ function createPriceIcon(price: number, state: MarkerState) {
   });
 }
 
+// --- Grid-based clustering (zoom-dependent) ---
+// z >= 11（市区レベル）では全件を価格ラベルで個別表示する
+const CLUSTER_MAX_ZOOM = 11;
+// 1クラスタセルの画面上のサイズ目安（px）
+const CLUSTER_CELL_PX = 80;
+
+interface FacilityCluster {
+  key: string;
+  facilities: Facility[];
+  lat: number;
+  lng: number;
+}
+
+function clusterByGrid(facilities: Facility[], zoom: number): FacilityCluster[] {
+  const cellDeg = (360 / (256 * Math.pow(2, zoom))) * CLUSTER_CELL_PX;
+  const cells = new Map<string, Facility[]>();
+  for (const f of facilities) {
+    const key = `${Math.floor(f.lat! / cellDeg)}:${Math.floor(f.lng! / cellDeg)}`;
+    const list = cells.get(key);
+    if (list) list.push(f);
+    else cells.set(key, [f]);
+  }
+  return [...cells.entries()].map(([key, members]) => ({
+    key,
+    facilities: members,
+    lat: members.reduce((sum, f) => sum + f.lat!, 0) / members.length,
+    lng: members.reduce((sum, f) => sum + f.lng!, 0) / members.length,
+  }));
+}
+
+const clusterIconCache = new Map<number, L.DivIcon>();
+function getClusterIcon(count: number): L.DivIcon {
+  if (!clusterIconCache.has(count)) {
+    const size = count >= 50 ? 46 : count >= 10 ? 40 : 34;
+    clusterIconCache.set(count, new L.DivIcon({
+      className: '',
+      html: `<div style="
+        width:${size}px;height:${size}px;border-radius:50%;
+        background:#E85A4F;color:#fff;
+        border:2px solid #fff;
+        font-size:13px;font-weight:700;
+        display:flex;align-items:center;justify-content:center;
+        box-shadow:0 2px 8px rgba(0,0,0,0.25);
+        cursor:pointer;
+      ">${count}</div>`,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+    }));
+  }
+  return clusterIconCache.get(count)!;
+}
+
+function ClusteredMarkers({
+  facilities,
+  getMarkerState,
+  onMarkerClick,
+  highlightIds,
+}: {
+  facilities: Facility[];
+  getMarkerState: (id: number) => MarkerState;
+  onMarkerClick: (facility: Facility) => void;
+  highlightIds: (number | null | undefined)[];
+}) {
+  const map = useMap();
+  const [zoom, setZoom] = useState(() => map.getZoom());
+  useMapEvents({
+    zoomend: () => setZoom(map.getZoom()),
+  });
+
+  const renderPriceMarker = (facility: Facility) => {
+    const state = getMarkerState(facility.id);
+    return (
+      <Marker
+        key={facility.id}
+        position={[facility.lat!, facility.lng!]}
+        icon={getCachedPriceIcon(facility.priceMin, state)}
+        zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
+        eventHandlers={{
+          click: () => onMarkerClick(facility),
+        }}
+      />
+    );
+  };
+
+  if (zoom >= CLUSTER_MAX_ZOOM) {
+    return <>{facilities.map(renderPriceMarker)}</>;
+  }
+
+  // hover/selected中の施設はクラスタに埋もれないよう個別表示する
+  const highlights = new Set(highlightIds.filter((id): id is number => id != null));
+  const clusterable = facilities.filter((f) => !highlights.has(f.id));
+  const highlighted = facilities.filter((f) => highlights.has(f.id));
+  const clusters = clusterByGrid(clusterable, zoom);
+
+  return (
+    <>
+      {clusters.map((cluster) =>
+        cluster.facilities.length === 1 ? (
+          renderPriceMarker(cluster.facilities[0])
+        ) : (
+          <Marker
+            key={`cluster-${cluster.key}`}
+            position={[cluster.lat, cluster.lng]}
+            icon={getClusterIcon(cluster.facilities.length)}
+            eventHandlers={{
+              click: () => {
+                const bounds = L.latLngBounds(cluster.facilities.map((f) => [f.lat!, f.lng!] as [number, number]));
+                map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+              },
+            }}
+          />
+        )
+      )}
+      {highlighted.map(renderPriceMarker)}
+    </>
+  );
+}
+
 // Find the cluster with the most facilities (within ~1 degree ≈ 100km radius)
 function findDensestCluster(facilities: Facility[]): Facility[] {
   if (facilities.length <= 3) return facilities;
@@ -319,20 +437,12 @@ export default function FacilityMap({
         <MapBoundsHandler onBoundsChange={onBoundsChange} onMapMoved={handleMapMoved} />
         <MapClickHandler onMapClick={handleMapClick} />
         <LocateButton />
-        {validFacilities.map((facility) => {
-          const state = getMarkerState(facility.id);
-          return (
-            <Marker
-              key={facility.id}
-              position={[facility.lat!, facility.lng!]}
-              icon={getCachedPriceIcon(facility.priceMin, state)}
-              zIndexOffset={state === 'selected' ? 1000 : state === 'hovered' ? 500 : state === 'visited' ? -100 : 0}
-              eventHandlers={{
-                click: () => handleMarkerClick(facility),
-              }}
-            />
-          );
-        })}
+        <ClusteredMarkers
+          facilities={validFacilities}
+          getMarkerState={getMarkerState}
+          onMarkerClick={handleMarkerClick}
+          highlightIds={[selectedId, hoveredId, activeMarker]}
+        />
       </MapContainer>
 
       {/* Facility info card overlay */}

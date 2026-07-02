@@ -1,6 +1,6 @@
 import { Facility, AreaGroup, AREA_GROUPS } from './types';
 import { getDistanceKm } from './distance';
-import { isFacilityClosed, parseBusinessHoursTags, getTimeSlotTags } from './facility-utils';
+import { isFacilityClosed, parseBusinessHoursTags, getTimeSlotTags, getPerPersonPrice } from './facility-utils';
 import facilitiesData from '../../data/facilities.json';
 
 // re-export for backward compatibility (server-only consumers)
@@ -67,6 +67,7 @@ export function searchFacilities(params: {
   open24h?: boolean;
   lateNight?: boolean;
   earlyMorning?: boolean;
+  onlineBooking?: boolean;
 }): Facility[] {
   let result = facilities.filter(isOpen);
 
@@ -114,10 +115,13 @@ export function searchFacilities(params: {
   if (params.earlyMorning) {
     result = result.filter((f) => getTimeSlotTags(f).hasMorningSlot);
   }
+  if (params.onlineBooking) {
+    result = result.filter((f) => !!f.bookingUrl);
+  }
   return result;
 }
 
-export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'station_asc' | 'newest' | 'distance';
+export type SortKey = 'recommend' | 'price_asc' | 'price_desc' | 'per_person_asc' | 'station_asc' | 'newest' | 'distance';
 
 export function sortFacilities(facilities: Facility[], sort: SortKey, origin?: { lat: number; lng: number }): Facility[] {
   if (sort === 'recommend') return facilities;
@@ -136,6 +140,12 @@ export function sortFacilities(facilities: Facility[], sort: SortKey, origin?: {
         if (a.priceMin === 0) return 1;
         if (b.priceMin === 0) return -1;
         return b.priceMin - a.priceMin;
+      }
+      case 'per_person_asc': {
+        // 1人あたり料金が不明な施設は室料（=1人あたりの上限値）でフォールバック、料金不明は末尾
+        const aVal = getPerPersonPrice(a) ?? (a.priceMin > 0 ? a.priceMin : Number.MAX_SAFE_INTEGER);
+        const bVal = getPerPersonPrice(b) ?? (b.priceMin > 0 ? b.priceMin : Number.MAX_SAFE_INTEGER);
+        return aVal - bVal;
       }
       case 'station_asc': {
         // walkMinutes=0 or null means unknown — push to end
@@ -245,11 +255,11 @@ export function generateFeatureText(facility: Facility): string {
     else if (temp) points.push(`${temp}℃の水風呂でしっかりクールダウンできる`);
     else points.push('水風呂も完備してる');
   }
-  if (facility.features.outdoorAir) points.push('外気浴スペースで整える環境もバッチリ');
+  if (facility.features.outdoorAir) points.push('外気浴スペースで整える環境もバッチリだ');
 
-  // ターゲット
-  if (facility.features.coupleOk) points.push('カップルでの利用もOK');
-  if (facility.capacity >= 4) points.push(`最大${facility.capacity}名でグループ利用にもぴったり`);
+  // ターゲット（各ポイントは「〜し、」「〜よ!」で連結しても自然な語尾にすること）
+  if (facility.features.coupleOk) points.push('カップルでの利用もOKだ');
+  if (facility.capacity >= 4) points.push(`最大${facility.capacity}名でグループ利用にもぴったりだ`);
 
   // アクセス
   if (facility.walkMinutes != null && facility.walkMinutes <= 3) points.push('駅チカで通いやすい');

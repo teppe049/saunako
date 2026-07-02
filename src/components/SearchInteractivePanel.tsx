@@ -7,8 +7,14 @@ import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
 import AdUnit from './AdUnit';
+import CompareBar from './CompareBar';
 import type { MapBounds } from './FacilityMap';
 import { Facility } from '@/lib/types';
+import {
+  subscribe as subscribeCompare,
+  getSnapshot as getCompareSnapshot,
+  getServerSnapshot as getCompareServerSnapshot,
+} from '@/lib/compareStore';
 
 interface FacilityWithDistance extends Facility {
   _distance?: string;
@@ -61,6 +67,10 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
     ? facilities
     : facilities.filter((f) => isInBounds(f, mapBounds));
 
+  // 比較バー表示中はモバイルの「地図で見る」ボタンを上にずらす
+  const compareItems = useSyncExternalStore(subscribeCompare, getCompareSnapshot, getCompareServerSnapshot);
+  const hasCompareBar = compareItems.length > 0;
+
   const PAGE_SIZE = 20;
   // Reset pagination when filter/map bounds change the visible set
   // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -110,16 +120,17 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
     <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
       {/* Left: List */}
       <div className="flex-1 md:flex-none md:w-[55%] lg:w-[50%] xl:w-[45%] overflow-y-auto">
-        {/* Bounds filter indicator (only when map is visible) */}
-        {isMapVisible && mapBounds && visibleFacilities.length !== facilities.length && (
-          <div className="px-4 md:px-5 py-2 bg-[#F8F9FA] border-b border-border text-xs text-text-secondary">
-            この範囲に <span className="font-bold text-text-primary">{visibleFacilities.length}件</span> の施設（全{facilities.length}件中）
-          </div>
+        {/* 件数表示（地図範囲で絞り込み中は範囲内件数に一本化） */}
+        {isMapVisible && mapBounds && visibleFacilities.length !== facilities.length ? (
+          <p className="px-4 md:px-5 py-2 text-sm text-text-secondary">
+            <span className="font-bold text-text-primary">{visibleFacilities.length}件</span>の個室サウナ
+            <span className="text-xs text-text-tertiary ml-1">（地図の表示範囲内・全{facilities.length}件中）</span>
+          </p>
+        ) : (
+          <p className="px-4 md:px-5 py-2 text-sm text-text-secondary">
+            <span className="font-bold text-text-primary">{facilities.length}件</span>の個室サウナが見つかりました
+          </p>
         )}
-
-        <p className="px-4 md:px-5 py-2 text-sm text-text-secondary">
-          <span className="font-bold text-text-primary">{facilities.length}件</span>の個室サウナが見つかりました
-        </p>
 
         <div className="px-4 md:px-0 py-2 md:py-0 flex flex-col gap-3 md:gap-0">
           {displayedFacilities.map((facility, index) => (
@@ -219,11 +230,11 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
         />
       </div>
 
-      {/* Mobile: Floating map button */}
+      {/* Mobile: Floating map button（ボトムナビ・比較バーと重ならない位置） */}
       {!isMapVisible && facilities.length > 0 && (
         <button
           onClick={() => setMobileMapOpen(true)}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
+          className={`fixed ${hasCompareBar ? 'bottom-32' : 'bottom-20'} left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity`}
           aria-label="地図で見る"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,6 +252,9 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
           onClose={() => setMobileMapOpen(false)}
         />
       )}
+
+      {/* 比較バー（比較対象があるときのみ表示） */}
+      <CompareBar />
     </div>
   );
 }

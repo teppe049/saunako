@@ -681,6 +681,14 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                         </dd>
                       </div>
                     )}
+                    {facility.verifiedAt && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">情報確認日</dt>
+                        <dd className="text-text-primary text-sm">
+                          {new Date(facility.verifiedAt).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' })}
+                        </dd>
+                      </div>
+                    )}
                   </dl>
                 </div>
               </div>

@@ -1,12 +1,13 @@
 'use client';
 
-import { forwardRef, useCallback } from 'react';
+import { forwardRef, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
-import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed } from '@/lib/facility-utils';
+import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed, getPerPersonPrice } from '@/lib/facility-utils';
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
+import { subscribe, getSnapshot, getServerSnapshot, toggleCompare } from '@/lib/compareStore';
 
 interface FacilityListCardProps {
   facility: Facility;
@@ -16,6 +17,11 @@ interface FacilityListCardProps {
   onHover?: (id: number | null) => void;
   distanceLabel?: string;
 }
+
+// ハイドレーション完了判定用（SSR中はfalse、クライアントではtrue）
+const subscribeNoop = () => () => {};
+const getTrue = () => true;
+const getFalse = () => false;
 
 const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
   ({ facility, index, isHovered, isSelected, onHover, distanceLabel }, ref) => {
@@ -38,8 +44,22 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
         : '';
 
     const { hasMorningSlot, hasLateNightSlot } = getTimeSlotTags(facility);
-    const currentHour = new Date().getHours();
-    const nextSlot = getNextAvailableSlot(facility, currentHour);
+
+    // 時刻依存の表示はハイドレーション完了後にのみ計算する（サーバー(UTC)と
+    // クライアント(JST)の時差でSSR出力が食い違い hydration error #418 になるため）
+    const hydrated = useSyncExternalStore(subscribeNoop, getTrue, getFalse);
+    const nextSlot = hydrated ? getNextAvailableSlot(facility, new Date().getHours()) : null;
+
+    const perPerson = getPerPersonPrice(facility);
+    const showPerPerson = perPerson != null && (facility.priceMin === 0 || perPerson < facility.priceMin);
+
+    const compareItems = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+    const isCompared = compareItems.some((i) => i.id === facility.id);
+    const handleToggleCompare = useCallback((e: React.MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleCompare({ id: facility.id, name: facility.name, image: facility.images[0] ?? null });
+    }, [facility.id, facility.name, facility.images]);
 
     return (
       <div
@@ -88,10 +108,18 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               ) : (
                 <span className="text-xs md:text-sm font-normal text-text-tertiary">要問合せ</span>
               )}
+              {showPerPerson && (
+                <span className="block text-xs font-medium text-text-secondary mt-0.5">
+                  1人あたり ¥{perPerson!.toLocaleString()}〜
+                </span>
+              )}
             </span>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 md:gap-2">
+              {facility.bookingUrl && (
+                <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-available text-white rounded">ネット予約可</span>
+              )}
               {facility.features.coupleOk && (
                 <span className="px-2 py-0.5 md:py-1 text-xs font-medium bg-warning text-white rounded">男女OK</span>
               )}
@@ -130,24 +158,39 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
             </div>
 
-            {/* Website link */}
-            {facility.website && (
+            {/* Website link + Compare toggle */}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {facility.website && (
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-1 text-[11px] md:text-xs border border-saunako text-saunako rounded-full px-2.5 py-0.5 hover:bg-saunako hover:text-white transition-colors w-fit cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    trackExternalLinkClick(facility.id, 'website', facility.website!);
+                    window.open(facility.website, '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  公式サイトへ
+                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </button>
+              )}
               <button
                 type="button"
-                className="inline-flex items-center gap-1 text-[11px] md:text-xs border border-saunako text-saunako rounded-full px-2.5 py-0.5 hover:bg-saunako hover:text-white transition-colors w-fit cursor-pointer"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                  trackExternalLinkClick(facility.id, 'website', facility.website!);
-                  window.open(facility.website, '_blank', 'noopener,noreferrer');
-                }}
+                aria-pressed={isCompared}
+                className={`inline-flex items-center gap-1 text-[11px] md:text-xs border rounded-full px-2.5 py-0.5 transition-colors w-fit cursor-pointer ${
+                  isCompared
+                    ? 'bg-primary border-primary text-white'
+                    : 'border-border text-text-secondary hover:border-primary hover:text-primary'
+                }`}
+                onClick={handleToggleCompare}
+                data-track-click="compare_toggle"
               >
-                公式サイトへ
-                <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+                {isCompared ? '✓ 比較中' : '＋ 比較'}
               </button>
-            )}
+            </div>
 
             {/* Saunako comment */}
             {facility.saunakoCommentShort && (

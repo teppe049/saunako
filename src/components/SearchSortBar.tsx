@@ -18,6 +18,7 @@ interface SearchSortBarProps {
   prefectureCode?: string;
   areaSlug?: string;
   hasOrigin?: boolean;
+  defaultSort?: string;
   areaCounts?: Record<string, number>;
   onAreaChange: (slug: string) => void;
   onSortChange: (value: string) => void;
@@ -30,6 +31,7 @@ export default function SearchSortBar({
   prefectureCode,
   areaSlug,
   hasOrigin,
+  defaultSort,
   areaCounts = {},
   onAreaChange,
   onSortChange,
@@ -81,11 +83,12 @@ export default function SearchSortBar({
         <div className="relative inline-flex items-center">
           <select
             aria-label="並び順"
-            value={searchParams.get('sort') || 'price_asc'}
+            value={searchParams.get('sort') || defaultSort || 'price_asc'}
             onChange={(e) => onSortChange(e.target.value)}
             className="appearance-none pl-3 pr-7 py-1 border border-border rounded-md text-[12px] md:text-[13px] text-text-secondary bg-white cursor-pointer"
           >
             <option value="price_asc">安い順</option>
+            <option value="per_person_asc">1人あたり安い順</option>
             <option value="price_desc">高い順</option>
             {hasOrigin && <option value="distance">近い順</option>}
           </select>

@@ -86,6 +86,22 @@ export function getNextAvailableSlot(facility: Facility, currentHour: number): s
   return null;
 }
 
+/**
+ * 1人あたり料金の最安値を plans から算出する。
+ * price/capacity が有効なプランが無い場合は null（priceMin は室料のためフォールバックしない）。
+ */
+export function getPerPersonPrice(facility: Facility): number | null {
+  if (!facility.plans || facility.plans.length === 0) return null;
+  let min: number | null = null;
+  for (const plan of facility.plans) {
+    if (plan.price > 0 && plan.capacity > 0) {
+      const perPerson = Math.ceil(plan.price / plan.capacity);
+      if (min === null || perPerson < min) min = perPerson;
+    }
+  }
+  return min;
+}
+
 export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
   if (Array.isArray(facility.timeSlots) && facility.timeSlots.length > 0) {
     const allTimes = facility.timeSlots.flatMap(g => g?.startTimes ?? []);

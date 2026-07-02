@@ -18,10 +18,11 @@ interface SearchHeaderBarProps {
   areaSlug?: string;
   locationName?: string;
   hasOrigin?: boolean;
+  defaultSort?: string;
   areaCounts?: Record<string, number>;
 }
 
-type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning';
+type FilterKey = 'outdoorAir' | 'coupleOk' | 'open24h' | 'lateNight' | 'earlyMorning' | 'onlineBooking';
 
 const filterLabels: Record<FilterKey, string> = {
   outdoorAir: '外気浴',
@@ -29,6 +30,7 @@ const filterLabels: Record<FilterKey, string> = {
   open24h: '24時間',
   lateNight: '深夜',
   earlyMorning: '早朝',
+  onlineBooking: 'ネット予約可',
 };
 
 const CHEVRON_SVG = (
@@ -42,7 +44,7 @@ const CHEVRON_SVG = (
   </svg>
 );
 
-export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug, locationName, hasOrigin, areaCounts = {} }: SearchHeaderBarProps) {
+export default function SearchHeaderBar({ totalCount, filteredCount, prefectureLabel, prefectureCode, regionCode, areaSlug, locationName, hasOrigin, defaultSort, areaCounts = {} }: SearchHeaderBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -52,6 +54,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     open24h: searchParams.get('open24h') === 'true',
     lateNight: searchParams.get('lateNight') === 'true',
     earlyMorning: searchParams.get('earlyMorning') === 'true',
+    onlineBooking: searchParams.get('onlineBooking') === 'true',
   });
 
   const [showFilterSheet, setShowFilterSheet] = useState(false);
@@ -90,7 +93,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
   };
 
   const clearAllFilters = () => {
-    setFilters({ outdoorAir: false, coupleOk: false, open24h: false, lateNight: false, earlyMorning: false });
+    setFilters({ outdoorAir: false, coupleOk: false, open24h: false, lateNight: false, earlyMorning: false, onlineBooking: false });
     const params = new URLSearchParams();
     for (const key of ['region', 'prefecture', 'area', 'sort', 'lat', 'lng', 'locationName']) {
       const val = searchParams.get(key);
@@ -123,7 +126,8 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
   const handleSortChange = (value: string) => {
     trackFilterChange('sort', value);
-    updateParams((p) => value === 'price_asc' ? p.delete('sort') : p.set('sort', value));
+    // デフォルトの並び順（検索条件により可変）と同じ値のときのみパラメータを省略する
+    updateParams((p) => value === (defaultSort || 'price_asc') ? p.delete('sort') : p.set('sort', value));
   };
 
   const handleDurationChange = (value: string) => {
@@ -301,6 +305,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
         prefectureCode={prefectureCode}
         areaSlug={areaSlug}
         hasOrigin={hasOrigin}
+        defaultSort={defaultSort}
         areaCounts={areaCounts}
         onAreaChange={handleAreaChange}
         onSortChange={handleSortChange}
@@ -314,6 +319,7 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           filters={filters}
           filteredCount={filteredCount}
           hasOrigin={hasOrigin}
+          defaultSort={defaultSort}
           onToggleFilter={toggleFilter}
           onSortChange={handleSortChange}
           onDurationChange={handleDurationChange}
