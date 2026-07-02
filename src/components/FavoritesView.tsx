@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { subscribe, getSnapshot, getServerSnapshot } from '@/lib/favoritesStore';
 import { getFavoriteFacilities } from '@/app/favorites/actions';
 import FacilityListCard from '@/components/FacilityListCard';
+import ShareListButton from '@/components/ShareListButton';
 import type { Facility } from '@/lib/types';
 
 export default function FavoritesView() {
@@ -60,13 +61,19 @@ export default function FavoritesView() {
   }
 
   return (
-    <div className="flex flex-col divide-y divide-border">
-      {facilities.map((facility, index) => (
-        <FacilityListCard key={facility.id} facility={facility} index={index} />
-      ))}
-      {isPending && (
-        <div className="py-4 text-center text-text-tertiary text-sm">更新中...</div>
-      )}
+    <div>
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-text-secondary text-sm">{facilities.length}件のお気に入り</p>
+        <ShareListButton ids={facilities.map((f) => f.id)} />
+      </div>
+      <div className="flex flex-col divide-y divide-border">
+        {facilities.map((facility, index) => (
+          <FacilityListCard key={facility.id} facility={facility} index={index} />
+        ))}
+        {isPending && (
+          <div className="py-4 text-center text-text-tertiary text-sm">更新中...</div>
+        )}
+      </div>
     </div>
   );
 }
