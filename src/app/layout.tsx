@@ -6,6 +6,7 @@ import { ADSENSE_CLIENT_ID, isAdSenseEnabled } from "@/lib/adsense";
 import dynamic from "next/dynamic";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import WebVitalsReporter from "@/components/WebVitalsReporter";
+import BottomNav from "@/components/BottomNav";
 const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBanner"));
 import "./globals.css";
 
@@ -140,6 +141,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         <main>{children}</main>
+        <BottomNav />
         <AnalyticsTracker />
         <WebVitalsReporter />
         <CookieConsentBanner />
