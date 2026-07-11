@@ -14,8 +14,8 @@ const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'));
 export function generateMetadata(): Metadata {
   const count = getAllFacilities().length;
   return {
-    title: `サウナ子 | 個室サウナおすすめ全国${count}施設を比較・検索｜プライベートサウナ`,
-    description: `全国47都道府県${count}施設以上の個室サウナ・プライベートサウナを料金・設備・エリアで比較検索。東京・大阪・名古屋・福岡のおすすめ施設から、カップルOK・24時間営業・セルフロウリュ付きまで。あなたにぴったりの個室サウナが見つかるポータルサイト。`,
+    title: `プライベートサウナ・個室サウナ全国${count}施設｜料金・カップルOKで比較検索 | サウナ子`,
+    description: `全国47都道府県${count}施設以上のプライベートサウナ・個室サウナを料金・設備・エリアで比較検索。東京・大阪・名古屋・福岡のおすすめ施設から、カップルOK・24時間営業・セルフロウリュ付きまで。あなたにぴったりのプライベートサウナが見つかるポータルサイト。`,
     alternates: { canonical: 'https://www.saunako.jp/' },
   };
 }
