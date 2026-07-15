@@ -11,6 +11,16 @@ const CONDITION_LINKS = [
   { label: '5,000円以下', href: '/search?priceMax=5000' },
 ];
 
+// ビッグKW記事への全ページ共通の恒久内部リンク。
+// 「個室サウナ」「プライベートサウナ」等のビッグKWで1ページ目ボーダー(8-9位)の主要記事を
+// グローバルフッターから被リンクさせ、内部リンク経由で順位を押し上げる狙い。
+const GUIDE_LINKS = [
+  { label: '個室サウナの選び方ガイド', href: '/articles/private-sauna-beginners-guide' },
+  { label: 'カップルで行ける個室サウナ', href: '/articles/couple-private-sauna' },
+  { label: '安い個室サウナ特集', href: '/articles/cheap-private-sauna' },
+  { label: '24時間営業の個室サウナ', href: '/articles/24h-private-sauna' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white py-8 md:pt-12 md:pb-8">
@@ -64,6 +74,15 @@ export default function Footer() {
             </div>
           </div>
 
+          <div className="w-full border-t border-[#333333] pt-4">
+            <p className="text-[11px] font-semibold text-[#9CA3AF] mb-3 text-center">人気ガイド</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+              {GUIDE_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="text-[11px] text-[#9CA3AF] hover:text-white transition-colors">{link.label}</Link>
+              ))}
+            </div>
+          </div>
+
           <p className="text-xs text-[#757575]">
             © 2026 サウナ子 All rights reserved.
           </p>
@@ -106,6 +125,12 @@ export default function Footer() {
                 <li><Link href="/articles" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">記事</Link></li>
                 <li><Link href="/faq" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">よくある質問</Link></li>
                 <li><Link href="/about" className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">サウナ子について</Link></li>
+              </ul>
+              <h3 className="text-[13px] font-semibold text-white mt-6 mb-4">人気ガイド</h3>
+              <ul className="space-y-3">
+                {GUIDE_LINKS.map((link) => (
+                  <li key={link.href}><Link href={link.href} className="text-[13px] text-[#9CA3AF] hover:text-white transition-colors">{link.label}</Link></li>
+                ))}
               </ul>
             </div>
 
