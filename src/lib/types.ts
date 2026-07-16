@@ -264,6 +264,27 @@ export interface AreaGroup {
   cities: string[];
 }
 
+/**
+ * エリアページのCTR改善用・都道府県固有の追加コンテンツ。
+ * ページ内の「エリア別ガイドパネル」「固有FAQ」「Tipsコメント」を出し分ける。
+ * まずCTRが低い高impページ（tokyo等）から段階的に追加する。
+ */
+export interface AreaGuidePanel {
+  /** AREA_GROUPS の slug と対応させ、施設数と /area/{pref}/{slug} リンクを動的に引く */
+  slug: string;
+  /** パネルに表示する見出し（例: 池袋・赤羽） */
+  label: string;
+  /** 駅チカ性・価格帯・客層など、検索意図に刺さる一言ガイド */
+  description: string;
+}
+
+export interface PrefectureGuide {
+  areaGuides: AreaGuidePanel[];
+  extraFaqs: { question: string; answer: string }[];
+  /** サウナ子コメントに続けて出す、エリア選びのTips（任意） */
+  tipsComment?: string;
+}
+
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   // 北海道: 県単位（16施設、道央/道北等は旅行者に通じないため）
   aomori: [
@@ -491,4 +512,35 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'naha', label: '那覇', cities: ['那覇市'] },
     { slug: 'yanbaru', label: 'やんばる', cities: ['国頭郡大宜味村'] },
   ],
+};
+
+/**
+ * 都道府県固有のエリアガイド・FAQ。CTRの低い高impページから順に追加していく。
+ * areaGuides の slug は AREA_GROUPS[prefecture] の slug と一致させること
+ * （施設数とリンクをページ側で AREA_GROUPS / areaCounts から動的に引くため）。
+ */
+export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
+  // 東京: area/tokyo が高imp・低CTR（276imp/2.9%）。「池袋/新宿/渋谷 個室サウナ」など
+  // 地名クエリが8〜11位でクリック0のため、主要エリアのマイクロページへ導線を張る。
+  tokyo: {
+    areaGuides: [
+      { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', description: '駅チカで仕事帰りにサクッと。都内最激戦区で選択肢が豊富。' },
+      { slug: 'ikebukuro', label: '池袋・赤羽', description: '池袋発の完全個室サウナ。北エリアの穴場を探すならここ。' },
+      { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', description: 'デートにも使える外気浴付きの上質系が集まるエリア。' },
+      { slug: 'roppongi-azabu', label: '六本木・麻布', description: '都内最多の施設数。ラグジュアリー志向の個室サウナが充実。' },
+      { slug: 'ginza-tsukiji', label: '銀座・築地', description: '24時間営業や高級路線まで、銀座ならではの個室サウナ。' },
+      { slug: 'ueno-asakusa', label: '上野・浅草', description: '下町エリアの貸切サウナ。観光と合わせた立ち寄りにも。' },
+    ],
+    extraFaqs: [
+      {
+        question: '池袋・新宿・渋谷の駅チカで個室サウナを探すには？',
+        answer: '東京都ページ上部の「エリア別ガイド」から各エリアの一覧に進めます。新宿・神楽坂、池袋・赤羽、渋谷・恵比寿・代官山ごとに施設数と特徴をまとめているので、最寄りエリアから絞り込むのがおすすめです。',
+      },
+      {
+        question: '東京でデート・カップル利用できる個室サウナが多いエリアは？',
+        answer: '渋谷・恵比寿・代官山エリアは外気浴付きの上質な貸切サウナが多く、デート利用に向いています。男女で利用できる施設は事前予約制のことが多いので、予約状況を早めに確認しましょう。',
+      },
+    ],
+    tipsComment: '💡 東京はエリアで色が違うの。新宿・池袋は駅チカで仕事帰り向き、渋谷・恵比寿は外気浴付きのデート向き、六本木・麻布は施設数No.1でラグジュアリー志向。上の「エリア別ガイド」から選ぶと早いよ！',
+  },
 };

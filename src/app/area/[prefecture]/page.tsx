@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getPrefectureFacilityCounts } from '@/lib/facilities';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
-import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, Facility } from '@/lib/types';
+import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
@@ -334,7 +334,7 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-function generateFaqData(facilities: Facility[], areaLabel: string) {
+function generateFaqData(facilities: Facility[], areaLabel: string, prefecture?: string) {
   const pricedFacilities = facilities.filter(f => f.priceMin > 0);
   const avgPrice = pricedFacilities.length > 0
     ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
@@ -373,6 +373,10 @@ function generateFaqData(facilities: Facility[], areaLabel: string) {
     });
   }
 
+  // 都道府県固有の追加FAQをマージ（検索意図に刺さるQ&Aで情報量とCTRを底上げ）
+  const extraFaqs = prefecture ? PREFECTURE_GUIDES[prefecture]?.extraFaqs ?? [] : [];
+  faqs.push(...extraFaqs);
+
   return faqs;
 }
 
@@ -388,6 +392,11 @@ export default async function AreaPage({ params }: PageProps) {
   const saunakoComment = SAUNAKO_AREA_COMMENTS[prefecture] || DEFAULT_SAUNAKO_COMMENT;
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const areaCounts = getAreaFacilityCounts(prefecture);
+  const prefectureGuide = PREFECTURE_GUIDES[prefecture];
+  // ガイドパネルは施設が実在する（施設数>0）エリアのみ表示。施設0エリアへ誘導しない
+  const areaGuidePanels = (prefectureGuide?.areaGuides ?? []).filter(
+    (g) => (areaCounts[g.slug] || 0) > 0
+  );
 
   const areaStats = generateAreaStats(facilities);
   const neighborPrefectures = getNeighborPrefectures(prefecture);
@@ -413,7 +422,7 @@ export default async function AreaPage({ params }: PageProps) {
   };
 
   // FAQ JSON-LD
-  const faqItems = generateFaqData(facilities, prefData.label);
+  const faqItems = generateFaqData(facilities, prefData.label, prefecture);
   const faqJsonLd = faqItems.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -546,13 +555,51 @@ export default async function AreaPage({ params }: PageProps) {
               <p className="text-text-primary leading-relaxed">
                 {saunakoComment}
               </p>
+              {prefectureGuide?.tipsComment && (
+                <p className="text-text-secondary text-sm leading-relaxed mt-3">
+                  {prefectureGuide.tipsComment}
+                </p>
+              )}
             </div>
           </div>
         </div>
 
+        {/* エリア別ガイドパネル（都道府県固有・主要エリアのマイクロページへ誘導） */}
+        {areaGuidePanels.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl font-bold text-text-primary mb-4">
+              エリアで探す
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {areaGuidePanels.map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`/area/${prefecture}/${guide.slug}`}
+                  className="bg-surface border border-border rounded-xl p-4 hover:border-primary transition-colors group"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-text-primary group-hover:text-primary transition-colors">
+                      {guide.label}
+                    </h3>
+                    <span className="text-xs text-text-tertiary flex-shrink-0 ml-2">
+                      {areaCounts[guide.slug] || 0}施設
+                    </span>
+                  </div>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {guide.description}
+                  </p>
+                  <span className="text-xs text-primary mt-3 inline-block">
+                    → 一覧を見る
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* FAQ Section */}
         {(() => {
-          const faqs = generateFaqData(facilities, prefData.label);
+          const faqs = faqItems;
           if (faqs.length === 0) return null;
           return (
             <section className="mb-8">
