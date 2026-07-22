@@ -408,7 +408,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "KUDOCHI赤坂｜赤坂の24時間個室サウナ 8,000円〜 口コミ・予約 | サウナ子",
+    "seoTitle": "KUDOCHI（クドチ）赤坂｜赤坂の24時間個室サウナ 8,000円〜 口コミ・予約 | サウナ子",
     "slotType": "free"
   },
   {
@@ -28522,7 +28522,7 @@
       "カミソリ",
       "歯ブラシ"
     ],
-    "note": "スマートロックで無人チェックイン。全3室。チラー付き水風呂。現在はホテル宿泊者限定、一般利用は順次開放予定。",
+    "note": "スマートロックで無人チェックイン。全3室。チラー付き水風呂。2026年5月7日より一般利用の予約受付を開始。",
     "images": [
       "/facilities/382-0.webp",
       "/facilities/382-1.webp",
@@ -28533,7 +28533,7 @@
     "description": "宮崎駅近くのホテル2Fにある完全個室プライベートサウナ。全3室を備え、スマートロックによる無人チェックインで気軽に利用可能。チラー付き水風呂とBluetooth対応で自分好みの空間を演出できる。アメニティも充実。",
     "saunakoCommentShort": "スマートロックで無人チェックイン！",
     "saunakoCommentLong": "宮崎駅近くのホテルの2Fにある個室サウナだよ！スマートロックで無人チェックインだから人と会わずにサウナに入れるの。チラー付き水風呂でしっかり冷えるし、Bluetoothで好きな音楽も流せる。アメニティも全部揃ってるから手ぶらで行けちゃうね！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-07-22",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -28557,6 +28557,7 @@
       }
     ],
     "timeSlots": null,
+    "seoTitle": "NEST SAUNA（ネストサウナ）宮崎｜宮崎駅近くの個室サウナ 料金6,600円〜 | サウナ子",
     "slotType": "free"
   },
   {
@@ -36123,6 +36124,105 @@
     "saunakoCommentLong": "1日1組限定だから、完全に自分たちだけの空間で整えるのが最高だよ! 2階テラスから古宇利大橋と青い海を眺めながらの外気浴は沖縄ならではの贅沢。寝サウナもできるし、水風呂もチラーで18℃にキープされてて気持ちいいかも!",
     "updatedAt": "2026-03-29",
     "plans": [],
+    "timeSlots": null,
+    "slotType": "free"
+  },
+  {
+    "id": 495,
+    "slug": "tengoku-sauna-iwata",
+    "name": "天国サウナ",
+    "prefecture": "shizuoka",
+    "prefectureLabel": "静岡県",
+    "city": "磐田市",
+    "area": "浜松・掛川",
+    "address": "静岡県磐田市匂坂上47",
+    "nearestStation": null,
+    "walkMinutes": null,
+    "priceMin": 5500,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "14-16",
+      "selfLoyly": true,
+      "outdoorAir": true,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "10:00〜24:00",
+    "holidays": "無休",
+    "website": "https://tengokusauna.com/",
+    "phone": "",
+    "bookingUrl": "https://lin.ee/XNb9Cm4",
+    "amenities": [
+      "水着貸出",
+      "ドリンク1本無料",
+      "各種レンタル品あり"
+    ],
+    "note": "地元磐田出身の4人が立ち上げた磐田市初の個室サウナ。天竜川の伏流水を使った水風呂と、砂・翠・墨・白の4つのテーマ個室が特徴。予約は公式LINEのみ。",
+    "images": [
+      "/facilities/495-0.webp",
+      "/facilities/495-1.webp",
+      "/facilities/495-2.webp",
+      "/facilities/495-3.webp"
+    ],
+    "lat": 34.770118,
+    "lng": 137.83476,
+    "description": "静岡県磐田市初の完全個室プライベートサウナ。天竜川の伏流水を汲み上げた水風呂は年間14〜16度をキープし、全室セルフロウリュ・外気浴スペース完備。砂・翠・墨・白と4つの異なるテーマを持つ個室があり、2026年7月にオープンしたばかりの新施設。",
+    "saunakoCommentShort": "磐田市初の個室サウナ! 4つのテーマ部屋が新鮮",
+    "saunakoCommentLong": "磐田市に初めてできた個室サウナだよ! 天竜川の伏流水を使った水風呂は14〜16度でしっかり冷えるの。砂・翠・墨・白って4つの部屋がそれぞれ違うテーマになってて、どれに入るか選ぶのも楽しいかも。全室セルフロウリュで外気浴スペースもあるよ!",
+    "updatedAt": "2026-07-22",
+    "plans": [
+      {
+        "name": "平日 1名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "平日 2名",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "平日 3名",
+        "price": 11550,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "平日 4名",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "休日 1名",
+        "price": 6050,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "休日 2名",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "休日 3名",
+        "price": 13200,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "休日 4名",
+        "price": 15400,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
     "timeSlots": null,
     "slotType": "free"
   }

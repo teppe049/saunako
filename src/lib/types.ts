@@ -398,7 +398,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'echizen', label: '越前', cities: ['越前市'] },
   ],
   shizuoka: [
-    { slug: 'hamamatsu-kakegawa', label: '浜松・掛川', cities: ['浜松市中央区', '袋井市', '御前崎市', '島田市', '榛原郡川根本町', '沼津市'] },
+    { slug: 'hamamatsu-kakegawa', label: '浜松・掛川', cities: ['浜松市中央区', '袋井市', '御前崎市', '島田市', '榛原郡川根本町', '沼津市', '磐田市'] },
     { slug: 'shizuoka-city', label: '静岡市', cities: ['静岡市駿河区', '静岡市葵区', '静岡市清水区'] },
     { slug: 'fuji-gotemba', label: '富士・御殿場', cities: ['富士市', '御殿場市'] },
     { slug: 'izu', label: '伊豆', cities: ['伊豆の国市', '下田市'] },
