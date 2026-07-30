@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: PageProps) {
   const description = `サウナ子の${cat.label}に関する記事一覧。個室サウナの最新情報をお届けします。`;
 
   return {
-    title,
+    // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://www.saunako.jp/articles/category/${cat.slug}`,

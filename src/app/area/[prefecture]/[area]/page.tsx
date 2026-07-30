@@ -87,9 +87,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const customMeta = SUB_AREA_META[`${prefecture}/${areaSlug}`];
   const title = customMeta?.title ?? `${prefLabel} ${areaLabel}の個室サウナ一覧`;
   const description = customMeta?.description ?? `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
+  // SUB_AREA_META の title は末尾に「| サウナ子」を含むが、フォールバックは含まない。
+  // template（%s | サウナ子）と併用すると前者だけ二重化するため、既に含む場合のみ absolute にする（Issue #167）
+  const titleMeta = /\|\s*サウナ子\s*$/.test(title) ? { absolute: title } : title;
 
   return {
-    title,
+    title: titleMeta,
     description,
     alternates: {
       canonical: `https://www.saunako.jp/area/${prefecture}/${areaSlug}`,

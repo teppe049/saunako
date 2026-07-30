@@ -80,8 +80,12 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     ? `${filterParts.join('・')}の条件で個室・プライベートサウナを検索。料金・設備・アクセス情報を比較して、あなたにぴったりの施設を見つけよう。`
     : '全国の個室・プライベートサウナを料金・エリア・設備で検索・比較。貸切サウナも多数掲載。水風呂・ロウリュ・外気浴などこだわり条件で、あなたにぴったりの施設を見つけよう。';
 
+  // デフォルト分岐の title だけ末尾に「| サウナ子」を含む。template（%s | サウナ子）と
+  // 併用するとその分岐だけ二重化するため、既に含む場合のみ absolute にする（Issue #167）
+  const titleMeta = /\|\s*サウナ子\s*$/.test(title) ? { absolute: title } : title;
+
   return {
-    title,
+    title: titleMeta,
     description,
     robots: { index: false, follow: true },
     alternates: {

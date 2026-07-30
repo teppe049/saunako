@@ -7,7 +7,8 @@ import FacilityListCard from '@/components/FacilityListCard';
 import { getFavoriteFacilities } from '@/app/favorites/actions';
 
 export const metadata: Metadata = {
-  title: 'お気に入り | サウナ子',
+  // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+  title: { absolute: 'お気に入り | サウナ子' },
   description: 'お気に入りに保存した個室サウナの一覧。気になる施設を比較して、あなたにぴったりのサウナを見つけよう。',
   robots: { index: false },
 };

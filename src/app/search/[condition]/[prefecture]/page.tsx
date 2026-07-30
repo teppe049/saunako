@@ -123,7 +123,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = config.description(pref.label);
 
   return {
-    title,
+    // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: title },
     description,
     robots: { index: false, follow: true },
     alternates: {

@@ -6,7 +6,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: '記事一覧 | サウナ子',
+  // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+  title: { absolute: '記事一覧 | サウナ子' },
   description: 'サウナ子が厳選した個室サウナの情報、エリアガイド、初心者向けの入門記事をお届けします。',
   alternates: {
     canonical: 'https://www.saunako.jp/articles',

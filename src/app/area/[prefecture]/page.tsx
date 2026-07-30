@@ -322,7 +322,9 @@ export async function generateMetadata({ params }: PageProps) {
   const description = customMeta?.description ?? `${prefData.label}の個室・プライベートサウナ・貸切サウナを探すならサウナ子。料金・設備・アクセスを比較して、あなたにぴったりの施設を見つけよう。`;
 
   return {
-    title,
+    // AREA_META / フォールバックとも末尾に「| サウナ子」を含むため absolute 指定。
+    // layout.tsx の template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://www.saunako.jp/area/${prefecture}`,

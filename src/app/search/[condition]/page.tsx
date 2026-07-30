@@ -97,7 +97,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!config) return { title: 'Not Found' };
 
   return {
-    title: `${config.h1} | サウナ子`,
+    // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: `${config.h1} | サウナ子` },
     description: config.description,
     robots: { index: false, follow: true },
     alternates: {

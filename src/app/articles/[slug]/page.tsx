@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: PageProps) {
 
   const { meta } = article;
   return {
-    title: `${meta.title} | サウナ子`,
+    // absolute 指定。layout.tsx の template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: `${meta.title} | サウナ子` },
     description: meta.description,
     alternates: {
       canonical: `https://www.saunako.jp/articles/${meta.slug}`,

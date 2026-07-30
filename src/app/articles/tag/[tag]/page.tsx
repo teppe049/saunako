@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: PageProps) {
   const description = `「${tag}」に関する個室サウナの記事一覧。サウナ子が厳選した情報をお届けします。`;
 
   return {
-    title,
+    // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
+    title: { absolute: title },
     description,
     robots: { index: false, follow: true },
     alternates: {
