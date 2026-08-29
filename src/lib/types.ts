@@ -531,12 +531,13 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
   // 地名クエリが8〜11位でクリック0のため、主要エリアのマイクロページへ導線を張る。
   tokyo: {
     areaGuides: [
-      { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', description: '駅チカで仕事帰りにサクッと。都内最激戦区で選択肢が豊富。' },
-      { slug: 'ikebukuro', label: '池袋・赤羽', description: '池袋発の完全個室サウナ。北エリアの穴場を探すならここ。' },
-      { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', description: 'デートにも使える外気浴付きの上質系が集まるエリア。' },
-      { slug: 'roppongi-azabu', label: '六本木・麻布', description: '都内最多の施設数。ラグジュアリー志向の個室サウナが充実。' },
-      { slug: 'ginza-tsukiji', label: '銀座・築地', description: '24時間営業や高級路線まで、銀座ならではの個室サウナ。' },
-      { slug: 'ueno-asakusa', label: '上野・浅草', description: '下町エリアの貸切サウナ。観光と合わせた立ち寄りにも。' },
+      { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', description: '9施設・2,500円〜。歌舞伎町タワーなど駅チカで仕事帰りにサクッと。' },
+      { slug: 'ikebukuro', label: '池袋・赤羽', description: '4施設・3,300円〜。うち3施設がカップルOK。北エリアの穴場。' },
+      { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', description: '8施設・3,300円〜。外気浴付きの上質系が多くデート向き。' },
+      { slug: 'roppongi-azabu', label: '六本木・麻布', description: '17施設と都内最多。赤坂含むラグジュアリー志向の激戦区。' },
+      { slug: 'ginza-tsukiji', label: '銀座・築地', description: '4施設・3,490円〜。24時間営業や深夜利用できる店も。' },
+      { slug: 'ueno-asakusa', label: '上野・浅草', description: '10施設・4,000円〜。下町の貸切サウナ。観光ついでにも。' },
+      { slug: 'shimokitazawa-setagaya', label: '下北沢・世田谷', description: '10施設・990円〜と都内最安クラス。ソロ活・コスパ重視ならここ。' },
     ],
     extraFaqs: [
       {
@@ -547,8 +548,16 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
         question: '東京でデート・カップル利用できる個室サウナが多いエリアは？',
         answer: '渋谷・恵比寿・代官山エリアは外気浴付きの上質な貸切サウナが多く、デート利用に向いています。男女で利用できる施設は事前予約制のことが多いので、予約状況を早めに確認しましょう。',
       },
+      {
+        question: '都内で安い個室サウナはどこ？1人いくらから入れる？',
+        answer: '東京の個室サウナは1人990円台から利用できます。下北沢・世田谷エリアは平均4,359円と都内で最も手頃で、Sauna3（サウナサン）やHUBHUB 下北沢などが該当します。平日日中の枠や60分の短時間プランを選ぶとさらに安くなるため、各施設ページの料金プランで最短利用時間と単価を比較するのがおすすめです。',
+      },
+      {
+        question: '東京の個室サウナの料金相場はエリアでどのくらい違う？',
+        answer: 'エリアによって倍以上の差があります。下北沢・世田谷が平均4,359円と最も手頃で、銀座・築地が5,585円、池袋・赤羽が9,225円、渋谷・恵比寿・代官山が10,587円、六本木・麻布は12,137円と高価格帯です。予算重視なら世田谷・銀座、設備や雰囲気重視なら渋谷・六本木を選ぶと失敗しません。',
+      },
     ],
-    tipsComment: '💡 東京はエリアで色が違うの。新宿・池袋は駅チカで仕事帰り向き、渋谷・恵比寿は外気浴付きのデート向き、六本木・麻布は施設数No.1でラグジュアリー志向。上の「エリア別ガイド」から選ぶと早いよ！',
+    tipsComment: '💡 東京はエリアで色が違うの。六本木・麻布が17施設で都内最多、下北沢・世田谷は990円〜入れてコスパ最強、渋谷・恵比寿は外気浴付きのデート向き、新宿・池袋は駅チカで仕事帰り向き。予算重視なら世田谷、雰囲気重視なら渋谷から見てみて！',
   },
   // 京都: area/kyoto が299imp/CTR0.67%と最低水準。「kudochi sauna 京都」「クドチ サウナ 京都」等の
   // 指名検索（計139imp・CTR0%）が施設ページでなくこのエリアページに着地しているため、
