@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { hasCoubic, jstDate } from './coubic';
+import { AVAILABILITY_ENABLED, hasCoubic, isCoubicRegistered, jstDate } from './coubic';
 import coubic from '../../data/coubic.json';
 
 describe('jstDate', () => {
@@ -23,9 +23,15 @@ describe('data/coubic.json', () => {
     }
   });
 
-  it('hasCoubic は登録済み施設で true', () => {
+  it('isCoubicRegistered は登録済み施設で true', () => {
     const first = Number(Object.keys(coubic)[0]);
-    expect(hasCoubic(first)).toBe(true);
+    expect(isCoubicRegistered(first)).toBe(true);
+    expect(isCoubicRegistered(999999)).toBe(false);
+  });
+
+  it('hasCoubic は有効フラグに従う（規約確認までオフ）', () => {
+    const first = Number(Object.keys(coubic)[0]);
+    expect(hasCoubic(first)).toBe(AVAILABILITY_ENABLED);
     expect(hasCoubic(999999)).toBe(false);
   });
 });

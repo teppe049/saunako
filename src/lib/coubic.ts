@@ -52,8 +52,22 @@ export interface FacilityAvailability {
   tomorrow: DayAvailability;
 }
 
-export function hasCoubic(facilityId: number): boolean {
+/**
+ * 空き状況表示の有効フラグ。
+ * 2026-09-02 に本番オフ: STORES予約の予約者向け利用規約 第11条が「システムの解析行為」「過度な負荷」を
+ * 禁止しており、非公式APIの利用が抵触し得るため。STORES側に正式な手段を確認できるまで false のまま。
+ * true に戻すと、施設ページのバッジと /api/availability が再び動く。
+ */
+export const AVAILABILITY_ENABLED = false;
+
+/** data/coubic.json に予約ページが登録されているか（フラグとは無関係のデータ有無） */
+export function isCoubicRegistered(facilityId: number): boolean {
   return facilityId in COUBIC;
+}
+
+/** 空き状況を表示・取得してよい施設か（有効フラグ × データ登録） */
+export function hasCoubic(facilityId: number): boolean {
+  return AVAILABILITY_ENABLED && isCoubicRegistered(facilityId);
 }
 
 /** JSTの日付を YYYY-MM-DD で返す */
