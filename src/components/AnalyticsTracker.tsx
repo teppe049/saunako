@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
+import { trackFacilityCardClick, trackExternalLinkClick, trackAskAiClick } from '@/lib/analytics';
 
 export default function AnalyticsTracker() {
   useEffect(() => {
@@ -16,6 +16,15 @@ export default function AnalyticsTracker() {
           Number(target.getAttribute('data-track-facility-id')),
           target.getAttribute('data-track-facility-name') || '',
           Number(target.getAttribute('data-track-index'))
+        );
+      }
+
+      if (action === 'ask_ai') {
+        const facilityIdAttr = target.getAttribute('data-track-facility-id');
+        trackAskAiClick(
+          target.getAttribute('data-track-service') || '',
+          target.getAttribute('data-track-page-type') || '',
+          facilityIdAttr ? Number(facilityIdAttr) : undefined
         );
       }
 

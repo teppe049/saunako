@@ -107,6 +107,21 @@ export function trackFilterChange(
 }
 
 /**
+ * 「AIに聞く」ボタンのクリックを GA4 に送信
+ */
+export function trackAskAiClick(
+  service: string,
+  pageType: string,
+  facilityId?: number
+): void {
+  sendGAEvent('click_ask_ai', {
+    service,
+    page_type: pageType,
+    ...(facilityId ? { facility_id: facilityId } : {}),
+  });
+}
+
+/**
  * 外部リンククリックを GA4 に送信
  */
 export function trackExternalLinkClick(

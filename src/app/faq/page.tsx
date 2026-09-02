@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import AskAI from '@/components/AskAI';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 
 export const metadata: Metadata = {
@@ -183,6 +184,8 @@ export default function FaqPage() {
             </section>
           ))}
         </div>
+
+        <AskAI context={{ kind: 'site' }} className="mt-12" />
       </main>
 
       <Footer />

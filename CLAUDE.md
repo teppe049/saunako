@@ -23,6 +23,8 @@
 | `npm run build` | プロダクションビルド |
 | `npm run start` | プロダクションサーバー起動 |
 | `npm run lint` | ESLint チェック（Next.js core-web-vitals + TypeScript） |
+| `npm run typecheck` | `tsc --noEmit` で型チェック |
+| `npm test` | Vitest（`src/**/*.test.ts` + `tests/**/*.test.ts`）。`tests/facilities-data.test.ts` が facilities.json の整合性ゲート |
 
 ### 運用スクリプト (`scripts/`)
 
@@ -201,7 +203,7 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 | **Design** | Pencil MCP でデザイン仕様取得・検証 | UI変更の前後 |
 | **Frontend** | Reactコンポーネント・Tailwind実装 | UI実装時 |
 | **Data** | facilities.json管理・型整合性・検索ロジック | データ変更時 |
-| **QA** | `npm run build && npm run lint` | 実装完了後（必須） |
+| **QA** | `npm run lint` → `npm run typecheck` → `npm test` → `npm run build` | 実装完了後（必須） |
 | **SEO** | metadata・sitemap・robots確認 | ページ追加時 |
 
 **ルール:**
@@ -234,6 +236,6 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 
 ## 未整備（TODO）
 
-- [ ] テスト環境（Vitest + React Testing Library）
-- [ ] CI/CD パイプライン
+- [x] テスト環境（Vitest。2026-09-02導入。コンポーネントテストが必要になったら jsdom + React Testing Library を追加）
+- [x] CI（`.github/workflows/ci.yml`: main push / PR で lint → typecheck → test → build。2026-09-02導入）
 - [ ] 認証機能

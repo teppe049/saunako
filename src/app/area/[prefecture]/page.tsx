@@ -8,6 +8,7 @@ import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
+import AskAI from '@/components/AskAI';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from './AreaFilters';
@@ -744,6 +745,11 @@ export default async function AreaPage({ params }: PageProps) {
             </section>
           );
         })()}
+
+        <AskAI
+          context={{ kind: 'area', prefecture, prefectureLabel: prefData.label }}
+          className="mb-8"
+        />
       </main>
       <Footer />
       <ScrollToTop />

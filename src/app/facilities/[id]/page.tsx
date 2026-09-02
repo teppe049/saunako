@@ -19,6 +19,7 @@ import TrackFacilityView from '@/components/TrackFacilityView';
 import ReservationLink from '@/components/ReservationLink';
 import TrackExternalLink from '@/components/TrackExternalLink';
 import AdUnit from '@/components/AdUnit';
+import AskAI from '@/components/AskAI';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -494,6 +495,19 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                   </div>
                 </div>
               )}
+
+              {/* AIに聞く（AI検索経由の流入・引用を増やす導線） */}
+              <div className="px-4 py-5 md:mt-6 md:p-0">
+                <AskAI
+                  context={{
+                    kind: 'facility',
+                    id: facility.id,
+                    name: facility.name,
+                    prefectureLabel: facility.prefectureLabel,
+                    city: facility.city,
+                  }}
+                />
+              </div>
 
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
