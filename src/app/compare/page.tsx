@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
+import ShareListButton from '@/components/ShareListButton';
 import { getFacilityById } from '@/lib/facilities';
 import { getPerPersonPrice, isFacilityClosed } from '@/lib/facility-utils';
 import type { Facility } from '@/lib/types';
@@ -130,9 +131,12 @@ export default async function ComparePage({ searchParams }: ComparePageProps) {
       <Header />
       <main className="max-w-5xl mx-auto px-4 py-6 md:py-10">
         <h1 className="text-xl md:text-2xl font-bold text-text-primary mb-1">個室サウナを比較</h1>
-        <p className="text-sm text-text-secondary mb-5">
-          {facilities.length}件を比較中。このページのURLを送れば、そのまま相手と共有できるよ
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+          <p className="text-sm text-text-secondary">
+            {facilities.length}件を比較中。URLを送れば、そのまま相手と一緒に選べるよ
+          </p>
+          <ShareListButton ids={facilities.map((f) => f.id)} kind="compare" />
+        </div>
 
         <div className="overflow-x-auto rounded-xl border border-border bg-surface">
           <table className="w-full text-sm border-collapse min-w-[560px]">

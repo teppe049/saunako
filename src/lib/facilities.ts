@@ -193,10 +193,15 @@ export function getRelatedFacilities(facility: Facility, limit: number = 6): { s
     const areaIds = new Set(sameArea.map((f) => f.id));
     const samePref = facilities
       .filter((f) => isOpen(f) && f.id !== facility.id && !areaIds.has(f.id) && f.prefecture === facility.prefecture);
-    sameArea = [...sameArea, ...samePref].slice(0, 5);
-  } else {
-    sameArea = sameArea.slice(0, 5);
+    sameArea = [...sameArea, ...samePref];
   }
+  // 座標がある場合は距離順（「近くの個室サウナ」を実際に近い順で出す）。座標なしは末尾
+  if (facility.lat !== null && facility.lng !== null) {
+    const { lat, lng } = facility;
+    const dist = (f: Facility) => (f.lat !== null && f.lng !== null ? getDistanceKm(lat, lng, f.lat, f.lng) : Number.MAX_SAFE_INTEGER);
+    sameArea = [...sameArea].sort((a, b) => dist(a) - dist(b));
+  }
+  sameArea = sameArea.slice(0, 5);
 
   const priceRange = facility.priceMin > 0 ? facility.priceMin * 0.5 : 0;
   const priceMax = facility.priceMin > 0 ? facility.priceMin * 1.5 : 0;

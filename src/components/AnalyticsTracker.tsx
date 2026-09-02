@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { trackFacilityCardClick, trackExternalLinkClick, trackAskAiClick } from '@/lib/analytics';
+import { trackFacilityCardClick, trackExternalLinkClick, trackAskAiClick, sendGAEvent } from '@/lib/analytics';
 
 export default function AnalyticsTracker() {
   useEffect(() => {
@@ -26,6 +26,17 @@ export default function AnalyticsTracker() {
           target.getAttribute('data-track-page-type') || '',
           facilityIdAttr ? Number(facilityIdAttr) : undefined
         );
+      }
+
+      // 上記以外の data-track-click は汎用イベントとして送る（purpose_link / recent_chip / sns_follow / filter_chip 等）
+      if (action && action !== 'facility_card' && action !== 'ask_ai') {
+        const params: Record<string, string> = { action };
+        for (const attr of Array.from(target.attributes)) {
+          if (attr.name.startsWith('data-track-') && attr.name !== 'data-track-click') {
+            params[attr.name.replace('data-track-', '').replace(/-/g, '_')] = attr.value;
+          }
+        }
+        sendGAEvent('ui_click', params);
       }
 
       // 外部リンク処理

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Facility } from '@/lib/types';
 import { isFacilityClosed } from '@/lib/facilities';
+import { getPerPersonPrice } from '@/lib/facility-utils';
 
 interface FacilityCardProps {
   facility: Facility;
@@ -13,6 +14,7 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
   const cheapestPlan = facility.plans?.length
     ? facility.plans.reduce((a, b) => (b.price < a.price ? b : a))
     : null;
+  const perPerson = getPerPersonPrice(facility);
 
   return (
     <Link
@@ -65,14 +67,22 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
               {facility.plans && facility.plans.length > 1 && (
                 <span className="text-text-tertiary text-xs ml-1.5">({facility.plans.length}プラン)</span>
               )}
+              {perPerson !== null && (
+                <span className="block text-xs text-text-secondary mt-0.5">
+                  1人あたり ¥{perPerson.toLocaleString()}〜
+                </span>
+              )}
             </>
           ) : (
             <span className="text-text-secondary">要問合せ</span>
           )}
         </p>
 
-        {/* Tags — 水風呂・ロウリュは大多数が対応済みのため非表示 */}
+        {/* Tags — 水風呂・ロウリュは大多数が対応済みのため、温度が分かる水風呂のみ「決め手」として表示 */}
         <div className="flex flex-wrap gap-1 mb-2">
+          {facility.features.waterBath && facility.features.waterBathTemp && (
+            <span className="tag">水風呂 {facility.features.waterBathTemp}℃</span>
+          )}
           {facility.features.outdoorAir && (
             <span className="tag tag-primary">外気浴</span>
           )}

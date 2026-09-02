@@ -656,13 +656,13 @@ export default async function AreaPage({ params }: PageProps) {
                 {areaStats.minPrice && (
                   <div className="text-center">
                     <p className="text-2xl md:text-3xl font-bold text-primary">{areaStats.minPrice.toLocaleString()}<span className="text-sm font-normal">円〜</span></p>
-                    <p className="text-xs text-text-tertiary mt-1">最安料金 / 1時間</p>
+                    <p className="text-xs text-text-tertiary mt-1">最安料金（室料）</p>
                   </div>
                 )}
                 {areaStats.avgPrice && (
                   <div className="text-center">
                     <p className="text-2xl md:text-3xl font-bold text-text-primary">{areaStats.avgPrice.toLocaleString()}<span className="text-sm font-normal">円</span></p>
-                    <p className="text-xs text-text-tertiary mt-1">平均料金 / 1時間</p>
+                    <p className="text-xs text-text-tertiary mt-1">平均料金（室料）</p>
                   </div>
                 )}
                 {areaStats.avgWalkMinutes && (

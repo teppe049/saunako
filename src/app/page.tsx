@@ -20,6 +20,17 @@ export function generateMetadata(): Metadata {
   };
 }
 
+// トップの「目的から探す」入口。ヒーロー検索の下に置き、条件を意識せずに絞り込みへ誘導する
+const PURPOSE_LINKS = [
+  { key: 'beginner', emoji: '🔰', label: '初めての個室サウナ', href: '/articles/private-sauna-beginners-guide' },
+  { key: 'couple', emoji: '💑', label: 'カップルで', href: '/search/couple-ok' },
+  { key: 'solo', emoji: '🧘', label: 'ひとりで集中', href: '/search/solo' },
+  { key: 'group', emoji: '👥', label: '4人以上で', href: '/search/group' },
+  { key: 'cheap', emoji: '💴', label: '5,000円以下', href: '/search/under-5000' },
+  { key: '24h', emoji: '🌙', label: '深夜・24時間', href: '/search/24h' },
+  { key: 'outdoor', emoji: '🌿', label: '外気浴あり', href: '/search/outdoor-air' },
+];
+
 const FEATURED_ARTICLE_SLUGS = [
   'private-sauna-beginners-guide',
   'couple-private-sauna',
@@ -147,8 +158,29 @@ export default function Home() {
           {/* Search Form */}
           <HeroSearchForm />
 
+          {/* 目的別の入口 — 条件検索を意識させず、1タップで絞り込みへ */}
+          <nav aria-label="目的から探す" className="max-w-3xl mx-auto mt-5 md:mt-6">
+            <p className="text-xs font-semibold text-text-tertiary mb-2">目的から探す</p>
+            <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
+              {PURPOSE_LINKS.map((p) => (
+                <Link
+                  key={p.href}
+                  href={p.href}
+                  className="flex-shrink-0 inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-2 text-sm font-medium text-text-primary hover:border-primary hover:text-primary transition-colors"
+                  data-track-click="purpose_link"
+                  data-track-purpose={p.key}
+                >
+                  <span aria-hidden="true">{p.emoji}</span>
+                  {p.label}
+                </Link>
+              ))}
+            </div>
+          </nav>
         </div>
       </section>
+
+      {/* 最近見た施設 — 再訪ユーザーが前回の施設に1タップで戻れるよう、ヒーロー直下に置く */}
+      <RecentlyViewed />
 
       {/* About Private Sauna Section */}
       <section className="bg-muted/50 py-6 md:py-10">
@@ -208,7 +240,7 @@ export default function Home() {
                       {facility.priceMin > 0 ? (
                         <>
                           ¥{facility.priceMin.toLocaleString()}〜
-                          <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ 1時間</span>
+                          <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ {facility.duration}分</span>
                         </>
                       ) : (
                         <span className="text-text-tertiary text-xs md:text-sm font-normal">要問合せ</span>
@@ -268,7 +300,7 @@ export default function Home() {
                         {facility.priceMin > 0 ? (
                           <>
                             ¥{facility.priceMin.toLocaleString()}〜
-                            <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ 1時間</span>
+                            <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ {facility.duration}分</span>
                           </>
                         ) : (
                           <span className="text-text-tertiary text-xs md:text-sm font-normal">要問合せ</span>
@@ -328,9 +360,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Recently Viewed */}
-      <RecentlyViewed />
 
       {/* FAQ JSON-LD */}
       <script

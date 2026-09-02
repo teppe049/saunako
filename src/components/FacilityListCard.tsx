@@ -100,7 +100,7 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               {facility.priceMin > 0 ? (
                 <>
                   ¥{facility.priceMin.toLocaleString()}
-                  <span className="text-xs md:text-sm font-normal text-text-tertiary"> / 1時間</span>
+                  <span className="text-xs md:text-sm font-normal text-text-tertiary"> / {facility.duration}分</span>
                   {facility.plans && facility.plans.length > 1 && (
                     <span className="text-xs font-normal text-text-tertiary ml-1.5">({facility.plans.length}プラン)</span>
                   )}

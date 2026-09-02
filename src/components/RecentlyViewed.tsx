@@ -90,7 +90,7 @@ export default function RecentlyViewed() {
                     {facility.priceMin > 0 ? (
                       <>
                         ¥{facility.priceMin.toLocaleString()}〜
-                        <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ 1時間</span>
+                        <span className="text-text-tertiary text-xs md:text-sm font-normal ml-1">/ {facility.duration}分</span>
                       </>
                     ) : (
                       <span className="text-text-tertiary text-xs md:text-sm font-normal">要問合せ</span>

@@ -37,6 +37,7 @@
 | `node scripts/capture-x-header.mjs` | Xヘッダー画像キャプチャ |
 | `node scripts/preview-images.mjs` | X投稿プレビュー（week/日付/施設ID指定可） |
 | `node scripts/check-x-weight.js` | X投稿ウェイトチェック（hook用） |
+| `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数
 

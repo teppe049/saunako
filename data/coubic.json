@@ -1,0 +1,1289 @@
+{
+  "7": {
+    "merchant": "saunazoku",
+    "host": "saunazoku.stores.jp",
+    "bookingPages": [
+      {
+        "id": "1750639",
+        "name": "サ室1令和ストロング🟡",
+        "lowestPrice": 2900,
+        "courses": [
+          {
+            "id": "1192274",
+            "name": "60分利用"
+          },
+          {
+            "id": "1008706",
+            "name": "90分利用"
+          }
+        ]
+      },
+      {
+        "id": "1008249",
+        "name": "サ室2沐浴🌳",
+        "lowestPrice": 3000,
+        "courses": [
+          {
+            "id": "1199780",
+            "name": "60分利用"
+          },
+          {
+            "id": "1141972",
+            "name": "90分利用"
+          }
+        ]
+      },
+      {
+        "id": "3128728",
+        "name": "サ室3湯宿🏮",
+        "lowestPrice": 3000,
+        "courses": [
+          {
+            "id": "1105593",
+            "name": "60分利用"
+          },
+          {
+            "id": "914750",
+            "name": "90分利用"
+          }
+        ]
+      },
+      {
+        "id": "2426809",
+        "name": "サ室4洞窟🦇",
+        "lowestPrice": 3000,
+        "courses": [
+          {
+            "id": "876023",
+            "name": "60分利用"
+          },
+          {
+            "id": "1106301",
+            "name": "90分利用"
+          }
+        ]
+      }
+    ]
+  },
+  "81": {
+    "merchant": "kanako-japan",
+    "host": "kanako-japan.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2876375",
+        "name": "プライベートサウナ予約 Private sauna reservation",
+        "lowestPrice": 16000,
+        "courses": [
+          {
+            "id": "1029811",
+            "name": "プライベートサウナ予約｜1〜2名利用 Private sauna reservation | 1-2 people"
+          },
+          {
+            "id": "862170",
+            "name": "プライベートサウナ予約｜3名利用 Private sauna reservation | 3 people"
+          }
+        ]
+      }
+    ]
+  },
+  "90": {
+    "merchant": "takanawa",
+    "host": "saunas-saunas.stores.jp",
+    "bookingPages": [
+      {
+        "id": "4053505",
+        "name": "【平日】HUONE（プライベートサウナ室）貸切利用",
+        "lowestPrice": 19000,
+        "courses": [
+          {
+            "id": "998967",
+            "name": "【1名利用】貸切"
+          },
+          {
+            "id": "814207",
+            "name": "【2名利用】貸切"
+          }
+        ]
+      },
+      {
+        "id": "4735240",
+        "name": "【土日祝・特定日】HUONE（プライベートサウナ室）貸切利用",
+        "lowestPrice": 24500,
+        "courses": [
+          {
+            "id": "808655",
+            "name": "【1名利用】貸切"
+          },
+          {
+            "id": "1132730",
+            "name": "【2名利用】貸切"
+          }
+        ]
+      },
+      {
+        "id": "2664309",
+        "name": "会議室予約",
+        "lowestPrice": 1980,
+        "courses": [
+          {
+            "id": "839791",
+            "name": "【1時間利用】会議室"
+          },
+          {
+            "id": "1141246",
+            "name": "【2時間利用】会議室"
+          }
+        ]
+      },
+      {
+        "id": "4117887",
+        "name": "【８・９月 万平ウィスキング120分】 シングル・ペア予約｜ 担当：マグ万平",
+        "lowestPrice": 36000,
+        "courses": [
+          {
+            "id": "995988",
+            "name": "ウィスキング120分"
+          }
+        ]
+      }
+    ]
+  },
+  "93": {
+    "merchant": "teresaun_01",
+    "host": "teresaun.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2548500",
+        "name": "サウナ貸切予約※下記詳細ご確認の上ご予約ください。",
+        "lowestPrice": 7000,
+        "courses": [
+          {
+            "id": "1183200",
+            "name": "【6月限定】サウナ予約"
+          },
+          {
+            "id": "1130395",
+            "name": "【平日】貸切予約+カフェ予約"
+          }
+        ]
+      }
+    ]
+  },
+  "105": {
+    "merchant": "seasaunashack",
+    "host": "seasaunashack.stores.jp",
+    "bookingPages": [
+      {
+        "id": "477915",
+        "name": "【一棟】貸切予約※ ご予約は毎月1日21時から 2ヶ月先まで受付中",
+        "lowestPrice": 21000,
+        "courses": [
+          {
+            "id": "680868",
+            "name": "【平日】貸切予約"
+          },
+          {
+            "id": "574160",
+            "name": "【土日・祝】貸切予約"
+          }
+        ]
+      },
+      {
+        "id": "1339595",
+        "name": "ソロウィスキング予約ページ",
+        "lowestPrice": 34700,
+        "courses": [
+          {
+            "id": "840398",
+            "name": "ソロウィスキング【行川担当】"
+          }
+        ]
+      },
+      {
+        "id": "3020177",
+        "name": "毎月第一&第三火曜日開催【安房地域限定】館山市民デー",
+        "lowestPrice": 12000,
+        "courses": [
+          {
+            "id": "1014029",
+            "name": "【毎月第一&第三火曜日】貸切予約"
+          }
+        ]
+      }
+    ]
+  },
+  "106": {
+    "merchant": "kizami-sauna",
+    "host": "kizami-sauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2147624",
+        "name": "【KIZAMIデイユースプラン】２時間３０分コース",
+        "lowestPrice": 21000,
+        "courses": [
+          {
+            "id": "701480",
+            "name": "【時間貸し】"
+          }
+        ]
+      },
+      {
+        "id": "2024009",
+        "name": "【KIZAMI宿泊プラン】１日１組限定",
+        "lowestPrice": 50000,
+        "courses": [
+          {
+            "id": "726014",
+            "name": "【宿泊】スタンダードプラン　ハイシーズンの場合はこちら"
+          },
+          {
+            "id": "443812",
+            "name": "【宿泊】スタンダードプラン　土日祝の場合はこちら"
+          }
+        ]
+      }
+    ]
+  },
+  "110": {
+    "merchant": "SAUNAHIDEOUT",
+    "host": "saunahideout.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3847595",
+        "name": "土日祝祭日のご予約はこちらから",
+        "lowestPrice": 5000,
+        "courses": [
+          {
+            "id": "683544",
+            "name": "1名の方はこちらから"
+          },
+          {
+            "id": "775817",
+            "name": "2名の方はこちらから"
+          }
+        ]
+      },
+      {
+        "id": "1801929",
+        "name": "平日　2枠目以降のご予約はこちらから",
+        "lowestPrice": 4000,
+        "courses": [
+          {
+            "id": "759024",
+            "name": "1名の方はこちらから"
+          },
+          {
+            "id": "590690",
+            "name": "2名の方はこちらから"
+          }
+        ]
+      },
+      {
+        "id": "1297783",
+        "name": "平日　1枠目のご予約はこちらから",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "509900",
+            "name": "平日朝イチ枠　1名の方はこちらから 　計3,500円"
+          },
+          {
+            "id": "788131",
+            "name": "平日朝イチ枠　2名の方はこちらから 　計7,000円"
+          }
+        ]
+      }
+    ]
+  },
+  "114": {
+    "merchant": "offsauna317",
+    "host": "offsauna317.stores.jp",
+    "bookingPages": [
+      {
+        "id": "657814",
+        "name": "OFF SAUNA（ルーム①）（屋内）最大4名様",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "1145373",
+            "name": "【1名】平日100分　1部屋3,500円"
+          },
+          {
+            "id": "1049898",
+            "name": "【2名】平日100分　6,000円"
+          }
+        ]
+      },
+      {
+        "id": "413381",
+        "name": "OFF SAUNA（ルーム②）最大2名様",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "837630",
+            "name": "【1名】平日100分　1部屋3,500円"
+          },
+          {
+            "id": "1174303",
+            "name": "【2名】平日100分　1部屋6,000円"
+          }
+        ]
+      },
+      {
+        "id": "603150",
+        "name": "OFF SAUNA（ルーム⑥）最大3名様",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "1108514",
+            "name": "【1名】平日100分　1部屋3500円"
+          },
+          {
+            "id": "975791",
+            "name": "【2名】平日100分　1部屋6,000円"
+          }
+        ]
+      },
+      {
+        "id": "1389710",
+        "name": "OFF SAUNA（ルーム⑦）最大3名様",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "859752",
+            "name": "平日【1名】100分コース　3,500円"
+          },
+          {
+            "id": "1114347",
+            "name": "平日【2名】100分コース　6,000円"
+          }
+        ]
+      }
+    ]
+  },
+  "123": {
+    "merchant": "base-private-sauna",
+    "host": "fukuoka-yakuin.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3957380",
+        "name": "BASE Private saunaの予約ページ",
+        "lowestPrice": 5000,
+        "courses": [
+          {
+            "id": "985899",
+            "name": "80分1名様(平日)"
+          },
+          {
+            "id": "1171337",
+            "name": "80分1名様(土曜・日曜・祭日)"
+          }
+        ]
+      }
+    ]
+  },
+  "144": {
+    "merchant": "hahachijuhachido",
+    "host": "88do.stores.jp",
+    "bookingPages": [
+      {
+        "id": "1109447",
+        "name": "サウナ",
+        "lowestPrice": 2600,
+        "courses": [
+          {
+            "id": "933064",
+            "name": "kokage   1人　60min"
+          },
+          {
+            "id": "1041061",
+            "name": "kokage   2人　60min"
+          }
+        ]
+      }
+    ]
+  },
+  "156": {
+    "merchant": "kutsurogi-sauna",
+    "host": "kutsurogi-sauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2129754",
+        "name": "プライベートサウナ「くつろぎ」ビジター会員予約フォーム　※メンバーシップ/会員の方のご紹介が必要です。",
+        "lowestPrice": 7700,
+        "courses": [
+          {
+            "id": "947287",
+            "name": "大暑（２人部屋）"
+          },
+          {
+            "id": "958286",
+            "name": "大寒（２人部屋）"
+          }
+        ]
+      }
+    ]
+  },
+  "170": {
+    "merchant": "misogi-oyama",
+    "host": "misogi-oyama.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3426443",
+        "name": "通常会員ページ",
+        "lowestPrice": 3800,
+        "courses": [
+          {
+            "id": "892273",
+            "name": "A号室（Standard Room）"
+          },
+          {
+            "id": "1198032",
+            "name": "B号室（Standard Room）"
+          }
+        ]
+      },
+      {
+        "id": "1448140",
+        "name": "月１会員専用ページ",
+        "lowestPrice": 3300,
+        "courses": [
+          {
+            "id": "991490",
+            "name": "A号室（Standard Room）"
+          },
+          {
+            "id": "962654",
+            "name": "B号室（Standard Room）"
+          }
+        ]
+      }
+    ]
+  },
+  "188": {
+    "merchant": "solos_sapporo",
+    "host": "solospersonallounge.stores.jp",
+    "bookingPages": [
+      {
+        "id": "663237",
+        "name": "♣【男性専用】個室サウナ90分・冷水オーバーヘッドシャワー付きタイプ",
+        "lowestPrice": 2800,
+        "courses": [
+          {
+            "id": "703179",
+            "name": "1名様利用"
+          },
+          {
+            "id": "797589",
+            "name": "2名様利用(2人目の料金半額）"
+          }
+        ]
+      },
+      {
+        "id": "997498",
+        "name": "♦【女性専用】個室サウナ90分・冷水オーバーヘッドシャワー付きタイプ",
+        "lowestPrice": 2800,
+        "courses": [
+          {
+            "id": "536768",
+            "name": "1名様利用"
+          },
+          {
+            "id": "730153",
+            "name": "2名様利用(2人目の料金半額）"
+          }
+        ]
+      },
+      {
+        "id": "820667",
+        "name": "♠【男性専用】個室サウナ90分・水風呂＆冷水オーバーヘッドシャワー付きタイプ",
+        "lowestPrice": 3300,
+        "courses": [
+          {
+            "id": "482303",
+            "name": "1名様利用"
+          },
+          {
+            "id": "785784",
+            "name": "2名様利用(2人目の料金半額）"
+          }
+        ]
+      },
+      {
+        "id": "662304",
+        "name": "♥【女性専用】個室サウナ90分・水風呂＆冷水オーバーヘッドシャワー付きタイプ　",
+        "lowestPrice": 3300,
+        "courses": [
+          {
+            "id": "729027",
+            "name": "1名様利用"
+          },
+          {
+            "id": "685931",
+            "name": "2名様利用(2人目の料金半額）"
+          }
+        ]
+      }
+    ]
+  },
+  "189": {
+    "merchant": "a-sauna-yoyaku",
+    "host": "a-sauna-sapporo.stores.jp",
+    "bookingPages": [
+      {
+        "id": "963597",
+        "name": "【男性】初めてご利用される方",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "960304",
+            "name": "【初回特別価格】お試し90分コース"
+          },
+          {
+            "id": "1072294",
+            "name": "【初回特別価格】お試し120分コース"
+          }
+        ]
+      },
+      {
+        "id": "2617220",
+        "name": "【男性】深夜パック 深夜0:00〜翌朝6:00（360分）",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "1141242",
+            "name": "【深夜パック】男性2名様1室 最長6時間 "
+          },
+          {
+            "id": "1141774",
+            "name": "【深夜パック】男性1名様1室 最長6時間 "
+          }
+        ]
+      },
+      {
+        "id": "4369710",
+        "name": "【男性セットコース】サウナ＆もみほぐしマッサージ",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "1029646",
+            "name": "【セット価格】男性1名様 サウナ90分＋もみほぐしマッサージ60分"
+          },
+          {
+            "id": "1194319",
+            "name": "【セット価格】男性1名様 サウナ90分＋もみほぐしマッサージ90分"
+          }
+        ]
+      },
+      {
+        "id": "1872353",
+        "name": "【男性セットコース】サウナ＆オイルリンパマッサージ",
+        "lowestPrice": 11000,
+        "courses": [
+          {
+            "id": "984551",
+            "name": "【セット価格】男性1名様 サウナ90分＋オイルリンパマッサージ120分"
+          },
+          {
+            "id": "1135061",
+            "name": "【セット価格】男性1名様 サウナ90分＋オイルリンパマッサージ90分"
+          }
+        ]
+      }
+    ]
+  },
+  "212": {
+    "merchant": "saunatomosibi",
+    "host": "saunatomosibi.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3318878",
+        "name": "岩手・牧場サウナ",
+        "lowestPrice": 15000,
+        "courses": [
+          {
+            "id": "919550",
+            "name": "貸切サウナ"
+          }
+        ]
+      },
+      {
+        "id": "2843967",
+        "name": "秋田・SUKAWA LAKE SAUNA",
+        "lowestPrice": 15000,
+        "courses": [
+          {
+            "id": "1109664",
+            "name": "SUKAWA LAKE SAUNA"
+          }
+        ]
+      }
+    ]
+  },
+  "214": {
+    "merchant": "lastsauna",
+    "host": "lastsauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "1898872",
+        "name": "【ご褒美部屋】1名〜最大4名",
+        "lowestPrice": 5500,
+        "courses": [
+          {
+            "id": "1028570",
+            "name": "ご褒美部屋【300分コース】※【平日のみ】【平日OPEN～17時40分まではこちらから。平日17時50分以降の予約は最終時間予約からお願いします。】"
+          },
+          {
+            "id": "592773",
+            "name": "ご褒美部屋【180分コース】※【平日OPEN～19時40分、土日OPEN～20時40分まではこちらから。平日19時50分以降、土日20時50分以降の予約は最終時間予約からお願いします。】"
+          }
+        ]
+      },
+      {
+        "id": "2230699",
+        "name": "【あーこの部屋】1名〜最大3名",
+        "lowestPrice": 4700,
+        "courses": [
+          {
+            "id": "1075510",
+            "name": "あーこの部屋【300分コース】※【平日のみ】【平日OPEN～17時40分まではこちらから。平日17時50分以降の予約は最終時間予約からお願いします。】"
+          },
+          {
+            "id": "608949",
+            "name": "あーこの部屋【180分コース】※【平日OPEN～19時40分、土日OPEN～20時40分まではこちらから。平日19時50分以降、土日20時50分以降の予約は最終時間予約からお願いします。】"
+          }
+        ]
+      },
+      {
+        "id": "4578190",
+        "name": "【ゆとりの部屋】1名〜最大3名",
+        "lowestPrice": 4600,
+        "courses": [
+          {
+            "id": "1108161",
+            "name": "ゆとりの部屋【300分コース】※【平日のみ】【平日OPEN～17時40分まではこちらから。平日17時50分以降の予約は最終時間予約からお願いします。】"
+          },
+          {
+            "id": "426206",
+            "name": "ゆとりの部屋【180分コース】※【平日OPEN～19時40分、土日OPEN～20時40分まではこちらから。平日19時50分以降、土日20時50分以降の予約は最終時間予約からお願いします。】"
+          }
+        ]
+      },
+      {
+        "id": "4214050",
+        "name": "【優しい部屋】1名〜最大2名",
+        "lowestPrice": 4300,
+        "courses": [
+          {
+            "id": "1122983",
+            "name": "優しい部屋【300分コース】※【平日のみ】【平日OPEN～17時40分まではこちらから。平日17時50分以降の予約は最終時間予約からお願いします。】"
+          },
+          {
+            "id": "739997",
+            "name": "優しい部屋【180分コース】※【平日OPEN～19時40分、土日OPEN～20時40分まではこちらから。平日19時50分以降、土日20時50分以降の予約は最終時間予約からお願いします。】"
+          }
+        ]
+      }
+    ]
+  },
+  "240": {
+    "merchant": "mihota_sauna",
+    "host": "mihota-sauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3664070",
+        "name": "新登場「3時間ゆったりプラン」【女性用】",
+        "lowestPrice": 2000,
+        "courses": [
+          {
+            "id": "1019301",
+            "name": "女性用サウナ予約 [１名様 ]"
+          }
+        ]
+      },
+      {
+        "id": "2262662",
+        "name": "新登場　「3時間ゆったりプラン」【男性用】",
+        "lowestPrice": 2000,
+        "courses": [
+          {
+            "id": "1148359",
+            "name": "新登場「3時間ゆったりプラン」【男性用】"
+          }
+        ]
+      },
+      {
+        "id": "2020704",
+        "name": "新登場　「3時間ゆったりプラン」【女性用】【貸切予約】",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "895784",
+            "name": "温泉＆サウナ貸切【3時間10,000円】"
+          }
+        ]
+      },
+      {
+        "id": "4016371",
+        "name": "新登場　「3時間ゆったりプラン」【男性用】【貸切予約】",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "912476",
+            "name": "温泉＆サウナ貸切【3時間10,000円】"
+          }
+        ]
+      }
+    ]
+  },
+  "259": {
+    "merchant": "hitorijime-sauna",
+    "host": "hitorijimesauna-51.stores.jp",
+    "bookingPages": [
+      {
+        "id": "569985",
+        "name": "個室サウナ～ひとり占めサウナ～",
+        "lowestPrice": 4000,
+        "courses": [
+          {
+            "id": "640329",
+            "name": "個室サウナ【通常サウナルーム60分お手軽コース】"
+          },
+          {
+            "id": "516429",
+            "name": "個室サウナ【通常サウナルーム90分おすすめコース】"
+          }
+        ]
+      },
+      {
+        "id": "1633370",
+        "name": "超得年間プラン（どなたでもご利用可能です）",
+        "lowestPrice": 4000,
+        "courses": [
+          {
+            "id": "898019",
+            "name": "ひとり占めサウナ年間プラン【個室サウナプレミアムルーム１２０分コース】"
+          },
+          {
+            "id": "1042802",
+            "name": "ひとり占めサウナ年間プラン【個室サウナ６０分コース】"
+          }
+        ]
+      },
+      {
+        "id": "4173867",
+        "name": "コンパクト個室サウナ【2名様用】",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "1150163",
+            "name": "コンパクト個室サウナ【２名様用】２時間コース"
+          }
+        ]
+      },
+      {
+        "id": "3098915",
+        "name": "貸切グループサウナ～ふたり占めサウナ～",
+        "lowestPrice": 16000,
+        "courses": [
+          {
+            "id": "976497",
+            "name": "土日祝３時間貸切グループサウナ（２名利用）"
+          },
+          {
+            "id": "1087961",
+            "name": "月～金曜日 3時間貸切グループサウナ（２名利用）"
+          }
+        ]
+      }
+    ]
+  },
+  "274": {
+    "merchant": "saunadasauna",
+    "host": "saunadasauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3954141",
+        "name": "【SAUNAのみ】3時間",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "807626",
+            "name": "【SAUNAのみ】2名"
+          },
+          {
+            "id": "898796",
+            "name": "【SAUNAのみ】3名"
+          }
+        ]
+      },
+      {
+        "id": "1861439",
+        "name": "【BBQのみ】3時間",
+        "lowestPrice": 12000,
+        "courses": [
+          {
+            "id": "980831",
+            "name": "【BBQのみ】2名"
+          },
+          {
+            "id": "978970",
+            "name": "【BBQのみ】3名"
+          }
+        ]
+      },
+      {
+        "id": "2032848",
+        "name": "【SAUNA&BBQ セットプラン】5時間",
+        "lowestPrice": 19800,
+        "courses": [
+          {
+            "id": "915179",
+            "name": "【SAUNA&BBQ セットプラン】2名"
+          },
+          {
+            "id": "1052287",
+            "name": "【SAUNA&BBQ セットプラン】3名"
+          }
+        ]
+      }
+    ]
+  },
+  "279": {
+    "merchant": "roku_sauna",
+    "host": "ixwcmmmb6ygkmcishc7k.stores.jp",
+    "bookingPages": [
+      {
+        "id": "461472",
+        "name": "ご予約［３つのプラン］",
+        "lowestPrice": 5500,
+        "courses": [
+          {
+            "id": "766845",
+            "name": "1人サウナ［９０分］"
+          },
+          {
+            "id": "622832",
+            "name": "グループサウナ［１００分］"
+          }
+        ]
+      }
+    ]
+  },
+  "286": {
+    "merchant": "izumi_sauna",
+    "host": "izumi-sauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "602991",
+        "name": "【平日】サウナ予約",
+        "lowestPrice": 9000,
+        "courses": [
+          {
+            "id": "413009",
+            "name": "１名様予約　9,000円"
+          },
+          {
+            "id": "710689",
+            "name": "２名様予約　10,000円（5,000円/人）"
+          }
+        ]
+      },
+      {
+        "id": "720984",
+        "name": "【土日祝】サウナ予約",
+        "lowestPrice": 9000,
+        "courses": [
+          {
+            "id": "643427",
+            "name": "１名様予約　9,000円"
+          },
+          {
+            "id": "471962",
+            "name": "２名様予約　11,000円（5,500円/人）"
+          }
+        ]
+      },
+      {
+        "id": "975869",
+        "name": "【大型連休】サウナ予約",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "603866",
+            "name": "１名様予約　10,000円"
+          },
+          {
+            "id": "502733",
+            "name": "２名様予約　12,000円（6,000円/人）"
+          }
+        ]
+      }
+    ]
+  },
+  "293": {
+    "merchant": "chillbox",
+    "host": "chillboxprivatesauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "3203028",
+        "name": "【西インター店】ホワイトニング",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "1157890",
+            "name": "【会員専用】ホワイトニング【45分】"
+          }
+        ]
+      },
+      {
+        "id": "625566",
+        "name": "【本店】90分ルーム",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "450704",
+            "name": "90分ルーム"
+          }
+        ]
+      },
+      {
+        "id": "771551",
+        "name": "【本店】120分ルーム　＋1,650円",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "719444",
+            "name": "120分ルーム"
+          }
+        ]
+      },
+      {
+        "id": "3833194",
+        "name": "【西インター店】90分ルーム",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "1023960",
+            "name": "90分ルーム"
+          }
+        ]
+      }
+    ]
+  },
+  "296": {
+    "merchant": "iroha_gifu",
+    "host": "iroha-gifu.stores.jp",
+    "bookingPages": [
+      {
+        "id": "4244393",
+        "name": "Vip Room",
+        "lowestPrice": 5800,
+        "courses": [
+          {
+            "id": "1097136",
+            "name": "【LINE登録orスタンプ特典10％OFF！】 Vip Room"
+          },
+          {
+            "id": "981771",
+            "name": "【LINE登録orスタンプ特典10％OFF！】 Vip Room"
+          }
+        ]
+      },
+      {
+        "id": "4177801",
+        "name": "Large Room　（Large RoomはA室とB室の２部屋ご用意しております。）",
+        "lowestPrice": 3600,
+        "courses": [
+          {
+            "id": "878519",
+            "name": "【LINE登録スタンプ特典10％OFF!！】Large Room A  "
+          },
+          {
+            "id": "1117803",
+            "name": "【LINE登録スタンプ特典10％OFF！】 Large Room B "
+          }
+        ]
+      },
+      {
+        "id": "1074474",
+        "name": "Regular Room　（Regular RoomはA室とB室の２部屋ご用意しております。）",
+        "lowestPrice": 3150,
+        "courses": [
+          {
+            "id": "1028092",
+            "name": "【LINE登録スタンプ特典10％OFF!！】  Regular Room A "
+          },
+          {
+            "id": "940973",
+            "name": "【LINE登録スタンプ特典10％OFF!！】  Regular Room B "
+          }
+        ]
+      },
+      {
+        "id": "3927388",
+        "name": "プレミアムプラン　Vip Room　　（サブスク会員様専用メニュー）",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "1093933",
+            "name": "Vip Room　120分"
+          }
+        ]
+      }
+    ]
+  },
+  "305": {
+    "merchant": "oden_sauna",
+    "host": "izumi-sauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2244233",
+        "name": "【平日】サウナ予約",
+        "lowestPrice": 10000,
+        "courses": [
+          {
+            "id": "491458",
+            "name": "１名様予約　10,000円"
+          },
+          {
+            "id": "687164",
+            "name": "２名様予約　11,000円（5,500円/人）"
+          }
+        ]
+      },
+      {
+        "id": "1230159",
+        "name": "【土日祝】サウナ予約",
+        "lowestPrice": 11000,
+        "courses": [
+          {
+            "id": "524018",
+            "name": "１名様予約　11,000円"
+          },
+          {
+            "id": "747833",
+            "name": "２名様予約　12,000円（6,000円/人）"
+          }
+        ]
+      },
+      {
+        "id": "4016547",
+        "name": "【大型連休】サウナ予約",
+        "lowestPrice": 12000,
+        "courses": [
+          {
+            "id": "567469",
+            "name": "１名様予約　12,000円"
+          },
+          {
+            "id": "721850",
+            "name": "２名様予約　14,000円（7,000円/人）"
+          }
+        ]
+      }
+    ]
+  },
+  "362": {
+    "merchant": "soratomori",
+    "host": "soratomori-1126.stores.jp",
+    "bookingPages": [
+      {
+        "id": "1268086",
+        "name": "コンフォートルーム　121",
+        "lowestPrice": 4000,
+        "courses": [
+          {
+            "id": "996197",
+            "name": "基本60分　※延長最大180分"
+          }
+        ]
+      }
+    ]
+  },
+  "375": {
+    "merchant": "nks",
+    "host": "somari-kumamoto.stores.jp",
+    "bookingPages": [
+      {
+        "id": "4436078",
+        "name": "【201】個室サウナ　1名様用　※水風呂あり",
+        "lowestPrice": 4500,
+        "courses": [
+          {
+            "id": "531852",
+            "name": "【201】個室サウナ　1名様用　※水風呂あり　90分　"
+          },
+          {
+            "id": "793204",
+            "name": "【201】個室サウナ　1名様用　※水風呂あり　120分　"
+          }
+        ]
+      },
+      {
+        "id": "4383120",
+        "name": "【202】個室サウナ　1名様用",
+        "lowestPrice": 3000,
+        "courses": [
+          {
+            "id": "642834",
+            "name": "【202】個室サウナ　1名様用　60分"
+          },
+          {
+            "id": "663698",
+            "name": "【202】個室サウナ　1名様用　90分"
+          }
+        ]
+      },
+      {
+        "id": "4851706",
+        "name": "【203】個室サウナ　1名様用　※女性専用",
+        "lowestPrice": 4000,
+        "courses": [
+          {
+            "id": "784769",
+            "name": "【203】個室サウナ　1名様用　※女性専用　90分"
+          },
+          {
+            "id": "530517",
+            "name": "【203】個室サウナ　1名様用　※女性専用　120分"
+          }
+        ]
+      },
+      {
+        "id": "1283639",
+        "name": "【204】個室サウナ　1名様用",
+        "lowestPrice": 3000,
+        "courses": [
+          {
+            "id": "447764",
+            "name": "【204】個室サウナ　1名様用　60分"
+          },
+          {
+            "id": "454310",
+            "name": "【204】個室サウナ　1名様用　90分"
+          }
+        ]
+      }
+    ]
+  },
+  "389": {
+    "merchant": "sumusauna",
+    "host": "sumusauna.stores.jp",
+    "bookingPages": [
+      {
+        "id": "501810",
+        "name": "【貸切サウナ予約】",
+        "lowestPrice": 19500,
+        "courses": [
+          {
+            "id": "651166",
+            "name": "平日サウナ利用（1名〜4名）"
+          },
+          {
+            "id": "593568",
+            "name": "土日祝サウナ利用（1名〜4名）"
+          }
+        ]
+      },
+      {
+        "id": "619990",
+        "name": "【貸切サウナ予約】（DIESEL RESERVATION）",
+        "lowestPrice": 0,
+        "courses": [
+          {
+            "id": "466391",
+            "name": "貸切サウナ"
+          }
+        ]
+      }
+    ]
+  },
+  "428": {
+    "merchant": "hiki_sauna",
+    "host": "nekoyacho-bld.stores.jp",
+    "bookingPages": [
+      {
+        "id": "1545877",
+        "name": "［非会員］男性用予約ページ",
+        "lowestPrice": 2420,
+        "courses": [
+          {
+            "id": "1087582",
+            "name": "［平日限定］男性 120分 "
+          },
+          {
+            "id": "513382",
+            "name": "男性 60分"
+          }
+        ]
+      },
+      {
+        "id": "4023370",
+        "name": "［会員専用］男性予約ページ",
+        "lowestPrice": null,
+        "courses": [
+          {
+            "id": "709215",
+            "name": "男性 会員様 60分"
+          },
+          {
+            "id": "403373",
+            "name": "男性 会員様 90分"
+          }
+        ]
+      },
+      {
+        "id": "1008055",
+        "name": "女性専用予約ページ ",
+        "lowestPrice": 2420,
+        "courses": [
+          {
+            "id": "809014",
+            "name": "［平日限定］女性専用 120分　3740円"
+          },
+          {
+            "id": "557917",
+            "name": "女性専用 60分"
+          }
+        ]
+      }
+    ]
+  },
+  "452": {
+    "merchant": "sauna-gym-misogi",
+    "host": "saunagymmisogi.stores.jp",
+    "bookingPages": [
+      {
+        "id": "2157052",
+        "name": "袋井駅前店【月謝会員】様",
+        "lowestPrice": 2800,
+        "courses": [
+          {
+            "id": "882139",
+            "name": "Ａ号室"
+          },
+          {
+            "id": "1087732",
+            "name": "Ｂ号室"
+          }
+        ]
+      },
+      {
+        "id": "3479808",
+        "name": "袋井駅前店【現金会員】様",
+        "lowestPrice": 3500,
+        "courses": [
+          {
+            "id": "875039",
+            "name": "Ａ号室"
+          },
+          {
+            "id": "1179549",
+            "name": "Ｂ号室"
+          }
+        ]
+      }
+    ]
+  }
+}

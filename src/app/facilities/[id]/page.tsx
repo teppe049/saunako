@@ -20,6 +20,10 @@ import ReservationLink from '@/components/ReservationLink';
 import TrackExternalLink from '@/components/TrackExternalLink';
 import AdUnit from '@/components/AdUnit';
 import AskAI from '@/components/AskAI';
+import AvailabilityBadge from '@/components/AvailabilityBadge';
+import NearbyCompareTable from '@/components/NearbyCompareTable';
+import { getPerPersonPrice } from '@/lib/facility-utils';
+import { hasCoubic } from '@/lib/coubic';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -604,13 +608,21 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                         </span>
                         <span className="text-text-secondary text-sm">〜 / {facility.duration}分</span>
                       </div>
-                      <p className="text-text-secondary text-sm">
-                        1人あたり ¥{(
-                          facility.plans && facility.plans.length > 0
-                            ? Math.min(...facility.plans.map((p) => Math.floor(p.price / p.capacity)))
-                            : facility.priceMin
-                        ).toLocaleString()}〜
-                      </p>
+                      {(() => {
+                        // priceMin は室料なので、プラン人数で割れる場合のみ1人あたりを出す（getPerPersonPrice と同じ丸め）
+                        const perPerson = getPerPersonPrice(facility);
+                        const cheapestPlan = facility.plans?.find((p) => p.price === facility.priceMin);
+                        return (
+                          <p className="text-text-secondary text-sm">
+                            {cheapestPlan ? `${cheapestPlan.capacity}名までの室料` : '室料'}
+                            {perPerson !== null && (
+                              <>
+                                {' ・ '}1人あたり <span className="font-semibold text-text-primary">¥{perPerson.toLocaleString()}〜</span>
+                              </>
+                            )}
+                          </p>
+                        );
+                      })()}
                     </div>
                   ) : (
                     <p className="text-text-secondary text-sm">料金は公式サイトをご確認ください</p>
@@ -627,6 +639,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       <span className="text-text-primary">{facility.capacity}名</span>
                     </div>
                   </div>
+
+                  {/* 空き状況（STORES予約対応施設のみ。取得できなければ非表示） */}
+                  {hasCoubic(facility.id) && <AvailabilityBadge facilityId={facility.id} />}
 
                   {/* CTA */}
                   {facility.website ? (
@@ -758,6 +773,8 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               </div>
             </>
           )}
+
+          {sameArea.length > 0 && <NearbyCompareTable current={facility} nearby={sameArea.slice(0, 3)} />}
 
           {similarPrice.length > 0 && (
             <div className={sameArea.length > 0 ? 'mt-8 md:mt-10' : ''}>
