@@ -1470,37 +1470,39 @@
   {
     "id": 18,
     "slug": "prus-sauna-歌舞伎町タワー",
-    "name": "Prus Sauna 歌舞伎町タワー",
+    "name": "Prus Sauna 新宿歌舞伎町タワー店",
     "prefecture": "tokyo",
     "prefectureLabel": "東京都",
     "city": "新宿区",
     "area": "新宿・神楽坂",
-    "address": "東京都新宿区歌舞伎町",
+    "address": "東京都新宿区歌舞伎町1-29-1 東急歌舞伎町タワー5F",
     "nearestStation": "新宿駅",
-    "walkMinutes": 10,
-    "priceMin": 6000,
-    "duration": 60,
+    "walkMinutes": 4,
+    "priceMin": 13500,
+    "duration": 90,
     "capacity": 4,
     "features": {
       "waterBath": true,
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": true,
-      "coupleOk": false,
-      "bluetooth": null,
+      "coupleOk": true,
+      "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "13:00-翌5:00",
-    "holidays": "基本無休",
-    "website": "https://www.prussauna.com/",
+    "businessHours": "24時間営業",
+    "holidays": "年中無休",
+    "website": "https://www.prussauna.com/kabukicho",
     "phone": "03-3200-8686",
-    "bookingUrl": null,
+    "bookingUrl": "https://www.tablecheck.com/ja/prussauna-kabukicho",
     "amenities": [
       "タオル",
-      "シャンプー",
-      "ボディソープ"
+      "水着",
+      "サウナグッズ",
+      "スキンケア用品",
+      "ドリンク"
     ],
-    "note": "温度指定可",
+    "note": "ヒノキの水風呂・セルフロウリュ／低温のプラズマミストサウナも選べる。週末は+1,000〜2,000円",
     "images": [
       "/facilities/18-0.webp",
       "/facilities/18-1.webp",
@@ -1509,38 +1511,50 @@
     ],
     "lat": 35.695393,
     "lng": 139.701294,
-    "description": "歌舞伎町タワー内に位置し、外気浴スペースと温度指定機能を備えたプライベートサウナ。水風呂・セルフロウリュ完備で、新宿の夜景を眺めながらととのえる。13時から翌5時まで営業し、最大4名での利用が可能。",
-    "saunakoCommentShort": "外気浴あり！温度指定もできる",
-    "saunakoCommentLong": "歌舞伎町タワーにあるプライベートサウナだよ！外気浴スペースがあって、サウナ後に新宿の夜景を見ながらととのえるのが最高。温度指定もできるから、自分好みのサウナ体験ができるの！夜遊びの前後にもおすすめかも！",
-    "updatedAt": "2026-02-08",
+    "description": "東急歌舞伎町タワー5階にある24時間営業の完全個室サウナ。ヒノキの水風呂とセルフロウリュを備えた高温サウナに加え、低温のプラズマミストサウナも選べる。外気浴テラス「G terrace」ではリクライニングチェアで新宿の空を眺めながらととのえる。2名向けのムーン、4名まで使えるさくらスイート、カップル専用プランを用意。",
+    "saunakoCommentShort": "24時間営業！カップルプランあり",
+    "saunakoCommentLong": "東急歌舞伎町タワーの5階にある個室サウナだよ！ヒノキの水風呂がめちゃくちゃ気持ちいいし、外気浴テラスの「G terrace」でリクライニングチェアに沈むのが最高なの。24時間営業だから、朝ととのえるのも夜ふかしついでもOK。カップル専用プランもあるから、二人で行きたいときはこっちを選んでね！",
+    "updatedAt": "2026-09-02",
     "plans": [
       {
-        "name": "Moon 60分 2名",
-        "price": 6000,
-        "duration": 60,
-        "capacity": 2
-      },
-      {
-        "name": "Moon 90分 2名",
-        "price": 8000,
+        "name": "ムーン（2名個室） 90分",
+        "price": 13500,
         "duration": 90,
         "capacity": 2
       },
       {
-        "name": "Moon 120分 2名",
-        "price": 12000,
+        "name": "ムーン（2名個室） 120分",
+        "price": 18000,
         "duration": 120,
         "capacity": 2
       },
       {
-        "name": "Sakura Suite 90分 4名",
-        "price": 15000,
+        "name": "カップルプラン 90分",
+        "price": 20000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "カップルプラン 120分",
+        "price": 25000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "カップルスイートプラン 120分",
+        "price": 33000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "さくらスイート（4名個室） 90分",
+        "price": 25000,
         "duration": 90,
         "capacity": 4
       },
       {
-        "name": "Sakura Suite 120分 4名",
-        "price": 20000,
+        "name": "さくらスイート（4名個室） 120分",
+        "price": 30000,
         "duration": 120,
         "capacity": 4
       }
@@ -1548,8 +1562,8 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "Prus Sauna歌舞伎町タワー｜料金6,000円〜 新宿の外気浴付き個室サウナ | サウナ子",
-    "seoDescription": "Prus Sauna（プルスサウナ）歌舞伎町タワーの料金を詳しく紹介。2名60分6,000円〜・90分8,000円、4名スイートは15,000円〜。新宿駅徒歩10分・翌5時まで営業。セルフロウリュ・水風呂・外気浴付きの完全個室サウナ。料金プラン・予約方法はサウナ子で。",
+    "seoTitle": "Prus Sauna 新宿歌舞伎町タワー店｜24時間営業 カップルプランあり個室サウナ | サウナ子",
+    "seoDescription": "Prus Sauna（プラスサウナ）新宿歌舞伎町タワー店の料金・設備を紹介。ムーン90分13,500円〜、カップルプラン20,000円〜、4名のさくらスイート25,000円〜。東急歌舞伎町タワー5F・新宿駅徒歩4分・24時間営業。ヒノキの水風呂とセルフロウリュ、外気浴テラス付きの完全個室サウナ。",
     "slotType": "free"
   },
   {
