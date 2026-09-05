@@ -53,7 +53,7 @@
 - **Tailwind CSS v4** + CSS Variables (`globals.css`)
 - **ESLint** (Next.js core-web-vitals + TypeScript rules)
 - **Leaflet + react-leaflet + OSMタイル** (`tile.openstreetmap.jp`、APIキー不要。Google Mapsは未使用)
-- **データ**: 静的JSON (`data/facilities.json`, 486施設・47都道府県)
+- **データ**: 静的JSON (`data/facilities.json`, 47都道府県・約490施設。実数は `getAllFacilities().length` で参照し、文書やUIに固定値を書かない)
 - **デザイン**: Pencil MCP (`.pen`ファイル)
 
 ## ディレクトリ構成
@@ -89,7 +89,7 @@ src/
 │   ├── distance.ts           # 距離計算
 │   └── types.ts              # 共通型定義
 data/
-└── facilities.json           # 施設マスタデータ（487施設）
+└── facilities.json           # 施設マスタデータ（約490施設・閉店分は closedAt で除外）
 content/
 └── articles/                 # MDX記事コンテンツ（*.mdx）
 docs/                         # ドキュメント

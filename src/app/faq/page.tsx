@@ -4,12 +4,16 @@ import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AskAI from '@/components/AskAI';
+import { getAllFacilities } from '@/lib/facilities';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
+
+// 掲載施設数は固定値にしない（トップ・layout と同じ営業中件数を使い、ページ間で数がずれないようにする）
+const FACILITY_COUNT = getAllFacilities().length;
 
 export const metadata: Metadata = {
   // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
   title: { absolute: '個室サウナのよくある質問30選 | 料金・予約・カップル利用 | サウナ子' },
-  description: '個室サウナの疑問をまとめて解決。料金相場（60分3,000円〜）、カップルや男女2人での利用、水着の要否、安く使うコツ、初心者の持ち物まで、全国490施設を掲載するサウナ子が解説します。',
+  description: `個室サウナの疑問をまとめて解決。料金相場（60分3,000円〜）、カップルや男女2人での利用、水着の要否、安く使うコツ、初心者の持ち物まで、全国${FACILITY_COUNT}施設を掲載するサウナ子が解説します。`,
   alternates: {
     canonical: 'https://www.saunako.jp/faq',
   },
@@ -128,7 +132,7 @@ const faqCategories = [
     items: [
       {
         q: 'サウナ子ってどんなサービス？',
-        a: '全国の個室・プライベートサウナを比較・検索できるサービスです。水風呂の温度やロウリュの有無など、サウナ好きが気になるポイントで施設を探せます。47都道府県・約490施設を掲載しており、料金や設備を横並びで比較できます。',
+        a: `全国の個室・プライベートサウナを比較・検索できるサービスです。水風呂の温度やロウリュの有無など、サウナ好きが気になるポイントで施設を探せます。47都道府県・${FACILITY_COUNT}施設を掲載しており、料金や設備を横並びで比較できます。`,
       },
       {
         q: 'どんな基準で施設を掲載している？',

@@ -11,7 +11,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const ARTICLES_DIR = path.join(ROOT, 'content/articles');
 const OUT_PATH = path.join(ROOT, 'public/llms-full.txt');
+const INDEX_PATH = path.join(ROOT, 'public/llms.txt');
 const SITE_URL = 'https://www.saunako.jp';
+
+/** 営業中か（src/lib/facilities.ts の isOpen と同じ判定） */
+function isOpen(f) {
+  return !f.closedAt || new Date(f.closedAt) > new Date();
+}
 
 const CATEGORY_LABEL = {
   'area-guide': 'エリア別ガイド',
@@ -24,7 +30,27 @@ const CATEGORY_LABEL = {
 function loadFacilities() {
   const raw = fs.readFileSync(path.join(ROOT, 'data/facilities.json'), 'utf-8');
   const list = JSON.parse(raw);
-  return new Map(list.map((f) => [f.id, f]));
+  // 閉店施設は詳細ページが生成されないため、記事内カードもインライン化しない
+  return new Map(list.filter(isOpen).map((f) => [f.id, f]));
+}
+
+/**
+ * public/llms.txt（手書きの索引）の掲載施設数を facilities.json の営業中件数に同期し、
+ * 記事MDXにあるのに索引に載っていない slug を警告する。
+ */
+function syncIndex(facilityCount, slugs) {
+  if (!fs.existsSync(INDEX_PATH)) return;
+  const before = fs.readFileSync(INDEX_PATH, 'utf-8');
+  const after = before.replace(/\d+施設以上/g, `${facilityCount}施設以上`);
+  if (after !== before) {
+    fs.writeFileSync(INDEX_PATH, after, 'utf-8');
+    console.log(`✅ Synced facility count in ${INDEX_PATH} → ${facilityCount}施設以上`);
+  }
+  const missing = slugs.filter((slug) => !after.includes(`/articles/${slug}`));
+  if (missing.length) {
+    console.warn(`⚠️  llms.txt に未掲載の記事 ${missing.length} 件（手動で索引に追加してください）:`);
+    for (const slug of missing) console.warn(`   - ${slug}`);
+  }
 }
 
 function stripMdxImports(content) {
@@ -114,10 +140,11 @@ function main() {
       return tb - ta;
     });
 
+  const facilityCount = facilities.size;
   const header = [
     '# サウナ子（Saunako）— 記事全文集',
     '',
-    `> 全国47都道府県・487施設以上の個室・プライベートサウナを比較・検索できるポータルサイトのコンテンツ全文版。AI検索エンジン向けに最適化（${visible.length}記事）。`,
+    `> 全国47都道府県・${facilityCount}施設以上の個室・プライベートサウナを比較・検索できるポータルサイトのコンテンツ全文版。AI検索エンジン向けに最適化（${visible.length}記事）。`,
     '',
     `Site: ${SITE_URL}`,
     `Index: ${SITE_URL}/llms.txt`,
@@ -144,7 +171,10 @@ function main() {
   const sizeKb = (fs.statSync(OUT_PATH).size / 1024).toFixed(1);
   console.log(`✅ Generated ${OUT_PATH}`);
   console.log(`   Articles: ${visible.length}`);
+  console.log(`   Facilities (open): ${facilityCount}`);
   console.log(`   Size: ${sizeKb} KB`);
+
+  syncIndex(facilityCount, visible.map(({ slug }) => slug));
 }
 
 main();

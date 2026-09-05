@@ -7,8 +7,13 @@ import dynamic from "next/dynamic";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import WebVitalsReporter from "@/components/WebVitalsReporter";
 import BottomNav from "@/components/BottomNav";
+import { getAllFacilities } from "@/lib/facilities";
 const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBanner"));
 import "./globals.css";
+
+// 掲載施設数は固定値にしない（過去に 479/487/490 と表示がページごとに割れた）。トップと同じ営業中件数を使う
+const FACILITY_COUNT = getAllFacilities().length;
+const SITE_DESCRIPTION = `全国47都道府県${FACILITY_COUNT}施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・大阪・北海道・愛知・福岡など全国の料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,15 +30,13 @@ export const metadata: Metadata = {
     default: "サウナ子 | 個室・プライベートサウナを全国から比較・検索",
     template: "%s | サウナ子",
   },
-  description:
-    "全国47都道府県487施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・大阪・北海道・愛知・福岡など全国の料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
+  description: SITE_DESCRIPTION,
   keywords: ["個室サウナ", "プライベートサウナ", "貸切サウナ", "東京", "大阪", "北海道", "愛知", "福岡", "サウナ検索", "サウナ比較"],
   authors: [{ name: "サウナ子" }],
   metadataBase: new URL("https://www.saunako.jp"),
   openGraph: {
     title: "サウナ子 | 個室・プライベートサウナを全国から比較・検索",
-    description:
-      "全国47都道府県487施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・大阪・北海道・愛知・福岡など全国の料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
+    description: SITE_DESCRIPTION,
     url: "https://www.saunako.jp",
     siteName: "サウナ子",
     locale: "ja_JP",
@@ -43,8 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "サウナ子 | 個室・プライベートサウナを全国から比較・検索",
-    description:
-      "全国47都道府県487施設以上の個室・プライベートサウナを比較・検索できるポータルサイト。東京・大阪・北海道・愛知・福岡など全国の料金・水風呂温度・ロウリュ・外気浴などの設備情報を一覧で比較。カップルや友人同士で楽しめる貸切サウナも多数掲載。あなたにぴったりの個室サウナが見つかります。",
+    description: SITE_DESCRIPTION,
   },
   icons: {
     icon: [
