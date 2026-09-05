@@ -12516,7 +12516,7 @@
   {
     "id": 139,
     "slug": "private-sauna-exit",
-    "name": "Private Sauna EXIT",
+    "name": "TENET SAUNA",
     "prefecture": "aichi",
     "prefectureLabel": "愛知県",
     "city": "名古屋市",
@@ -12524,11 +12524,11 @@
     "address": "愛知県名古屋市中区錦3-17-5 EXIT NISHIKI north 8F",
     "nearestStation": "栄駅",
     "walkMinutes": 1,
-    "priceMin": 2000,
+    "priceMin": 4000,
     "duration": 60,
-    "capacity": 1,
+    "capacity": 2,
     "features": {
-      "waterBath": false,
+      "waterBath": true,
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": true,
@@ -12536,11 +12536,11 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "平日 9:00〜翌5:00（最終受付 翌4:00）/ 土日祝 9:00〜23:00（最終受付 22:00）",
-    "holidays": "12/31・1/1",
-    "website": "https://exitsauna.com/",
+    "businessHours": "12:00〜翌4:00 / 日曜 12:00〜23:00",
+    "holidays": "不定休",
+    "website": "https://tenetsauna.jp/",
     "phone": "052-962-1414",
-    "bookingUrl": "https://www.tablecheck.com/shops/sauna-exit/reserve",
+    "bookingUrl": "https://tenetsauna.jp/",
     "amenities": [
       "タオル",
       "バスタオル",
@@ -12551,7 +12551,7 @@
       "化粧水",
       "乳液"
     ],
-    "note": "男性専用",
+    "note": "Private Sauna EXITからリブランド。男女での利用は不可（保健所指導により同性のみ）。予約は電話または公式LINE。",
     "images": [
       "/facilities/139-0.webp",
       "/facilities/139-1.webp",
@@ -12563,25 +12563,55 @@
     "description": "栄駅から徒歩1分、サウナ師匠・秋山大輔プロデュースの完全個室フィンランド式サウナ。7種のアロマロウリュとカラーセラピー照明が特徴。14度の水シャワーと外気浴スペースを備え、平日は朝9時から翌朝5時まで営業。",
     "saunakoCommentShort": "栄駅1分! 7種アロマ×カラーサウナ!",
     "saunakoCommentLong": "栄駅からたった1分で行ける個室サウナだよ! 7パターンのアロマロウリュが選べるのが楽しいし、ネオンのカラー照明で気分も上がる。水シャワーは14度でキリッと冷えて、外気浴スペースもあるからしっかりととのえるよ。60分2,000円からでサクッと行けるのもいいよね!",
-    "updatedAt": "2026-02-27",
+    "updatedAt": "2026-09-05",
     "plans": [
       {
-        "name": "60分",
-        "price": 2000,
+        "name": "60分 1名",
+        "price": 4000,
         "duration": 60,
         "capacity": 1
       },
       {
-        "name": "90分",
-        "price": 3500,
+        "name": "60分 2名",
+        "price": 7000,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "90分 1名",
+        "price": 5000,
         "duration": 90,
         "capacity": 1
       },
       {
-        "name": "160分",
-        "price": 5000,
-        "duration": 160,
+        "name": "90分 2名",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 1名",
+        "price": 6000,
+        "duration": 120,
         "capacity": 1
+      },
+      {
+        "name": "120分 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "150分 1名",
+        "price": 7000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "150分 2名",
+        "price": 13000,
+        "duration": 150,
+        "capacity": 2
       }
     ],
     "timeSlots": null,
@@ -12606,7 +12636,7 @@
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": false,
-      "coupleOk": true,
+      "coupleOk": false,
       "bluetooth": true,
       "wifi": true
     },
@@ -12621,7 +12651,7 @@
       "フェイスシート",
       "ミネラルウォーター"
     ],
-    "note": "個室はBlack Room/White Roomの2室（水着着用・男女利用可）",
+    "note": "個室はBlack Room/White Roomの2室。男女混合は男性2名＋女性2名の4名利用のみ水着着用で可（1対1のカップル利用は不可）。",
     "images": [
       "/facilities/140-0.webp",
       "/facilities/140-1.webp",
@@ -12633,7 +12663,7 @@
     "description": "名古屋駅から徒歩5分、東海エリア最大級のサウナ専用施設。Black Room・White Roomの2つの個室サウナはセルフロウリュに対応し、Bluetoothスピーカー・Wi-Fi完備。100分15,000円から、最大4名で水着着用の男女利用が可能。",
     "saunakoCommentShort": "名駅すぐ! Black/White 2つの個室!",
     "saunakoCommentLong": "名古屋駅から5分の東海最大級サウナ施設の個室だよ! Black RoomとWhite Roomで雰囲気が全然違うから両方試してみたくなるかも。Bluetoothスピーカーで好きな音楽かけられるし、Wi-Fiもあるから快適。水着着用で男女一緒に入れるからカップルにもおすすめだね!",
-    "updatedAt": "2026-02-27",
+    "updatedAt": "2026-09-05",
     "plans": [
       {
         "name": "個室 平日 100分",
