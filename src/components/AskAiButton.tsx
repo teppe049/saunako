@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { AskAiTarget } from '@/lib/askAi';
+import AskAiIcon from './AskAiIcons';
 
 interface Props {
   target: AskAiTarget;
@@ -39,23 +40,15 @@ export default function AskAiButton({ target, prompt, pageType, facilityId }: Pr
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2.5 text-sm font-medium text-text-primary shadow-sm transition-colors hover:border-primary hover:text-primary"
+      className="inline-flex items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium text-text-primary shadow-sm transition-all hover:border-primary hover:shadow-md"
       data-track-click="ask_ai"
       data-track-service={target.service}
       data-track-page-type={pageType}
       data-track-facility-id={facilityId}
       title={target.needsClipboard ? '質問文をコピーして開きます。貼り付けて送信してください' : undefined}
     >
-      <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SERVICE_DOT[target.service]}`} />
+      <AskAiIcon service={target.service} className="h-5 w-5 flex-shrink-0" />
       {copied ? '質問文をコピーしました' : target.label}
     </a>
   );
 }
-
-// 各サービスのブランド色（識別用のドット）
-const SERVICE_DOT: Record<AskAiTarget['service'], string> = {
-  chatgpt: 'bg-emerald-500',
-  gemini: 'bg-violet-500',
-  claude: 'bg-orange-500',
-  perplexity: 'bg-teal-500',
-};
