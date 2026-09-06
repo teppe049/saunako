@@ -1,11 +1,11 @@
 # サウナ子（Saunako）— 記事全文集
 
-> 全国47都道府県・479施設以上の個室・プライベートサウナを比較・検索できるポータルサイトのコンテンツ全文版。AI検索エンジン向けに最適化（68記事）。
+> 全国47都道府県・481施設以上の個室・プライベートサウナを比較・検索できるポータルサイトのコンテンツ全文版。AI検索エンジン向けに最適化（68記事）。
 
 Site: https://www.saunako.jp
 Index: https://www.saunako.jp/llms.txt
 Sitemap: https://www.saunako.jp/sitemap.xml
-Generated: 2026-09-05
+Generated: 2026-09-06
 
 ## 個室サウナの定義
 

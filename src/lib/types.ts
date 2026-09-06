@@ -411,6 +411,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   mie: [
     { slug: 'komono', label: '菰野', cities: ['三重郡菰野町'] },
     { slug: 'iga', label: '伊賀', cities: ['伊賀市'] },
+    { slug: 'tsu', label: '津', cities: ['津市'] },
     { slug: 'ise-shima', label: '伊勢志摩', cities: ['志摩市', '伊勢市', '鳥羽市'] },
     { slug: 'higashi-kishu', label: '東紀州', cities: ['北牟婁郡紀北町'] },
   ],
