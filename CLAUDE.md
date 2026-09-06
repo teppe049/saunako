@@ -32,7 +32,8 @@
 |--------|-------------|
 | `node scripts/indexnow.mjs` | IndexNow API でURL送信 |
 | `node scripts/generate-x-posts.js` | X(Twitter)投稿文の自動生成 |
-| `node scripts/download-images.mjs` | 施設画像ダウンロード |
+| `node scripts/download-images.mjs` | 施設画像ダウンロード（幅1600pxに自動リサイズ） |
+| `node scripts/resize-oversized-images.mjs` | 既存画像のうち幅1600px超をリサイズ（冪等・`--dry-run`可） |
 | `node scripts/check-articles.mjs` | 記事データの整合性チェック |
 | `node scripts/capture-x-header.mjs` | Xヘッダー画像キャプチャ |
 | `node scripts/preview-images.mjs` | X投稿プレビュー（week/日付/施設ID指定可） |
@@ -106,8 +107,10 @@ Skills/                       # Claude Code カスタムスキル
 
 - **slug→idリダイレクト**: `next.config.ts` が `facilities.json` を読み込み、slug→数値IDの308リダイレクトを自動生成。施設追加時はビルドでリダイレクトが自動更新される
 - **React Compiler有効**: `next.config.ts` で `reactCompiler: true`。手動の `useMemo`/`useCallback` は基本不要
-- **画像は未最適化**: `images.unoptimized: true` 設定（Vercelの画像最適化を使わない）
+- **画像は未最適化**: `images.unoptimized: true` 設定（Vercelの画像最適化を使わない）。2026-04にHobbyの月5,000変換枠を超過して画像が消えたため。**ランタイム縮小が効かないので、配信する解像度は取り込み時に決まる**（`MAX_WIDTH = 1600`）。手動で画像を追加したら `node scripts/resize-oversized-images.mjs` を流す
 - **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` への301リダイレクトが `next.config.ts` に設定済み
+- **DNSはCloudflare・配信はVercel**（2026-09-06移管）: NSは `lola` / `tadeo`.ns.cloudflare.com。**全レコードDNS only（グレークラウド）を維持すること**。オレンジ雲にするとVercelのBot保護とキャッシュが壊れる。検証は `zsh scripts/verify-dns-switch.sh`（ローカルDNSはキャッシュで誤判定するため判定[7]を見る）
+- **DNSのTXTを消さない**: Search Consoleが `sc-domain:saunako.jp` で登録されており、`google-site-verification` のTXTで所有権を証明している。消すとSEO計測が止まる
 - **analyticsトラッキング**: `data-track-*` 属性 + `AnalyticsTracker`（グローバルイベントデリゲーション）を使う。トラッキングのためだけにコンポーネントをクライアント化しない
 
 ## SEO運用ルール
