@@ -1,18 +1,20 @@
-const COMPARE_KEY = 'saunako_compare';
+import { MAX_PICK } from '@/lib/pick';
 
-// 比較テーブルの視認性を保てる上限（横並びで比較できる列数）
-export const MAX_COMPARE = 4;
+export { MAX_PICK };
 
-export interface CompareItem {
+// 旧 saunako_compare（比較機能・28日間PV0）からの移行はしない
+const PICK_KEY = 'saunako_pick';
+
+export interface PickItem {
   id: number;
   name: string;
   image: string | null;
 }
 
-const EMPTY: CompareItem[] = [];
+const EMPTY: PickItem[] = [];
 
 const listeners: Set<() => void> = new Set();
-let cached: { raw: string | null; items: CompareItem[] } = { raw: null, items: EMPTY };
+let cached: { raw: string | null; items: PickItem[] } = { raw: null, items: EMPTY };
 
 function emitChange() {
   for (const listener of listeners) {
@@ -29,9 +31,9 @@ export function subscribe(callback: () => void): () => void {
   };
 }
 
-export function getSnapshot(): CompareItem[] {
+export function getSnapshot(): PickItem[] {
   try {
-    const raw = localStorage.getItem(COMPARE_KEY);
+    const raw = localStorage.getItem(PICK_KEY);
     if (raw !== cached.raw) {
       cached = { raw, items: raw ? JSON.parse(raw) : EMPTY };
     }
@@ -41,36 +43,36 @@ export function getSnapshot(): CompareItem[] {
   }
 }
 
-export function getServerSnapshot(): CompareItem[] {
+export function getServerSnapshot(): PickItem[] {
   return EMPTY;
 }
 
-function save(items: CompareItem[]): void {
-  localStorage.setItem(COMPARE_KEY, JSON.stringify(items));
+function save(items: PickItem[]): void {
+  localStorage.setItem(PICK_KEY, JSON.stringify(items));
   cached = { raw: null, items: EMPTY }; // invalidate cache
   emitChange();
 }
 
 /** 追加/削除をトグル。上限超過で追加できなかった場合は false を返す */
-export function toggleCompare(item: CompareItem): boolean {
+export function togglePick(item: PickItem): boolean {
   const current = getSnapshot();
   if (current.some((i) => i.id === item.id)) {
     save(current.filter((i) => i.id !== item.id));
     return true;
   }
-  if (current.length >= MAX_COMPARE) return false;
+  if (current.length >= MAX_PICK) return false;
   save([...current, item]);
   return true;
 }
 
-export function removeCompare(facilityId: number): void {
+export function removePick(facilityId: number): void {
   save(getSnapshot().filter((i) => i.id !== facilityId));
 }
 
-export function clearCompare(): void {
+export function clearPick(): void {
   save([]);
 }
 
-export function isCompared(facilityId: number): boolean {
+export function isPicked(facilityId: number): boolean {
   return getSnapshot().some((i) => i.id === facilityId);
 }

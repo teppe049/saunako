@@ -52,6 +52,8 @@ const nextConfig: NextConfig = {
       },
       ...buildFacilityRedirects(),
       ...buildAreaRedirects(),
+      // 旧比較ページ → 候補送信ページ（?ids= は引き継がれ、/pick 側で /pick/1-2 に整形する）
+      { source: '/compare', destination: '/pick', permanent: true },
     ];
   },
 };

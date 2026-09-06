@@ -7,14 +7,14 @@ import FacilityListCard from './FacilityListCard';
 import FacilityMapWrapper from './FacilityMapWrapper';
 import MobileMapOverlay from './MobileMapOverlay';
 import AdUnit from './AdUnit';
-import CompareBar from './CompareBar';
+import PickTray from './PickTray';
 import type { MapBounds } from './FacilityMap';
 import { Facility } from '@/lib/types';
 import {
-  subscribe as subscribeCompare,
-  getSnapshot as getCompareSnapshot,
-  getServerSnapshot as getCompareServerSnapshot,
-} from '@/lib/compareStore';
+  subscribe as subscribePick,
+  getSnapshot as getPickSnapshot,
+  getServerSnapshot as getPickServerSnapshot,
+} from '@/lib/pickStore';
 
 interface FacilityWithDistance extends Facility {
   _distance?: string;
@@ -67,9 +67,9 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
     ? facilities
     : facilities.filter((f) => isInBounds(f, mapBounds));
 
-  // 比較バー表示中はモバイルの「地図で見る」ボタンを上にずらす
-  const compareItems = useSyncExternalStore(subscribeCompare, getCompareSnapshot, getCompareServerSnapshot);
-  const hasCompareBar = compareItems.length > 0;
+  // 候補トレイ表示中はモバイルの「地図で見る」ボタンを上にずらす
+  const pickItems = useSyncExternalStore(subscribePick, getPickSnapshot, getPickServerSnapshot);
+  const hasPickTray = pickItems.length > 0;
 
   const PAGE_SIZE = 20;
   // Reset pagination when filter/map bounds change the visible set
@@ -230,11 +230,11 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
         />
       </div>
 
-      {/* Mobile: Floating map button（ボトムナビ・比較バーと重ならない位置） */}
+      {/* Mobile: Floating map button（ボトムナビ・候補トレイと重ならない位置） */}
       {!isMapVisible && facilities.length > 0 && (
         <button
           onClick={() => setMobileMapOpen(true)}
-          className={`fixed ${hasCompareBar ? 'bottom-32' : 'bottom-20'} left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity`}
+          className={`fixed ${hasPickTray ? 'bottom-32' : 'bottom-20'} left-1/2 -translate-x-1/2 z-40 md:hidden flex items-center gap-2 bg-saunako text-white rounded-full shadow-lg px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity`}
           aria-label="地図で見る"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,8 +253,8 @@ export default function SearchInteractivePanel({ facilities, hasOrigin, origin, 
         />
       )}
 
-      {/* 比較バー（比較対象があるときのみ表示） */}
-      <CompareBar />
+      {/* 候補トレイ（候補があるときのみ表示） */}
+      <PickTray />
     </div>
   );
 }

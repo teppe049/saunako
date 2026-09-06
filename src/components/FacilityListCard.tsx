@@ -7,7 +7,7 @@ import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed, getPerPersonPr
 import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
-import { subscribe, getSnapshot, getServerSnapshot, toggleCompare } from '@/lib/compareStore';
+import { subscribe, getSnapshot, getServerSnapshot, togglePick } from '@/lib/pickStore';
 
 interface FacilityListCardProps {
   facility: Facility;
@@ -53,12 +53,12 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
     const perPerson = getPerPersonPrice(facility);
     const showPerPerson = perPerson != null && (facility.priceMin === 0 || perPerson < facility.priceMin);
 
-    const compareItems = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-    const isCompared = compareItems.some((i) => i.id === facility.id);
-    const handleToggleCompare = useCallback((e: React.MouseEvent) => {
+    const pickItems = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+    const isPicked = pickItems.some((i) => i.id === facility.id);
+    const handleTogglePick = useCallback((e: React.MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
-      toggleCompare({ id: facility.id, name: facility.name, image: facility.images[0] ?? null });
+      togglePick({ id: facility.id, name: facility.name, image: facility.images[0] ?? null });
     }, [facility.id, facility.name, facility.images]);
 
     return (
@@ -158,7 +158,7 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
             </div>
 
-            {/* Website link + Compare toggle */}
+            {/* Website link + Pick toggle */}
             <div className="flex items-center gap-1.5 flex-wrap">
               {facility.website && (
                 <button
@@ -179,16 +179,17 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
               <button
                 type="button"
-                aria-pressed={isCompared}
+                aria-pressed={isPicked}
                 className={`inline-flex items-center gap-1 text-[11px] md:text-xs border rounded-full px-2.5 py-0.5 transition-colors w-fit cursor-pointer ${
-                  isCompared
+                  isPicked
                     ? 'bg-primary border-primary text-white'
                     : 'border-border text-text-secondary hover:border-primary hover:text-primary'
                 }`}
-                onClick={handleToggleCompare}
-                data-track-click="compare_toggle"
+                onClick={handleTogglePick}
+                data-track-click="pick_toggle"
+                data-track-facility={facility.id}
               >
-                {isCompared ? '✓ 比較中' : '＋ 比較'}
+                {isPicked ? '✓ 候補に入れた' : '＋ 候補'}
               </button>
             </div>
 

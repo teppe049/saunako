@@ -22,6 +22,8 @@ import AdUnit from '@/components/AdUnit';
 import AskAI from '@/components/AskAI';
 import AvailabilityBadge from '@/components/AvailabilityBadge';
 import NearbyCompareTable from '@/components/NearbyCompareTable';
+import PickToggleButton from '@/components/PickToggleButton';
+import PickTray from '@/components/PickTray';
 import { getPerPersonPrice } from '@/lib/facility-utils';
 import { hasCoubic } from '@/lib/coubic';
 
@@ -660,6 +662,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       公式サイト情報なし
                     </div>
                   )}
+
+                  {/* 行きたい候補（友だちに1URLで送る）。モバイルは固定CTAバー側にも同じトグルを置く */}
+                  <PickToggleButton facilityId={facility.id} facilityName={facility.name} image={facility.images[0] ?? null} />
                 </div>
               </div>
 
@@ -942,12 +947,8 @@ export default async function FacilityDetailPage({ params }: PageProps) {
       {facility.website && (
         <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-border shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:hidden px-4 py-3 pb-[env(safe-area-inset-bottom,12px)]">
           <div className="flex items-center justify-between gap-3">
-            {facility.priceMin > 0 && (
-              <div className="flex items-baseline gap-0.5 flex-shrink-0">
-                <span className="text-saunako text-lg font-bold">¥{facility.priceMin.toLocaleString()}</span>
-                <span className="text-text-secondary text-xs">〜</span>
-              </div>
-            )}
+            {/* 料金はページ上部に出ているので、ここは候補トグルに置き換える（固定バーを2段にしないため） */}
+            <PickToggleButton facilityId={facility.id} facilityName={facility.name} image={facility.images[0] ?? null} variant="compact" />
             <div className="flex-1 min-w-0">
               <ReservationLink
                 facilityId={facility.id}
@@ -958,6 +959,8 @@ export default async function FacilityDetailPage({ params }: PageProps) {
           </div>
         </div>
       )}
+      {/* 候補トレイ: 固定予約CTAバー（website あり・高さ80px）の上に載せる */}
+      <PickTray offsetClass={facility.website ? 'bottom-20 md:bottom-0' : 'bottom-0'} />
       <ScrollToTop />
     </div>
   );

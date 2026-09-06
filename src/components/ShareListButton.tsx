@@ -1,30 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-
-type ShareKind = 'favorites' | 'compare';
+import { buildPickPath, MAX_PICK } from '@/lib/pick';
 
 interface ShareListButtonProps {
   ids: number[];
-  /** favorites: お気に入りリスト / compare: 比較表（既定: favorites） */
-  kind?: ShareKind;
 }
 
 // 共有URLは本番ドメインで固定する（ローカル・プレビューのURLを相手に送っても開けないため）
 const SITE_URL = 'https://www.saunako.jp';
 
-const SHARE_META: Record<ShareKind, { path: string; title: string; label: string; track: string }> = {
-  favorites: { path: '/favorites', title: 'お気に入りの個室サウナ', label: 'リストを共有', track: 'share_favorites_list' },
-  compare: { path: '/compare', title: '個室サウナの比較表', label: '比較表を共有', track: 'share_compare_list' },
-};
+const meta = { title: 'お気に入りの個室サウナ', label: 'リストを共有', track: 'share_favorites_list' };
 
-export default function ShareListButton({ ids, kind = 'favorites' }: ShareListButtonProps) {
+/** お気に入りリストの共有。候補数なら受け取り体験の良い /pick に、それ以上は一覧のまま /favorites に */
+export default function ShareListButton({ ids }: ShareListButtonProps) {
   const [copied, setCopied] = useState(false);
 
   if (ids.length === 0) return null;
 
-  const meta = SHARE_META[kind];
-  const shareUrl = `${SITE_URL}${meta.path}?ids=${ids.join(',')}`;
+  const shareUrl = ids.length <= MAX_PICK
+    ? `${SITE_URL}${buildPickPath(ids)}`
+    : `${SITE_URL}/favorites?ids=${ids.join(',')}`;
 
   const handleShare = async () => {
     try {
