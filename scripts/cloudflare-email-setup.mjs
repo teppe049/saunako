@@ -198,16 +198,65 @@ async function cmdAddRules() {
 
 // --- main ----------------------------------------------------------------
 
+/** どの権限が足りないかを1件ずつ切り分ける */
+async function cmdDoctor() {
+  const zones = await cf("GET", `/zones?name=${ZONE_NAME}`);
+  if (!zones.length) {
+    console.log("  NG    ゾーンが見えない → Zone:Read が無いか、アカウントが違う");
+    return;
+  }
+  const zoneId = zones[0].id;
+  const accountId = zones[0].account.id;
+  console.log(`ゾーン   : ${ZONE_NAME} (${zoneId})`);
+  console.log(`アカウント: ${zones[0].account.name} (${accountId})`);
+  console.log("");
+
+  const checks = [
+    ["Zone : Zone : Read", `/zones/${zoneId}`],
+    ["Zone : DNS : Edit", `/zones/${zoneId}/dns_records?per_page=1`],
+    ["Email Routing 設定の取得", `/zones/${zoneId}/email/routing`],
+    ["Zone : Email Routing Rules : Edit", `/zones/${zoneId}/email/routing/rules`],
+    ["Account : Email Routing Addresses : Edit", `/accounts/${accountId}/email/routing/addresses`],
+  ];
+
+  let missing = 0;
+  for (const [label, p] of checks) {
+    try {
+      await cf("GET", p);
+      console.log(`  OK    ${label}`);
+    } catch (e) {
+      missing++;
+      console.log(`  NG    ${label}`);
+      console.log(`        ${e.message.split("->").pop().trim()}`);
+    }
+  }
+
+  if (missing) {
+    console.log("");
+    console.log("不足している権限をトークンに追加してください（作り直し不要・Editで足せる）:");
+    console.log("  https://dash.cloudflare.com/profile/api-tokens");
+    console.log("");
+    console.log("※ Email Routing の設定取得と有効化は MX/SPF を書き込むため");
+    console.log("   Zone : DNS : Edit が必須（2026-09-06に実測）");
+  }
+}
+
 const cmd = process.argv[2];
 const commands = {
   status: cmdStatus,
+  doctor: cmdDoctor,
   "add-dest": cmdAddDest,
   enable: cmdEnable,
   "add-rules": cmdAddRules,
 };
 
 if (!commands[cmd]) {
-  console.error("Usage: node scripts/cloudflare-email-setup.mjs <status|add-dest|enable|add-rules>");
+  console.error("Usage: node scripts/cloudflare-email-setup.mjs <doctor|status|add-dest|enable|add-rules>");
+  console.error("  doctor    : どの権限が足りないかを切り分ける");
+  console.error("  status    : 現状確認（無害）");
+  console.error("  add-dest  : 転送先Gmailを登録（確認メールが飛ぶ）");
+  console.error("  enable    : Email Routingを有効化（MX/SPFが入る）");
+  console.error("  add-rules : info@ / owners@ のルールを作成");
   process.exit(1);
 }
 

@@ -18,6 +18,10 @@
 1. Cloudflareダッシュボードで**個人アカウント**にいることを確認する
    https://dash.cloudflare.com/e125443b737b2ebdfc1779a7fbd28588/home
 
+   このIDのアカウント名は **「My Account」** で、これが個人アカウント。
+   「株式会社SaunaTrip」は `f70279d9b2f5e26db42573da83ef10a1` の方（別物）。
+   アカウント切り替え画面では名前で見分ける。
+
 2. 右上のプロフィールアイコン → 「My Profile」→ 「API Tokens」
    （または https://dash.cloudflare.com/profile/api-tokens ）
 
@@ -27,13 +31,19 @@
 
 **Token name**: `saunako-email-routing`
 
-**Permissions**（3行追加する）
+**Permissions**（4行追加する）
 
 | スコープ | 項目 | 権限 |
 |---|---|---|
 | Account | Email Routing Addresses | Edit |
 | Zone | Email Routing Rules | Edit |
 | Zone | Zone | Read |
+| Zone | DNS | Edit |
+
+**`Zone : DNS : Edit` は必須**（2026-09-06に実測で判明）。
+Email Routing の設定取得（`GET /zones/{id}/email/routing`）と有効化が
+MX・SPFレコードを書き込むため、これが無いと `403 / 10000: Authentication error`
+になる。3つだけでは足りない。
 
 **Account Resources**: Include → 個人アカウントのみ選ぶ
 （「株式会社SaunaTrip」は絶対に含めない）
