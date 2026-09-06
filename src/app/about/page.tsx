@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 
 const CONTACT_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header';
+// 施設オーナー・取材・提携などの窓口。Cloudflare Email Routing で運用者のGmailへ転送
+const OWNERS_EMAIL = 'owners@saunako.jp';
 
 export default function AboutPage() {
   const facilities = getAllFacilities();
@@ -75,12 +77,20 @@ export default function AboutPage() {
         '貸切サウナ',
         'サウナ施設比較',
       ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'customer support',
-        url: CONTACT_FORM_URL,
-        availableLanguage: 'Japanese',
-      },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          url: CONTACT_FORM_URL,
+          availableLanguage: 'Japanese',
+        },
+        {
+          '@type': 'ContactPoint',
+          contactType: 'business inquiries',
+          email: OWNERS_EMAIL,
+          availableLanguage: 'Japanese',
+        },
+      ],
       areaServed: {
         '@type': 'Country',
         name: 'Japan',

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSerWPa3fBFUoKFgce1s2yEu4YIZR0t59auTD1TC_tkjTvKxCA/viewform?usp=header';
+// 施設オーナー向けの窓口。Cloudflare Email Routing で運用者のGmailへ転送している
+const OWNERS_EMAIL = 'owners@saunako.jp';
 
 const ownerFaqs = [
   {
@@ -32,7 +34,7 @@ const ownerFaqs = [
   },
   {
     q: '掲載後に情報を修正できますか？',
-    a: 'はい。料金改定や営業時間の変更など、いつでもフォームからご連絡ください。',
+    a: 'はい。料金改定や営業時間の変更など、いつでもフォームまたは owners@saunako.jp へご連絡ください。',
   },
   {
     q: '掲載を取りやめたい場合は？',
@@ -167,6 +169,17 @@ export default function ForOwnersPage() {
           >
             掲載を申し込む（無料）
           </a>
+          <p className="mt-4 text-sm text-text-secondary">
+            メールでのお問い合わせは{' '}
+            <a
+              href={`mailto:${OWNERS_EMAIL}`}
+              className="text-saunako underline underline-offset-2 hover:opacity-80 transition-opacity"
+              data-track-click="for-owners-email"
+            >
+              {OWNERS_EMAIL}
+            </a>
+            {' '}へ
+          </p>
         </section>
       </main>
 
