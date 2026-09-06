@@ -41,3 +41,8 @@ jobs:
           # 本番値は Vercel 側で注入。CI はビルドが通ることだけ確認する
           NEXT_PUBLIC_GA_MEASUREMENT_ID: G-XXXXXXXXXX
           NEXT_TELEMETRY_DISABLED: '1'
+
+      # tests/page-title.test.ts はビルド成果物(.next/server/app/*.html)を検査するため、
+      # Build の後にもう一度走らせる（Test の時点では成果物が無くスキップされる）
+      - name: Test (post-build)
+        run: npm test

@@ -9,7 +9,9 @@ import { getAllFacilities } from '@/lib/facilities';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 
 export const metadata: Metadata = {
-  title: 'サウナ子について | 個室サウナ専門の検索サービス',
+  // absolute 指定。タイトル自体に「サウナ子」を含むため、
+  // layout.tsx の template（%s | サウナ子）に通すと二重化する（Issue #167）
+  title: { absolute: 'サウナ子について | 個室サウナ専門の検索サービス' },
   description:
     '全国47都道府県の個室・プライベートサウナを網羅する検索サービス「サウナ子」について。掲載基準やデータの信頼性、サイトの特徴をご紹介します。',
   alternates: {
