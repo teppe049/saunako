@@ -10,7 +10,11 @@ import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from '../AreaFilters';
-import { SAUNAKO_SUB_AREA_COMMENTS, DEFAULT_SUB_AREA_COMMENT, SUB_AREA_META } from '@/lib/subAreaMeta';
+import { SAUNAKO_SUB_AREA_COMMENTS, DEFAULT_SUB_AREA_COMMENT, SUB_AREA_META, SUB_AREA_GUIDES } from '@/lib/subAreaMeta';
+import { getArticlesByFacilityId } from '@/lib/articles';
+import ArticleCard from '@/components/ArticleCard';
+import AreaCompareTable from '@/components/AreaCompareTable';
+import AskAI from '@/components/AskAI';
 
 interface PageProps {
   params: Promise<{ prefecture: string; area: string }>;
@@ -61,10 +65,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-function generateFaqData(facilities: Facility[], areaLabel: string) {
+function generateFaqData(facilities: Facility[], areaLabel: string, areaKey?: string) {
   const pricedFacilities = facilities.filter(f => f.priceMin > 0);
-  const avgPrice = pricedFacilities.length > 0
-    ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
+  // priceMin は「duration 分の室料」で1時間あたりではない。宿泊など duration=0 の施設を
+  // 平均に混ぜると実態から外れる（池袋は19,800円の宿泊プランで平均が9,200→5,700円にずれていた）。
+  const comparable = pricedFacilities.filter(f => f.duration > 0);
+  const avgPrice = comparable.length > 0
+    ? Math.round(comparable.reduce((sum, f) => sum + f.priceMin, 0) / comparable.length / 100) * 100
     : null;
 
   const popularNames = facilities
@@ -82,7 +89,7 @@ function generateFaqData(facilities: Facility[], areaLabel: string) {
   if (avgPrice) {
     faqs.push({
       question: `${areaLabel}の個室サウナの料金相場は？`,
-      answer: `${areaLabel}の個室サウナの料金相場は1時間あたり約${avgPrice.toLocaleString()}円です。最安値は${Math.min(...pricedFacilities.map(f => f.priceMin)).toLocaleString()}円〜となっています。`,
+      answer: `${areaLabel}の個室サウナは、各施設の最短利用プランの平均で約${avgPrice.toLocaleString()}円です（利用時間は施設ごとに異なります）。最安値は${Math.min(...comparable.map(f => f.priceMin)).toLocaleString()}円〜となっています。`,
     });
   }
 
@@ -99,6 +106,10 @@ function generateFaqData(facilities: Facility[], areaLabel: string) {
       answer: `${areaLabel}でカップル（男女）で利用できる個室サウナは${coupleNames.join('、')}などがあります。事前予約がおすすめです。`,
     });
   }
+
+  // サブエリア固有のFAQをマージ（検索意図に刺さるQ&Aで情報量とCTRを底上げ）
+  const extraFaqs = areaKey ? SUB_AREA_GUIDES[areaKey]?.extraFaqs ?? [] : [];
+  faqs.push(...extraFaqs);
 
   return faqs;
 }
@@ -120,7 +131,8 @@ export default async function SubAreaPage({ params }: PageProps) {
   const areaLabel = areaData.label;
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const facilities = getFacilitiesByArea(prefecture, areaLabel);
-  const saunakoComment = SAUNAKO_SUB_AREA_COMMENTS[`${prefecture}/${areaSlug}`] || DEFAULT_SUB_AREA_COMMENT;
+  const areaKey = `${prefecture}/${areaSlug}`;
+  const saunakoComment = SAUNAKO_SUB_AREA_COMMENTS[areaKey] || DEFAULT_SUB_AREA_COMMENT;
   const areaCounts = getAreaFacilityCounts(prefecture);
   const allFacilitiesCount = Object.values(areaCounts).reduce((sum, c) => sum + c, 0);
 
@@ -150,7 +162,7 @@ export default async function SubAreaPage({ params }: PageProps) {
   };
 
   // FAQ JSON-LD
-  const faqItems = generateFaqData(facilities, areaLabel);
+  const faqItems = generateFaqData(facilities, areaLabel, areaKey);
   const faqJsonLd = faqItems.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -286,9 +298,12 @@ export default async function SubAreaPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* エリア内の料金比較表（検索から来た人が最初に見る比較軸） */}
+        <AreaCompareTable facilities={facilities} areaLabel={areaLabel} />
+
         {/* FAQ Section */}
         {(() => {
-          const faqs = generateFaqData(facilities, areaLabel);
+          const faqs = faqItems;
           if (faqs.length === 0) return null;
           return (
             <section className="mb-8">
@@ -313,6 +328,7 @@ export default async function SubAreaPage({ params }: PageProps) {
         })()}
 
         {/* Filters and Facility List (Client Component) */}
+        <div id="facility-list" className="scroll-mt-20" />
         <Suspense fallback={
           <div className="animate-pulse">
             <div className="bg-surface border border-border rounded-xl h-16 mb-6"></div>
@@ -328,6 +344,54 @@ export default async function SubAreaPage({ params }: PageProps) {
             prefectureLabel={areaLabel}
           />
         </Suspense>
+
+        {/* 近くのエリア（同一都道府県の他サブエリアへ回遊させる） */}
+        {(() => {
+          const neighbors = areaGroups
+            .filter((a) => a.slug !== areaSlug && (areaCounts[a.slug] ?? 0) > 0)
+            .slice(0, 6);
+          if (neighbors.length === 0) return null;
+          return (
+            <section className="mt-12 mb-8">
+              <h2 className="text-xl font-bold text-text-primary mb-4">{prefLabel}の近くのエリア</h2>
+              <div className="flex flex-wrap gap-2">
+                {neighbors.map((a) => (
+                  <Link
+                    key={a.slug}
+                    href={`/area/${prefecture}/${a.slug}`}
+                    className="px-4 py-2 bg-surface border border-border rounded-full text-sm text-text-primary hover:border-primary hover:text-primary transition-colors"
+                  >
+                    {a.label}
+                    <span className="text-text-tertiary ml-1">{areaCounts[a.slug]}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
+
+        {/* エリア関連記事 */}
+        {(() => {
+          const areaArticles = [...new Map(
+            facilities.flatMap((f) => getArticlesByFacilityId(f.id)).map((a) => [a.slug, a])
+          ).values()].slice(0, 3);
+          if (areaArticles.length === 0) return null;
+          return (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-text-primary mb-4">{areaLabel}の個室サウナに関する記事</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {areaArticles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} />
+                ))}
+              </div>
+            </section>
+          );
+        })()}
+
+        <AskAI
+          context={{ kind: 'subArea', prefecture, prefectureLabel: prefLabel, areaSlug, areaLabel }}
+          className="mb-8"
+        />
       </main>
       <Footer />
       <ScrollToTop />

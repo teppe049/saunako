@@ -22,6 +22,19 @@ describe('buildAskAiPrompt', () => {
     expect(prompt).toContain('東京都でおすすめ');
   });
 
+  it('サブエリア文脈ではサブエリアと都道府県の両方のURLを含む', () => {
+    const prompt = buildAskAiPrompt({
+      kind: 'subArea',
+      prefecture: 'tokyo',
+      prefectureLabel: '東京都',
+      areaSlug: 'ikebukuro',
+      areaLabel: '池袋・赤羽',
+    });
+    expect(prompt).toContain(`${SITE_URL}/area/tokyo/ikebukuro`);
+    expect(prompt).toContain(`${SITE_URL}/area/tokyo`);
+    expect(prompt).toContain('池袋・赤羽（東京都）でおすすめ');
+  });
+
   it('サイト文脈では llms-full.txt も含む', () => {
     const prompt = buildAskAiPrompt({ kind: 'site' });
     expect(prompt).toContain(`${SITE_URL}/llms-full.txt`);

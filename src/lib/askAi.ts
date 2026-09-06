@@ -28,7 +28,8 @@ export interface AskAiTarget {
 export type AskAiContext =
   | { kind: 'site' }
   | { kind: 'facility'; id: number; name: string; prefectureLabel: string; city: string }
-  | { kind: 'area'; prefecture: string; prefectureLabel: string };
+  | { kind: 'area'; prefecture: string; prefectureLabel: string }
+  | { kind: 'subArea'; prefecture: string; prefectureLabel: string; areaSlug: string; areaLabel: string };
 
 const REFERENCE_FOOTER = [`${SITE_URL}/llms.txt`];
 
@@ -48,6 +49,15 @@ export function buildAskAiPrompt(ctx: AskAiContext): string {
         `${ctx.prefectureLabel}でおすすめの個室サウナ・プライベートサウナを教えてください。料金の相場や選び方のポイントも知りたいです。`,
         '',
         '参考ページ:',
+        `- ${SITE_URL}/area/${ctx.prefecture}`,
+        ...REFERENCE_FOOTER.map((u) => `- ${u}`),
+      ].join('\n');
+    case 'subArea':
+      return [
+        `${ctx.areaLabel}（${ctx.prefectureLabel}）でおすすめの個室サウナ・プライベートサウナを教えてください。料金の相場や、駅からの近さ・カップル利用の可否で選ぶときのポイントも知りたいです。`,
+        '',
+        '参考ページ:',
+        `- ${SITE_URL}/area/${ctx.prefecture}/${ctx.areaSlug}`,
         `- ${SITE_URL}/area/${ctx.prefecture}`,
         ...REFERENCE_FOOTER.map((u) => `- ${u}`),
       ].join('\n');

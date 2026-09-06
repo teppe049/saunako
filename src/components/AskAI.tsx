@@ -15,6 +15,8 @@ function defaultHeading(ctx: AskAiContext): string {
       return `${ctx.name}についてAIに聞く`;
     case 'area':
       return `${ctx.prefectureLabel}の個室サウナをAIに聞く`;
+    case 'subArea':
+      return `${ctx.areaLabel}の個室サウナをAIに聞く`;
     default:
       return 'サウナ子をもっと知る';
   }

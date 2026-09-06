@@ -339,8 +339,11 @@ export async function generateMetadata({ params }: PageProps) {
 
 function generateFaqData(facilities: Facility[], areaLabel: string, prefecture?: string) {
   const pricedFacilities = facilities.filter(f => f.priceMin > 0);
-  const avgPrice = pricedFacilities.length > 0
-    ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
+  // priceMin は「duration 分の室料」で1時間あたりではない。宿泊など duration=0 の施設を
+  // 平均に混ぜると実態から外れるため除外する（サブエリア側と同じ扱い）。
+  const comparable = pricedFacilities.filter(f => f.duration > 0);
+  const avgPrice = comparable.length > 0
+    ? Math.round(comparable.reduce((sum, f) => sum + f.priceMin, 0) / comparable.length / 100) * 100
     : null;
 
   const popularNames = facilities
@@ -358,7 +361,7 @@ function generateFaqData(facilities: Facility[], areaLabel: string, prefecture?:
   if (avgPrice) {
     faqs.push({
       question: `${areaLabel}の個室サウナの料金相場は？`,
-      answer: `${areaLabel}の個室サウナの料金相場は1時間あたり約${avgPrice.toLocaleString()}円です。最安値は${Math.min(...pricedFacilities.map(f => f.priceMin)).toLocaleString()}円〜となっています。`,
+      answer: `${areaLabel}の個室サウナは、各施設の最短利用プランの平均で約${avgPrice.toLocaleString()}円です（利用時間は施設ごとに異なります）。最安値は${Math.min(...comparable.map(f => f.priceMin)).toLocaleString()}円〜となっています。`,
     });
   }
 
