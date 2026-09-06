@@ -28,8 +28,12 @@ echo "=========================================="
 echo
 
 echo "[1] ネームサーバーがCloudflareに切り替わったか"
-NS=$(dig +short NS saunako.jp | sort | tr '\n' ' ')
-echo "  現在のNS: $NS"
+# ローカル/ISPのリゾルバはキャッシュを持つため、パブリックDNSに直接聞く。
+# 切替直後にローカルだけ旧NSを返すことがあるが、それはキャッシュであって未反映ではない。
+NS=$(dig @8.8.8.8 +short NS saunako.jp | sort | tr '\n' ' ')
+NS_LOCAL=$(dig +short NS saunako.jp | sort | tr '\n' ' ')
+echo "  8.8.8.8から: $NS"
+echo "  ローカルから: $NS_LOCAL"
 case "$NS" in
   *cloudflare*) echo "  OK   Cloudflareに切替済み"; PASS=$((PASS+1)) ;;
   *xdomain*)    echo "  WAIT まだXserver（伝播待ちの可能性。最大48時間）" ;;
@@ -38,20 +42,20 @@ esac
 echo
 
 echo "[2] Aレコード（apex）"
-check "A saunako.jp" "$(dig +short A saunako.jp)" "$EXPECTED_A"
+check "A saunako.jp" "$(dig @8.8.8.8 +short A saunako.jp)" "$EXPECTED_A"
 echo
 
 echo "[3] CNAME www"
-check "CNAME www" "$(dig +short CNAME www.saunako.jp)" "$EXPECTED_CNAME"
+check "CNAME www" "$(dig @8.8.8.8 +short CNAME www.saunako.jp)" "$EXPECTED_CNAME"
 echo
 
 echo "[4] TXT（Search Console所有権）"
-ACTUAL_TXT=$(dig +short TXT saunako.jp | tr -d '"')
+ACTUAL_TXT=$(dig @8.8.8.8 +short TXT saunako.jp | tr -d '"')
 check "TXT" "$ACTUAL_TXT" "$EXPECTED_TXT"
 echo
 
 echo "[5] MXレコード（存在しないのが正常）"
-MX=$(dig +short MX saunako.jp)
+MX=$(dig @8.8.8.8 +short MX saunako.jp)
 if [ -z "$MX" ]; then
   echo "  OK   MXなし"
   PASS=$((PASS+1))
@@ -63,7 +67,7 @@ echo
 echo "[6] Cloudflareプロキシを通っていないか（DNS onlyの確認）"
 echo "  Aレコードが $EXPECTED_A ならVercel直。"
 echo "  104.x / 172.67.x 等ならCloudflareプロキシ経由＝設定ミス。"
-A_NOW=$(dig +short A saunako.jp)
+A_NOW=$(dig @8.8.8.8 +short A saunako.jp)
 case "$A_NOW" in
   104.*|172.67.*|172.6[4-9].*|188.114.*|162.159.*)
     echo "  FAIL Cloudflareプロキシ経由になっている: $A_NOW"
@@ -74,6 +78,18 @@ case "$A_NOW" in
   *)
     echo "  ?    判定不能: $A_NOW" ;;
 esac
+echo
+
+echo "[7] .jpレジストリの権威情報（最も信頼できる判定）"
+JPNS=$(dig +short NS jp. | head -1)
+REG=$(dig @$JPNS saunako.jp NS +norecurse 2>/dev/null | grep -c "cloudflare")
+if [ "$REG" -gt 0 ]; then
+  echo "  OK   レジストリ上でCloudflareに切替済み"
+  PASS=$((PASS+1))
+else
+  echo "  WAIT レジストリ上はまだ旧NS"
+fi
+echo "  （whoisの表示更新は遅れることがあるが、実害はない）"
 echo
 
 echo "=========================================="
