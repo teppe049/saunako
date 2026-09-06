@@ -125,3 +125,65 @@ describe('facilities.json 画像', () => {
     expect(bad).toEqual([]);
   });
 });
+
+/**
+ * 背景: 2026-09-07 に timeSlots が5件、型定義（TimeSlotGroup[]）に反する形で
+ * 入っていた（文字列配列やオブジェクト）。施設詳細ページは防御的にフィルタしており、
+ * 型が違うと「予約枠の目安」が黙って非表示になる＝データがあるのに見せられていなかった。
+ */
+describe('facilities.json 時間枠', () => {
+  it('timeSlots は TimeSlotGroup[] の形をしている', () => {
+    const bad: string[] = [];
+
+    for (const f of facilities) {
+      const ts = f.timeSlots;
+      if (ts === null || ts === undefined) continue;
+
+      if (!Array.isArray(ts)) {
+        bad.push(`${f.id}: 配列でない (${JSON.stringify(ts).slice(0, 60)})`);
+        continue;
+      }
+      for (const [i, group] of ts.entries()) {
+        if (typeof group !== 'object' || group === null || Array.isArray(group)) {
+          bad.push(`${f.id}[${i}]: オブジェクトでない (${JSON.stringify(group)})`);
+          continue;
+        }
+        if (typeof group.label !== 'string' || group.label === '') {
+          bad.push(`${f.id}[${i}]: label が無い`);
+        }
+        if (!Array.isArray(group.startTimes) || group.startTimes.length === 0) {
+          bad.push(`${f.id}[${i}]: startTimes が無い`);
+        }
+      }
+    }
+
+    expect(
+      bad,
+      `timeSlots の型が不正:\n${bad.join('\n')}\n` +
+        '施設詳細ページのフィルタで黙って非表示になるため、{ label, startTimes[] } に揃えること。'
+    ).toEqual([]);
+  });
+
+  it('startTimes は HH:MM 形式', () => {
+    const bad: string[] = [];
+    for (const f of facilities) {
+      if (!Array.isArray(f.timeSlots)) continue;
+      for (const group of f.timeSlots) {
+        if (!Array.isArray(group?.startTimes)) continue;
+        for (const t of group.startTimes) {
+          if (!/^\d{1,2}:\d{2}$/.test(t)) bad.push(`${f.id}: "${t}"`);
+        }
+      }
+    }
+    expect(bad, `startTimes の形式が不正:\n${bad.join('\n')}`).toEqual([]);
+  });
+
+  it('slotType が fixed なら timeSlots がある（既知の例外を除く）', () => {
+    // id=2 KUDOCHI銀座 は24時間営業で枠情報を未取得。取得できたら例外から外す
+    const KNOWN_FIXED_WITHOUT_SLOTS = new Set([2]);
+    const bad = facilities
+      .filter((f) => f.slotType === 'fixed' && !f.timeSlots && !KNOWN_FIXED_WITHOUT_SLOTS.has(f.id))
+      .map((f) => `${f.id} ${f.name}`);
+    expect(bad).toEqual([]);
+  });
+});
