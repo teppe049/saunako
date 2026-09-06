@@ -31,7 +31,7 @@
 
 **Token name**: `saunako-email-routing`
 
-**Permissions**（4行追加する）
+**Permissions**（5行追加する）
 
 | スコープ | 項目 | 権限 |
 |---|---|---|
@@ -39,11 +39,15 @@
 | Zone | Email Routing Rules | Edit |
 | Zone | Zone | Read |
 | Zone | DNS | Edit |
+| Zone | Zone Settings | Edit |
 
-**`Zone : DNS : Edit` は必須**（2026-09-06に実測で判明）。
-Email Routing の設定取得（`GET /zones/{id}/email/routing`）と有効化が
-MX・SPFレコードを書き込むため、これが無いと `403 / 10000: Authentication error`
-になる。3つだけでは足りない。
+**下の2つを忘れやすい**（2026-09-06に実測で判明）。
+
+- `Zone : DNS : Edit` — 有効化時にMX・SPFを書き込むため
+- `Zone : Zone Settings : Edit` — **Email Routing には設定用の独立した権限グループが無く、汎用の Zone Settings を使う**。`Email Routing Rules` はルール専用で、`GET /zones/{id}/email/routing`（設定取得）や有効化はカバーしない
+
+どちらかが欠けると `403 / 10000: Authentication error` になる。
+ルール一覧は取れるのに設定取得だけ失敗する場合は Zone Settings が原因。
 
 **Account Resources**: Include → 個人アカウントのみ選ぶ
 （「株式会社SaunaTrip」は絶対に含めない）

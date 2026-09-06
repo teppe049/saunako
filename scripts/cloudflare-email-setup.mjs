@@ -212,32 +212,38 @@ async function cmdDoctor() {
   console.log("");
 
   const checks = [
-    ["Zone : Zone : Read", `/zones/${zoneId}`],
-    ["Zone : DNS : Edit", `/zones/${zoneId}/dns_records?per_page=1`],
-    ["Email Routing 設定の取得", `/zones/${zoneId}/email/routing`],
-    ["Zone : Email Routing Rules : Edit", `/zones/${zoneId}/email/routing/rules`],
-    ["Account : Email Routing Addresses : Edit", `/accounts/${accountId}/email/routing/addresses`],
+    ["Zone : Zone : Read", `/zones/${zoneId}`, null],
+    ["Zone : DNS : Edit", `/zones/${zoneId}/dns_records?per_page=1`, "Zone : DNS : Edit"],
+    ["Zone : Zone Settings : Edit", `/zones/${zoneId}/email/routing`, "Zone : Zone Settings : Edit"],
+    ["Zone : Email Routing Rules : Edit", `/zones/${zoneId}/email/routing/rules`, "Zone : Email Routing Rules : Edit"],
+    ["Account : Email Routing Addresses : Edit", `/accounts/${accountId}/email/routing/addresses`, "Account : Email Routing Addresses : Edit"],
   ];
 
-  let missing = 0;
-  for (const [label, p] of checks) {
+  const missing = [];
+  for (const [label, p, permName] of checks) {
     try {
       await cf("GET", p);
       console.log(`  OK    ${label}`);
     } catch (e) {
-      missing++;
       console.log(`  NG    ${label}`);
       console.log(`        ${e.message.split("->").pop().trim()}`);
+      if (permName) missing.push(permName);
     }
   }
 
-  if (missing) {
+  if (missing.length) {
     console.log("");
-    console.log("不足している権限をトークンに追加してください（作り直し不要・Editで足せる）:");
+    console.log("不足している権限（作り直し不要・トークンのEditで足せる）:");
+    for (const m of missing) console.log(`  - ${m}`);
+    console.log("");
     console.log("  https://dash.cloudflare.com/profile/api-tokens");
     console.log("");
-    console.log("※ Email Routing の設定取得と有効化は MX/SPF を書き込むため");
-    console.log("   Zone : DNS : Edit が必須（2026-09-06に実測）");
+    console.log("※ Email Routing の設定取得・有効化は独立した権限グループが無く、");
+    console.log("   汎用の Zone Settings を使う（2026-09-06に実測）。");
+    console.log("   有効化はMX/SPFを書き込むため Read ではなく Edit が要る。");
+  } else {
+    console.log("");
+    console.log("すべて揃っています。次は add-dest から進めてください。");
   }
 }
 
