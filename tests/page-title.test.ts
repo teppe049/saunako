@@ -40,7 +40,7 @@ describe('ページタイトル', () => {
 
       for (const file of htmlFiles) {
         const html = fs.readFileSync(file, 'utf-8');
-        const m = html.match(/<title>(.*?)<\/title>/s);
+        const m = html.match(/<title>([\s\S]*?)<\/title>/);
         if (!m) continue;
 
         const title = m[1];
@@ -68,7 +68,7 @@ describe('ページタイトル', () => {
 
     for (const file of htmlFiles) {
       const html = fs.readFileSync(file, 'utf-8');
-      const m = html.match(/<title>(.*?)<\/title>/s);
+      const m = html.match(/<title>([\s\S]*?)<\/title>/);
       if (!m || m[1].trim() === '') {
         empty.push(path.relative(APP_DIR, file));
       }
