@@ -18,6 +18,9 @@ const OUTPUT_DIR = path.join(ROOT, "public", "facilities");
 const QUALITY = 80;
 const CONCURRENCY = 2;
 const TIMEOUT_MS = 60000;
+// 詳細ページのギャラリーが最大表示するサイズ。これを超える解像度は配信コストの無駄。
+// 既存画像の是正は scripts/resize-oversized-images.mjs を使う。
+const MAX_WIDTH = 1600;
 
 async function downloadImage(url) {
   const controller = new AbortController();
@@ -39,7 +42,12 @@ async function downloadImage(url) {
 }
 
 async function convertToWebP(buffer, outputPath) {
-  await sharp(buffer).webp({ quality: QUALITY }).toFile(outputPath);
+  // 原寸のまま保存すると6000px超の画像が配信されモバイルのLCPに直撃するため、
+  // 詳細ページのギャラリー表示に必要な幅（Retina考慮で1600px）に抑える。
+  await sharp(buffer)
+    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: QUALITY })
+    .toFile(outputPath);
 }
 
 async function processImage(facilityId, index, url) {
