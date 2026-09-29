@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import { getAllFacilities } from '@/lib/facilities';
+import OwnerBadgeEmbed from '@/components/OwnerBadgeEmbed';
 
 export const metadata: Metadata = {
   // absolute 指定。template（%s | サウナ子）に通すと二重化する（Issue #167）
@@ -128,6 +129,23 @@ export default function ForOwnersPage() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Badge */}
+        <section className="mb-10">
+          <h2 className="text-lg font-bold text-text-primary mb-4">掲載バッジ</h2>
+          <div className="text-sm text-text-secondary leading-relaxed space-y-2 mb-5">
+            <p>
+              サウナ子に掲載中の施設は、公式サイトに「掲載中」バッジを貼れるよ。
+              クリックすると、その施設のサウナ子ページに飛ぶ仕組みだよ。
+            </p>
+            <p>
+              施設IDは、サウナ子の施設ページのURL末尾の数字だよ。
+              たとえば https://www.saunako.jp/facilities/123 なら「123」だね。
+              IDを入れると、下のコードが自分の施設用に変わるよ。
+            </p>
+          </div>
+          <OwnerBadgeEmbed />
         </section>
 
         {/* FAQ */}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 160 48" role="img" aria-label="サウナ子に掲載中">
+  <title>サウナ子に掲載中</title>
+  <rect x="0.75" y="0.75" width="158.5" height="46.5" rx="10" fill="#1A1A1A" stroke="#E85A4F" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="15" fill="#E85A4F"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round">
+    <path d="M18 29c-2-3 2-4 0-7s2-4 0-6"/>
+    <path d="M24 29c-2-3 2-4 0-7s2-4 0-6"/>
+    <path d="M30 29c-2-3 2-4 0-7s2-4 0-6"/>
+  </g>
+  <text x="46" y="22" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">サウナ子に掲載中</text>
+  <text x="46" y="37" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#D1D5DB">saunako.jp</text>
+</svg>
