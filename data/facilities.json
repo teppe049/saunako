@@ -6081,7 +6081,7 @@
     "prefecture": "tokyo",
     "prefectureLabel": "東京都",
     "city": "江東区",
-    "area": "上野・浅草",
+    "area": "銀座・築地",
     "address": "東京都江東区有明2-1-5 ホテルヴィラフォンテーヌグランド東京有明6F",
     "nearestStation": "有明駅",
     "walkMinutes": 4,
@@ -6245,74 +6245,6 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
-  },
-  {
-    "id": 73,
-    "slug": "hotel-hisoca-ikebukuro",
-    "name": "hotel hisoca ikebukuro",
-    "prefecture": "tokyo",
-    "prefectureLabel": "東京都",
-    "city": "豊島区",
-    "area": "池袋・赤羽",
-    "address": "東京都豊島区西池袋1-10-4",
-    "nearestStation": "池袋駅",
-    "walkMinutes": 2,
-    "priceMin": 19800,
-    "duration": 0,
-    "capacity": 2,
-    "features": {
-      "waterBath": false,
-      "waterBathTemp": null,
-      "selfLoyly": true,
-      "outdoorAir": false,
-      "coupleOk": true,
-      "bluetooth": null,
-      "wifi": true
-    },
-    "businessHours": "チェックイン15:00-チェックアウト11:00",
-    "holidays": "基本無休",
-    "website": "https://hotelhisoca.com/",
-    "phone": "03-6692-8181",
-    "bookingUrl": null,
-    "amenities": [
-      "タオル",
-      "シャンプー",
-      "コンディショナー",
-      "ボディソープ",
-      "ドライヤー"
-    ],
-    "note": null,
-    "images": [
-      "/facilities/73-0.webp",
-      "/facilities/73-1.webp",
-      "/facilities/73-2.webp",
-      "/facilities/73-3.webp"
-    ],
-    "lat": 35.7295,
-    "lng": 139.7082,
-    "description": "池袋駅西口から徒歩2分、全32室にプライベートサウナを完備したデザインホテル。ドライサウナ10室とミストサウナ21室があり、スイートルームには両方を設置。セルフロウリュ対応で、サウナハットや白樺オイルの貸出プランも用意。",
-    "saunakoCommentShort": "全室サウナ付きの池袋デザインホテル！",
-    "saunakoCommentLong": "池袋駅すぐのホテルで全室サウナ付きってすごくない？ドライサウナかミストサウナか選べるし、サウナエンジョイプランを付ければサウナハットに白樺オイルまで借りられるの。カップルでサウナステイしたい人にぴったりだよ！",
-    "updatedAt": "2026-02-08",
-    "plans": [
-      {
-        "name": "ドライサウナルーム 宿泊 2名",
-        "price": 19800,
-        "duration": 0,
-        "capacity": 2
-      },
-      {
-        "name": "ミストサウナルーム 宿泊 2名",
-        "price": 26700,
-        "duration": 0,
-        "capacity": 2
-      }
-    ],
-    "timeSlots": null,
-    "openedAt": null,
-    "closedAt": null,
-    "seoTitle": "hotel hisoca｜池袋の全室サウナ付きデザインホテル 19,800円〜 | サウナ子",
     "slotType": "free"
   },
   {

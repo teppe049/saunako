@@ -319,10 +319,11 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   tokyo: [
     { slug: 'roppongi-azabu', label: '六本木・麻布', cities: ['港区'] },
     { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', cities: ['新宿区', '千代田区'] },
-    { slug: 'ginza-tsukiji', label: '銀座・築地', cities: ['中央区'] },
+    // 江東区（有明）は上野・浅草より銀座・築地（湾岸側）に近いため、こちらに含める（2026-09-30）
+    { slug: 'ginza-tsukiji', label: '銀座・築地', cities: ['中央区', '江東区'] },
     { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', cities: ['渋谷区', '目黒区'] },
     { slug: 'shimokitazawa-setagaya', label: '下北沢・世田谷', cities: ['世田谷区', '杉並区', '中野区'] },
-    { slug: 'ueno-asakusa', label: '上野・浅草', cities: ['台東区', '墨田区', '文京区', '江東区'] },
+    { slug: 'ueno-asakusa', label: '上野・浅草', cities: ['台東区', '墨田区', '文京区'] },
     { slug: 'ikebukuro', label: '池袋・赤羽', cities: ['北区', '豊島区'] },
     { slug: 'shinagawa', label: '品川', cities: ['品川区'] },
     { slug: 'tama', label: '多摩', cities: ['小金井市'] },
@@ -533,11 +534,11 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
   tokyo: {
     areaGuides: [
       { slug: 'shinjuku-kagurazaka', label: '新宿・神楽坂', description: '9施設・2,500円〜。歌舞伎町タワーなど駅チカで仕事帰りにサクッと。' },
-      { slug: 'ikebukuro', label: '池袋・赤羽', description: '4施設・3,300円〜。うち3施設がカップルOK。北エリアの穴場。' },
+      { slug: 'ikebukuro', label: '池袋・赤羽', description: '3施設・3,300円〜。うち2施設がカップルOK。北エリアの穴場。' },
       { slug: 'shibuya-ebisu-daikanyama', label: '渋谷・恵比寿・代官山', description: '8施設・3,300円〜。外気浴付きの上質系が多くデート向き。' },
       { slug: 'roppongi-azabu', label: '六本木・麻布', description: '17施設と都内最多。赤坂含むラグジュアリー志向の激戦区。' },
-      { slug: 'ginza-tsukiji', label: '銀座・築地', description: '4施設・3,490円〜。24時間営業や深夜利用できる店も。' },
-      { slug: 'ueno-asakusa', label: '上野・浅草', description: '10施設・4,000円〜。下町の貸切サウナ。観光ついでにも。' },
+      { slug: 'ginza-tsukiji', label: '銀座・築地', description: '5施設・3,490円〜。24時間営業や深夜利用できる店も。' },
+      { slug: 'ueno-asakusa', label: '上野・浅草', description: '9施設・4,000円〜。下町の貸切サウナ。観光ついでにも。' },
       { slug: 'shimokitazawa-setagaya', label: '下北沢・世田谷', description: '10施設・990円〜と都内最安クラス。ソロ活・コスパ重視ならここ。' },
     ],
     extraFaqs: [
@@ -555,7 +556,7 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
       },
       {
         question: '東京の個室サウナの料金相場はエリアでどのくらい違う？',
-        answer: 'エリアによって倍以上の差があります。各施設の最短利用プランで比べると、下北沢・世田谷が平均4,479円と最も手頃で、銀座・築地が5,585円、池袋・赤羽が5,700円、渋谷・恵比寿・代官山が10,588円、六本木・麻布は12,137円と高価格帯です。予算重視なら世田谷・銀座・池袋、設備や雰囲気重視なら渋谷・六本木を選ぶと失敗しません。',
+        answer: 'エリアによって倍以上の差があります。各施設の最短利用プランで比べると、下北沢・世田谷が平均4,479円と最も手頃で、銀座・築地が5,668円、池袋・赤羽が5,700円、渋谷・恵比寿・代官山が10,588円、六本木・麻布は12,137円と高価格帯です。予算重視なら世田谷・銀座・池袋、設備や雰囲気重視なら渋谷・六本木を選ぶと失敗しません。',
       },
     ],
     tipsComment: '💡 東京はエリアで色が違うの。六本木・麻布が17施設で都内最多、下北沢・世田谷は990円〜入れてコスパ最強、渋谷・恵比寿は外気浴付きのデート向き、新宿・池袋は駅チカで仕事帰り向き。予算重視なら世田谷、雰囲気重視なら渋谷から見てみて！',
