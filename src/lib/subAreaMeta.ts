@@ -82,7 +82,7 @@ export const SUB_AREA_META: Record<string, { title: string; description: string 
   },
   'tokyo/shimokitazawa-setagaya': {
     title: '下北沢・世田谷の個室サウナ10選｜都内最安990円〜のソロサウナを比較 | サウナ子',
-    description: '下北沢・世田谷・杉並・中野の個室サウナ・プライベートサウナ全10施設を徹底比較。Sauna3(サウナサン)、HUBHUB 下北沢など都内最安クラスが集まるエリア。990円〜／平均4,359円とコスパ抜群。ソロサウナ・カップル利用OK4施設の料金・予約方法・口コミを掲載。',
+    description: '下北沢・世田谷・杉並・中野の個室サウナ・プライベートサウナ全10施設を徹底比較。Sauna3(サウナサン)、HUBHUB 下北沢など都内最安クラスが集まるエリア。990円〜／平均4,479円とコスパ抜群。ソロサウナ・カップル利用OK4施設の料金・予約方法・口コミを掲載。',
   },
   'tokyo/ginza-tsukiji': {
     title: '銀座・築地の個室サウナ4選｜KUDOCHI銀座・24時間営業を比較 | サウナ子',
