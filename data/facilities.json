@@ -26988,84 +26988,6 @@
     "slotType": "free"
   },
   {
-    "id": 360,
-    "slug": "pspo-asanami",
-    "name": "Private Sauna 浅海店",
-    "prefecture": "ehime",
-    "prefectureLabel": "愛媛県",
-    "city": "松山市",
-    "area": "松山",
-    "address": "愛媛県松山市浅海本谷甲54-1",
-    "nearestStation": "JR浅海駅",
-    "walkMinutes": 5,
-    "priceMin": 4400,
-    "duration": 120,
-    "capacity": 4,
-    "features": {
-      "waterBath": true,
-      "waterBathTemp": null,
-      "selfLoyly": true,
-      "outdoorAir": true,
-      "coupleOk": true,
-      "bluetooth": null,
-      "wifi": true
-    },
-    "businessHours": "10:00-15:00 / 17:00-23:00（完全予約制）",
-    "holidays": "基本無休（天候により休止あり）",
-    "website": "https://pspo.jp/asanami/",
-    "phone": null,
-    "bookingUrl": "https://pspo24.hacomono.jp/reserve/schedule/154/77",
-    "amenities": [
-      "タオル",
-      "シャンプー",
-      "ボディソープ",
-      "フリードリンク",
-      "マッサージチェア",
-      "Nintendo Switch",
-      "プロジェクター"
-    ],
-    "note": "1日2組限定。海辺のバレルサウナ。ヒノキ風呂あり。カフェ24時間営業。Refaドライヤー・シャワーヘッド完備",
-    "images": [
-      "/facilities/360-0.webp",
-      "/facilities/360-1.webp",
-      "/facilities/360-2.webp"
-    ],
-    "lat": 33.9826,
-    "lng": 132.878,
-    "description": "松山市浅海の海辺に佇む1日2組限定のプライベートサウナ。バレルサウナとヒノキ風呂を備え、オーシャンビューの外気浴が楽しめる。フリードリンク、マッサージチェア、Nintendo Switch、プロジェクターなど充実のアメニティで長時間滞在も快適。",
-    "saunakoCommentShort": "海辺の贅沢プライベート空間！",
-    "saunakoCommentLong": "海のすぐそばでバレルサウナに入れるなんて贅沢すぎるよね！1日2組限定だから本当にプライベート感が半端ないの。ヒノキ風呂もあるし、フリードリンクにNintendo Switchにプロジェクターまであるから、サウナ以外の時間も充実しまくりだよ。",
-    "updatedAt": "2026-03-02",
-    "openedAt": null,
-    "closedAt": null,
-    "plans": [
-      {
-        "name": "昼プラン 10:00-15:00",
-        "price": 4400,
-        "duration": 120,
-        "capacity": 4
-      },
-      {
-        "name": "夜プラン 17:00-23:00",
-        "price": 5500,
-        "duration": 120,
-        "capacity": 4
-      }
-    ],
-    "timeSlots": [
-      {
-        "label": "営業時間帯",
-        "startTimes": [
-          "10:00",
-          "17:00"
-        ],
-        "note": "10:00~15:00 / 17:00~23:00 の間で2時間利用"
-      }
-    ],
-    "slotType": "fixed",
-    "priceMax": 5500
-  },
-  {
     "id": 361,
     "slug": "teiregi-tent-sauna-yua",
     "name": "ていれぎテントサウナ 湯婀",
@@ -36583,5 +36505,76 @@
       }
     ],
     "timeSlots": null
+  },
+  {
+    "id": 498,
+    "slug": "sauna-giraffe-nakasu",
+    "name": "SAUNA Giraffe 中洲",
+    "prefecture": "fukuoka",
+    "prefectureLabel": "福岡県",
+    "city": "福岡市中央区",
+    "area": "福岡市（天神・中洲）",
+    "address": "福岡市中央区春吉2-18-25",
+    "nearestStation": "渡辺通駅",
+    "walkMinutes": 7,
+    "priceMin": 5500,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": true,
+      "wifi": true
+    },
+    "businessHours": "8:30〜翌3:40（8枠制）",
+    "holidays": "不明",
+    "website": "https://sauna-giraffe.com/nakasu/",
+    "phone": "",
+    "bookingUrl": "https://reserva.be/giraffe_minamitenjin?ctg_no=6eeJwzMjWysAQAAxIBCw",
+    "amenities": [
+      "サウナマット",
+      "フェイスタオル",
+      "バスタオル",
+      "ドライヤー",
+      "ヘアアイロン",
+      "シャンプー類",
+      "スキンケア類",
+      "ウォーターサーバー"
+    ],
+    "note": "2026年9月19日オープン。微睡の間（横になれるサウナ）と水心の間（独立した水風呂付き）の2室で、どちらも最大4名・男女利用OK・タトゥーOK。水風呂は天然地下水「澄心源水」。2名以上は1名追加ごとに+3,300円（料金は1名分）。無人運営で、予約後に入室パスコードが届く。支払いはクレジットカードのみ。水風呂の温度とセルフロウリュの有無は公式ページに記載なし。",
+    "images": [
+      "/facilities/498-0.webp",
+      "/facilities/498-1.webp",
+      "/facilities/498-2.webp",
+      "/facilities/498-3.webp"
+    ],
+    "lat": 33.5859064,
+    "lng": 130.4081259,
+    "description": "福岡・春吉エリアにある完全個室の貸切サウナ。2026年9月オープンで、横になれる「微睡の間」と独立した水風呂付きの「水心の間」の2室。天然地下水「澄心源水」の水風呂、METOS製ヒーター。最大4名・男女利用OK・タトゥーOK。渡辺通駅から徒歩約7分。",
+    "saunakoCommentShort": "9月オープン！天然地下水の水風呂が自慢だよ!",
+    "saunakoCommentLong": "福岡・春吉に2026年9月にオープンしたばかりの完全個室サウナだよ！横になってゆったり蒸される「微睡の間」と、独立した水風呂がある「水心の間」から選べるの。水風呂は春吉の天然地下水「澄心源水」を使っているよ。最大4名で男女利用OK、タトゥーもOKなのが嬉しいね！",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
+    "plans": [
+      {
+        "name": "90分 1名（8:30〜10:00の枠）",
+        "price": 5500,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "120分 1名（10:30〜）",
+        "price": 8800,
+        "duration": 120,
+        "capacity": 1
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": "2026-09-19",
+    "closedAt": null,
+    "slotType": "free"
   }
 ]
