@@ -104,7 +104,8 @@
     "description": "銀座駅から徒歩5分、24時間営業のプライベートサウナ。水風呂・セルフロウリュ完備で、6,000円から90分の本格サウナ体験ができる。仕事終わりや深夜帯でも気軽に立ち寄れるアクセスの良さが魅力。",
     "saunakoCommentShort": "銀座駅近で24時間営業が嬉しい！",
     "saunakoCommentLong": "銀座駅から徒歩5分でアクセス抜群！24時間営業だから仕事終わりや深夜でも利用できるのがポイントだよ。6000円からで90分たっぷり楽しめるし、水風呂もセルフロウリュもあるから本格的なサウナ体験ができるよ！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "スタンダード 90分 2名",
@@ -120,13 +121,13 @@
       },
       {
         "name": "プレミアムVIP星空 120分 3名",
-        "price": 15000,
+        "price": 15800,
         "duration": 120,
         "capacity": 3
       },
       {
         "name": "プラチナVIP繭 120分 6名",
-        "price": 26000,
+        "price": 26800,
         "duration": 120,
         "capacity": 6
       }
@@ -288,7 +289,8 @@
     "description": "馬喰横山駅から徒歩わずか1分の好立地に構えるプライベートサウナ。15度に設定された水風呂とセルフロウリュで本格的なサウナ体験を提供。最大6名まで利用可能で、グループでの貸切にも向いている。",
     "saunakoCommentShort": "駅徒歩1分！15度の水風呂が気持ちいい",
     "saunakoCommentLong": "馬喰横山駅から徒歩1分という超駅チカが最高だよ！水風呂は15度でキリッと冷たくて、サウナーにはたまらない温度設定。6人まで入れるから仲間とワイワイ楽しむのもいいし、セルフロウリュで自分流のサウナを堪能しちゃおう！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "サンカク 90分 2名",
@@ -366,7 +368,8 @@
     "description": "KUDOCHI sauna（クドチサウナ）赤坂店は赤坂見附駅から徒歩1分、24時間営業のプライベートサウナ。セルフロウリュ対応でカップルでの利用も可能。2時間8,000円からの料金設定で、最大6名まで入れるゆったりした空間が特徴。",
     "saunakoCommentShort": "赤坂見附駅1分！カップルOKが嬉しい",
     "saunakoCommentLong": "赤坂見附駅から徒歩1分でアクセス最高！24時間営業でいつでも行けるし、カップルOKだからデートにもおすすめだよ。2時間たっぷり過ごせて、セルフロウリュで自分好みの蒸し加減を楽しめるの！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "Silent Sanctuary 120分 2名",
@@ -376,31 +379,31 @@
       },
       {
         "name": "Linden Tree 120分 3名",
-        "price": 15000,
+        "price": 15800,
         "duration": 120,
         "capacity": 3
       },
       {
         "name": "Blue Mosque 120分 4名",
-        "price": 18000,
+        "price": 18800,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "Arabian Nights 120分 4名",
-        "price": 18000,
+        "price": 18800,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "Holy Temple 120分 4名",
-        "price": 18000,
+        "price": 18800,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "Moroccan Palace 120分 6名",
-        "price": 28000,
+        "price": 28800,
         "duration": 120,
         "capacity": 6
       }
@@ -1014,7 +1017,8 @@
     "description": "麻布十番駅から徒歩3分、5,000円から60分利用できるリーズナブルな個室サウナ。水風呂・セルフロウリュ完備でカップル利用にも対応。ショートプランがあり、気軽にプライベートサウナを体験できる。",
     "saunakoCommentShort": "5000円から！カップルにおすすめ",
     "saunakoCommentLong": "麻布十番で5000円からリーズナブルに楽しめるプライベートサウナだよ！カップルOKだから二人でゆっくり過ごすのにぴったり。60分のショートプランがあるから、サクッとリフレッシュしたい時にもおすすめかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "シングル 60分 1名",
@@ -1244,9 +1248,9 @@
     "address": "東京都港区南青山",
     "nearestStation": "外苑前駅",
     "walkMinutes": 3,
-    "priceMin": 4000,
+    "priceMin": 4800,
     "duration": 70,
-    "capacity": 4,
+    "capacity": 3,
     "features": {
       "waterBath": true,
       "waterBathTemp": null,
@@ -1266,7 +1270,7 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": null,
+    "note": "男女利用は水着着用で可。料金は公式サイトの最安表記（〜）。",
     "images": [
       "/facilities/15-0.webp",
       "/facilities/15-1.webp",
@@ -1278,37 +1282,38 @@
     "description": "外苑前駅から徒歩3分、南青山に位置するプライベートサウナ。Bluetooth・WiFi両対応で、カップルでの利用も可能。朝7時から翌5時までの長時間営業で、水風呂とセルフロウリュを備えた充実の設備が揃う。",
     "saunakoCommentShort": "南青山でBluetooth・WiFi完備！",
     "saunakoCommentLong": "おしゃれな南青山エリアにあるプライベートサウナだよ！BluetoothとWiFi両方完備で、好きな音楽を聴きながら快適に過ごせる。朝7時から翌5時まで営業してるから、いつでも行けるのが嬉しい。カップルOKでデートにも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "ソロRoom1 60分 1名",
-        "price": 4000,
-        "duration": 60,
+        "name": "ソロRoom1 70分 1名",
+        "price": 4800,
+        "duration": 70,
         "capacity": 1
       },
       {
-        "name": "ソロRoom2 60分 1名",
-        "price": 5400,
-        "duration": 60,
+        "name": "ソロRoom2 70分 1名",
+        "price": 4800,
+        "duration": 70,
         "capacity": 1
       },
       {
-        "name": "スタンダードRoom4 80分 2名",
-        "price": 8000,
-        "duration": 80,
+        "name": "Room3 90分 2名",
+        "price": 10000,
+        "duration": 90,
         "capacity": 2
       },
       {
-        "name": "グループRoom4 80分 4名",
-        "price": 12000,
-        "duration": 80,
-        "capacity": 4
+        "name": "Room4 90分 1〜3名",
+        "price": 14000,
+        "duration": 90,
+        "capacity": 3
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "Sway｜南青山の朝活個室サウナ 4,000円〜 口コミ | サウナ子",
+    "seoTitle": "Sway｜南青山の朝活個室サウナ 4,800円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -3791,8 +3796,8 @@
     "address": "東京都中央区築地3-17-10",
     "nearestStation": "築地駅",
     "walkMinutes": 3,
-    "priceMin": 3490,
-    "duration": 100,
+    "priceMin": 12000,
+    "duration": 110,
     "capacity": 2,
     "features": {
       "waterBath": true,
@@ -3813,7 +3818,7 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "水風呂温度自由設定可",
+    "note": "貸切以外の個人利用は共同サウナ（最大5名・男性専用、女性は水曜のみ）のため、掲載は貸切料金のみ。カップルは貸切なら利用可。水風呂温度は8〜45℃で自由設定。予約は10/24まで公式予約ページ、以降はバンホテル公式サイト。",
     "images": [
       "/facilities/44-0.webp",
       "/facilities/44-1.webp",
@@ -3825,25 +3830,26 @@
     "description": "築地駅から徒歩3分、世界初の岩盤浴×サウナ融合施設。水風呂の温度を8度から45度まで自由に設定できるのが最大の特徴。朝7時からオープンし、3,490円から100分利用可能。カップルOKでセルフロウリュにも対応。",
     "saunakoCommentShort": "水風呂8〜45度まで自由自在！築地の岩盤浴サウナ",
     "saunakoCommentLong": "築地にある世界初の岩盤浴×サウナ融合施設だよ！水風呂の温度を8度から45度まで自由に設定できるのがすごい。朝7時からオープンしてるから朝サウナにもぴったり。3,490円からと築地エリアではコスパ良しかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "通常 100分 1名",
-        "price": 3490,
-        "duration": 100,
-        "capacity": 1
+        "name": "貸切 110分 平日",
+        "price": 12000,
+        "duration": 110,
+        "capacity": 6
       },
       {
-        "name": "貸切 120分 6名",
-        "price": 14950,
-        "duration": 120,
+        "name": "貸切 110分 土日・夜",
+        "price": 15000,
+        "duration": 110,
         "capacity": 6
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "BAN SAUNA GINZA｜銀座の岩盤浴×サウナ 3,490円〜 口コミ | サウナ子",
+    "seoTitle": "BAN SAUNA GINZA｜銀座の岩盤浴×サウナ 貸切12,000円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -4495,7 +4501,8 @@
     "description": "王子駅から徒歩2分、サウナとグロッサリーが一体になったユニークな複合施設。チラー冷却の水風呂とBluetoothスピーカーを完備し、3,300円から60分利用できる。朝8時からオープンで朝活にも対応。",
     "saunakoCommentShort": "王子駅2分！3300円でチラー水風呂",
     "saunakoCommentLong": "王子駅から徒歩2分、サウナとグロッサリーが一体になったユニークな施設だよ！3,300円から60分利用できて、チラー冷却の水風呂もあるからしっかりクールダウンできる。Bluetoothスピーカーも完備で快適にととのえるかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "通常 60分 1名",
@@ -6103,7 +6110,7 @@
     "holidays": "基本無休",
     "website": "https://www.hvf.jp/ariake-grand/spa3.html",
     "phone": "03-6426-0505",
-    "bookingUrl": null,
+    "bookingUrl": "https://kazokuyu-ariake.resv.jp/direct_calendar.php?direct_id=29",
     "amenities": [
       "タオル",
       "バスローブ",
@@ -6126,7 +6133,8 @@
     "description": "有明ガーデン内のホテル6階にある日帰り利用可能な完全個室サウナ。90度のサウナと15度の水風呂、セルフロウリュを完備し、インフィニティチェアとバスローブで優雅にととのえる。早朝6時から営業しており、朝活サウナにも対応。",
     "saunakoCommentShort": "有明の高級ホテルで日帰り個室サウナ体験！",
     "saunakoCommentLong": "有明ガーデンのホテル内にある個室サウナで、宿泊しなくても日帰りで使えるよ！バスローブにインフィニティチェア完備で、まるでリゾート気分。朝6時から開いてるから、朝サウナしてそのままお出かけなんてのもいいかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "90分 1名 平日",
@@ -7191,15 +7199,15 @@
     "address": "東京都新宿区歌舞伎町1-29-1 東急歌舞伎町タワー5F",
     "nearestStation": "新宿駅",
     "walkMinutes": 5,
-    "priceMin": 9000,
-    "duration": 60,
+    "priceMin": 13500,
+    "duration": 90,
     "capacity": 2,
     "features": {
       "waterBath": true,
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": true,
-      "coupleOk": true,
+      "coupleOk": false,
       "bluetooth": true,
       "wifi": null
     },
@@ -7207,14 +7215,14 @@
     "holidays": "不定休",
     "website": "https://xplace.tokyo/sauna/",
     "phone": "080-4406-5880",
-    "bookingUrl": null,
+    "bookingUrl": "https://www.tablecheck.com/ja/prussauna-kabukicho/reserve/landing",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ",
       "アロマオイル"
     ],
-    "note": null,
+    "note": "男女同室での利用は不可。週末は2名部屋+1,000円・4名部屋+2,000円。",
     "images": [
       "/facilities/84-0.webp",
       "/facilities/84-1.webp",
@@ -7226,14 +7234,9 @@
     "description": "東急歌舞伎町タワー5階の和をコンセプトにした個室サウナ。国産ヒノキの水風呂を全室に完備し、セルフロウリュマシーンで体感100度のサウナが楽しめる。整いテラスからはゴジラと目が合う絶景も。",
     "saunakoCommentShort": "歌舞伎町タワーで和の個室サウナ！",
     "saunakoCommentLong": "新宿ど真ん中なのに本格的な個室サウナが楽しめるの！ヒノキの水風呂が気持ちいいし、ととのいテラスでゴジラと目が合うのはここだけの体験だよ。Bluetoothで好きな音楽もかけられるから自分だけの空間を満喫して！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
-      {
-        "name": "2名部屋 60分",
-        "price": 9000,
-        "duration": 60,
-        "capacity": 2
-      },
       {
         "name": "2名部屋 90分",
         "price": 13500,
@@ -7248,13 +7251,13 @@
       },
       {
         "name": "4名部屋 90分",
-        "price": 20000,
+        "price": 25000,
         "duration": 90,
         "capacity": 4
       },
       {
         "name": "4名部屋 120分",
-        "price": 25000,
+        "price": 30000,
         "duration": 120,
         "capacity": 4
       }
@@ -7262,7 +7265,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "XPLACE｜新宿のヒノキ水風呂付き個室サウナ 9,000円〜 口コミ | サウナ子",
+    "seoTitle": "XPLACE｜新宿のヒノキ水風呂付き個室サウナ 13,500円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -7276,7 +7279,7 @@
     "address": "東京都新宿区百人町2-20-24",
     "nearestStation": "新大久保駅",
     "walkMinutes": 2,
-    "priceMin": 6900,
+    "priceMin": 9800,
     "duration": 90,
     "capacity": 2,
     "features": {
@@ -7292,14 +7295,14 @@
     "holidays": "不定休",
     "website": "https://etoehotel.com/",
     "phone": "050-1726-0426",
-    "bookingUrl": null,
+    "bookingUrl": "https://book.etoehotel.com/",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ",
       "アロマオイル"
     ],
-    "note": null,
+    "note": "宿泊なしで日帰り予約可（朝サウナ60分は宿泊者専用）。他の部屋は10,800円（2名）・11,800円（3名）・16,800円（4名）〜。男女利用可（水着レンタル有料）。",
     "images": [
       "/facilities/85-0.webp",
       "/facilities/85-1.webp",
@@ -7311,11 +7314,12 @@
     "description": "新大久保駅徒歩2分のプライベートサウナ付きホテル。15〜17度の水風呂とアロマロウリュを備えたサウナスイートは45m2のゆったり空間。カップルや友人同士でのデイユース利用にも対応。",
     "saunakoCommentShort": "新大久保のおしゃれサウナホテル！",
     "saunakoCommentLong": "2025年春にオープンしたばかりの新しいサウナホテルだよ！サウナスイートは広々45平米で、アロマロウリュと水風呂の動線もバッチリ。カップルでデイユースもできるし、そのまま泊まれるのも嬉しいポイント！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "デイユース 90分 2名",
-        "price": 6900,
+        "name": "プライベートサウナ fuuu 日帰り 90分 2名",
+        "price": 9800,
         "duration": 90,
         "capacity": 2
       }
@@ -7323,7 +7327,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "etoe sauna｜新大久保のサウナスイートホテル 6,900円〜 口コミ | サウナ子",
+    "seoTitle": "etoe sauna｜新大久保のサウナスイートホテル 9,800円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -8171,7 +8175,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "24時間",
+    "businessHours": "10:00〜20:30（90分枠・10/13/15/17/19時開始）",
     "holidays": "不定休",
     "website": "https://lite.myaku-sauna.com/",
     "phone": "",
@@ -8183,7 +8187,7 @@
       "ドライヤー",
       "スキンケア（無印良品）"
     ],
-    "note": "脈拍計測システムで「ととのい」を可視化。無人受付（QRコード入室）",
+    "note": "脈拍計測システムで「ととのい」を可視化。無人受付（QRコード入室）。土日祝は別料金。ナイトプランは休止中。",
     "images": [
       "/facilities/95-0.webp",
       "/facilities/95-1.webp",
@@ -8192,10 +8196,11 @@
     ],
     "lat": 35.721264,
     "lng": 139.795082,
-    "description": "浅草エリアにある24時間営業の完全個室サウナ。脈拍計測システムで科学的にととのいを追求できる。水風呂は5℃〜40℃で温度調整可能。セルフロウリュ・外気浴完備で、カップル利用にも対応。無人受付でQRコード入室。",
+    "description": "浅草エリアにある完全予約制の個室サウナ。脈拍計測システムで科学的にととのいを追求できる。水風呂は5℃〜40℃で温度調整可能。セルフロウリュ・外気浴完備で、カップル利用にも対応。無人受付でQRコード入室。",
     "saunakoCommentShort": "脈拍計測で科学的にととのえる!",
-    "saunakoCommentLong": "浅草にある24時間営業のプライベートサウナだよ！脈拍バンドで心拍を測りながら科学的にととのいを追求できるの。水風呂は5℃まで調温できるからキンキン好きにもぴったり。セルフロウリュと外気浴もあって、カップル利用もOKだよ！",
-    "updatedAt": "2026-02-27",
+    "saunakoCommentLong": "浅草にある完全予約制のプライベートサウナだよ！脈拍バンドで心拍を測りながら科学的にととのいを追求できるの。水風呂は5℃まで調温できるからキンキン好きにもぴったり。セルフロウリュと外気浴もあって、カップル利用もOKだよ！",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "デイプラン 90分 3名",
@@ -8207,8 +8212,8 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "脈 MYAKU Lite｜上野の個室サウナ 水風呂5-40℃調温 24時間営業 5,500円〜 | サウナ子",
-    "seoDescription": "PRIVATE SAUNA 脈 MYAKU Lite（ミャクライト）は東京・上野の完全予約制個室サウナ。5,500円〜/90分・24時間営業。水風呂5-40℃自由調温・セルフロウリュ・外気浴付き。独自の脈拍計測システムで最適なととのいをサポート。上野・浅草エリアの個室サウナの口コミ・予約はこちら。",
+    "seoTitle": "脈 MYAKU Lite｜上野の個室サウナ 水風呂5-40℃調温 5,500円〜 | サウナ子",
+    "seoDescription": "PRIVATE SAUNA 脈 MYAKU Lite（ミャクライト）は東京・上野の完全予約制個室サウナ。5,500円〜/90分（予約枠は10〜19時スタート）。水風呂5-40℃自由調温・セルフロウリュ・外気浴付き。独自の脈拍計測システムで最適なととのいをサポート。上野・浅草エリアの個室サウナの口コミ・予約はこちら。",
     "slotType": "free"
   },
   {
@@ -13198,32 +13203,33 @@
     "lat": 34.946249,
     "lng": 137.121042,
     "description": "愛知県岡崎市のプライベートサウナ。西岡崎駅から徒歩3分。完全個室2室を備え、HARVIAストーブによるセルフロウリュが楽しめる。水風呂は15度、Bluetoothスピーカーで好きな音楽を流しながら照明も自由に調整できる。カップル利用OK、水着レンタルありで手ぶら利用可能。",
-    "seoTitle": "エスプラス（S+）｜岡崎の完全個室サウナ 5,000円〜 口コミ・予約 | サウナ子",
+    "seoTitle": "エスプラス（S+）｜岡崎の完全個室サウナ 5,800円〜 口コミ・予約 | サウナ子",
     "saunakoCommentShort": "岡崎の男女OKプライベートサウナ!",
     "saunakoCommentLong": "岡崎にある完全個室のプライベートサウナだよ! HARVIAストーブでセルフロウリュができて、照明もBGMも自分好みにカスタマイズできるの。水風呂は15度で程よく冷えるし、水着レンタルもあるからカップルで手ぶらで行けちゃうのが嬉しいかも!",
-    "updatedAt": "2026-03-12",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
         "name": "平日デイタイム 2時間 1室",
-        "price": 5000,
+        "price": 5800,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "平日ナイト 2時間 1室",
-        "price": 8000,
+        "price": 8800,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "休日デイタイム 2時間 1室",
-        "price": 7000,
+        "price": 7700,
         "duration": 120,
         "capacity": 4
       },
       {
         "name": "休日ナイト 2時間 1室",
-        "price": 11000,
+        "price": 12100,
         "duration": 120,
         "capacity": 4
       }
@@ -18487,9 +18493,9 @@
     "address": "新潟県新潟市中央区西堀前通8番町1527 2F",
     "nearestStation": "新潟駅",
     "walkMinutes": 20,
-    "priceMin": 2400,
+    "priceMin": 4800,
     "duration": 90,
-    "capacity": 1,
+    "capacity": 4,
     "features": {
       "waterBath": false,
       "waterBathTemp": null,
@@ -18499,17 +18505,17 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "10:00〜26:00",
-    "holidays": "不定休",
+    "businessHours": "平日17:00〜翌6:00／土日祝13:00〜翌6:00",
+    "holidays": "木曜",
     "website": "https://hijilijapan.com/",
     "phone": "070-2213-4435",
-    "bookingUrl": null,
+    "bookingUrl": "https://lin.ee/8i9lRzd",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "日本一小さいパブリックサウナ。魚沼杉と安田瓦を使用。毎月第1土曜日はレディースデー。水風呂はなく冷水バケツシャワー",
+    "note": "日本一小さいパブリックサウナで、貸切枠あり（ここでは貸切料金のみ掲載）。深夜貸切100分6,800円もあり。魚沼杉と安田瓦を使用。水風呂はなく冷水バケツシャワー。予約は公式LINE。",
     "images": [
       "/facilities/243-0.webp",
       "/facilities/243-1.webp",
@@ -18521,14 +18527,9 @@
     "description": "新潟市古町エリアにある日本一小さいパブリックサウナ。魚沼産の杉材と安田瓦を使用した新潟らしさ溢れるサウナ室で、セルフロウリュとウォーリュ（壁面ロウリュ）が楽しめる。水風呂はなく冷水バケツシャワーで冷却するスタイル。",
     "saunakoCommentShort": "古町の超コンパクトサウナ、魚沼杉の香りがたまらない！",
     "saunakoCommentLong": "新潟の古町にある日本一小さいって言われてるパブリックサウナだよ！魚沼杉と安田瓦で作られた空間はすごく新潟らしくて素敵。セルフロウリュできるし、壁面にお湯をかけるウォーリュっていう独自のスタイルもあるの。水風呂はないけどバケツシャワーでしっかり冷やせるよ！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
-      {
-        "name": "パブリック 90分 1名",
-        "price": 2400,
-        "duration": 90,
-        "capacity": 1
-      },
       {
         "name": "1名貸切 90分",
         "price": 4800,
@@ -18542,9 +18543,9 @@
         "capacity": 2
       },
       {
-        "name": "貸切部屋 90分 4名",
+        "name": "貸切部屋 120分 4名",
         "price": 8800,
-        "duration": 90,
+        "duration": 120,
         "capacity": 4
       }
     ],
@@ -29420,7 +29421,7 @@
     "address": "東京都目黒区中目黒1-9-18",
     "nearestStation": "中目黒駅",
     "walkMinutes": 6,
-    "priceMin": 12000,
+    "priceMin": 6000,
     "duration": 90,
     "capacity": 3,
     "features": {
@@ -29432,7 +29433,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "8:30〜25:00",
+    "businessHours": "8:00〜翌3:00",
     "holidays": "",
     "website": "https://sauna-kiki.jp/",
     "phone": "",
@@ -29449,7 +29450,7 @@
       "ドライヤー",
       "綿棒"
     ],
-    "note": "天然ハーブ濃霧スチームサウナ。全室チラー付き水風呂完備。水着着用で男女利用OK。3部屋（MEGURI/HODOKE/YUDANE）あり、各部屋コンセプトが異なる。2026年4月オープン予定。",
+    "note": "天然ハーブ濃霧スチームサウナ。全室チラー付き水風呂完備。水着着用で男女利用OK（レンタル水着+600円）。3部屋（MEGURI/HODOKE/YUDANE）あり、各部屋コンセプトが異なる。3名利用は+3,000円。",
     "images": [
       "/facilities/395-0.webp",
       "/facilities/395-1.webp",
@@ -29461,10 +29462,60 @@
     "seoDescription": "SAUNA汽汽（サウナキキ）は中目黒駅徒歩6分の完全個室プライベートサウナ。天然ハーブ濃霧スチームサウナと15〜17℃のチラー付き水風呂を全室完備。最大3名・カップルOK（水着着用）。3つの個室（MEGURI・HODOKE・YUDANE）から選べる。",
     "saunakoCommentShort": "中目黒のハーブ蒸気サウナ！カップルOK",
     "saunakoCommentLong": "中目黒に2026年4月オープンの完全プライベートサウナだよ！天然ハーブの濃霧スチームが最大の特徴で、サウナ室内にシャワーもあるドイツ式クナイプスタイル。全室15〜17℃のチラー付き水風呂完備で、水着着用だからカップルや友達と一緒に楽しめるの！3つの部屋はそれぞれコンセプトが違うから、お気に入りを見つけてね♪",
-    "updatedAt": "2026-03-10",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "openedAt": "2026-04",
     "closedAt": null,
-    "plans": null,
+    "plans": [
+      {
+        "name": "平日 朝割 90分 2名",
+        "price": 6000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "平日 HODOKE デイ 90分 2名",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "平日 HODOKE ナイト 90分 2名",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "平日 MEGURI・YUDANE デイ 120分 2名",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "平日 MEGURI・YUDANE ナイト 120分 2名",
+        "price": 14000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 朝 90分 2名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 デイ 120分 2名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 ナイト 120分 2名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
     "timeSlots": null,
     "seoTitle": "SAUNA汽汽｜中目黒の濃霧スチーム個室サウナ 口コミ・予約 | サウナ子",
     "priceNote": "朝割90分/1〜2名・完全個室",
