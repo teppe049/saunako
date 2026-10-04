@@ -3,6 +3,7 @@
 import { useSyncExternalStore, useCallback } from 'react';
 import { Heart } from 'lucide-react';
 import { subscribe, getSnapshot, getServerSnapshot, toggleFavorite } from '@/lib/favoritesStore';
+import { trackUiClick } from '@/lib/analytics';
 
 interface FavoriteButtonProps {
   facilityId: number;
@@ -17,6 +18,8 @@ export default function FavoriteButton({ facilityId, size = 'sm' }: FavoriteButt
     e.preventDefault();
     e.stopPropagation();
     toggleFavorite(facilityId);
+    // stopPropagation で AnalyticsTracker に届かないため直接送る
+    trackUiClick('favorite_toggle', facilityId);
   }, [facilityId]);
 
   const iconSize = size === 'sm' ? 18 : 22;
@@ -33,8 +36,6 @@ export default function FavoriteButton({ facilityId, size = 'sm' }: FavoriteButt
       } ${isFav ? 'text-saunako' : size === 'sm' ? 'text-white/80 hover:text-white' : 'text-text-tertiary hover:text-saunako'}`}
       style={bgStyle}
       aria-label={isFav ? 'お気に入りから削除' : 'お気に入りに追加'}
-      data-track-click="favorite_toggle"
-      data-track-facility={facilityId}
     >
       <Heart
         size={iconSize}

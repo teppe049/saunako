@@ -4,7 +4,7 @@ import { forwardRef, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
 import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed, getPerPersonPrice } from '@/lib/facility-utils';
-import { trackFacilityCardClick, trackExternalLinkClick } from '@/lib/analytics';
+import { trackFacilityCardClick, trackExternalLinkClick, trackUiClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
 import { subscribe, getSnapshot, getServerSnapshot, togglePick } from '@/lib/pickStore';
@@ -59,6 +59,8 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
       e.preventDefault();
       e.stopPropagation();
       togglePick({ id: facility.id, name: facility.name, image: facility.images[0] ?? null });
+      // stopPropagation で AnalyticsTracker に届かないため直接送る
+      trackUiClick('pick_toggle', facility.id);
     }, [facility.id, facility.name, facility.images]);
 
     return (
@@ -186,8 +188,6 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
                     : 'border-border text-text-secondary hover:border-primary hover:text-primary'
                 }`}
                 onClick={handleTogglePick}
-                data-track-click="pick_toggle"
-                data-track-facility={facility.id}
               >
                 {isPicked ? '✓ 候補に入れた' : '＋ 候補'}
               </button>

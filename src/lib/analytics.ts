@@ -34,6 +34,14 @@ export function sendGAEvent(
 }
 
 /**
+ * 汎用UI操作を GA4 に送信（AnalyticsTracker と同じ ui_click 形式）。
+ * カード内のボタンなど stopPropagation で document まで届かないクリック用
+ */
+export function trackUiClick(action: string, facilityId: number): void {
+  sendGAEvent('ui_click', { action, facility: String(facilityId) });
+}
+
+/**
  * 予約リンクのクリックを GA4 に送信
  */
 export function trackReservationClick(
