@@ -58,6 +58,9 @@ const nextConfig: NextConfig = {
       // 2026-10-04: Private Sauna 浅海店は P・SPO24 会員限定の予約制になり、検索から来た人がすぐ使えないため掲載終了
       { source: '/facilities/360', destination: '/area/ehime/matsuyama', permanent: true },
       { source: '/facilities/pspo-asanami', destination: '/area/ehime/matsuyama', permanent: true },
+      // 2026-10-04: ていれぎテントサウナ 湯婀はテントサウナ主体で掲載基準外（公式の予約URLも無効）のため掲載終了
+      { source: '/facilities/361', destination: '/area/ehime/matsuyama', permanent: true },
+      { source: '/facilities/teiregi-tent-sauna-yua', destination: '/area/ehime/matsuyama', permanent: true },
       // 旧比較ページ → 候補送信ページ（?ids= は引き継がれ、/pick 側で /pick/1-2 に整形する）
       { source: '/compare', destination: '/pick', permanent: true },
     ];

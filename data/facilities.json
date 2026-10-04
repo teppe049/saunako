@@ -26988,63 +26988,6 @@
     "slotType": "free"
   },
   {
-    "id": 361,
-    "slug": "teiregi-tent-sauna-yua",
-    "name": "ていれぎテントサウナ 湯婀",
-    "prefecture": "ehime",
-    "prefectureLabel": "愛媛県",
-    "city": "松山市",
-    "area": "松山",
-    "address": "愛媛県松山市中野町甲853",
-    "nearestStation": "久米駅",
-    "walkMinutes": null,
-    "priceMin": 1500,
-    "duration": 60,
-    "capacity": 4,
-    "features": {
-      "waterBath": false,
-      "waterBathTemp": null,
-      "selfLoyly": true,
-      "outdoorAir": true,
-      "coupleOk": true,
-      "bluetooth": null,
-      "wifi": null
-    },
-    "businessHours": "11:00-20:00（最終予約18:30）",
-    "holidays": "水曜",
-    "website": "https://yua.teiregi.jp/",
-    "phone": "080-3171-4283",
-    "bookingUrl": "https://booking.ebica.jp/webrsv/plan_search/e014089501/26852",
-    "amenities": [
-      "アロマウォーター",
-      "ヴィヒタ"
-    ],
-    "note": "久米駅から車約15分。10月〜4月の冬季営業。バレル型テントサウナ（70-90℃）。温泉「ていれぎの湯」入浴無料付き。30分延長500円",
-    "images": [
-      "/facilities/361-0.webp",
-      "/facilities/361-1.webp",
-      "/facilities/361-2.webp"
-    ],
-    "lat": 33.8149,
-    "lng": 132.8109,
-    "description": "松山市の天然温泉「ていれぎの湯」に併設されたバレル型テントサウナ。70〜90℃の薪焚きサウナでアロマロウリュやヴィヒタ体験が楽しめる。温泉入浴が無料で付いており、1時間1,500円からのリーズナブルな料金設定。冬季（10月〜4月）限定営業。",
-    "saunakoCommentShort": "温泉付きで1,500円は破格！",
-    "saunakoCommentLong": "テントサウナが1時間1,500円で、しかも温泉入浴が無料で付いてくるってすごくない？アロマロウリュにヴィヒタまで体験できるし、ガラス張りの背面から景色も楽しめるんだよ。冬季限定だから、寒い時期に行くのがベストだね。",
-    "updatedAt": "2026-03-02",
-    "openedAt": null,
-    "closedAt": null,
-    "plans": [
-      {
-        "name": "テントサウナ 1時間（温泉入浴付き）",
-        "price": 1500,
-        "duration": 60,
-        "capacity": 4
-      }
-    ],
-    "timeSlots": null,
-    "slotType": "free"
-  },
-  {
     "id": 362,
     "slug": "soratomori",
     "name": "東道後のそらともり",
