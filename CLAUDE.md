@@ -38,6 +38,7 @@
 | `node scripts/capture-x-header.mjs` | Xヘッダー画像キャプチャ |
 | `node scripts/preview-images.mjs` | X投稿プレビュー（week/日付/施設ID指定可） |
 | `node scripts/check-x-weight.js` | X投稿ウェイトチェック（hook用） |
+| `node scripts/owner-report.mjs` | 施設オーナー向け送客レポート（GA4の閲覧・予約/公式/電話クリックを月別集計）。`--month YYYY-MM` / `--top N` / `--id 施設ID`で1施設の送付用。2026-09以降のみ（facility_idの登録が9/2） |
 | `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数
