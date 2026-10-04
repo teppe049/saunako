@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getPrefectureFacilityCounts } from '@/lib/facilities';
-import { getArticlesByFacilityId } from '@/lib/articles';
+import { getAllArticles, getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
 import Footer from '@/components/Footer';
@@ -403,6 +403,12 @@ export default async function AreaPage({ params }: PageProps) {
   const areaGuidePanels = (prefectureGuide?.areaGuides ?? []).filter(
     (g) => (areaCounts[g.slug] || 0) > 0
   );
+  // 非公開・削除済みの記事へはリンクしない
+  const publishedArticles = getAllArticles();
+  const featuredArticles = (prefectureGuide?.featuredArticles ?? []).flatMap(({ slug, lead }) => {
+    const article = publishedArticles.find((a) => a.slug === slug);
+    return article ? [{ article, lead }] : [];
+  });
 
   const areaStats = generateAreaStats(facilities);
   const neighborPrefectures = getNeighborPrefectures(prefecture);
@@ -597,6 +603,28 @@ export default async function AreaPage({ params }: PageProps) {
                   <span className="text-xs text-primary mt-3 inline-block">
                     → 一覧を見る
                   </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 目的別の記事導線（都道府県固有・ガイド記事の順位を内部リンクで押し上げる） */}
+        {featuredArticles.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl font-bold text-text-primary mb-4">目的で探す</h2>
+            <div className="space-y-3">
+              {featuredArticles.map(({ article, lead }) => (
+                <Link
+                  key={article.slug}
+                  href={`/articles/${article.slug}`}
+                  className="block bg-primary-light border border-primary/30 rounded-xl p-4 hover:border-primary transition-colors group"
+                >
+                  <h3 className="font-semibold text-text-primary group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-text-secondary leading-relaxed mt-1">{lead}</p>
+                  <span className="text-xs font-semibold text-text-primary mt-2 inline-block">→ 記事を読む</span>
                 </Link>
               ))}
             </div>

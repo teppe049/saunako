@@ -283,6 +283,8 @@ export interface PrefectureGuide {
   extraFaqs: { question: string; answer: string }[];
   /** サウナ子コメントに続けて出す、エリア選びのTips（任意） */
   tipsComment?: string;
+  /** エリア別ガイドの直後に出す目的別の記事導線（任意）。slug は content/articles のファイル名 */
+  featuredArticles?: { slug: string; lead: string }[];
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
@@ -560,6 +562,14 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
       },
     ],
     tipsComment: '💡 東京はエリアで色が違うの。六本木・麻布が17施設で都内最多、下北沢・世田谷は990円〜入れてコスパ最強、渋谷・恵比寿は外気浴付きのデート向き、新宿・池袋は駅チカで仕事帰り向き。予算重視なら世田谷、雰囲気重視なら渋谷から見てみて！',
+    // 「個室サウナ カップル」等は3〜4位・CTR15〜19%と強いのに、受け皿のデート記事は9.8位（2026-09-27〜29）。
+    // area/tokyo（GSCクリックの約4割）から明示的にリンクを張り、記事側の順位を押し上げる
+    featuredArticles: [
+      {
+        slug: 'tokyo-date-private-sauna-guide',
+        lead: 'カップルで入れる施設だけを安い順に比較。水着の要否や予約のコツもまとめたよ。',
+      },
+    ],
   },
   // 京都: area/kyoto が299imp/CTR0.67%と最低水準。「kudochi sauna 京都」「クドチ サウナ 京都」等の
   // 指名検索（計139imp・CTR0%）が施設ページでなくこのエリアページに着地しているため、
