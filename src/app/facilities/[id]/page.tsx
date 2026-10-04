@@ -27,6 +27,9 @@ import PickTray from '@/components/PickTray';
 import { getPerPersonPrice } from '@/lib/facility-utils';
 import { hasCoubic } from '@/lib/coubic';
 
+// info@ は Cloudflare Email Routing で運営者の Gmail に転送される
+const REPORT_EMAIL = 'info@saunako.jp';
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -96,6 +99,16 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   const { sameArea, similarPrice } = getRelatedFacilities(facility, 3);
   const relatedArticles = getArticlesByFacilityId(Number(id));
+
+  // 文字列から直接組み立てる（Date経由だとビルド環境のタイムゾーンで月がずれ得る）
+  const verifiedLabel = facility.verifiedAt
+    ? `${facility.verifiedAt.slice(0, 4)}年${Number(facility.verifiedAt.slice(5, 7))}月`
+    : null;
+  const reportErrorHref = `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(
+    `【掲載情報の誤り】${facility.name}`
+  )}&body=${encodeURIComponent(
+    `施設: ${facility.name}（ID ${facility.id}）\nページ: https://www.saunako.jp/facilities/${facility.id}\n\n誤っている項目と正しい情報:\n\n情報源（公式サイトのURLなど、わかれば）:\n`
+  )}`;
 
   // FAQ 構造化データ
   const faqItems: { '@type': string; name: string; acceptedAnswer: { '@type': string; text: string } }[] = [];
@@ -543,7 +556,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       </h2>
                       <PricingTable plans={facility.plans} />
                       <p className="text-xs text-text-tertiary">
-                        ※ 最新の料金は公式サイトでご確認ください
+                        ※ {verifiedLabel && `${verifiedLabel}に公式情報で確認済み。`}最新の料金は公式サイトでご確認ください
                       </p>
                     </div>
                   </div>
@@ -721,15 +734,22 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                         </dd>
                       </div>
                     )}
-                    {facility.verifiedAt && (
+                    {verifiedLabel && (
                       <div className="flex">
                         <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">情報確認日</dt>
-                        <dd className="text-text-primary text-sm">
-                          {new Date(facility.verifiedAt).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' })}
-                        </dd>
+                        <dd className="text-text-primary text-sm">{verifiedLabel}</dd>
                       </div>
                     )}
                   </dl>
+                  {/* 料金改定・改称で掲載情報は静かに古くなるため、利用者から誤りを受け付ける */}
+                  <a
+                    href={reportErrorHref}
+                    className="inline-block mt-4 text-xs text-text-secondary underline hover:text-primary"
+                    data-track-click="report_error"
+                    data-track-facility={facility.id}
+                  >
+                    掲載情報の誤りを報告する
+                  </a>
                 </div>
               </div>
             </div>

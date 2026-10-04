@@ -174,3 +174,4 @@ cwebp -q 80 -resize 800 0 /tmp/input.jpg -o public/facilities/{id}-{index}.webp
 - `priceMin` / `duration` / `capacity` はプランの中で最も基本的なものの値を使う
 - 情報が取得できなかった項目は `null` または空文字にし、コメントで「要確認」と明記
 - `updatedAt` は実行日の日付を `YYYY-MM-DD` 形式で設定
+- 料金・営業時間を公式サイト（または施設本人）で確認できたら `verifiedAt` にも確認日を入れる（施設ページに「◯年◯月に公式情報で確認済み」と出る）。まとめサイト・OTAだけで埋めた場合は入れない
