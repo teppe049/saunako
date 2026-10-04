@@ -1673,8 +1673,8 @@
     "address": "東京都新宿区西新宿",
     "nearestStation": "新宿駅西口",
     "walkMinutes": 6,
-    "priceMin": 2500,
-    "duration": 90,
+    "priceMin": 3400,
+    "duration": 60,
     "capacity": 2,
     "features": {
       "waterBath": false,
@@ -1689,13 +1689,13 @@
     "holidays": "基本無休",
     "website": "https://yksi-ss.com/",
     "phone": "03-6908-8585",
-    "bookingUrl": null,
+    "bookingUrl": "https://coubic.com/yksi-sauna/booking_pages",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ"
     ],
-    "note": null,
+    "note": "2名のグループルームは同性同士のみ（新宿区に公衆浴場として登録しているため、条例で男女同室不可）。料金は一般料金。2回目以降はリピーター早割（60分3,000円〜）。宿泊者専用料金あり。朝サウナは平日・祝日のみ（最終受付10:30）。",
     "images": [
       "/facilities/20-0.webp",
       "/facilities/20-1.webp",
@@ -1707,49 +1707,50 @@
     "description": "西新宿にある朝7時から利用できるプライベートサウナ。Bluetooth対応で好きな音楽を流しながらセルフロウリュを楽しめる。4,900円から90分利用で2名まで対応、朝活サウナを取り入れたい方にも向いている。",
     "saunakoCommentShort": "朝7時から！Bluetoothで音楽も",
     "saunakoCommentLong": "西新宿にあるプライベートサウナで、朝7時からオープンしてるから朝活にぴったり！Bluetooth対応だから好きな音楽を聴きながらリラックスできるよ。4900円で90分たっぷり楽しめて、コスパも良いのが嬉しい！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "朝サウナ 60分 1名",
-        "price": 2500,
+        "name": "平日朝サウナ 60分 1名",
+        "price": 3400,
         "duration": 60,
         "capacity": 1
       },
       {
-        "name": "スタンダード 70分 1名",
-        "price": 3900,
-        "duration": 70,
-        "capacity": 1
-      },
-      {
-        "name": "ロング 90分 1名",
-        "price": 5000,
-        "duration": 90,
-        "capacity": 1
-      },
-      {
-        "name": "朝サウナ 60分 2名",
-        "price": 4000,
+        "name": "平日朝サウナ 60分 2名（同性のみ）",
+        "price": 5600,
         "duration": 60,
         "capacity": 2
       },
       {
-        "name": "スタンダード 70分 2名",
-        "price": 6500,
-        "duration": 70,
+        "name": "スタンダード 90分 1名",
+        "price": 4900,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "スタンダード 90分 2名（同性のみ）",
+        "price": 8300,
+        "duration": 90,
         "capacity": 2
       },
       {
-        "name": "ロング 90分 2名",
-        "price": 8000,
-        "duration": 90,
+        "name": "ロング 120分 1名",
+        "price": 6300,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ロング 120分 2名（同性のみ）",
+        "price": 10400,
+        "duration": 120,
         "capacity": 2
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "yksi SAUNA｜西新宿の朝活個室サウナ 2,500円〜 口コミ | サウナ子",
+    "seoTitle": "yksi SAUNA｜西新宿の朝活個室サウナ 3,400円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -3550,8 +3551,8 @@
     "address": "東京都台東区蔵前4-21-2",
     "nearestStation": "蔵前駅",
     "walkMinutes": 3,
-    "priceMin": 4000,
-    "duration": 70,
+    "priceMin": 6000,
+    "duration": 90,
     "capacity": 3,
     "features": {
       "waterBath": true,
@@ -3562,17 +3563,17 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "9:00〜23:00",
-    "holidays": "不定休",
+    "businessHours": "平日9:00〜翌1:00／土日祝6:30〜翌1:00",
+    "holidays": "不明",
     "website": "https://saunaandco.jp/",
     "phone": "",
-    "bookingUrl": null,
+    "bookingUrl": "https://sauna-playandco.hacomono.jp/reserve/schedule/3/5/",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "ボタニカルサウナ",
+    "note": "ボタニカルサウナ。料金はゲスト料金（会員は入会金14,000円〜で、90分1名4,000円〜・2名7,000円〜）。異性同士は水着着用必須。&aroma・&teaは2名まで、&coは3名まで。",
     "images": [
       "/facilities/41-0.webp",
       "/facilities/41-1.webp",
@@ -3584,41 +3585,30 @@
     "description": "SAUNA & co（サウナアンドコー）は蔵前駅から徒歩3分のボタニカルがテーマの個室サウナ。氷で水風呂の温度を自分で調節でき、アロマやお茶をテーマにした部屋を選べる。セルフロウリュ完備でカップルOK、6,000円から70分利用可能。",
     "saunakoCommentShort": "ボタニカルサウナで癒しの空間！",
     "saunakoCommentLong": "蔵前にあるボタニカルがテーマの個室サウナだよ！氷で水風呂の温度を自分で調節できるのがユニーク。アロマやお茶をテーマにした部屋が選べて、会員なら2,000〜4,000円割引になるからリピートもおすすめ！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "& aroma/& tea 90分 1名",
+        "name": "&aroma・&tea 90分 1名",
         "price": 6000,
         "duration": 90,
         "capacity": 1
       },
       {
-        "name": "& aroma/& tea 90分 2名",
+        "name": "&aroma・&tea 90分 2名",
         "price": 9000,
         "duration": 90,
         "capacity": 2
       },
       {
-        "name": "& co 120分 3名",
-        "price": 15000,
+        "name": "&co 120分 1〜2名",
+        "price": 13000,
         "duration": 120,
-        "capacity": 3
-      },
-      {
-        "name": "& aroma/& tea 90分 1名 会員",
-        "price": 4000,
-        "duration": 90,
-        "capacity": 1
-      },
-      {
-        "name": "& aroma/& tea 90分 2名 会員",
-        "price": 7000,
-        "duration": 90,
         "capacity": 2
       },
       {
-        "name": "& co 120分 3名 会員",
-        "price": 12000,
+        "name": "&co 120分 3名",
+        "price": 15000,
         "duration": 120,
         "capacity": 3
       }
@@ -3626,7 +3616,7 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "SAUNA & co｜蔵前のボタニカル個室サウナ 4,000円〜 口コミ | サウナ子",
+    "seoTitle": "SAUNA & co｜蔵前のボタニカル個室サウナ 6,000円〜 口コミ | サウナ子",
     "slotType": "free"
   },
   {
@@ -6020,7 +6010,7 @@
     "walkMinutes": 5,
     "priceMin": 8000,
     "duration": 120,
-    "capacity": 2,
+    "capacity": 4,
     "features": {
       "waterBath": true,
       "waterBathTemp": "14",
@@ -6034,7 +6024,7 @@
     "holidays": "基本無休",
     "website": "https://coubic.com/oji-music-lounge",
     "phone": "03-6903-7256",
-    "bookingUrl": null,
+    "bookingUrl": "https://oji-music-lounge.stores.jp/reserve/oji-music-lounge/booking_pages",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -6043,7 +6033,7 @@
       "化粧水",
       "乳液"
     ],
-    "note": null,
+    "note": "全部屋で男女利用可（水着の着用義務なし）。1名利用でも同額。宿泊は303・305など14,000円・304は16,000円（2名・電話かメールで予約）。運営はワイ・ケイホーム合同会社。",
     "images": [
       "/facilities/70-0.webp",
       "/facilities/70-1.webp",
@@ -6055,25 +6045,26 @@
     "description": "王子駅北口から徒歩5分、ゲストハウス内にある完全貸切個室プライベートサウナ。全室にアーティスト近藤康平氏の壁画が描かれ、サウナとアートが融合した空間。14度の水風呂とセルフロウリュを備え、Bluetoothスピーカーやインフィニティチェアも完備。",
     "saunakoCommentShort": "アートに包まれる貸切プライベートサウナ！",
     "saunakoCommentLong": "王子にあるアートとサウナの融合空間だよ！全部屋に壁画が描かれていてめちゃくちゃおしゃれ。水風呂は14度でキンキン、セルフロウリュもできるから自分好みにカスタマイズできるの。宿泊もできるからサウナ旅にもおすすめ！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-04",
+    "verifiedAt": "2026-10-04",
     "plans": [
       {
-        "name": "デイユース 120分 2名",
+        "name": "デイユース 2時間（303・305など）2名",
         "price": 8000,
         "duration": 120,
         "capacity": 2
       },
       {
-        "name": "平日限定 180分 2名",
+        "name": "平日限定 3時間（303・305など）2名",
         "price": 8000,
         "duration": 180,
         "capacity": 2
       },
       {
-        "name": "宿泊 2名",
-        "price": 14000,
-        "duration": 0,
-        "capacity": 2
+        "name": "デイユース 2時間（304）4名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 4
       }
     ],
     "timeSlots": null,
