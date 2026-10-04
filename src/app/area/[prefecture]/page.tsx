@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getPrefectureFacilityCounts } from '@/lib/facilities';
+import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getAreaMinPrices, getPrefectureFacilityCounts } from '@/lib/facilities';
 import { getAllArticles, getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
@@ -398,6 +398,8 @@ export default async function AreaPage({ params }: PageProps) {
   const saunakoComment = SAUNAKO_AREA_COMMENTS[prefecture] || DEFAULT_SAUNAKO_COMMENT;
   const areaGroups = AREA_GROUPS[prefecture] || [];
   const areaCounts = getAreaFacilityCounts(prefecture);
+  // ガイドパネルの件数・最安額はデータから出す（説明文に固定値を書くと施設の増減でずれるため）
+  const areaMinPrices = getAreaMinPrices(prefecture);
   const prefectureGuide = PREFECTURE_GUIDES[prefecture];
   // ガイドパネルは施設が実在する（施設数>0）エリアのみ表示。施設0エリアへ誘導しない
   const areaGuidePanels = (prefectureGuide?.areaGuides ?? []).filter(
@@ -595,6 +597,7 @@ export default async function AreaPage({ params }: PageProps) {
                     </h3>
                     <span className="text-xs text-text-tertiary flex-shrink-0 ml-2">
                       {areaCounts[guide.slug] || 0}施設
+                      {areaMinPrices[guide.slug] && `・¥${areaMinPrices[guide.slug].toLocaleString()}〜`}
                     </span>
                   </div>
                   <p className="text-sm text-text-secondary leading-relaxed">

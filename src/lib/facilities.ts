@@ -53,6 +53,20 @@ export function getAreaFacilityCounts(prefectureCode: string): Record<string, nu
   return counts;
 }
 
+/** サブエリアごとの最安料金（priceMin が0=要問合せの施設は除く）。施設がなければキーを持たない */
+export function getAreaMinPrices(prefectureCode: string): Record<string, number> {
+  const areas = AREA_GROUPS[prefectureCode];
+  if (!areas) return {};
+  const mins: Record<string, number> = {};
+  for (const area of areas) {
+    const prices = facilities
+      .filter((f) => isOpen(f) && f.prefecture === prefectureCode && f.area === area.label && f.priceMin > 0)
+      .map((f) => f.priceMin);
+    if (prices.length > 0) mins[area.slug] = Math.min(...prices);
+  }
+  return mins;
+}
+
 export function searchFacilities(params: {
   prefecture?: string | string[];
   area?: string;
