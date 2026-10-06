@@ -8,6 +8,9 @@ interface TodaySlotsProps {
   facility: OpenHoursInput;
 }
 
+/** これより枠が多いグループは、終わった枠を件数だけにして畳む（30分刻みの施設でパネルが長くなりすぎるため） */
+const COLLAPSE_PAST_OVER = 12;
+
 const CHIP_CLASS = {
   past: 'bg-bg text-text-tertiary line-through border-border',
   next: 'bg-primary-strong text-white border-primary-strong',
@@ -59,8 +62,11 @@ export default function TodaySlots({ facility }: TodaySlotsProps) {
               {g.label}
               {g.note && <span className="ml-1 font-normal text-text-tertiary">（{g.note}）</span>}
             </p>
+            {g.times.length > COLLAPSE_PAST_OVER && g.times.some((t) => t.state === 'past') && (
+              <p className="text-xs text-text-tertiary">終わった枠 {g.times.filter((t) => t.state === 'past').length}件は省略</p>
+            )}
             <ul className="grid grid-cols-4 gap-1.5">
-              {g.times.map((t) => (
+              {(g.times.length > COLLAPSE_PAST_OVER ? g.times.filter((t) => t.state !== 'past') : g.times).map((t) => (
                 <li
                   key={t.time}
                   className={`h-10 flex items-center justify-center rounded-lg border text-sm font-bold tabular-nums ${CHIP_CLASS[t.state]}`}
