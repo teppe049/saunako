@@ -21,6 +21,8 @@ import TrackExternalLink from '@/components/TrackExternalLink';
 import AdUnit from '@/components/AdUnit';
 import AskAI from '@/components/AskAI';
 import AvailabilityBadge from '@/components/AvailabilityBadge';
+import OpenStatus from '@/components/OpenStatus';
+import TodaySlots from '@/components/TodaySlots';
 import NearbyCompareTable from '@/components/NearbyCompareTable';
 import PickToggleButton from '@/components/PickToggleButton';
 import PickTray from '@/components/PickTray';
@@ -99,6 +101,16 @@ export default async function FacilityDetailPage({ params }: PageProps) {
 
   const { sameArea, similarPrice } = getRelatedFacilities(facility, 3);
   const relatedArticles = getArticlesByFacilityId(Number(id));
+
+  // 「営業中・次の枠」の判定に使う項目だけをクライアントへ渡す
+  const openHoursInput = {
+    businessHours: facility.businessHours,
+    holidays: facility.holidays,
+    timeSlots: facility.timeSlots,
+    plans: facility.plans,
+    closedAt: facility.closedAt,
+  };
+  const hasSlots = Array.isArray(facility.timeSlots) && facility.timeSlots.some((g) => g?.startTimes?.length);
 
   // 文字列から直接組み立てる（Date経由だとビルド環境のタイムゾーンで月がずれ得る）
   const verifiedLabel = facility.verifiedAt
@@ -643,6 +655,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     <p className="text-text-secondary text-sm">料金は公式サイトをご確認ください</p>
                   )}
 
+                  {/* 今の状態（営業中・次の枠）。時刻依存なのでクライアントで描画 */}
+                  <OpenStatus facility={openHoursInput} className="text-sm" />
+
                   {/* 基本情報 */}
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
@@ -655,6 +670,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                     </div>
                   </div>
 
+                  {/* 今日・明日・明後日の時間枠（枠データのある施設のみ） */}
+                  {hasSlots && <TodaySlots facility={openHoursInput} />}
+
                   {/* 空き状況（STORES予約対応施設のみ。取得できなければ非表示） */}
                   {hasCoubic(facility.id) && <AvailabilityBadge facilityId={facility.id} />}
 
@@ -665,6 +683,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                         facilityId={facility.id}
                         facilityName={facility.name}
                         website={facility.website}
+                        label="予約ページで空きを見る →"
                       />
                       <p className="text-xs text-text-tertiary text-center">
                         ※ 予約・料金の詳細は公式サイトでご確認ください

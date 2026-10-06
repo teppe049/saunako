@@ -6,12 +6,14 @@ interface ReservationLinkProps {
   facilityId: number;
   facilityName: string;
   website: string;
+  label?: string;
 }
 
 export default function ReservationLink({
   facilityId,
   facilityName,
   website,
+  label = '予約ページを見る →',
 }: ReservationLinkProps) {
   const handleClick = () => {
     trackReservationClick(facilityId, facilityName, website);
@@ -23,9 +25,9 @@ export default function ReservationLink({
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="flex items-center justify-center gap-2 w-full text-white text-lg font-semibold rounded-[10px] h-14 bg-saunako hover:opacity-90 transition-opacity"
+      className="flex items-center justify-center gap-2 w-full text-white text-lg font-semibold rounded-[10px] h-14 bg-primary-strong hover:opacity-90 transition-opacity"
     >
-      予約ページを見る →
+      {label}
     </a>
   );
 }

@@ -7,7 +7,7 @@ import { searchFacilities, getAllFacilities, sortFacilities, getAreaBySlug, getA
 import type { SortKey } from '@/lib/facilities';
 import { PREFECTURES, getRegionByCode } from '@/lib/types';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
-import { isOpenAtHour } from '@/lib/facility-utils';
+import { getOpenStatus, isAvailableNow, isOpenAtHour } from '@/lib/openHours';
 
 interface SearchPageProps {
   searchParams: Promise<{
@@ -32,6 +32,7 @@ interface SearchPageProps {
     locationName?: string;
     radius?: string;
     openAt?: string;
+    now?: string;
   }>;
 }
 
@@ -150,9 +151,15 @@ async function SearchContent({ searchParams }: SearchPageProps) {
 
   // 「何時から」フィルタ: 営業時間ベースで指定時刻に営業中の施設を絞り込み
   const openAt = params.openAt ? Number(params.openAt) : undefined;
-  const timeFiltered = openAt != null && !isNaN(openAt)
-    ? filtered.filter((f) => isOpenAtHour(f.businessHours, openAt, f))
+  const hourFiltered = openAt != null && !isNaN(openAt)
+    ? filtered.filter((f) => isOpenAtHour(f, openAt))
     : filtered;
+
+  // 「今から行ける」: リクエスト時点(JST)で営業中、または2時間以内に次の枠がある施設だけ
+  const now = new Date();
+  const timeFiltered = params.now === '1'
+    ? hourFiltered.filter((f) => isAvailableNow(getOpenStatus(f, now)))
+    : hourFiltered;
 
   const sorted = sortFacilities(timeFiltered, sortKey, origin);
 

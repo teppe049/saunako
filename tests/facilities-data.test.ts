@@ -10,6 +10,7 @@ import fs from 'fs';
 import path from 'path';
 import facilitiesJson from '../data/facilities.json';
 import { AREA_GROUPS, PREFECTURES, type Facility } from '@/lib/types';
+import { parseBusinessHours } from '@/lib/openHours';
 
 const facilities = facilitiesJson as Facility[];
 const PREFECTURE_CODES = new Set(PREFECTURES.map((p) => p.code));
@@ -185,5 +186,20 @@ describe('facilities.json 時間枠', () => {
       .filter((f) => f.slotType === 'fixed' && !f.timeSlots && !KNOWN_FIXED_WITHOUT_SLOTS.has(f.id))
       .map((f) => `${f.id} ${f.name}`);
     expect(bad).toEqual([]);
+  });
+});
+
+describe('facilities.json 営業時間', () => {
+  /**
+   * 「今から行ける」は営業時間を読み取れた施設にしか効かない。2026-10-06 時点で掲載中479件中431件（90%）。
+   * 新しい書き方の施設が増えて読めない割合が上がったら、src/lib/openHours.ts の対応を足すか表記を揃える。
+   */
+  const MIN_PARSE_RATE = 0.85;
+
+  it(`掲載中施設の営業時間を ${MIN_PARSE_RATE * 100}% 以上読み取れる`, () => {
+    const active = facilities.filter((f) => !f.closedAt);
+    const unparsed = active.filter((f) => parseBusinessHours(f.businessHours) === null);
+    const rate = (active.length - unparsed.length) / active.length;
+    expect(rate, `読み取れない営業時間:\n${unparsed.map((f) => `${f.id} ${f.businessHours}`).join('\n')}`).toBeGreaterThanOrEqual(MIN_PARSE_RATE);
   });
 });

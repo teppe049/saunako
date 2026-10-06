@@ -3,7 +3,8 @@
 import { forwardRef, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Facility } from '@/lib/types';
-import { getTimeSlotTags, getNextAvailableSlot, isFacilityClosed, getPerPersonPrice } from '@/lib/facility-utils';
+import { getTimeSlotTags, isFacilityClosed, getPerPersonPrice } from '@/lib/facility-utils';
+import OpenStatus from '@/components/OpenStatus';
 import { trackFacilityCardClick, trackExternalLinkClick, trackUiClick } from '@/lib/analytics';
 import ImageCarousel from '@/components/ImageCarousel';
 import FavoriteButton from '@/components/FavoriteButton';
@@ -17,11 +18,6 @@ interface FacilityListCardProps {
   onHover?: (id: number | null) => void;
   distanceLabel?: string;
 }
-
-// ハイドレーション完了判定用（SSR中はfalse、クライアントではtrue）
-const subscribeNoop = () => () => {};
-const getTrue = () => true;
-const getFalse = () => false;
 
 const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
   ({ facility, index, isHovered, isSelected, onHover, distanceLabel }, ref) => {
@@ -44,11 +40,6 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
         : '';
 
     const { hasMorningSlot, hasLateNightSlot } = getTimeSlotTags(facility);
-
-    // 時刻依存の表示はハイドレーション完了後にのみ計算する（サーバー(UTC)と
-    // クライアント(JST)の時差でSSR出力が食い違い hydration error #418 になるため）
-    const hydrated = useSyncExternalStore(subscribeNoop, getTrue, getFalse);
-    const nextSlot = hydrated ? getNextAvailableSlot(facility, new Date().getHours()) : null;
 
     const perPerson = getPerPersonPrice(facility);
     const showPerPerson = perPerson != null && (facility.priceMin === 0 || perPerson < facility.priceMin);
@@ -136,15 +127,8 @@ const FacilityListCard = forwardRef<HTMLDivElement, FacilityListCardProps>(
               )}
             </div>
 
-            {/* Next available slot */}
-            {nextSlot && (
-              <p className="flex items-center gap-1 text-xs text-text-secondary">
-                <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                {nextSlot}
-              </p>
-            )}
+            {/* 今の状態（営業中・次の枠）。時刻依存なのでハイドレーション後に出る */}
+            <OpenStatus facility={facility} />
 
             {/* Location + Distance badge */}
             <div className="flex items-center gap-2 flex-wrap">

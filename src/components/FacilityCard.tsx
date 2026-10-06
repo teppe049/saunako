@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Facility } from '@/lib/types';
 import { isFacilityClosed } from '@/lib/facilities';
 import { getPerPersonPrice } from '@/lib/facility-utils';
+import OpenStatus from '@/components/OpenStatus';
 
 interface FacilityCardProps {
   facility: Facility;
@@ -56,6 +57,8 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
             {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
           </p>
         )}
+
+        <OpenStatus facility={facility} className="mb-2" />
 
         <p className="text-sm text-text-primary mb-2">
           {facility.priceMin > 0 ? (

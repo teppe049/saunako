@@ -9,6 +9,8 @@
   /* Primary (Orange) */
   --primary: #E85A4F;
   --primary-light: #FFE0D9;
+  /* 白文字を載せるボタン用。--primary 上の白文字は約3.5:1でAA(4.5:1)に届かないため濃くする */
+  --primary-strong: #C8443A;
 
   /* Text */
   --text-primary: #1A1A1A;
@@ -24,6 +26,8 @@
   --available: #4CAF50;
   --unavailable: #9E9E9E;
   --warning: #FF9800;
+  /* 「営業中」の文字色。--available は白背景の文字だとコントラスト不足 */
+  --open-now: #2E7D32;
 }
 
 @theme inline {
@@ -32,6 +36,7 @@
   --color-border: var(--border);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-primary-strong: var(--primary-strong);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
@@ -41,6 +46,7 @@
   --color-available: var(--available);
   --color-unavailable: var(--unavailable);
   --color-warning: var(--warning);
+  --color-open-now: var(--open-now);
   --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
 }
 

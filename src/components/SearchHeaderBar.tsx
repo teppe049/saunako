@@ -67,8 +67,9 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     });
   };
 
-  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax') || !!searchParams.get('openAt');
-  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0) + (searchParams.get('openAt') ? 1 : 0);
+  const isNowActiveParam = searchParams.get('now') === '1';
+  const hasActiveFilters = (Object.keys(filters) as FilterKey[]).some((key) => filters[key]) || !!searchParams.get('priceMax') || !!searchParams.get('openAt') || isNowActiveParam;
+  const activeFilterCount = (Object.keys(filters) as FilterKey[]).filter((key) => filters[key]).length + (searchParams.get('priceMax') ? 1 : 0) + (searchParams.get('openAt') ? 1 : 0) + (isNowActiveParam ? 1 : 0);
 
   const hasTrackedSearch = useRef(false);
   useEffect(() => {
@@ -145,29 +146,22 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     updateParams((p) => value ? p.set('openAt', value) : p.delete('openAt'));
   };
 
+  // 「今から行ける」: 判定はサーバーがリクエスト時点の JST で行う（?now=1）
   const toggleNowAvailable = () => {
-    const isActive = !!searchParams.get('openAt');
-    if (isActive) {
-      updateParams((p) => p.delete('openAt'));
-    } else {
-      const currentHour = new Date().getHours();
-      trackFilterChange('openAt', String(currentHour));
-      updateParams((p) => p.set('openAt', String(currentHour)));
-    }
+    trackFilterChange('openNow', String(!isNowActiveParam));
+    updateParams((p) => isNowActiveParam ? p.delete('now') : p.set('now', '1'));
   };
-
-  const isNowAvailableActive = !!searchParams.get('openAt');
 
   return (
     <div className="bg-surface border-b border-border flex-shrink-0">
-      <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center gap-2 md:gap-3 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-12 md:h-14 flex items-center gap-1.5 md:gap-3 overflow-hidden">
         <Link href="/" aria-label="トップページに戻る" className="md:hidden flex items-center justify-center w-10 h-10 -ml-1 flex-shrink-0" data-track-click="search_back">
           <svg className="w-5 h-5 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </Link>
 
-        <Link href="/" className="flex items-center gap-1.5 flex-shrink-0">
+        <Link href="/" className="hidden md:flex items-center gap-1.5 flex-shrink-0">
           <Image src="/saunako-avatar.webp" alt="サウナ子" width={32} height={32} className="w-7 h-7 md:w-8 md:h-8 rounded-full object-cover" />
           <span className="hidden md:inline font-bold text-lg text-text-primary">サウナ子</span>
         </Link>
@@ -220,6 +214,27 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           );
         })()}
 
+        <button
+          type="button"
+          onClick={toggleNowAvailable}
+          aria-label="今から行ける"
+          aria-pressed={isNowActiveParam}
+          className={`inline-flex items-center gap-1 px-2 md:px-2.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-bold transition-colors border flex-shrink-0 ${
+            isNowActiveParam
+              ? 'bg-primary-strong text-white border-primary-strong'
+              : 'bg-white text-text-primary border-border hover:border-primary hover:text-primary'
+          }`}
+          data-track-click="filter_chip"
+          data-track-filter="openNow"
+        >
+          <svg aria-hidden="true" className="hidden md:block w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.4} d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {/* モバイルはヘッダー1行に収めるため短く */}
+          <span className="md:hidden">今から</span>
+          <span className="hidden md:inline">今から行ける</span>
+        </button>
+
         <div className="hidden md:flex items-center gap-1.5 flex-1 min-w-0 flex-wrap">
           {(Object.keys(filters) as FilterKey[]).map((key) => (
             <button
@@ -236,18 +251,6 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
               {filterLabels[key]}
             </button>
           ))}
-          <button
-            onClick={toggleNowAvailable}
-            className={`px-2.5 py-1.5 rounded-full text-[13px] font-medium transition-colors border flex-shrink-0 ${
-              isNowAvailableActive
-                ? 'bg-primary text-white border-primary'
-                : 'bg-white text-text-secondary border-border hover:border-primary hover:text-primary'
-            }`}
-            data-track-click="filter_chip"
-            data-track-filter="nowAvailable"
-          >
-            今すぐ入れる
-          </button>
           {hasActiveFilters && (
             <button onClick={clearAllFilters} className="text-[13px] text-text-tertiary hover:text-text-secondary transition-colors flex-shrink-0 ml-0.5">
               クリア
@@ -273,7 +276,8 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
 
         <div className="flex-1 md:hidden" />
 
-        <p className="text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
+        {/* モバイルは一覧の上に「N件の個室サウナが見つかりました」があるのでヘッダーでは省く */}
+        <p className="hidden md:block text-[13px] font-medium text-text-secondary flex-shrink-0 tabular-nums">
           {filteredCount !== totalCount ? `${filteredCount}/${totalCount}` : filteredCount}件
         </p>
 
