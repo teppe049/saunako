@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { REGION_GROUPS, getRegionByCode } from '@/lib/types';
 import { trackSearch, trackFilterChange } from '@/lib/analytics';
 import MobileFilterSheet from '@/components/MobileFilterSheet';
+import OriginPicker from '@/components/OriginPicker';
+import { setOrigin, type Origin } from '@/lib/originStore';
 import SearchSortBar from '@/components/SearchSortBar';
 
 interface SearchHeaderBarProps {
@@ -125,6 +127,32 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
     updateParams((p) => slug ? p.set('area', slug) : p.delete('area'));
   };
 
+  // 「どこから」: URL の lat/lng/locationName で検索し、他の一覧でも使えるよう localStorage にも覚える
+  const urlLat = Number(searchParams.get('lat'));
+  const urlLng = Number(searchParams.get('lng'));
+  const urlOrigin: Origin | null =
+    locationName && Number.isFinite(urlLat) && Number.isFinite(urlLng) && searchParams.get('lat')
+      ? { label: locationName, lat: urlLat, lng: urlLng }
+      : null;
+  const handleOriginChange = (origin: Origin | null) => {
+    setOrigin(origin);
+    trackFilterChange('origin', origin ? origin.label : 'none');
+    updateParams((p) => {
+      p.delete('radius');
+      if (origin) {
+        p.set('lat', String(origin.lat));
+        p.set('lng', String(origin.lng));
+        p.set('locationName', origin.label);
+        p.set('sort', 'distance');
+      } else {
+        p.delete('lat');
+        p.delete('lng');
+        p.delete('locationName');
+        if (p.get('sort') === 'distance') p.delete('sort');
+      }
+    });
+  };
+
   const handleSortChange = (value: string) => {
     trackFilterChange('sort', value);
     // デフォルトの並び順（検索条件により可変）と同じ値のときのみパラメータを省略する
@@ -166,15 +194,6 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
           <span className="hidden md:inline font-bold text-lg text-text-primary">サウナ子</span>
         </Link>
 
-        {locationName && (
-          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[12px] md:text-[13px] font-medium bg-primary/10 text-primary border border-primary/20 truncate max-w-[120px] md:max-w-none min-w-0">
-            <svg className="w-3 h-3 md:w-3.5 md:h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            {locationName} 周辺
-          </span>
-        )}
 
         <div className="relative inline-flex items-center flex-shrink-0">
           <select
@@ -306,6 +325,9 @@ export default function SearchHeaderBar({ totalCount, filteredCount, prefectureL
       </div>
 
       <SearchSortBar
+        leading={
+          <OriginPicker value={urlOrigin} onChange={handleOriginChange} prefecture={prefectureCode} pageType="search" compact />
+        }
         prefectureCode={prefectureCode}
         areaSlug={areaSlug}
         hasOrigin={hasOrigin}

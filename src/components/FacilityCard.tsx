@@ -9,9 +9,11 @@ interface FacilityCardProps {
   facility: Facility;
   index?: number;
   showComment?: boolean;
+  /** 「どこから」を選んでいるときの距離（例: 渋谷駅から1.2km） */
+  distanceLabel?: string;
 }
 
-export default function FacilityCard({ facility, index = 0, showComment = true }: FacilityCardProps) {
+export default function FacilityCard({ facility, index = 0, showComment = true, distanceLabel }: FacilityCardProps) {
   const cheapestPlan = facility.plans?.length
     ? facility.plans.reduce((a, b) => (b.price < a.price ? b : a))
     : null;
@@ -56,6 +58,10 @@ export default function FacilityCard({ facility, index = 0, showComment = true }
           <p className="text-sm text-text-secondary mb-2">
             {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
           </p>
+        )}
+
+        {distanceLabel && (
+          <p className="text-sm font-bold text-primary-strong mb-2">{distanceLabel}</p>
         )}
 
         <OpenStatus facility={facility} className="mb-2" />

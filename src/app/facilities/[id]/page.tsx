@@ -23,6 +23,7 @@ import AskAI from '@/components/AskAI';
 import AvailabilityBadge from '@/components/AvailabilityBadge';
 import OpenStatus from '@/components/OpenStatus';
 import TodaySlots from '@/components/TodaySlots';
+import PlanPicker from '@/components/PlanPicker';
 import NearbyCompareTable from '@/components/NearbyCompareTable';
 import PickToggleButton from '@/components/PickToggleButton';
 import PickTray from '@/components/PickTray';
@@ -669,6 +670,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       <span className="text-text-primary">{facility.capacity}名</span>
                     </div>
                   </div>
+
+                  {/* 人数×時間 → 料金（プランが2つ以上ある施設のみ） */}
+                  {facility.plans && facility.plans.length >= 2 && <PlanPicker plans={facility.plans} />}
 
                   {/* 今日・明日・明後日の時間枠（枠データのある施設のみ） */}
                   {hasSlots && <TodaySlots facility={openHoursInput} />}

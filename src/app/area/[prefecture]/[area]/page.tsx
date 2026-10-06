@@ -342,6 +342,7 @@ export default async function SubAreaPage({ params }: PageProps) {
           <AreaFilters
             facilities={facilities}
             prefectureLabel={areaLabel}
+            prefectureCode={prefecture}
           />
         </Suspense>
 

@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { AREA_GROUPS } from '@/lib/types';
 
@@ -25,6 +26,8 @@ interface SearchSortBarProps {
   onDurationChange: (value: string) => void;
   onPriceMaxChange: (value: string) => void;
   onOpenAtChange: (value: string) => void;
+  /** 行の先頭に置く要素（「どこから」チップ）。モバイルでもヘッダー行に収まらないためこちらに置く */
+  leading?: ReactNode;
 }
 
 export default function SearchSortBar({
@@ -38,6 +41,7 @@ export default function SearchSortBar({
   onDurationChange,
   onPriceMaxChange,
   onOpenAtChange,
+  leading,
 }: SearchSortBarProps) {
   const searchParams = useSearchParams();
   const showAreaRow = prefectureCode && AREA_GROUPS[prefectureCode];
@@ -45,6 +49,7 @@ export default function SearchSortBar({
 
   return (
     <div className="max-w-[1440px] mx-auto px-3 md:px-6 h-10 flex items-center gap-2 border-t border-border/50">
+      {leading}
       {showAreaRow && areas ? (
         <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide flex-1 min-w-0 md:flex-wrap">
           <button

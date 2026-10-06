@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDistance, getDistanceKm } from './distance';
+import { formatDistance, formatDistanceFrom, getDistanceKm } from './distance';
 
 describe('getDistanceKm', () => {
   it('同一地点は 0km', () => {
@@ -23,5 +23,13 @@ describe('formatDistance', () => {
   });
   it('10km以上は整数', () => {
     expect(formatDistance(12.7)).toBe('13km');
+  });
+});
+
+describe('formatDistanceFrom', () => {
+  it('100m未満は「すぐ近く」、1km未満はm、以上はkm', () => {
+    expect(formatDistanceFrom('渋谷駅', 0)).toBe('渋谷駅のすぐ近く');
+    expect(formatDistanceFrom('渋谷駅', 0.334)).toBe('渋谷駅から330m');
+    expect(formatDistanceFrom('渋谷駅', 1.26)).toBe('渋谷駅から1.3km');
   });
 });

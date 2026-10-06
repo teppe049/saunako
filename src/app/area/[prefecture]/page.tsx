@@ -674,6 +674,7 @@ export default async function AreaPage({ params }: PageProps) {
           <AreaFilters
             facilities={facilities}
             prefectureLabel={prefData.label}
+            prefectureCode={prefecture}
           />
         </Suspense>
 

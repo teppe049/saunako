@@ -1,18 +1,24 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useSyncExternalStore } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import FacilityCard from '@/components/FacilityCard';
 import { Facility } from '@/lib/types';
 import { getOpenStatus, isAvailableNow } from '@/lib/openHours';
 import { useNow } from '@/lib/useNow';
+import { getDistanceKm, formatDistanceFrom } from '@/lib/distance';
+import { subscribe as subscribeOrigin, getSnapshot as getOrigin, getServerSnapshot as getServerOrigin, setOrigin } from '@/lib/originStore';
+import OriginPicker from '@/components/OriginPicker';
+import AreaFacilityList from './AreaFacilityList';
 
 interface AreaFiltersProps {
   facilities: Facility[];
   prefectureLabel: string;
+  /** 「どこから」の駅候補でこの都道府県を先に出す */
+  prefectureCode?: string;
 }
 
-export default function AreaFilters({ facilities, prefectureLabel }: AreaFiltersProps) {
+export default function AreaFilters({ facilities, prefectureLabel, prefectureCode }: AreaFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -24,6 +30,8 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
   });
   const [openNow, setOpenNow] = useState(searchParams.get('now') === '1');
   const now = useNow();
+  // 「どこから」は他の一覧ページと共有（localStorage）。選んでいれば近い順に並べる
+  const origin = useSyncExternalStore(subscribeOrigin, getOrigin, getServerOrigin);
 
   const toggleFilter = (key: keyof typeof filters) => {
     const newFilters = { ...filters, [key]: !filters[key] };
@@ -74,6 +82,19 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
     return { filteredFacilities: available, unknownHours: unknown };
   }, [featureFiltered, openNow, now]);
 
+  const distanceKm = (f: Facility): number | null =>
+    origin && f.lat != null && f.lng != null ? getDistanceKm(origin.lat, origin.lng, f.lat, f.lng) : null;
+
+  // 座標のない施設は末尾へ
+  const sortedFacilities = origin
+    ? [...filteredFacilities].sort((a, b) => (distanceKm(a) ?? Infinity) - (distanceKm(b) ?? Infinity))
+    : filteredFacilities;
+
+  const distanceLabelOf = (f: Facility): string | undefined => {
+    const km = distanceKm(f);
+    return origin && km !== null ? formatDistanceFrom(origin.label, km) : undefined;
+  };
+
   // エリア内の人気の駅を集計
   const popularStations = useMemo(() => {
     const stationCount: Record<string, number> = {};
@@ -104,6 +125,7 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
       <div className="bg-surface border border-border rounded-xl p-4 mb-6">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-sm text-text-secondary mr-2">絞り込み:</span>
+          <OriginPicker value={origin} onChange={setOrigin} prefecture={prefectureCode} pageType="area" />
           <button
             type="button"
             onClick={toggleOpenNow}
@@ -196,12 +218,8 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
         </div>
       )}
 
-      {/* Facility List */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredFacilities.map((facility, index) => (
-          <FacilityCard key={facility.id} facility={facility} index={index} />
-        ))}
-      </div>
+      {/* Facility List（PCは右に地図） */}
+      <AreaFacilityList facilities={sortedFacilities} origin={origin} distanceLabelOf={distanceLabelOf} />
 
       {filteredFacilities.length === 0 && facilities.length > 0 && (
         <div className="text-center py-12 bg-surface rounded-xl border border-border">
@@ -222,7 +240,7 @@ export default function AreaFilters({ facilities, prefectureLabel }: AreaFilters
           </summary>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
             {unknownHours.map((facility, index) => (
-              <FacilityCard key={facility.id} facility={facility} index={filteredFacilities.length + index} />
+              <FacilityCard key={facility.id} facility={facility} index={filteredFacilities.length + index} distanceLabel={distanceLabelOf(facility)} />
             ))}
           </div>
         </details>
