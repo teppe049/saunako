@@ -5,7 +5,7 @@
 Site: https://www.saunako.jp
 Index: https://www.saunako.jp/llms.txt
 Sitemap: https://www.saunako.jp/sitemap.xml
-Generated: 2026-10-05
+Generated: 2026-10-06
 
 ## 個室サウナの定義
 

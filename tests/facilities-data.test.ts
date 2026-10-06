@@ -18,10 +18,9 @@ const PREFECTURE_LABELS = new Map(PREFECTURES.map((p) => [p.code, p.label]));
 
 /**
  * AREA_GROUPS にスラッグが未定義で、area がどのラベルにも一致しない既知の施設。
- * 新設要否は別途判断（memory: area-data-bug-2026-08-29 の未解決12件）。
- * ここに無い施設で不一致が出たらデータ更新ミスなので落とす。
+ * 2026-10-06 に未解決12件をすべて振り分けて空にした。ここに無い施設で不一致が出たらデータ更新ミスなので落とす。
  */
-const KNOWN_AREA_GAPS = new Set([424, 430, 431, 432, 471, 472, 478, 482, 484, 486, 487, 493]);
+const KNOWN_AREA_GAPS = new Set<number>([]);
 
 /** 画像が3枚未満と分かっている既知の施設 */
 const KNOWN_FEW_IMAGES = new Set([216, 234, 236]);

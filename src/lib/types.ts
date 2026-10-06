@@ -395,6 +395,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ishikawa: [
     { slug: 'kanazawa', label: '金沢', cities: ['金沢市', '野々市市'] },
     { slug: 'komatsu', label: '小松', cities: ['小松市'] },
+    { slug: 'other', label: 'その他', cities: ['白山市', '羽咋市'] },
   ],
   fukui: [
     { slug: 'fukui-city', label: '福井市', cities: ['福井市'] },
@@ -460,7 +461,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   shimane: [
     { slug: 'matsue', label: '松江', cities: ['松江市'] },
     { slug: 'izumo', label: '出雲', cities: ['出雲市'] },
-    { slug: 'iwami', label: '石見', cities: ['益田市', '浜田市'] },
+    { slug: 'iwami', label: '石見', cities: ['益田市', '浜田市', '邑智郡邑南町'] },
   ],
   okayama: [
     { slug: 'okayama-city', label: '岡山市', cities: ['岡山市'] },
@@ -470,15 +471,19 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   hiroshima: [
     { slug: 'hiroshima-city', label: '広島市', cities: ['広島市'] },
     { slug: 'kure', label: '呉', cities: ['呉市'] },
+    { slug: 'fukuyama', label: '福山', cities: ['福山市'] },
+    { slug: 'other', label: 'その他', cities: ['山県郡安芸太田町', '山県郡北広島町'] },
   ],
   yamaguchi: [
     { slug: 'yamaguchi-city', label: '山口市', cities: ['山口市'] },
+    { slug: 'shimonoseki', label: '下関', cities: ['下関市'] },
     { slug: 'other', label: 'その他', cities: ['熊毛郡平生町', '山陽小野田市', '周南市'] },
   ],
   tokushima: [
     { slug: 'other', label: 'その他', cities: ['名西郡神山町', '三好市'] },
   ],
   kagawa: [
+    { slug: 'takamatsu', label: '高松', cities: ['高松市'] },
     { slug: 'seisan', label: '西讃', cities: ['観音寺市', '三豊市'] },
     { slug: 'shodoshima', label: '小豆島', cities: ['小豆郡土庄町'] },
   ],
@@ -488,6 +493,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   kochi: [
     { slug: 'kochi-city', label: '高知市', cities: ['高知市'] },
     { slug: 'niyodogawa', label: '仁淀川', cities: ['吾川郡仁淀川町', '吾川郡いの町'] },
+    { slug: 'hata', label: '幡多', cities: ['幡多郡大月町'] },
   ],
   fukuoka: [
     { slug: 'fukuoka-city', label: '福岡市（天神・中洲）', cities: ['福岡市中央区', '福岡市南区', '福岡市博多区', '福岡市早良区'] },
@@ -496,11 +502,13 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ],
   saga: [
     { slug: 'saga-city', label: '佐賀市', cities: ['佐賀市'] },
+    { slug: 'other', label: 'その他', cities: ['武雄市'] },
   ],
   nagasaki: [
     { slug: 'nagasaki-city', label: '長崎市', cities: ['長崎市'] },
     { slug: 'shimabara', label: '島原', cities: ['南島原市'] },
     { slug: 'sasebo', label: '佐世保', cities: ['佐世保市'] },
+    { slug: 'other', label: 'その他', cities: ['諫早市'] },
   ],
   kumamoto: [
     { slug: 'kumamoto-city', label: '熊本市', cities: ['熊本市'] },
@@ -522,6 +530,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   okinawa: [
     { slug: 'naha', label: '那覇', cities: ['那覇市'] },
     { slug: 'yanbaru', label: 'やんばる', cities: ['国頭郡大宜味村'] },
+    { slug: 'onna', label: '恩納村', cities: ['国頭郡恩納村'] },
   ],
 };
 
