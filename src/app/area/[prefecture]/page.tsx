@@ -76,7 +76,7 @@ const DEFAULT_SAUNAKO_COMMENT = 'このエリアの個室サウナをまとめ�
 const AREA_META: Record<string, { title: string; description: string }> = {
   hokkaido: {
     title: '北海道の個室・プライベートサウナ一覧｜札幌・千歳の貸切施設を比較 | サウナ子',
-    description: '北海道・札幌の個室サウナ・プライベートサウナ全16施設を比較。BORO SAPPORO・SAUNA OOO・solosなど札幌エリアの人気施設から、十勝・旭川の大自然サウナまで網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
+    description: '北海道・札幌の個室サウナ・プライベートサウナを比較。BORO SAPPORO・SAUNA OOO・solosなど札幌エリアの人気施設から、十勝・旭川の大自然サウナまで網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
   },
   aomori: {
     title: '青森の個室・プライベートサウナ一覧｜青森市・八戸の施設を比較 | サウナ子',
@@ -168,7 +168,7 @@ const AREA_META: Record<string, { title: string; description: string }> = {
   },
   aichi: {
     title: '愛知の個室・プライベートサウナ一覧｜名古屋のプライベートサウナを比較 | サウナ子',
-    description: '愛知・名古屋の個室サウナ・プライベートサウナ全14施設を比較。S+（エスプラス）・LOCA THE CLASS・SAUNA MONKEYなど名古屋駅・栄エリアを中心に、刈谷・豊田の人気施設も網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
+    description: '愛知・名古屋の個室サウナ・プライベートサウナを比較。S+（エスプラス）・LOCA THE CLASS・SAUNA MONKEYなど名古屋駅・栄エリアを中心に、刈谷・豊田の人気施設も網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
   },
   shiga: {
     title: '滋賀の個室・プライベートサウナ一覧｜琵琶湖ビューの施設を比較 | サウナ子',
@@ -184,7 +184,7 @@ const AREA_META: Record<string, { title: string; description: string }> = {
   },
   hyogo: {
     title: '兵庫の個室・プライベートサウナ一覧｜神戸・三宮の施設を比較 | サウナ子',
-    description: '兵庫・神戸の個室サウナ・プライベートサウナ全15施設を比較。XG SAUNA・Prus Sauna姫路・minimal SAUNAなど神戸三宮・姫路・西宮エリアの人気施設を網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
+    description: '兵庫・神戸の個室サウナ・プライベートサウナを比較。XG SAUNA・Prus Sauna姫路・minimal SAUNAなど神戸三宮・姫路・西宮エリアの人気施設を網羅。料金・水風呂・ロウリュ・カップルOKなど設備で絞り込み検索。',
   },
   nara: {
     title: '奈良の個室・プライベートサウナ一覧｜カップルOK・貸切サウナを比較 | サウナ子',
@@ -232,7 +232,7 @@ const AREA_META: Record<string, { title: string; description: string }> = {
   },
   fukuoka: {
     title: '福岡の個室・プライベートサウナ一覧｜博多・天神・久留米の貸切サウナを比較 | サウナ子',
-    description: '福岡の個室サウナ・プライベートサウナ全14施設を徹底比較。天神・博多のSAUNA OOO・SAUNA Giraffe、久留米のプライベートサウナ アメノチハレ、小倉TOTONOIなど九州エリアの人気施設を網羅。料金・水風呂・セルフロウリュ・カップルOKなど設備で絞り込み検索。',
+    description: '福岡の個室サウナ・プライベートサウナを徹底比較。天神・博多のSAUNA OOO・SAUNA Giraffe、久留米のプライベートサウナ アメノチハレ、小倉TOTONOIなど九州エリアの人気施設を網羅。料金・水風呂・セルフロウリュ・カップルOKなど設備で絞り込み検索。',
   },
   saga: {
     title: '佐賀の個室・プライベートサウナ一覧｜嬉野温泉エリアの施設を比較 | サウナ子',

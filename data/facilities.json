@@ -36555,5 +36555,111 @@
     "openedAt": "2026-09-19",
     "closedAt": null,
     "slotType": "free"
+  },
+  {
+    "id": 499,
+    "slug": "s-laps-toyohashi",
+    "name": "S-Laps 〜旅するサウナ〜",
+    "prefecture": "aichi",
+    "prefectureLabel": "愛知県",
+    "city": "豊橋市",
+    "area": "三河・知多",
+    "address": "愛知県豊橋市新栄町字鳥畷60",
+    "nearestStation": "豊橋駅",
+    "walkMinutes": 21,
+    "priceMin": 9900,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": false,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": true
+    },
+    "businessHours": "6:00〜24:00（120分制・部屋ごとに時間枠あり）",
+    "holidays": "年末年始",
+    "website": "https://www.instagram.com/slaps_toyohashi/",
+    "phone": "",
+    "bookingUrl": "https://s-laps.hacomono.jp/reserve/schedule/1/1/",
+    "amenities": [
+      "パウダールーム",
+      "ペットボトル飲料",
+      "サービスドリンク",
+      "レンタル水着",
+      "Wi-Fi",
+      "駐車場"
+    ],
+    "note": "2026年8月19日オープン。グリム・HAMAM・SNOWの完全個室3室で、男女同室可。料金は120分で平日デイ9,900円・平日ナイト11,000円・休日14,300円（2名まで。3名は+1,100円、4名は+2,200円、アロマは+500円）。予約は予約サイトのみ・利用日の1か月前から・クレジットカード決済（会員登録が必要）。公式サイトはなく、情報はInstagramとLINE公式で発信。水風呂とセルフロウリュの有無は公式発信で未確認。",
+    "images": [
+      "/facilities/499-0.webp",
+      "/facilities/499-1.webp",
+      "/facilities/499-2.webp"
+    ],
+    "lat": 34.7652898,
+    "lng": 137.3680503,
+    "description": "愛知県豊橋市にある完全個室のプライベートサウナ。2026年8月オープンで、テーマの異なる「グリム」「HAMAM」「SNOW」の3室を120分貸切で使える。豊橋エリア初の男女同室可の個室サウナで、最大4名まで利用可能。パウダールーム・レンタル水着・ドリンク付き。豊橋駅から徒歩約21分、駐車場あり。",
+    "saunakoCommentShort": "扉の先は3つの世界！豊橋の旅するサウナだよ!",
+    "saunakoCommentLong": "豊橋に2026年8月にオープンした完全個室サウナだよ！「グリム」「HAMAM」「SNOW」っていう雰囲気の違う3つの部屋から選べて、120分まるごと貸切で使えるの。男女で一緒に入れるのは豊橋だと初めてなんだって。ドリンクやレンタル水着も料金に入ってるから、手ぶらで行けるのが嬉しいね！",
+    "updatedAt": "2026-10-13",
+    "verifiedAt": "2026-10-13",
+    "plans": [
+      {
+        "name": "120分 平日デイタイム（2名まで）",
+        "price": 9900,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "120分 平日ナイトタイム（2名まで）",
+        "price": 11000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "120分 休日（2名まで）",
+        "price": 14300,
+        "duration": 120,
+        "capacity": 2
+      }
+    ],
+    "timeSlots": [
+      {
+        "label": "グリム",
+        "startTimes": [
+          "6:00",
+          "9:30",
+          "13:00",
+          "16:30",
+          "20:00"
+        ]
+      },
+      {
+        "label": "HAMAM",
+        "startTimes": [
+          "6:30",
+          "10:00",
+          "13:30",
+          "17:00",
+          "20:30"
+        ]
+      },
+      {
+        "label": "SNOW",
+        "startTimes": [
+          "7:00",
+          "10:30",
+          "14:00",
+          "17:30",
+          "21:00"
+        ],
+        "note": "各枠120分。2026年9月11日からの時間枠（公式Instagram）"
+      }
+    ],
+    "openedAt": "2026-08-19",
+    "closedAt": null,
+    "slotType": "fixed"
   }
 ]

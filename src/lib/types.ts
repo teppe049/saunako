@@ -437,7 +437,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ],
   aichi: [
     { slug: 'nagoya-sakae', label: '名古屋・栄', cities: ['名古屋市', '名古屋市中村区', '名古屋市中区', '名古屋市港区'] },
-    { slug: 'mikawa-chita', label: '三河・知多', cities: ['刈谷市', '岡崎市', '常滑市', '蒲郡市'] },
+    { slug: 'mikawa-chita', label: '三河・知多', cities: ['刈谷市', '岡崎市', '常滑市', '蒲郡市', '豊橋市'] },
     { slug: 'owari', label: '尾張', cities: ['岩倉市', '一宮市'] },
   ],
   kyoto: [
