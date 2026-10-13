@@ -3,6 +3,7 @@
  * X投稿プレビュー
  * Usage: node scripts/preview-images.mjs                ← 未投稿ドラフト全部
  *        node scripts/preview-images.mjs week           ← 今週分（月〜日）
+ *        node scripts/preview-images.mjs next           ← 来週分（月〜日）
  *        node scripts/preview-images.mjs 2026-04-02     ← 指定日
  *        node scripts/preview-images.mjs 4 27 60        ← 施設ID指定（画像のみ）
  */
@@ -64,6 +65,7 @@ let filterLabel = "";
 const isIdMode = args.length > 0 && /^\d+$/.test(args[0]) && args[0].length < 5;
 const isDateMode = args.length > 0 && /^\d{4}-\d{2}-\d{2}$/.test(args[0]);
 const isWeekMode = args[0] === "week";
+const isNextMode = args[0] === "next";
 
 if (isIdMode) {
   for (const id of args) {
@@ -79,16 +81,17 @@ if (isIdMode) {
   filterLabel = `施設ID: ${args.join(", ")}`;
 } else {
   const all = parseDrafts().filter((p) => !p.done);
-  if (isWeekMode) {
+  if (isWeekMode || isNextMode) {
     const now = new Date();
     const jst = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
     const day = jst.getDay() || 7;
-    const mon = new Date(jst); mon.setDate(jst.getDate() - day + 1);
+    const offset = isNextMode ? 7 : 0;
+    const mon = new Date(jst); mon.setDate(jst.getDate() - day + 1 + offset);
     const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
     const monStr = mon.toISOString().slice(0, 10);
     const sunStr = sun.toISOString().slice(0, 10);
     posts = all.filter((p) => p.date >= monStr && p.date <= sunStr);
-    filterLabel = `今週 (${monStr} 〜 ${sunStr})`;
+    filterLabel = `${isNextMode ? "来週" : "今週"} (${monStr} 〜 ${sunStr})`;
   } else if (isDateMode) {
     posts = all.filter((p) => p.date === args[0]);
     filterLabel = args[0];

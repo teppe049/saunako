@@ -27,7 +27,9 @@ $ARGUMENTS - 分析対象期間（例: "先週", "2/1-2/28"）、フォーカス
 
 **siteUrl**: `sc-domain:saunako.jp`
 
-**重要**: Search Console は Google 検索のみ計測。サウナ子のOrganic Searchの約90%はBing経由（3/27発見）のため、SC のデータだけで判断しないこと。GA4 の検索エンジン別内訳を必ず確認する。
+**重要**: Search Console は Google 検索のみ計測。Yahoo!（Google検索を利用）・Bing は SC に出ないため、GA4 の検索エンジン別内訳を必ず確認する（2026-10時点の Organic は google 約82% / yahoo 約12% / bing 約5%。3〜6月の「Google消滅期」はBingが大半だった）。
+
+**GSC データが空（0件）の場合**: GSC削除ツールの誤操作など、Googleから消えている可能性がある（3/10〜7/2の消滅事件の真因）。まず GSC の「削除」タブと `index_inspect` でインデックス状態を確認し、その上でGA4データのみで分析を進める。
 
 ### 2. 現状分析（Check）
 
