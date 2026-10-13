@@ -67,6 +67,23 @@ export function getAreaMinPrices(prefectureCode: string): Record<string, number>
   return mins;
 }
 
+/**
+ * サブエリアごとの最短利用プランの平均額（円・四捨五入）。priceMin は duration 分の室料なので、
+ * 要問合せ（0円）と宿泊など duration=0 の施設は除く。施設がなければキーを持たない
+ */
+export function getAreaAvgPrices(prefectureCode: string): Record<string, number> {
+  const areas = AREA_GROUPS[prefectureCode];
+  if (!areas) return {};
+  const avgs: Record<string, number> = {};
+  for (const area of areas) {
+    const prices = facilities
+      .filter((f) => isOpen(f) && f.prefecture === prefectureCode && f.area === area.label && f.priceMin > 0 && f.duration > 0)
+      .map((f) => f.priceMin);
+    if (prices.length > 0) avgs[area.slug] = Math.round(prices.reduce((sum, p) => sum + p, 0) / prices.length);
+  }
+  return avgs;
+}
+
 export function searchFacilities(params: {
   prefecture?: string | string[];
   area?: string;

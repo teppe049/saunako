@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { getFacilitiesByPrefecture, getAllPrefectures, getAreaFacilityCounts, getAreaMinPrices, getPrefectureFacilityCounts } from '@/lib/facilities';
+import { getFacilitiesByPrefecture, getAllPrefectures, getAreaAvgPrices, getAreaFacilityCounts, getAreaMinPrices, getPrefectureFacilityCounts } from '@/lib/facilities';
 import { getAllArticles, getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
-import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
+import { PREFECTURES, AREA_GROUPS, REGION_GROUPS, PREFECTURE_GUIDES, Facility, type AreaFaqContext } from '@/lib/types';
 import Footer from '@/components/Footer';
 import AskAI from '@/components/AskAI';
 import dynamic from 'next/dynamic';
@@ -383,7 +383,15 @@ function generateFaqData(facilities: Facility[], areaLabel: string, prefecture?:
 
   // 都道府県固有の追加FAQをマージ（検索意図に刺さるQ&Aで情報量とCTRを底上げ）
   const extraFaqs = prefecture ? PREFECTURE_GUIDES[prefecture]?.extraFaqs ?? [] : [];
-  faqs.push(...extraFaqs);
+  const ctx: AreaFaqContext = {
+    minPrice: comparable.length > 0 ? Math.min(...comparable.map(f => f.priceMin)) : null,
+    areaAvgPrices: prefecture ? getAreaAvgPrices(prefecture) : {},
+    areaCounts: prefecture ? getAreaFacilityCounts(prefecture) : {},
+  };
+  faqs.push(...extraFaqs.map(({ question, answer }) => ({
+    question,
+    answer: typeof answer === 'function' ? answer(ctx) : answer,
+  })));
 
   return faqs;
 }

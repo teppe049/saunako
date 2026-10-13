@@ -278,9 +278,20 @@ export interface AreaGuidePanel {
   description: string;
 }
 
+/** 都道府県FAQの answer を組み立てるためのデータ（掲載中の施設から算出） */
+export interface AreaFaqContext {
+  /** 都道府県内の最安 priceMin（0=要問合せ・duration=0 を除く） */
+  minPrice: number | null;
+  /** サブエリア slug → 最短利用プランの平均額（円・四捨五入） */
+  areaAvgPrices: Record<string, number>;
+  /** サブエリア slug → 掲載施設数 */
+  areaCounts: Record<string, number>;
+}
+
 export interface PrefectureGuide {
   areaGuides: AreaGuidePanel[];
-  extraFaqs: { question: string; answer: string }[];
+  /** answer に料金・件数を含めるときは関数にしてデータから組み立てる（直書きは料金改定で古くなる） */
+  extraFaqs: { question: string; answer: string | ((ctx: AreaFaqContext) => string) }[];
   /** サウナ子コメントに続けて出す、エリア選びのTips（任意） */
   tipsComment?: string;
   /** エリア別ガイドの直後に出す目的別の記事導線（任意）。slug は content/articles のファイル名 */
@@ -539,6 +550,17 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
   ],
 };
 
+// 1〜2施設の平均は1施設の料金に引きずられ「エリアの相場」と呼べないため、比較対象から外す
+const MIN_FACILITIES_FOR_AREA_AVG = 3;
+
+/** 東京FAQ用: サブエリアを平均額の安い順に並べる */
+function rankTokyoAreasByAvg({ areaAvgPrices, areaCounts }: AreaFaqContext): { label: string; avg: number }[] {
+  return (AREA_GROUPS.tokyo ?? [])
+    .filter((a) => areaAvgPrices[a.slug] && (areaCounts[a.slug] ?? 0) >= MIN_FACILITIES_FOR_AREA_AVG)
+    .map((a) => ({ label: a.label, avg: areaAvgPrices[a.slug] }))
+    .sort((a, b) => a.avg - b.avg);
+}
+
 /**
  * 都道府県固有のエリアガイド・FAQ。CTRの低い高impページから順に追加していく。
  * areaGuides の slug は AREA_GROUPS[prefecture] の slug と一致させること
@@ -568,11 +590,24 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
       },
       {
         question: '都内で安い個室サウナはどこ？1人いくらから入れる？',
-        answer: '東京の個室サウナは1人990円台から利用できます。下北沢・世田谷エリアは平均4,479円と都内で最も手頃で、Sauna3（サウナサン）やHUBHUB 下北沢などが該当します。平日日中の枠や60分の短時間プランを選ぶとさらに安くなるため、各施設ページの料金プランで最短利用時間と単価を比較するのがおすすめです。',
+        answer: (ctx) => {
+          const ranked = rankTokyoAreasByAvg(ctx);
+          const cheapest = ranked[0];
+          return [
+            ctx.minPrice ? `東京の個室サウナは${ctx.minPrice.toLocaleString()}円から利用できます（最短利用プランの料金。利用時間は施設ごとに異なります）。` : '',
+            cheapest ? `エリア別では${cheapest.label}が平均${cheapest.avg.toLocaleString()}円と都内で最も手頃です。` : '',
+            '平日日中の枠や60分の短時間プランを選ぶとさらに安くなるため、各施設ページの料金プランで最短利用時間と単価を比較するのがおすすめです。',
+          ].join('');
+        },
       },
       {
         question: '東京の個室サウナの料金相場はエリアでどのくらい違う？',
-        answer: 'エリアによって倍以上の差があります。各施設の最短利用プランで比べると、下北沢・世田谷が平均4,479円と最も手頃で、池袋・赤羽が5,700円、銀座・築地が7,370円、渋谷・恵比寿・代官山が9,838円、六本木・麻布は12,184円と高価格帯です。予算重視なら世田谷・池袋・銀座、設備や雰囲気重視なら渋谷・六本木を選ぶと失敗しません。',
+        answer: (ctx) => {
+          const ranked = rankTokyoAreasByAvg(ctx);
+          if (ranked.length < 2) return 'エリアによって料金に差があります。各施設ページの料金プランで最短利用時間と単価を比較してください。';
+          const list = ranked.map((a) => `${a.label}が${a.avg.toLocaleString()}円`).join('、');
+          return `エリアによって大きな差があります。各施設の最短利用プランの平均で比べると、安い順に${list}です（利用時間は施設ごとに異なります）。予算重視なら上位のエリア、設備や雰囲気重視なら渋谷・六本木を選ぶと失敗しません。`;
+        },
       },
     ],
     tipsComment: '💡 東京はエリアで色が違うの。六本木・麻布はラグジュアリー系の激戦区、下北沢・世田谷はコスパ最強、渋谷・恵比寿は外気浴付きのデート向き、新宿・池袋は駅チカで仕事帰り向き。予算重視なら世田谷、雰囲気重視なら渋谷から見てみて！',
