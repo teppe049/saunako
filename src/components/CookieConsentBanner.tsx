@@ -17,8 +17,15 @@ export default function CookieConsentBanner() {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (!stored) {
-        // 少し遅延させてフェードインをスムーズに
-        const timer = setTimeout(() => setVisible(true), 500);
+        // 読み込み直後はメインスレッドが詰まっており、バナーへのタップが入力待ちで遅くなる
+        // （2026-10 モバイルINPの不良操作で最多）。アイドルになってから出す。
+        // requestIdleCallback の無い Safari では固定の遅延で代用する
+        const show = () => setVisible(true);
+        if ('requestIdleCallback' in window) {
+          const idleId = window.requestIdleCallback(show, { timeout: 4000 });
+          return () => window.cancelIdleCallback(idleId);
+        }
+        const timer = setTimeout(show, 2500);
         return () => clearTimeout(timer);
       }
     } catch {

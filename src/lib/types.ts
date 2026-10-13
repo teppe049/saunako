@@ -285,6 +285,11 @@ export interface PrefectureGuide {
   tipsComment?: string;
   /** エリア別ガイドの直後に出す目的別の記事導線（任意）。slug は content/articles のファイル名 */
   featuredArticles?: { slug: string; lead: string }[];
+  /**
+   * 「カップルで安く入れる個室サウナ」セクションを出すか（任意）。
+   * 効果測定を成立させるため、検索意図が確認できた都道府県から1つずつ有効にする
+   */
+  coupleBudgetPicks?: { moreArticleSlug?: string };
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
@@ -579,6 +584,9 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
         lead: 'カップルで入れる施設だけを安い順に比較。水着の要否や予約のコツもまとめたよ。',
       },
     ],
+    // 「個室サウナ 都内 カップル」(8.3位・132imp・CTR0.8%)「個室サウナ 都内 安い」(10.1位・89imp)が
+    // area/tokyo に着地しているのに、本文に答えが無かった（2026-10-05〜11）。デート記事は同クエリ18位で受け皿にならない
+    coupleBudgetPicks: { moreArticleSlug: 'tokyo-date-private-sauna-guide' },
   },
   // 京都: area/kyoto が299imp/CTR0.67%と最低水準。「kudochi sauna 京都」「クドチ サウナ 京都」等の
   // 指名検索（計139imp・CTR0%）が施設ページでなくこのエリアページに着地しているため、

@@ -12,6 +12,7 @@ import AskAI from '@/components/AskAI';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from './AreaFilters';
+import CoupleBudgetPicks from './CoupleBudgetPicks';
 
 interface PageProps {
   params: Promise<{ prefecture: string }>;
@@ -267,7 +268,8 @@ function generateAreaStats(facilities: Facility[]) {
   const total = facilities.length;
   if (total === 0) return null;
 
-  const pricedFacilities = facilities.filter(f => f.priceMin > 0);
+  // priceMin は「duration 分の室料」。宿泊など duration=0 の施設を混ぜると相場が実態から外れるため除外（FAQと同じ扱い）
+  const pricedFacilities = facilities.filter(f => f.priceMin > 0 && f.duration > 0);
   const avgPrice = pricedFacilities.length > 0
     ? Math.round(pricedFacilities.reduce((sum, f) => sum + f.priceMin, 0) / pricedFacilities.length / 100) * 100
     : null;
@@ -411,6 +413,10 @@ export default async function AreaPage({ params }: PageProps) {
     const article = publishedArticles.find((a) => a.slug === slug);
     return article ? [{ article, lead }] : [];
   });
+  const coupleBudgetConfig = prefectureGuide?.coupleBudgetPicks;
+  const coupleBudgetArticle = coupleBudgetConfig?.moreArticleSlug
+    ? publishedArticles.find((a) => a.slug === coupleBudgetConfig.moreArticleSlug)
+    : undefined;
 
   const areaStats = generateAreaStats(facilities);
   const neighborPrefectures = getNeighborPrefectures(prefecture);
@@ -634,6 +640,14 @@ export default async function AreaPage({ params }: PageProps) {
           </section>
         )}
 
+        {coupleBudgetConfig && (
+          <CoupleBudgetPicks
+            facilities={facilities}
+            prefectureLabel={prefData.label}
+            moreArticle={coupleBudgetArticle && { slug: coupleBudgetArticle.slug, title: coupleBudgetArticle.title }}
+          />
+        )}
+
         {/* FAQ Section */}
         {(() => {
           const faqs = faqItems;
@@ -735,7 +749,7 @@ export default async function AreaPage({ params }: PageProps) {
               </div>
               <p className="text-sm text-text-secondary mt-5 leading-relaxed">
                 {prefData.label}には現在{areaStats.total}件の個室サウナが掲載されています。
-                {areaStats.avgPrice && `料金の相場は1時間あたり約${areaStats.avgPrice.toLocaleString()}円で、最安${areaStats.minPrice?.toLocaleString()}円から利用できます。`}
+                {areaStats.avgPrice && `料金の相場は各施設の最短利用プランの平均で約${areaStats.avgPrice.toLocaleString()}円（利用時間は施設ごとに異なります）で、最安${areaStats.minPrice?.toLocaleString()}円から利用できます。`}
                 {areaStats.coupleOkCount > 0 && `カップルで利用できる施設は${areaStats.coupleOkCount}件あります。`}
                 {areaStats.waterBathCount > 0 && `水風呂を完備している施設は${areaStats.waterBathCount}件（${areaStats.waterBathRate}%）です。`}
               </p>
