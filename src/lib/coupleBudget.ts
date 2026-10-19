@@ -28,8 +28,9 @@ export function cheapestCouplePlan(facility: Facility): { price: number; duratio
     .filter((p) => p.price > 0 && p.duration > 0 && p.capacity >= COUPLE_PEOPLE)
     .map((p) => ({ price: p.price, duration: p.duration }));
 
-  // plans が未整備の施設は priceMin/duration/capacity で代用する
-  if (candidates.length === 0 && facility.priceMin > 0 && facility.duration > 0 && facility.capacity >= COUPLE_PEOPLE) {
+  // plans が未整備の施設だけ priceMin/duration/capacity で代用する。
+  // plans があって2名以上のプランが無い施設（1名料金しか分からない等）で代用すると、1名料金を2人の総額として出してしまう
+  if ((facility.plans ?? []).length === 0 && facility.priceMin > 0 && facility.duration > 0 && facility.capacity >= COUPLE_PEOPLE) {
     candidates.push({ price: facility.priceMin, duration: facility.duration });
   }
   if (candidates.length === 0) return null;

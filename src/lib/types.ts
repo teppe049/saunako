@@ -300,7 +300,11 @@ export interface PrefectureGuide {
    * 「カップルで安く入れる個室サウナ」セクションを出すか（任意）。
    * 効果測定を成立させるため、検索意図が確認できた都道府県から1つずつ有効にする
    */
-  coupleBudgetPicks?: { moreArticleSlug?: string };
+  coupleBudgetPicks?: {
+    moreArticleSlug?: string;
+    /** 見出し（任意）。対象が少なく「安く入れる」と言えない県で、全件を料金順に並べるだけのときに差し替える */
+    heading?: string;
+  };
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
@@ -622,6 +626,16 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
     // 「個室サウナ 都内 カップル」(8.3位・132imp・CTR0.8%)「個室サウナ 都内 安い」(10.1位・89imp)が
     // area/tokyo に着地しているのに、本文に答えが無かった（2026-10-05〜11）。デート記事は同クエリ18位で受け皿にならない
     coupleBudgetPicks: { moreArticleSlug: 'tokyo-date-private-sauna-guide' },
+  },
+  // 千葉: 東京の次の横展開先。「千葉 プライベートサウナ カップル」5.3位・71imp・CTR7%、「千葉 サウナ カップル」9.7位・61imp・クリック0
+  // （2026-10-04〜17）がすべて area/chiba に着地。男女で一緒に入れる施設は4件だけで館山の2万円台を含むため、「安く入れる」とは言わず全件を料金順に並べる
+  chiba: {
+    areaGuides: [],
+    extraFaqs: [],
+    coupleBudgetPicks: {
+      moreArticleSlug: 'chiba-private-sauna-guide',
+      heading: '千葉県でカップル（男女2人）で一緒に入れる個室サウナ',
+    },
   },
   // 京都: area/kyoto が299imp/CTR0.67%と最低水準。「kudochi sauna 京都」「クドチ サウナ 京都」等の
   // 指名検索（計139imp・CTR0%）が施設ページでなくこのエリアページに着地しているため、

@@ -653,6 +653,7 @@ export default async function AreaPage({ params }: PageProps) {
             facilities={facilities}
             prefectureLabel={prefData.label}
             moreArticle={coupleBudgetArticle && { slug: coupleBudgetArticle.slug, title: coupleBudgetArticle.title }}
+            heading={coupleBudgetConfig.heading}
           />
         )}
 

@@ -40,6 +40,11 @@ describe('cheapestCouplePlan', () => {
     expect(cheapestCouplePlan(facility({ priceMin: 6000, duration: 90, capacity: 2 }))).toEqual({ price: 6000, duration: 90 });
   });
 
+  it('plans に1名プランしか無ければ、施設の定員が2名以上でも priceMin で代用しない', () => {
+    const plans = [{ name: '70分 1名', price: 3400, duration: 70, capacity: 1 }];
+    expect(cheapestCouplePlan(facility({ plans, priceMin: 3400, duration: 70, capacity: 4 }))).toBeNull();
+  });
+
   it('2人で入れない・料金不明なら null', () => {
     expect(cheapestCouplePlan(facility({ priceMin: 3000, duration: 60, capacity: 1 }))).toBeNull();
     expect(cheapestCouplePlan(facility({ priceMin: 3000, duration: 0, capacity: 2 }))).toBeNull();

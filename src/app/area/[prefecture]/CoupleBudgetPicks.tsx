@@ -10,15 +10,16 @@ interface Props {
   prefectureLabel: string;
   /** 続きを読む記事（任意） */
   moreArticle?: { slug: string; title: string };
+  heading?: string;
 }
 
-export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArticle }: Props) {
+export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArticle, heading }: Props) {
   const picks = coupleBudgetPicks(facilities, PICK_LIMIT);
   if (picks.length === 0) return null;
 
   return (
     <section className="mb-8">
-      <h2 className="text-xl font-bold text-text-primary mb-2">{prefectureLabel}でカップル（男女2人）で安く入れる個室サウナ</h2>
+      <h2 className="text-xl font-bold text-text-primary mb-2">{heading ?? `${prefectureLabel}でカップル（男女2人）で安く入れる個室サウナ`}</h2>
       <p className="text-sm text-text-secondary leading-relaxed mb-4">
         男女で利用できる施設を、2人で入れるいちばん安いプランの料金順に並べたよ。利用時間は施設ごとに違うから、時間とセットで見てね。
       </p>
