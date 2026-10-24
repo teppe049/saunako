@@ -36721,5 +36721,103 @@
     "openedAt": "2026-08-19",
     "closedAt": null,
     "slotType": "fixed"
+  },
+  {
+    "id": 500,
+    "slug": "sauna-mother-roppongi",
+    "name": "SAUNA MOTHER",
+    "prefecture": "tokyo",
+    "prefectureLabel": "東京都",
+    "city": "港区",
+    "area": "六本木・麻布",
+    "address": "東京都港区六本木7-10-30 Keepers六本木 B1F",
+    "nearestStation": "六本木駅",
+    "walkMinutes": 4,
+    "priceMin": 8500,
+    "duration": 120,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": "15",
+      "selfLoyly": true,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "土日 8:00〜23:30／平日 10:00〜23:30（120分の枠制）",
+    "holidays": "公式サイトに記載なし",
+    "website": "https://saunamother.jp/",
+    "phone": "",
+    "bookingUrl": "https://reserve.saunamother.jp/reserve/?lang=ja",
+    "amenities": [
+      "ボトルウォーター",
+      "レンタル水着（有料）",
+      "サウナハット（有料）"
+    ],
+    "note": "2026年10月24日グランドオープン。1〜4名の一組貸切で、男女利用可（水着レンタルあり）。料金は120分で1名8,500円・2名12,000円・3名15,000円・4名20,000円（税込・部屋あたり）。予約は公式の予約サイトのみで会員登録とクレジットカード事前決済が必要、前日までキャンセル無料・当日は100%。営業時間は予約サイトの枠（土日8:00〜・平日10:00〜、最終枠は23:30終了）から確認したもので、公式の明記はない。外気浴スペースは公式で確認できず。画像はオープン前に公開されたCG。",
+    "images": [
+      "/facilities/500-0.webp"
+    ],
+    "lat": 35.664066,
+    "lng": 139.728683,
+    "description": "六本木・国立新美術館の近くにある一組貸切の個室サウナ。2026年10月オープン。「母の胎内」をテーマにした赤い空間で、85℃・湿度40%の中高温多湿サウナはセルフロウリュ可能。水深約80cmの15℃の水風呂と、揺れの速さを3段階で選べる「マザーソファ」で休憩できる。1〜4名で使え、男女利用も可能。大江戸線六本木駅7番出口から徒歩4分。",
+    "saunakoCommentShort": "揺れるソファで整う、六本木の胎内サウナ!",
+    "saunakoCommentLong": "六本木に2026年10月にオープンした一組貸切の個室サウナだよ！「お母さんのおなかの中」がテーマの真っ赤な空間で、サウナは85℃・湿度40%のしっとり系、セルフロウリュもできるの。水風呂は15℃で水深80cmあるから肩までしっかり浸かれるよ。休憩はゆらゆら揺れるマザーソファで、揺れの速さを3段階から選べるんだって。男女で一緒に入れて、2人なら120分12,000円だよ。",
+    "updatedAt": "2026-10-24",
+    "verifiedAt": "2026-10-24",
+    "plans": [
+      {
+        "name": "120分（1名）",
+        "price": 8500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分（2名）",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "120分（3名）",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "120分（4名）",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": [
+      {
+        "label": "土日",
+        "startTimes": [
+          "8:00",
+          "10:30",
+          "14:00",
+          "16:30",
+          "19:00",
+          "21:30"
+        ]
+      },
+      {
+        "label": "平日",
+        "startTimes": [
+          "10:00",
+          "12:30",
+          "16:00",
+          "19:00",
+          "21:30"
+        ],
+        "note": "各枠120分。2026年10月24日〜30日の予約サイトの枠から確認"
+      }
+    ],
+    "openedAt": "2026-10-24",
+    "closedAt": null,
+    "slotType": "fixed"
   }
 ]

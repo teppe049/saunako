@@ -23,7 +23,8 @@ const PREFECTURE_LABELS = new Map(PREFECTURES.map((p) => [p.code, p.label]));
 const KNOWN_AREA_GAPS = new Set<number>([]);
 
 /** 画像が3枚未満と分かっている既知の施設 */
-const KNOWN_FEW_IMAGES = new Set([216, 234, 236]);
+// 500(SAUNA MOTHER)は人物なしの実写がまだ公開されておらず、オープン前のCG1枚のみ
+const KNOWN_FEW_IMAGES = new Set([216, 234, 236, 500]);
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}/;
 // openedAt は開業年しか分からない施設があるため YYYY / YYYY-MM / YYYY-MM-DD を許容（new Date() で解釈可能）
