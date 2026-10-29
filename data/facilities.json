@@ -497,8 +497,8 @@
     "address": "東京都港区赤坂",
     "nearestStation": "赤坂駅",
     "walkMinutes": 1,
-    "priceMin": 1500,
-    "duration": 55,
+    "priceMin": 3000,
+    "duration": 60,
     "capacity": 1,
     "features": {
       "waterBath": true,
@@ -509,8 +509,8 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "7:00〜24:00",
-    "holidays": "基本無休",
+    "businessHours": "12:00〜24:00",
+    "holidays": "記載なし",
     "website": "https://coubic.com/saunazoku",
     "phone": "070-1308-3729",
     "bookingUrl": null,
@@ -519,7 +519,7 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "朝ウナ2000円〜",
+    "note": "男女同時利用は可だが部屋は別々（1人用個室×4室）。延長30分1,500円。月額会員35,000円。2026-10-29に公式予約ページで料金・営業時間を確認（旧: 朝ウナ1,500円〜・7:00開店は廃止）",
     "images": [
       "/facilities/7-0.webp",
       "/facilities/7-1.webp",
@@ -531,67 +531,37 @@
     "description": "赤坂駅から徒歩1分、2,000円から利用できる都内最安級のソロサウナ。7:00〜24:00営業・基本無休で、55分のセルフロウリュ付きプランを提供。初めての個室サウナとしても気軽に立ち寄れる手頃さが魅力。",
     "saunakoCommentShort": "1500円から！都内最安級の個室サウナ",
     "saunakoCommentLong": "なんと1500円から利用できる都内最安級のプライベートサウナだよ！赤坂駅から徒歩1分で、7:00〜24:00営業だから朝ウナにも最適。55分で気軽にサクッとととのいたい人におすすめ！初めての個室サウナデビューにもいいかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-29",
     "plans": [
       {
-        "name": "朝ウナ 45分 1名 ビジター",
-        "price": 1800,
-        "duration": 45,
-        "capacity": 1
-      },
-      {
-        "name": "朝ウナ 45分 1名 会員",
-        "price": 1500,
-        "duration": 45,
-        "capacity": 1
-      },
-      {
-        "name": "通常 55分 1名 ビジター",
+        "name": "60分 1名",
         "price": 3000,
-        "duration": 55,
+        "duration": 60,
         "capacity": 1
       },
       {
-        "name": "通常 55分 1名 会員",
-        "price": 2500,
-        "duration": 55,
-        "capacity": 1
-      },
-      {
-        "name": "通常 85分 1名 ビジター",
+        "name": "90分 1名",
         "price": 4000,
-        "duration": 85,
+        "duration": 90,
         "capacity": 1
       },
       {
-        "name": "通常 85分 1名 会員",
-        "price": 3500,
-        "duration": 85,
+        "name": "120分 1名",
+        "price": 5000,
+        "duration": 120,
         "capacity": 1
       },
       {
-        "name": "レディースデー 70分 1名 ビジター",
-        "price": 3000,
-        "duration": 70,
-        "capacity": 1
+        "name": "友達限定プラン 2名",
+        "price": 11000,
+        "duration": 0,
+        "capacity": 2
       },
       {
-        "name": "レディースデー 70分 1名 会員",
-        "price": 2500,
-        "duration": 70,
-        "capacity": 1
-      },
-      {
-        "name": "レディースデー 100分 1名 ビジター",
-        "price": 4000,
-        "duration": 100,
-        "capacity": 1
-      },
-      {
-        "name": "レディースデー 100分 1名 会員",
-        "price": 3500,
-        "duration": 100,
-        "capacity": 1
+        "name": "4部屋 150分 貸切",
+        "price": 25000,
+        "duration": 150,
+        "capacity": 4
       }
     ],
     "timeSlots": [
@@ -622,7 +592,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "サウナ族｜赤坂の都内最安級ソロサウナ 1,500円〜 口コミ・予約 | サウナ子",
-    "slotType": "fixed"
+    "slotType": "fixed",
+    "verifiedAt": "2026-10-29"
   },
   {
     "id": 8,
@@ -2066,8 +2037,8 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "不明",
-    "holidays": "不明",
+    "businessHours": "8:00〜24:10",
+    "holidays": "不定休",
     "website": "https://s3cgrs.jp/",
     "phone": "",
     "bookingUrl": null,
@@ -2083,7 +2054,7 @@
       "乳液",
       "綿棒"
     ],
-    "note": "都内最安級",
+    "note": "都内最安級。2F QUICK ROOMは1名専用で冷水シャワーのみ（水風呂なし）、3F VIP ROOMは水風呂あり・同性同士のみ利用可。土日祝は+300円。セルフロウリュは公式に記載なし",
     "images": [
       "/facilities/25-0.webp",
       "/facilities/25-1.webp",
@@ -2095,7 +2066,7 @@
     "description": "Sauna3（サウナサン／サウナ3）は三軒茶屋駅から徒歩5分、2,200円から利用できる都内最安級のソロサウナ。セルフロウリュ対応で60分間一人の時間を満喫できる。初めての個室サウナや、気軽にサウナ習慣を始めたい方にうってつけの施設。",
     "saunakoCommentShort": "都内最安級！2200円からソロサウナ",
     "saunakoCommentLong": "なんと2200円から利用できる都内最安級のプライベートサウナだよ！三軒茶屋駅から徒歩5分で、60分一人でじっくり楽しめる。セルフロウリュもできて、この価格でこのクオリティはすごい！初心者にもおすすめかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-29",
     "plans": [
       {
         "name": "QUICK 60分 1名 平日",
@@ -2180,7 +2151,8 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "サウナサン｜三軒茶屋の都内最安ソロサウナ 2,200円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "verifiedAt": "2026-10-29"
   },
   {
     "id": 26,
@@ -6655,7 +6627,7 @@
       "化粧水",
       "綿棒"
     ],
-    "note": null,
+    "note": "2026-10-29: 公式の店舗一覧（西宮上ヶ原・岡山今・淀屋橋のみ）から消え、Googleマップで「閉業」表示を確認したため掲載終了。",
     "images": [
       "/facilities/78-0.webp",
       "/facilities/78-1.webp",
@@ -6667,7 +6639,7 @@
     "description": "高円寺駅徒歩5分、24時間365日営業の男性専用個室サウナ。5基の個室サウナで80-100℃の温度を自由に設定でき、日本初のフリーザーサウナ（マイナス5℃〜5℃）も3基完備。外気浴スペースもあり。",
     "saunakoCommentShort": "24時間！フリーザーサウナも体験できる",
     "saunakoCommentLong": "24時間365日いつでも使える個室サウナだよ！温度を自分で80〜100度に調整できるし、なんとマイナス5度のフリーザーサウナまであるの！外気浴スペースもあるから、ビジター利用2,480円で試してみてね！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-29",
     "plans": [
       {
         "name": "ビジター 120分 1名",
@@ -6684,7 +6656,7 @@
     ],
     "timeSlots": null,
     "openedAt": null,
-    "closedAt": null,
+    "closedAt": "2026-10-29",
     "seoTitle": "HOTTERS24高円寺｜高円寺の24時間フリーザーサウナ 990円〜 | サウナ子",
     "slotType": "free"
   },
@@ -7023,12 +6995,12 @@
     "address": "東京都渋谷区代官山町13-6",
     "nearestStation": "代官山駅",
     "walkMinutes": 4,
-    "priceMin": 20000,
-    "duration": 75,
+    "priceMin": 25000,
+    "duration": 90,
     "capacity": 6,
     "features": {
       "waterBath": true,
-      "waterBathTemp": "9",
+      "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": false,
       "coupleOk": true,
@@ -7050,7 +7022,7 @@
       "乳液",
       "歯ブラシ"
     ],
-    "note": null,
+    "note": "富士山の溶岩石を使ったマグマサウナ。水風呂は2種類の温度（公式に具体温度の記載なし）。4名までは同額、5〜6名は1名につき+10,000円。2026-10-29に公式で料金を確認（旧: 20,000円/75分・1名オフピーク3,000円のプランは掲載なし）",
     "images": [
       "/facilities/82-0.webp",
       "/facilities/82-1.webp",
@@ -7062,38 +7034,33 @@
     "description": "代官山駅徒歩2分、天然溶岩マグマ式サウナと9℃の深水風呂を備えたセミプライベート施設。プロジェクター付きシアタールームでくつろげる贅沢空間。最大6名まで利用可能で、水着着用でカップルもOK。",
     "saunakoCommentShort": "代官山のラグジュアリー溶岩サウナ",
     "saunakoCommentLong": "代官山駅から2分で行ける溶岩サウナだよ！9℃のキンキンに冷えた深い水風呂にドボンとできるし、シアタールームでプロジェクター見ながらまったりもできるの。水着OKだからカップルのサウナデートにもぴったり！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-10-29",
     "plans": [
       {
-        "name": "75分 1名 オフピーク",
-        "price": 3000,
-        "duration": 75,
-        "capacity": 1
+        "name": "和 ラグジュアリープラン 90分 4名まで",
+        "price": 25000,
+        "duration": 90,
+        "capacity": 4
       },
       {
-        "name": "120分 1名 オフピーク",
-        "price": 4500,
+        "name": "極 プレミアムプラン 120分 4名まで",
+        "price": 30000,
         "duration": 120,
-        "capacity": 1
+        "capacity": 4
       },
       {
-        "name": "75分 1名 ピーク",
-        "price": 4500,
-        "duration": 75,
-        "capacity": 1
-      },
-      {
-        "name": "120分 1名 ピーク",
-        "price": 7000,
-        "duration": 120,
-        "capacity": 1
+        "name": "皇 エンペラープラン 180分 4名まで",
+        "price": 50000,
+        "duration": 180,
+        "capacity": 4
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "Prus Sauna代官山｜代官山の溶岩マグマ式個室サウナ 3,000円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "verifiedAt": "2026-10-29"
   },
   {
     "id": 83,
