@@ -39,6 +39,7 @@
 | `node scripts/preview-images.mjs` | X投稿プレビュー（week/日付/施設ID指定可） |
 | `node scripts/check-x-weight.js` | X投稿ウェイトチェック（hook用） |
 | `node scripts/owner-report.mjs` | 施設オーナー向け送客レポート（GA4の閲覧・予約/公式/電話クリックを月別集計）。`--month YYYY-MM` / `--top N` / `--id 施設ID`で1施設の送付用。2026-09以降のみ（facility_idの登録が9/2） |
+| `node scripts/sync-suggest-data.mjs` | 検索サジェスト（`src/lib/suggest-data.json`）の施設名とエリア別件数を facilities.json から作り直す。施設の追加・閉店・エリア変更のあとに実行（`tests/closed-facilities.test.ts` がずれを検出）。駅名リストは手で正規化したものなので触らない |
 | `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数
@@ -112,6 +113,7 @@ Skills/                       # Claude Code カスタムスキル
 - **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` への301リダイレクトが `next.config.ts` に設定済み
 - **DNSはCloudflare・配信はVercel**（2026-09-06移管）: NSは `lola` / `tadeo`.ns.cloudflare.com。**全レコードDNS only（グレークラウド）を維持すること**。オレンジ雲にするとVercelのBot保護とキャッシュが壊れる。検証は `zsh scripts/verify-dns-switch.sh`（ローカルDNSはキャッシュで誤判定するため判定[7]を見る）
 - **DNSのTXTを消さない**: Search Consoleが `sc-domain:saunako.jp` で登録されており、`google-site-verification` のTXTで所有権を証明している。消すとSEO計測が止まる
+- **閉店施設は記事に残る**: `getFacilityById` は閉店施設も返すので、記事の `<FacilityCard>` は閉店後も表示される。closedAt を入れたら記事からも外す（`tests/closed-facilities.test.ts` が検出）。エリアページの `SUB_AREA_META` の件数は `{count}` / `{coupleCount}` で書き、直書きしない（`tests/sub-area-meta.test.ts`）
 - **analyticsトラッキング**: `data-track-*` 属性 + `AnalyticsTracker`（グローバルイベントデリゲーション）を使う。トラッキングのためだけにコンポーネントをクライアント化しない
 
 ## SEO運用ルール
@@ -170,10 +172,10 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 
 ## MCP 接続
 
-### GitHub MCP
-- **リポジトリ**: `owner: "teppe049"`, `repo: "saunako"`
-- GitHub 操作は **GitHub MCP を優先**（`gh` コマンドより優先）
-- Issue作成前に `search_issues` で重複チェック
+### GitHub（gh CLI）
+- **リポジトリ**: `teppe049/saunako`（**公開リポジトリ**。営業メールの下書きなど社外に出せない文書はコミットしない）
+- GitHub 操作は `gh` CLI に統一（GitHub MCPは未設定）
+- Issue作成前に `gh issue list --search` で重複チェック
 - PR作成時は `.github/PULL_REQUEST_TEMPLATE.md` を確認
 
 ### Issue 作成ルール
@@ -215,7 +217,7 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 - 独立したタスクは Task ツールで並列実行
 - QA Agent は実装完了後に必ず起動
 - 実装完了 + QA パス後は自動的に main に commit + push
-- 対応Issueは commit & push 後に GitHub MCP でクローズ（`state: closed`, `state_reason: completed`）
+- 対応Issueは commit & push 後に `gh issue close {番号} --reason completed` でクローズ
 
 **対象外**: 質問・調査のみ、設定ファイル編集のみ、単純typo修正
 
@@ -244,3 +246,11 @@ https://www.saunako.jp/facilities/{id}?utm_source=x&utm_medium=social
 - [x] テスト環境（Vitest。2026-09-02導入。コンポーネントテストが必要になったら jsdom + React Testing Library を追加）
 - [x] CI（`.github/workflows/ci.yml`: main push / PR で lint → typecheck → test → build。2026-09-02導入）
 - [ ] 認証機能
+
+## ドキュメントとコードの食い違い
+
+- ドキュメントと既存のコードが食い違うときはコードの書き方に従い、見つけた食い違いを最後の返答ですべて挙げること
+
+## UI実装
+
+- 不要なセカンダリラベルや説明を避ける。レイアウトに説明させる。
