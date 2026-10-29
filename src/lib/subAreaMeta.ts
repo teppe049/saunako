@@ -21,7 +21,7 @@ export const SAUNAKO_SUB_AREA_COMMENTS: Record<string, string> = {
   'tokyo/tama': '多摩エリアは都心の喧騒から離れてゆったり。車で行ける穴場よ。',
   // osaka
   'osaka/kita': '梅田・北新地エリアは大阪の玄関口！仕事帰りやショッピングのついでにサクッと整えるのが最高よ。',
-  'osaka/minami': '心斎橋・なんばエリアはおしゃれな個室サウナが集まるホットスポット！990円から入れるところもあって、遊びの前後に寄りやすいわ。',
+  'osaka/minami': '心斎橋・なんばエリアはおしゃれな個室サウナが集まるホットスポット！4,000円台から入れるところもあって、遊びの前後に寄りやすいわ。',
   'osaka/yao-hirakata': '八尾・枚方は郊外ならではのゆったり感。都心部とは違った過ごし方ができるのよ。',
   // aichi
   'aichi/nagoya-sakae': '名古屋・栄は愛知でいちばん施設が多いエリア。2,000円台から入れるところもあって、選択肢の幅がすごいの！',
@@ -103,8 +103,8 @@ export const SUB_AREA_META: Record<string, { title: string; description: string 
     description: '心斎橋・難波・大阪市中央区の個室サウナ・プライベートサウナ全{count}施設を徹底比較。道頓堀サウナ、TAKENO-YA、HAAAVE.(ハーヴェ)など。4,000円〜、{count}施設中{coupleCount}施設がカップル利用OK。ミナミで遊びの前後に寄れる貸切サウナの料金プラン・予約方法・口コミを掲載。',
   },
   'osaka/kita': {
-    title: 'キタ（梅田・北新地）の個室サウナ{count}選｜990円〜・淀屋橋24hを比較 | サウナ子',
-    description: '梅田・北新地・淀屋橋・大阪市北区の個室サウナ・プライベートサウナ全{count}施設を徹底比較。MENTE、HOTTERS24 淀屋橋、Prus Sauna 梅田北新地など。990円〜と大阪最安クラス、カップル利用OK{coupleCount}施設。大阪の玄関口で仕事帰りに寄れる完全個室サウナの料金・予約方法・口コミを掲載。',
+    title: 'キタ（梅田・北新地）の個室サウナ{count}選｜淀屋橋24h・北新地ラグジュアリーを比較 | サウナ子',
+    description: '梅田・北新地・淀屋橋・大阪市北区の個室サウナ・プライベートサウナ全{count}施設を徹底比較。MENTE、HOTTERS24 淀屋橋、Prus Sauna 梅田北新地など。ビジター2,480円〜の24時間ソロサウナあり、カップル利用OK{coupleCount}施設。大阪の玄関口で仕事帰りに寄れる完全個室サウナの料金・予約方法・口コミを掲載。',
   },
   'aichi/nagoya-sakae': {
     title: '名古屋・栄の個室サウナ{count}選｜2,000円〜・カップルOKを料金比較 | サウナ子',
