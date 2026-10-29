@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from '../AreaFilters';
-import { SAUNAKO_SUB_AREA_COMMENTS, DEFAULT_SUB_AREA_COMMENT, SUB_AREA_META, SUB_AREA_GUIDES } from '@/lib/subAreaMeta';
+import { SAUNAKO_SUB_AREA_COMMENTS, DEFAULT_SUB_AREA_COMMENT, SUB_AREA_META, SUB_AREA_GUIDES, fillSubAreaMeta } from '@/lib/subAreaMeta';
 import { getArticlesByFacilityId } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import AreaCompareTable from '@/components/AreaCompareTable';
@@ -46,8 +46,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cities = areaData.cities;
 
   const customMeta = SUB_AREA_META[`${prefecture}/${areaSlug}`];
-  const title = customMeta?.title ?? `${prefLabel} ${areaLabel}の個室サウナ一覧`;
-  const description = customMeta?.description ?? `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
+  const areaFacilities = getFacilitiesByArea(prefecture, areaLabel);
+  const counts = { count: areaFacilities.length, coupleCount: areaFacilities.filter((f) => f.features.coupleOk).length };
+  const title = customMeta ? fillSubAreaMeta(customMeta.title, counts) : `${prefLabel} ${areaLabel}の個室サウナ一覧`;
+  const description = customMeta
+    ? fillSubAreaMeta(customMeta.description, counts)
+    : `${prefLabel}${areaLabel}エリア（${cities.join('・')}）の個室サウナを比較・検索。`;
   // SUB_AREA_META の title は末尾に「| サウナ子」を含むが、フォールバックは含まない。
   // template（%s | サウナ子）と併用すると前者だけ二重化するため、既に含む場合のみ absolute にする（Issue #167）
   const titleMeta = /\|\s*サウナ子\s*$/.test(title) ? { absolute: title } : title;
