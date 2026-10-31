@@ -12,6 +12,9 @@ import type { Facility } from './types';
 
 const COUPLE_PEOPLE = 2;
 
+/** 都道府県固有のカップル記事が無いエリアからつなぐ全国版の記事 */
+export const DEFAULT_COUPLE_ARTICLE_SLUG = 'couple-private-sauna';
+
 export interface CouplePick {
   facility: Facility;
   /** 2人で入れる最安プランの室料 */

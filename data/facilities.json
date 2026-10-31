@@ -338,7 +338,7 @@
     "duration": 120,
     "capacity": 6,
     "features": {
-      "waterBath": false,
+      "waterBath": true,
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": false,
@@ -368,8 +368,8 @@
     "description": "KUDOCHI sauna（クドチサウナ）赤坂店は赤坂見附駅から徒歩1分、24時間営業のプライベートサウナ。セルフロウリュ対応でカップルでの利用も可能。2時間8,000円からの料金設定で、最大6名まで入れるゆったりした空間が特徴。",
     "saunakoCommentShort": "赤坂見附駅1分！カップルOKが嬉しい",
     "saunakoCommentLong": "赤坂見附駅から徒歩1分でアクセス最高！24時間営業でいつでも行けるし、カップルOKだからデートにもおすすめだよ。2時間たっぷり過ごせて、セルフロウリュで自分好みの蒸し加減を楽しめるの！",
-    "updatedAt": "2026-10-04",
-    "verifiedAt": "2026-10-04",
+    "updatedAt": "2026-11-01",
+    "verifiedAt": "2026-11-01",
     "plans": [
       {
         "name": "Silent Sanctuary 120分 2名",
@@ -412,7 +412,26 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "KUDOCHI（クドチ）赤坂｜赤坂の24時間個室サウナ 8,000円〜 口コミ・予約 | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "rooms": 6,
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "利用開始の24時間前までは予約サイトのマイページから無料でキャンセルできます。それ以降はキャンセルできず、来店しなくても返金されません。"
+    },
+    "fitFor": [
+      "カップル・2人で、水風呂まで個室の中で済ませたい",
+      "赤坂見附駅から歩いてすぐの場所で、仕事帰りに寄りたい",
+      "深夜や早朝に入りたい（24時間営業・無人受付）"
+    ],
+    "notFitFor": [
+      "当日思い立って行きたい（完全予約制。予約枠は月2回、約2週間前に公開）",
+      "予定が変わりやすい（利用の24時間前を過ぎるとキャンセルできない）",
+      "施設内で待ち合わせしたい（待合スペースがない）"
+    ]
   },
   {
     "id": 6,

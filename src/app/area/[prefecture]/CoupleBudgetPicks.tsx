@@ -4,6 +4,8 @@ import type { Facility } from '@/lib/types';
 
 // 一覧より上に置くため、スクロールを押し下げすぎない件数に抑える
 const PICK_LIMIT = 6;
+// 2件以下なら一覧を見れば足りる。薄いブロックを全エリアに並べない
+const MIN_PICKS = 3;
 
 interface Props {
   facilities: Facility[];
@@ -11,11 +13,13 @@ interface Props {
   /** 続きを読む記事（任意） */
   moreArticle?: { slug: string; title: string };
   heading?: string;
+  /** 計測用（どのエリアページのブロックか） */
+  areaKey: string;
 }
 
-export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArticle, heading }: Props) {
+export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArticle, heading, areaKey }: Props) {
   const picks = coupleBudgetPicks(facilities, PICK_LIMIT);
-  if (picks.length === 0) return null;
+  if (picks.length < MIN_PICKS) return null;
 
   return (
     <section className="mb-8">
@@ -32,6 +36,7 @@ export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArt
               data-track-click="couple_budget_pick"
               data-track-facility-id={facility.id}
               data-track-index={i}
+              data-track-area={areaKey}
             >
               <span className="w-6 text-center text-sm font-bold text-primary flex-shrink-0">{i + 1}</span>
               <span className="flex-1 min-w-0">
@@ -61,6 +66,7 @@ export default function CoupleBudgetPicks({ facilities, prefectureLabel, moreArt
           className="text-sm text-primary font-semibold mt-3 inline-block hover:opacity-80"
           data-track-click="couple_budget_more"
           data-track-article={moreArticle.slug}
+          data-track-area={areaKey}
         >
           → {moreArticle.title}
         </Link>

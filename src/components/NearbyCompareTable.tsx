@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Facility } from '@/lib/types';
 import { getPerPersonPrice } from '@/lib/facility-utils';
 import { getDistanceKm, formatDistance } from '@/lib/distance';
+import { cheapestCouplePlan } from '@/lib/coupleBudget';
 
 interface Props {
   current: Facility;
@@ -11,6 +12,13 @@ interface Props {
 function station(f: Facility): string {
   if (!f.nearestStation || (f.walkMinutes ?? 0) <= 0) return '—';
   return `${f.nearestStation}${f.nearestStation.includes('駅') ? '' : '駅'} 徒歩${f.walkMinutes}分`;
+}
+
+/** 男女2人で入れる最安プランの総額（男女不可・2名プランなしは null） */
+function pairPrice(f: Facility): string {
+  if (!f.features.coupleOk) return '—';
+  const plan = cheapestCouplePlan(f);
+  return plan ? `¥${plan.price.toLocaleString()} / ${plan.duration}分` : '—';
 }
 
 function yen(n: number | null): string {
@@ -30,17 +38,17 @@ export default function NearbyCompareTable({ current, nearby }: Props) {
     <div className="mt-6 md:mt-8">
       <h3 className="text-base md:text-lg font-bold text-text-primary mb-3">近くの施設と比べる</h3>
       <div className="overflow-x-auto rounded-xl border border-border bg-surface">
-        <table className="w-full text-sm border-collapse min-w-[640px]">
+        <table className="w-full text-sm border-collapse min-w-[720px]">
           <thead>
             <tr className="bg-bg text-text-secondary text-xs">
               <th className="text-left font-medium py-2.5 px-3">施設</th>
               {hasCoords && <th className="text-right font-medium py-2.5 px-3">距離</th>}
               <th className="text-right font-medium py-2.5 px-3">室料</th>
               <th className="text-right font-medium py-2.5 px-3">1人あたり</th>
+              <th className="text-right font-medium py-2.5 px-3">男女2人</th>
               <th className="text-left font-medium py-2.5 px-3">最寄駅</th>
               <th className="text-center font-medium py-2.5 px-3">水風呂</th>
               <th className="text-center font-medium py-2.5 px-3">外気浴</th>
-              <th className="text-center font-medium py-2.5 px-3">男女OK</th>
             </tr>
           </thead>
           <tbody>
@@ -72,12 +80,12 @@ export default function NearbyCompareTable({ current, nearby }: Props) {
                     {f.priceMin > 0 && <span className="text-xs text-text-tertiary"> / {f.duration}分</span>}
                   </td>
                   <td className="py-2.5 px-3 text-right text-text-secondary whitespace-nowrap">{yen(getPerPersonPrice(f))}</td>
+                  <td className="py-2.5 px-3 text-right text-text-secondary whitespace-nowrap">{pairPrice(f)}</td>
                   <td className="py-2.5 px-3 text-text-secondary whitespace-nowrap">{station(f)}</td>
                   <td className="py-2.5 px-3 text-center text-text-secondary whitespace-nowrap">
                     {f.features.waterBath ? (f.features.waterBathTemp ? `${f.features.waterBathTemp}℃` : '○') : '—'}
                   </td>
                   <td className="py-2.5 px-3 text-center">{f.features.outdoorAir ? '○' : '—'}</td>
-                  <td className="py-2.5 px-3 text-center">{f.features.coupleOk ? '○' : '—'}</td>
                 </tr>
               );
             })}

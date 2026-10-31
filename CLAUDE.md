@@ -40,6 +40,7 @@
 | `node scripts/check-x-weight.js` | X投稿ウェイトチェック（hook用） |
 | `node scripts/owner-report.mjs` | 施設オーナー向け送客レポート（GA4の閲覧・予約/公式/電話クリックを月別集計）。`--month YYYY-MM` / `--top N` / `--id 施設ID`で1施設の送付用。2026-09以降のみ（facility_idの登録が9/2） |
 | `node scripts/sync-suggest-data.mjs` | 検索サジェスト（`src/lib/suggest-data.json`）の施設名とエリア別件数を facilities.json から作り直す。施設の追加・閉店・エリア変更のあとに実行（`tests/closed-facilities.test.ts` がずれを検出）。駅名リストは手で正規化したものなので触らない |
+| `node scripts/freshness-watch.mjs` | 公式サイトの料金記載の変化と閉店の兆候を検出（週1回）。基準は `data/freshness/snapshot.json`、結果は `docs/freshness-report.md` に追記。差分を公式で確認して facilities.json と `verifiedAt` を直す。`--dry-run` / `--id` / `--limit` 指定時は書き込まない |
 | `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数

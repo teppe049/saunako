@@ -29,6 +29,8 @@ import PickToggleButton from '@/components/PickToggleButton';
 import PickTray from '@/components/PickTray';
 import { getPerPersonPrice } from '@/lib/facility-utils';
 import { hasCoubic } from '@/lib/coubic';
+import { buildFacilityFaqs, freshnessLabel } from '@/lib/facilityFaq';
+import FacilityGuide from '@/components/FacilityGuide';
 
 // info@ は Cloudflare Email Routing で運営者の Gmail に転送される
 const REPORT_EMAIL = 'info@saunako.jp';
@@ -117,64 +119,20 @@ export default async function FacilityDetailPage({ params }: PageProps) {
   const verifiedLabel = facility.verifiedAt
     ? `${facility.verifiedAt.slice(0, 4)}年${Number(facility.verifiedAt.slice(5, 7))}月`
     : null;
+  const freshness = freshnessLabel(facility);
   const reportErrorHref = `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(
     `【掲載情報の誤り】${facility.name}`
   )}&body=${encodeURIComponent(
     `施設: ${facility.name}（ID ${facility.id}）\nページ: https://www.saunako.jp/facilities/${facility.id}\n\n誤っている項目と正しい情報:\n\n情報源（公式サイトのURLなど、わかれば）:\n`
   )}`;
 
-  // FAQ 構造化データ
-  const faqItems: { '@type': string; name: string; acceptedAnswer: { '@type': string; text: string } }[] = [];
-  if (facility.priceMin > 0) {
-    faqItems.push({
-      '@type': 'Question',
-      name: `${facility.name}の料金はいくらですか？`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `${facility.name}は${facility.priceMin.toLocaleString()}円〜/${facility.duration}分から利用できます。`,
-      },
-    });
-  }
-  if (facility.nearestStation) {
-    faqItems.push({
-      '@type': 'Question',
-      name: `${facility.name}の最寄り駅はどこですか？`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `${facility.nearestStation}${facility.nearestStation.includes('駅') ? '' : '駅'}から徒歩${facility.walkMinutes}分です。`,
-      },
-    });
-  }
-  faqItems.push({
+  // FAQ（表示と FAQPage 構造化データで同じものを使う）
+  const faqs = buildFacilityFaqs(facility);
+  const faqItems = faqs.map((f) => ({
     '@type': 'Question',
-    name: `${facility.name}はカップルで利用できますか？`,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: facility.features.coupleOk
-        ? 'はい、カップルでのご利用が可能です。'
-        : 'カップル利用については施設に直接お問い合わせください。',
-    },
-  });
-  if (facility.businessHours && facility.businessHours !== '不明') {
-    faqItems.push({
-      '@type': 'Question',
-      name: `${facility.name}の営業時間は？`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `営業時間は${facility.businessHours}です。${facility.holidays && facility.holidays !== '不明' ? `定休日は${facility.holidays}です。` : ''}`,
-      },
-    });
-  }
-  if (facility.capacity > 0) {
-    faqItems.push({
-      '@type': 'Question',
-      name: `${facility.name}の最大利用人数は？`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `最大${facility.capacity}名まで利用できます。`,
-      },
-    });
-  }
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  }));
   const faqJsonLd = faqItems.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -454,6 +412,9 @@ export default async function FacilityDetailPage({ params }: PageProps) {
               {/* セクション区切り (モバイルのみ) */}
               <div className="h-2 bg-bg md:hidden" />
 
+              {/* 実訪レポ・向き不向き・予約の仕方（データのある施設のみ） */}
+              <FacilityGuide facility={facility} />
+
               {/* c. Equipment Section */}
               <div className="bg-surface md:shadow md:rounded-xl md:mt-6 px-4 py-5 md:p-6">
                 <div className="flex flex-col gap-4 md:gap-5">
@@ -475,6 +436,15 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                             {facility.features.waterBathTemp && (
                               <p className="text-sm text-text-secondary">{facility.features.waterBathTemp}℃</p>
                             )}
+                          </div>
+                        </div>
+                      )}
+                      {facility.features.saunaTemp && (
+                        <div className="flex items-center gap-3">
+                          <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v10m0 0a3 3 0 103 3m-3-3a3 3 0 00-3 3" /></svg>
+                          <div>
+                            <p className="text-text-primary font-medium">サウナ室</p>
+                            <p className="text-sm text-text-secondary">{facility.features.saunaTemp}℃</p>
                           </div>
                         </div>
                       )}
@@ -569,7 +539,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                       </h2>
                       <PricingTable plans={facility.plans} />
                       <p className="text-xs text-text-tertiary">
-                        ※ {verifiedLabel && `${verifiedLabel}に公式情報で確認済み。`}最新の料金は公式サイトでご確認ください
+                        ※ {freshness.text}。最新の料金は公式サイトでご確認ください
                       </p>
                     </div>
                   </div>
@@ -737,6 +707,21 @@ export default async function FacilityDetailPage({ params }: PageProps) {
                           : '詳細は公式サイトをご確認ください'}
                       </dd>
                     </div>
+                    {facility.accessNote && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">道順</dt>
+                        <dd className="text-text-primary text-sm">{facility.accessNote}</dd>
+                      </div>
+                    )}
+                    {facility.parking && (
+                      <div className="flex">
+                        <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">駐車場</dt>
+                        <dd className="text-text-primary text-sm">
+                          {facility.parking.available ? `あり${facility.parking.spaces ? `（${facility.parking.spaces}台）` : ''}` : 'なし'}
+                          {facility.parking.note && ` ${facility.parking.note}`}
+                        </dd>
+                      </div>
+                    )}
                     {facility.businessHours && facility.businessHours !== '不明' && (
                       <div className="flex">
                         <dt className="w-20 text-text-secondary flex-shrink-0 text-sm">営業時間</dt>

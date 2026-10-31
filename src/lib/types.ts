@@ -63,6 +63,8 @@ export interface Facility {
     coupleOk: boolean;
     bluetooth: boolean | null;
     wifi: boolean | null;
+    /** サウナ室の温度（℃。幅があれば "80-90"） */
+    saunaTemp?: string | null;
   };
   businessHours: string;
   holidays: string;
@@ -87,6 +89,44 @@ export interface Facility {
   plans: Plan[] | null;
   timeSlots: TimeSlotGroup[] | null;
   slotType: 'fixed' | 'free' | null;
+  /** 料金が載っている公式ページ（鮮度チェックの取得先。無ければ website を見る） */
+  priceUrl?: string | null;
+  /** 予約の仕方（公式で確認できた項目だけ入れる） */
+  booking?: FacilityBooking | null;
+  /** 駅から施設までの道順（1〜2文） */
+  accessNote?: string | null;
+  parking?: { available: boolean; spaces?: number | null; note?: string | null } | null;
+  /** 個室・サウナ室の数 */
+  rooms?: number | null;
+  /** 向く人 / 向かない人（利用シーンで書く） */
+  fitFor?: string[] | null;
+  notFitFor?: string[] | null;
+  /** サウナ子の実訪レポ。行っていない施設には入れない */
+  visits?: FacilityVisit[] | null;
+}
+
+export type BookingMethod = 'web' | 'phone' | 'line' | 'walk-in';
+
+export interface FacilityBooking {
+  methods: BookingMethod[];
+  /** 何日前から予約できるか */
+  leadDays?: number | null;
+  /** 当日予約・予約なし来店ができるか */
+  sameDay?: boolean | null;
+  cancelPolicy?: string | null;
+}
+
+export interface FacilityVisit {
+  /** 訪問日 YYYY-MM-DD */
+  date: string;
+  /** 利用したプラン名 */
+  plan: string;
+  /** 実際に払った額（円・税込） */
+  paid: number;
+  people: number;
+  good: string[];
+  concerns: string[];
+  body: string;
 }
 
 export interface Prefecture {

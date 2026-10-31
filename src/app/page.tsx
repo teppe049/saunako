@@ -348,6 +348,11 @@ export default function Home() {
               { label: '神奈川(横浜)の個室サウナ', href: '/area/kanagawa' },
               { label: '埼玉の個室サウナ', href: '/area/saitama' },
               { label: '栃木(宇都宮)の個室サウナ', href: '/area/tochigi' },
+              // 東京以外の主要駅エリアへ直接つなぐ（/area/tokyo 1ページへの依存を下げる。仕様書 施策D）
+              { label: '名古屋・栄の個室サウナ', href: '/area/aichi/nagoya-sakae' },
+              { label: '心斎橋・難波の個室サウナ', href: '/area/osaka/minami' },
+              { label: '天神・博多の個室サウナ', href: '/area/fukuoka/fukuoka-city' },
+              { label: '神戸・三宮の個室サウナ', href: '/area/hyogo/kobe' },
             ].map((area) => (
               <Link
                 key={area.href}

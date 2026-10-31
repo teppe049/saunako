@@ -3,6 +3,9 @@ import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
 import { getAllArticles, getArticlesByCategory } from '@/lib/articles'
 
+/** YYYY-MM-DD 同士は文字列比較で新しい方が取れる */
+const latestOf = (a: string, b?: string | null) => (b && b > a ? b : a)
+
 const activeFacilities = facilities.filter((f) => !f.closedAt)
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -70,7 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 全施設ページ（閉店施設を除外）
   const facilityPages: MetadataRoute.Sitemap = activeFacilities.map((facility) => ({
     url: `${baseUrl}/facilities/${facility.id}`,
-    lastModified: new Date(facility.updatedAt),
+    // 公式で確認し直した日も更新とみなす（料金表示の「確認済み」が変わるため）
+    lastModified: new Date(latestOf(facility.updatedAt, (facility as { verifiedAt?: string | null }).verifiedAt)),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))

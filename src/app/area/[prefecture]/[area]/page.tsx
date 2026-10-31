@@ -1,9 +1,11 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import CoupleBudgetPicks from '../CoupleBudgetPicks';
+import { DEFAULT_COUPLE_ARTICLE_SLUG } from '@/lib/coupleBudget';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { PREFECTURES, AREA_GROUPS, Facility } from '@/lib/types';
+import { PREFECTURES, AREA_GROUPS, PREFECTURE_GUIDES, Facility } from '@/lib/types';
 import { getFacilitiesByArea, getAreaBySlug, getAllPrefectures, getAreaFacilityCounts } from '@/lib/facilities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,7 +13,7 @@ import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from '../AreaFilters';
 import { SAUNAKO_SUB_AREA_COMMENTS, DEFAULT_SUB_AREA_COMMENT, SUB_AREA_META, SUB_AREA_GUIDES, fillSubAreaMeta } from '@/lib/subAreaMeta';
-import { getArticlesByFacilityId } from '@/lib/articles';
+import { getArticlesByFacilityId, getAllArticles } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import AreaCompareTable from '@/components/AreaCompareTable';
 import AskAI from '@/components/AskAI';
@@ -138,6 +140,9 @@ export default async function SubAreaPage({ params }: PageProps) {
   const areaKey = `${prefecture}/${areaSlug}`;
   const saunakoComment = SAUNAKO_SUB_AREA_COMMENTS[areaKey] || DEFAULT_SUB_AREA_COMMENT;
   const areaCounts = getAreaFacilityCounts(prefecture);
+  const coupleArticle = getAllArticles().find(
+    (a) => a.slug === (PREFECTURE_GUIDES[prefecture]?.coupleBudgetPicks?.moreArticleSlug ?? DEFAULT_COUPLE_ARTICLE_SLUG)
+  );
   const allFacilitiesCount = Object.values(areaCounts).reduce((sum, c) => sum + c, 0);
 
   const breadcrumbJsonLd = {
@@ -304,6 +309,14 @@ export default async function SubAreaPage({ params }: PageProps) {
 
         {/* エリア内の料金比較表（検索から来た人が最初に見る比較軸） */}
         <AreaCompareTable facilities={facilities} areaLabel={areaLabel} />
+
+        {/* 「{駅・街} 個室サウナ カップル」の受け皿（3件未満のエリアでは出ない） */}
+        <CoupleBudgetPicks
+          facilities={facilities}
+          prefectureLabel={areaLabel}
+          moreArticle={coupleArticle && { slug: coupleArticle.slug, title: coupleArticle.title }}
+          areaKey={areaKey}
+        />
 
         {/* FAQ Section */}
         {(() => {

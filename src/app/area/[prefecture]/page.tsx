@@ -13,6 +13,7 @@ import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'));
 import AreaFilters from './AreaFilters';
 import CoupleBudgetPicks from './CoupleBudgetPicks';
+import { DEFAULT_COUPLE_ARTICLE_SLUG } from '@/lib/coupleBudget';
 
 interface PageProps {
   params: Promise<{ prefecture: string }>;
@@ -421,10 +422,12 @@ export default async function AreaPage({ params }: PageProps) {
     const article = publishedArticles.find((a) => a.slug === slug);
     return article ? [{ article, lead }] : [];
   });
+  // 「{エリア} 個室サウナ カップル」がクリックの約4割を占めるため全都道府県に出す（件数が少ないエリアはコンポーネント側で出さない）。
+  // 都道府県固有の見出し・記事があれば優先し、無ければ全国のカップル記事へつなぐ
   const coupleBudgetConfig = prefectureGuide?.coupleBudgetPicks;
-  const coupleBudgetArticle = coupleBudgetConfig?.moreArticleSlug
-    ? publishedArticles.find((a) => a.slug === coupleBudgetConfig.moreArticleSlug)
-    : undefined;
+  const coupleBudgetArticle = publishedArticles.find(
+    (a) => a.slug === (coupleBudgetConfig?.moreArticleSlug ?? DEFAULT_COUPLE_ARTICLE_SLUG)
+  );
 
   const areaStats = generateAreaStats(facilities);
   const neighborPrefectures = getNeighborPrefectures(prefecture);
@@ -648,14 +651,13 @@ export default async function AreaPage({ params }: PageProps) {
           </section>
         )}
 
-        {coupleBudgetConfig && (
-          <CoupleBudgetPicks
-            facilities={facilities}
-            prefectureLabel={prefData.label}
-            moreArticle={coupleBudgetArticle && { slug: coupleBudgetArticle.slug, title: coupleBudgetArticle.title }}
-            heading={coupleBudgetConfig.heading}
-          />
-        )}
+        <CoupleBudgetPicks
+          facilities={facilities}
+          prefectureLabel={prefData.label}
+          moreArticle={coupleBudgetArticle && { slug: coupleBudgetArticle.slug, title: coupleBudgetArticle.title }}
+          heading={coupleBudgetConfig?.heading}
+          areaKey={prefecture}
+        />
 
         {/* FAQ Section */}
         {(() => {
