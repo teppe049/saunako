@@ -441,22 +441,23 @@
     "prefectureLabel": "東京都",
     "city": "港区",
     "area": "六本木・麻布",
-    "address": "東京都港区赤坂",
+    "address": "東京都港区赤坂3丁目10-17 マーカスビル4F",
     "nearestStation": "赤坂見附駅",
     "walkMinutes": 2,
     "priceMin": 6000,
     "duration": 90,
     "capacity": 4,
     "features": {
-      "waterBath": false,
-      "waterBathTemp": null,
+      "waterBath": true,
+      "waterBathTemp": "14-17",
       "selfLoyly": true,
       "outdoorAir": false,
-      "coupleOk": false,
+      "coupleOk": true,
       "bluetooth": true,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "80-100"
     },
-    "businessHours": "7:30-24:30",
+    "businessHours": "7:40-翌5:20",
     "holidays": "不定休",
     "website": "https://www.private-sauna.jp/",
     "phone": "",
@@ -475,10 +476,10 @@
     ],
     "lat": 35.668591,
     "lng": 139.74234,
-    "description": "赤坂見附駅から徒歩2分、朝7時半から営業するプライベートサウナ。Bluetoothスピーカー搭載で好きな音楽を楽しみながらセルフロウリュが可能。最大4名利用で、朝活サウナにも最適な施設。",
-    "saunakoCommentShort": "朝7時半から！Bluetooth対応で快適",
-    "saunakoCommentLong": "朝7時半からオープンしてるから朝ウナもできちゃう！Bluetooth対応だから好きな音楽を聴きながらサウナを楽しめるのがポイントだよ。赤坂見附から徒歩2分で、仕事前にさくっとリフレッシュするのにぴったりかも！",
-    "updatedAt": "2026-02-08",
+    "description": "赤坂見附駅から徒歩2分、朝7時40分から営業するプライベートサウナ。Bluetoothスピーカー搭載で好きな音楽を楽しみながらセルフロウリュが可能。最大4名利用で、朝活サウナにも最適な施設。",
+    "saunakoCommentShort": "朝7時台から！Bluetooth対応で快適",
+    "saunakoCommentLong": "朝7時台からオープンしてるから朝ウナもできちゃう！Bluetooth対応だから好きな音楽を聴きながらサウナを楽しめるのがポイントだよ。赤坂見附から徒歩2分で、仕事前にさくっとリフレッシュするのにぴったりかも！",
+    "updatedAt": "2026-11-02",
     "plans": [
       {
         "name": "スタンダード 90分 2名",
@@ -497,13 +498,46 @@
         "price": 15000,
         "duration": 120,
         "capacity": 4
+      },
+      {
+        "name": "VIP 90分 4名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "ナイトパック スタンダード 5時間 2名",
+        "price": 11000,
+        "duration": 300,
+        "capacity": 2
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "アカサカサウナ｜赤坂の朝活個室サウナ 6,000円〜 口コミ | サウナ子",
-    "slotType": "free"
+    "slotType": "free",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": true,
+      "cancelPolicy": "利用開始の24時間前までは予約サイトのマイページから無料でキャンセルできます。それ以降は理由を問わずキャンセルできません。"
+    },
+    "accessNote": "赤坂見附駅10番出口から徒歩約2分。永田町駅・赤坂駅からも徒歩約5分です。",
+    "rooms": 4,
+    "fitFor": [
+      "男女2人で水風呂まで個室で済ませたい（水着着用で男女利用可。同伴者は定員内なら無料）",
+      "朝や深夜に入りたい（7:40〜翌5:20の営業）",
+      "4人まで一緒に入りたい（VIPルームは最大4名）"
+    ],
+    "notFitFor": [
+      "電話で予約したい（予約は会員登録のうえWebのみ。電話は受け付けていない）",
+      "予定が変わりやすい（利用開始の24時間前を過ぎるとキャンセルできない）",
+      "18歳未満・飲酒後の利用（どちらも不可）"
+    ],
+    "verifiedAt": "2026-11-02"
   },
   {
     "id": 7,
@@ -36257,8 +36291,8 @@
     "description": "静岡県磐田市初の完全個室プライベートサウナ。天竜川の伏流水を汲み上げた水風呂は年間14〜16度をキープし、全室セルフロウリュ・外気浴スペース完備。砂・翠・墨・白と4つの異なるテーマを持つ個室があり、2026年7月にオープンしたばかりの新施設。",
     "saunakoCommentShort": "磐田市初の個室サウナ! 4つのテーマ部屋が新鮮",
     "saunakoCommentLong": "磐田市に初めてできた個室サウナだよ! 天竜川の伏流水を使った水風呂は14〜16度でしっかり冷えるの。砂・翠・墨・白って4つの部屋がそれぞれ違うテーマになってて、どれに入るか選ぶのも楽しいかも。全室セルフロウリュで外気浴スペースもあるよ!",
-    "updatedAt": "2026-07-22",
-    "verifiedAt": "2026-07-22",
+    "updatedAt": "2026-11-02",
+    "verifiedAt": "2026-11-02",
     "plans": [
       {
         "name": "平日 1名",
@@ -36310,7 +36344,26 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "booking": {
+      "methods": [
+        "line"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "fitFor": [
+      "1人でも4人でも使いたい（1名から4名まで、人数が増えると1人あたりの料金が下がる）",
+      "水着を持っていなくても行きたい（水着は無料で貸出）",
+      "部屋ごとのテーマで選びたい（砂・翠・墨・白の4室）"
+    ],
+    "notFitFor": [
+      "現金で払いたい（支払いはキャッシュレスのみ）",
+      "食べ物を持ち込みたい（食べ物の持ち込みは遠慮されている。飲み物は可、アルコールは不可）",
+      "当日思い立って行きたい（完全予約制）"
+    ],
+    "rooms": 4
   },
   {
     "id": 496,
