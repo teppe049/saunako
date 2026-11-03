@@ -55,6 +55,9 @@ const nextConfig: NextConfig = {
       // 掲載を終了した施設 → エリア一覧へ（2026-09-30: hotel hisoca ikebukuro は宿泊者専用のため掲載基準外）
       { source: '/facilities/73', destination: '/area/tokyo/ikebukuro', permanent: true },
       { source: '/facilities/hotel-hisoca-ikebukuro', destination: '/area/tokyo/ikebukuro', permanent: true },
+      // 2026-11-03: HOTEL HOQA 花色の湯はサウナ付き客室の時間貸し（予約不可・来店時の空室利用）で掲載基準外
+      { source: '/facilities/149', destination: '/area/aichi', permanent: true },
+      { source: '/facilities/hotel-hoqa-hanaironoyu', destination: '/area/aichi', permanent: true },
       // 2026-10-04: Private Sauna 浅海店は P・SPO24 会員限定の予約制になり、検索から来た人がすぐ使えないため掲載終了
       { source: '/facilities/360', destination: '/area/ehime/matsuyama', permanent: true },
       { source: '/facilities/pspo-asanami', destination: '/area/ehime/matsuyama', permanent: true },

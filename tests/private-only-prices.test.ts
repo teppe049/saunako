@@ -11,7 +11,8 @@ import facilitiesJson from '../data/facilities.json';
 import type { Facility } from '@/lib/types';
 
 const facilities = facilitiesJson as Facility[];
-const SHARED_RE = /相席|共用|シェア/;
+// パブリック・混浴も他グループと共用の枠の名前（2026-11-03: sui・浮サウナほか約10施設がすり抜けていた）
+const SHARED_RE = /相席|共用|シェア|パブリック|混浴/;
 
 describe('相席プラン', () => {
   it('plans に相席・共用のプランがない', () => {
