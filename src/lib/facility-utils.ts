@@ -35,6 +35,20 @@ export function getPerPersonPrice(facility: Facility): number | null {
   return min;
 }
 
+/**
+ * 構造化データの priceRange 用の文言。
+ * priceMin は「その施設の最安プランの室料」で1人分ではないため、最安プランの定員を添える。
+ * 定員が分からないときは人数を書かない（「1名」と誤って伝えないため）。
+ */
+export function formatPriceRange(facility: Facility): string | null {
+  if (!(facility.priceMin > 0)) return null;
+  const cheapest = facility.plans?.find(
+    (p) => p.price === facility.priceMin && p.duration === facility.duration && p.capacity > 0,
+  );
+  const people = cheapest ? `${cheapest.capacity}名` : '';
+  return `${people}${facility.duration}分 ¥${facility.priceMin.toLocaleString()}〜`;
+}
+
 export function getTimeSlotTags(facility: Facility): { hasMorningSlot: boolean; hasLateNightSlot: boolean } {
   if (Array.isArray(facility.timeSlots) && facility.timeSlots.length > 0) {
     const allTimes = facility.timeSlots.flatMap(g => g?.startTimes ?? []);

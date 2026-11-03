@@ -27,7 +27,7 @@ import PlanPicker from '@/components/PlanPicker';
 import NearbyCompareTable from '@/components/NearbyCompareTable';
 import PickToggleButton from '@/components/PickToggleButton';
 import PickTray from '@/components/PickTray';
-import { getPerPersonPrice } from '@/lib/facility-utils';
+import { formatPriceRange, getPerPersonPrice } from '@/lib/facility-utils';
 import { hasCoubic } from '@/lib/coubic';
 import { buildFacilityFaqs, freshnessLabel } from '@/lib/facilityFaq';
 import FacilityGuide from '@/components/FacilityGuide';
@@ -240,9 +240,7 @@ export default async function FacilityDetailPage({ params }: PageProps) {
             openingHoursSpecification: parseBusinessHoursToSchema(facility.businessHours),
           }),
         }),
-        ...(facility.priceMin > 0 && {
-          priceRange: `1名${facility.duration}分 ¥${facility.priceMin.toLocaleString()}〜`,
-        }),
+        ...(formatPriceRange(facility) && { priceRange: formatPriceRange(facility) }),
         ...(facility.plans && facility.plans.length > 0 && {
           makesOffer: facility.plans.slice(0, 5).map((plan) => ({
             '@type': 'Offer',

@@ -60,7 +60,9 @@ describe('ページタイトル', () => {
           .join('\n')}\n` +
           'metadata の title を { absolute: "..." } にして layout の template を回避すること。'
       ).toEqual([]);
-    }
+    },
+    // ビルド済みHTML（約900ページ）を全部読むため、全テスト並列実行時は既定の5秒を超える
+    30_000
   );
 
   it.skipIf(htmlFiles.length === 0)('title が空のページが無い', () => {
