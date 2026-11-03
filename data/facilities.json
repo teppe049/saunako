@@ -1543,7 +1543,8 @@
       "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": true,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "100"
     },
     "businessHours": "24時間営業",
     "holidays": "年中無休",
@@ -1557,7 +1558,7 @@
       "スキンケア用品",
       "ドリンク"
     ],
-    "note": "ヒノキの水風呂・セルフロウリュ／低温のプラズマミストサウナも選べる。週末は+1,000〜2,000円",
+    "note": "ヒノキの水風呂・セルフロウリュ／高温サウナ（100℃）のほかに低温のプラズマミストサウナ（40℃）も選べる。料金は1室あたりで平日の額。週末はムーン・カップルプランが+1,000円、スイートが+2,000円で、日によってさらに高い枠もある。延長30分はムーン4,500円・さくらスイート7,500円。",
     "images": [
       "/facilities/18-0.webp",
       "/facilities/18-1.webp",
@@ -1569,8 +1570,8 @@
     "description": "東急歌舞伎町タワー5階にある24時間営業の完全個室サウナ。ヒノキの水風呂とセルフロウリュを備えた高温サウナに加え、低温のプラズマミストサウナも選べる。外気浴テラス「G terrace」ではリクライニングチェアで新宿の空を眺めながらととのえる。2名向けのムーン、4名まで使えるさくらスイート、カップル専用プランを用意。",
     "saunakoCommentShort": "24時間営業！カップルプランあり",
     "saunakoCommentLong": "東急歌舞伎町タワーの5階にある個室サウナだよ！ヒノキの水風呂がめちゃくちゃ気持ちいいし、外気浴テラスの「G terrace」でリクライニングチェアに沈むのが最高なの。24時間営業だから、朝ととのえるのも夜ふかしついでもOK。カップル専用プランもあるから、二人で行きたいときはこっちを選んでね！",
-    "updatedAt": "2026-09-02",
-    "verifiedAt": "2026-09-02",
+    "updatedAt": "2026-11-03",
+    "verifiedAt": "2026-11-03",
     "plans": [
       {
         "name": "ムーン（2名個室） 90分",
@@ -1597,6 +1598,12 @@
         "capacity": 2
       },
       {
+        "name": "カップルスイートプラン 90分",
+        "price": 28000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
         "name": "カップルスイートプラン 120分",
         "price": 33000,
         "duration": 120,
@@ -1620,7 +1627,28 @@
     "closedAt": null,
     "seoTitle": "Prus Sauna 新宿歌舞伎町タワー店｜24時間営業 カップルプランあり個室サウナ | サウナ子",
     "seoDescription": "Prus Sauna（プラスサウナ）新宿歌舞伎町タワー店の料金・設備を紹介。ムーン90分13,500円〜、カップルプラン20,000円〜、4名のさくらスイート25,000円〜。東急歌舞伎町タワー5F・新宿駅徒歩4分・24時間営業。ヒノキの水風呂とセルフロウリュ、外気浴テラス付きの完全個室サウナ。",
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://www.prussauna.com/kabukicho",
+    "booking": {
+      "methods": [
+        "web",
+        "phone"
+      ],
+      "leadDays": null,
+      "sameDay": true,
+      "cancelPolicy": "利用開始の48時間前から料金の50%、24時間前から100%のキャンセル料がかかります。開始時刻を15分過ぎても連絡がない場合はキャンセル扱いです。"
+    },
+    "accessNote": null,
+    "fitFor": [
+      "夜中や早朝に入りたい（24時間営業）",
+      "当日に思い立って行きたい（空きがあれば当日も利用可）",
+      "高温と低温のサウナを選びたい（100℃の高温サウナと40℃のミストサウナ）"
+    ],
+    "notFitFor": [
+      "週末に平日と同じ料金で入りたい（週末は+1,000〜2,000円）",
+      "直前にキャンセルするかもしれない（48時間前から50%、24時間前から100%）",
+      "5人以上で入りたい（最大はさくらスイートの4名）"
+    ]
   },
   {
     "id": 19,
@@ -10870,9 +10898,10 @@
       "outdoorAir": false,
       "coupleOk": true,
       "bluetooth": null,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "90-100"
     },
-    "businessHours": "8:40〜23:40",
+    "businessHours": "8:00〜翌0:20（予約枠）",
     "holidays": "なし",
     "website": "https://ooo-sauna.com/fukuoka.html",
     "phone": "092-292-7715",
@@ -10884,7 +10913,7 @@
       "タオル",
       "フェイスタオル"
     ],
-    "note": null,
+    "note": "料金は1室あたりで、1名分を含む。2人目からはサンカク・マルが1名2,500円、シカクが1名3,000円の追加。公式の料金は「〜」表記で、枠によって高くなることがある。100分枠は朝（8:00・10:10開始）のみ。水着・サウナハットのレンタルは1,000円。",
     "images": [
       "/facilities/127-0.webp",
       "/facilities/127-1.webp",
@@ -10896,23 +10925,113 @@
     "description": "中洲川端駅から徒歩1分の完全個室サウナ。3タイプの部屋（サンカク・マル・シカク）から選べる。サウナ90〜100度、セルフロウリュ対応。男女利用可能。",
     "saunakoCommentShort": "中洲の個室サウナ! 3タイプから選べる!",
     "saunakoCommentLong": "中洲にある完全個室のコミュニケーションサウナだよ！サンカク・マル・シカクの3タイプから部屋が選べて、カップルや友達同士での利用もOK。セルフロウリュで好きなだけ蒸気を楽しめるよ！",
-    "updatedAt": "2026-02-27",
+    "updatedAt": "2026-11-03",
     "plans": [
       {
-        "name": "サンカク 100分 2名",
+        "name": "サンカク 100分 1名",
         "price": 4500,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "サンカク 100分 2名",
+        "price": 7000,
         "duration": 100,
         "capacity": 2
       },
       {
-        "name": "マル 100分 4名",
+        "name": "サンカク 120分 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "サンカク 120分 2名",
+        "price": 8500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "マル 100分 1名",
         "price": 5000,
+        "duration": 100,
+        "capacity": 1
+      },
+      {
+        "name": "マル 100分 2名",
+        "price": 7500,
+        "duration": 100,
+        "capacity": 2
+      },
+      {
+        "name": "マル 100分 3名",
+        "price": 10000,
+        "duration": 100,
+        "capacity": 3
+      },
+      {
+        "name": "マル 100分 4名",
+        "price": 12500,
         "duration": 100,
         "capacity": 4
       },
       {
-        "name": "シカク 120分 6名",
+        "name": "マル 120分 1名",
+        "price": 6500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "マル 120分 2名",
         "price": 9000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "マル 120分 3名",
+        "price": 11500,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "マル 120分 4名",
+        "price": 14000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "シカク 120分 1名",
+        "price": 9000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "シカク 120分 2名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "シカク 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "シカク 120分 4名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "シカク 120分 5名",
+        "price": 21000,
+        "duration": 120,
+        "capacity": 5
+      },
+      {
+        "name": "シカク 120分 6名",
+        "price": 24000,
         "duration": 120,
         "capacity": 6
       }
@@ -10920,7 +11039,28 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://ooo-sauna.com/fukuoka.html",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": 21,
+      "sameDay": true,
+      "cancelPolicy": "予約開始時間の48時間前までは無料でキャンセルできます。それ以降は100%のキャンセル料がかかり、予約の変更もできません。開始時刻から30分以上遅れると当日キャンセル扱いです。"
+    },
+    "accessNote": "中洲川端駅から徒歩1分。ビルの6階までエレベーターで上がります。待合室はないので、予約時刻の直前に着くようにします。",
+    "fitFor": [
+      "1人で安く個室に入りたい（サンカク100分 1名4,500円）",
+      "6人までのグループで入りたい（シカクは最大6名）",
+      "駅のすぐ近くで入りたい（中洲川端駅から徒歩1分）"
+    ],
+    "notFitFor": [
+      "予約を後から変えたい（48時間前を過ぎると変更できない）",
+      "電話で予約したい（予約はWebのみ）",
+      "早めに着いて待ちたい（待合室なし）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 128,
@@ -12561,8 +12701,8 @@
     "address": "愛知県名古屋市西区名駅2-25-2",
     "nearestStation": "名古屋駅",
     "walkMinutes": 5,
-    "priceMin": 19800,
-    "duration": 180,
+    "priceMin": 11550,
+    "duration": 120,
     "capacity": 4,
     "features": {
       "waterBath": true,
@@ -12571,9 +12711,10 @@
       "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": null,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "100"
     },
-    "businessHours": "10:00〜23:00",
+    "businessHours": "日〜木 10:00〜22:00 / 金・土 10:00〜翌5:00",
     "holidays": "不定休",
     "website": "https://sauna-m.com/",
     "phone": "052-433-9535",
@@ -12590,7 +12731,7 @@
       "ドライヤー",
       "ヘアアイロン"
     ],
-    "note": "会員制/ビジター可",
+    "note": "会員制（ビジター利用可）。料金は1室を使う人数ごとの合計（税込）。22時以降の利用と連休期間（お盆・年末年始・GWなど）は通常料金の+10%。5名以上は1名につき4,400円追加（最大6名）。",
     "images": [
       "/facilities/138-0.webp",
       "/facilities/138-1.webp",
@@ -12599,32 +12740,133 @@
     ],
     "lat": 35.17218,
     "lng": 136.88542,
-    "description": "名古屋駅から徒歩5分、「ととのえ親方」松尾大監修の完全個室プライベートサウナ。AGUNI・VANAの2部屋を備え、約100度のサウナと15-16度の水風呂、開放的な外気浴スペースが魅力。180分制でカップル・男女混合利用可。",
+    "description": "名古屋駅から徒歩5分、「ととのえ親方」松尾大監修の完全個室プライベートサウナ。AGUNI・VANAの2部屋を備え、約100度のサウナと15-16度の水風呂、開放的な外気浴スペースが魅力。120分と180分から選べ、カップル・男女混合利用可。",
     "saunakoCommentShort": "ととのえ親方監修の外気浴付き高級個室!",
-    "saunakoCommentLong": "名駅から徒歩5分の高級プライベートサウナだよ! 100度のサウナに15-16度の水風呂、そして外気浴スペースまであるのがすごい。180分もあるからゆっくり何セットも楽しめるし、男女一緒に入れるからカップルにもぴったり。アメニティもバスローブまで付いてて至れり尽くせりだね!",
-    "updatedAt": "2026-02-27",
+    "saunakoCommentLong": "名駅から徒歩5分の高級プライベートサウナだよ! 100度のサウナに15-16度の水風呂、そして外気浴スペースまであるのがすごい。最長180分のプランもあるからゆっくり何セットも楽しめるし、男女一緒に入れるからカップルにもぴったり。アメニティもバスローブまで付いてて至れり尽くせりだね!",
+    "updatedAt": "2026-11-03",
     "plans": [
       {
-        "name": "ビジター 平日昼 180分",
-        "price": 19800,
+        "name": "120分 平日10:00〜16:30 1名",
+        "price": 11550,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 平日10:00〜16:30 2名",
+        "price": 15950,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "120分 平日10:00〜16:30 3名",
+        "price": 20350,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "120分 平日10:00〜16:30 4名",
+        "price": 24750,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "120分 平日17:00〜・土日祝 1名",
+        "price": 13750,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "120分 平日17:00〜・土日祝 2名",
+        "price": 18150,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "120分 平日17:00〜・土日祝 3名",
+        "price": 22550,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "120分 平日17:00〜・土日祝 4名",
+        "price": 26950,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "180分 平日10:00〜16:30 1名",
+        "price": 22000,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "180分 平日10:00〜16:30 2名",
+        "price": 26400,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "180分 平日10:00〜16:30 3名",
+        "price": 30800,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "180分 平日10:00〜16:30 4名",
+        "price": 35200,
         "duration": 180,
         "capacity": 4
       },
       {
-        "name": "ビジター 平日夜 180分",
-        "price": 22000,
+        "name": "180分 平日17:00〜・土日祝 1名",
+        "price": 24200,
         "duration": 180,
-        "capacity": 4
+        "capacity": 1
       },
       {
-        "name": "ビジター 休日 180分",
-        "price": 22000,
+        "name": "180分 平日17:00〜・土日祝 2名",
+        "price": 28600,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "180分 平日17:00〜・土日祝 3名",
+        "price": 33000,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "180分 平日17:00〜・土日祝 4名",
+        "price": 37400,
         "duration": 180,
         "capacity": 4
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://sauna-m.com/",
+    "booking": {
+      "methods": [
+        "line",
+        "phone"
+      ],
+      "leadDays": 30,
+      "sameDay": true,
+      "cancelPolicy": "当日のキャンセルは料金の100%がかかります。予約の変更は電話で受け付けています。"
+    },
+    "accessNote": null,
+    "rooms": 2,
+    "fitFor": [
+      "名古屋駅の近くで当日に入りたい（名古屋駅から徒歩5分。当日は2時間前まで予約受付）",
+      "1人でも外気浴付きの個室を使いたい（120分1名11,550円から）",
+      "LINEで予約したい（予約はLINEか電話）"
+    ],
+    "notFitFor": [
+      "予約せずに行きたい（完全予約制で、直接来店では利用不可）",
+      "当日に予定が変わるかもしれない（当日キャンセルは100%）",
+      "22時以降に安く入りたい（22時以降は通常料金の+10%）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 139,
@@ -13217,21 +13459,21 @@
     "area": "三河・知多",
     "address": "愛知県刈谷市一色町3-7-10 ミキビル1階",
     "nearestStation": "重原駅",
-    "walkMinutes": 9,
+    "walkMinutes": 10,
     "priceMin": 3800,
     "duration": 90,
     "capacity": 5,
     "features": {
       "waterBath": true,
-      "waterBathTemp": "14",
+      "waterBathTemp": "15",
       "selfLoyly": true,
       "outdoorAir": false,
       "coupleOk": false,
       "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "10:00〜25:00",
-    "holidays": "基本無休",
+    "businessHours": "平日13:00〜翌1:00 / 土日祝10:00〜翌1:00",
+    "holidays": "年中無休（メンテナンス等の臨時休業あり）",
     "website": "https://www.instagram.com/pleasure_sauna_tlm/",
     "phone": "0566-91-4328",
     "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000687420/",
@@ -13254,12 +13496,12 @@
     ],
     "lat": 34.995856,
     "lng": 137.017425,
-    "description": "愛知県刈谷市（三河エリア）の完全予約制プライベートサウナ。スタンダードルームとプレジャールームの2室を備え、チラーで14℃に管理された水風呂と天然溶岩石のセルフロウリュが魅力。サウナ温度は80〜110℃の3段階で調整可能。",
+    "description": "愛知県刈谷市（三河エリア）の完全予約制プライベートサウナ。スタンダードルームとプレジャールームの2室を備え、チラーで15℃に管理された水風呂と天然溶岩石のセルフロウリュが魅力。サウナ温度は80〜110℃の3段階で調整可能。",
     "seoDescription": "PLEASURE SAUNA TLM（プレジャーサウナたるむ）は愛知県刈谷市の完全予約制個室サウナ。重原駅徒歩9分、3,800円〜/90分。チラー14℃水風呂・天然溶岩石セルフロウリュ・サウナ温度80〜110℃調整可。ReFaアメニティ完備。刈谷・三河エリアの個室サウナの写真・口コミ・予約方法を紹介。",
     "seoTitle": "たるむ（TLM）｜刈谷の個室サウナ ReFa完備 3,800円〜 口コミ・予約 | サウナ子",
-    "saunakoCommentShort": "チラー14℃の水風呂とリビング付き完全個室!",
-    "saunakoCommentLong": "三河エリアの個室サウナだよ! 水風呂がチラーで14℃にキッチリ管理されてるのがありがたい。サウナ温度も80〜110℃の3段階で選べるし、天然溶岩石のロウリュも気持ちいいの。ReFaのドライヤーやシャンプーが使えるアメニティも嬉しいかも!",
-    "updatedAt": "2026-02-27",
+    "saunakoCommentShort": "チラー15℃の水風呂とリビング付き完全個室!",
+    "saunakoCommentLong": "三河エリアの個室サウナだよ! 水風呂がチラーで15℃にキッチリ管理されてるのがありがたい。サウナ温度も80〜110℃の3段階で選べるし、天然溶岩石のロウリュも気持ちいいの。ReFaのドライヤーやシャンプーが使えるアメニティも嬉しいかも!",
+    "updatedAt": "2026-11-03",
     "plans": [
       {
         "name": "スタンダード 90分 1名",
@@ -13287,7 +13529,34 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://beauty.hotpepper.jp/kr/slnH000687420/",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": true,
+      "cancelPolicy": null
+    },
+    "accessNote": null,
+    "parking": {
+      "available": true,
+      "spaces": 8,
+      "note": "ビルの共有駐車場を使えます。"
+    },
+    "rooms": 2,
+    "fitFor": [
+      "1人や同性の友だち同士で入りたい（1人・男性グループ・女性グループで利用可）",
+      "車で行きたい（ビルの共有駐車場8台）",
+      "平日の昼に安く入りたい（13〜17時入店の平日昼割あり）"
+    ],
+    "notFitFor": [
+      "男女で一緒に入りたい（男女の混浴は不可）",
+      "外気浴をしたい（外気浴スペースの記載なし）",
+      "平日の午前に入りたい（平日は13時から営業）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 147,
@@ -19162,7 +19431,7 @@
     "address": "新潟県新発田市石喜180",
     "nearestStation": "新発田駅",
     "walkMinutes": null,
-    "priceMin": 2200,
+    "priceMin": 12400,
     "duration": 150,
     "capacity": 6,
     "features": {
@@ -19174,7 +19443,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "11:00〜20:00（完全予約制）",
+    "businessHours": "10:00〜19:00（完全予約制）",
     "holidays": "月・火曜定休（祝日の場合は営業、翌日休み）",
     "website": "https://sui-kwhgs.jp/",
     "phone": null,
@@ -19183,7 +19452,7 @@
       "タオルセット（有料330円）",
       "水着レンタル（有料550円）"
     ],
-    "note": "2024年11月オープン。古民家リノベーションの完全予約制バレルサウナ。男女共用・水着着用。井戸水の水風呂（約15℃）",
+    "note": "2024年11月オープン。古民家リノベーションの完全予約制バレルサウナ。男女共用・水着着用。井戸水の水風呂（通年約15℃）。貸切は1組最大6名。シェアプラン（平日2,200円〜・休日3,300円〜/1名）は他のグループと共用のため個室扱いしない。繁忙期は料金が変わることがある。",
     "images": [
       "/facilities/250-0.webp",
       "/facilities/250-1.webp",
@@ -19195,29 +19464,17 @@
     "description": "新発田市の森に囲まれた古民家をリノベーションした完全予約制バレルサウナ。2024年11月オープン。最大110℃のバレルサウナでセルフロウリュが楽しめ、井戸水を使った水風呂は通年約15℃。森林浴を兼ねた外気浴スペースも充実。男女共用・水着着用スタイル。",
     "saunakoCommentShort": "森の中の古民家バレルサウナ、井戸水が爽快！",
     "saunakoCommentLong": "新発田の森の中にある古民家バレルサウナだよ！2024年にオープンしたばかりの新しい施設で、最大110℃まで上がるバレルサウナはかなり本格的。井戸水の水風呂は通年約15℃で爽快だし、森に囲まれた外気浴はめちゃくちゃ気持ちいいかも。水着着用だからカップルで来るのもおすすめ！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-03",
     "plans": [
       {
-        "name": "パブリック 平日 150分",
-        "price": 2200,
-        "duration": 150,
-        "capacity": 1
-      },
-      {
-        "name": "パブリック 土日祝 150分",
-        "price": 3300,
-        "duration": 150,
-        "capacity": 1
-      },
-      {
-        "name": "貸切 平日 150分（最大6名）",
-        "price": 13200,
+        "name": "プライベートエリア貸切 平日 150分（最大6名）",
+        "price": 12400,
         "duration": 150,
         "capacity": 6
       },
       {
-        "name": "貸切 土日祝 150分（最大6名）",
-        "price": 16500,
+        "name": "プライベートエリア貸切 土日祝 150分（最大6名）",
+        "price": 16800,
         "duration": 150,
         "capacity": 6
       }
@@ -19225,7 +19482,33 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://www.chillnn.com/192d3a509c089/plan",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "3日前から30%、前日50%、当日100%のキャンセル料がかかります（決済手数料3.6%を除いて返金）。悪天候で休業する場合はキャンセル料はかかりません。"
+    },
+    "accessNote": "新発田駅前から川東地区方面行きのバスで「石喜」下車、徒歩1分。新発田駅から車・タクシーで約15分です。",
+    "parking": {
+      "available": true,
+      "spaces": 15,
+      "note": "満車の場合は近隣に追加の駐車場があります。"
+    },
+    "fitFor": [
+      "6人までのグループで貸し切りたい（貸切は1組最大6名で平日12,400円〜）",
+      "車で行きたい（駐車場15台）",
+      "冷たい水風呂に入りたい（通年約15℃の井戸水）"
+    ],
+    "notFitFor": [
+      "1人で安く個室を使いたい（1人向けの料金はシェアプランのみで、他のグループと一緒になる）",
+      "直前に予定が変わるかもしれない（3日前から30%のキャンセル料）",
+      "月曜・火曜に行きたい（月・火は定休）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 251,
@@ -22651,7 +22934,7 @@
       "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "平日10:00-22:30 / 土日祝10:00-23:30",
+    "businessHours": "平日10:00-22:30（最終受付21:00） / 土日祝・祝前日10:00-23:30（最終受付22:00）",
     "holidays": "水曜定休",
     "website": "https://iroha-gifu.net/",
     "phone": "058-215-5650",
@@ -22680,7 +22963,7 @@
     "description": "JR岐阜駅から徒歩5分、全5室の完全個室プライベートサウナ。和の美を基調としたモノトーンの空間で、セルフロウリュと18度の水風呂を完備。1階には蕎麦バーを併設し、サウナ後の一杯も楽しめる。水着着用でカップル利用にも対応。",
     "saunakoCommentShort": "駅チカ和モダンで蕎麦もサウナも！",
     "saunakoCommentLong": "JR岐阜駅から歩いて5分で行ける和モダンな個室サウナだよ！全5室あって、セルフロウリュもBluetoothスピーカーも使えるの。1階の蕎麦バーでサウナ上がりに一杯やるのがたまらないかも。水着着ればカップルで入れるのもいいよね。",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-03",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -22697,15 +22980,51 @@
         "capacity": 2
       },
       {
+        "name": "レギュラールーム 120分 1名",
+        "price": 4000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "レギュラールーム 120分 2名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
         "name": "ラージルーム 90分 1名",
         "price": 4000,
         "duration": 90,
         "capacity": 1
       },
       {
+        "name": "ラージルーム 90分 2名",
+        "price": 6500,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
         "name": "ラージルーム 90分 3名",
         "price": 9000,
         "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "ラージルーム 120分 1名",
+        "price": 4800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "ラージルーム 120分 2名",
+        "price": 7800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "ラージルーム 120分 3名",
+        "price": 10800,
+        "duration": 120,
         "capacity": 3
       },
       {
@@ -22715,14 +23034,101 @@
         "capacity": 1
       },
       {
+        "name": "VIPルーム 90分 2名",
+        "price": 8800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 90分 3名",
+        "price": 11800,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "VIPルーム 90分 4名",
+        "price": 14800,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "VIPルーム 120分 1名",
+        "price": 6800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "VIPルーム 120分 2名",
+        "price": 10800,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 120分 3名",
+        "price": 13800,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
         "name": "VIPルーム 120分 4名",
         "price": 17300,
         "duration": 120,
         "capacity": 4
+      },
+      {
+        "name": "VIPルーム 180分 1名",
+        "price": 8800,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "VIPルーム 180分 2名",
+        "price": 12800,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "VIPルーム 180分 3名",
+        "price": 16800,
+        "duration": 180,
+        "capacity": 3
+      },
+      {
+        "name": "VIPルーム 180分 4名",
+        "price": 20800,
+        "duration": 180,
+        "capacity": 4
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://iroha-gifu.net/",
+    "booking": {
+      "methods": [
+        "web",
+        "walk-in"
+      ],
+      "leadDays": null,
+      "sameDay": true,
+      "cancelPolicy": "予約前日までは無料でキャンセルできます。当日のキャンセルはできません。"
+    },
+    "accessNote": null,
+    "parking": {
+      "available": false,
+      "note": "施設の駐車場はなく、近隣のコインパーキングを利用します。"
+    },
+    "rooms": 5,
+    "fitFor": [
+      "1人で安く入りたい（レギュラールーム90分 1名3,500円）",
+      "当日に空きを見て予約したい（希望時刻の1時間前まで予約受付）",
+      "男女で一緒に入りたい（水着着用で男女利用可）"
+    ],
+    "notFitFor": [
+      "当日にキャンセルしたい（当日のキャンセルは不可）",
+      "電話で予約したい（予約はWebのみ）",
+      "車で行きたい（駐車場なし）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 297,
@@ -25913,7 +26319,7 @@
     "amenities": [
       "タオル"
     ],
-    "note": "エストニア産バレルサウナ・Tylöストーブ・瀬戸内レモンアロマ水・電話予約不可（Web予約のみ）",
+    "note": "BARREL（エストニア産バレル・TYLO製ストーブ・瀬戸内レモンのアロマ水）とFOREST（HARVIA製ストーブ）の2棟。貸切は最大4名で人数分の合計料金。BARRELの貸切リトリートは期間限定（リトリートサウナは11/30まで延長と告知）で、室温は75℃程度。混浴サウナ（BARREL 90分2,200円・FOREST 120分3,000円/1名）は他のグループと共用のため個室扱いしない。予約はWebのみで、変更・キャンセルは電話。",
     "images": [
       "/facilities/342-0.webp",
       "/facilities/342-1.webp",
@@ -25924,21 +26330,49 @@
     "description": "瀬戸内海を一望できるバレルサウナ。エストニア産のバレルにスウェーデンTylö製ストーブを搭載し、瀬戸内レモンのアロマ水でセルフロウリュが楽しめる。信楽焼の水風呂と海を見渡す外気浴スペースを備え、1〜4名で利用可能。DENIM HOSTEL float併設。",
     "saunakoCommentShort": "瀬戸内海一望のバレルサウナ！",
     "saunakoCommentLong": "瀬戸内海を眺めながらバレルサウナに入れるの、最高じゃない？瀬戸内レモンのアロマ水でロウリュすると爽やかな香りが広がるよ。水風呂は信楽焼で見た目もおしゃれ。外気浴で海風を感じながらととのう贅沢な時間を過ごせるかも！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-03",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "混浴サウナ 90分（1〜4名）",
+        "name": "BARREL 貸切リトリートサウナ 90分（最大4名・期間限定）",
         "price": 7000,
         "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "FOREST 貸切サウナ 120分（最大4名）",
+        "price": 9500,
+        "duration": 120,
         "capacity": 4
       }
     ],
     "timeSlots": null,
     "slotType": "free",
     "seoTitle": "浮サウナ（fuu sauna）｜倉敷・瀬戸内海を望むバレルサウナ 7,000円〜 口コミ・予約 | サウナ子",
-    "seoDescription": "浮サウナ fuu sauna は岡山県倉敷市児島のバレルサウナ。7,000円〜/90分・1〜4名貸切。エストニア産バレル＋Tylo製ストーブで瀬戸内レモンのアロマ水セルフロウリュ、信楽焼の水風呂と瀬戸内海を一望する外気浴付き。DENIM HOSTEL float併設・Web予約のみ。料金・口コミはこちら。"
+    "seoDescription": "浮サウナ fuu sauna は岡山県倉敷市児島のバレルサウナ。7,000円〜/90分・1〜4名貸切。エストニア産バレル＋Tylo製ストーブで瀬戸内レモンのアロマ水セルフロウリュ、信楽焼の水風呂と瀬戸内海を一望する外気浴付き。DENIM HOSTEL float併設・Web予約のみ。料金・口コミはこちら。",
+    "priceUrl": "https://www.fuusauna.com/barrel",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "14日前まで10%、3日前まで30%、前日まで50%、当日100%のキャンセル料がかかります（決済手数料を除いて返金）。予約の変更・キャンセルは電話（080-3885-3737、9:00〜20:30）で受け付けています。"
+    },
+    "accessNote": null,
+    "parking": null,
+    "fitFor": [
+      "4人まで同じ料金で貸し切りたい（貸切は最大4名の合計料金でBARREL 7,000円・FOREST 9,500円）",
+      "低めの温度でゆっくり入りたい（BARRELの貸切リトリートは75℃程度）",
+      "海を見ながら外気浴したい（瀬戸内海を一望する外気浴スペース）"
+    ],
+    "notFitFor": [
+      "Webで予約を変えたい（変更・キャンセルは電話のみ）",
+      "直前に予定が変わるかもしれない（14日前からキャンセル料がかかる）",
+      "90℃以上の高温で入りたい（BARRELの貸切リトリートは75℃程度。高温はFOREST）"
+    ],
+    "verifiedAt": "2026-11-03"
   },
   {
     "id": 343,
@@ -36436,7 +36870,7 @@
       "bluetooth": null,
       "wifi": true
     },
-    "businessHours": "9:05〜23:30",
+    "businessHours": "9:05〜翌1:45",
     "holidays": "なし",
     "website": "https://sauna-shibakoya.jp/",
     "phone": "",
@@ -36470,11 +36904,11 @@
     ],
     "lat": 34.6716885,
     "lng": 135.4950763,
-    "description": "大阪・南堀江の完全予約制プライベートサウナ。四ツ橋駅から徒歩4分。Gion・Otaru・Ishigakiの3室があり、全室にチラー導入の水風呂を完備。水着着用で男女一緒に利用でき、アメニティは無印良品やReFaで統一されて手ぶらで通える。朝9時台から23時半まで営業。",
+    "description": "大阪・南堀江の完全予約制プライベートサウナ。四ツ橋駅から徒歩4分。Gion・Otaru・Ishigakiの3室があり、全室にチラー導入の水風呂を完備。水着着用で男女一緒に利用でき、アメニティは無印良品やReFaで統一されて手ぶらで通える。朝9時台から深夜1時台まで枠がある。",
     "saunakoCommentShort": "全室チラー水風呂！手ぶらでOK",
     "saunakoCommentLong": "南堀江にある完全予約制の個室サウナだよ！Gion・Otaru・Ishigakiっていう3つの部屋があって、どの部屋にもチラー付きの水風呂がついてるの。水着を着れば男女一緒に入れるからカップルにも◎。アメニティが無印良品とReFaで揃ってて、しかも全部無料だから本当に手ぶらで行けちゃう。パウダールームは利用時間とは別に20分使えるのも嬉しいね！",
-    "updatedAt": "2026-09-06",
-    "verifiedAt": "2026-09-06",
+    "updatedAt": "2026-11-03",
+    "verifiedAt": "2026-11-03",
     "plans": [
       {
         "name": "小（Otaru）90分 極熱・極冷枠",
@@ -36513,7 +36947,32 @@
         "capacity": 4
       }
     ],
-    "timeSlots": null
+    "timeSlots": null,
+    "priceUrl": "https://sauna-shibakoya.jp/menu",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": 14,
+      "sameDay": null,
+      "cancelPolicy": "利用開始日時の24時間前までは無料でキャンセルできます。それ以降はキャンセルできず、来店しなかった場合も返金されません。予約の変更はできないため、キャンセルして予約し直します。"
+    },
+    "accessNote": null,
+    "parking": {
+      "available": false,
+      "note": "建物に駐車場はなく、近隣のコインパーキングを利用します。"
+    },
+    "rooms": 3,
+    "fitFor": [
+      "男女で一緒に入りたい（水着着用で男女利用可。水着レンタル500円）",
+      "水風呂をしっかり冷やしたい（全室チラー付き。朝の極熱・極冷枠は水風呂9.5℃・サウナ110℃）",
+      "夜遅くに入りたい（最終枠は深夜0時台の開始）"
+    ],
+    "notFitFor": [
+      "予約を後から変えたい（変更不可。キャンセルして取り直し）",
+      "現金で払いたい（クレジットカードと電子マネーのみ）",
+      "予約した本人以外が使う（予約者と異なる方は利用不可）"
+    ]
   },
   {
     "id": 497,
