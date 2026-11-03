@@ -45,18 +45,15 @@ describe('buildAskAiTargets', () => {
   const prompt = 'サウナ子 について教えて';
   const targets = buildAskAiTargets(prompt);
 
-  it('4サービス分を返す', () => {
-    expect(targets.map((t) => t.service)).toEqual(['chatgpt', 'gemini', 'claude', 'perplexity']);
+  it('3サービス分を返す', () => {
+    expect(targets.map((t) => t.service)).toEqual(['chatgpt', 'gemini', 'claude']);
   });
 
-  it('ChatGPT / Perplexity はプロンプトをURLエンコードして埋め込む', () => {
+  it('ChatGPT はプロンプトをURLエンコードして埋め込む', () => {
     const encoded = encodeURIComponent(prompt);
     const chatgpt = targets.find((t) => t.service === 'chatgpt')!;
-    const perplexity = targets.find((t) => t.service === 'perplexity')!;
     expect(chatgpt.href).toBe(`https://chatgpt.com/?q=${encoded}&hints=search`);
     expect(chatgpt.needsClipboard).toBe(false);
-    expect(perplexity.href).toBe(`https://www.perplexity.ai/search?q=${encoded}`);
-    expect(perplexity.needsClipboard).toBe(false);
   });
 
   it('Gemini / Claude はクリップボード経由で、URLにプロンプトを含めない', () => {

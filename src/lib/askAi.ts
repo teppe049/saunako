@@ -1,20 +1,20 @@
 /**
  * 「AIに聞く」導線のプロンプト・URL生成
  *
- * 背景: AI Assistant経由の流入（ChatGPT/Perplexity等）を伸ばすため、
+ * 背景: AI Assistant経由の流入（ChatGPT等）を伸ばすため、
  * 各AIに「サウナ子のページを参照して回答して」と依頼するプロンプトをワンクリックで渡す。
  * プロンプト内に llms.txt へのリンクを含めることで、AIがサイト構造を把握しやすくなる。
  *
  * URL仕様（2026-09時点）:
  * - ChatGPT: `https://chatgpt.com/?q=...&hints=search` （公式サポート。hints=searchでWeb検索モード）
- * - Perplexity: `https://www.perplexity.ai/search?q=...` （公式サポート）
+ * - Perplexity は 2026-09〜11 の2か月でクリック0のため外した（2026-11-03）。
  * - Gemini / Claude: URLプリフィルは非対応（Claude webは2025-10に廃止）。
  *   クリック時にプロンプトをクリップボードへコピーし、新規チャット画面を開く方式で代替する。
  */
 
 export const SITE_URL = 'https://www.saunako.jp';
 
-export type AskAiService = 'chatgpt' | 'gemini' | 'claude' | 'perplexity';
+export type AskAiService = 'chatgpt' | 'gemini' | 'claude';
 
 export interface AskAiTarget {
   service: AskAiService;
@@ -95,12 +95,6 @@ export function buildAskAiTargets(prompt: string): AskAiTarget[] {
       label: 'Claudeに聞く',
       href: 'https://claude.ai/new',
       needsClipboard: true,
-    },
-    {
-      service: 'perplexity',
-      label: 'Perplexityに聞く',
-      href: `https://www.perplexity.ai/search?q=${q}`,
-      needsClipboard: false,
     },
   ];
 }

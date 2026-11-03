@@ -45,20 +45,10 @@ function ClaudeIcon({ className }: IconProps) {
   );
 }
 
-function PerplexityIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="#20808D" strokeWidth="1.6" aria-hidden="true">
-      <path d="M12 3.5 4.5 9v6L12 20.5 19.5 15V9z" strokeLinejoin="round" />
-      <path d="M12 3.5v17M4.5 9l15 6M19.5 9l-15 6" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 const ICONS: Record<AskAiService, (props: IconProps) => React.ReactElement> = {
   chatgpt: ChatGptIcon,
   gemini: GeminiIcon,
   claude: ClaudeIcon,
-  perplexity: PerplexityIcon,
 };
 
 export default function AskAiIcon({ service, className }: { service: AskAiService; className?: string }) {
