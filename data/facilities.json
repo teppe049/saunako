@@ -28963,7 +28963,7 @@
       "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "15:00〜24:00",
+    "businessHours": "9:00〜翌3:00",
     "holidays": "不定休",
     "website": "https://nestsauna.jp/",
     "phone": "070-5530-3939",
@@ -28991,7 +28991,7 @@
     "description": "宮崎駅近くのホテル2Fにある完全個室プライベートサウナ。全3室を備え、スマートロックによる無人チェックインで気軽に利用可能。チラー付き水風呂とBluetooth対応で自分好みの空間を演出できる。アメニティも充実。",
     "saunakoCommentShort": "スマートロックで無人チェックイン！",
     "saunakoCommentLong": "宮崎駅近くのホテルの2Fにある個室サウナだよ！スマートロックで無人チェックインだから人と会わずにサウナに入れるの。チラー付き水風呂でしっかり冷えるし、Bluetoothで好きな音楽も流せる。アメニティも全部揃ってるから手ぶらで行けちゃうね！",
-    "updatedAt": "2026-09-06",
+    "updatedAt": "2026-11-05",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -29017,7 +29017,32 @@
     "timeSlots": null,
     "seoTitle": "ネストサウナ（NEST SAUNA）宮崎 料金・予約｜3室の広さと料金の違い 2時間6,600円〜 | サウナ子",
     "slotType": "free",
-    "seoDescription": "NEST SAUNA（ネストサウナ）は宮崎駅近く SLEEK URBAN HOTEL 2Fの完全個室サウナ。Sauna 2（10㎡）2時間6,600円／Sauna 1（12.9㎡）・Sauna 3（14.4㎡）2時間8,800円と部屋で広さと料金が違う。チラー付き水風呂・Bluetooth・スマートロック無人チェックイン、カップル・3〜4名OK。15時〜24時・不定休。"
+    "seoDescription": "NEST SAUNA（ネストサウナ）は宮崎駅近く SLEEK URBAN HOTEL 2Fの完全個室サウナ。Sauna 2（10㎡）2時間6,600円／Sauna 1（12.9㎡）・Sauna 3（14.4㎡）2時間8,800円と部屋で広さと料金が違う。チラー付き水風呂・Bluetooth・スマートロック無人チェックイン、カップル・3〜4名OK。15時〜24時・不定休。",
+    "rooms": 3,
+    "parking": {
+      "available": true,
+      "spaces": null,
+      "note": "利用者向けの無料駐車場（P2・P3）あり（2026年10月1日から）"
+    },
+    "accessNote": "SLEEK URBAN HOTEL MIYAZAKIの2階にある。",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "fitFor": [
+      "人と顔を合わせずに入りたい（スタッフ常駐なし・スマートロックで入室）",
+      "3〜4人のグループで貸し切りたい（部屋によって定員3名または4名）",
+      "車で行きたい（無料駐車場あり）"
+    ],
+    "notFitFor": [
+      "当日思い立って行きたい（公式の専用予約サイトでの事前予約と支払いが必要）",
+      "スタッフに相談しながら使いたい（スタッフは常駐していない）"
+    ],
+    "verifiedAt": "2026-11-05"
   },
   {
     "id": 383,
@@ -29257,7 +29282,7 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "9:30〜24:00",
+    "businessHours": "10:00〜24:00",
     "holidays": "第3月曜",
     "website": "https://www.moimoisauna.com/",
     "phone": null,
@@ -29271,7 +29296,7 @@
       "乳液",
       "ドライヤー"
     ],
-    "note": "鹿児島初のプライベートサウナ。サウナ王・太田広氏監修の美容特化型。Refaシャワーヘッド、ケラスターゼ製品、Dysonドライヤー完備。",
+    "note": "鹿児島初のプライベートサウナ。サウナ王・太田広氏監修の美容特化型。水風呂があるのはRoom Cのみ（A・Bは冷水シャワー）。1名追加ごとに+2,000円。Refaシャワーヘッド、ケラスターゼ製品、Dysonドライヤー完備。",
     "images": [
       "/facilities/386-0.webp",
       "/facilities/386-1.webp",
@@ -29282,7 +29307,7 @@
     "description": "鹿児島初のプライベートサウナとして2023年4月にオープン。サウナ王・太田広氏監修の日本初の美容特化型サウナで、Refaシャワーヘッドやケラスターゼ製品など高級アメニティを完備。武之橋駅から徒歩8分、90分3,800円から利用可能。",
     "saunakoCommentShort": "美容特化の高級アメニティが神！",
     "saunakoCommentLong": "鹿児島初のプライベートサウナで、美容に特化してるのがすごいの！Refaのシャワーヘッドにケラスターゼのヘアケア、Dysonのドライヤーまで揃ってて、サウナ後のケアが完璧。サウナ王監修だからサウナ自体のクオリティも高いし、美意識高い人にはたまらないと思うよ！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-05",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -29293,14 +29318,46 @@
         "capacity": 1
       },
       {
+        "name": "Room A・B 90分 2名",
+        "price": 5800,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
         "name": "Room C 90分 1名",
         "price": 4500,
         "duration": 90,
         "capacity": 1
+      },
+      {
+        "name": "Room C 90分 2名",
+        "price": 6500,
+        "duration": 90,
+        "capacity": 2
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "rooms": 3,
+    "accessNote": "受付は建物の7階。入口から入って左手のエレベーターで上がる。",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "fitFor": [
+      "水風呂付きの部屋で、サウナ後のヘアケアや美容ケアまで済ませたい",
+      "2人で入りたい（1名追加ごとに+2,000円）",
+      "サウナハットやタオルを借りて手ぶらで行きたい"
+    ],
+    "notFitFor": [
+      "当日思い立って行きたい（完全予約・前払い制）",
+      "全部屋で水風呂に入りたい（水風呂があるのはRoom Cのみ）"
+    ],
+    "verifiedAt": "2026-11-05"
   },
   {
     "id": 387,
