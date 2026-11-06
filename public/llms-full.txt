@@ -5,7 +5,7 @@
 Site: https://www.saunako.jp
 Index: https://www.saunako.jp/llms.txt
 Sitemap: https://www.saunako.jp/sitemap.xml
-Generated: 2026-11-05
+Generated: 2026-11-06
 
 ## 個室サウナの定義
 
@@ -2270,7 +2270,7 @@ Tags: 個室サウナ, 沖縄, 那覇, やんばる
 
 ![PRIVATE SAUNA KAIO](/facilities/391-0.webp)
 
-**[PRIVATE SAUNA KAIO](https://www.saunako.jp/facilities/391)** — 旭橋駅徒歩7分 / 8,800円〜 / 沖縄初の個室サウナ、53㎡超の贅沢空間！
+**[PRIVATE SAUNA KAIO](https://www.saunako.jp/facilities/391)** — 旭橋駅徒歩7分 / 6,800円〜 / 沖縄初の個室サウナ、53㎡超の贅沢空間！
 
 > **沖縄初の完全個室ラグジュアリーサウナ**。53㎡超の広々とした個室で、温度調整可能なサウナと水風呂を完備。那覇・豊見城・HANAREの3店舗を展開していて、24時間営業だから深夜のフライト前にも使えるのが便利。LINE予約制で会員・ビジター利用に対応してるよ。
 
