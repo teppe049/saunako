@@ -7753,7 +7753,7 @@
     "seoTitle": "想 -SOU-｜大阪・松屋町の個室サウナ 2室・4,500円〜 セルフロウリュ | サウナ子",
     "saunakoCommentShort": "水風呂深さ120cmでしっかり浸かれるのが最高!",
     "saunakoCommentLong": "大阪ミナミの隠れ家的プライベートサウナだよ! 縁ノ間の水風呂は深さ120cmで全身しっかり浸かれるのが気持ちいい。HARVIAストーブのセルフロウリュも本格的だし、オリジナルのヒーリングミュージックが流れてて雰囲気もすごく良いかも!",
-    "updatedAt": "2026-02-21",
+    "updatedAt": "2026-11-07",
     "plans": [
       {
         "name": "流ノ間 90分 1名",
@@ -7784,13 +7784,62 @@
         "price": 16000,
         "duration": 90,
         "capacity": 4
+      },
+      {
+        "name": "流ノ間 120分 1名",
+        "price": 6000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "流ノ間 120分 2名",
+        "price": 10000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "縁ノ間 120分 1-2名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "縁ノ間 120分 3名",
+        "price": 16000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "縁ノ間 120分 4名",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
       }
     ],
     "timeSlots": null,
     "openedAt": "2026-02-21",
     "closedAt": null,
     "slotType": "free",
-    "priceMax": 12000
+    "priceMax": 12000,
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "rooms": 2,
+    "fitFor": [
+      "Webで日時を決めて事前決済で行きたい",
+      "1人でも利用したい（流ノ間は1名4,500円〜）",
+      "最大4名で水風呂の深いお部屋を使いたい（縁ノ間）"
+    ],
+    "notFitFor": [
+      "電話で予約したい（電話予約は不可）",
+      "21時半以降にパウダールームを使いたい"
+    ],
+    "verifiedAt": "2026-11-07"
   },
   {
     "id": 90,
@@ -24041,7 +24090,7 @@
     "seoTitle": "itadaki Sauna19｜宝塚の絶景サウナ 夜景×外気浴 10,000円〜 | サウナ子",
     "saunakoCommentShort": "ゴルフ場の丘から眺める夜景が最高だよ！",
     "saunakoCommentLong": "宝塚のゴルフ場の中にあるサウナで、丘の上からの景色がほんとにきれいなの！100℃のサウナでしっかり蒸されたあと、19℃の水風呂で冷やして外気浴…夜景を見ながらのととのいは格別だよ。併設の懐石レストランでサ飯もできるし、デートにもぴったりかも！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-07",
     "openedAt": null,
     "closedAt": null,
     "plans": [
@@ -24052,8 +24101,44 @@
         "capacity": 2
       },
       {
+        "name": "平日 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "平日 120分 4名",
+        "price": 20000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
         "name": "土日祝 120分（1-2名）",
         "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 120分 3名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "土日祝 120分 4名",
+        "price": 24000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "平日 18時枠 120分（1-2名）",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "土日祝 18時枠 120分（1-2名）",
+        "price": 14000,
         "duration": 120,
         "capacity": 2
       },
@@ -24071,7 +24156,25 @@
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "利用開始の24時間前までは無料。それ以降は料金の100％がかかる。支払いは現地決済。"
+    },
+    "fitFor": [
+      "Web予約で日時を決めて行きたい（電話予約は不可）",
+      "最大4名まで同じ部屋で貸切にしたい",
+      "平日昼の120分枠で安く利用したい"
+    ],
+    "notFitFor": [
+      "電話で予約したい",
+      "当日思い立って行きたい（完全予約制のWeb予約のみ）"
+    ],
+    "verifiedAt": "2026-11-07"
   },
   {
     "id": 311,
