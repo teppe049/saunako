@@ -211,7 +211,7 @@ export const SUB_AREA_GUIDES: Record<string, SubAreaGuide> = {
       },
       {
         question: '麻布十番の個室サウナはどこ？',
-        answer: '麻布十番駅から徒歩圏内には COCO VILLA sauna（5,000円〜/60分・徒歩3分・男女OK）、AZABU SAUNA TENQOO（4,130円〜/60分・徒歩3分・24時間）、Ledian Spa（11,000円〜/120分・徒歩3分・外気浴あり）、ザ・プロラボサウナ（19,800円〜/120分・徒歩4分）、LOCA THE CLASS. 麻布十番（15,000円〜/120分・徒歩7分）の5施設があります。',
+        answer: '麻布十番駅から徒歩圏内には COCO VILLA sauna（5,000円〜/60分・徒歩3分・男女OK）、AZABU SAUNA TENQOO（4,130円〜/60分・徒歩3分・24時間）、Ledian Spa（11,000円〜/120分・徒歩3分・外気浴あり）、ザ・プロラボサウナ（19,800円〜/120分・徒歩4分）、LOCA THE CLASS. 麻布十番（20,000円〜/120分・徒歩7分）の5施設があります。',
       },
     ],
   },

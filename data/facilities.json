@@ -149,7 +149,7 @@
     "prefectureLabel": "東京都",
     "city": "中央区",
     "area": "銀座・築地",
-    "address": "東京都中央区銀座",
+    "address": "東京都中央区銀座7-3-6 銀座髙木ビル11F",
     "nearestStation": "銀座駅",
     "walkMinutes": 5,
     "priceMin": 5850,
@@ -157,14 +157,14 @@
     "capacity": 3,
     "features": {
       "waterBath": true,
-      "waterBathTemp": null,
+      "waterBathTemp": "14-15",
       "selfLoyly": true,
-      "outdoorAir": false,
+      "outdoorAir": true,
       "coupleOk": false,
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "平日12:10-23:00",
+    "businessHours": "平日12:00〜23:00 / 土日祝10:00〜23:00",
     "holidays": "第1火曜",
     "website": "https://salon91.com/store/91sauna/",
     "phone": "",
@@ -174,7 +174,7 @@
       "シャンプー",
       "ボディソープ"
     ],
-    "note": null,
+    "note": "各部屋は同性のみ（男女は別室で予約）。Room2・3は専用の外気浴バルコニー付きで、同伴者は追加料金なし。サウナは最大99℃まで調整可。無人運営",
     "images": [
       "/facilities/3-0.webp",
       "/facilities/3-1.webp",
@@ -186,54 +186,36 @@
     "description": "銀座エリアで5,850円から利用できるコスパに優れた個室サウナ。最大3名までの少人数向けで、セルフロウリュと水風呂を完備。平日12時から営業しており、友人とのサウナ利用にも適している。",
     "saunakoCommentShort": "銀座でコスパ良く本格サウナ体験！",
     "saunakoCommentLong": "銀座エリアで5850円から利用できるコスパの良さが魅力だよ！3名までの少人数向けだから、友達との利用にぴったり。セルフロウリュで自分好みの熱さに調整できるし、水風呂でしっかりクールダウンできるの！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-11-08",
     "plans": [
       {
-        "name": "Room1(un) 91分 1名 会員",
+        "name": "Room1(un) 90分 1名",
         "price": 5850,
-        "duration": 91,
-        "capacity": 1
-      },
-      {
-        "name": "Room1(un) 90分 1名 ビジター",
-        "price": 6500,
         "duration": 90,
         "capacity": 1
       },
       {
-        "name": "Room2(deux) 91分 2名 会員",
+        "name": "Room2(deux) 120分 平日（同性2名まで）",
         "price": 13800,
-        "duration": 91,
+        "duration": 120,
         "capacity": 2
       },
       {
-        "name": "Room2(deux) 90分 2名 ビジター",
-        "price": 15000,
-        "duration": 90,
+        "name": "Room2(deux) 120分 休日（同性2名まで）",
+        "price": 15180,
+        "duration": 120,
         "capacity": 2
       },
       {
-        "name": "Room3(trois) 91分 2名 会員",
+        "name": "Room3(trois) 120分 平日（同性3名まで）",
         "price": 15800,
-        "duration": 91,
-        "capacity": 2
-      },
-      {
-        "name": "Room3(trois) 90分 2名 ビジター",
-        "price": 17000,
-        "duration": 90,
-        "capacity": 2
-      },
-      {
-        "name": "Room3(trois) 91分 3名 会員",
-        "price": 17800,
-        "duration": 91,
+        "duration": 120,
         "capacity": 3
       },
       {
-        "name": "Room3(trois) 90分 3名 ビジター",
-        "price": 19500,
-        "duration": 90,
+        "name": "Room3(trois) 120分 休日（同性3名まで）",
+        "price": 17380,
+        "duration": 120,
         "capacity": 3
       }
     ],
@@ -241,8 +223,27 @@
     "openedAt": null,
     "closedAt": null,
     "seoTitle": "91° SAUNA｜銀座の個室サウナ 料金5,850円〜・口コミ | サウナ子",
-    "seoDescription": "91° SAUNA Private（銀座駅徒歩5分）の料金・値段を詳しく紹介。1名91分5,850円〜（会員）・ビジター6,500円、2名ルームは13,800円〜。セルフロウリュ・水風呂完備の完全個室サウナ。料金プラン・予約方法・口コミはサウナ子で。",
-    "slotType": "free"
+    "seoDescription": "91° SAUNA Private（銀座駅徒歩5分）の料金・値段を詳しく紹介。1名90分5,850円〜、外気浴バルコニー付きのRoom2・3は120分13,800円〜（同伴者無料）。セルフロウリュ・水風呂14〜15℃の完全個室サウナ。料金プラン・予約方法・口コミはサウナ子で。",
+    "slotType": "free",
+    "rooms": 3,
+    "accessNote": "入室は開始5分前から。待合スペースはなく無人運営（入口に連絡先の掲示あり）。",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "開始24時間前まで無料、それ以降はキャンセル不可・返金なし。支払いはクレジットカードのみ"
+    },
+    "fitFor": [
+      "銀座で仕事帰りに1人90分ととのいたい",
+      "同性の友人2〜3人で外気浴バルコニー付きの部屋を割り勘したい（同伴者無料）"
+    ],
+    "notFitFor": [
+      "カップル・男女で同じ部屋に入りたい（同性のみ）",
+      "電話やLINEで予約したい（Web予約のみ）"
+    ],
+    "verifiedAt": "2026-11-08"
   },
   {
     "id": 4,
@@ -2129,7 +2130,7 @@
     "prefectureLabel": "東京都",
     "city": "世田谷区",
     "area": "下北沢・世田谷",
-    "address": "東京都世田谷区三軒茶屋",
+    "address": "東京都世田谷区三宿1-25-2",
     "nearestStation": "三軒茶屋駅",
     "walkMinutes": 10,
     "priceMin": 2200,
@@ -2138,7 +2139,7 @@
     "features": {
       "waterBath": false,
       "waterBathTemp": null,
-      "selfLoyly": true,
+      "selfLoyly": null,
       "outdoorAir": false,
       "coupleOk": false,
       "bluetooth": null,
@@ -2147,7 +2148,7 @@
     "businessHours": "8:00〜24:10",
     "holidays": "不定休",
     "website": "https://s3cgrs.jp/",
-    "phone": "",
+    "phone": "080-3478-8026",
     "bookingUrl": null,
     "amenities": [
       "シャンプー",
@@ -2170,10 +2171,10 @@
     ],
     "lat": 35.641197,
     "lng": 139.671494,
-    "description": "Sauna3（サウナサン／サウナ3）は三軒茶屋駅から徒歩5分、2,200円から利用できる都内最安級のソロサウナ。セルフロウリュ対応で60分間一人の時間を満喫できる。初めての個室サウナや、気軽にサウナ習慣を始めたい方にうってつけの施設。",
+    "description": "Sauna3（サウナサン／サウナ3）は三軒茶屋駅から徒歩5分、2,200円から利用できる都内最安級のソロサウナ。2階のQUICK ROOMは1名専用、3階のVIP ROOMは水風呂とスチームサウナ付きで同性なら3名まで。初めての個室サウナや、気軽にサウナ習慣を始めたい方にうってつけの施設。",
     "saunakoCommentShort": "都内最安級！2200円からソロサウナ",
     "saunakoCommentLong": "なんと2200円から利用できる都内最安級のプライベートサウナだよ！三軒茶屋駅から徒歩5分で、60分一人でじっくり楽しめる。セルフロウリュもできて、この価格でこのクオリティはすごい！初心者にもおすすめかも！",
-    "updatedAt": "2026-10-29",
+    "updatedAt": "2026-11-08",
     "plans": [
       {
         "name": "QUICK 60分 1名 平日",
@@ -2252,6 +2253,24 @@
         "price": 9300,
         "duration": 80,
         "capacity": 3
+      },
+      {
+        "name": "VIP 180分 1名 休日",
+        "price": 12300,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "VIP 180分 2名 休日",
+        "price": 14300,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "VIP 180分 3名 休日",
+        "price": 18300,
+        "duration": 180,
+        "capacity": 3
       }
     ],
     "timeSlots": null,
@@ -2259,7 +2278,27 @@
     "closedAt": null,
     "seoTitle": "サウナサン｜三軒茶屋の都内最安ソロサウナ 2,200円〜 口コミ | サウナ子",
     "slotType": "free",
-    "verifiedAt": "2026-10-29"
+    "verifiedAt": "2026-11-08",
+    "accessNote": "先に1階の受付に立ち寄る。待合スペースがないので、開始5分前以降に来店する。",
+    "booking": {
+      "methods": [
+        "web",
+        "phone",
+        "walk-in"
+      ],
+      "leadDays": 14,
+      "sameDay": true,
+      "cancelPolicy": "前日17:00まで無料、それ以降は100%。30分以上の遅刻は当日キャンセル扱い"
+    },
+    "fitFor": [
+      "1人で、とにかく安く個室サウナに入りたい（60分2,200円）",
+      "同性の友人2〜3人で水風呂付きの部屋を使いたい（3F VIP）",
+      "空いていれば予約なしで当日ふらっと寄りたい"
+    ],
+    "notFitFor": [
+      "男女で入りたい（VIPは同性のみ、2Fは1名専用）",
+      "1人でも水風呂に入りたい（2Fは冷水シャワーのみ）"
+    ]
   },
   {
     "id": 26,
@@ -2708,9 +2747,9 @@
     "walkMinutes": 6,
     "priceMin": 16000,
     "duration": 120,
-    "capacity": 1,
+    "capacity": 4,
     "features": {
-      "waterBath": false,
+      "waterBath": true,
       "waterBathTemp": null,
       "selfLoyly": true,
       "outdoorAir": false,
@@ -2722,11 +2761,11 @@
     "holidays": "不定休",
     "website": "https://haaave.net/",
     "phone": "",
-    "bookingUrl": null,
+    "bookingUrl": "https://haaave-sauna.hacomono.jp/reserve/schedule/1/1/",
     "amenities": [
       "テレビ"
     ],
-    "note": "会員制/和モダン",
+    "note": "会員制（ビジター利用可）・和モダン。全室2時間制。水着着用で男女利用可。Room3はマグマスパ式（65℃・湿度55〜65%）。2回目以降はビジター料金（Room1・2 33,000円）か月額会員",
     "images": [
       "/facilities/32-0.webp",
       "/facilities/32-1.webp",
@@ -2738,19 +2777,57 @@
     "description": "南堀江にある和モダンな雰囲気の会員制プライベートサウナ。セルフロウリュ対応でカップルでの利用も可能。落ち着いた和の空間で2時間16,000円から、特別感のあるプライベートサウナ時間を過ごせる。",
     "saunakoCommentShort": "和モダンな空間でととのう会員制",
     "saunakoCommentLong": "南堀江にある和モダンな雰囲気のプライベートサウナだよ！会員制だから落ち着いた雰囲気の中でゆっくり過ごせる。カップルOKだから大切な人と特別な時間を過ごすのにもぴったり。和の空間でととのいたい人におすすめかも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-11-08",
     "plans": [
       {
-        "name": "初回体験 120分 2名",
+        "name": "初回体験 Room1・2 120分（2名まで）",
         "price": 16000,
         "duration": 120,
         "capacity": 2
+      },
+      {
+        "name": "初回体験 Room3 マグマスパ 120分（4名まで）",
+        "price": 25000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "ビジター Room1・2 120分（2名まで）",
+        "price": 33000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "ビジター Room3 マグマスパ 120分（4名まで）",
+        "price": 50000,
+        "duration": 120,
+        "capacity": 4
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "rooms": 3,
+    "priceUrl": "https://haaave.net/price",
+    "accessNote": "待合スペースがないので、入室は予約時間の10分前から。",
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": 14,
+      "sameDay": null,
+      "cancelPolicy": "24時間前まで無料、それ以降はキャンセル不可・返金なし"
+    },
+    "fitFor": [
+      "カップルで、和モダンの広い個室を2時間ゆっくり使いたい（水着着用で男女OK）",
+      "4人で低温高湿のマグマスパを貸し切りたい（Room3）"
+    ],
+    "notFitFor": [
+      "2回目以降も安く通いたい（初回体験は1度限りで、以降はビジター33,000円〜か会員）",
+      "18歳未満を連れて行きたい"
+    ],
+    "verifiedAt": "2026-11-08"
   },
   {
     "id": 33,
@@ -8819,20 +8896,20 @@
     "address": "東京都港区元麻布3-10-5 カドル元麻布101",
     "nearestStation": "麻布十番駅",
     "walkMinutes": 7,
-    "priceMin": 15000,
+    "priceMin": 20000,
     "duration": 120,
     "capacity": 6,
     "features": {
       "waterBath": true,
       "waterBathTemp": "15",
       "selfLoyly": true,
-      "outdoorAir": false,
+      "outdoorAir": true,
       "coupleOk": false,
       "bluetooth": null,
       "wifi": null
     },
     "businessHours": "9:00〜翌5:00",
-    "holidays": "なし",
+    "holidays": null,
     "website": "https://theclass.co.jp/",
     "phone": "03-5411-8800",
     "bookingUrl": "https://theclass-reserve.com/",
@@ -8846,7 +8923,7 @@
       "乳液",
       "ドライヤー"
     ],
-    "note": "会員制/ビジター可（初回体験15,000円〜）。マグマスパ式（富士山溶岩プレート）",
+    "note": "会員制（初回体験・ビジター可）。マグマスパ式（富士山溶岩、60℃）。Room1は定員2名（最大4名・3名目から追加料金）、Room2は定員4名（最大6名）。予約はLINE",
     "images": [
       "/facilities/101-0.webp",
       "/facilities/101-1.webp",
@@ -8858,38 +8935,57 @@
     "description": "麻布十番の会員制個室サウナ。富士山溶岩プレートを使用したマグマスパサウナは65℃の低温高湿度設計。2室（2名用・4名用）で、初回体験やビジター利用も可能。9:00〜翌5:00の深夜営業。",
     "saunakoCommentShort": "溶岩マグマスパの個室サウナ!",
     "saunakoCommentLong": "麻布十番にある会員制の個室サウナだよ！富士山溶岩プレートを使ったマグマスパサウナは65℃の低温高湿度で体の芯からじっくり温まれるの。初回体験なら15,000円で利用できるから、まずは一度試してみるのもいいかも！",
-    "updatedAt": "2026-02-27",
+    "updatedAt": "2026-11-08",
     "plans": [
       {
         "name": "初回体験 Room1 120分 2名",
-        "price": 15000,
+        "price": 20000,
         "duration": 120,
         "capacity": 2
       },
       {
         "name": "初回体験 Room2 120分 4名",
-        "price": 20000,
+        "price": 25000,
         "duration": 120,
         "capacity": 4
       },
       {
-        "name": "ビジター Room1 120分 4名",
+        "name": "ビジター Room1 120分 2名",
         "price": 40000,
         "duration": 120,
-        "capacity": 4
+        "capacity": 2
       },
       {
-        "name": "ビジター Room2 120分 6名",
+        "name": "ビジター Room2 120分 4名",
         "price": 50000,
         "duration": 120,
-        "capacity": 6
+        "capacity": 4
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "LOCA麻布十番｜麻布十番のマグマスパ個室サウナ 15,000円〜 | サウナ子",
-    "slotType": "free"
+    "seoTitle": "LOCA麻布十番｜麻布十番のマグマスパ個室サウナ 20,000円〜 | サウナ子",
+    "slotType": "free",
+    "rooms": 2,
+    "priceUrl": "https://theclass.co.jp/price/",
+    "booking": {
+      "methods": [
+        "line",
+        "phone"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "fitFor": [
+      "深夜まで（最終受付2:30）特別な日の貸切サウナを使いたい",
+      "4〜6人のグループで、外気浴スペース付きの広い部屋を借りたい"
+    ],
+    "notFitFor": [
+      "気軽に安く個室サウナを試したい（初回体験でも2名20,000円）"
+    ],
+    "verifiedAt": "2026-11-08"
   },
   {
     "id": 102,
@@ -11738,8 +11834,8 @@
     "address": "栃木県宇都宮市一番町1-29 鈴木ビル1階",
     "nearestStation": "東武宇都宮駅",
     "walkMinutes": 9,
-    "priceMin": 3800,
-    "duration": 90,
+    "priceMin": 3300,
+    "duration": 60,
     "capacity": 3,
     "features": {
       "waterBath": true,
@@ -11750,11 +11846,11 @@
       "bluetooth": true,
       "wifi": null
     },
-    "businessHours": "月〜金 12:00〜24:00 / 土日 9:30〜24:00",
-    "holidays": "基本無休",
-    "website": "https://www.saunaclub-wd.com/",
+    "businessHours": "12:00〜24:00",
+    "holidays": "不定休",
+    "website": "https://beauty.hotpepper.jp/kr/slnH000773590/",
     "phone": "080-7408-8571",
-    "bookingUrl": "https://saunaclub.stores.jp/reserve/1bancho",
+    "bookingUrl": "https://beauty.hotpepper.jp/kr/slnH000773590/coupon/",
     "amenities": [
       "タオル",
       "シャンプー",
@@ -11766,7 +11862,7 @@
       "乳液",
       "ミネラルウォーター"
     ],
-    "note": "宇都宮初の完全個室型サウナ。110度。氷バケツで水風呂を追加冷却可能",
+    "note": "宇都宮初の完全個室型サウナ。110度。氷バケツで水風呂を追加冷却可能。料金はホットペッパーのネット予約価格で、土日祝は1名+200円。男女・カップル利用可（水着レンタルあり）。電話はつながりにくく、当日の問い合わせは公式LINE",
     "images": [
       "/facilities/167-0.webp",
       "/facilities/167-1.webp",
@@ -11778,8 +11874,14 @@
     "description": "宇都宮初の完全個室型プライベートサウナ。110度の本格フィンランド式サウナにセルフロウリュを備え、12〜17度の水風呂は氷バケツで冷却も可能。東武宇都宮駅から徒歩9分。",
     "saunakoCommentShort": "宇都宮初の完全個室！110度の本格派",
     "saunakoCommentLong": "宇都宮の街なかで110度の本格フィンランド式サウナが楽しめるよ！セルフロウリュでアロマの蒸気を浴びたら、水風呂は氷バケツでキンキンに冷やせるのがポイント。Bluetoothで好きな音楽も流せるから、自分だけの空間でゆっくりととのえるかも",
-    "updatedAt": "2026-02-27",
+    "updatedAt": "2026-11-08",
     "plans": [
+      {
+        "name": "60分 1名 平日",
+        "price": 3300,
+        "duration": 60,
+        "capacity": 1
+      },
       {
         "name": "90分 1名 平日",
         "price": 3800,
@@ -11791,13 +11893,74 @@
         "price": 4000,
         "duration": 90,
         "capacity": 1
+      },
+      {
+        "name": "120分 1名 平日",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "150分 1名 平日",
+        "price": 6300,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "90分 2名 平日",
+        "price": 7200,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "120分 2名 平日",
+        "price": 7700,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "150分 2名 平日",
+        "price": 9600,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "120分 3名 平日",
+        "price": 12900,
+        "duration": 120,
+        "capacity": 3
       }
     ],
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "seoTitle": "ウツノミヤサウナクラブ本店｜宇都宮初の完全個室サウナ 3,800円〜 | サウナ子",
-    "slotType": "free"
+    "seoTitle": "ウツノミヤサウナクラブ本店｜宇都宮初の完全個室サウナ 3,300円〜 | サウナ子",
+    "slotType": "free",
+    "priceUrl": "https://beauty.hotpepper.jp/kr/slnH000773590/coupon/",
+    "rooms": 2,
+    "parking": {
+      "available": false,
+      "spaces": null,
+      "note": "近隣のコインパーキングを利用"
+    },
+    "booking": {
+      "methods": [
+        "web",
+        "line"
+      ],
+      "leadDays": null,
+      "sameDay": true,
+      "cancelPolicy": "予約したサイトで手続き。当日キャンセルは料金がかかる場合あり"
+    },
+    "fitFor": [
+      "カップルや夫婦で110度のサウナとセルフロウリュを楽しみたい",
+      "2〜3人で割って安く入りたい（2名120分7,700円）"
+    ],
+    "notFitFor": [
+      "外気浴をしたい（内気浴のみ）",
+      "車で行きたい（専用駐車場なし）"
+    ],
+    "verifiedAt": "2026-11-08"
   },
   {
     "id": 168,
@@ -19206,14 +19369,14 @@
     "holidays": "不定休（予約がない日は休業）",
     "website": "https://shiiyavillage.com/",
     "phone": "090-6333-1839",
-    "bookingUrl": "https://shiiyavillage.com/",
+    "bookingUrl": "https://airrsv.net/SHIIYAVILLGAE/calendar",
     "amenities": [
       "タオル",
       "シャンプー",
       "コンディショナー",
       "サンダル"
     ],
-    "note": "築100年の古民家をリノベーション。薪サウナ。井戸水のまろやかな水風呂。海岸での外気浴。宿泊も可能。柏崎駅から車20分。料金は貸切（1組最大10名）。1名ずつ予約する通常枠（1名3,300円）は他の利用者と同じ枠に入るため個室扱いしない",
+    "note": "築100年の古民家をリノベーション。薪サウナ。井戸水のまろやかな水風呂。海岸での外気浴。宿泊も可能。柏崎駅から車20分。料金は貸切（1組最大10名）。Web予約（Airリザーブ）に出ているのは1名ずつ予約する共用枠（1名3,300円）で個室扱いしない。貸切はWebに枠がないので電話で確認",
     "images": [
       "/facilities/247-0.webp",
       "/facilities/247-1.webp",
@@ -19225,7 +19388,7 @@
     "description": "柏崎市椎谷の築100年の古民家をリノベーションした薪サウナ施設。タイル貼りの趣あるサウナ室でセルフロウリュが楽しめ、復活させた井戸のまろやかな水風呂が特徴。目の前に広がる日本海と椎谷海浜公園での外気浴は開放感抜群。",
     "saunakoCommentShort": "築100年の古民家薪サウナ、海の外気浴が最高！",
     "saunakoCommentLong": "柏崎の海沿いにある築100年の古民家を改装した薪サウナだよ！タイル貼りの独特なサウナ室がすごく雰囲気あるの。井戸を復活させて作った水風呂はまろやかで気持ちいいし、海岸に出ての外気浴は開放感ハンパないかも。サンセットの時間帯は特におすすめ！",
-    "updatedAt": "2026-11-03",
+    "updatedAt": "2026-11-08",
     "plans": [
       {
         "name": "貸切 150分（最大10名）",
@@ -19238,7 +19401,21 @@
     "openedAt": null,
     "closedAt": null,
     "slotType": "free",
-    "verifiedAt": "2026-11-03"
+    "verifiedAt": "2026-11-08",
+    "booking": {
+      "methods": [
+        "phone",
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "parking": {
+      "available": true,
+      "spaces": 6,
+      "note": "施設の100m先に専用駐車場"
+    }
   },
   {
     "id": 248,
