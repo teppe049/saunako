@@ -3354,7 +3354,7 @@
     "prefectureLabel": "大阪府",
     "city": "枚方市",
     "area": "八尾・枚方",
-    "address": "大阪府枚方市",
+    "address": "大阪府枚方市川原町2-18",
     "nearestStation": "枚方市駅",
     "walkMinutes": 1,
     "priceMin": 7700,
@@ -3367,7 +3367,8 @@
       "outdoorAir": false,
       "coupleOk": true,
       "bluetooth": null,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "90-95"
     },
     "businessHours": "7:00-24:00",
     "holidays": "不定休",
@@ -3377,7 +3378,7 @@
     "amenities": [
       "IKEUCHI ORGANIC"
     ],
-    "note": "バレルサウナ",
+    "note": "バレルサウナ。3階（サウナ室・バルコニー・休憩室）は1グループ貸切。2階の一部は共用の自由スペース。男女一緒に利用可（水着着用）。リピーター・雨の日は1,000円引き（併用可）。",
     "images": [
       "/facilities/38-0.webp",
       "/facilities/38-1.webp",
@@ -3389,7 +3390,7 @@
     "description": "枚方市にあるバレルサウナが特徴のプライベートサウナ施設。IKEUCHI ORGANICのこだわりタオルを用意し、水風呂・セルフロウリュも完備。7,700円から2時間利用可能で、素材にこだわった本格サウナ体験を提供する。",
     "saunakoCommentShort": "バレルサウナ！こだわりタオル付き",
     "saunakoCommentLong": "枚方にあるバレルサウナが特徴のプライベートサウナだよ！IKEUCHI ORGANICのこだわりタオルが用意されてて、肌触りが最高。「ほんもの」にこだわった本格派サウナ体験ができる、サウナ好きにはたまらない施設かも！",
-    "updatedAt": "2026-02-08",
+    "updatedAt": "2026-11-09",
     "plans": [
       {
         "name": "モーニング/ミッドナイト 120分 1名 平日",
@@ -3491,7 +3492,33 @@
     "timeSlots": null,
     "openedAt": null,
     "closedAt": null,
-    "slotType": "free"
+    "slotType": "free",
+    "rooms": 1,
+    "parking": {
+      "available": false,
+      "spaces": null,
+      "note": "敷地内に車の駐車場はなし。近くのコインパーキングを利用。バイク・自転車は敷地内に置ける"
+    },
+    "booking": {
+      "methods": [
+        "web",
+        "phone"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "前日の12時までは無料でキャンセルできます。それ以降や無断キャンセルは全額かかります（料金ページには当日2時間前までキャンセル可との記載もあるため、直前の変更は店舗に確認してください）。"
+    },
+    "fitFor": [
+      "バレルサウナ・ヒノキの休憩室・バルコニーを1グループで使いたい（3階は完全貸切）",
+      "男女の友人やカップルで水着を着て一緒に入りたい",
+      "朝7時〜9時や22時〜24時の短い枠で軽く入りたい"
+    ],
+    "notFitFor": [
+      "冷たい水風呂でしっかり冷やしたい（チラー未設置・設置予定）",
+      "車で行きたい（敷地内に駐車場なし）",
+      "カードや現金をその場で払わず事前決済したい（支払いは利用後に受付で）"
+    ],
+    "verifiedAt": "2026-11-09"
   },
   {
     "id": 39,
@@ -28137,7 +28164,7 @@
     "address": "佐賀県佐賀市八戸溝2丁目6-18",
     "nearestStation": "佐賀駅",
     "walkMinutes": null,
-    "priceMin": 6100,
+    "priceMin": 3300,
     "duration": 90,
     "capacity": 2,
     "features": {
@@ -28147,7 +28174,8 @@
       "outdoorAir": false,
       "coupleOk": true,
       "bluetooth": true,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "75-95"
     },
     "businessHours": "8:30〜翌8:10",
     "holidays": "基本無休",
@@ -28166,7 +28194,7 @@
       "ReFa製品",
       "バスタオル"
     ],
-    "note": "全3室完全個室。18歳以上限定。QRコード無人受付。2名利用時+1,500円。佐賀駅から車6分。",
+    "note": "全3室完全個室。18歳以上限定。QRコード無人受付。予約時にクレジットカードで事前決済（初回は会員登録）。2名利用は+1,500円（ナイトパックは+3,000円）。盆・年末年始・GWは特別料金の場合あり。佐賀駅から車6分。",
     "images": [
       "/facilities/367-0.webp",
       "/facilities/367-1.webp",
@@ -28180,44 +28208,123 @@
     "seoTitle": "サウナRAKU｜佐賀の個室サウナ 6,100円〜 24時間営業 口コミ・予約 | サウナ子",
     "saunakoCommentShort": "温度自由自在で自分好みに整える！",
     "saunakoCommentLong": "水風呂が10℃まで冷やせるのすごくない？サウナも95℃まで上げられるから、自分好みの温度にカスタムし放題だよ。アメニティがReFaだったり化粧水・乳液まで揃ってるのが女子的にポイント高いかも。ほぼ24時間営業だから深夜サウナもできちゃうね！",
-    "updatedAt": "2026-03-12",
+    "updatedAt": "2026-11-09",
     "openedAt": "2025-12-21",
     "closedAt": null,
     "plans": [
       {
-        "name": "平日90分（1名）",
-        "price": 6100,
+        "name": "平日 8:30〜13:00 90分（1名）",
+        "price": 3300,
         "duration": 90,
         "capacity": 1
       },
       {
-        "name": "平日120分（1名）",
+        "name": "平日 8:30〜13:00 120分（1名）",
+        "price": 5900,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "平日 13:00〜17:30 90分（1名）",
+        "price": 4600,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日 13:00〜17:30 120分（1名）",
+        "price": 6200,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "平日 17:30〜24:40 90分（1名）",
+        "price": 4600,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "平日 17:30〜24:40 120分（1名）",
+        "price": 6900,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 8:30〜13:00 90分（1名）",
+        "price": 4400,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 8:30〜13:00 120分（1名）",
+        "price": 6800,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 13:00〜17:30 90分（1名）",
+        "price": 5600,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 13:00〜17:30 120分（1名）",
+        "price": 7500,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 17:30〜24:40 90分（1名）",
+        "price": 6200,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "土日祝 17:30〜24:40 120分（1名）",
         "price": 8200,
         "duration": 120,
         "capacity": 1
       },
       {
-        "name": "土日祝90分（1名）",
-        "price": 6700,
-        "duration": 90,
+        "name": "ナイトパック7時間 平日（1名）",
+        "price": 8500,
+        "duration": 420,
         "capacity": 1
       },
       {
-        "name": "土日祝120分（1名）",
-        "price": 9000,
-        "duration": 120,
-        "capacity": 1
-      },
-      {
-        "name": "ナイトパック7時間（1名）",
-        "price": 13000,
+        "name": "ナイトパック7時間 土日祝（1名）",
+        "price": 9800,
         "duration": 420,
         "capacity": 1
       }
     ],
     "timeSlots": null,
     "slotType": "free",
-    "priceMax": 9800
+    "priceMax": 9800,
+    "rooms": 3,
+    "parking": {
+      "available": true,
+      "spaces": 3,
+      "note": "敷地内に駐車場あり（1部屋につき1台）"
+    },
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": null
+    },
+    "fitFor": [
+      "時間帯を選んで安く入りたい（平日朝90分は3,300円）",
+      "夜通しゆっくり過ごしたい（7時間のナイトパック、深夜〜翌朝8:10まで営業）",
+      "車で行って敷地内に停めたい（1部屋につき1台）"
+    ],
+    "notFitFor": [
+      "当日に電話で予約したい（完全オンライン予約・カード事前決済）",
+      "18歳未満の同伴（18歳以上限定）",
+      "3名以上で入りたい（1室の定員は2名）"
+    ],
+    "verifiedAt": "2026-11-09"
   },
   {
     "id": 368,
