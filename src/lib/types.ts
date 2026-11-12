@@ -778,4 +778,12 @@ export const PREFECTURE_GUIDES: Record<string, PrefectureGuide> = {
     ],
     updatedAt: '2026-11-12',
   },
+  // 岡山: 男女で入れる6件のうち下位2件は、貸切が 28,000円（THE TANADA SAUNA・3時間）と 60,000円（sauna kolme kylä・20名まで）しかない。
+  // 「安く入れる」とは言えないので、千葉と同じく全件を料金順に並べるだけの見出しにする（2026-11-12 に料金を公式で確認し直した結果）
+  okayama: {
+    areaGuides: [],
+    extraFaqs: [],
+    coupleBudgetPicks: { heading: '岡山県でカップル（男女2人）で一緒に入れる個室サウナ' },
+    updatedAt: '2026-11-12',
+  },
 };

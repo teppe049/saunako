@@ -26454,31 +26454,31 @@
     "city": "岡山市",
     "area": "岡山市",
     "address": "岡山県岡山市北区中山下2-2-1 エスパス岡山6F",
-    "nearestStation": "岡山駅",
-    "walkMinutes": 15,
+    "nearestStation": "郵便局前駅",
+    "walkMinutes": 2,
     "priceMin": 3000,
-    "duration": 90,
+    "duration": 60,
     "capacity": 5,
     "features": {
       "waterBath": true,
-      "waterBathTemp": "15",
+      "waterBathTemp": "15-18",
       "selfLoyly": true,
-      "outdoorAir": false,
+      "outdoorAir": true,
       "coupleOk": true,
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "8:00〜20:00",
-    "holidays": "不定休",
+    "businessHours": "10:00-翌6:00",
+    "holidays": "年中無休",
     "website": "https://the-dd-sauna.com/",
-    "phone": null,
-    "bookingUrl": "https://the-dd-sauna.com/",
+    "phone": "086-237-2050",
+    "bookingUrl": "https://reserve.the-dd-sauna.com/reserve",
     "amenities": [
       "タオル",
       "シャンプー",
       "ボディソープ"
     ],
-    "note": "2026年2月OPEN・完全予約制・事前オンライン決済・非対面チェックイン・宿泊プランあり",
+    "note": "2026年2月OPEN・完全予約制・全5室（Standard 定員2名／Luxury 定員4名×3室／Executive 定員5名）・料金は人数別の1室合計・男女での利用は水着着用（レンタル300円）・23時からのナイトパック（Standard 4時間10,000円〜）あり・駐車場は近隣のコインパーキング",
     "images": [
       "/facilities/339-0.webp",
       "/facilities/339-1.webp",
@@ -26486,28 +26486,150 @@
     ],
     "lat": 34.6607,
     "lng": 133.9283,
-    "description": "2026年2月オープンの岡山県初カップル対応完全個室サウナ。全5室すべて個室で、漢方薬草（ヨモギ・ミント・陳皮・カモミール・桃の葉）を使ったオリジナルロウリュが特徴。宿泊も可能で、来店から退店までスタッフと対面不要の完全非対面スタイル。",
+    "description": "2026年2月オープンの岡山県初カップル対応完全個室サウナ。全5室すべて個室で、漢方薬草（ヨモギ・ミント・陳皮・カモミール・桃の葉）を使ったオリジナルロウリュが特徴。23時からのナイトパック（4〜5時間）もあり、来店から退店までスタッフと対面不要の完全非対面スタイル。",
     "saunakoCommentShort": "漢方薬草ロウリュで深くととのう！",
-    "saunakoCommentLong": "岡山に2026年2月にオープンしたばかりの個室サウナだよ！全5室が完全個室で、ヨモギやミントを使った漢方薬草ロウリュが他にはない体験なの。カップルで泊まれるプランもあるから記念日デートにもおすすめかも。非対面チェックインで気楽に使えるね！",
-    "updatedAt": "2026-03-02",
+    "saunakoCommentLong": "岡山に2026年2月にオープンしたばかりの個室サウナだよ！全5室が完全個室で、ヨモギやミントを使った漢方薬草ロウリュが他にはない体験なの。23時からのナイトパックもあるから、記念日デートにもおすすめかも。非対面チェックインで気楽に使えるね！",
+    "updatedAt": "2026-11-12",
     "openedAt": "2026-02-07",
     "closedAt": null,
     "plans": [
       {
-        "name": "1名プラン 90分",
-        "price": 3500,
+        "name": "Standard 60分 1名",
+        "price": 3000,
+        "duration": 60,
+        "capacity": 1
+      },
+      {
+        "name": "Standard 60分 2名",
+        "price": 4500,
+        "duration": 60,
+        "capacity": 2
+      },
+      {
+        "name": "Standard 90分 1名",
+        "price": 4000,
         "duration": 90,
         "capacity": 1
       },
       {
-        "name": "2名プラン 90分",
+        "name": "Standard 90分 2名",
         "price": 6000,
         "duration": 90,
         "capacity": 2
+      },
+      {
+        "name": "Standard 120分 1名",
+        "price": 5000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "Standard 120分 2名",
+        "price": 7500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Standard 150分 1名",
+        "price": 6000,
+        "duration": 150,
+        "capacity": 1
+      },
+      {
+        "name": "Standard 150分 2名",
+        "price": 9000,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "Standard 180分 1名",
+        "price": 7000,
+        "duration": 180,
+        "capacity": 1
+      },
+      {
+        "name": "Standard 180分 2名",
+        "price": 10500,
+        "duration": 180,
+        "capacity": 2
+      },
+      {
+        "name": "Luxury 90分 1名",
+        "price": 8000,
+        "duration": 90,
+        "capacity": 1
+      },
+      {
+        "name": "Luxury 90分 2名",
+        "price": 9000,
+        "duration": 90,
+        "capacity": 2
+      },
+      {
+        "name": "Luxury 90分 3名",
+        "price": 10000,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "Luxury 90分 4名",
+        "price": 11000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "Luxury 120分 1名",
+        "price": 12000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "Luxury 120分 2名",
+        "price": 13500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Luxury 120分 3名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "Luxury 120分 4名",
+        "price": 16500,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "Executive 120分 1名",
+        "price": 15000,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "Executive 120分 2名",
+        "price": 18000,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "Executive 120分 3名",
+        "price": 21000,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "Executive 120分 4〜5名",
+        "price": 24000,
+        "duration": 120,
+        "capacity": 5
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://the-dd-sauna.com/room",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 340,
@@ -26519,10 +26641,10 @@
     "area": "岡山市",
     "address": "岡山県岡山市北区下石井2-10-8 杜の街プラザ3F/4F",
     "nearestStation": "岡山駅",
-    "walkMinutes": 10,
+    "walkMinutes": 12,
     "priceMin": 8800,
     "duration": 90,
-    "capacity": 2,
+    "capacity": 6,
     "features": {
       "waterBath": true,
       "waterBathTemp": "16",
@@ -26533,7 +26655,7 @@
       "wifi": true
     },
     "businessHours": "月〜金 10:00〜22:00 / 土日祝 10:00〜21:00",
-    "holidays": "火曜・年末年始",
+    "holidays": "火曜・年次点検日・年末年始",
     "website": "https://rr-con-spa.com/private-spa-and-sauna/",
     "phone": "086-234-1110",
     "bookingUrl": "https://reserva.be/rr_private",
@@ -26548,7 +26670,7 @@
       "ミネラルウォーター",
       "充電器"
     ],
-    "note": "TTNE秋山氏プロデュース・天然温泉（ナトリウム-カルシウム塩化物泉）併設",
+    "note": "会員登録なしのビジターで予約可・料金は1室あたり・3Fの個室は男女で利用可（サウナ用水着あり）。最安の個室サウナ（定員2名）は水風呂がなく、16℃の冷水シャワーとバスタブ。水風呂（16℃）があるのは個室スパ＆サウナとVIPルーム。TTNE秋山氏プロデュース・天然温泉（ナトリウム-カルシウム塩化物泉）併設・キャンセルは1時間前まで",
     "images": [
       "/facilities/340-0.webp",
       "/facilities/340-1.webp",
@@ -26556,23 +26678,47 @@
     ],
     "lat": 34.6589,
     "lng": 133.9167,
-    "description": "サウナプロデューサーTTNE秋山大輔氏監修の完全個室プライベートサウナ。100℃のサウナに16℃の天然温泉水風呂を備え、着替えからサウナ・水風呂・休憩まで一室で完結。VIPルーム（6名）・スパ＆サウナ（4名）・サウナオンリー（2名）の3タイプから選べる。",
+    "description": "サウナプロデューサーTTNE秋山大輔氏監修の完全個室プライベートサウナ。100℃のサウナに16℃の天然温泉水風呂を備え、着替えからサウナ・水風呂・休憩まで一室で完結。VIPルーム（6名）・スパ＆サウナ（4名）・個室サウナ（2名）の3タイプから選べる。いちばん安い個室サウナは水風呂の代わりに16℃の冷水シャワーが付く。",
     "saunakoCommentShort": "TTNE監修の100℃×天然温泉水風呂！",
     "saunakoCommentLong": "サウナの達人TTNE秋山さんが監修した本格個室サウナだよ！100℃のサウナに16℃の天然温泉水風呂って最強の組み合わせじゃない？着替えから休憩まで全部一室で完結するから超快適。VIPルームなら6名まで使えるからグループにもおすすめかも！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-12",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "サウナオンリー 90分（2名）",
+        "name": "個室サウナ 90分（2名）",
         "price": 8800,
         "duration": 90,
         "capacity": 2
       },
       {
-        "name": "スパ＆サウナ 90分（4名）",
+        "name": "個室サウナ 120分（2名）",
+        "price": 11700,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "個室サウナ 150分（2名）",
+        "price": 14300,
+        "duration": 150,
+        "capacity": 2
+      },
+      {
+        "name": "個室スパ＆サウナ 90分（4名）",
         "price": 16500,
         "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "個室スパ＆サウナ 120分（4名）",
+        "price": 22000,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "個室スパ＆サウナ 150分（4名）",
+        "price": 27500,
+        "duration": 150,
         "capacity": 4
       },
       {
@@ -26582,26 +26728,22 @@
         "capacity": 6
       },
       {
-        "name": "サウナオンリー 120分（2名）",
-        "price": 11700,
-        "duration": 120,
-        "capacity": 2
-      },
-      {
-        "name": "スパ＆サウナ 120分（4名）",
-        "price": 22000,
-        "duration": 120,
-        "capacity": 4
-      },
-      {
         "name": "VIPルーム 120分（6名）",
         "price": 33000,
         "duration": 120,
         "capacity": 6
+      },
+      {
+        "name": "VIPルーム 150分（6名）",
+        "price": 41250,
+        "duration": 150,
+        "capacity": 6
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://reserva.be/rr_private",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 341,
@@ -26614,7 +26756,7 @@
     "address": "岡山県岡山市北区今2-1-25 1F",
     "nearestStation": "岡山駅",
     "walkMinutes": null,
-    "priceMin": 10890,
+    "priceMin": 2480,
     "duration": 60,
     "capacity": 1,
     "features": {
@@ -26638,7 +26780,7 @@
       "ウォーターサーバー",
       "ドリンク（イオンウォーター等）"
     ],
-    "note": "月額会員制・入会金4,400円・個室5室・フリーザーサウナ（5℃/-10℃/急冷ミスト）あり・温度3段階（80/90/100℃）選択可",
+    "note": "男性専用・会員制（月額10,890円・入会金4,400円）。ビジターは1回2,480円（タオル込・予約不要・受付13:00〜21:30）。1回あたりの利用時間は公式に記載なし。1人用の個室サウナ5室・温度3段階（80/90/100℃）・水風呂の代わりに冷蔵室（フリーザーサウナ）",
     "images": [
       "/facilities/341-0.webp",
       "/facilities/341-1.webp",
@@ -26646,22 +26788,24 @@
     ],
     "lat": 34.6565,
     "lng": 133.8981,
-    "description": "24時間年中無休の会員制プライベートサウナ。月額10,890円で個室5室が使い放題。サウナ温度は80℃・90℃・100℃の3段階から選べ、フリーザーサウナ（5℃/-10℃/急冷ミスト）も完備。2階にはリラクゼーションスペースを備え、好きな時間に自分だけのサウナを楽しめる。",
+    "description": "24時間年中無休の男性専用・会員制プライベートサウナ。月額10,890円で1人用の個室5室が使い放題で、ビジター（1回2,480円）でも利用できる。サウナ温度は80℃・90℃・100℃の3段階から選べ、フリーザーサウナ（5℃/-10℃/急冷ミスト）も完備。2階にはリラクゼーションスペースを備え、好きな時間に自分だけのサウナを楽しめる。",
     "saunakoCommentShort": "月額1万円で24時間サウナ使い放題！",
     "saunakoCommentLong": "月額10,890円で24時間いつでもサウナに入れるってすごくない？個室5室あって温度も80〜100℃で選べるの。フリーザーサウナは-10℃まであるから冷冷交代浴も極まるね。サウナ好きなら会員になって通い詰めるのがおすすめかも！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-12",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "月額会員",
-        "price": 10890,
+        "name": "ビジター 1名",
+        "price": 2480,
         "duration": 60,
         "capacity": 1
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://hotters24.com/000-walkin-visitor/",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 342,
@@ -26760,8 +26904,8 @@
     "address": "岡山県久米郡久米南町上籾1313-1",
     "nearestStation": "弓削駅",
     "walkMinutes": null,
-    "priceMin": 6000,
-    "duration": 75,
+    "priceMin": 28000,
+    "duration": 180,
     "capacity": 4,
     "features": {
       "waterBath": true,
@@ -26772,7 +26916,7 @@
       "bluetooth": true,
       "wifi": true
     },
-    "businessHours": "デイユース 11:00〜14:00 / 15:00〜17:00 / 宿泊チェックイン 15:00〜18:00",
+    "businessHours": "11:00〜14:00",
     "holidays": "火・水曜",
     "website": "https://www.tanadasauna.jp/",
     "phone": "086-728-0120",
@@ -26788,7 +26932,7 @@
       "Bluetoothスピーカー",
       "プロジェクター"
     ],
-    "note": "棚田百選ビュー・和サウナ第1号・VILLA（一棟貸切）とINN（和室）の2タイプ・地元ハーブでロウリュ",
+    "note": "サウナを貸切にできるのは3時間貸切プラン（11:00〜14:00・1〜4名・28,000円〜32,000円）。デイユース（75分 1名6,000円〜／3時間 1名7,500円〜）はINNの1室とサウナ利用のセットで、サウナは他の利用者と共用のため個室扱いしない。男女共用の着衣サウナ（水着・ウェアは持参）・棚田百選ビュー・和サウナ第1号・宿泊はVILLA（一棟貸切）とINN（和室）・地元ハーブでロウリュ",
     "images": [
       "/facilities/343-0.webp",
       "/facilities/343-1.webp",
@@ -26800,43 +26944,21 @@
     "description": "日本の棚田百選に選ばれた上籾棚田を一望できる宿泊型サウナ。和サウナ第1号として、地元のヒノキ・柚子・ヨモギを使ったセルフロウリュが楽しめる。棚田を眺める水風呂とミストシャワーの外気浴を備え、VILLA（一棟貸切）とINN（和室）から選べる。",
     "saunakoCommentShort": "棚田百選の絶景×和サウナ第1号！",
     "saunakoCommentLong": "棚田百選に選ばれた絶景を眺めながらサウナに入れるって贅沢すぎない？和サウナ第1号で、地元のヒノキや柚子でロウリュできるの。水風呂から見える棚田の景色は一生モノかも。ドリンク飲み放題でBluetoothスピーカーも使えるから至れり尽くせりだよ！",
-    "updatedAt": "2026-03-02",
+    "updatedAt": "2026-11-12",
     "openedAt": "2024-07-01",
     "closedAt": null,
     "plans": [
       {
-        "name": "デイユース 75分",
-        "price": 6000,
-        "duration": 75,
-        "capacity": 4
-      },
-      {
-        "name": "デイユース 3時間",
-        "price": 7500,
+        "name": "3時間貸切 11:00〜14:00（1〜4名）",
+        "price": 28000,
         "duration": 180,
         "capacity": 4
-      },
-      {
-        "name": "デイユース 2時間（15時枠）",
-        "price": 7000,
-        "duration": 120,
-        "capacity": 4
-      },
-      {
-        "name": "宿泊 VILLA（1名）",
-        "price": 10000,
-        "duration": 1140,
-        "capacity": 4
-      },
-      {
-        "name": "宿泊 INN（1名）",
-        "price": 10000,
-        "duration": 1140,
-        "capacity": 1
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://reserva.be/tanadasauna",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 344,
@@ -32703,10 +32825,10 @@
       "bluetooth": null,
       "wifi": null
     },
-    "businessHours": "9:30〜21:30",
+    "businessHours": "11:00〜23:00",
     "holidays": "不定休",
     "website": "https://www.instagram.com/sauna_402/",
-    "phone": "080-7552-7897",
+    "phone": "080-9717-0224",
     "bookingUrl": null,
     "amenities": [
       "タオル",
@@ -32714,7 +32836,7 @@
       "ボディソープ",
       "スキンケア用品"
     ],
-    "note": "ピラティススタジオ「Plus One Okayama」併設・完全予約制・公式LINEで予約・水着レンタルあり・サウナハットレンタルあり",
+    "note": "完全予約制・公式LINEで予約・受付はフクシマ宅建ビル1階・402号室は同性のみ利用可・タトゥーOK。2026年に別室のSAUNA302（異性利用OK）がオープン（料金・定員は公式LINEで要確認）。ピラティススタジオ「Plus One Okayama」運営・水着レンタルあり・サウナハットレンタルあり",
     "images": [
       "/facilities/474-0.webp",
       "/facilities/474-1.webp",
@@ -32725,7 +32847,7 @@
     "description": "岡山駅西口徒歩3分、マンション一室を改装した完全プライベートサウナ。ピラティススタジオ「Plus One Okayama」に併設され、1〜2名で利用可能。セルフロウリュと水風呂を備え、手ぶらで気軽に立ち寄れる。公式LINEから予約する完全予約制。",
     "saunakoCommentShort": "岡山駅3分のマンション一室サウナ!",
     "saunakoCommentLong": "岡山駅から歩いてすぐのマンションの一室がサウナになってるの、秘密基地感あって面白いよね! セルフロウリュも水風呂もあって、タオルやスキンケアも完備だから手ぶらでOK。1〜2名のプライベート空間だから周りを気にせずととのえるかも!",
-    "updatedAt": "2026-03-29",
+    "updatedAt": "2026-11-12",
     "plans": [
       {
         "name": "1名プラン 90分",
@@ -32754,8 +32876,8 @@
     "address": "岡山県岡山市南区豊成1-182-3",
     "nearestStation": "清輝橋駅",
     "walkMinutes": null,
-    "priceMin": 3000,
-    "duration": 120,
+    "priceMin": 60000,
+    "duration": 180,
     "capacity": 20,
     "features": {
       "waterBath": true,
@@ -32766,8 +32888,8 @@
       "bluetooth": null,
       "wifi": true
     },
-    "businessHours": "月火木金 11:00〜22:00 / 土日 9:00〜22:00",
-    "holidays": "水曜",
+    "businessHours": "平日 11:00〜22:00 / 土日祝 9:00〜22:00",
+    "holidays": "不定休",
     "website": "https://sauna-kolme-kyla.jp/",
     "phone": "090-3374-1137",
     "bookingUrl": "https://miniapp.line.me/2006604744-Np0elKg0",
@@ -32782,7 +32904,7 @@
       "ドライヤー",
       "ウォーターサーバー"
     ],
-    "note": "メインサウナ（HARVIA・HUUM 2種ストーブ・16名）+小サウナ（ペレットストーブ・4名）・ウィスキング導入・700年超オリーブの木がシンボル・水着着用・LINE予約・駐車場20台",
+    "note": "貸切は施設まるごと180分60,000円〜（〜20名・電話予約）。個人利用（120分3,000円・土日祝3,500円）は他のお客さんと同じサウナ室を使う定員制の営業で、個室扱いしない。メインサウナ（20名・HARVIAとHUUMの2種ストーブ）とサブサウナ（5名・ペレットストーブ・黙浴）の2室・ウィスキングあり・水着着用・駐車場20台",
     "images": [
       "/facilities/475-0.webp",
       "/facilities/475-1.webp",
@@ -32790,44 +32912,22 @@
     ],
     "lat": 34.63268,
     "lng": 133.92821,
-    "description": "岡山市南区の本格アウトドアサウナ施設。HARVIA・HUUMの2種ストーブを備えたメインサウナ（16名）とペレットストーブの小サウナ（4名）を擁し、岡山県初のウィスキングサービスも導入。水風呂・内気浴・外気浴スペースを完備し、貸切利用にも対応。築700年超のオリーブの木がシンボル。",
+    "description": "岡山市南区の本格アウトドアサウナ施設。HARVIA・HUUMの2種ストーブを備えたメインサウナ（20名）とペレットストーブのサブサウナ（5名）を擁し、岡山県初のウィスキングサービスも導入。水風呂・内気浴・外気浴スペースを完備。ふだんは他の利用者と一緒に入る定員制の営業で、施設まるごとの貸切（180分・20名まで）にも対応。築700年超のオリーブの木がシンボル。",
     "saunakoCommentShort": "2種ストーブ×ウィスキングの本格派!",
     "saunakoCommentLong": "HARVIAとHUUMの2種類のストーブがあるサウナって珍しいよね! メインサウナの波状ベンチが体にフィットして気持ちいいの。岡山県初のウィスキングも体験できるし、外気浴スペースのインフィニティチェアも最高。貸切もできるからグループで行くのもおすすめかも!",
-    "updatedAt": "2026-03-29",
+    "updatedAt": "2026-11-12",
     "plans": [
       {
-        "name": "通常プラン 120分",
-        "price": 3000,
-        "duration": 120,
-        "capacity": 1
-      },
-      {
-        "name": "土日祝プラン 120分",
-        "price": 3500,
-        "duration": 120,
-        "capacity": 1
-      },
-      {
-        "name": "レディースDAY 150分",
-        "price": 3000,
-        "duration": 150,
-        "capacity": 1
-      },
-      {
-        "name": "ペアDAY 150分（2名1組）",
-        "price": 7000,
-        "duration": 150,
-        "capacity": 2
-      },
-      {
-        "name": "貸切プラン 180分（〜20名）",
+        "name": "貸切利用 180分（〜20名）",
         "price": 60000,
         "duration": 180,
         "capacity": 20
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://sauna-kolme-kyla.jp/guide/",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 427,
@@ -32840,7 +32940,7 @@
     "address": "岡山県瀬戸内市牛窓町鹿忍6129",
     "nearestStation": "邑久駅",
     "walkMinutes": null,
-    "priceMin": 3300,
+    "priceMin": 6600,
     "duration": 90,
     "capacity": 6,
     "features": {
@@ -32863,7 +32963,7 @@
       "ボディソープ",
       "ドライヤー"
     ],
-    "note": "バレルサウナ完全貸切・檜露天風呂＆ドラム缶風呂付き・シークレットビーチ隣接・2日前まで要予約・レンタル（水着500円・ビーチタオル500円・サウナセット800円）・駐車場無料",
+    "note": "バレルサウナ完全貸切（2〜6名）・料金は大人1名3,300円×人数（子ども1,650円）・檜露天風呂＆ドラム缶風呂付き・シークレットビーチ隣接・2日前まで要予約・17時以降はナイト料金（1週間前までに電話）・レンタル（水着500円・ビーチタオル500円・サウナセット800円）・駐車場無料",
     "images": [
       "/facilities/427-0.webp",
       "/facilities/427-1.webp",
@@ -32874,17 +32974,43 @@
     "description": "瀬戸内海を望むバレルサウナ施設。2〜6名で完全貸切利用でき、セルフロウリュが楽しめる。温度調整可能な檜露天風呂とドラム缶風呂を備え、ビーチベンチでの外気浴では瀬戸内の海風を感じられる。グランピング施設に併設され、BBQやカフェも利用可能。",
     "saunakoCommentShort": "瀬戸内海×バレルサウナの贅沢貸切!",
     "saunakoCommentLong": "目の前にシークレットビーチが広がるバレルサウナって最高じゃない? セルフロウリュでしっかり蒸されたあと、檜露天風呂やドラム缶風呂でクールダウンできるの。ビーチベンチで瀬戸内の海風を浴びながらの外気浴は格別だよ! 2〜6名貸切だからグループでわいわい楽しめるね!",
-    "updatedAt": "2026-03-29",
+    "updatedAt": "2026-11-12",
     "plans": [
       {
-        "name": "日帰りサウナ 90分（大人1名）",
-        "price": 3300,
+        "name": "日帰りサウナ 90分 2名",
+        "price": 6600,
         "duration": 90,
-        "capacity": 1
+        "capacity": 2
+      },
+      {
+        "name": "日帰りサウナ 90分 3名",
+        "price": 9900,
+        "duration": 90,
+        "capacity": 3
+      },
+      {
+        "name": "日帰りサウナ 90分 4名",
+        "price": 13200,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "日帰りサウナ 90分 5名",
+        "price": 16500,
+        "duration": 90,
+        "capacity": 5
+      },
+      {
+        "name": "日帰りサウナ 90分 6名",
+        "price": 19800,
+        "duration": 90,
+        "capacity": 6
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "priceUrl": "https://ushimado-tari.com/sea/sauna/",
+    "verifiedAt": "2026-11-12"
   },
   {
     "id": 428,
