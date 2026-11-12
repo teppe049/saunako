@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import facilities from '@/../data/facilities.json'
-import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES } from '@/lib/types'
+import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES, PREFECTURE_GUIDES } from '@/lib/types'
 import { getAllArticles, getArticlesByCategory } from '@/lib/articles'
 
 /** YYYY-MM-DD 同士は文字列比較で新しい方が取れる */
@@ -8,14 +8,26 @@ const latestOf = (a: string, b?: string | null) => (b && b > a ? b : a)
 
 const activeFacilities = facilities.filter((f) => !f.closedAt)
 
+// 該当する施設が1件も無いページの lastmod。ビルド日にすると中身が変わらないのに日付だけ動くため固定する
+const BASELINE_DATE = '2026-01-01'
+
+type FacilityRecord = (typeof facilities)[number]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.saunako.jp'
+  const today = new Date().toISOString().slice(0, 10)
 
-  // 施設データの最新更新日をサイト全体の基準にする
-  const latestFacilityUpdate = facilities.reduce((latest, f) => {
-    const d = new Date(f.updatedAt)
-    return d > latest ? d : latest
-  }, new Date('2026-01-01'))
+  // 閉店は一覧から施設が消える変化なので closedAt も数える（先の日付の閉店予定はまだ一覧に出ているので除く）
+  const changedAt = (f: FacilityRecord) =>
+    latestOf(f.updatedAt, f.closedAt && f.closedAt <= today ? f.closedAt : null)
+
+  // 一覧ページの lastmod は、そこに載る施設が最後に変わった日にする。
+  // サイト全体の最新日を全エリアに付けると、1施設の更新で全エリアの日付が毎日動き、lastmod が中身の変化を表さなくなる
+  const latestChange = (list: FacilityRecord[], extra?: string) =>
+    new Date(list.reduce((latest, f) => latestOf(latest, changedAt(f)), latestOf(BASELINE_DATE, extra)))
+
+  // トップページは全国の件数・新着を出すので、サイト全体の最新日を使う
+  const latestFacilityUpdate = latestChange(facilities)
 
   // トップページ
   const staticPages: MetadataRoute.Sitemap = [
@@ -51,20 +63,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // エリアページ（全都道府県）
+  // エリアページ（全都道府県）。県別ガイド（PREFECTURE_GUIDES）を書き換えた日も本文の変化として数える
   const areaPages: MetadataRoute.Sitemap = PREFECTURES.map((pref) => ({
     url: `${baseUrl}/area/${pref.code}`,
-    lastModified: latestFacilityUpdate,
+    lastModified: latestChange(
+      facilities.filter((f) => f.prefecture === pref.code),
+      PREFECTURE_GUIDES[pref.code]?.updatedAt
+    ),
     changeFrequency: 'daily' as const,
     priority: 0.9,
   }))
 
-  // サブエリアページ
+  // サブエリアページ。施設の振り分けは getFacilitiesByArea と同じ（prefecture と area ラベルの一致）
   const subAreaPages: MetadataRoute.Sitemap = Object.entries(AREA_GROUPS).flatMap(
     ([prefecture, areas]) =>
       areas.map((area) => ({
         url: `${baseUrl}/area/${prefecture}/${area.slug}`,
-        lastModified: latestFacilityUpdate,
+        lastModified: latestChange(
+          facilities.filter((f) => f.prefecture === prefecture && f.area === area.label)
+        ),
         changeFrequency: 'daily' as const,
         priority: 0.85,
       }))

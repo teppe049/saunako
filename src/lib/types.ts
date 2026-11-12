@@ -345,6 +345,11 @@ export interface PrefectureGuide {
     /** 見出し（任意）。対象が少なく「安く入れる」と言えない県で、全件を料金順に並べるだけのときに差し替える */
     heading?: string;
   };
+  /**
+   * このガイドの文面を最後に書き換えた日（YYYY-MM-DD・任意）。
+   * サイトマップの lastmod は県内の施設の更新日から出すので、ガイドだけ書き換えた日はここに書かないと反映されない
+   */
+  updatedAt?: string;
 }
 
 export const AREA_GROUPS: Record<string, AreaGroup[]> = {
