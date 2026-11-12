@@ -38166,5 +38166,103 @@
     "openedAt": "2026-10-24",
     "closedAt": null,
     "slotType": "fixed"
+  },
+  {
+    "id": 501,
+    "slug": "prus-sauna-chiba",
+    "name": "Prus Sauna 千葉店",
+    "prefecture": "chiba",
+    "prefectureLabel": "千葉県",
+    "city": "千葉市中央区",
+    "area": "その他",
+    "address": "千葉県千葉市中央区栄町9-11 千葉ゴールデンプラザビル B1F",
+    "nearestStation": "千葉駅",
+    "walkMinutes": 10,
+    "priceMin": 12000,
+    "duration": 90,
+    "capacity": 4,
+    "features": {
+      "waterBath": true,
+      "waterBathTemp": null,
+      "selfLoyly": false,
+      "outdoorAir": false,
+      "coupleOk": true,
+      "bluetooth": null,
+      "wifi": null
+    },
+    "businessHours": "平日 13:00〜翌6:00 / 土日祝 11:00〜翌5:00",
+    "holidays": "",
+    "website": "https://www.prussauna.com/chiba",
+    "phone": "043-441-7551",
+    "bookingUrl": "https://prussauna.hacomono.jp/reserve/schedule/2/2",
+    "amenities": [
+      "水着",
+      "サウナハット",
+      "フェイスタオル",
+      "バスタオル",
+      "サウナマット",
+      "歯ブラシ",
+      "ドライヤー",
+      "美容品"
+    ],
+    "note": "2026年2月OPEN（公式のお知らせ。3月グランドオープンとする投稿もある）。コンセプトの違う4室（凪・碧・皇・奏）で、白基調の凪は75〜85℃の低温サウナ。各室に水風呂・シャワー・プライベートシアター付きの休憩スペース。料金は1室あたりで4名まで同額（公式FAQは5名以上1名+5,000円・最大6名とするが、予約サイトは最大4名）。予約は会員登録とクレジットカードの事前決済（電話予約も可）。利用時間にシャワーと着替えを含む。刺青OK。セルフロウリュの可否・水風呂の温度・外気浴・駐車場は公式に記載なし（最終受付は4:00）",
+    "images": [
+      "/facilities/501-0.webp",
+      "/facilities/501-1.webp",
+      "/facilities/501-2.webp",
+      "/facilities/501-3.webp",
+      "/facilities/501-4.webp"
+    ],
+    "lat": 35.6135533,
+    "lng": 140.1211554,
+    "description": "千葉駅から徒歩10分、栄町のビル地下1階にある完全個室のプライベートサウナ。白・深い色彩・黒・柔らかな光とコンセプトの違う4室があり、白基調の凪は75〜85℃の低温サウナ。各室に水風呂とプライベートシアター付きの休憩スペースを備え、4名まで同じ料金で貸し切れる。男女一緒の利用もでき、平日は朝6時まで営業。",
+    "saunakoCommentShort": "千葉駅10分、朝6時まで貸し切れる4つの個室!",
+    "saunakoCommentLong": "千葉駅から歩いて10分、ビルの地下にある完全個室サウナだよ! 雰囲気の違う4つの部屋から選べて、白い「凪」は75〜85℃の低温サウナだから、じっくり蒸されたい人にうれしいかも。水風呂とシアター付きの休憩スペースもあって、4人まで同じ料金なのもいいね。平日は朝6時まで開いてるから、終電を逃した夜にも!",
+    "updatedAt": "2026-11-12",
+    "plans": [
+      {
+        "name": "90分 サウナ貸切（4名まで）",
+        "price": 12000,
+        "duration": 90,
+        "capacity": 4
+      },
+      {
+        "name": "120分 サウナ貸切（4名まで）",
+        "price": 15500,
+        "duration": 120,
+        "capacity": 4
+      },
+      {
+        "name": "180分 サウナ貸切（4名まで）",
+        "price": 21000,
+        "duration": 180,
+        "capacity": 4
+      }
+    ],
+    "timeSlots": null,
+    "openedAt": "2026-02",
+    "closedAt": null,
+    "slotType": "free",
+    "verifiedAt": "2026-11-12",
+    "booking": {
+      "methods": [
+        "web",
+        "phone"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "公式サイトでは開始日時の24時間前までキャンセル無料・それ以降はキャンセル不可、予約サイトでは当日キャンセルは100%請求と案内されています。キャンセルしたチケットはマイページに戻り、別の日時で予約し直せます。"
+    },
+    "accessNote": "千葉駅から徒歩10分。千葉ゴールデンプラザビルの地下1階。",
+    "fitFor": [
+      "深夜や早朝に使いたい（平日は翌6時まで・最終受付4時）",
+      "4人まで同じ料金で貸し切りたい",
+      "手ぶらで行きたい（水着・サウナハット・タオル・アメニティあり）"
+    ],
+    "notFitFor": [
+      "当日ふらっと行きたい（会員登録とクレジットカードの事前決済が必要）",
+      "予定が変わりやすい（開始24時間前を過ぎるとキャンセルできない）"
+    ],
+    "priceUrl": "https://www.prussauna.com/chiba"
   }
 ]

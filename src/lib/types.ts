@@ -419,7 +419,7 @@ export const AREA_GROUPS: Record<string, AreaGroup[]> = {
     { slug: 'urayasu-ichikawa', label: '浦安・市川', cities: ['浦安市'] },
     { slug: 'matsudo-kashiwa', label: '松戸・柏', cities: ['松戸市', '柏市'] },
     { slug: 'tateyama-minamiboso', label: '館山・南房総', cities: ['館山市'] },
-    { slug: 'other', label: 'その他', cities: ['安房郡鋸南町'] },
+    { slug: 'other', label: 'その他', cities: ['安房郡鋸南町', '千葉市中央区'] },
   ],
   gunma: [
     { slug: 'ota-kiryu', label: '太田・桐生', cities: ['太田市', '桐生市'] },
