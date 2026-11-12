@@ -54,11 +54,13 @@ export default function FacilityCard({ facility, index = 0, showComment = true, 
           </p>
         )}
 
-        {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
-          <p className="text-sm text-text-secondary mb-2">
-            {facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分
-          </p>
-        )}
+        {/* 市区町村は必ず出す。駅徒歩のデータが無い施設（車で行く郊外型など掲載の約4割）は、これが無いとカードから場所が分からない */}
+        <p className="text-sm text-text-secondary mb-2">
+          {facility.city}
+          {facility.nearestStation && (facility.walkMinutes ?? 0) > 0 && (
+            <>・{facility.nearestStation}{facility.nearestStation.includes('駅') ? '' : '駅'} 徒歩{facility.walkMinutes}分</>
+          )}
+        </p>
 
         {distanceLabel && (
           <p className="text-sm font-bold text-primary-strong mb-2">{distanceLabel}</p>
