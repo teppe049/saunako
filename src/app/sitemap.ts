@@ -11,6 +11,11 @@ const activeFacilities = facilities.filter((f) => !f.closedAt)
 // 該当する施設が1件も無いページの lastmod。ビルド日にすると中身が変わらないのに日付だけ動くため固定する
 const BASELINE_DATE = '2026-01-01'
 
+// エリア一覧のテンプレート（施設カードの表示項目など、全エリアの本文に出る部分）を最後に変えた日。
+// 施設の更新日だけでは、テンプレートの変更で全エリアの本文が変わった日が lastmod に出ない。変えたらここを書き換える
+// 2026-11-12: 施設カードに市区町村を常に表示
+const AREA_TEMPLATE_UPDATED_AT = '2026-11-12'
+
 type FacilityRecord = (typeof facilities)[number]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -68,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/area/${pref.code}`,
     lastModified: latestChange(
       facilities.filter((f) => f.prefecture === pref.code),
-      PREFECTURE_GUIDES[pref.code]?.updatedAt
+      latestOf(AREA_TEMPLATE_UPDATED_AT, PREFECTURE_GUIDES[pref.code]?.updatedAt)
     ),
     changeFrequency: 'daily' as const,
     priority: 0.9,
@@ -80,7 +85,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       areas.map((area) => ({
         url: `${baseUrl}/area/${prefecture}/${area.slug}`,
         lastModified: latestChange(
-          facilities.filter((f) => f.prefecture === prefecture && f.area === area.label)
+          facilities.filter((f) => f.prefecture === prefecture && f.area === area.label),
+          AREA_TEMPLATE_UPDATED_AT
         ),
         changeFrequency: 'daily' as const,
         priority: 0.85,
