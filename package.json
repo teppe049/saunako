@@ -10,6 +10,7 @@
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "lint": "eslint",
+    "pretypecheck": "node scripts/generate-edge-files.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
