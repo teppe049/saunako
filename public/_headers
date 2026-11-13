@@ -1,7 +1,7 @@
 # Cloudflare Workers の静的アセット用ヘッダー
 # https://developers.cloudflare.com/workers/static-assets/headers/
-# 静的ファイルは Worker を通らずに返るため next.config.ts の headers() が効かない。同じ内容をここでも付ける
-# （このファイルは Worker が返すレスポンスには適用されない）
+# サイトは静的書き出しで、next.config.ts の headers() は効かない。ヘッダーはここで付ける
+# （このファイルは Worker が返すレスポンス＝/go/{id} などのリダイレクトには適用されない）
 
 /*
   X-Frame-Options: DENY
@@ -13,3 +13,10 @@
 # ビルドごとにファイル名が変わるので永続キャッシュしてよい
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
+
+# OG 画像は拡張子の無いファイル（opengraph-image）として書き出されるので、Content-Type が付かない。
+# 付けないと X や LINE のプレビューで画像が出ないことがある
+/opengraph-image
+  Content-Type: image/png
+/*/opengraph-image
+  Content-Type: image/png
