@@ -1,6 +1,10 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "saunako",
+	// saunako.jp のゾーンがある個人アカウント（My Account）。環境変数 CLOUDFLARE_API_TOKEN は
+	// 株式会社SaunaTrip のトークンなので、これを書いておかないと会社アカウントにデプロイされてしまう
+	// （docs/cloudflare-api-token-setup.md）
+	"account_id": "e125443b737b2ebdfc1779a7fbd28588",
 	// サイト本体は静的アセット（next build の output: "export" が out/ に書き出す）。
 	// Worker は一致するファイルが無いリクエストだけを受ける（/go/{id} など。worker/index.ts）
 	"main": "worker/index.ts",
