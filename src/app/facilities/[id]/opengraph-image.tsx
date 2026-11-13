@@ -5,6 +5,9 @@ export const alt = '施設詳細 | サウナ子';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// 静的書き出し（output: 'export'）ではビルド時に生成する画像として明示する必要がある
+export const dynamic = 'force-static';
+
 export async function generateStaticParams() {
   const ids = getAllIds();
   return ids.map((id) => ({ id: String(id) }));

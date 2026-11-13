@@ -3,7 +3,7 @@
 import { useSyncExternalStore, useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import { History } from 'lucide-react';
-import { getFavoriteFacilities } from '@/app/favorites/actions';
+import { getFacilitiesByIds } from '@/lib/facilitiesClient';
 import type { Facility } from '@/lib/types';
 
 // RecordVisit / RecentlyViewed と同じキー
@@ -47,7 +47,7 @@ export default function RecentlyViewedChips({ className = '' }: { className?: st
   useEffect(() => {
     const ids = recentIds.slice(0, MAX_CHIPS);
     startTransition(async () => {
-      setFacilities(ids.length === 0 ? [] : await getFavoriteFacilities(ids));
+      setFacilities(ids.length === 0 ? [] : await getFacilitiesByIds(ids));
     });
   }, [recentIds]);
 

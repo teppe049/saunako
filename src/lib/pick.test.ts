@@ -62,7 +62,7 @@ describe('parsePickIds', () => {
 
 describe('buildPickPath', () => {
   it('順序を保ってハイフンで繋ぐ', () => {
-    expect(buildPickPath([84, 18, 85])).toBe('/pick/84-18-85');
+    expect(buildPickPath([84, 18, 85])).toBe('/pick?ids=84-18-85');
   });
 });
 

@@ -3,7 +3,7 @@
 import { useSyncExternalStore, useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getFavoriteFacilities } from '@/app/favorites/actions';
+import { getFacilitiesByIds } from '@/lib/facilitiesClient';
 import type { Facility } from '@/lib/types';
 
 const STORAGE_KEY = 'saunako_recent';
@@ -43,7 +43,7 @@ export default function RecentlyViewed() {
       if (ids.length === 0) {
         setFacilities([]);
       } else {
-        const data = await getFavoriteFacilities(ids);
+        const data = await getFacilitiesByIds(ids);
         setFacilities(data);
       }
     });

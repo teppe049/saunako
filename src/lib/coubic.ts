@@ -56,7 +56,8 @@ export interface FacilityAvailability {
  * 空き状況表示の有効フラグ。
  * 2026-09-02 に本番オフ: STORES予約の予約者向け利用規約 第11条が「システムの解析行為」「過度な負荷」を
  * 禁止しており、非公式APIの利用が抵触し得るため。STORES側に正式な手段を確認できるまで false のまま。
- * true に戻すと、施設ページのバッジと /api/availability が再び動く。
+ * 2026-11 の静的書き出し（Cloudflare Workers 移行）で /api/availability の Route Handler は削除した。
+ * true に戻すなら、取得処理を worker/index.ts に移してからにする（バッジは /api/availability/{id} を叩く）。
  */
 export const AVAILABILITY_ENABLED = false;
 

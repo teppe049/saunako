@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-og-thumbs.mjs",
+    "prebuild": "node scripts/generate-edge-files.mjs",
     "build": "next build",
-    "start": "next start",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "start": "wrangler dev",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -17,7 +16,6 @@
     "llms": "node scripts/generate-llms-full.mjs"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.20.17",
     "gray-matter": "^4.0.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.563.0",

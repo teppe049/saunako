@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// 静的書き出し（output: 'export'）ではビルド時に生成するファイルとして明示する必要がある
+export const dynamic = 'force-static'
+
 // AIアシスタント経由の流入がOrganicの約9%を占めるため、AI検索・学習クローラーを明示的に全面許可する。
 // 名前付きで列挙しておくことで、将来ワイルドカードのデフォルト挙動が変わっても露出が担保される。
 const AI_CRAWLERS = [

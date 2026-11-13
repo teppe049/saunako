@@ -14,7 +14,7 @@ interface PickSendSheetProps {
 
 /**
  * 候補を1URLにして送るボトムシート。
- * ひとことは URL の ?m= に載せるだけ（BEなし）。受け取った側は /pick/[ids] で見る。
+ * ひとことは URL の m= に載せるだけ（BEなし）。受け取った側は /pick?ids=… で見る。
  */
 export default function PickSendSheet({ onClose }: PickSendSheetProps) {
   const items = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
@@ -38,7 +38,7 @@ export default function PickSendSheet({ onClose }: PickSendSheetProps) {
 
   const trimmed = message.trim();
   const path = buildPickPath(items.map((i) => i.id));
-  const shareUrl = `${SITE_URL}${path}${trimmed ? `?m=${encodeURIComponent(trimmed)}` : ''}`;
+  const shareUrl = `${SITE_URL}${path}${trimmed ? `&m=${encodeURIComponent(trimmed)}` : ''}`;
   const shareTitle = `どれがいい？ 個室サウナ ${items.length}件`;
 
   const copy = async () => {

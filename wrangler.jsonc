@@ -1,21 +1,18 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"main": ".open-next/worker.js",
 	"name": "saunako",
-	// 2025-05-05 以降でないと FinalizationRegistry 未定義で落ちる（OpenNext known issues）
+	// サイト本体は静的アセット（next build の output: "export" が out/ に書き出す）。
+	// Worker は一致するファイルが無いリクエストだけを受ける（/go/{id} など。worker/index.ts）
+	"main": "worker/index.ts",
 	"compatibility_date": "2026-11-01",
-	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 	"assets": {
-		"directory": ".open-next/assets",
-		"binding": "ASSETS"
+		"directory": "out",
+		"binding": "ASSETS",
+		// /area/tokyo → out/area/tokyo.html。末尾スラッシュ付きはスラッシュ無しへ転送される
+		"html_handling": "auto-trailing-slash",
+		// 存在しないパスは out/404.html を 404 で返す
+		"not_found_handling": "404-page"
 	},
-	"services": [
-		{
-			// キャッシュ再検証用の自己参照。service 名は Worker 名と一致させる
-			"binding": "WORKER_SELF_REFERENCE",
-			"service": "saunako"
-		}
-	],
 	"observability": {
 		"enabled": true
 	}

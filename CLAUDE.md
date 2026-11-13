@@ -1,7 +1,7 @@
 # Saunako - プロジェクト指示書
 
 個室サウナ検索プラットフォーム。Next.js 16 + React 19 + TypeScript + Tailwind CSS v4。
-デプロイ先: Cloudflare Workers（`@opennextjs/cloudflare`。2026-11 に Vercel から移行）/ ドメイン: www.saunako.jp
+デプロイ先: Cloudflare Workers（Next.js の静的書き出し + 小さな Worker。2026-11 に Vercel から移行）/ ドメイン: www.saunako.jp
 
 ## 「個室サウナ」の定義と掲載基準
 
@@ -20,10 +20,9 @@
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | 開発サーバー起動 |
-| `npm run build` | プロダクションビルド（`prebuild` で OG 用サムネイルを生成） |
-| `npm run start` | プロダクションサーバー起動（Node。本番の Workers とは別物） |
-| `npm run preview` | Workers 向けにビルドしてローカルの workerd で起動（本番に近い確認はこちら） |
-| `npm run deploy` | Workers 向けにビルドして本番へデプロイ |
+| `npm run build` | 静的書き出し（`out/`）。`prebuild` で `_redirects` と `/go` の転送先を生成 |
+| `npm run deploy` | ビルドして Cloudflare Workers へデプロイ（静的ファイル約1万件のアップロードで時間がかかる） |
+| `npm run start` / `preview` | `wrangler dev` でローカル配信。**macOS では静的ファイル数が多すぎて落ちる**（spawn EBADF）。確認は workers.dev へのデプロイで行う |
 | `npm run lint` | ESLint チェック（Next.js core-web-vitals + TypeScript） |
 | `npm run typecheck` | `tsc --noEmit` で型チェック |
 | `npm test` | Vitest（`src/**/*.test.ts` + `tests/**/*.test.ts`）。`tests/facilities-data.test.ts` が facilities.json の整合性ゲート |
@@ -43,7 +42,7 @@
 | `node scripts/owner-report.mjs` | 施設オーナー向け送客レポート（GA4の閲覧・予約/公式/電話クリックを月別集計）。`--month YYYY-MM` / `--top N` / `--id 施設ID`で1施設の送付用。2026-09以降のみ（facility_idの登録が9/2） |
 | `node scripts/sync-suggest-data.mjs` | 検索サジェスト（`src/lib/suggest-data.json`）の施設名とエリア別件数を facilities.json から作り直す。施設の追加・閉店・エリア変更のあとに実行（`tests/closed-facilities.test.ts` がずれを検出）。駅名リストは手で正規化したものなので触らない |
 | `node scripts/freshness-watch.mjs` | 公式サイトの料金記載の変化と閉店の兆候を検出（週1回）。基準は `data/freshness/snapshot.json`、結果は `docs/freshness-report.md` に追記。差分を公式で確認して facilities.json と `verifiedAt` を直す。`--dry-run` / `--id` / `--limit` 指定時は書き込まない |
-| `node scripts/generate-og-thumbs.mjs` | `/pick/[ids]/og` に埋め込む施設写真の JPEG を `public/og-thumbs/` に生成（gitignore 済み・冪等）。`npm run build` の prebuild で自動実行 |
+| `node scripts/generate-edge-files.mjs` | `public/_redirects`（slug→ID・旧エリアslug・掲載終了施設の恒久リダイレクト）と `worker/generated/go-targets.json`（`/go/{id}` の転送先）を facilities.json から生成。prebuild で自動実行・gitignore 済み。**掲載終了施設のリダイレクトを足すときはここに書く** |
 | `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数
@@ -79,7 +78,6 @@ src/
 │   ├── favorites/            # お気に入り
 │   ├── ranking/              # ランキング（未実装予定）
 │   ├── for-owners/           # 施設オーナー向けページ
-│   ├── go/[facilityId]/      # 施設への外部リンクリダイレクト
 │   ├── faq/                  # FAQ
 │   ├── privacy/              # プライバシーポリシー
 │   ├── terms/                # 利用規約
@@ -111,14 +109,15 @@ Skills/                       # Claude Code カスタムスキル
 
 ## Gotchas / 非自明な仕様
 
-- **slug→idリダイレクト**: `next.config.ts` が `facilities.json` を読み込み、slug→数値IDの308リダイレクトを自動生成。施設追加時はビルドでリダイレクトが自動更新される
+- **slug→idリダイレクト**: `scripts/generate-edge-files.mjs` が `facilities.json` から slug→数値IDの308を `public/_redirects` に生成。施設追加時はビルドで自動更新される（上限2,000件。超えるとビルドが止まる）
 - **React Compiler有効**: `next.config.ts` で `reactCompiler: true`。手動の `useMemo`/`useCallback` は基本不要
 - **画像は未最適化**: `images.unoptimized: true` 設定（画像最適化サービスを使わない）。2026-04にVercel Hobbyの月5,000変換枠を超過して画像が消えたため。**ランタイム縮小が効かないので、配信する解像度は取り込み時に決まる**（`MAX_WIDTH = 1600`）。手動で画像を追加したら `node scripts/resize-oversized-images.mjs` を流す
-- **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` への308リダイレクトが `next.config.ts` に設定済み（Workers でも host 条件が効くことを確認済み）
+- **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` は Cloudflare ゾーンのリダイレクトルールで行う（静的ファイルは Worker を通らないので Worker だけでは全部を転送できない）。`worker/index.ts` にも同じ転送がある
 - **DNSも配信もCloudflare**（DNSは2026-09-06移管、配信は2026-11にVercelから Workers へ）: NSは `lola` / `tadeo`.ns.cloudflare.com。`www` と apex は Worker の**カスタムドメイン**で、レコードはプロキシ有効（オレンジ雲）が正しい。MX（Email Routing）とTXTは触らない。検証は `zsh scripts/verify-dns-switch.sh`
-- **Workers のランタイムに fs と sharp は無い**: ページは全部ビルド時に生成して静的アセットから返している（`open-next.config.ts` の static assets キャッシュ）。リクエスト時に動く処理（`ƒ` のルート、`generateStaticParams` に無いパラメータ）で `fs` / `process.cwd()` / `sharp` を使うと本番だけ 500 になる。`public/` を読むときは `src/lib/ogThumb.ts` の `fetchPublicFile`（ASSETS バインディング）を使う。Route Handler は既定で動的になるので、リクエストに依存しないものは `export const dynamic = 'force-static'`。確認は `npm run preview`
-- **ISR（`revalidate`）は使えない**: キャッシュが読み取り専用の静的アセットなので、データ更新はデプロイで反映する。使うなら R2 のキャッシュに切り替える
-- **静的ファイルのヘッダーは `public/_headers`**: `public/` のファイルは Worker を通らずに返るので `next.config.ts` の `headers()` が効かない。セキュリティヘッダーを変えるときは両方そろえる
+- **サイトは静的書き出し（`output: 'export'`）でサーバー処理が無い**: Workers 無料プランの CPU 10ms に収めるため（2026-11 に Next.js をそのまま Workers で動かしたら、作り置きのページでも1〜5割が CPU 超過で 503 になった）。そのため次は使えない — `searchParams` を読むページ、`generateStaticParams` に無いパラメータ、Server Actions、`cookies()`/`headers()`、動的な Route Handler、ISR、`next.config.ts` の `redirects()`/`headers()`。Route Handler・`opengraph-image`・`sitemap`/`robots` には `export const dynamic = 'force-static'` が要る
+- **URL のパラメータで中身が変わる画面はブラウザで描画する**: `/search`・`/favorites?ids=`・`/pick?ids=` は静的なページ1枚で、施設データは `/facilities-data.json`（ビルド時生成）を `src/lib/facilitiesClient.ts` で取得して描画する。絞り込み・並べ替えは `src/lib/facilitySearch.ts`（facilities.json を import しない純関数。ブラウザから `src/lib/facilities.ts` を import すると JSON がまるごと JS に入る）
+- **Worker（`worker/index.ts`）は静的ファイルが無いリクエストだけ受ける**: `/go/{id}`（送客の302）、旧形式 `/pick/{ids}` → `/pick?ids=`、非www転送。重い処理を足さない（無料プランの CPU 10ms）
+- **ヘッダーは `public/_headers`**: セキュリティヘッダーと `/_next/static/` の永続キャッシュ。`next.config.ts` の `headers()` は静的書き出しでは効かない
 - **DNSのTXTを消さない**: Search Consoleが `sc-domain:saunako.jp` で登録されており、`google-site-verification` のTXTで所有権を証明している。消すとSEO計測が止まる
 - **閉店施設は記事に残る**: `getFacilityById` は閉店施設も返すので、記事の `<FacilityCard>` は閉店後も表示される。closedAt を入れたら記事からも外す（`tests/closed-facilities.test.ts` が検出）。エリアページの `SUB_AREA_META` の件数は `{count}` / `{coupleCount}` で書き、直書きしない（`tests/sub-area-meta.test.ts`）
 - **analyticsトラッキング**: `data-track-*` 属性 + `AnalyticsTracker`（グローバルイベントデリゲーション）を使う。トラッキングのためだけにコンポーネントをクライアント化しない

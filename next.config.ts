@@ -1,142 +1,19 @@
 import type { NextConfig } from "next";
-import fs from "fs";
-import path from "path";
 
-// facilities.json を読み込む
-function loadFacilities(): { id: number; slug: string; images: string[] }[] {
-  const filePath = path.join(process.cwd(), "data", "facilities.json");
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
-}
-
-// facilities.json から slug → id のリダイレクトマッピングを生成
-function buildFacilityRedirects() {
-  return loadFacilities().map((f) => ({
-    source: `/facilities/${encodeURIComponent(f.slug)}`,
-    destination: `/facilities/${f.id}`,
-    permanent: true, // 308 Permanent Redirect
-  }));
-}
-
-// Worker が返すレスポンス（ページ・Route Handler）に付く。public/ の静的ファイルは Worker を通らないので
-// 同じ内容を public/_headers にも書いている。変えるときは両方そろえる
-const securityHeaders = [
-  { key: 'X-Frame-Options', value: 'DENY' },
-  { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload',
-  },
-];
-
+// サイトは静的書き出しで Cloudflare Workers の静的アセットとして配信する（2026-11 に Vercel から移行）。
+// 静的書き出しでは headers() / redirects() が効かないため、次のファイルで同じことをしている:
+// - セキュリティヘッダー: public/_headers
+// - リダイレクト（slug→ID、旧エリアslug、掲載終了施設）: scripts/generate-edge-files.mjs が public/_redirects を生成
+// - 非www→www、/go/{id} の送客リダイレクト: worker/index.ts
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
   reactCompiler: true,
   images: {
     // 画像はすでにwebp形式で保存済みのため最適化不要
-    // 2026-04 に Vercel Hobby の月5,000 transformations 枠を超過して無効化。Cloudflare 移行後も
-    // Images バインディングを持たないので、取り込み時の縮小（scripts/download-images.mjs）だけで配信する
+    // 2026-04 に Vercel Hobby の月5,000 transformations 枠を超過して無効化。静的書き出しではそもそも使えないので、
+    // 取り込み時の縮小（scripts/download-images.mjs）だけで配信する
     unoptimized: true,
   },
-  async headers() {
-    return [{ source: '/(.*)', headers: securityHeaders }];
-  },
-  async redirects() {
-    return [
-      // 非www → www リダイレクト（canonical統一）
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'saunako.jp' }],
-        destination: 'https://www.saunako.jp/:path*',
-        permanent: true,
-      },
-      ...buildFacilityRedirects(),
-      ...buildAreaRedirects(),
-      // 掲載を終了した施設 → エリア一覧へ（2026-09-30: hotel hisoca ikebukuro は宿泊者専用のため掲載基準外）
-      { source: '/facilities/73', destination: '/area/tokyo/ikebukuro', permanent: true },
-      { source: '/facilities/hotel-hisoca-ikebukuro', destination: '/area/tokyo/ikebukuro', permanent: true },
-      // 2026-11-03: HOTEL HOQA 花色の湯はサウナ付き客室の時間貸し（予約不可・来店時の空室利用）で掲載基準外
-      { source: '/facilities/149', destination: '/area/aichi', permanent: true },
-      { source: '/facilities/hotel-hoqa-hanaironoyu', destination: '/area/aichi', permanent: true },
-      // 2026-10-04: Private Sauna 浅海店は P・SPO24 会員限定の予約制になり、検索から来た人がすぐ使えないため掲載終了
-      { source: '/facilities/360', destination: '/area/ehime/matsuyama', permanent: true },
-      { source: '/facilities/pspo-asanami', destination: '/area/ehime/matsuyama', permanent: true },
-      // 2026-10-04: ていれぎテントサウナ 湯婀はテントサウナ主体で掲載基準外（公式の予約URLも無効）のため掲載終了
-      { source: '/facilities/361', destination: '/area/ehime/matsuyama', permanent: true },
-      { source: '/facilities/teiregi-tent-sauna-yua', destination: '/area/ehime/matsuyama', permanent: true },
-      // 旧比較ページ → 候補送信ページ（?ids= は引き継がれ、/pick 側で /pick/1-2 に整形する）
-      { source: '/compare', destination: '/pick', permanent: true },
-    ];
-  },
 };
-
-// 旧エリアslug → 新エリアslug のリダイレクト（#161 サブエリア再定義）
-function buildAreaRedirects() {
-  const redirects: { source: string; destination: string; permanent: true }[] = [];
-  const r = (pref: string, oldSlug: string, newSlug: string | null) => {
-    redirects.push({
-      source: `/area/${pref}/${oldSlug}`,
-      destination: newSlug ? `/area/${pref}/${newSlug}` : `/area/${pref}`,
-      permanent: true,
-    });
-  };
-
-  // 東京: 分割されたエリア → 県ページへ
-  r('tokyo', 'shinjuku-minato', null);
-  r('tokyo', 'shibuya-setagaya', null);
-
-  // 長野: slug変更
-  r('nagano', 'nagano-city', 'nagano-shinano');
-  r('nagano', 'matsumoto', 'matsumoto-tateshina');
-  r('nagano', 'tateshina', 'matsumoto-tateshina');
-  r('nagano', 'ueda', 'ueda-bessho');
-  r('nagano', 'other', null);
-
-  // 愛知: slug変更
-  r('aichi', 'nagoya', 'nagoya-sakae');
-  r('aichi', 'other', null);
-
-  // 静岡: slug変更
-  r('shizuoka', 'fuji', 'fuji-gotemba');
-  r('shizuoka', 'hamamatsu', 'hamamatsu-kakegawa');
-  r('shizuoka', 'numazu', 'hamamatsu-kakegawa');
-
-  // 福岡: slug変更
-  r('fukuoka', 'kitakyushu', 'chikuho-kitakyushu');
-  r('fukuoka', 'other', null);
-
-  // 栃木: slug変更
-  r('tochigi', 'utsunomiya', 'utsunomiya-oyama');
-  r('tochigi', 'nasu', 'nasu-shiobara');
-  r('tochigi', 'nikko', 'nikko-kenoh');
-  r('tochigi', 'other', null);
-
-  // 福島: slug変更
-  r('fukushima', 'aizu', 'aizu-hamadori');
-
-  // 大阪: その他のslug変更
-  r('osaka', 'other', 'yao-hirakata');
-
-  // 群馬: 統合・slug変更
-  r('gunma', 'takasaki', 'takasaki-maebashi');
-  r('gunma', 'maebashi', 'takasaki-maebashi');
-  r('gunma', 'other', 'kanra');
-
-  // 北海道: サブエリア廃止 → 県ページへ
-  for (const s of ['sapporo', 'douo', 'donan', 'dohoku', 'dotou']) r('hokkaido', s, null);
-
-  // 宮城: サブエリア廃止
-  for (const s of ['sendai', 'other']) r('miyagi', s, null);
-
-  // 京都: サブエリア廃止
-  for (const s of ['kyoto-city', 'other']) r('kyoto', s, null);
-
-  // 新潟: サブエリア廃止
-  for (const s of ['niigata-city', 'nagaoka', 'kashiwazaki', 'murakami', 'other']) r('niigata', s, null);
-
-  return redirects;
-}
 
 export default nextConfig;

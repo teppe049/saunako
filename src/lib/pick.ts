@@ -4,7 +4,8 @@ import { getPerPersonPrice } from '@/lib/facility-utils';
 /**
  * 「行きたい候補を送る」機能（/pick）の純ロジック。
  *
- * URL は /pick/85-18-84 の形。カンマは一部メッセージアプリで %2C にエンコードされ
+ * URL は /pick?ids=85-18-84 の形（2026-11 の静的書き出しへの移行で /pick/85-18-84 から変更。
+ * 旧形式は worker/index.ts が転送する）。カンマは一部メッセージアプリで %2C にエンコードされ
  * 見た目が崩れるため、区切りはハイフンにする（旧 /compare?ids=85,18 からの移行用にカンマも受ける）。
  */
 
@@ -24,7 +25,7 @@ export function parsePickIds(segment: string | undefined | null): number[] {
 }
 
 export function buildPickPath(ids: number[]): string {
-  return `/pick/${ids.join('-')}`;
+  return `/pick?ids=${ids.join('-')}`;
 }
 
 /** URL 由来の自由入力。改行・制御文字を落として長さを丸める。空なら null */

@@ -39,13 +39,13 @@ yarn-error.log*
 # vercel
 .vercel
 
-# cloudflare (OpenNext のビルド成果物・wrangler のローカル状態)
-.open-next
+# cloudflare（wrangler のローカル状態）
 .wrangler
 .dev.vars*
 
-# OG 画像用サムネイル（prebuild で scripts/generate-og-thumbs.mjs が生成）
-/public/og-thumbs/
+# prebuild で scripts/generate-edge-files.mjs が facilities.json から生成
+/public/_redirects
+/worker/generated/
 
 # typescript
 *.tsbuildinfo

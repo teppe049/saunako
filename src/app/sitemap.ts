@@ -1,4 +1,7 @@
 import { MetadataRoute } from 'next'
+
+// 静的書き出し（output: 'export'）ではビルド時に生成するファイルとして明示する必要がある
+export const dynamic = 'force-static'
 import facilities from '@/../data/facilities.json'
 import { PREFECTURES, AREA_GROUPS, ARTICLE_CATEGORIES, PREFECTURE_GUIDES } from '@/lib/types'
 import { getAllArticles, getArticlesByCategory } from '@/lib/articles'

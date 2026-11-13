@@ -3,7 +3,7 @@
 import { useSyncExternalStore, useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import { subscribe, getSnapshot, getServerSnapshot } from '@/lib/favoritesStore';
-import { getFavoriteFacilities } from '@/app/favorites/actions';
+import { getFacilitiesByIds } from '@/lib/facilitiesClient';
 import FacilityListCard from '@/components/FacilityListCard';
 import ShareListButton from '@/components/ShareListButton';
 import type { Facility } from '@/lib/types';
@@ -19,7 +19,7 @@ export default function FavoritesView() {
       if (favoriteIds.length === 0) {
         setFacilities([]);
       } else {
-        const data = await getFavoriteFacilities(favoriteIds);
+        const data = await getFacilitiesByIds(favoriteIds);
         setFacilities(data);
       }
       setInitialized(true);

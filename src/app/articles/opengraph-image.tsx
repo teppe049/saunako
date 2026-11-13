@@ -6,6 +6,9 @@ export const alt = '記事一覧 | サウナ子';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// 静的書き出し（output: 'export'）ではビルド時に生成する画像として明示する必要がある
+export const dynamic = 'force-static';
+
 export default async function OGImage() {
   const avatarData = await readFile(join(process.cwd(), 'public/saunako-avatar.png'));
   const avatarBase64 = `data:image/png;base64,${avatarData.toString('base64')}`;
