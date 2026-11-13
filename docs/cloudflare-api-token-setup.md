@@ -13,6 +13,15 @@
 そのため saunako 専用のトークンを別に発行し、`.env.cloudflare` に置く。
 このファイルは `.gitignore` の `.env*` に含まれるためコミットされない。
 
+## ログインに注意（2026-11-13 追記）
+
+「My Account」には、会社のメールアドレスとは**別の個人のログイン**で入る。
+会社メールでログインすると「株式会社SaunaTrip」と、ドメインが1件も無い別の個人アカウントしか見えず、saunako.jp が見つからない。
+どのログインか分からなくなったら、Teppei の手元のメモを見る（公開リポジトリなのでメールアドレスはここに書かない）。
+
+`wrangler` も同じで、`env -u CLOUDFLARE_API_TOKEN npx wrangler login` を、ブラウザで My Account のログインにしてから実行する。
+`npx wrangler whoami` で「My Account / e125443b...」が出ることを確かめる。
+
 ## 発行手順
 
 1. Cloudflareダッシュボードで**個人アカウント**にいることを確認する
@@ -101,3 +110,24 @@ node scripts/cloudflare-email-setup.mjs add-rules   # info@ / owners@ を作成
 ```
 
 削除系の操作は意図的に実装していない。取り消したい場合はダッシュボードから行う。
+
+## GitHub Actions のデプロイ用トークン（2026-11-13 追加）
+
+main への push で本番にデプロイする `.github/workflows/ci.yml` の deploy ジョブが使う。
+上の Email Routing 用とは別に、Workers のデプロイだけができるトークンを発行する。
+
+1. My Account のログインで https://dash.cloudflare.com/profile/api-tokens を開く
+2. 「Create Token」→ テンプレート「Edit Cloudflare Workers」の「Use template」
+3. 次のように絞る
+   - **Account Resources**: Include → **My Account** だけ（株式会社SaunaTrip を選ばない）
+   - **Zone Resources**: Include → Specific zone → `saunako.jp`
+   - Token name: `saunako GitHub Actions deploy` など分かる名前に
+4. 「Continue to summary」→「Create Token」で表示された値をコピーする（この画面でしか見られない）
+5. ターミナル（Claude Code なら `!` を付けて）で GitHub に登録する。値の入力を求められるので貼り付ける
+
+   ```bash
+   gh secret set CLOUDFLARE_API_TOKEN --repo teppe049/saunako
+   ```
+
+登録すると、次の main への push から自動でデプロイされる。未登録の間は deploy ジョブが警告を出して何もしない。
+ビルドに埋め込む公開値（`NEXT_PUBLIC_GA_MEASUREMENT_ID` / `NEXT_PUBLIC_ADSENSE_CLIENT_ID`）は、リポジトリの Variables に登録済み。

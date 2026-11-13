@@ -27,9 +27,9 @@ saunako で最も頻繁に発生する設計判断。
 |------------|:-:|------|
 | 施設一覧を表示するだけ | Server | データ表示のみ、操作なし |
 | 検索フィルターの切り替え | Client | ユーザーが操作する |
-| 地図の表示・操作 | Client | Google Maps SDK が必要 |
+| 地図の表示・操作 | Client | Leaflet（OSM タイル）がブラウザで動く |
 | 「予約する」ボタン | Client | クリックイベント追跡が必要 |
-| OGP画像の生成 | Server | サーバーで画像を生成 |
+| OGP画像の生成 | Server | ビルド時に画像を生成（`opengraph-image.tsx`） |
 | 施設詳細ページ本体 | Server | SEO が重要、データ表示が主 |
 
 ### よくある落とし穴
@@ -55,27 +55,29 @@ saunako では `AnalyticsTracker` がグローバルでイベントを拾う設�
 
 ## 2. 静的生成（SSG）と動的レンダリング
 
-### saunako のレンダリング戦略
+### saunako のレンダリング戦略（2026-11 に Cloudflare Workers へ移行してから）
+
+サイトは **全ページ静的書き出し**（`next.config.ts` の `output: 'export'`）。サーバーで動く処理は持たない。
 
 ```
-○ Static（完全静的）     → トップ、記事、FAQ、利用規約
-● SSG（ビルド時生成）    → 施設詳細393ページ、エリアページ
-ƒ Dynamic（リクエスト時） → 検索ページ、/go/リダイレクト、RSS
+○ Static / ● SSG（ビルド時生成） → 全ページ（トップ、記事、施設詳細、エリア、検索、お気に入り、候補共有、RSS、OG 画像）
+ブラウザで描画                    → 検索結果・お気に入り共有・候補共有の中身（/facilities-data.json を取得して絞り込む）
+Worker（worker/index.ts）         → /go/{id} の送客リダイレクト、旧 /pick/{ids} の転送、非www転送だけ
 ```
 
-### なぜ重要か
+### なぜこうしているか
 
-- **静的ページ**: CDN から即座に配信 → 最速。SEO 最強
-- **動的ページ**: リクエストごとにサーバーで処理 → 遅い可能性あり
+- Cloudflare Workers の無料プランは1リクエストの CPU が 10ms まで。Next.js をサーバーとして動かすと、作り置きのページを返すだけでも超えて 503 になった
+- 静的ファイルの配信は CPU を使わず、回数制限もない → 無料のまま安定する
 
 ### 判断が必要な場面
 
 | 場面 | 判断 |
 |------|------|
-| 施設データを更新した | → `npm run build` で全ページ再生成（Vercel が自動でやる） |
-| 施設数が 1000 を超えたら | → ISR（増分再生成）を検討。ビルド時間が問題になるため |
-| 検索結果ページ | → 動的のまま。検索条件が無限にあるので静的生成は不可能 |
-| 新しい API Route を作る | → `export const dynamic = 'force-dynamic'` を明示 |
+| 施設データを更新した | → main に push すると GitHub Actions がビルドして本番にデプロイする（`.github/workflows/ci.yml` の deploy ジョブ） |
+| 施設数が 1000 を超えたら | → ビルド時間とデプロイ時のファイル数（Free は1万件台で上限2万件）を見直す。ISR は静的書き出しでは使えない |
+| 検索結果ページ | → ページは1枚だけ静的に作り、絞り込みはブラウザで行う（`src/components/SearchView.tsx`） |
+| 新しい Route Handler を作る | → `export const dynamic = 'force-static'` でビルド時に生成する。リクエストごとの処理が要るなら `worker/index.ts` に書く（CPU 10ms 以内） |
 
 ### ビルド時間の目安
 
@@ -206,33 +208,33 @@ public/facilities/{id}-2.webp  ← 詳細画像 3 枚目
 
 ---
 
-## 6. Vercel デプロイの仕組み
+## 6. デプロイの仕組み（Cloudflare Workers）
 
 ### デプロイフロー
 
 ```
 git push origin main
   ↓
-Vercel が自動検知
+GitHub Actions（.github/workflows/ci.yml）
   ↓
-npm run build 実行
+lint → 型チェック → テスト → ビルド（out/ に静的書き出し）
   ↓
-成功 → 本番に自動デプロイ
-失敗 → 前のバージョンのまま（安全）
+すべて成功 → deploy ジョブが wrangler deploy で本番に反映
+どれか失敗 → デプロイしない（本番は前のまま）
 ```
 
 ### 知っておくべきこと
 
-- **ビルドが失敗しても本番は壊れない**（前のデプロイが維持される）
-- プレビューデプロイ: PR を作ると自動でプレビュー URL が生成される
-- 環境変数: Vercel ダッシュボードで管理（GA_MEASUREMENT_ID 等）
-- Hobby プラン: 月 100GB 帯域幅、サーバーレス関数の実行時間制限あり
+- **配信先**: Cloudflare Workers の静的アセット + 小さな Worker。アカウントは個人ログインの「My Account」（会社アカウントではない）
+- **手動デプロイ**: `env -u CLOUDFLARE_API_TOKEN npm run deploy`（環境変数のトークンは会社アカウント用なので外す）
+- **環境変数**: `NEXT_PUBLIC_*` はビルド時に埋め込まれる。GitHub Actions ではリポジトリの Variables から渡す
+- **デプロイ時間**: 変わったファイルだけアップロードする。施設データを変えると多くのページが変わるので、10分前後かかることがある
+- **Free プランの上限**: Worker の CPU 10ms/リクエスト、1日10万リクエスト（静的ファイルは数えない）、静的ファイル2万件・1ファイル25MiB
 
-### Route Handler（/go/ 等）の制約
+### Worker（/go/ 等）の制約
 
-- Hobby プランのサーバーレス関数: 実行時間 10 秒まで
-- /go/ リダイレクトは数十 ms で完了するので問題なし
-- 将来的に重い API を作る場合は Pro プラン（月$20）が必要になる可能性
+- 無料プランの CPU は1リクエスト 10ms まで。/go/ のリダイレクトは 1ms 未満で問題なし
+- 重い処理（画像生成、外部 API の集計など）は Worker に置かない。ビルド時に作るか、Workers Paid（月$5）を検討する
 
 ---
 
@@ -273,10 +275,10 @@ updatedAt: "2026-03-10"
 
 ## 8. テスト・品質管理の現状と方針
 
-### 現状（2026年3月時点）
+### 現状（2026年11月時点）
 
-- テスト: なし（Vitest + React Testing Library は TODO）
-- CI/CD: なし（Vercel の自動ビルドのみ）
+- テスト: Vitest（`npm test`。`tests/facilities-data.test.ts` が facilities.json の整合性ゲート）
+- CI/CD: GitHub Actions（lint → 型チェック → テスト → ビルド → main なら Cloudflare へデプロイ）
 - lint: ESLint あり（一部既存エラーは放置中）
 - 型チェック: TypeScript strict モード
 
@@ -285,7 +287,7 @@ updatedAt: "2026-03-10"
 ```
 1. TypeScript strict → 型エラーはビルド時に検出
 2. npm run build → ページ生成エラーはビルド時に検出
-3. Vercel → ビルド失敗は本番に反映されない
+3. GitHub Actions → どこかで失敗したらデプロイしない
 4. AI の QA Agent → 実装後に自動でビルド + lint チェック
 ```
 
@@ -308,7 +310,7 @@ updatedAt: "2026-03-10"
 | 箇所 | リスク | 対策時期 |
 |------|--------|:--------:|
 | facilities.json（全施設読み込み） | 施設数が増えると import が重くなる | 1000施設超えたら |
-| Google Maps | 地図の初期読み込みが重い | 検索ページの LCP に影響が出たら |
+| 地図（Leaflet） | 地図の初期読み込みが重い | 検索ページの LCP に影響が出たら |
 | 画像（393施設 × 3枚） | ストレージ増加 | 今は問題なし |
 | OGP画像生成 | ビルド時に 393 枚生成 | ビルド時間が問題になったら |
 
@@ -320,7 +322,7 @@ updatedAt: "2026-03-10"
 ### 今気にしなくていいこと
 
 - バンドルサイズの最適化（Client Component が少ないので問題なし）
-- CDN キャッシュの設定（Vercel が自動でやる）
+- CDN キャッシュの設定（静的ファイルは Cloudflare が配信する。`_next/static` の永続キャッシュは `public/_headers` で指定済み）
 - データベースの導入（JSON で十分な規模）
 
 ---

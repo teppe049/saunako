@@ -3,8 +3,6 @@
 # 使い方: zsh scripts/verify-email-routing.sh
 
 EXPECTED_TXT="google-site-verification=UvqO2r8ln7CWEKtlBhQNcmct5XEs70Pzk4oFAPsEOX8"
-EXPECTED_A="216.198.79.1"
-EXPECTED_CNAME="99c955fad7308c84.vercel-dns-017.com."
 R=8.8.8.8
 PASS=0
 FAIL=0
@@ -68,21 +66,14 @@ else
 fi
 echo
 
-echo "[5] サイト配信に影響が出ていないか"
-A_NOW=$(dig @$R saunako.jp A +short)
-CNAME_NOW=$(dig @$R www.saunako.jp CNAME +short)
-if [ "$A_NOW" = "$EXPECTED_A" ]; then
-  echo "  OK   A: $A_NOW"
+echo "[5] サイト配信に影響が出ていないか（2026-11 から Cloudflare Workers で配信）"
+# DNS の向き先の詳しい確認は scripts/verify-dns-switch.sh。ここではサイトが応答しているかだけ見る
+CODE=$(curl -s -o /dev/null -w "%{http_code}" https://www.saunako.jp/)
+if [ "$CODE" = "200" ]; then
+  echo "  OK   https://www.saunako.jp/ が 200"
   PASS=$((PASS+1))
 else
-  echo "  FAIL A: $A_NOW (expected $EXPECTED_A)"
-  FAIL=$((FAIL+1))
-fi
-if [ "$CNAME_NOW" = "$EXPECTED_CNAME" ]; then
-  echo "  OK   CNAME www: $CNAME_NOW"
-  PASS=$((PASS+1))
-else
-  echo "  FAIL CNAME www: $CNAME_NOW"
+  echo "  FAIL https://www.saunako.jp/ が $CODE"
   FAIL=$((FAIL+1))
 fi
 echo

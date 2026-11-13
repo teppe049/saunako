@@ -21,7 +21,7 @@
 |---------|-------------|
 | `npm run dev` | 開発サーバー起動 |
 | `npm run build` | 静的書き出し（`out/`）。`prebuild` で `_redirects` と `/go` の転送先を生成 |
-| `env -u CLOUDFLARE_API_TOKEN npm run deploy` | ビルドして Cloudflare Workers へデプロイ。**main への push では本番に反映されない**（自動デプロイ未設定）。`env -u` は必須（環境変数のトークンは会社アカウント用。saunako は個人ログインの My Account で、`wrangler.jsonc` の account_id で固定） |
+| `env -u CLOUDFLARE_API_TOKEN npm run deploy` | 手動デプロイ。普段は main への push で GitHub Actions（`ci.yml` の deploy ジョブ）が自動でデプロイする（secrets.CLOUDFLARE_API_TOKEN が未登録の間は省略される。発行手順は `docs/cloudflare-api-token-setup.md`）。`env -u` は必須（環境変数のトークンは会社アカウント用。saunako は個人ログインの My Account で、`wrangler.jsonc` の account_id で固定） |
 | `npm run start` / `preview` | `wrangler dev` でローカル配信。**macOS では静的ファイル数が多すぎて落ちる**（spawn EBADF）。確認は workers.dev へのデプロイで行う |
 | `npm run lint` | ESLint チェック（Next.js core-web-vitals + TypeScript） |
 | `npm run typecheck` | `tsc --noEmit` で型チェック |
@@ -68,28 +68,34 @@
 src/
 ├── app/                      # App Router ページ
 │   ├── page.tsx              # トップページ
-│   ├── search/               # 検索結果
+│   ├── search/               # 検索結果（ページは1枚。絞り込みはブラウザの SearchView）
+│   │   └── [condition]/      # 条件別（カップル・水風呂など）× 都道府県の静的ページ
 │   ├── area/[prefecture]/    # エリア別一覧（47都道府県）
 │   ├── facilities/[id]/      # 施設詳細
 │   ├── articles/             # 記事一覧・詳細（MDXベース）
 │   │   ├── [slug]/           # 個別記事
 │   │   ├── category/         # カテゴリ別
 │   │   └── tag/              # タグ別
-│   ├── favorites/            # お気に入り
-│   ├── ranking/              # ランキング（未実装予定）
+│   ├── favorites/            # お気に入り（?ids= の共有リストもブラウザで描画）
+│   ├── pick/                 # 行きたい候補の共有（/pick?ids=1-2。旧 /pick/1-2 は Worker が転送）
+│   ├── about/                # サイトについて
 │   ├── for-owners/           # 施設オーナー向けページ
 │   ├── faq/                  # FAQ
 │   ├── privacy/              # プライバシーポリシー
 │   ├── terms/                # 利用規約
 │   ├── feed.xml/             # RSSフィード
-│   ├── sitemap.ts            # 動的サイトマップ生成
+│   ├── facilities-data.json/ # 営業中の全施設 JSON（ブラウザ描画の画面が読む。ビルド時生成）
+│   ├── sitemap.ts            # サイトマップ生成（ビルド時）
+│   ├── sitemap-images.xml/   # 画像サイトマップ
 │   └── robots.ts             # robots.txt生成
 ├── components/               # 共通UIコンポーネント
 ├── lib/                      # ユーティリティ・型定義・ストア
 │   ├── analytics.ts          # GA4トラッキング
 │   ├── adsense.ts            # AdSense設定
 │   ├── articles.ts           # MDX記事のローダー
-│   ├── facilities.ts         # 施設データのローダー・検索ロジック
+│   ├── facilities.ts         # 施設データのローダー（facilities.json を import。サーバー側＝ビルド時専用）
+│   ├── facilitySearch.ts     # 絞り込み・並べ替えの純関数（ブラウザからも使う）
+│   ├── facilitiesClient.ts   # ブラウザ用の施設データ取得（/facilities-data.json）
 │   ├── favoritesStore.ts     # お気に入りストア（localStorage）
 │   ├── distance.ts           # 距離計算
 │   └── types.ts              # 共通型定義
@@ -103,6 +109,12 @@ docs/                         # ドキュメント
 ├── monetization-roadmap.md   # マネタイズロードマップ
 └── x-strategy.md             # X(Twitter)運用戦略
 scripts/                      # 運用スクリプト
+worker/
+└── index.ts                  # Cloudflare Worker（/go/{id}・旧 /pick/{ids}・非www転送。静的ファイルが無いリクエストだけ受ける）
+public/
+├── _headers                  # Cloudflare の静的配信用ヘッダー（セキュリティヘッダー・OG 画像の Content-Type）
+└── _redirects                # 生成物（gitignore）。scripts/generate-edge-files.mjs が作る
+wrangler.jsonc                # Workers の設定（account_id は個人の My Account に固定）
 Skills/                       # Claude Code カスタムスキル
 └── data-fetch/               # データ取得スキル
 ```
