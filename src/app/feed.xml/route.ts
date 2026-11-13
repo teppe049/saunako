@@ -1,5 +1,8 @@
 import { getAllArticles } from '@/lib/articles';
 
+// 記事は content/articles をファイルシステムから読むため、ビルド時に生成する（Workers のランタイムでは読めない）
+export const dynamic = 'force-static';
+
 function escapeXml(str: string): string {
   return str
     .replace(/&/g, '&amp;')

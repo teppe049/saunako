@@ -1,0 +1,15 @@
+# Cloudflare Workers の静的アセット用ヘッダー
+# https://developers.cloudflare.com/workers/static-assets/headers/
+# 静的ファイルは Worker を通らずに返るため next.config.ts の headers() が効かない。同じ内容をここでも付ける
+# （このファイルは Worker が返すレスポンスには適用されない）
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+# ビルドごとにファイル名が変わるので永続キャッシュしてよい
+/_next/static/*
+  Cache-Control: public,max-age=31536000,immutable

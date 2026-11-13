@@ -38,7 +38,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # 本番値は Vercel 側で注入。CI はビルドが通ることだけ確認する
+          # 本番値はデプロイ時（npm run deploy）の環境変数で注入する。CI はビルドが通ることだけ確認する
           NEXT_PUBLIC_GA_MEASUREMENT_ID: G-XXXXXXXXXX
           NEXT_TELEMETRY_DISABLED: '1'
 

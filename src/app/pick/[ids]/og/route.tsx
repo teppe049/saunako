@@ -1,8 +1,6 @@
 import { ImageResponse } from 'next/og';
-import { readFile } from 'fs/promises';
-import { join } from 'path';
-import sharp from 'sharp';
 import { getFacilityById } from '@/lib/facilities';
+import { fetchPublicFile, ogThumbPath, readPublicAsDataUri } from '@/lib/ogThumb';
 import { isFacilityClosed } from '@/lib/facility-utils';
 import { parsePickIds, getPickAreaLabel } from '@/lib/pick';
 import type { Facility } from '@/lib/types';
@@ -16,49 +14,29 @@ import type { Facility } from '@/lib/types';
 
 const SIZE = { width: 1200, height: 630 };
 
-async function readPublicAsBase64(relPath: string, mime: string): Promise<string | null> {
-  try {
-    const buf = await readFile(join(process.cwd(), 'public', relPath));
-    return `data:${mime};base64,${buf.toString('base64')}`;
-  } catch {
-    return null;
-  }
-}
-
-// 施設写真は全て webp だが、Next 同梱の @vercel/og は webp をデコードできない（"u2 is not iterable" で落ちる）ため
-// リクエスト時に JPEG へ変換して埋め込む。1列あたりの表示幅に合わせて縮小し、生成時間とレスポンスサイズを抑える
-const PHOTO_WIDTH = 600;
-const PHOTO_HEIGHT = 520;
-
-async function facilityPhotoAsJpeg(image: string): Promise<string | null> {
-  try {
-    const buf = await readFile(join(process.cwd(), 'public', image.replace(/^\//, '')));
-    const jpeg = await sharp(buf).resize({ width: PHOTO_WIDTH, height: PHOTO_HEIGHT, fit: 'cover' }).jpeg({ quality: 78 }).toBuffer();
-    return `data:image/jpeg;base64,${jpeg.toString('base64')}`;
-  } catch {
-    return null;
-  }
-}
+// 施設写真は全て webp だが、Next 同梱の @vercel/og は webp をデコードできない（"u2 is not iterable" で落ちる）。
+// Workers では sharp も動かないので、ビルド前に scripts/generate-og-thumbs.mjs が作った JPEG を埋め込む
 
 function price(f: Facility): string {
   if (f.priceMin <= 0) return '料金は要問合せ';
   return `¥${f.priceMin.toLocaleString()} / ${f.duration > 0 ? `${f.duration}分` : '宿泊'}`;
 }
 
-export async function GET(_request: Request, { params }: { params: Promise<{ ids: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ ids: string }> }) {
   const { ids } = await params;
   const facilities = parsePickIds(ids)
     .map((id) => getFacilityById(id))
     .filter((f): f is Facility => !!f && !isFacilityClosed(f));
 
   if (facilities.length === 0) {
-    const fallback = await readFile(join(process.cwd(), 'public/og-image.png'));
-    return new Response(new Uint8Array(fallback), { headers: { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' } });
+    const fallback = await fetchPublicFile('/og-image.png', request.url);
+    if (!fallback) return new Response(null, { status: 404 });
+    return new Response(fallback.body, { headers: { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' } });
   }
 
   const [avatar, ...photos] = await Promise.all([
-    readPublicAsBase64('saunako-avatar.png', 'image/png'),
-    ...facilities.map((f) => (f.images[0] ? facilityPhotoAsJpeg(f.images[0]) : Promise.resolve(null))),
+    readPublicAsDataUri('/saunako-avatar.png', request.url, 'image/png'),
+    ...facilities.map((f) => (f.images[0] ? readPublicAsDataUri(ogThumbPath(f.images[0]), request.url, 'image/jpeg') : Promise.resolve(null))),
   ]);
 
   const area = getPickAreaLabel(facilities);

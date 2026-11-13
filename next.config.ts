@@ -18,7 +18,8 @@ function buildFacilityRedirects() {
   }));
 }
 
-
+// Worker が返すレスポンス（ページ・Route Handler）に付く。public/ の静的ファイルは Worker を通らないので
+// 同じ内容を public/_headers にも書いている。変えるときは両方そろえる
 const securityHeaders = [
   { key: 'X-Frame-Options', value: 'DENY' },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -35,7 +36,8 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   images: {
     // 画像はすでにwebp形式で保存済みのため最適化不要
-    // Vercel Hobby の月5,000 transformations 枠を消費しないよう無効化
+    // 2026-04 に Vercel Hobby の月5,000 transformations 枠を超過して無効化。Cloudflare 移行後も
+    // Images バインディングを持たないので、取り込み時の縮小（scripts/download-images.mjs）だけで配信する
     unoptimized: true,
   },
   async headers() {

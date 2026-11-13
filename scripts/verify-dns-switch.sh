@@ -1,102 +1,73 @@
 #!/bin/zsh
-# ネームサーバー切替後の検証スクリプト
-# 使い方: zsh verify-after-switch.sh
+# www / apex を Cloudflare Workers のカスタムドメインに切り替えたあとの検証
+# 使い方: zsh scripts/verify-dns-switch.sh
+#
+# 2026-11 に配信を Vercel から Workers へ移した。Workers のカスタムドメインはプロキシ必須なので、
+# A/AAAA は Cloudflare の IP（104.x / 172.6x.x など）を返すのが正常。旧 Vercel の値が残っていたら未切替。
 
 EXPECTED_TXT="google-site-verification=UvqO2r8ln7CWEKtlBhQNcmct5XEs70Pzk4oFAPsEOX8"
-EXPECTED_A="216.198.79.1"
-EXPECTED_CNAME="99c955fad7308c84.vercel-dns-017.com."
+OLD_VERCEL_A="216.198.79.1"
+OLD_VERCEL_CNAME="vercel-dns"
+R=8.8.8.8
 PASS=0
 FAIL=0
 
-check() {
-  local label="$1" actual="$2" expected="$3"
-  if [ "$actual" = "$expected" ]; then
-    echo "  OK   $label"
-    PASS=$((PASS+1))
-  else
-    echo "  FAIL $label"
-    echo "       expected: $expected"
-    echo "       actual  : $actual"
-    FAIL=$((FAIL+1))
-  fi
+ok()   { echo "  OK   $1"; PASS=$((PASS+1)); }
+ng()   { echo "  FAIL $1"; FAIL=$((FAIL+1)); }
+
+is_cf_ip() {
+  case "$1" in
+    104.1[6-9].*|104.2[0-9].*|104.3[01].*|172.6[4-9].*|172.7[01].*|188.114.*|162.159.*|2606:4700:*|2a06:98c*) return 0 ;;
+    *) return 1 ;;
+  esac
 }
 
 echo "=========================================="
-echo " saunako.jp ネームサーバー切替後 検証"
-echo " $(date '+%Y-%m-%d %H:%M:%S')"
+echo " saunako.jp Workers 切替後 検証  $(date '+%Y-%m-%d %H:%M:%S')"
 echo "=========================================="
 echo
 
-echo "[1] ネームサーバーがCloudflareに切り替わったか"
-# ローカル/ISPのリゾルバはキャッシュを持つため、パブリックDNSに直接聞く。
-# 切替直後にローカルだけ旧NSを返すことがあるが、それはキャッシュであって未反映ではない。
-NS=$(dig @8.8.8.8 +short NS saunako.jp | sort | tr '\n' ' ')
-NS_LOCAL=$(dig +short NS saunako.jp | sort | tr '\n' ' ')
-echo "  8.8.8.8から: $NS"
-echo "  ローカルから: $NS_LOCAL"
-case "$NS" in
-  *cloudflare*) echo "  OK   Cloudflareに切替済み"; PASS=$((PASS+1)) ;;
-  *xdomain*)    echo "  WAIT まだXserver（伝播待ちの可能性。最大48時間）" ;;
-  *)            echo "  FAIL 想定外のNS"; FAIL=$((FAIL+1)) ;;
-esac
+echo "[1] ネームサーバー"
+NS=$(dig @$R +short NS saunako.jp | sort | tr '\n' ' ')
+echo "  $NS"
+case "$NS" in *cloudflare*) ok "Cloudflare" ;; *) ng "Cloudflare 以外" ;; esac
 echo
 
-echo "[2] Aレコード（apex）"
-check "A saunako.jp" "$(dig @8.8.8.8 +short A saunako.jp)" "$EXPECTED_A"
+for HOST in saunako.jp www.saunako.jp; do
+  echo "[2] $HOST の向き先"
+  CNAME=$(dig @$R +short CNAME $HOST)
+  A=$(dig @$R +short A $HOST | head -1)
+  echo "  CNAME: ${CNAME:-なし} / A: ${A:-なし}"
+  if [[ "$CNAME" == *$OLD_VERCEL_CNAME* || "$A" == "$OLD_VERCEL_A" ]]; then
+    ng "まだ Vercel を向いている"
+  elif is_cf_ip "$A"; then
+    ok "Cloudflare プロキシ経由（Workers カスタムドメイン）"
+  else
+    ng "想定外の値"
+  fi
+  echo
+done
+
+echo "[3] TXT（Search Console 所有権）"
+dig @$R +short TXT saunako.jp | tr -d '"' | grep -qx "$EXPECTED_TXT" && ok "google-site-verification あり" || ng "google-site-verification が無い"
 echo
 
-echo "[3] CNAME www"
-check "CNAME www" "$(dig @8.8.8.8 +short CNAME www.saunako.jp)" "$EXPECTED_CNAME"
+echo "[4] メール（Email Routing の MX / SPF が残っているか）"
+dig @$R +short MX saunako.jp | grep -q "mx.cloudflare.net" && ok "MX あり" || ng "MX が消えている"
+dig @$R +short TXT saunako.jp | grep -q "_spf.mx.cloudflare.net" && ok "SPF あり" || ng "SPF が消えている"
 echo
 
-echo "[4] TXT（Search Console所有権）"
-ACTUAL_TXT=$(dig @8.8.8.8 +short TXT saunako.jp | tr -d '"')
-check "TXT" "$ACTUAL_TXT" "$EXPECTED_TXT"
-echo
-
-echo "[5] MXレコード（存在しないのが正常）"
-MX=$(dig @8.8.8.8 +short MX saunako.jp)
-if [ -z "$MX" ]; then
-  echo "  OK   MXなし"
-  PASS=$((PASS+1))
-else
-  echo "  WARN MXが存在: $MX"
-fi
-echo
-
-echo "[6] Cloudflareプロキシを通っていないか（DNS onlyの確認）"
-echo "  Aレコードが $EXPECTED_A ならVercel直。"
-echo "  104.x / 172.67.x 等ならCloudflareプロキシ経由＝設定ミス。"
-A_NOW=$(dig @8.8.8.8 +short A saunako.jp)
-case "$A_NOW" in
-  104.*|172.67.*|172.6[4-9].*|188.114.*|162.159.*)
-    echo "  FAIL Cloudflareプロキシ経由になっている: $A_NOW"
-    FAIL=$((FAIL+1)) ;;
-  "$EXPECTED_A")
-    echo "  OK   Vercel直（DNS only）"
-    PASS=$((PASS+1)) ;;
-  *)
-    echo "  ?    判定不能: $A_NOW" ;;
-esac
-echo
-
-echo "[7] .jpレジストリの権威情報（最も信頼できる判定）"
-JPNS=$(dig +short NS jp. | head -1)
-REG=$(dig @$JPNS saunako.jp NS +norecurse 2>/dev/null | grep -c "cloudflare")
-if [ "$REG" -gt 0 ]; then
-  echo "  OK   レジストリ上でCloudflareに切替済み"
-  PASS=$((PASS+1))
-else
-  echo "  WAIT レジストリ上はまだ旧NS"
-fi
-echo "  （whoisの表示更新は遅れることがあるが、実害はない）"
+echo "[5] HTTP"
+CODE=$(curl -s -o /dev/null -w "%{http_code}" https://www.saunako.jp/)
+SERVER=$(curl -sI https://www.saunako.jp/ | grep -i "^server:" | tr -d '\r')
+[ "$CODE" = "200" ] && ok "https://www.saunako.jp/ が 200（$SERVER）" || ng "https://www.saunako.jp/ が $CODE（$SERVER）"
+LOC=$(curl -s -o /dev/null -w "%{http_code} %{redirect_url}" https://saunako.jp/area/tokyo)
+[[ "$LOC" == 30[18]\ https://www.saunako.jp/area/tokyo ]] && ok "apex → www（$LOC）" || ng "apex → www が想定外: $LOC"
+GO=$(curl -s -o /dev/null -w "%{http_code}" "https://www.saunako.jp/go/1?dest=booking")
+[ "$GO" = "302" ] && ok "/go/ の送客リダイレクトが 302" || ng "/go/ が $GO"
 echo
 
 echo "=========================================="
 echo " PASS=$PASS  FAIL=$FAIL"
 echo "=========================================="
-echo
-echo "次の手動確認:"
-echo "  - ブラウザで https://www.saunako.jp を開く（curlはVercel Bot保護で403）"
-echo "  - https://saunako.jp が www に301リダイレクトされる"
-echo "  - Search Console (sc-domain:saunako.jp) にアクセスできる"
+echo "ローカルの DNS キャッシュは古い値を返すことがあるので、判定は 8.8.8.8 に聞いた結果を使っている"

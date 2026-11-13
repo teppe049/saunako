@@ -1,0 +1,22 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"main": ".open-next/worker.js",
+	"name": "saunako",
+	// 2025-05-05 以降でないと FinalizationRegistry 未定義で落ちる（OpenNext known issues）
+	"compatibility_date": "2026-11-01",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"services": [
+		{
+			// キャッシュ再検証用の自己参照。service 名は Worker 名と一致させる
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "saunako"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}

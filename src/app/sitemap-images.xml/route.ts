@@ -2,6 +2,9 @@ import facilities from '@/../data/facilities.json'
 
 const activeFacilities = facilities.filter((f) => !f.closedAt)
 
+// 中身は facilities.json だけで決まるので、リクエストごとに組み立てずビルド時に生成する
+export const dynamic = 'force-static'
+
 export function GET() {
   const baseUrl = 'https://www.saunako.jp'
 
