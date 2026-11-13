@@ -5,7 +5,7 @@
 Site: https://www.saunako.jp
 Index: https://www.saunako.jp/llms.txt
 Sitemap: https://www.saunako.jp/sitemap.xml
-Generated: 2026-11-12
+Generated: 2026-11-13
 
 ## 個室サウナの定義
 
@@ -3562,7 +3562,7 @@ Tags: 石川, 金沢, 個室サウナ, エリアガイド
 
 ![プライベートサウナ部 ととのう](/facilities/277-0.webp)
 
-**[プライベートサウナ部 ととのう](https://www.saunako.jp/facilities/277)** — 金沢駅 / 2,780円〜 / 北陸初のプロジェクションマッピングサウナ！
+**[プライベートサウナ部 ととのう](https://www.saunako.jp/facilities/277)** — 金沢駅 / 2,750円〜 / 北陸初のプロジェクションマッピングサウナ！
 
 > 北陸初のプロジェクションマッピングサウナ！トントゥの世界観に包まれる体験は他にないかも。
 
