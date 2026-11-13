@@ -21,7 +21,7 @@
 |---------|-------------|
 | `npm run dev` | 開発サーバー起動 |
 | `npm run build` | 静的書き出し（`out/`）。`prebuild` で `_redirects` と `/go` の転送先を生成 |
-| `npm run deploy` | ビルドして Cloudflare Workers へデプロイ（静的ファイル約1万件のアップロードで時間がかかる） |
+| `env -u CLOUDFLARE_API_TOKEN npm run deploy` | ビルドして Cloudflare Workers へデプロイ。**main への push では本番に反映されない**（自動デプロイ未設定）。`env -u` は必須（環境変数のトークンは会社アカウント用。saunako は個人ログインの My Account で、`wrangler.jsonc` の account_id で固定） |
 | `npm run start` / `preview` | `wrangler dev` でローカル配信。**macOS では静的ファイル数が多すぎて落ちる**（spawn EBADF）。確認は workers.dev へのデプロイで行う |
 | `npm run lint` | ESLint チェック（Next.js core-web-vitals + TypeScript） |
 | `npm run typecheck` | `tsc --noEmit` で型チェック |
@@ -113,7 +113,8 @@ Skills/                       # Claude Code カスタムスキル
 - **React Compiler有効**: `next.config.ts` で `reactCompiler: true`。手動の `useMemo`/`useCallback` は基本不要
 - **画像は未最適化**: `images.unoptimized: true` 設定（画像最適化サービスを使わない）。2026-04にVercel Hobbyの月5,000変換枠を超過して画像が消えたため。**ランタイム縮小が効かないので、配信する解像度は取り込み時に決まる**（`MAX_WIDTH = 1600`）。手動で画像を追加したら `node scripts/resize-oversized-images.mjs` を流す
 - **非wwwリダイレクト**: `saunako.jp` → `www.saunako.jp` は Cloudflare ゾーンのリダイレクトルールで行う（静的ファイルは Worker を通らないので Worker だけでは全部を転送できない）。`worker/index.ts` にも同じ転送がある
-- **DNSも配信もCloudflare**（DNSは2026-09-06移管、配信は2026-11にVercelから Workers へ）: NSは `lola` / `tadeo`.ns.cloudflare.com。`www` と apex は Worker の**カスタムドメイン**で、レコードはプロキシ有効（オレンジ雲）が正しい。MX（Email Routing）とTXTは触らない。検証は `zsh scripts/verify-dns-switch.sh`
+- **DNSも配信もCloudflare**（DNSは2026-09-06移管、配信は2026-11-13にVercelから Workers へ）: Cloudflare は個人のログイン（会社メールとは別。アカウント「My Account」、ID `e125443b…`）。会社メールのログインからは saunako.jp が見えない。NSは `lola` / `tadeo`.ns.cloudflare.com。`www` と apex は Worker の**カスタムドメイン**で、レコードはプロキシ有効（オレンジ雲）が正しい。apex→www はゾーンのリダイレクトルール「apex to www」。MX（Email Routing）とTXTは触らない。検証は `zsh scripts/verify-dns-switch.sh`
+- **Cloudflare の AI クローラー設定は「全面許可」に合わせてある**: プロキシを通すと Cloudflare のボット設定が効く。2026-11-13 に AI Crawl Control の Training を Allow、Bot Preference Sync（robots.txt への自動追記）をオフにした。robots.ts の方針（AI 検索・学習クローラーを全面許可）と食い違わないよう、ここを戻さない
 - **サイトは静的書き出し（`output: 'export'`）でサーバー処理が無い**: Workers 無料プランの CPU 10ms に収めるため（2026-11 に Next.js をそのまま Workers で動かしたら、作り置きのページでも1〜5割が CPU 超過で 503 になった）。そのため次は使えない — `searchParams` を読むページ、`generateStaticParams` に無いパラメータ、Server Actions、`cookies()`/`headers()`、動的な Route Handler、ISR、`next.config.ts` の `redirects()`/`headers()`。Route Handler・`opengraph-image`・`sitemap`/`robots` には `export const dynamic = 'force-static'` が要る
 - **URL のパラメータで中身が変わる画面はブラウザで描画する**: `/search`・`/favorites?ids=`・`/pick?ids=` は静的なページ1枚で、施設データは `/facilities-data.json`（ビルド時生成）を `src/lib/facilitiesClient.ts` で取得して描画する。絞り込み・並べ替えは `src/lib/facilitySearch.ts`（facilities.json を import しない純関数。ブラウザから `src/lib/facilities.ts` を import すると JSON がまるごと JS に入る）
 - **Worker（`worker/index.ts`）は静的ファイルが無いリクエストだけ受ける**: `/go/{id}`（送客の302）、旧形式 `/pick/{ids}` → `/pick?ids=`、非www転送。重い処理を足さない（無料プランの CPU 10ms）
