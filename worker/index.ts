@@ -2,6 +2,7 @@
  * saunako.jp の Cloudflare Worker。
  *
  * サイト本体は Next.js の静的書き出し（out/）で、静的ファイルに一致するリクエストは Worker を通らずに返る。
+ * /go/* と /pick/* は wrangler.jsonc の run_worker_first で必ずここを通す（通さないとブラウザの画面遷移が 404.html になる）。
  * Worker が動くのは、一致するファイルが無いときだけ（無料プランの CPU 10ms に収めるため、ここでは重い処理をしない）:
  *
  * - /go/{id}?dest=booking … 施設の公式・予約サイトへ UTM 付きで 302（送客の計測導線）
