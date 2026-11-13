@@ -13276,7 +13276,8 @@
       "outdoorAir": false,
       "coupleOk": false,
       "bluetooth": true,
-      "wifi": true
+      "wifi": true,
+      "saunaTemp": "90"
     },
     "businessHours": "月〜木・日・祝 9:00〜24:00 / 金土・祝前 9:00〜翌2:00",
     "holidays": "年中無休",
@@ -13289,7 +13290,7 @@
       "フェイスシート",
       "ミネラルウォーター"
     ],
-    "note": "個室はBlack Room/White Roomの2室。男女混合は男性2名＋女性2名の4名利用のみ水着着用で可（1対1のカップル利用は不可）。",
+    "note": "個室はBlack Room/White Roomの2室。男女混合は男性2名＋女性2名の4名利用のみ水着着用で可（1対1のカップル利用は不可）。 タトゥーは大きさを問わず入場不可。入室は予約の5分前から、待合スペースなし。",
     "images": [
       "/facilities/140-0.webp",
       "/facilities/140-1.webp",
@@ -13301,8 +13302,8 @@
     "description": "名古屋駅から徒歩5分、東海エリア最大級のサウナ専用施設。Black Room・White Roomの2つの個室サウナはセルフロウリュに対応し、Bluetoothスピーカー・Wi-Fi完備。100分15,000円から、最大4名で水着着用の男女利用が可能。",
     "saunakoCommentShort": "名駅すぐ! Black/White 2つの個室!",
     "saunakoCommentLong": "名古屋駅から5分の東海最大級サウナ施設の個室だよ! Black RoomとWhite Roomで雰囲気が全然違うから両方試してみたくなるかも。Bluetoothスピーカーで好きな音楽かけられるし、Wi-Fiもあるから快適。水着着用で男女一緒に入れるからカップルにもおすすめだね!",
-    "updatedAt": "2026-09-05",
-    "verifiedAt": "2026-09-05",
+    "updatedAt": "2026-11-13",
+    "verifiedAt": "2026-11-13",
     "plans": [
       {
         "name": "個室 平日 100分",
@@ -13331,7 +13332,34 @@
     ],
     "timeSlots": null,
     "slotType": "free",
-    "priceMax": 18000
+    "priceMax": 18000,
+    "rooms": 2,
+    "accessNote": "JR名古屋駅桜通口から徒歩約5分、近鉄・名鉄名古屋駅から徒歩約3分。地下街サンロードのS6出口から徒歩約1分なので、雨の日は地下通路が便利。",
+    "parking": {
+      "available": false,
+      "spaces": null,
+      "note": "店舗の駐車場・駐輪場はなし。近隣の有料施設を利用。"
+    },
+    "booking": {
+      "methods": [
+        "web",
+        "line",
+        "phone"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "来店前に会員登録と事前決済が必要です。利用当日のキャンセルはできず、来店しなくても返金されません。連絡なしで15分以上遅れると自動キャンセルになります。"
+    },
+    "fitFor": [
+      "名古屋駅から地下街経由で歩いて行きたい（徒歩約3〜5分）",
+      "予約・支払いを済ませてから行きたい（Web・LINE・電話で予約、事前決済）",
+      "男性2名＋女性2名の4名グループで水着を着て入りたい"
+    ],
+    "notFitFor": [
+      "タトゥーがある（大きさを問わず入場不可）",
+      "車で行きたい（駐車場なし）",
+      "男女1対1のカップルで入りたい（男女は2名ずつの4名利用のみ）"
+    ]
   },
   {
     "id": 141,
@@ -21649,17 +21677,18 @@
     "address": "石川県金沢市城南2丁目42-8 坂ビル2F",
     "nearestStation": "金沢駅",
     "walkMinutes": null,
-    "priceMin": 2780,
-    "duration": 100,
+    "priceMin": 2750,
+    "duration": 120,
     "capacity": 3,
     "features": {
       "waterBath": true,
-      "waterBathTemp": "18-25",
+      "waterBathTemp": "16-18",
       "selfLoyly": true,
       "outdoorAir": false,
       "coupleOk": true,
       "bluetooth": true,
-      "wifi": null
+      "wifi": null,
+      "saunaTemp": "100"
     },
     "businessHours": "平日 18:30〜24:00 / 土日祝 9:00〜25:00",
     "holidays": "月曜定休（祝日・大型連休は営業）",
@@ -21676,7 +21705,7 @@
       "綿棒",
       "水素水"
     ],
-    "note": "北陸初のプロジェクションマッピング付き個室サウナ。6〜9月限定で15-18度の氷風呂あり。加賀棒茶・ヒノキアロマのセルフロウリュ",
+    "note": "北陸初のプロジェクションマッピング付き個室サウナ。加賀棒茶・ヒノキアロマのセルフロウリュ。水風呂は10〜5月16〜18℃、6〜9月は18〜25℃で、1日10組限定のアイスバス(15〜18℃)あり。月額980円の会員は割引コースを使える(3か月は解約不可)。プロジェクションマッピング・塩サウナ・手ぶらセットは各+500円。水着は持ち込み可(レンタルなし)。",
     "images": [
       "/facilities/277-0.webp",
       "/facilities/277-1.webp",
@@ -21688,31 +21717,81 @@
     "description": "金沢市城南にある完全個室のプライベートサウナ。北陸初のプロジェクションマッピングを導入し、トントゥの世界観を床一面に投影する独特な体験が楽しめる。加賀棒茶やヒノキのアロマでセルフロウリュが可能で、男女混浴にも対応。",
     "saunakoCommentShort": "北陸初のプロジェクションマッピングサウナ！",
     "saunakoCommentLong": "金沢で個室サウナならここ！床一面にプロジェクションマッピングが投影されるの、すごく幻想的だよ。加賀棒茶のアロマでロウリュできるのが金沢らしくて素敵。水風呂は18-25度で、夏は氷風呂で15度まで下がるんだって。男女一緒に入れるからカップルにもおすすめかも！",
-    "updatedAt": "2026-02-28",
+    "updatedAt": "2026-11-13",
     "openedAt": null,
     "closedAt": null,
     "plans": [
       {
-        "name": "新規会員 100分 1名",
-        "price": 2780,
-        "duration": 100,
+        "name": "新人部員 120分 1名",
+        "price": 3780,
+        "duration": 120,
         "capacity": 1
       },
       {
-        "name": "一般 100分 1名",
-        "price": 3480,
-        "duration": 100,
-        "capacity": 1
-      },
-      {
-        "name": "一般 100分 2名",
+        "name": "新人部員 120分 2名",
         "price": 5960,
-        "duration": 100,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "新人部員 120分 3名",
+        "price": 8940,
+        "duration": 120,
+        "capacity": 3
+      },
+      {
+        "name": "レギュラー部員 平日 120分 1名",
+        "price": 3480,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "レギュラー部員 平日 120分 2名",
+        "price": 5500,
+        "duration": 120,
+        "capacity": 2
+      },
+      {
+        "name": "レギュラー部員 休日 120分 1名",
+        "price": 4480,
+        "duration": 120,
+        "capacity": 1
+      },
+      {
+        "name": "レギュラー部員 休日 120分 2名",
+        "price": 7960,
+        "duration": 120,
         "capacity": 2
       }
     ],
     "timeSlots": null,
-    "slotType": "free"
+    "slotType": "free",
+    "verifiedAt": "2026-11-13",
+    "rooms": 2,
+    "accessNote": "北陸鉄道バス「猿丸神社前」から徒歩3分。「笠舞」信号を坂ビル方面に曲がり、細い道に入るとすぐ左が建物内の駐車場。",
+    "parking": {
+      "available": true,
+      "spaces": 2,
+      "note": "建物内の専用駐車場に普通車2台まで。各部屋につき車1台分なので、複数人は乗り合わせ。"
+    },
+    "booking": {
+      "methods": [
+        "web"
+      ],
+      "leadDays": null,
+      "sameDay": null,
+      "cancelPolicy": "予約日の前日まではキャンセル料がかかりません。それ以降は全額かかります。予約はWebでの事前カード決済のみで、直接来店は不可、延長もできません。"
+    },
+    "fitFor": [
+      "クレジットカードで事前決済して、手ぶらに近い形で入りたい（手ぶらセット+500円）",
+      "2〜3名で割り勘して1人3,000円前後で入りたい",
+      "平日夜や土日の朝から使いたい（平日18:30〜、土日祝9:00〜）"
+    ],
+    "notFitFor": [
+      "直接来店して当日その場で入りたい（Web予約と事前決済が必須）",
+      "前日を過ぎてキャンセルする可能性がある（前日以降は全額）",
+      "4名以上で入りたい（最大3名）"
+    ]
   },
   {
     "id": 278,
