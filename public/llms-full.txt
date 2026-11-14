@@ -5,7 +5,7 @@
 Site: https://www.saunako.jp
 Index: https://www.saunako.jp/llms.txt
 Sitemap: https://www.saunako.jp/sitemap.xml
-Generated: 2026-11-13
+Generated: 2026-11-14
 
 ## 個室サウナの定義
 
@@ -3338,7 +3338,7 @@ Tags: 温泉, 個室サウナ, 特集
 
 ![二ノ丸温泉 サウナ小屋](/facilities/330-0.webp)
 
-**[二ノ丸温泉 サウナ小屋](https://www.saunako.jp/facilities/330)** — 湯浅駅 / 8,000円〜 / 滝ダイブ×薪サウナの大自然体験！
+**[二ノ丸温泉 サウナ小屋](https://www.saunako.jp/facilities/330)** — 湯浅駅 / 10,000円〜 / 滝ダイブ×薪サウナの大自然体験！
 
 > ここはちょっと冒険心がある人に推したい施設。「瀧のサウナ」では**山の渓流水風呂と滝ダイブ**が楽しめて、「森のサウナ」はAesopアメニティ完備のラグジュアリー空間。どっちも薪ストーブでセルフロウリュができるよ。大自然の中での外気浴は格別で、天然温泉にも入れる。ワイルド派もラグジュアリー派も、どっちも満足できる珍しい施設だね。
 
