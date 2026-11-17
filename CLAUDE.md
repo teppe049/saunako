@@ -43,6 +43,7 @@
 | `node scripts/sync-suggest-data.mjs` | 検索サジェスト（`src/lib/suggest-data.json`）の施設名とエリア別件数を facilities.json から作り直す。施設の追加・閉店・エリア変更のあとに実行（`tests/closed-facilities.test.ts` がずれを検出）。駅名リストは手で正規化したものなので触らない |
 | `node scripts/freshness-watch.mjs` | 公式サイトの料金記載の変化と閉店の兆候を検出（週1回）。基準は `data/freshness/snapshot.json`、結果は `docs/freshness-report.md` に追記。差分を公式で確認して facilities.json と `verifiedAt` を直す。`--dry-run` / `--id` / `--limit` 指定時は書き込まない |
 | `node scripts/generate-edge-files.mjs` | `public/_redirects`（slug→ID・旧エリアslug・掲載終了施設の恒久リダイレクト）と `worker/generated/go-targets.json`（`/go/{id}` の転送先）を facilities.json から生成。prebuild で自動実行・gitignore 済み。**掲載終了施設のリダイレクトを足すときはここに書く** |
+| `node scripts/seo-analytics.mjs` | SEO 計測 CLI（GSC・GA4 を MCP と同じサービスアカウントで直接叩く）。`gsc-compare`（施策の前後比較・対照比）／`gsc-opps`（次の候補）／`gsc-noise`（対照比のしきい値の測り直し）／`inspect`。`/analytics-pdca` と `docs/seo-change-log.md` の判定はこの出力で行う |
 | `node scripts/coubic-discover.mjs` | STORES予約（旧Coubic）の予約ページ/コースIDを採取して `data/coubic.json` を再生成（空き状況表示用。施設追加・予約URL変更時に実行） |
 
 ## 環境変数
@@ -149,6 +150,10 @@ Skills/                       # Claude Code カスタムスキル
 - 記事タイトル（MDX frontmatter の title）も同様に段階的に変更
 - **効果測定を成立させるため、1バッチ内では変更対象を絞り込む**（例: 同一エリア・同一クエリ群にまとめる）。変数が混ざると何が効いたか分からなくなる
 - **GSC削除ツールを使うときは対象範囲（個別URL/前方一致/サイト全体）を必ず確認**（消滅事件の真の再発防止策）
+
+### SEO 変更台帳（2026-11-17追加）
+
+- 検索を狙った変更は `docs/seo-change-log.md` に、**出す前に**仮説・判定語・成功基準・対照を書き、反映 4 週間後に `gsc-compare` で 成功・失敗・判定不能 を付ける。計測中の施策と判定日はここが正（MEMORY には書かない）
 
 ### ページ単位の運用（2026-11-12追加）
 
